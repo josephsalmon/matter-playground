@@ -1,18 +1,12 @@
 name: Deploy to GitHub Pages
-# Github actions
-# install node.js dependencies in package.json, build the app with vite, and publish the dist folder to the gh-pages branch
-
-on:
-  push:
-    branches:
-      - main
-
+on: [push]
+permissions:
+  contents: write
 jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
-
             - name: Install dependencies
               run: npm install
             - name: Build
