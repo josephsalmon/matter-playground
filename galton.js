@@ -1,31 +1,36 @@
-import Matter, { World } from "matter-js";
+import Matter from "matter-js";
 
 import statdists from '@stdlib/dist-stats-base-dists-flat';
-const dists = statdists.base.dists;
+export const dists = statdists.base.dists;
 const cdf = dists.normal.cdf;
 
-let mu1 = -3; // mean of the first variable
-let sigma1 = 0.6; // standard deviation of the first variable
-let mu2 = 3; // mean of the second variable
-let sigma2 = 1.3; // standard deviation of the second variable
-let p = 0.5; // weight of the first distribution
-
-function bimodalCDF(x) {
+// bimodal cdf
+function bimodalCDF(x,mu1,sigma1,mu2,sigma2,p) {
     let cdf1 = cdf(x, mu1, sigma1);
     let cdf2 = cdf(x, mu2, sigma2);
     return p * cdf1 + (1-p) * cdf2;
 }
 
+// dictionary of functions for the cdf with default parameters (mu = 0, sigma = 1) except for the bimodal distribution
+export const cdfDict = {
+    uniform: (x, mu = 0, sigma = 1) => dists.uniform.cdf(x, mu, sigma),
+    normal: (x, mu = 0, sigma = 1) => dists.normal.cdf(x, mu, sigma),
+    laplace: (x, mu = 0, sigma = 1) => dists.laplace.cdf(x, mu, sigma),
+    logistic: (x, mu = 0, sigma = 1) => dists.logistic.cdf(x, mu, sigma),
+    cauchy: (x, mu = 0, sigma = 1) => dists.cauchy.cdf(x, mu, sigma),
+    bimodal: (x, mu1 = -3, sigma1 = 0.6, mu2 = 3, sigma2 = 1.3, p = 0.5) => bimodalCDF(x, mu1, sigma1, mu2, sigma2, p)
+}
+
+// Return an array of numbers from start to stop in increments of step
 const arrayRange = (start, stop, step) =>
     Array.from(
         { length: (stop - start) / step + 1 },
         (value, index) => start + index * step
     );
+
 const x = arrayRange(-5, 5, 0.01);
-const sigma = 1;
-const mu = 0;
 
-
+// Find the value in arr closest to num
 function closest (num, arr) {
     var curr = arr[0];
     var diff = Math.abs (num - curr);
@@ -38,19 +43,14 @@ function closest (num, arr) {
     }
     return curr;
 }
+
 export const Example = {};
-Example.galton = function () {
+Example.galton = function (distname) {
     let Engine = Matter.Engine,
         Render = Matter.Render,
         Runner = Matter.Runner,
         Events = Matter.Events,
         Body = Matter.Body,
-        Detector = Matter.Detector,
-        Composite = Matter.Composite,
-        Composites = Matter.Composites,
-        Common = Matter.Common,
-        MouseConstraint = Matter.MouseConstraint,
-        Mouse = Matter.Mouse,
         World = Matter.World,
         Bodies = Matter.Bodies;
     // create engine
@@ -78,21 +78,22 @@ Example.galton = function () {
         maxFrameTime: 1000 / 20 // performance budget
     });
     Runner.run(runner, engine);
-    const discretize = (x) => Math.trunc(x / size) * size;
 
+    // Vertical bounds for the shoot
     const shootheightmax = 20;
     const shootheightmin = height / 2;
     const shootheight = shootheightmin - shootheightmax;
 
-    const size = 4;
-    let total = 1000;
-    const speed = 10;
+    const size = 4; // size of the particles
+    let total = 1000; // number of particles
+    const speed = 10; // speed of the particles
 
     // const size = 20;
     // let total = 20;
     // const speed = 5;
 
-
+    //// Functions for antilaizing the cdf curve
+    // plot a pixel with brightness
     const plotPixel = (x, y, brightness) => {
         World.add(world, Bodies.rectangle(x,y,1,1, {
             isStatic: true,
@@ -107,6 +108,7 @@ Example.galton = function () {
         }));
     };
 
+    // plot a line with antialiasing, Xiaolin Wu's line algorithm
     function plot(ipart, round, fpart, rfpart, x, y, x2, y2) {
     
         const steep = Math.abs(y2 - y) > Math.abs(x2 - x);
@@ -136,6 +138,7 @@ Example.galton = function () {
         }
     }
     
+    // draw a line with antialiasing
     function drawLine(x1, y1, x2, y2) {
         const ipart = Math.floor;
         const round = Math.round;
@@ -144,25 +147,26 @@ Example.galton = function () {
     
         plot(ipart, round, fpart, rfpart, x1, y1, x2, y2);
         plot(ipart, round, fpart, rfpart, x2, y2, x1, y1);
+        // Tweaking the brightness of the endpoints to make them more visible
         plotPixel(x1, y1, 1);
         plotPixel(x2, y2, 1);
     }
-    // const size = 10;
-    // let total = 20;
-    // const speed = 5;
 
-    const distribution = 'laplace';
-    engine.gravity.y = 0;
+    engine.gravity.y = 0; // no gravity
     
-    let pegxf = {};
-    let pegx = {};
-    let pegy = [];
-    let miny = Infinity;
-    let maxy = 0;
+    let pegxf = {}; // dictionary of x positions of the pegs
+    let pegx = {}; // dictionary of x positions of the pegs
+    let pegy = []; // array of y positions of the pegs
+    let miny = Infinity; // minimum y position of the pegs
+    let maxy = 0; // maximum y position of the pegs
+
+    const cdffunc = cdfDict[distname]; // cdf function
+
+    // loop through all x positions and calculate the y position of the pegs along the
+    // cdf curve
     for (let i = 0; i < width/size; i++) {
         const x = i * size;
-        // const cdf = dists[distribution].cdf((x - width/2)/40, mu, sigma);
-        const cdf = bimodalCDF((x - width/2)/40);
+        const cdf = cdffunc((x - width/2)/40);
         let y = shootheightmin - cdf * shootheight;
 
         pegx[y] = x;
@@ -176,6 +180,7 @@ Example.galton = function () {
 
     }
 
+    // loop through all x positions and create the pegs
     for (let i = 0; i < width/size; i++) {
         const x = i * size;
         const y = (maxy - pegy[i]) *  (shootheightmax - shootheightmin) / (maxy - miny) + shootheightmin;
@@ -193,12 +198,16 @@ Example.galton = function () {
         pegy[i] = y;
         pegx[y] = x;
         World.add(world, peg);
+
+        // draw the antialiased cdf curve
         if (i > 0) {
             drawLine(pegx[pegy[i-1]], pegy[i-1], pegx[pegy[i]], pegy[i]);
         }
     }
     
-    let shoots = {};
+    let shoots = {}; // dictionary of the x position of the closest peg for each shoot
+
+    // Main loop, executed at each tick
     Events.on(runner,  'beforeTick', function(event) {
         // loop through all moving bodies with velocity x > 0
         for (let i = 0; i < world.bodies.length; i++) {
@@ -232,6 +241,7 @@ Example.galton = function () {
         }
     });
 
+    // Create the particles
     setInterval(() => {
         if (total-- > 0) {
             const unifm1p1 = Math.random();

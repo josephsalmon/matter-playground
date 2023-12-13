@@ -27,7 +27,7 @@ MatterTools.Demo.create({
     {
       name: 'Galton Board',
       id: 'galton',
-      init: Example.galton,
+      init: () => Example.galton('bimodal'),
       sourceLink: './galton.js'
     }]
 });

@@ -8,12 +8,12 @@ export default defineConfig({
         sourcemap: true,
         rollupOptions: {
             output: {
+                // one bundle file
+                entryFileNames: '[name].js',
                 manualChunks: {
-                    'matter-js': ['matter-js'],
-                    '@stdlib/dist-stats-base-dists-flat': ['@stdlib/dist-stats-base-dists-flat'],
                     'matter-tools': ['matter-tools']
                 }
-            }
-        }
-    }
+            },
+        },
+    },
 });
