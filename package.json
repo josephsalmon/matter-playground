@@ -1,7 +1,18 @@
 {
-  "name": "matter-playground",
+  "name": "invcdf-board-animation",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fradav/matter-playground.git"
+  },
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1",
+  "author": {
+    "name": "François-David Collin",
+    "url": "https://fradav.perso.math.cnrs.fr"
+  },
+  "description": "Inverse CDF board animation, loosely inspired by Galton's board",
+  "main": "dist/invcdfboard.js",
   "type": "module",
   "scripts": {
     "dev": "vite",

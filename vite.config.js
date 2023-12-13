@@ -8,11 +8,11 @@ export default defineConfig({
         sourcemap: true,
         rollupOptions: {
             output: {
-                // one bundle file
-                entryFileNames: '[name].js',
+                entryFileNames: 'invcdfboard.js',
                 manualChunks: {
                     'matter-tools': ['matter-tools']
-                }
+                },
+                esModule: true,
             },
         },
     },
