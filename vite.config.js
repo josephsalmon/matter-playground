@@ -6,13 +6,19 @@ export default defineConfig({
         outDir: 'dist',
         assetsDir: 'assets',
         sourcemap: true,
-        rollupOptions: {
-            output: {
-                entryFileNames: 'invcdfboard.js',
-                manualChunks: {
-                    'matter-tools': ['matter-tools']
-                },
-            },
+        lib: {
+            entry: 'galton.js',
+            name: 'invcdfboard',
+            fileName: 'invcdfboard',
+            formats: ['es', 'umd'],
         },
+        // rollupOptions: {
+        //     output: {
+        //         entryFileNames: 'invcdfboard.js',
+        //         manualChunks: {
+        //             'matter-tools': ['matter-tools']
+        //         },
+        //     },
+        // },
     },
 });

@@ -1,2 +1,8949 @@
-import{r as Ty,g as lc,c as vc,M as Vy}from"./assets/matter-tools-349bTSEi.js";(function(){const le=document.createElement("link").relList;if(le&&le.supports&&le.supports("modulepreload"))return;for(const ae of document.querySelectorAll('link[rel="modulepreload"]'))pn(ae);new MutationObserver(ae=>{for(const re of ae)if(re.type==="childList")for(const xn of re.addedNodes)xn.tagName==="LINK"&&xn.rel==="modulepreload"&&pn(xn)}).observe(document,{childList:!0,subtree:!0});function se(ae){const re={};return ae.integrity&&(re.integrity=ae.integrity),ae.referrerPolicy&&(re.referrerPolicy=ae.referrerPolicy),ae.crossOrigin==="use-credentials"?re.credentials="include":ae.crossOrigin==="anonymous"?re.credentials="omit":re.credentials="same-origin",re}function pn(ae){if(ae.ep)return;ae.ep=!0;const re=se(ae);fetch(ae.href,re)}})();var My=Ty();const c0=lc(My);var Nc={exports:{}};/* @license Apache-2.0 */(function(de,le){(function(se){de.exports=se()})(function(){var se=typeof Object.defineProperty=="function"?Object.defineProperty:null,pn=function(){try{return se({},"x",{}),!0}catch{return!1}},ae=Object.defineProperty,re=Object.prototype,xn=re.toString,v0=re.__defineGetter__,p0=re.__defineSetter__,$n=re.__lookupGetter__,B0=re.__lookupSetter__,j0=function(e,n,r){var a,u,o,f;if(typeof e!="object"||e===null||xn.call(e)==="[object Array]")throw new TypeError("invalid argument. First argument must be an object. Value: `"+e+"`.");if(typeof r!="object"||r===null||xn.call(r)==="[object Array]")throw new TypeError("invalid argument. Property descriptor must be an object. Value: `"+r+"`.");if((u="value"in r)&&($n.call(e,n)||B0.call(e,n)?(a=e.__proto__,e.__proto__=re,delete e[n],e[n]=r.value,e.__proto__=a):e[n]=r.value),o="get"in r,f="set"in r,u&&(o||f))throw new Error("invalid argument. Cannot specify one or more accessors and a value or writable attribute in the property descriptor.");return o&&v0&&v0.call(e,n,r.get),f&&p0&&p0.call(e,n,r.set),e},_=pn()?ae:j0,s=function(e,n,r){_(e,n,{configurable:!1,enumerable:!0,writable:!1,value:r})},c=function(e,n,r){_(e,n,{configurable:!1,enumerable:!1,writable:!1,value:r})},i=function(e){return e!=e},M=Math.sqrt,Me=.7853981633974483,xr=function(e){var n,r;return e===0?.16666666666666713:((e<0?-e:e)<=1?(n=e*(19.562619833175948+e*(e*(5.444622390564711+e*(.004253011369004428*e-.6019598008014124))-16.262479672107002))-8.198089802484825,r=e*(139.51056146574857+e*(e*(70.49610280856842+e*(1*e-14.740913729888538))-147.1791292232726))-49.18853881490881):(n=.004253011369004428+(e=1/e)*(e*(5.444622390564711+e*(e*(19.562619833175948+-8.198089802484825*e)-16.262479672107002))-.6019598008014124),r=1+e*(e*(70.49610280856842+e*(e*(139.51056146574857+-49.18853881490881*e)-147.1791292232726))-14.740913729888538)),n/r)},Pr=function(e){var n,r;return e===0?.08333333333333809:((e<0?-e:e)<=1?(n=28.536655482610616+e*(e*(6.968710824104713+e*(.002967721961301243*e-.5634242780008963))-25.56901049652825),r=342.43986579130785+e*(e*(147.0656354026815+e*(1*e-21.947795316429207))-383.8770957603691)):(n=.002967721961301243+(e=1/e)*(e*(6.968710824104713+e*(28.536655482610616*e-25.56901049652825))-.5634242780008963),r=1+e*(e*(147.0656354026815+e*(342.43986579130785*e-383.8770957603691))-21.947795316429207)),n/r)},l0=6123233995736766e-32,Rn=function(e){var n,r,a,u,o;if(i(e))return NaN;if(e>0?a=e:(n=!0,a=-e),a>1)return NaN;if(a>.625)u=(r=1-a)*Pr(r),r=M(r+r),o=Me-r,o-=r=r*u-l0,o+=Me;else{if(a<1e-8)return e;o=a*(o=(r=a*a)*xr(r))+a}return n?-o:o},F=3.141592653589793,N0=2/F,m0=function(e,n,r){return i(e)||i(n)||i(r)||n>=r?NaN:e<n?0:e>=r?1:N0*Rn(M((e-n)/(r-n)))},k=function(e){return function(){return e}},O0=2/F;c(m0,"factory",function(e,n){return i(e)||i(n)||e>=n?k(NaN):function(r){return i(r)?NaN:r<e?0:r>=n?1:O0*Rn(M((r-e)/(n-e)))}});var h0=m0,y=function(e,n,r){_(e,n,{configurable:!1,enumerable:!1,get:r})},ur=function(e){return typeof e=="number"},ie=function(){return typeof Symbol=="function"&&typeof Symbol("foo")=="symbol"}(),fe=function(){return ie&&typeof Symbol.toStringTag=="symbol"},$=Object.prototype.toString,ce=function(e){return $.call(e)},qe=Object.prototype.hasOwnProperty,Qe=function(e,n){return e!=null&&qe.call(e,n)},Se=typeof Symbol=="function"?Symbol.toStringTag:"",Ln=function(e){var n,r,a;if(e==null)return $.call(e);r=e[Se],n=Qe(e,Se);try{e[Se]=void 0}catch{return $.call(e)}return a=$.call(e),n?e[Se]=r:delete e[Se],a},en=fe()?Ln:ce,or=Number,Ca=or.prototype.toString,Sr=Boolean.prototype.toString,_n=function(e){try{return Sr.call(e),!0}catch{return!1}},d0=function(e){try{return Ca.call(e),!0}catch{return!1}},hc=fe(),Ga=function(e){return typeof e=="object"&&(e instanceof or||(hc?d0(e):en(e)==="[object Number]"))},x1=function(e){return ur(e)||Ga(e)};c(x1,"isPrimitive",ur),c(x1,"isObject",Ga);var ge=x1,dc=typeof Uint32Array=="function",bc=function(e){return dc&&e instanceof Uint32Array||en(e)==="[object Uint32Array]"},P1=4294967295,Ka=typeof Uint32Array=="function"?Uint32Array:null,yc=typeof Uint32Array=="function"?Uint32Array:void 0,gc=function(){throw new Error("not implemented")},F0=function(){var e,n;if(typeof Ka!="function")return!1;try{n=new Ka(n=[1,3.14,-3.14,P1+1,P1+2]),e=bc(n)&&n[0]===1&&n[1]===3&&n[2]===P1-2&&n[3]===0&&n[4]===1}catch{e=!1}return e}()?yc:gc,wc=typeof Float64Array=="function",kc=function(e){return wc&&e instanceof Float64Array||en(e)==="[object Float64Array]"},Wa=typeof Float64Array=="function"?Float64Array:null,Ec=typeof Float64Array=="function"?Float64Array:void 0,Tc=function(){throw new Error("not implemented")},b0=function(){var e,n;if(typeof Wa!="function")return!1;try{n=new Wa([1,3.14,-3.14,NaN]),e=kc(n)&&n[0]===1&&n[1]===3.14&&n[2]===-3.14&&n[3]!=n[3]}catch{e=!1}return e}()?Ec:Tc,Vc=typeof Uint8Array=="function",Mc=function(e){return Vc&&e instanceof Uint8Array||en(e)==="[object Uint8Array]"},S1=255,Ha=typeof Uint8Array=="function"?Uint8Array:null,qc=typeof Uint8Array=="function"?Uint8Array:void 0,xc=function(){throw new Error("not implemented")},Pc=function(){var e,n;if(typeof Ha!="function")return!1;try{n=new Ha(n=[1,3.14,-3.14,S1+1,S1+2]),e=Mc(n)&&n[0]===1&&n[1]===3&&n[2]===S1-2&&n[3]===0&&n[4]===1}catch{e=!1}return e}()?qc:xc,Sc=typeof Uint16Array=="function",Ac=function(e){return Sc&&e instanceof Uint16Array||en(e)==="[object Uint16Array]"},A1=65535,Da=typeof Uint16Array=="function"?Uint16Array:null,jc=typeof Uint16Array=="function"?Uint16Array:void 0,za,Oc=function(){throw new Error("not implemented")},$a={uint16:function(){var e,n;if(typeof Da!="function")return!1;try{n=new Da(n=[1,3.14,-3.14,A1+1,A1+2]),e=Ac(n)&&n[0]===1&&n[1]===3&&n[2]===A1-2&&n[3]===0&&n[4]===1}catch{e=!1}return e}()?jc:Oc,uint8:Pc};(za=new $a.uint16(1))[0]=4660;var I0=new $a.uint8(za.buffer)[0]===52,Uc=I0===!0?1:0,Ja=new b0(1),Rc=new F0(Ja.buffer),we=function(e){return Ja[0]=e,Rc[Uc]},Lc=I0===!0?1:0,j1=new b0(1),_c=new F0(j1.buffer),Pn=function(e,n){return j1[0]=e,_c[Lc]=n>>>0,j1[0]},Gn=1023,V=or.NEGATIVE_INFINITY,Bc=function(e){return e===0?.3999999999940942:.3999999999940942+e*(.22222198432149784+.15313837699209373*e)},Fc=function(e){return e===0?.6666666666666735:.6666666666666735+e*(.2857142874366239+e*(.1818357216161805+.14798198605116586*e))},Ar=.6931471803691238,jr=19082149292705877e-26,Ic=0x40000000000000,Cc=.3333333333333333,Za=1048575,Gc=2146435072,Kc=1048576,Wc=1072693248,p=function(e){var n,r,a,u,o,f,l,v,m,g,d;return e===0?V:i(e)||e<0?NaN:(u=0,(r=we(e))<Kc&&(u-=54,r=we(e*=Ic)),r>=Gc?e+e:(u+=(r>>20)-Gn|0,u+=(l=614244+(r&=Za)&1048576|0)>>20|0,f=(e=Pn(e,r|l^Wc))-1,(Za&2+r)<3?f===0?u===0?0:u*Ar+u*jr:(o=f*f*(.5-Cc*f),u===0?f-o:u*Ar-(o-u*jr-f)):(l=r-398458|0,v=440401-r|0,a=(g=(d=(m=f/(2+f))*m)*d)*Bc(g),o=d*Fc(g)+a,(l|=v)>0?(n=.5*f*f,u===0?f-(n-m*(n+o)):u*Ar-(n-(m*(n+o)+u*jr)-f)):u===0?f-m*(f-o):u*Ar-(m*(f-o)-u*jr-f))))},Hc=p(Me),Xa=function(e,n){return i(e)||i(n)||e>=n?NaN:Hc+p(n-e)},Ya=function(e,n){return i(e)||i(n)||e>=n?NaN:-1.5},Qa=function(e,n){return e>=n?NaN:.5*(e+n)},ei=function(e,n){return e>=n?NaN:.5*(e+n)},ni=function(e,n){return i(e)||i(n)||e>=n?NaN:e},ri=function(e,n){return i(e)||i(n)||e>=n?NaN:0},Dc=.35355339059327373,ai=function(e,n){return e>=n?NaN:Dc*(n-e)},D=Math.floor,K=function(e){return D(e)===e},zc=function(e){return K(e/2)},sr=function(e){return zc(e>0?e-1:e+1)},w=Number.POSITIVE_INFINITY,Sn=function(e){return e===w||e===V},O1,U1,S=function(e){return Math.abs(e)};I0===!0?(O1=1,U1=0):(O1=0,U1=1);var R1,L1,ii={HIGH:O1,LOW:U1};I0===!0?(R1=1,L1=0):(R1=0,L1=1);var ui={HIGH:R1,LOW:L1},oi=new b0(1),si=new F0(oi.buffer),$c=ui.HIGH,Jc=ui.LOW,ti=function(e,n){return oi[0]=n,e[0]=si[$c],e[1]=si[Jc],e},C0=function(e,n){return arguments.length===1?ti([0,0],e):ti(e,n)},Zc=I0===!0?0:1,Xc=I0===!0?0:1,_1=new b0(1),Yc=new F0(_1.buffer),An=function(e,n){return _1[0]=e,Yc[Xc]=n>>>0,_1[0]},B1=function(e){return 0|e},fi=new b0(1),ci=new F0(fi.buffer),Qc=ii.HIGH,e9=ii.LOW,F1=function(e,n){return ci[Qc]=e,ci[e9]=n,fi[0]},n9=2147483648,r9=2147483647,I1=[0,0],ln=function(e,n){var r,a;return C0(I1,e),r=I1[0],r&=r9,a=we(n),F1(r|=a&=n9,I1[1])},a9=function(e,n){return n===V?w:n===w?0:n>0?sr(n)?e:0:sr(n)?ln(w,e):w},i9=2147483647,u9=1072693247,Or=1e300,Ur=1e-300,o9=function(e,n){return(we(e)&i9)<=u9?n<0?Or*Or:Ur*Ur:n>0?Or*Or:Ur*Ur},s9=function(e,n){return e===-1?(e-e)/(e-e):e===1?1:S(e)<1==(n===w)?0:w},t9=function(e){return e===0?.5999999999999946:.5999999999999946+e*(.4285714285785502+e*(.33333332981837743+e*(.272728123808534+e*(.23066074577556175+.20697501780033842*e))))},f9=1048575,vi=1048576,c9=1072693248,v9=536870912,p9=524288,l9=20,N9=9007199254740992,m9=.9617966939259756,h9=.9617967009544373,d9=-7028461650952758e-24,b9=[1,1.5],y9=[0,.5849624872207642],g9=[0,1350039202129749e-23],w9=function(e,n,r){var a,u,o,f,l,v,m,g,d,h,E,T,q,P,O,x,B,C,L,U;return C=0,r<vi&&(C-=53,r=we(n*=N9)),C+=(r>>l9)-Gn|0,r=(L=r&f9|0)|c9|0,L<=235662?U=0:L<767610?U=1:(U=0,C+=1,r-=vi),n=Pn(n,r),m=b9[U],f=An(u=(x=n-m)*(B=1/(n+m)),0),a=(r>>1|v9)+p9,l=B*(x-f*(v=Pn(0,a+=U<<18))-f*(n-(v-m))),O=(o=u*u)*o*t9(o),v=An(v=3+(o=f*f)+(O+=l*(f+u)),0),d=An(d=(x=f*v)+(B=l*v+(O-(v-3-o))*u),0),h=h9*d,E=d9*d+(B-(d-x))*m9+g9[U],g=y9[U],q=E-((T=An(T=h+E+g+(P=C),0))-P-g-h),e[0]=T,e[1]=q,e},k9=function(e){return e===0?.5:.5+e*(.25*e-.3333333333333333)},E9=1.4426950408889634,T9=1.4426950216293335,V9=19259629911266175e-24,M9=function(e,n){var r,a,u,o,f,l;return o=(u=n-1)*u*k9(u),r=(l=u*V9-o*E9)-((a=An(a=(f=T9*u)+l,0))-f),e[0]=a,e[1]=r,e},q9=1023,x9=-1023,P9=-1074,jn=22250738585072014e-324,S9=4503599627370496,pi=function(e,n){return i(n)||Sn(n)?(e[0]=n,e[1]=0,e):n!==0&&S(n)<jn?(e[0]=n*S9,e[1]=-52,e):(e[0]=n,e[1]=0,e)},A9=function(e,n){return arguments.length===1?pi([0,0],e):pi(e,n)},j9=2146435072,O9=function(e){var n=we(e);return(n=(n&j9)>>>20)-Gn|0},U9=2220446049250313e-31,R9=2148532223,C1=[0,0],G1=[0,0],Bn=function(e,n){var r,a;return e===0||i(e)||Sn(e)?e:(A9(C1,e),e=C1[0],n+=C1[1],(n+=O9(e))<P9?ln(0,e):n>q9?e<0?V:w:(n<=x9?(n+=52,a=U9):a=1,C0(G1,e),r=G1[0],r&=R9,a*F1(r|=n+Gn<<20,G1[1])))},me=.6931471805599453,L9=function(e){return e===0?.16666666666666602:.16666666666666602+e*(e*(6613756321437934e-20+e*(41381367970572385e-24*e-16533902205465252e-22))-.0027777777777015593)},_9=function(e){return e===0?.16666666666666602:.16666666666666602+e*(e*(6613756321437934e-20+e*(41381367970572385e-24*e-16533902205465252e-22))-.0027777777777015593)},li=2147483647,Ni=1048575,mi=1048576,B9=1071644672,tr=20,F9=.6931471824645996,I9=-1904654299957768e-24,C9=function(e,n,r){var a,u,o,f,l,v,m,g,d;return d=((g=e&li|0)>>tr)-Gn|0,m=0,g>B9&&(u=Pn(0,((m=e+(mi>>d+1)>>>0)&~(Ni>>(d=((m&li)>>tr)-Gn|0)))>>>0),m=(m&Ni|mi)>>tr-d>>>0,e<0&&(m=-m),n-=u),l=(f=(r-((u=An(u=r+n,0))-n))*me+u*I9)-((v=(o=u*F9)+f)-o),a=v-(u=v*v)*_9(u),e=we(v=1-(v*a/(a-2)-(l+v*l)-v)),e=B1(e),v=(e+=m<<tr>>>0)>>tr<=0?Bn(v,m):Pn(v,e)},K1=2147483647,G9=1072693247,K9=1105199104,W9=1139802112,hi=1083179008,H9=1072693248,D9=1083231232,z9=3230714880,di=31,y0=1e300,g0=1e-300,$9=8008566259537294e-32,Jn=[0,0],bi=[0,0],N=function e(n,r){var a,u,o,f,l,v,m,g,d,h,E,T,q,P;if(i(n)||i(r))return NaN;if(C0(Jn,r),l=Jn[0],Jn[1]===0){if(r===0)return 1;if(r===1)return n;if(r===-1)return 1/n;if(r===.5)return M(n);if(r===-.5)return 1/M(n);if(r===2)return n*n;if(r===3)return n*n*n;if(r===4)return(n*=n)*n;if(Sn(r))return s9(n,r)}if(C0(Jn,n),f=Jn[0],Jn[1]===0){if(f===0)return a9(n,r);if(n===1)return 1;if(n===-1&&sr(r))return-1;if(Sn(n))return n===V?e(-0,-r):r<0?0:w}if(n<0&&K(r)===!1)return(n-n)/(n-n);if(o=S(n),a=f&K1|0,u=l&K1|0,m=l>>>di|0,v=(v=f>>>di|0)&&sr(r)?-1:1,u>K9){if(u>W9)return o9(n,r);if(a<G9)return m===1?v*y0*y0:v*g0*g0;if(a>H9)return m===0?v*y0*y0:v*g0*g0;E=M9(bi,o)}else E=w9(bi,o,a);if(h=(r-(g=An(r,0)))*E[0]+r*E[1],d=g*E[0],C0(Jn,T=h+d),q=B1(Jn[0]),P=B1(Jn[1]),q>=hi){if(q-hi|P||h+$9>T-d)return v*y0*y0}else if((q&K1)>=D9&&(q-z9|P||h<=T-d))return v*g0*g0;return v*(T=C9(q,d,h))},yi=function(e,n){return e>=n?NaN:.125*N(n-e,2)},G0=1.1447298858494002,gi=function(e,n,r){return i(e)||i(n)||i(r)||n>=r?NaN:e<n?V:e>=r?0:me-G0+p(Rn(M((e-n)/(r-n))))};c(gi,"factory",function(e,n){return i(e)||i(n)||e>=n?k(NaN):function(r){return i(r)?NaN:r<e?V:r>=n?0:me-G0+p(Rn(M((r-e)/(n-e))))}});var wi=gi,ki=function(e,n,r){return i(e)||i(n)||i(r)||n>=r?NaN:e<n||e>r?V:-(G0+p((e-n)*(r-e))/2)};c(ki,"factory",function(e,n){return i(e)||i(n)||e>=n?k(NaN):function(r){return i(r)?NaN:r<e||r>n?V:-(G0+p((r-e)*(n-r))/2)}});var Ei=ki,Ti=function(e,n,r){return i(e)||i(n)||i(r)||n>=r?NaN:e<n||e>r?0:1/(F*M((e-n)*(r-e)))};c(Ti,"factory",function(e,n){return i(e)||i(n)||e>=n?k(NaN):function(r){return i(r)?NaN:r<e||r>n?0:1/(F*M((r-e)*(n-r)))}});var Vi=Ti,J9=function(e){return e===0?.0416666666666666:.0416666666666666+e*(2480158728947673e-20*e-.001388888888887411)},Z9=function(e){return e===0?-27557314351390663e-23:e*(2087572321298175e-24+-11359647557788195e-27*e)-27557314351390663e-23},fr=function(e,n){var r,a,u,o;return u=(o=e*e)*o,a=o*J9(o),a+=u*u*Z9(o),(u=1-(r=.5*o))+(1-u-r+(o*a-e*n))},Mi=-.16666666666666632,X9=.00833333333332249,Y9=-.0001984126982985795,Q9=27557313707070068e-22,ev=-25050760253406863e-24,nv=158969099521155e-24,cr=function(e,n){var r,a,u;return r=X9+(u=e*e)*(Y9+u*Q9)+u*(u*u)*(ev+u*nv),a=u*e,n===0?e+a*(Mi+u*r):e-(u*(.5*n-a*r)-n-a*Mi)},qi=new b0(1),rv=new F0(qi.buffer),av=function(e){return qi[0]=e,rv[Zc]},xi=[10680707,7228996,1387004,2578385,16069853,12639074,9804092,4427841,16666979,11263675,12935607,2387514,4345298,14681673,3074569,13734428,16653803,1880361,10960616,8533493,3062596,8710556,7349940,6258241,3772886,3769171,3798172,8675211,12450088,3874808,9961438,366607,15675153,9132554,7151469,3571407,2607881,12013382,4155038,6285869,7677882,13102053,15825725,473591,9065106,15363067,6271263,9264392,5636912,4652155,7056368,13614112,10155062,1944035,9527646,15080200,6658437,6231200,6832269,16767104,5075751,3212806,1398474,7579849,6349435,12618859],iv=[1.570796251296997,7549789415861596e-23,5390302529957765e-30,3282003415807913e-37,1270655753080676e-44,12293330898111133e-52,27337005381646456e-60,21674168387780482e-67],W1=16777216,H1=5960464477539063e-23,D1=Lr(20),Pi=Lr(20),Rr=Lr(20),Ge=Lr(20);function Lr(e){var n,r;for(n=[],r=0;r<e;r++)n.push(0);return n}var uv=function(e,n,r,a){var u,o,f,l,v,m,g;for(f=a-1,(o=(r-3)/24|0)<0&&(o=0),l=r-24*(o+1),m=o-f,g=f+4,v=0;v<=g;v++)D1[v]=m<0?0:xi[m],m+=1;for(v=0;v<=4;v++){for(u=0,m=0;m<=f;m++)u+=e[m]*D1[f+(v-m)];Pi[v]=u}return function d(h,E,T,q,P,O,x,B,C){var L,U,J,Ne,W,he,Pe,te,j;for(Ne=O,j=q[T],te=T,W=0;te>0;W++)U=H1*j|0,Ge[W]=j-W1*U|0,j=q[te-1]+U,te-=1;if(j=Bn(j,P),j-=8*D(.125*j),j-=Pe=0|j,J=0,P>0?(Pe+=W=Ge[T-1]>>24-P,Ge[T-1]-=W<<24-P,J=Ge[T-1]>>23-P):P===0?J=Ge[T-1]>>23:j>=.5&&(J=2),J>0){for(Pe+=1,L=0,W=0;W<T;W++)te=Ge[W],L===0?te!==0&&(L=1,Ge[W]=16777216-te):Ge[W]=16777215-te;if(P>0)switch(P){case 1:Ge[T-1]&=8388607;break;case 2:Ge[T-1]&=4194303}J===2&&(j=1-j,L!==0&&(j-=Bn(1,P)))}if(j===0){for(te=0,W=T-1;W>=O;W--)te|=Ge[W];if(te===0){for(he=1;Ge[O-he]===0;he++);for(W=T+1;W<=T+he;W++){for(C[B+W]=xi[x+W],U=0,te=0;te<=B;te++)U+=h[te]*C[B+(W-te)];q[W]=U}return d(h,E,T+=he,q,P,O,x,B,C)}}if(j===0)for(T-=1,P-=24;Ge[T]===0;)T-=1,P-=24;else(j=Bn(j,-P))>=W1?(U=H1*j|0,Ge[T]=j-W1*U|0,P+=24,Ge[T+=1]=U):Ge[T]=0|j;for(U=Bn(1,P),W=T;W>=0;W--)q[W]=U*Ge[W],U*=H1;for(W=T;W>=0;W--){for(U=0,he=0;he<=Ne&&he<=T-W;he++)U+=iv[he]*q[W+he];Rr[T-W]=U}for(U=0,W=T;W>=0;W--)U+=Rr[W];for(E[0]=J===0?U:-U,U=Rr[0]-U,W=1;W<=T;W++)U+=Rr[W];return E[1]=J===0?U:-U,7&Pe}(e,n,4,Pi,l,4,o,f,D1)},En=Math.round,ov=.6366197723675814,sv=1.5707963267341256,tv=6077100506506192e-26,fv=6077100506303966e-26,cv=20222662487959506e-37,vv=20222662487111665e-37,pv=84784276603689e-45,Si=2047,_r=function(e,n,r){var a,u,o,f,l;return o=e-(a=En(e*ov))*sv,f=a*tv,l=n>>20|0,r[0]=o-f,l-(we(r[0])>>20&Si)>16&&(f=a*cv-((u=o)-(o=u-(f=a*fv))-f),r[0]=o-f,l-(we(r[0])>>20&Si)>49&&(f=a*pv-((u=o)-(o=u-(f=a*vv))-f),r[0]=o-f)),r[1]=o-r[0]-f,a},lv=0,Nv=16777216,w0=1.5707963267341256,U0=6077100506506192e-26,Br=2*U0,Fr=3*U0,Ir=4*U0,mv=2147483647,hv=2146435072,dv=1048575,bv=598523,yv=1072243195,gv=1073928572,wv=1074752122,kv=1074977148,Ev=1075183036,Tv=1075388923,Vv=1075594811,Mv=1094263291,vr=[0,0,0],pr=[0,0],z1=function(e,n){var r,a,u,o,f,l,v;if((u=we(e)&mv|0)<=yv)return n[0]=e,n[1]=0,0;if(u<=wv)return(u&dv)===bv?_r(e,u,n):u<=gv?e>0?(v=e-w0,n[0]=v-U0,n[1]=v-n[0]-U0,1):(v=e+w0,n[0]=v+U0,n[1]=v-n[0]+U0,-1):e>0?(v=e-2*w0,n[0]=v-Br,n[1]=v-n[0]-Br,2):(v=e+2*w0,n[0]=v+Br,n[1]=v-n[0]+Br,-2);if(u<=Vv)return u<=Ev?u===kv?_r(e,u,n):e>0?(v=e-3*w0,n[0]=v-Fr,n[1]=v-n[0]-Fr,3):(v=e+3*w0,n[0]=v+Fr,n[1]=v-n[0]+Fr,-3):u===Tv?_r(e,u,n):e>0?(v=e-4*w0,n[0]=v-Ir,n[1]=v-n[0]-Ir,4):(v=e+4*w0,n[0]=v+Ir,n[1]=v-n[0]+Ir,-4);if(u<Mv)return _r(e,u,n);if(u>=hv)return n[0]=NaN,n[1]=NaN,0;for(r=av(e),v=F1(u-((a=(u>>20)-1046)<<20|0),r),f=0;f<2;f++)vr[f]=0|v,v=(v-vr[f])*Nv;for(vr[2]=v,o=3;vr[o-1]===lv;)o-=1;return l=uv(vr,pr,a,o),e<0?(n[0]=-pr[0],n[1]=-pr[1],-l):(n[0]=pr[0],n[1]=pr[1],l)},qv=2147483647,xv=2146435072,Pv=1072243195,Sv=1045430272,Zn=[0,0],Fn=function(e){var n;if(n=we(e),(n&=qv)<=Pv)return n<Sv?e:cr(e,0);if(n>=xv)return NaN;switch(3&z1(e,Zn)){case 0:return cr(Zn[0],Zn[1]);case 1:return fr(Zn[0],Zn[1]);case 2:return-cr(Zn[0],Zn[1]);default:return-fr(Zn[0],Zn[1])}},Xn=1.5707963267948966,Ai=function(e,n,r){return i(n)||i(r)||n>=r?NaN:i(e)||e<0||e>1?NaN:n+N(Fn(Xn*e),2)*(r-n)};c(Ai,"factory",function(e,n){return i(e)||i(n)||e>=n?k(NaN):function(r){return i(r)||r<0||r>1?NaN:e+N(Fn(Xn*r),2)*(n-e)}});var ji=Ai,Cr=ge.isPrimitive;function Ke(){var e,n;if(!(this instanceof Ke))return arguments.length===0?new Ke:new Ke(arguments[0],arguments[1]);if(arguments.length){if(e=arguments[0],n=arguments[1],!Cr(e)||i(e))throw new TypeError("invalid argument. Minimum support `a` must be a number primitive. Value: `"+e+"`");if(!Cr(n)||i(n))throw new TypeError("invalid argument. Maximum support `b` must be a number primitive. Value: `"+n+"`");if(e>=n)throw new RangeError("invalid arguments. Minimum support `a` must be less than maximum support `b`. Value: `"+e+","+n+"`")}else e=0,n=1;return _(this,"a",{configurable:!1,enumerable:!0,get:function(){return e},set:function(r){if(!Cr(r)||i(r))throw new TypeError("invalid value. Must be a number primitive. Value: `"+r+"`");if(r>=n)throw new RangeError("invalid value. Must be less than `b`. Value: `"+r+"`");e=r}}),_(this,"b",{configurable:!1,enumerable:!0,get:function(){return n},set:function(r){if(!Cr(r)||i(r))throw new TypeError("invalid value. Must be a number primitive. Value: `"+r+"`");if(r<=e)throw new RangeError("invalid value. Must be greater than `a`. Value: `"+r+"`");n=r}}),this}y(Ke.prototype,"entropy",function(){return Xa(this.a,this.b)}),y(Ke.prototype,"kurtosis",function(){return Ya(this.a,this.b)}),y(Ke.prototype,"mean",function(){return Qa(this.a,this.b)}),y(Ke.prototype,"median",function(){return ei(this.a,this.b)}),y(Ke.prototype,"mode",function(){return ni(this.a,this.b)}),y(Ke.prototype,"skewness",function(){return ri(this.a,this.b)}),y(Ke.prototype,"stdev",function(){return ai(this.a,this.b)}),y(Ke.prototype,"variance",function(){return yi(this.a,this.b)}),c(Ke.prototype,"cdf",function(e){return h0(e,this.a,this.b)}),c(Ke.prototype,"logcdf",function(e){return wi(e,this.a,this.b)}),c(Ke.prototype,"logpdf",function(e){return Ei(e,this.a,this.b)}),c(Ke.prototype,"pdf",function(e){return Vi(e,this.a,this.b)}),c(Ke.prototype,"quantile",function(e){return ji(e,this.a,this.b)});var Av=Ke,Oi=function(e,n){return i(e)||i(n)||n<0||n>1?NaN:e<0?0:e>=1?1:1-n};c(Oi,"factory",function(e){return i(e)||e<0||e>1?k(NaN):function(n){return i(n)?NaN:n<0?0:n>=1?1:1-e}});var Ui=Oi,jv=ge.isPrimitive,Ri=function(e){return jv(e)&&e>=0&&e<=1},Ov=ge.isObject,Li=function(e){return Ov(e)&&e.valueOf()>=0&&e.valueOf()<=1},$1=function(e){return Ri(e)||Li(e)};c($1,"isPrimitive",Ri),c($1,"isObject",Li);var Gr=$1,_i=function(e){var n;return i(e)||e<0||e>1?NaN:e===0||e===1?0:-(n=1-e)*p(n)-e*p(e)},Bi=function(e){return i(e)||e<0||e>1?NaN:1/(e*(1-e))-6},Fi=function(e){return i(e)||e<0||e>1?NaN:e},Ii=function(e){return i(e)||e<0||e>1?NaN:e<=.5?0:1},Ci=function(e){return i(e)||e<0||e>1?NaN:e<=.5?0:1},Gi=function(e){return i(e)||e<0||e>1?NaN:e===0?w:e===1?V:(1-2*e)/M(e*(1-e))},Ki=function(e){return i(e)||e<0||e>1?NaN:M((1-e)*e)},Wi=function(e){return i(e)||e<0||e>1?NaN:e*(1-e)},Kr=function(e){return e>=0&&e<=1},Wr=Math.ceil,lr=function(e){return e<0?Wr(e):D(e)},Uv=function(e,n,r){var a,u,o;return o=(a=e-n)-(u=a*a)*L9(u),Bn(1-(n-a*o/(2-o)-e),r)},Rv=.6931471803691238,Lv=19082149292705877e-26,Hi=1.4426950408889634,_v=709.782712893384,Bv=-745.1332191019411,Di=1/(1<<28),Fv=-Di,b=function(e){var n;return i(e)||e===w?e:e===V?0:e>_v?w:e<Bv?0:e>Fv&&e<Di?1+e:(n=lr(e<0?Hi*e-.5:Hi*e+.5),Uv(e-n*Rv,n*Lv,n))},zi=function(e,n){return i(e)||!Kr(n)?NaN:1-n+n*b(e)};c(zi,"factory",function(e){return Kr(e)?function(n){return i(n)?NaN:1-e+e*b(n)}:k(NaN)});var $i=zi,Ji=function(e,n){return i(e)||i(n)||n<0||n>1?NaN:e===0?1-n:e===1?n:0};c(Ji,"factory",function(e){return i(e)||e<0||e>1?k(NaN):function(n){return i(n)?NaN:n===0?1-e:n===1?e:0}});var Zi=Ji,Xi=function(e,n){return i(n)||i(e)||n<0||n>1||e<0||e>1?NaN:e<=1-n?0:1};c(Xi,"factory",function(e){return i(e)||e<0||e>1?k(NaN):function(n){return i(n)||n<0||n>1?NaN:n<=1-e?0:1}});var Yi=Xi,Qi=Gr.isPrimitive;function nn(){var e;if(!(this instanceof nn))return arguments.length===0?new nn:new nn(arguments[0]);if(arguments.length){if(e=arguments[0],!Qi(e))throw new TypeError("invalid argument. Mean parameter `p` must be a probability. Value: `"+e+"`")}else e=.5;return _(this,"p",{configurable:!1,enumerable:!0,get:function(){return e},set:function(n){if(!Qi(n))throw new TypeError("invalid value. Must be a probability. Value: `"+n+"`");e=n}}),this}y(nn.prototype,"entropy",function(){return _i(this.p)}),y(nn.prototype,"kurtosis",function(){return Bi(this.p)}),y(nn.prototype,"mean",function(){return Fi(this.p)}),y(nn.prototype,"median",function(){return Ci(this.p)}),y(nn.prototype,"mode",function(){return Ii(this.p)}),y(nn.prototype,"skewness",function(){return Gi(this.p)}),y(nn.prototype,"stdev",function(){return Ki(this.p)}),y(nn.prototype,"variance",function(){return Wi(this.p)}),c(nn.prototype,"cdf",function(e){return Ui(e,this.p)}),c(nn.prototype,"mgf",function(e){return $i(e,this.p)}),c(nn.prototype,"pmf",function(e){return Zi(e,this.p)}),c(nn.prototype,"quantile",function(e){return Yi(e,this.p)});var Iv=nn,Cv=.34657359027997264,Gv=function(e){return e===0?-.03333333333333313:e*(.0015873015872548146+e*(e*(4008217827329362e-21+-20109921818362437e-23*e)-793650757867488e-19))-.03333333333333313},Kv=709.782712893384,J1=.6931471803691238,Z1=19082149292705877e-26,eu=1.4426950408889634,Wv=38.816242111356935,Hv=1.0397207708399179,ve=function(e){var n,r,a,u,o,f,l,v,m,g,d,h;if(e===w||i(e))return e;if(e===V)return-1;if(e===0)return e;if(e<0?(r=!0,l=-e):(r=!1,l=e),l>=Wv){if(r)return-1;if(l>=Kv)return w}if(o=0|we(l),l>Cv)l<Hv?r?(a=e+J1,u=-Z1,h=-1):(a=e-J1,u=Z1,h=1):(h=r?eu*e-.5:eu*e+.5,a=e-(g=h|=0)*J1,u=g*Z1),m=a-(e=a-u)-u;else{if(o<1016070144)return e;h=0}return d=(v=e*(n=.5*e))*(((f=1+v*Gv(v))-(g=3-f*n))/(6-e*g)),h===0?e-(e*d-v):(d=e*(d-m)-m,d-=v,h===-1?.5*(e-d)-.5:h===1?e<-.25?-2*(d-(e+.5)):1+2*(e-d):h<=-2||h>56?(a=we(l=1-(d-e))+(h<<20)|0,(l=Pn(l,a))-1):(g=1,h<20?l=(g=Pn(g,a=1072693248-(2097152>>h)|0))-(d-e):(l=e-(d+(g=Pn(g,a=Gn-h<<20|0))),l+=1),a=we(l)+(h<<20)|0,Pn(l,a)))},Dv=function(e){return e===0?.6666666666666735:.6666666666666735+e*(.3999999999940942+e*(.2857142874366239+e*(.22222198432149784+e*(.1818357216161805+e*(.15313837699209373+.14798198605116586*e)))))},X1=.6931471803691238,Y1=19082149292705877e-26,zv=.41421356237309503,$v=-.2928932188134525,Jv=1862645149230957e-24,Zv=5551115123125783e-32,Xv=9007199254740992,Yv=.6666666666666666,R=function(e){var n,r,a,u,o,f,l,v,m,g;if(e<-1||i(e))return NaN;if(e===-1)return V;if(e===w||e===0)return e;if(g=1,(a=e<0?-e:e)<zv){if(a<Jv)return a<Zv?e:e-e*e*.5;e>$v&&(g=0,u=e,r=1)}return g!==0&&(a<Xv?(o=(g=((r=we(m=1+e))>>20)-Gn)>0?1-(m-e):e-(m-1),o/=m):(g=((r=we(m=e))>>20)-Gn,o=0),(r&=1048575)<434334?m=Pn(m,1072693248|r):(g+=1,m=Pn(m,1071644672|r),r=1048576-r>>2),u=m-1),n=.5*u*u,r===0?u===0?g*X1+(o+=g*Y1):g*X1-((v=n*(1-Yv*u))-(g*Y1+o)-u):(v=(l=(f=u/(2+u))*f)*Dv(l),g===0?u-(n-f*(n+v)):g*X1-(n-(f*(n+v)+(g*Y1+o))-u))},Tn=2.718281828459045,rn=2220446049250313e-31,Q1=function(e){var n,r;return e===0?1/0:((e<0?-e:e)<=1?(n=709811.662581658+e*(679979.8474157227+e*(293136.7857211597+e*(74887.54032914672+e*(12555.290582413863+e*(1443.4299244417066+e*(115.24194596137347+e*(6.309239205732627+e*(.22668404630224365+e*(.004826466289237662+4624429436045379e-20*e))))))))),r=0+e*(362880+e*(1026576+e*(1172700+e*(723680+e*(269325+e*(63273+e*(9450+e*(870+e*(45+1*e)))))))))):(n=4624429436045379e-20+(e=1/e)*(.004826466289237662+e*(.22668404630224365+e*(6.309239205732627+e*(115.24194596137347+e*(1443.4299244417066+e*(12555.290582413863+e*(74887.54032914672+e*(293136.7857211597+e*(679979.8474157227+709811.662581658*e))))))))),r=1+e*(45+e*(870+e*(9450+e*(63273+e*(269325+e*(723680+e*(1172700+e*(1026576+e*(362880+0*e)))))))))),n/r)},ea=10.900511,X=function(e,n){var r,a,u,o,f,l,v;return i(e)||i(n)?NaN:e<0||n<0?NaN:n===1?1/e:e===1?1/n:(v=e+n)<rn?(f=v/e,f/=n):v===e&&n<rn?1/n:v===n&&e<rn?1/e:(e<n&&(l=n,n=e,e=l),a=e+ea-.5,u=n+ea-.5,o=v+ea-.5,f=Q1(e)*(Q1(n)/Q1(v)),S(n*(r=e-.5-n))<100*o&&e>100?f*=b(r*R(-n/o)):f*=N(a/o,r),f*=N(o>1e10?a/o*(u/o):a*u/(o*o),n),f*=M(Tn/u))},nu=function(e){return e===0&&1/e===w},ee=function(e,n){var r,a,u,o;if((r=arguments.length)===2)return i(e)||i(n)?NaN:e===w||n===w?w:e===n&&e===0?nu(e)?e:n:e>n?e:n;for(a=V,o=0;o<r;o++){if(u=arguments[o],i(u)||u===w)return u;(u>a||u===a&&u===0&&nu(u))&&(a=u)}return a},na=function(e){return e===0&&1/e===V},Z=function(e,n){var r,a,u,o;if((r=arguments.length)===2)return i(e)||i(n)?NaN:e===V||n===V?V:e===n&&e===0?na(e)?e:n:e<n?e:n;for(a=w,o=0;o<r;o++){if(u=arguments[o],i(u)||u===V)return u;(u<a||u===a&&u===0&&na(u))&&(a=u)}return a},an=17976931348623157e292,Qv=2147483647,Nr=2.5066282746310007,ep=function(e){return e===0?.08333333333334822:.08333333333334822+e*(.0034722222160545866+e*(e*(.0007873113957930937*e-.00022954996161337813)-.0026813261780578124))},np=143.01608,ru=function(e){var n,r,a;return n=1+(n=1/e)*ep(n),r=b(e),r=e>np?(a=N(e,.5*e-.25))*(a/r):N(e,e-.5)/r,Nr*r*n},k0=.5772156649015329,au=function(e,n){return n/((1+k0*e)*e)},rp=function(e){var n,r;return e===0?1:((e<0?-e:e)<=1?(n=1+e*(.4942148268014971+e*(.20744822764843598+e*(.04763678004571372+e*(.010421379756176158+e*(.0011913514700658638+e*(.00016011952247675185+0*e)))))),r=1+e*(.0714304917030273+e*(e*(.035823639860549865+e*(.011813978522206043+e*(e*(.0005396055804933034+-23158187332412014e-21*e)-.004456419138517973)))-.23459179571824335))):(n=0+(e=1/e)*(.00016011952247675185+e*(.0011913514700658638+e*(.010421379756176158+e*(.04763678004571372+e*(.20744822764843598+e*(.4942148268014971+1*e)))))),r=e*(.0005396055804933034+e*(e*(.011813978522206043+e*(.035823639860549865+e*(e*(.0714304917030273+1*e)-.23459179571824335)))-.004456419138517973))-23158187332412014e-21),n/r)},G=function(e){var n,r,a,u;if(K(e)&&e<0||e===V||i(e))return NaN;if(e===0)return na(e)?V:w;if(e>171.61447887182297)return w;if(e<-170.5674972726612)return 0;if((r=S(e))>33)return e>=0?ru(e):(n=1&(a=D(r))?1:-1,(u=r-a)>.5&&(u=r-(a+=1)),u=r*Fn(F*u),n*F/(S(u)*ru(r)));for(u=1;e>=3;)u*=e-=1;for(;e<0;){if(e>-1e-9)return au(e,u);u/=e,e+=1}for(;e<2;){if(e<1e-9)return au(e,u);u/=e,e+=1}return e===2?u:u*rp(e-=2)},ap=[1,1,2,6,24,120,720,5040,40320,362880,3628800,39916800,479001600,6227020800,87178291200,1307674368e3,20922789888e3,355687428096e3,6402373705728e3,121645100408832e3,243290200817664e4,5109094217170944e4,11240007277776077e5,2585201673888498e7,6204484017332394e8,15511210043330986e9,40329146112660565e10,10888869450418352e12,30488834461171387e13,8841761993739702e15,26525285981219107e16,8222838654177922e18,2631308369336935e20,8683317618811886e21,29523279903960416e22,10333147966386145e24,37199332678990125e25,13763753091226346e27,5230226174666011e29,20397882081197444e30,8159152832478977e32,3345252661316381e34,140500611775288e37,6041526306337383e37,2658271574788449e39,11962222086548019e40,5502622159812089e42,25862324151116818e43,12413915592536073e45,6082818640342675e47,30414093201713376e48,15511187532873822e50,8065817517094388e52,42748832840600255e53,2308436973392414e56,12696403353658276e57,7109985878048635e59,40526919504877214e60,23505613312828785e62,13868311854568984e64,832098711274139e67,5075802138772248e68,3146997326038794e70,198260831540444e73,12688693218588417e73,8247650592082472e75,5443449390774431e77,3647111091818868e79,24800355424368305e80,1711224524281413e83,11978571669969892e84,8504785885678623e86,61234458376886085e87,44701154615126844e89,3307885441519386e92,248091408113954e95,18854947016660504e95,14518309202828587e97,11324281178206297e99,8946182130782976e101,7156945704626381e103,5797126020747368e105,4753643337012842e107,3945523969720659e109,3314240134565353e111,281710411438055e114,24227095383672734e114,2107757298379528e117,18548264225739844e118,1650795516090846e121,14857159644817615e122,1352001527678403e125,12438414054641308e126,11567725070816416e128,1087366156656743e131,1032997848823906e133,9916779348709496e134,9619275968248212e136,9426890448883248e138,9332621544394415e140,9332621544394415e142,942594775983836e145,9614466715035127e146,990290071648618e149,10299016745145628e150,1081396758240291e153,11462805637347084e154,1226520203196138e157,1324641819451829e159,14438595832024937e160,1588245541522743e163,17629525510902446e164,1974506857221074e167,22311927486598138e168,25435597334721877e170,2925093693493016e173,3393108684451898e175,3969937160808721e177,4684525849754291e179,5574585761207606e181,6689502913449127e183,8094298525273444e185,9875044200833601e187,1214630436702533e190,1506141741511141e192,1882677176888926e194,2372173242880047e196,30126600184576594e197,3856204823625804e200,4974504222477287e202,6466855489220474e204,847158069087882e207,11182486511960043e208,14872707060906857e210,19929427461615188e212,26904727073180504e214,3659042881952549e217,5012888748274992e219,6917786472619489e221,9615723196941089e223,13462012475717526e225,1898143759076171e228,2695364137888163e230,3854370717180073e232,55502938327393044e233,8047926057471992e236,11749972043909107e238,1727245890454639e241,25563239178728654e242,380892263763057e246,5713383956445855e247,862720977423324e250,13113358856834524e251,20063439050956823e253,30897696138473508e255,4789142901463394e258,7471062926282894e260,11729568794264145e262,1853271869493735e265,29467022724950384e266,47147236359920616e268,7590705053947219e271,12296942187394494e273,20044015765453026e275,3287218585534296e278,5423910666131589e280,9003691705778438e282,1503616514864999e285,25260757449731984e286,4269068009004705e289,7257415615307999e291],ip=170,mr=function(e){return i(e)?NaN:K(e)?e<0?NaN:e<=ip?ap[e]:w:G(e+1)},iu=function(e){var n,r;return e===0?1/0:((e<0?-e:e)<=1?(n=3847467039331777e-5+e*(3685766504351951e-5+e*(1588920245372942e-5+e*(4059208354298835e-6+e*(6805476611834733e-7+e*(7823975500312005e-8+e*(6246580776401795e-9+e*(341986.3488721347+e*(12287.194511824551+e*(261.61404416416684+2.5066282746310007*e))))))))),r=0+e*(362880+e*(1026576+e*(1172700+e*(723680+e*(269325+e*(63273+e*(9450+e*(870+e*(45+1*e)))))))))):(n=2.5066282746310007+(e=1/e)*(261.61404416416684+e*(12287.194511824551+e*(341986.3488721347+e*(6246580776401795e-9+e*(7823975500312005e-8+e*(6805476611834733e-7+e*(4059208354298835e-6+e*(1588920245372942e-5+e*(3685766504351951e-5+3847467039331777e-5*e))))))))),r=1+e*(45+e*(870+e*(9450+e*(63273+e*(269325+e*(723680+e*(1172700+e*(1026576+e*(362880+0*e)))))))))),n/r)},pe=10.900511,uu=170,up=4269068009004705e289,op=function e(n,r){var a,u,o;return n<rn?r>uu?(u=e(r,uu-r),u*=n,1/(u*=up)):1/(n*G(n+r)):(o=n+pe-.5,n+r===n?a=S(r)<10?b((.5-n)*R(r/o)):1:(a=S(r)<10?b((.5-n)*R(r/o)):N(o/(o+r),n-.5),a*=iu(n)/iu(n+r)),a*=N(Tn/(o+r),r))},ou=170,ra=function(e,n){var r,a,u;if(e<=0||e+n<=0)return G(e)/G(e+n);if((a=D(n))===n){if((u=D(e))===e&&e<=ou&&e+n<=ou)return mr(u-1)/mr(a+u-1);if(S(n)<20){if(n===0)return 1;if(n<0){for(r=e-=1,n+=1;n!==0;)r*=e-=1,n+=1;return r}for(r=1/e,n-=1;n!==0;)r/=e+=1,n-=1;return r}}return op(e,n)},Yn=[0,0],sp=2147483647,tp=1072243195,fp=1044381696,cp=2146435072,R0=function(e){var n;if(n=we(e),(n&=sp)<=tp)return n<fp?1:fr(e,0);if(n>=cp)return NaN;switch(3&z1(e,Yn)){case 0:return fr(Yn[0],Yn[1]);case 1:return-cr(Yn[0],Yn[1]);case 2:return-fr(Yn[0],Yn[1]);default:return cr(Yn[0],Yn[1])}},E0=function(e){var n,r;return i(e)?NaN:Sn(e)?NaN:(n=S(r=e%2))===0||n===1?ln(0,r):n<.25?Fn(F*r):n<.75?ln(R0(F*(n=.5-n)),r):n<1.25?(r=ln(1,r)-r,Fn(F*r)):n<1.75?-ln(R0(F*(n-=1.5)),r):(r-=ln(2,r),Fn(F*r))},vp=function(e){return e===0?.06735230105312927:.06735230105312927+e*(.007385550860814029+e*(.0011927076318336207+e*(.00022086279071390839+25214456545125733e-21*e)))},pp=function(e){return e===0?.020580808432516733:.020580808432516733+e*(.0028905138367341563+e*(.0005100697921535113+e*(.00010801156724758394+44864094961891516e-21*e)))},lp=function(e){return e===0?1.3920053346762105:1.3920053346762105+e*(.7219355475671381+e*(.17193386563280308+e*(.01864591917156529+e*(.0007779424963818936+7326684307446256e-21*e))))},Np=function(e){return e===0?.21498241596060885:.21498241596060885+e*(.325778796408931+e*(.14635047265246445+e*(.02664227030336386+e*(.0018402845140733772+3194753265841009e-20*e))))},mp=function(e){return e===0?-.032788541075985965:e*(.006100538702462913+e*(.00031563207090362595*e-.0014034646998923284))-.032788541075985965},hp=function(e){return e===0?.01797067508118204:.01797067508118204+e*(e*(.000881081882437654+-.00031275416837512086*e)-.0036845201678113826)},dp=function(e){return e===0?-.010314224129834144:e*(.0022596478090061247+e*(.0003355291926355191*e-.0005385953053567405))-.010314224129834144},bp=function(e){return e===0?.6328270640250934:.6328270640250934+e*(1.4549225013723477+e*(.9777175279633727+e*(.22896372806469245+.013381091853678766*e)))},yp=function(e){return e===0?2.4559779371304113:2.4559779371304113+e*(2.128489763798934+e*(.7692851504566728+e*(.10422264559336913+.003217092422824239*e)))},gp=function(e){return e===0?.08333333333333297:.08333333333333297+e*(e*(.0007936505586430196+e*(e*(.0008363399189962821+-.0016309293409657527*e)-.00059518755745034))-.0027777777772877554)},wp=.07721566490153287,kp=.3224670334241136,Ep=1,Tp=-.07721566490153287,Vp=.48383612272381005,Mp=-.1475877229945939,qp=.06462494023913339,xp=-.07721566490153287,Pp=1,Sp=.4189385332046727,Hr=1.4616321449683622,Ap=4503599627370496,jp=0x400000000000000,Op=8470329472543003e-37,su=1.4616321449683622,Up=-.12148629053584961,Rp=-3638676997039505e-33,Y=function(e){var n,r,a,u,o,f,l,v,m,g,d;if(i(e)||Sn(e))return e;if(e===0)return w;if(e<0?(n=!0,e=-e):n=!1,e<Op)return-p(e);if(n){if(e>=Ap||(l=E0(e))===0)return w;r=p(F/S(l*e))}if(e===1||e===2)return 0;if(e<2)switch(e<=.9?(d=-p(e),e>=Hr-1+.27?(m=1-e,a=0):e>=Hr-1-.27?(m=e-(su-1),a=1):(m=e,a=2)):(d=0,e>=Hr+.27?(m=2-e,a=0):e>=Hr-.27?(m=e-su,a=1):(m=e-1,a=2)),a){case 0:d+=m*(f=wp+(g=m*m)*vp(g))+(o=g*(kp+g*pp(g)))-.5*m;break;case 1:f=Vp+(v=(g=m*m)*m)*mp(v),o=Mp+v*hp(v),u=qp+v*dp(v),d+=Up+(g*f-(Rp-v*(o+m*u)));break;case 2:d+=-.5*m+(f=m*(xp+m*bp(m)))/(o=Pp+m*yp(m))}else if(e<8)switch(d=.5*(m=e-(a=lr(e)))+m*(Tp+m*Np(m))/(Ep+m*lp(m)),g=1,a){case 7:g*=m+6;case 6:g*=m+5;case 5:g*=m+4;case 4:g*=m+3;case 3:d+=p(g*=m+2)}else d=e<jp?(e-.5)*((l=p(e))-1)+(v=Sp+(g=1/e)*gp(m=g*g)):e*(p(e)-1);return n&&(d=r-d),d},tu=14901161193847656e-24,I=709.782712893384,Lp=function(e,n){var r,a,u;if((a=b(-n))!==0)for(r=a,u=1;u<e;++u)r/=u,a+=r*=n;return a},_p=function(e){return e===0?-.3250421072470015:e*(e*(-23763016656650163e-21*e-.005770270296489442)-.02848174957559851)-.3250421072470015},Bp=function(e){return e===0?-.3250421072470015:e*(e*(-23763016656650163e-21*e-.005770270296489442)-.02848174957559851)-.3250421072470015},Fp=function(e){return e===0?.39791722395915535:.39791722395915535+e*(.0650222499887673+e*(.005081306281875766+e*(.00013249473800432164+-3960228278775368e-21*e)))},Ip=function(e){return e===0?.39791722395915535:.39791722395915535+e*(.0650222499887673+e*(.005081306281875766+e*(.00013249473800432164+-3960228278775368e-21*e)))},Cp=function(e){return e===0?.41485611868374833:.41485611868374833+e*(e*(.31834661990116175+e*(e*(.035478304325618236+-.002166375594868791*e)-.11089469428239668))-.3722078760357013)},Gp=function(e){return e===0?.41485611868374833:.41485611868374833+e*(e*(.31834661990116175+e*(e*(.035478304325618236+-.002166375594868791*e)-.11089469428239668))-.3722078760357013)},Kp=function(e){return e===0?.10642088040084423:.10642088040084423+e*(.540397917702171+e*(.07182865441419627+e*(.12617121980876164+e*(.01363708391202905+.011984499846799107*e))))},Wp=function(e){return e===0?.10642088040084423:.10642088040084423+e*(.540397917702171+e*(.07182865441419627+e*(.12617121980876164+e*(.01363708391202905+.011984499846799107*e))))},Hp=function(e){return e===0?-.6938585727071818:e*(e*(e*(e*(e*(-9.814329344169145*e-81.2874355063066)-184.60509290671104)-162.39666946257347)-62.375332450326006)-10.558626225323291)-.6938585727071818},Dp=function(e){return e===0?-.6938585727071818:e*(e*(e*(e*(e*(-9.814329344169145*e-81.2874355063066)-184.60509290671104)-162.39666946257347)-62.375332450326006)-10.558626225323291)-.6938585727071818},zp=function(e){return e===0?19.651271667439257:19.651271667439257+e*(137.65775414351904+e*(434.56587747522923+e*(645.3872717332679+e*(429.00814002756783+e*(108.63500554177944+e*(6.570249770319282+-.0604244152148581*e))))))},$p=function(e){return e===0?19.651271667439257:19.651271667439257+e*(137.65775414351904+e*(434.56587747522923+e*(645.3872717332679+e*(429.00814002756783+e*(108.63500554177944+e*(6.570249770319282+-.0604244152148581*e))))))},Jp=function(e){return e===0?-.799283237680523:e*(e*(e*(e*(-483.5191916086514*e-1025.0951316110772)-637.5664433683896)-160.63638485582192)-17.757954917754752)-.799283237680523},Zp=function(e){return e===0?-.799283237680523:e*(e*(e*(e*(-483.5191916086514*e-1025.0951316110772)-637.5664433683896)-160.63638485582192)-17.757954917754752)-.799283237680523},Xp=function(e){return e===0?30.33806074348246:30.33806074348246+e*(325.7925129965739+e*(1536.729586084437+e*(3199.8582195085955+e*(2553.0504064331644+e*(474.52854120695537+-22.44095244658582*e)))))},Yp=function(e){return e===0?30.33806074348246:30.33806074348246+e*(325.7925129965739+e*(1536.729586084437+e*(3199.8582195085955+e*(2553.0504064331644+e*(474.52854120695537+-22.44095244658582*e)))))},Dr=1e-300,Qp=13877787807814457e-33,fu=.8450629115104675,el=.12837916709551256,nl=1,rl=-.0023621185607526594,al=1,il=-.009864944034847148,ul=1,ol=-.0098649429247001,sl=1,T0=function(e){var n,r,a,u,o,f,l,v;if(i(e))return NaN;if(e===w)return 0;if(e===V)return 2;if(e===0)return 1;if(e<0?(n=!0,r=-e):(n=!1,r=e),r<.84375)return r<Qp?1-e:(f=(u=el+(a=e*e)*Bp(a))/(o=nl+a*Ip(a)),e<.25?1-(e+e*f):(u=e*f,.5-(u+=e-.5)));if(r<1.25)return l=rl+(o=r-1)*Gp(o),v=al+o*Wp(o),n?1+fu+l/v:1-fu-l/v;if(r<28){if(o=1/(r*r),r<2.857142857142857)u=il+o*Dp(o),o=ul+o*$p(o);else{if(e<-6)return 2-Dr;u=ol+o*Zp(o),o=sl+o*Yp(o)}return a=An(r,0),u=b(-a*a-.5625)*b((a-r)*(a+r)+u/o),n?2-u/r:u/r}return n?2-Dr:Dr*Dr},tl=function(e,n){var r,a,u,o,f;if((o=T0(M(n)))!==0&&e>1){for(a=b(-n)/M(F*n),a*=n,u=a/=r=.5,f=2;f<e;++f)a/=f-r,u+=a*=n;o+=u}return o},H=-708.3964185322641,cu=function(e,n){var r;return r=e*p(n),n>=1?r<I&&-n>H?N(n,e)*b(-n):e>=1?N(n/b(n/e),e):b(r-n):r>H?N(n,e)*b(-n):n/e<I?N(n/b(n/e),e):b(r-n)},aa=function(e,n){var r,a;if((a=e.length)<2||n===0)return a===0?0:e[0];for(r=e[a-=1]*n+e[a-1],a-=2;a>=0;)r=r*n+e[a],a-=1;return r};c(aa,"factory",function(e){var n,r,a,u;if(e.length>500)return function(o){return aa(e,o)};if(n="return function evalpoly(x){",(r=e.length)===0)n+="return 0.0;";else if(r===1)n+="return "+e[0]+";";else{for(n+="if(x===0.0){return "+e[0]+";}",n+="return "+e[0],a=r-1,u=1;u<r;u++)n+="+x*",u<a&&(n+="("),n+=e[u];for(u=0;u<a-1;u++)n+=")";n+=";"}return n+="}",n+="//# sourceURL=evalpoly.factory.js",new Function(n)()});var We=aa,Qn=6.283185307179586,fl=function(e){return e===0?-.3333333333333333:e*(.08333333333333333+e*(e*(.0011574074074074073+e*(.0003527336860670194+e*(e*(3919263178522438e-20+e*(e*(e*(8296711340953087e-22+e*(e*(6707853543401498e-24+e*(10261809784240309e-24+e*(914769958223679e-24*e-4382036018453353e-24)))-17665952736826078e-23))-185406221071516e-20)-21854485106799924e-22))-.0001787551440329218)))-.014814814814814815))-.3333333333333333},cl=function(e){return e===0?-.001851851851851852:e*(e*(.0026455026455026454+e*(e*(.00020576131687242798+e*(e*(e*(764916091608111e-20+e*(e*(4647127802807434e-24+e*(1378633446915721e-22+e*(11951628599778148e-24*e-5752545603517705e-23)))-16120900894563446e-22))-18098550334489977e-21)-4018775720164609e-22))-.0009902263374485596))-.003472222222222222)-.001851851851851852},vl=function(e){return e===0?.004133597883597883:.004133597883597883+e*(e*(.0007716049382716049+e*(20093878600823047e-22+e*(e*(52923448829120125e-21+e*(e*(3423578734096138e-23+e*(13721957309062932e-22+e*(14280614206064242e-23*e-6298992138380055e-22)))-12760635188618728e-21))-.00010736653226365161)))-.0026813271604938273)},pl=function(e){return e===0?.0006494341563786008:.0006494341563786008+e*(.00022947209362139917+e*(e*(.00026772063206283885+e*(e*(e*(11082654115347302e-21+e*(14230900732435883e-22*e-56749528269915965e-22))-2396505113867297e-22)-7561801671883977e-20))-.0004691894943952557))},ll=function(e){return e===0?-.0008618882909167117:e*(.0007840392217200666+e*(e*(e*(6641498215465122e-20+e*(11375726970678419e-21*e-3968365047179435e-20))-14638452578843418e-22)-.0002990724803031902))-.0008618882909167117},Nl=function(e){return e===0?-.00033679855336635813:e*(e*(.0002772753244959392+e*(e*(6797780477937208e-20+e*(1419062920643967e-22+e*(e*(8018470256334202e-21+-2291481176508095e-21*e)-13594048189768693e-21)))-.00019932570516188847))-6972813758365858e-20)-.00033679855336635813},ml=function(e){return e===0?.0005313079364639922:.0005313079364639922+e*(e*(.0002708782096718045+e*(7902353232660328e-22+e*(e*(561168275310625e-19+-18329116582843375e-21*e)-8153969367561969e-20)))-.0005921664373536939)},hl=function(e){return e===0?.00034436760689237765:.00034436760689237765+e*(5171790908260592e-20+e*(e*(.0002812695154763237+-.00010976582244684731*e)-.00033493161081142234))},dl=function(e){return e===0?-.0006526239185953094:e*(.0008394987206720873+-.000438297098541721*e)-.0006526239185953094},In=[0,0,0,0,0,0,0,0,0,0],bl=function(e,n){var r,a,u,o,f;return o=e*(u=-p(1+(a=(n-e)/e))+a),f=M(2*u),n<e&&(f=-f),In[0]=fl(f),In[1]=cl(f),In[2]=vl(f),In[3]=pl(f),In[4]=ll(f),In[5]=Nl(f),In[6]=ml(f),In[7]=hl(f),In[8]=dl(f),In[9]=-.0005967612901927463,r=We(In,1/e),r*=b(-o)/M(Qn*e),n<e&&(r=-r),r+=T0(M(o))/2},yl=eval,vu=function(){var e;try{yl('"use strict"; (function* () {})'),e=!0}catch{e=!1}return e},gl=1e6,wl=function(e,n){var r,a,u,o,f;if(f={},arguments.length>1&&(f=n),r=f.tolerance||rn,u=f.maxTerms||gl,o=f.initialValue||0,typeof e.next=="function"){for(a of e)if(S(r*(o+=a))>=S(a)||--u==0)break}else do o+=a=e();while(S(r*o)<S(a)&&--u);return o},kl=1e6,El=function(e,n){var r,a,u,o,f;f={},arguments.length>1&&(f=n),r=f.tolerance||rn,u=f.maxTerms||kl,o=f.initialValue||0;do o+=a=e();while(S(r*o)<S(a)&&--u);return o},zr=vu()?wl:El,Tl=function(e,n){var r=1,a=e,u=n;return function(){var o=r;return r*=u/(a+=1),o}},ia=function(e,n,r){var a;return r=r||0,a=Tl(e,n),zr(a,{initialValue:r})},xe=function(e){var n,r;return e===0?1/0:((e<0?-e:e)<=1?(n=709811.662581658+e*(679979.8474157227+e*(293136.7857211597+e*(74887.54032914672+e*(12555.290582413863+e*(1443.4299244417066+e*(115.24194596137347+e*(6.309239205732627+e*(.22668404630224365+e*(.004826466289237662+4624429436045379e-20*e))))))))),r=0+e*(362880+e*(1026576+e*(1172700+e*(723680+e*(269325+e*(63273+e*(9450+e*(870+e*(45+1*e)))))))))):(n=4624429436045379e-20+(e=1/e)*(.004826466289237662+e*(.22668404630224365+e*(6.309239205732627+e*(115.24194596137347+e*(1443.4299244417066+e*(12555.290582413863+e*(74887.54032914672+e*(293136.7857211597+e*(679979.8474157227+709811.662581658*e))))))))),r=1+e*(45+e*(870+e*(9450+e*(63273+e*(269325+e*(723680+e*(1172700+e*(1026576+e*(362880+0*e)))))))))),n/r)},pu=function(e,n){var r,a,u,o,f,l,v;return v=(n-e-pe+.5)/(u=e+pe-.5),e<1?n<=H?b(e*p(n)-n-Y(e)):N(n,e)*b(-n)/G(e):(S(v*v*e)<=100&&e>150?(r=e*(R(v)-v)+n*(.5-pe)/u,r=b(r)):(o=e*p(n/u),Z(o,f=e-n)<=H||ee(o,f)>=I?(a=f/e,Z(o,f)/2>H&&ee(o,f)/2<I?r=(l=N(n/u,e/2)*b(f/2))*l:Z(o,f)/4>H&&ee(o,f)/4<I&&n>e?(r=(l=N(n/u,e/4)*b(f/4))*l,r*=r):r=a>H&&a<I?N(n*b(a)/u,e):b(o+f)):r=N(n/u,e)*b(f)),r*=M(u/Tn)/xe(e))},Vl=function(e,n){var r;if(i(e)||i(n))return NaN;if(n===0)return 0;if(e===0)return-1;if(e<0&&n%2==0&&(e=-e),e>0){if((S(n*(e-1))<.5||S(n)<.2)&&(r=p(e)*n)<.5)return ve(r)}else if(lr(n)!==n)return NaN;return N(e,n)-1},Ml=function(e){var n,r;return e===0?-.01803556856784494:((e<0?-e:e)<=1?(n=e*(.02512664961998968+e*(.049410315156753225+e*(.0172491608709614+e*(e*(e*(0*e-3245886498259485e-20)-.0005410098692152044)-.0002594535632054381))))-.01803556856784494,r=1+e*(1.962029871977952+e*(1.4801966942423133+e*(.5413914320717209+e*(.09885042511280101+e*(.008213096746488934+e*(.00022493629192211576+-22335276320861708e-23*e))))))):(n=0+(e=1/e)*(e*(e*(e*(.0172491608709614+e*(.049410315156753225+e*(.02512664961998968+-.01803556856784494*e)))-.0002594535632054381)-.0005410098692152044)-3245886498259485e-20),r=e*(.00022493629192211576+e*(.008213096746488934+e*(.09885042511280101+e*(.5413914320717209+e*(1.4801966942423133+e*(1.962029871977952+1*e))))))-22335276320861708e-23),n/r)},ql=function(e){var n,r;return e===0?.04906224540690395:((e<0?-e:e)<=1?(n=.04906224540690395+e*(e*(e*(e*(e*(-.0010034668769627955*e-.024014982064857155)-.1584135863906922)-.4065671242119384)-.4149833583594954)-.09691175301595212),r=1+e*(3.0234982984646304+e*(3.4873958536072385+e*(1.9141558827442668+e*(.5071377386143635+e*(.05770397226904519+.001957681026011072*e)))))):(n=(e=1/e)*(e*(e*(e*(e*(.04906224540690395*e-.09691175301595212)-.4149833583594954)-.4065671242119384)-.1584135863906922)-.024014982064857155)-.0010034668769627955,r=.001957681026011072+e*(.05770397226904519+e*(.5071377386143635+e*(1.9141558827442668+e*(3.4873958536072385+e*(3.0234982984646304+1*e)))))),n/r)},xl=function(e){var n,r;return e===0?-.029232972183027003:((e<0?-e:e)<=1?(n=e*(.14421626775719232+e*(e*(.05428096940550536+e*(e*(.0004311713426792973+0*e)-.008505359768683364))-.14244039073863127))-.029232972183027003,r=1+e*(e*(.846973248876495+e*(e*(.02558279715597587+e*(-8271935218912905e-22*e-.0010066679553914337))-.22009515181499575))-1.5016935605448505)):(n=0+(e=1/e)*(.0004311713426792973+e*(e*(.05428096940550536+e*(e*(.14421626775719232+-.029232972183027003*e)-.14244039073863127))-.008505359768683364)),r=e*(e*(.02558279715597587+e*(e*(.846973248876495+e*(1*e-1.5016935605448505))-.22009515181499575))-.0010066679553914337)-8271935218912905e-22),n/r)},Pl=.15896368026733398,Sl=.5281534194946289,Al=.45201730728149414,lu=function(e,n,r){var a,u,o,f;if(e<rn)return-p(e);if(n===0||r===0)return 0;if(u=0,e>2){if(e>=3){do r-=1,u+=p(e-=1);while(e>=3);r=e-2}return o=r*(e+1),f=Ml(r),u+=o*Pl+o*f}return e<1&&(u+=-p(e),r=n,n=e,e+=1),e<=1.5?(o=ql(n),u+=(a=n*r)*Sl+a*o):(o=r*n,f=xl(-r),u+=o*Al+o*f)},jl=function(e){return i(e)?NaN:e<0?e<-.5?G(1+e)-1:ve(-R(e)+lu(e+2,e+1,e)):e<2?ve(lu(e+1,e,e-1)):G(1+e)-1},Ol=function(e,n){var r,a,u,o;return r=-n,n=-n,a=e+1,u=1,function(){return o=r/a,r*=n,r/=u+=1,a+=1,o}},Ul=function(e,n,r){var a,u,o,f;return u=((a=jl(e))+1)/e,a-=o=Vl(n,e),a/=e,f=Ol(e,n),a=-(o+=1)*zr(f,{initialValue:((r?u:0)-a)/o}),r&&(a=-a),[a,u]},Ae=11754943508222875e-54,Rl=1e6,Ll=function(e,n){var r,a,u;return a={},arguments.length>1&&(a=n),r=a.maxIter||Rl,u=a.tolerance||rn,a.keep?function(o,f,l){var v,m,g,d,h,E;if((g=(E=(v=typeof o.next=="function")?o.next().value:o())[1])===0&&(g=Ae),d=g,h=0,v===!0)do(E=o.next().value)&&((h=E[1]+E[0]*h)===0&&(h=Ae),(d=E[1]+E[0]/d)===0&&(d=Ae),g*=m=d*(h=1/h));while(E&&S(m-1)>f&&--l);else do(E=o())&&((h=E[1]+E[0]*h)===0&&(h=Ae),(d=E[1]+E[0]/d)===0&&(d=Ae),g*=m=d*(h=1/h));while(E&&S(m-1)>f&&--l);return g}(e,u,r):function(o,f,l){var v,m,g,d,h,E,T;if(d=(T=(v=typeof o.next=="function")?o.next().value:o())[1],g=T[0],d===0&&(d=Ae),h=d,E=0,v===!0)do(T=o.next().value)&&((E=T[1]+T[0]*E)===0&&(E=Ae),(h=T[1]+T[0]/h)===0&&(h=Ae),d*=m=h*(E=1/E));while(S(m-1)>f&&--l);else do(T=o())&&((E=T[1]+T[0]*E)===0&&(E=Ae),(h=T[1]+T[0]/h)===0&&(h=Ae),d*=m=h*(E=1/E));while(T&&S(m-1)>f&&--l);return g/d}(e,u,r)},_l=1e6,Bl=function(e,n){var r,a,u;return a={},arguments.length>1&&(a=n),u=a.tolerance||rn,r=a.maxIter||_l,a.keep?function(o,f,l){var v,m,g,d,h;(d=(h=o())[1])===0&&(d=Ae),m=d,g=0;do(h=o())&&((g=h[1]+h[0]*g)===0&&(g=Ae),(m=h[1]+h[0]/m)===0&&(m=Ae),d*=v=m*(g=1/g));while(h&&S(v-1)>f&&--l);return d}(e,u,r):function(o,f,l){var v,m,g,d,h,E;h=(E=o())[1],m=E[0],h===0&&(h=Ae),g=h,d=0;do(E=o())&&((d=E[1]+E[0]*d)===0&&(d=Ae),(g=E[1]+E[0]/g)===0&&(g=Ae),h*=v=g*(d=1/d));while(E&&S(v-1)>f&&--l);return m/h}(e,u,r)},Nu=vu()?Ll:Bl,Fl=function(e,n){var r=n-e+1,a=e,u=0;return function(){return[(u+=1)*(a-u),r+=2]}},mu=function(e,n){var r=Fl(e,n);return 1/(n-e+1+Nu(r))},Il=170,Kn=function e(n,r,a,u){var o,f,l,v,m,g,d,h,E,T,q,P,O;if(n<0||r<=0)return NaN;if(f=a===void 0||a,d=u,h=0,r>=Il&&!f)return d&&4*r<n?(h=r*p(n)-n,h+=p(mu(r,n))):!d&&r>4*n?(h=r*p(n)-n,h+=p(ia(r,n,v=0)/r)):(h=e(r,n,!0,d))===0?d?(h=p(h=1+1/(12*r)+1/(288*r*r))-r+(r-.5)*p(r),h+=p(Nr)):(h=r*p(n)-n,h+=p(ia(r,n,v=0)/r)):h=p(h)+Y(r),h>I?w:b(h);switch(r<30&&r<=n+1&&n<I?m=!(E=(P=D(r))===r)&&S(P-r)===.5:E=m=!1,E&&n>.6?(d=!d,l=0):m&&n>.2?(d=!d,l=1):n<tu&&r>1?l=6:n<.5?l=-.4/p(n)<r?2:3:n<1.1?l=.75*n<r?2:3:(g=!1,f&&r>20&&(T=S((n-r)/r),r>200?20/r>T*T&&(g=!0):T<.4&&(g=!0)),g?l=5:n-1/(3*n)<r?l=2:(l=4,d=!d)),l){case 0:h=Lp(r,n),f===!1&&(h*=G(r));break;case 1:h=tl(r,n),f===!1&&(h*=G(r));break;case 2:(h=f?pu(r,n):cu(r,n))!==0&&(v=0,o=!1,d&&(v=f?1:G(r),f||h>=1||an*h>v?(v/=h,f||r<1||an/r>v?(v*=-r,o=!0):v=0):v=0)),h*=ia(r,n,v)/r,o&&(d=!1,h=-h);break;case 3:h=(q=Ul(r,n,d=!d))[0],O=q[1],d=!1,f&&(h/=O);break;case 4:(h=f?pu(r,n):cu(r,n))!==0&&(h*=mu(r,n));break;case 5:h=bl(r,n),n>=r&&(d=!d);break;case 6:h=f?N(n,r)/G(r+1):N(n,r)/r,h*=1-r*n/(r+1)}return f&&h>1&&(h=1),d&&(h=(f?1:G(r))-h),h},Cl=function(e,n){var r;return r=e*p(n),n>=1?r<I&&-n>H?N(n,e)*b(-n):e>=1?N(n/b(n/e),e):b(r-n):r>H?N(n,e)*b(-n):n/e<I?N(n/b(n/e),e):b(r-n)},Gl=function(e,n){var r,a,u,o,f,l,v;return v=(n-e-pe+.5)/(u=e+pe-.5),e<1?n<=H?b(e*p(n)-n-Y(e)):N(n,e)*b(-n)/G(e):(S(v*v*e)<=100&&e>150?(r=e*(R(v)-v)+n*(.5-pe)/u,r=b(r)):(o=e*p(n/u),Z(o,f=e-n)<=H||ee(o,f)>=I?(a=f/e,Z(o,f)/2>H&&ee(o,f)/2<I?r=(l=N(n/u,e/2)*b(f/2))*l:Z(o,f)/4>H&&ee(o,f)/4<I&&n>e?(r=(l=N(n/u,e/4)*b(f/4))*l,r*=r):r=a>H&&a<I?N(n*b(a)/u,e):b(o+f)):r=N(n/u,e)*b(f)),r*=M(u/Tn)/xe(e))},V0=new Array(30),M0=function(e,n,r,a,u,o,f){var l,v,m,g,d,h,E,T,q,P,O,x,B,C,L,U,J,Ne;if(J=e+(h=n-1)/2,P=a<.35?R(-a):p(r),(x=Gl(n,Ne=-J*P))<=jn)return u;for(f?(l=x/ra(e,n),l/=N(J,n)):l=Cl(n,Ne)/N(J,n),l*=o,V0[0]=1,B=Kn(Ne,n,!0,!0),g=u+l*(B/=x),m=1,E=P/2,E*=E,T=1,O=4*J*J,d=n,L=1;L<V0.length;++L){for(m+=2,V0[L]=0,q=n-L,v=3,C=1;C<L;++C)q=C*n-L,V0[L]+=q*V0[L-C]/mr(v),v+=2;if(V0[L]/=L,V0[L]+=h/mr(m),B=(d*(d+1)*B+(Ne+d+1)*T)/O,T*=E,d+=2,g+=U=l*V0[L]*B,U>1){if(S(U)<S(rn*g))break}else if(S(U/rn)<S(g))break}return g},ua=function(e,n,r){var a,u;if(r===0)return 1;for(a=1,u=0;u<r;u++)a*=(e+u)/(n+u);return a},Kl=function(e,n){var r,a,u;if((r=arguments.length)===0)return w;if(r===2)return ee(S(e),S(n));for(a=[],u=0;u<r;u++)a.push(S(arguments[u]));return ee.apply(null,a)},Wl=function(e,n){var r,a,u;if((r=arguments.length)===0)return w;if(r===2)return Z(S(e),S(n));for(a=[],u=0;u<r;u++)a.push(S(arguments[u]));return Z.apply(null,a)},oa=function(e,n,r,a,u){var o,f,l,v,m,g,d,h,E,T,q,P,O,x;if(!u)return N(r,e)*N(a,n);if(v=e+pe-.5,m=n+pe-.5,g=(O=e+n)+pe-.5,o=xe(O),o/=xe(e)*xe(n),o*=M(m/Tn),o*=M(v/g),Wl(d=(r*n-a*v)/v,h=(a*e-r*m)/m)<.2)if(d*h>0||Z(e,n)<1)S(d)<.1?o*=b(e*R(d)):o*=N(r*g/v,e),S(h)<.1?o*=b(n*R(h)):o*=N(a*g/m,n);else if(Kl(d,h)<.5)l=n/e,(f=e<n)&&l*h<.1||!f&&d/l>.1?(E=ve(l*R(h)),E=e*R(E=d+E+E*d),o*=b(E)):(E=ve(R(d)/l),E=n*R(E=h+E+E*h),o*=b(E));else if(S(d)<S(h))if((x=e*R(d)+n*p(a*g/m))<=H||x>=I){if((x+=p(o))>=I)return NaN;o=b(x)}else o*=b(x);else if((x=n*R(h)+e*p(r*g/v))<=H||x>=I){if((x+=p(o))>=I)return NaN;o=b(x)}else o*=b(x);else if(P=a*g/m,d=e*p(q=r*g/v),h=n*p(P),d>=I||d<=H||h>=I||h<=H)if(e<n)if(T=N(P,n/e),(E=e*(p(q)+p(T)))<I&&E>H)o*=N(T*q,e);else{if((h+=d+p(o))>=I)return NaN;o=b(h)}else if(T=N(q,e/n),(E=(p(T)+p(P))*n)<I&&E>H)o*=N(T*P,n);else{if((h+=d+p(o))>=I)return NaN;o=b(h)}else o*=N(q,e)*N(P,n);return o},Hl={keep:!0,maxIter:1e3},hu=function(e,n,r,a,u,o){var f,l;return f=oa(e,n,r,a,u),o&&(o[1]=f),f===0?f:(l=function(v,m,g,d){var h=0;return function(){var E,T,q;return T=(v+h-1)*(v+m+h-1)*h*(m-h)*g*g,E=v+2*h-1,q=h,q+=h*(m-h)*g/(v+2*h-1),q+=(v+h)*(v*d-m*g+1+h*(2-g))/(v+2*h+1),h+=1,[T/=E*E,q]}}(e,n,r,a),f/Nu(l,Hl))},du=function e(n,r){var a,u;if(i(n)||i(r))return NaN;if(!K(n)||!K(r))return NaN;if(r<0)return 0;if(n<0)return a=e(-n+r-1,r),sr(r)&&(a=-a),a;if(r>n)return 0;if(r===0||r===n)return 1;if(r===1||r===n-1)return n;for(n-r<r&&(r=n-r),a=n,u=2;u<=r;u++)a*=(n-u+1)/u;return K(a)?a:En(a)},Dl=function(e,n,r,a){var u,o,f,l,v;if((o=N(r,e))>jn)for(l=o,v=D(e-1);v>n;v--)o+=l*=(v+1)*a/((e-v)*r);else if((f=D(e*r))<=n+1&&(f=D(n+2)),o=N(r,f)*N(a,e-f),(o*=du(D(e),D(f)))==0)for(v=f-1;v>n;v--)o+=N(r,v)*N(a,e-v),o*=du(D(e),D(v));else{for(l=o,u=o,v=f-1;v>n;v--)o+=l*=(v+1)*a/((e-v)*r);for(l=u,v=f+1;v<=e;v++)o+=l*=(e-v+1)*r/(v*a)}return o},hr=function(e,n,r,a,u,o,f){var l,v,m,g;if(l=oa(e,n,r,a,o),f&&(f[1]=l),(l/=e)==0)return l;for(m=1,v=1,g=0;g<u-1;++g)m+=v*=(e+n+g)*r/(e+g+1);return l*=m},bu={maxTerms:100},Wn=function(e,n,r,a,u,o,f){var l,v,m,g,d,h,E,T;return u?(v=e+pe-.5,m=n+pe-.5,g=(E=e+n)+pe-.5,l=xe(E)/(xe(e)*xe(n)),d=p(g/m)*(n-.5),h=p(r*g/v)*e,d>H&&d<I&&h>H&&h<I?(l*=e*n<10*m?b((n-.5)*R(e/m)):N(g/m,n-.5),l*=N(r*g/v,e),l*=M(v/Tn),o&&(o[1]=l*N(f,n))):(l=p(l)+d+h+(p(v)-1)/2,o&&(o[1]=b(l+n*p(f))),l=b(l))):l=N(r,e),l<jn?a:(T=function(q,P,O,x){var B=1-P,C=1;return function(){var L=x/q;return q+=1,x*=B*O/C,C+=1,B+=1,L}}(e,n,r,l),bu.initialValue=a,zr(T,bu))},zl=1/F,yu=function(e,n,r,a,u,o,f,l){var v,m,g,d,h,E,T,q,P,O,x;if(x=1-e,E=l,o[T=l+f]=-1,i(e)||e<0||e>1)return o[E]=NaN,o[T]=NaN,o;if(a){if(n<0||r<0)return o[E]=NaN,o[T]=NaN,o;if(n===0){if(r===0)return o[E]=NaN,o[T]=NaN,o;if(r>0)return o[E]=u?0:1,o}else if(r===0&&n>0)return o[E]=u?1:0,o}else if(n<=0||r<=0)return o[E]=NaN,o[T]=NaN,o;return e===0?(o[T]=n===1?1:n<1?an/2:2*jn,u?(o[E]=a?1:X(n,r),o):(o[E]=0,o)):e===1?(o[T]=r===1?1:r<1?an/2:2*jn,o[E]=u?0:a?1:X(n,r),o):n===.5&&r===.5?(o[T]=zl*M(x*e),O=Rn(M(u?x:e)),O/=Xn,a||(O*=F),o[E]=O,o):(n===1&&(h=r,r=n,n=h,h=x,x=e,e=h,u=!u),r===1?n===1?(o[E]=u?x:e,o[T]=1,o):(o[T]=n*N(e,n-1),O=x<.5?u?-ve(n*R(-x)):b(n*R(-x)):u?-(N(e,n)-1):N(e,n),a||(O/=n),o[E]=O,o):(Z(n,r)<=1?(e>.5&&(h=r,r=n,n=h,h=x,x=e,e=h,u=!u),ee(n,r)<=1?n>=Z(.2,r)||N(e,n)<=.9?u?(m=-(a?1:X(n,r)),u=!1,m=-Wn(n,r,e,m,a,o,x)):m=Wn(n,r,e,0,a,o,x):(h=r,r=n,n=h,h=x,x=e,e=h,u=!u,x>=.3?u?(m=-(a?1:X(n,r)),u=!1,m=-Wn(n,r,e,m,a,o,x)):m=Wn(n,r,e,0,a,o,x):(v=a?1:ua(n+r,n,20),m=hr(n,r,e,x,20,a,o),u?(m-=a?1:X(n,r),u=!1,m=-M0(n+20,r,e,x,m,v,a)):m=M0(n+20,r,e,x,m,v,a))):r<=1||e<.1&&N(r*e,n)<=.7?u?(m=-(a?1:X(n,r)),u=!1,m=-Wn(n,r,e,m,a,o,x)):m=Wn(n,r,e,0,a,o,x):(h=r,r=n,n=h,h=x,x=e,e=h,u=!u,x>=.3?u?(m=-(a?1:X(n,r)),u=!1,m=-Wn(n,r,e,m,a,o,x)):m=Wn(n,r,e,0,a,o,x):n>=15?u?(m=-(a?1:X(n,r)),u=!1,m=-M0(n,r,e,x,m,1,a)):m=M0(n,r,e,x,0,1,a):(v=a?1:ua(n+r,n,20),m=hr(n,r,e,x,20,a,o),u?(m-=a?1:X(n,r),u=!1,m=-M0(n+20,r,e,x,m,v,a)):m=M0(n+20,r,e,x,m,v,a)))):((n<r?n-(n+r)*e:(n+r)*x-r)<0&&(h=r,r=n,n=h,h=x,x=e,e=h,u=!u),r<40?D(n)===n&&D(r)===r&&n<Qv-100?(m=Dl(P=r+(q=n-1),q,e,x),a||(m*=X(n,r))):r*e<=.7?u?(m=-(a?1:X(n,r)),u=!1,m=-Wn(n,r,e,m,a,o,x)):m=Wn(n,r,e,0,a,o,x):n>15?((P=D(r))===r&&(P-=1),g=r-P,v=a?1:ua(n+g,g,P),m=hr(g,n,x,e,P,a),m=M0(n,g,e,x,m,1,a),m/=v):a?((g=r-(P=D(r)))<=0&&(P-=1,g+=1),m=hr(g,n,x,e,P,a),m+=hr(n,g,e,x,20,a),u&&(m-=1),m=M0(n+20,g,e,x,m,1,a),u&&(m=-m,u=!1)):m=hu(n,r,e,x,a,o):m=hu(n,r,e,x,a,o)),o[T]<0&&(o[T]=oa(n,r,e,x,!0)),d=x*e,o[T]!==0&&(an*d<o[T]?o[T]=an/2:o[T]/=d),o[E]=u?(a?1:X(n,r))-m:m,o))},gu=function(e,n,r,a,u){return yu(e,n,r,a,u,[0,0],1,0)};c(gu,"assign",yu);var wu=gu,$l=wu.assign,ke=function(e,n,r,a,u){var o=[0,0];return $l(e,n,r,a=a!==!1,u=u===!0,o,1,0),o[0]},ku=function(e,n,r){return i(e)||i(n)||i(r)||n<=0||r<=0?NaN:e<=0?0:e>=1?1:ke(e,n,r)};c(ku,"factory",function(e,n){return i(e)||i(n)||e<=0||n<=0?k(NaN):function(r){return i(r)?NaN:r<=0?0:r>=1?1:ke(r,e,n)}});var $r=ku,Jl=ge.isPrimitive,Eu=function(e){return Jl(e)&&e>0},Zl=ge.isObject,Tu=function(e){return Zl(e)&&e.valueOf()>0},sa=function(e){return Eu(e)||Tu(e)};c(sa,"isPrimitive",Eu),c(sa,"isObject",Tu);var be=sa,Xl=function(e){return e===0?.13333333333320124:.13333333333320124+e*(.021869488294859542+e*(.0035920791075913124+e*(.0005880412408202641+e*(7817944429395571e-20+-18558637485527546e-21*e))))},Yl=function(e){return e===0?.05396825397622605:.05396825397622605+e*(.0088632398235993+e*(.0014562094543252903+e*(.0002464631348184699+e*(7140724913826082e-20+2590730518636337e-20*e))))},Ql=.7853981633974483,eN=3061616997868383e-32,nN=.3333333333333341,rN=2147483647,Vu=function(e,n,r){var a,u,o,f,l,v,m,g,d;return(u=(a=we(e))&rN|0)>=1072010280&&(e<0&&(e=-e,n=-n),e=(d=Ql-e)+(g=eN-n),n=0),f=n+(d=e*e)*((l=d*e)*((f=Xl(g=d*d))+(m=d*Yl(g)))+n),g=e+(f+=nN*l),u>=1072010280?(1-(a>>30&2))*((m=r)-2*(e-(g*g/(g+m)-f))):r===1?g:(An(d=g,0),m=f-(d-e),An(v=o=-1/g,0),v+o*((l=1+v*d)+v*m))},ta=[0,0],aN=2147483647,iN=1072243195,uN=2146435072,oN=1044381696,fa=function(e){var n,r;return n=we(e),(n&=aN)<=iN?n<oN?e:Vu(e,0,1):n>=uN?NaN:(r=z1(e,ta),Vu(ta[0],ta[1],1-((1&r)<<1)))},sN=function(e){return e===0?.08333333333333333:.08333333333333333+e*(e*(.003968253968253968+e*(e*(.007575757575757576+e*(e*(.08333333333333333+-.4432598039215686*e)-.021092796092796094))-.004166666666666667))-.008333333333333333)},tN=function(e){var n;return p(e-=1)+1/(2*e)-(n=1/(e*e))*sN(n)},fN=function(e){var n,r;return e===0?.25479851061131553:((e<0?-e:e)<=1?(n=.25479851061131553+e*(e*(e*(e*(e*(0*e-.002071332116774595)-.04525132144873906)-.28919126444774784)-.6503185377089651)-.3255503118680449),r=1+e*(2.076711702373047+e*(1.4606242909763516+e*(.43593529692665967+e*(.054151797245674226+e*(.0021284987017821146+-5578984132167551e-22*e)))))):(n=0+(e=1/e)*(e*(e*(e*(e*(.25479851061131553*e-.3255503118680449)-.6503185377089651)-.28919126444774784)-.04525132144873906)-.002071332116774595),r=e*(.0021284987017821146+e*(.054151797245674226+e*(.43593529692665967+e*(1.4606242909763516+e*(2.076711702373047+1*e)))))-5578984132167551e-22),n/r)},cN=1.4616321446374059,vN=3309564688275257e-25,pN=9016312093258695e-35,lN=.9955816268920898,NN=function(e){var n,r;return n=e-cN,n-=vN,n-=pN,r=fN(e-1),n*lN+n*r},mN=10,Vn=function(e){var n,r;if(i(e)||e===0)return NaN;if(e<=-1){if((n=(e=1-e)-D(e))>.5&&(n-=1),n===0)return NaN;r=F/fa(F*n)}else r=0;if(e>=mN)return r+=tN(e);for(;e>2;)r+=1/(e-=1);for(;e<1;)r-=1/e,e+=1;return r+=NN(e)},dr=.9189385332046728,Mu=[1276642195630063e-46,-3401102254316749e-45,1025680058010471e-43,-35475981581010704e-43,14292273559424982e-41,-6831888753985767e-39,39628370610464347e-38,-2868042435334643e-35,2683181998482699e-33,-3399615005417722e-31,6221098041892606e-29,-1809129475572494e-26,981082564692473e-23,-1384948176067564e-20,.16663894804518634],hN=Mu.length,dN=function(e){var n,r,a,u,o;if(e<-1.1||e>1.1)return NaN;for(a=0,u=0,n=2*e,o=0;o<hN;o++)r=a,u=n*(a=u)-r+Mu[o];return .5*(u-r)},bN=9490626562425156e-8,yN=3745194030963158e291,br=function(e){return e<10?NaN:e>=yN?0:e<bN?dN(2*N(10/e,2)-1)/e:1/(12*e)},Hn=function(e,n){var r,a,u;return a=Z(e,n),u=ee(e,n),a<0?NaN:a===0?w:u===w?V:a>=10?(r=br(a)+br(u)-br(a+u),-.5*p(u)+dr+r+(a-.5)*p(a/(a+u))+u*R(-a/(a+u))):u>=10?(r=br(u)-br(a+u),Y(a)+r+a-a*p(a+u)+(u-.5)*R(-a/(a+u))):p(G(a)*(G(u)/G(a+u)))},qu=function(e,n){var r;return e<=0||n<=0?NaN:(r=Hn(e,n),r-=(e-1)*Vn(e),r-=(n-1)*Vn(n),r+=(e+n-2)*Vn(e+n))},xu=function(e,n){var r,a,u,o;return e<=0||n<=0?NaN:(o=(a=e-n)*a*((u=e+n)+1),o-=(r=e*n)*(u+2),o*=6,o/=r*(u+2)*(u+3))},Pu=function(e,n){return e<=0||n<=0?NaN:e/(e+n)},gN=function(e){var n,r;return e===0?-.0005087819496582806:((e<0?-e:e)<=1?(n=e*(e*(.03348066254097446+e*(e*(e*(.02198786811111689+e*(.008226878746769157+e*(e*(0+0*e)-.005387729650712429)))-.03656379714117627)-.012692614766297404))-.008368748197417368)-.0005087819496582806,r=1+e*(e*(e*(1.5622155839842302+e*(.662328840472003+e*(e*(e*(.07952836873415717+e*(.0008862163904564247*e-.0023339375937419))-.05273963823400997)-.7122890234154284)))-1.5657455823417585)-.9700050433032906)):(n=0+(e=1/e)*(0+e*(e*(.008226878746769157+e*(.02198786811111689+e*(e*(e*(.03348066254097446+e*(-.0005087819496582806*e-.008368748197417368))-.012692614766297404)-.03656379714117627)))-.005387729650712429)),r=.0008862163904564247+e*(e*(.07952836873415717+e*(e*(e*(.662328840472003+e*(1.5622155839842302+e*(e*(1*e-.9700050433032906)-1.5657455823417585)))-.7122890234154284)-.05273963823400997))-.0023339375937419)),n/r)},wN=function(e){var n,r;return e===0?-.20243350835593876:((e<0?-e:e)<=1?(n=e*(.10526468069939171+e*(8.3705032834312+e*(17.644729840837403+e*(e*(e*(17.445385985570866+e*(21.12946554483405+-3.6719225470772936*e))-44.6382324441787)-18.851064805871424))))-.20243350835593876,r=1+e*(6.242641248542475+e*(3.971343795334387+e*(e*(e*(48.560921310873994+e*(10.826866735546016+e*(1.7211476576120028*e-22.643693341313973)))-20.14326346804852)-28.66081804998)))):(n=(e=1/e)*(21.12946554483405+e*(17.445385985570866+e*(e*(e*(17.644729840837403+e*(8.3705032834312+e*(.10526468069939171+-.20243350835593876*e)))-18.851064805871424)-44.6382324441787)))-3.6719225470772936,r=1.7211476576120028+e*(e*(10.826866735546016+e*(48.560921310873994+e*(e*(e*(3.971343795334387+e*(6.242641248542475+1*e))-28.66081804998)-20.14326346804852)))-22.643693341313973)),n/r)},kN=function(e){var n,r;return e===0?-.1311027816799519:((e<0?-e:e)<=1?(n=e*(e*(.11703015634199525+e*(.38707973897260434+e*(.3377855389120359+e*(.14286953440815717+e*(.029015791000532906+e*(.0021455899538880526+e*(e*(28522533178221704e-24+-681149956853777e-24*e)-6794655751811263e-22)))))))-.16379404719331705)-.1311027816799519,r=1+e*(3.4662540724256723+e*(5.381683457070069+e*(4.778465929458438+e*(2.5930192162362027+e*(.848854343457902+e*(.15226433829533179+e*(.011059242293464892+e*(0+e*(0+0*e)))))))))):(n=(e=1/e)*(28522533178221704e-24+e*(e*(.0021455899538880526+e*(.029015791000532906+e*(.14286953440815717+e*(.3377855389120359+e*(.38707973897260434+e*(.11703015634199525+e*(-.1311027816799519*e-.16379404719331705)))))))-6794655751811263e-22))-681149956853777e-24,r=0+e*(0+e*(0+e*(.011059242293464892+e*(.15226433829533179+e*(.848854343457902+e*(2.5930192162362027+e*(4.778465929458438+e*(5.381683457070069+e*(3.4662540724256723+1*e)))))))))),n/r)},EN=function(e){var n,r;return e===0?-.0350353787183178:((e<0?-e:e)<=1?(n=e*(e*(.018557330651423107+e*(.009508047013259196+e*(.0018712349281955923+e*(.00015754461742496055+e*(460469890584318e-20+e*(26633922742578204e-28*e-2304047769118826e-25))))))-.0022242652921344794)-.0350353787183178,r=1+e*(1.3653349817554064+e*(.7620591645536234+e*(.22009110576413124+e*(.03415891436709477+e*(.00263861676657016+e*(7646752923027944e-20+e*(0+0*e)))))))):(n=26633922742578204e-28+(e=1/e)*(e*(460469890584318e-20+e*(.00015754461742496055+e*(.0018712349281955923+e*(.009508047013259196+e*(.018557330651423107+e*(-.0350353787183178*e-.0022242652921344794))))))-2304047769118826e-25),r=0+e*(0+e*(7646752923027944e-20+e*(.00263861676657016+e*(.03415891436709477+e*(.22009110576413124+e*(.7620591645536234+e*(1.3653349817554064+1*e)))))))),n/r)},TN=function(e){var n,r;return e===0?-.016743100507663373:((e<0?-e:e)<=1?(n=e*(e*(.001056288621524929+e*(.00020938631748758808+e*(14962478375834237e-21+e*(44969678992770644e-23+e*(4625961635228786e-24+e*(9905570997331033e-32*e-2811287356288318e-29))))))-.0011295143874558028)-.016743100507663373,r=1+e*(.5914293448864175+e*(.1381518657490833+e*(.016074608709367652+e*(.0009640118070051656+e*(27533547476472603e-21+e*(282243172016108e-21+e*(0+0*e)))))))):(n=9905570997331033e-32+(e=1/e)*(e*(4625961635228786e-24+e*(44969678992770644e-23+e*(14962478375834237e-21+e*(.00020938631748758808+e*(.001056288621524929+e*(-.016743100507663373*e-.0011295143874558028))))))-2811287356288318e-29),r=0+e*(0+e*(282243172016108e-21+e*(27533547476472603e-21+e*(.0009640118070051656+e*(.016074608709367652+e*(.1381518657490833+e*(.5914293448864175+1*e)))))))),n/r)},VN=.08913147449493408,MN=2.249481201171875,qN=.807220458984375,xN=.9399557113647461,PN=.9836282730102539,Ee=function(e){var n,r,a,u;return i(e)?NaN:e===0?w:e===2?V:e===1?0:e>2||e<0?NaN:(e>1?(n=-1,r=2-e):(n=1,r=e),(e=1-r)<=.5?(a=e*(e+10),u=gN(e),n*(a*VN+a*u)):r>=.25?(a=M(-2*p(r)),u=wN(r-=.25),n*(a/(MN+u))):(r=M(-p(r)))<3?(u=kN(r-1.125),n*(qN*r+u*r)):r<6?(u=EN(r-3),n*(xN*r+u*r)):(u=TN(r-6),n*(PN*r+u*r)))},SN=6123233995736766e-32,AN=function(e){var n;return i(e)?NaN:e<-1||e>1?NaN:e>.5?2*Rn(M(.5-.5*e)):(n=Me-Rn(e),n+=SN,n+=Me)},ne=1.4142135623730951,jN=function(e){return e===0?.16666666666666666:.16666666666666666+.16666666666666666*e},ON=function(e){return e===0?.058333333333333334:.058333333333333334+e*(.06666666666666667+.008333333333333333*e)},UN=function(e){return e===0?.0251984126984127:.0251984126984127+e*(.026785714285714284+e*(.0017857142857142857+.0001984126984126984*e))},RN=function(e){return e===0?.012039792768959435:.012039792768959435+e*(.010559964726631394+e*(e*(.0003747795414462081+27557319223985893e-22*e)-.0011078042328042327))},LN=function(e){return e===0?.003837005972422639:.003837005972422639+e*(.00610392115600449+e*(e*(.0005945867404200738+e*(2505210838544172e-23*e-6270542728876062e-20))-.0016095979637646305))},_N=function(e){return e===0?.0032177478835464946:.0032177478835464946+e*(.0010898206731540065+e*(e*(.0006908420797309686+e*(e*(154012654012654e-19+16059043836821613e-26*e)-.00016376804137220805))-.0012579159844784845))},BN=function(e){return e===0?.001743826229834001:.001743826229834001+e*(3353097688001788e-20+e*(e*(.0006451304695145635+e*(e*(49255746366361444e-21+e*(7647163731819816e-28*e-39851014346715405e-22))-.000249472580470431))-.0007624513544032393))},FN=function(e){return e===0?.0009647274732138864:.0009647274732138864+e*(e*(e*(.0005140660578834113+e*(e*(9086710793521991e-20+e*(e*(10914179173496788e-22+28114572543455206e-31*e)-15303004486655377e-21))-.00029133414466938067))-.00036307660358786886)-.0003110108632631878)},IN=function(e){return e===0?.0005422926281312969:.0005422926281312969+e*(e*(e*(.00035764655430568635+e*(e*(.00012645437628698076+e*(e*(4890304529197534e-21+e*(822063524662433e-32*e-3123956959982987e-22))-33202652391372056e-21))-.00028690924218514614))-.00010230378073700413)-.0003694266780000966)},CN=0,Dn=[1,0,0,0,0,0,0,0,0,0],Su=function(e,n){var r,a;return a=ra(e/2,.5)*M(e*F)*(n-.5),r=1/e,Dn[1]=jN(r),Dn[2]=ON(r),Dn[3]=UN(r),Dn[4]=RN(r),Dn[5]=LN(r),Dn[6]=_N(r),Dn[7]=BN(r),Dn[8]=FN(r),Dn[9]=IN(r),CN+a*We(Dn,a*a)},q0=[0,0,0,0,0,0,0],Jr=function(e,n){var r,a,u,o,f,l,v;return v=ra(e/2,.5)*M(e*F)*n,u=e+2,o=e+4,f=e+6,q0[0]=1,q0[1]=-(e+1)/(2*u),u*=e+2,q0[2]=-e*(e+1)*(e+3)/(8*u*o),u*=e+2,q0[3]=-e*(e+1)*(e+5)*((3*e+7)*e-2)/(48*u*o*f),u*=e+2,o*=e+4,q0[4]=-e*(e+1)*(e+7)*(((((15*e+154)*e+465)*e+286)*e-336)*e+64)/(384*u*o*f*(e+8)),u*=e+2,q0[5]=-e*(e+1)*(e+3)*(e+9)*((((((35*e+452)*e+1573)*e+600)*e-2020)*e+928)*e-128)/(1280*u*o*f*(e+8)*(e+10)),u*=e+2,o*=e+4,f*=e+6,q0[6]=-e*(e+1)*(e+11)*(((((((((((945*e+31506)*e+425858)*e+2980236)*e+11266745)*e+20675018)*e+7747124)*e-22574632)*e-8565600)*e+18108416)*e-7099392)*e+884736)/(46080*u*o*f*(e+8)*(e+10)*(e+12)),l=M(e),a=N(l*v,1/e),r=We(q0,a*a),r*=l,-(r/=a)},ca=function(e,n){var r,a,u,o,f,l;return e>1e20?-Ee(2*n)*ne:(o=((94.5/((a=48/((r=1/(e-.5))*r))+(u=((20700*r/a-98)*r-16)*r+96.36))-3)/a+1)*M(r*Xn)*e,(l=N(2*o*n,2/e))>.05+r?(l=(f=-Ee(2*n)*ne)*f,e<5&&(u+=.3*(e-4.5)*(f+.6)),l=ve(r*(l=(((((.4*l+6.3)*l+36)*l+94.5)/(u+=(((.05*o*f-5)*f-7)*f-2)*f+a)-l-3)/a+1)*f)*l)):l=((1/(((e+6)/(e*l)-.089*o-.822)*(e+2)*3)+.5/(e+4))*l-1)*(e+1)/(e+2)+1/l,-M(e*l))},Au=268435456,GN=1/3,KN=106/3,WN=.8549879733383485,HN=function(e,n,r){var a,u,o,f,l,v,m,g,d,h,E,T,q;if(f=0,n>r?(l=r,r=n,n=l,o=!0):o=!1,D(e)===e&&e<20)switch(a=Bn(1,KN),D(e)){case 1:f=n===.5?0:-R0(F*n)/Fn(F*n);break;case 2:f=(2*n-1)/M(2*n*r);break;case 4:u=M(4*n*r),h=4*R0(AN(u)/3)/u,E=M(h-4),f=n-.5<0?-E:E;break;case 6:if(n<1e-150)return(o?-1:1)*ca(e,n);q=N(T=4*(n-n*n),GN),d=6*(1+WN*(1/q-1));do v=d,d=2*(8*T*(d*(g=(m=d*d)*m))-270*m+2187)/(5*(4*T*g-216*d-243));while(S((d-v)/d)>a);d=M(d-e),f=n-.5<0?-d:d;break;default:f=e>Au?Ee(2*n)*ne:e<3?n>.2742-.0242143*e?Su(e,n):Jr(e,n):n>Bn(1,En(e/-.654))?ca(e,n):Jr(e,n)}else f=e>Au?-Ee(2*n)*ne:e<3?n>.2742-.0242143*e?Su(e,n):Jr(e,n):n>Bn(1,En(e/-.654))?ca(e,n):Jr(e,n);return o?-f:f},DN=function(e,n,r){var a,u,o;return o=HN(a=2*e,u=n/2,1-u),r&&(r.value=o*o/(a+o*o)),a/(a+o*o)},ye=[0,0,0,0,0,0,0],yr=[0,0,0,0],zN=function(e,n,r){var a,u,o,f,l,v,m;return a=Ee(2*r),a/=-M(e/2),yr[0]=a,l=(f=(v=n-e)*v)*v,ye[0]=-v*ne/2,ye[1]=(1-2*v)/8,ye[2]=-v*ne/48,ye[3]=-1/192,ye[4]=-v*ne/3840,ye[5]=0,ye[6]=0,yr[1]=We(ye,a),ye[0]=v*ne*(3*v-2)/12,ye[1]=(20*f-12*v+1)/128,ye[2]=v*ne*(20*v-1)/960,ye[3]=(16*f+30*v-15)/4608,ye[4]=v*ne*(21*v+32)/53760,ye[5]=(-32*f+63)/368640,ye[6]=-v*ne*(120*v+17)/25804480,yr[2]=We(ye,a),ye[0]=v*ne*(-75*f+80*v-16)/480,ye[1]=(-1080*l+868*f-90*v-45)/9216,ye[2]=v*ne*(-1190*f+84*v+373)/53760,ye[3]=(-2240*l-2508*f+2100*v-165)/368640,ye[4]=0,ye[5]=0,ye[6]=0,yr[3]=We(ye,a),o=We(yr,1/e),m=-b(-(u=o*o)/2),u===0?.5:(1+o*M((1+m)/u))/2},Zr=an/4,ju=function(e,n){return function(r){var a;return(a=1-r)==0?[-Zr,-Zr]:r===0?[-Zr,-Zr]:[p(r)+n*p(a)+e,1/r-n/a]}},e0=function(e){return e===0||i(e)?e:e<0?-1:1},Ou=function(e,n,r,a,u,o){var f,l,v,m,g,d,h,E,T,q;T=0,f=0,g=n,m=Bn(1,1-u),h=an,l=an,v=an,d=o;do{if(f=T,v=l,l=h,T=(E=e(g))[0],q=E[1],d-=1,T===0)break;if(q===0?(f===0&&(f=e(n=g===r?a:r),h=n-g),h=e0(f)*e0(T)<0?h<0?(g-r)/2:(g-a)/2:h<0?(g-a)/2:(g-r)/2):h=T/q,S(2*h)>S(v)&&(h=h>0?(g-r)/2:(g-a)/2),n=g,(g-=h)<=r){if((g=n-(h=.5*(n-r)))===r||g===a)break}else if(g>=a&&((g=n-(h=.5*(n-a)))===r||g===a))break;h>0?a=n:r=n}while(d&&S(g*m)<S(h));return g},$N=function(e){return e===0?-1:e*(5*e-5)-1},JN=function(e){return e===0?1:1+e*(21+e*(46*e-69))},ZN=function(e){return e===0?1:1+e*(21+e*(46*e-69))},XN=function(e){return e===0?7:7+e*(e*(33+e*(31*e-62))-2)},YN=function(e){return e===0?25:25+e*(e*(e*(88+e*(46*e-115))-17)-52)},QN=function(e){return e===0?7:7+e*(12+e*(52*e-78))},em=function(e){return e===0?-7:e*(2+e*(183+e*(185*e-370)))-7},nm=function(e){return e===0?-533:e*(776+e*(e*(10240+e*(5410*e-13525))-1835))-533},rm=function(e){return e===0?-1579:e*(3747+e*(e*(e*(45588+e*(15071*e-45213))-15821)-3372))-1579},am=function(e){return e===0?449:449+e*(e*(e*(6686+e*(3704*e-9260))-769)-1259)},im=function(e){return e===0?63149:63149+e*(e*(140052+e*(e*(2239932+e*(750479*e-2251437))-727469))-151557)},um=function(e){return e===0?29233:29233+e*(e*(105222+e*(146879+e*(e*(3195183+e*(729754*e-2554139))-1602610)))-78755)},om=function(e){return e===0?1:1+e*(13*e-13)},Q=[0,0,0,0,0,0],gr=[0,0,0,0],sm=function(e,n,r){var a,u,o,f,l,v,m,g,d,h,E,T,q,P,O,x,B,C,L,U;return l=Ee(2*e)/-M(n/2),C=Fn(r),B=R0(r),gr[0]=l,O=C*C,x=B*B,d=(T=(q=C*B)*q)*(E=T*q),g=E*E,m=(h=T*T)*E,Q[0]=(2*O-1)/(3*q),Q[1]=-$N(O)/(36*T),Q[2]=ZN(O)/(1620*E),Q[3]=XN(O)/(6480*h),Q[4]=YN(O)/(90720*d),Q[5]=0,gr[1]=We(Q,l),Q[0]=-QN(O)/(405*E),Q[1]=em(O)/(2592*h),Q[2]=-nm(O)/(204120*d),Q[3]=-rm(O)/(2099520*g),Q[4]=0,Q[5]=0,gr[2]=We(Q,l),Q[0]=am(O)/(102060*d),Q[1]=-im(O)/(20995200*g),Q[2]=um(O)/(36741600*m),Q[3]=0,Q[4]=0,Q[5]=0,gr[3]=We(Q,l),o=B/C,o*=o,P=-(v=We(gr,1/n))*v/(2*O)+p(O)+x*p(x)/O,S(v)<.7?(Q[0]=O,Q[1]=q,Q[2]=(1-2*O)/3,Q[3]=om(O)/(36*q),Q[4]=JN(O)/(270*T),Q[5]=0,U=We(Q,v)):(L=b(P),Q[0]=L,Q[1]=o,Q[2]=0,Q[3]=3*o*(3*o+1)/6,Q[4]=4*o*(4*o+1)*(4*o+2)/24,Q[5]=5*o*(5*o+1)*(5*o+2)*(5*o+3)/120,((U=We(Q,L))-O)*v<0&&(U=1-U)),v<0?(u=0,a=O):(u=O,a=1),(U<u||U>a)&&(U=(u+a)/2),f=ju(-P,o),U=Ou(f,U,u,a,32,100)},wr=1e3,kr=60*wr,Er=60*kr,Tr=24*Er,tm=365.25*Tr;function Xr(e,n,r){if(!(e<n))return e<1.5*n?Math.floor(e/n)+" "+r:Math.ceil(e/n)+" "+r+"s"}var va,ue={};function pa(e){function n(){if(n.enabled){var r=n,a=+new Date,u=a-(va||a);r.diff=u,r.prev=va,r.curr=a,va=a;for(var o=new Array(arguments.length),f=0;f<o.length;f++)o[f]=arguments[f];o[0]=ue.coerce(o[0]),typeof o[0]!="string"&&o.unshift("%O");var l=0;o[0]=o[0].replace(/%([a-zA-Z%])/g,function(v,m){if(v==="%%")return v;l++;var g=ue.formatters[m];if(typeof g=="function"){var d=o[l];v=g.call(r,d),o.splice(l,1),l--}return v}),ue.formatArgs.call(r,o),(n.log||ue.log||console.log.bind(console)).apply(r,o)}}return n.namespace=e,n.enabled=ue.enabled(e),n.useColors=ue.useColors(),n.color=function(r){var a,u=0;for(a in r)u=(u<<5)-u+r.charCodeAt(a),u|=0;return ue.colors[Math.abs(u)%ue.colors.length]}(e),typeof ue.init=="function"&&ue.init(n),n}(ue=ue=pa.debug=pa.default=pa).coerce=function(e){return e instanceof Error?e.stack||e.message:e},ue.disable=function(){ue.enable("")},ue.enable=function(e){ue.save(e),ue.names=[],ue.skips=[];for(var n=(typeof e=="string"?e:"").split(/[\s,]+/),r=n.length,a=0;a<r;a++)n[a]&&((e=n[a].replace(/\*/g,".*?"))[0]==="-"?ue.skips.push(new RegExp("^"+e.substr(1)+"$")):ue.names.push(new RegExp("^"+e+"$")))},ue.enabled=function(e){var n,r;for(n=0,r=ue.skips.length;n<r;n++)if(ue.skips[n].test(e))return!1;for(n=0,r=ue.names.length;n<r;n++)if(ue.names[n].test(e))return!0;return!1},ue.humanize=function(e,n){n=n||{};var r,a=typeof e;if(a==="string"&&e.length>0)return function(u){if(!((u=String(u)).length>100)){var o=/^((?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|years?|yrs?|y)?$/i.exec(u);if(o){var f=parseFloat(o[1]);switch((o[2]||"ms").toLowerCase()){case"years":case"year":case"yrs":case"yr":case"y":return f*tm;case"days":case"day":case"d":return f*Tr;case"hours":case"hour":case"hrs":case"hr":case"h":return f*Er;case"minutes":case"minute":case"mins":case"min":case"m":return f*kr;case"seconds":case"second":case"secs":case"sec":case"s":return f*wr;case"milliseconds":case"millisecond":case"msecs":case"msec":case"ms":return f;default:return}}}}(e);if(a==="number"&&isNaN(e)===!1)return n.long?Xr(r=e,Tr,"day")||Xr(r,Er,"hour")||Xr(r,kr,"minute")||Xr(r,wr,"second")||r+" ms":function(u){return u>=Tr?Math.round(u/Tr)+"d":u>=Er?Math.round(u/Er)+"h":u>=kr?Math.round(u/kr)+"m":u>=wr?Math.round(u/wr)+"s":u+"ms"}(e);throw new Error("val is not a non-empty string or a valid number. val="+JSON.stringify(e))},ue.names=[],ue.skips=[],ue.formatters={};var Uu,n0,r0,Te=Uu={};function la(){throw new Error("setTimeout has not been defined")}function Na(){throw new Error("clearTimeout has not been defined")}function Ru(e){if(n0===setTimeout)return setTimeout(e,0);if((n0===la||!n0)&&setTimeout)return n0=setTimeout,setTimeout(e,0);try{return n0(e,0)}catch{try{return n0.call(null,e,0)}catch{return n0.call(this,e,0)}}}(function(){try{n0=typeof setTimeout=="function"?setTimeout:la}catch{n0=la}try{r0=typeof clearTimeout=="function"?clearTimeout:Na}catch{r0=Na}})();var L0,a0=[],K0=!1,Yr=-1;function fm(){K0&&L0&&(K0=!1,L0.length?a0=L0.concat(a0):Yr=-1,a0.length&&Lu())}function Lu(){if(!K0){var e=Ru(fm);K0=!0;for(var n=a0.length;n;){for(L0=a0,a0=[];++Yr<n;)L0&&L0[Yr].run();Yr=-1,n=a0.length}L0=null,K0=!1,function(r){if(r0===clearTimeout)return clearTimeout(r);if((r0===Na||!r0)&&clearTimeout)return r0=clearTimeout,clearTimeout(r);try{r0(r)}catch{try{return r0.call(null,r)}catch{return r0.call(this,r)}}}(e)}}function _u(e,n){this.fun=e,this.array=n}function i0(){}Te.nextTick=function(e){var n=new Array(arguments.length-1);if(arguments.length>1)for(var r=1;r<arguments.length;r++)n[r-1]=arguments[r];a0.push(new _u(e,n)),a0.length!==1||K0||Ru(Lu)},_u.prototype.run=function(){this.fun.apply(null,this.array)},Te.title="browser",Te.browser=!0,Te.env={},Te.argv=[],Te.version="",Te.versions={},Te.on=i0,Te.addListener=i0,Te.once=i0,Te.off=i0,Te.removeListener=i0,Te.removeAllListeners=i0,Te.emit=i0,Te.prependListener=i0,Te.prependOnceListener=i0,Te.listeners=function(e){return[]},Te.binding=function(e){throw new Error("process.binding is not supported")},Te.cwd=function(){return"/"},Te.chdir=function(e){throw new Error("process.chdir is not supported")},Te.umask=function(){return 0};var un={};(function(e){(function(){function n(){var r;try{r=un.storage.debug}catch{}return!r&&e!==void 0&&"env"in e&&(r=e.env.DEBUG),r}(un=un=ue).log=function(){return typeof console=="object"&&console.log&&Function.prototype.apply.call(console.log,console,arguments)},un.formatArgs=function(r){var a=this.useColors;if(r[0]=(a?"%c":"")+this.namespace+(a?" %c":" ")+r[0]+(a?"%c ":" ")+"+"+un.humanize(this.diff),!!a){var u="color: "+this.color;r.splice(1,0,u,"color: inherit");var o=0,f=0;r[0].replace(/%[a-zA-Z%]/g,function(l){l!=="%%"&&l==="%c"&&(f=++o)}),r.splice(f,0,u)}},un.save=function(r){try{r==null?un.storage.removeItem("debug"):un.storage.debug=r}catch{}},un.load=n,un.useColors=function(){return typeof window<"u"&&window.process&&window.process.type==="renderer"?!0:typeof document<"u"&&document.documentElement&&document.documentElement.style&&document.documentElement.style.WebkitAppearance||typeof window<"u"&&window.console&&(window.console.firebug||window.console.exception&&window.console.table)||typeof navigator<"u"&&navigator.userAgent&&navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/)&&parseInt(RegExp.$1,10)>=31||typeof navigator<"u"&&navigator.userAgent&&navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/)},un.storage=typeof chrome<"u"&&chrome.storage!==void 0?chrome.storage.local:function(){try{return window.localStorage}catch{}}(),un.colors=["lightseagreen","forestgreen","goldenrod","dodgerblue","darkorchid","crimson"],un.formatters.j=function(r){try{return JSON.stringify(r)}catch(a){return"[UnexpectedJSONParseError]: "+a.message}},un.enable(n())}).call(this)}).call(this,Uu);var Qr=34028234663852886e22,Bu=un("gammaincinv:higher_newton"),cm=function(e,n,r,a,u,o,f,l){var v,m,g,d,h,E,T,q,P;P=e,E=1,T=1,d=n*n,m=e;do{if(h=(P=e)*P,r===0){if((v=(1-n)*p(P)+P+o)>p(Qr))return Bu("Warning: overflow problems in one or more steps of the computation. The initial approximation to the root is returned."),m;q=b(v)}else q=-f*P;q=l?-q*(Kn(P,n,!0,!1)-a):q*(Kn(P,n,!0,!0)-u),a>1e-120||T>1?(g=(2*h-4*P*n+4*P+2*d-3*n+1)/h,e=P+q*(1+q*(.5*(P-n+1)/P+q*(g/=6)))):e=P+q,E=S(P/e-1),T+=1,(P=e)<0&&(P=m,T=100)}while(E>2e-14&&T<35);return(E>2e-14||T>99)&&Bu("Warning: the number of iterations in the Newton method reached the upper limit N=35. The last value obtained for the root is given as output."),P||0},vm=function(e){return e===0?0:0+e*(1+e*(1+e*(1.5+e*(2.6666666666666665+e*(5.208333333333333+10.8*e)))))},pm=function(e){return e===0?1:1+e*(1+e*(.3333333333333333+e*(.027777777777777776+e*(e*(.0002314814814814815+5878894767783657e-20*e)-.003703703703703704))))},lm=1e-8,Nm=.08333333333333333,mm=.008333333333333333,W0=[1,0,0,0,0,0],ma=function(e){var n,r,a,u,o,f,l,v,m;if(m=e*e*.5,e===0?o=0:e<-1?(v=b(-1-m),o=vm(v)):e<1?o=pm(v=e):(o=(v=11+m)+(f=p(v)),v=1/v,u=(a=(r=(n=f*f)*f)*f)*f,W0[1]=.5*(2-f),W0[2]=(-9*f+6+2*n)/6,W0[3]=-(3*r+36*f-22*n-12)*Nm,W0[4]=(60+350*n-300*f-125*r+12*a)/60,W0[5]=-(-120-274*a+900*f-1700*n+1125*r+20*u)*mm,o+=f*v*We(W0,v)),v=1,e>-3.5&&e<-.03||e>.03&&e<40){v=1,l=o;do o=l*(m+p(l))/(l-1),v=S(l/o-1),l=o;while(v>lm)}return o},hm=[1.9963790515900766,-.0017971032528832887,13129285796384672e-21,-2340875228178749e-22,72291210671127e-22,-3280997607821e-22,19875070901e-21,-1509214183e-21,1375340084e-22,-145728923e-22,17532367e-22,-2351465e-22,346551e-22,-55471e-22,9548e-22,-1748e-22,332e-22,-58e-22],dm=function(e,n){var r,a,u,o,f;a=0,u=0,r=n+n,f=e;do o=u,a=r*(u=a)-o+hm[f],f-=1;while(f>=0);return(a-o)/2},bm=function(e){return e===0?.025721014990011306:.025721014990011306+e*(.08247596616699963+e*(e*(.0006099292666946337+e*(.000250505279903*e-.00033543297638406))-.0025328157302663564))},ym=function(e){return e===0?.08333333333333333:.08333333333333333+e*(e*(.0007936507936507937+-.0005952380952380953*e)-.002777777777777778)},gm=.30865217988013566,wm=function(e){var n;return e<Ae?Qr:e<1?Y(e+1)-(e+.5)*p(e)+e-dr:e<2?Y(e)-(e-.5)*p(e)+e-dr:e<3?Y(e-1)-(e-.5)*p(e)+e-dr+p(e-1):e<12?dm(17,n=18/(e*e)-1)/(12*e):(n=1/(e*e),e<1e3?bm(n)/(gm+n)/e:ym(n)/e)},Fu=function(e){return e>=3?b(wm(e)):e>0?G(e)/(b(-e+(e-.5)*p(e))*Nr):Qr},km=function(e){var n,r;return e===0?-.3333333333438:((e<0?-e:e)<=1?(n=e*(e*(e*(-4293658292782e-17*e-.004923635739372)-.05041806657154)-.2070740359969)-.3333333333438,r=1+e*(.7045554412463+e*(.2118190062224+e*(.03048648397436+.001605037988091*e)))):(n=(e=1/e)*(e*(e*(-.3333333333438*e-.2070740359969)-.05041806657154)-.004923635739372)-4293658292782e-17,r=.001605037988091+e*(.03048648397436+e*(.2118190062224+e*(.7045554412463+1*e)))),n/r)},Em=function(e){var n;return S(e)<1?km(e):(n=ma(e),p(e/(n-1))/e)},Tm=function(e){var n,r;return e===0?-.0172847633523:((e<0?-e:e)<=1?(n=e*(e*(e*(-614830384279e-17*e-.00060683488776)-.00464910887221)-.0159372646475)-.0172847633523,r=1+e*(.764050615669+e*(.297143406325+e*(.0579490176079+.00574558524851*e)))):(n=(e=1/e)*(e*(e*(-.0172847633523*e-.0159372646475)-.00464910887221)-.00060683488776)-614830384279e-17,r=.00574558524851+e*(.0579490176079+e*(.297143406325+e*(.764050615669+1*e)))),n/r)},Vm=function(e){var n,r;return e===0?-.0172839517431:((e<0?-e:e)<=1?(n=e*(e*(e*(249634036069e-17*e-.000391032032692)-.00357406772616)-.0146362417966)-.0172839517431,r=1+e*(.690560400696+e*(.249962384741+e*(.0443843438769+.00424073217211*e)))):(n=249634036069e-17+(e=1/e)*(e*(e*(-.0172839517431*e-.0146362417966)-.00357406772616)-.000391032032692),r=.00424073217211+e*(.0443843438769+e*(.249962384741+e*(.690560400696+1*e)))),n/r)},Mm=function(e){var n,r;return e===0?.99994466948:((e<0?-e:e)<=1?(n=.99994466948+e*(104.649839762+e*(857.204033806+e*(731.901559577+45.5174411671*e))),r=1+e*(104.526456943+e*(823.313447808+e*(3119.93802124+3970.03311219*e)))):(n=45.5174411671+(e=1/e)*(731.901559577+e*(857.204033806+e*(104.649839762+.99994466948*e))),r=3970.03311219+e*(3119.93802124+e*(823.313447808+e*(104.526456943+1*e)))),n/r)},qm=function(e){var n,r;return e<-5?(12-(r=e*e)-(n=p(-e))*n*6)/(12*r*e):e<-2?Tm(e):e<2?Vm(e):e<1e3?(r=1/e,Mm(e)/(-12*e)):-1/(12*e)},xm=function(e){var n,r;return e===0?.0495346498136:((e<0?-e:e)<=1?(n=.0495346498136+e*(.0299521337141+e*(.00688296911516+e*(.000512634846317+-201411722031e-16*e))),r=1+e*(.759803615283+e*(.261547111595+e*(.0464854522477+.00403751193496*e)))):(n=(e=1/e)*(.000512634846317+e*(.00688296911516+e*(.0299521337141+.0495346498136*e)))-201411722031e-16,r=.00403751193496+e*(.0464854522477+e*(.261547111595+e*(.759803615283+1*e)))),n/r)},Pm=function(e){var n,r;return e===0?.00452313583942:((e<0?-e:e)<=1?(n=.00452313583942+e*(.00120744920113+e*(e*(-535770949796e-17*e-504476066942e-16)-789724156582e-16)),r=1+e*(.912203410349+e*(.405368773071+e*(.0901638932349+.00948935714996*e)))):(n=(e=1/e)*(e*(e*(.00120744920113+.00452313583942*e)-789724156582e-16)-504476066942e-16)-535770949796e-17,r=.00948935714996+e*(.0901638932349+e*(.405368773071+e*(.912203410349+1*e)))),n/r)},Sm=function(e){var n,r;return e===0?.00439937562904:((e<0?-e:e)<=1?(n=.00439937562904+e*(.000487225670639+e*(e*(529110969589e-17+15716677175e-17*e)-.000128470657374)),r=1+e*(.794435257415+e*(.333094721709+e*(.0703527806143+.00806110846078*e)))):(n=15716677175e-17+(e=1/e)*(529110969589e-17+e*(e*(.000487225670639+.00439937562904*e)-.000128470657374)),r=.00806110846078+e*(.0703527806143+e*(.333094721709+e*(.794435257415+1*e)))),n/r)},Am=function(e){var n,r;return e===0?-.0011481191232:((e<0?-e:e)<=1?(n=e*(e*(1.51623048511+e*(.0730002451555*e-.218472031183))-.112850923276)-.0011481191232,r=1+e*(14.2482206905+e*(69.7360396285+e*(218.938950816+277.067027185*e)))):(n=.0730002451555+(e=1/e)*(e*(1.51623048511+e*(-.0011481191232*e-.112850923276))-.218472031183),r=277.067027185+e*(218.938950816+e*(69.7360396285+e*(14.2482206905+1*e)))),n/r)},jm=function(e){var n,r;return e===0?-.000145727889667:((e<0?-e:e)<=1?(n=e*(e*(e*(199.722374056+-11.4311378756*e)-13.308504545)-.290806748131)-.000145727889667,r=1+e*(139.612587808+e*(2189.01116348+e*(7115.24019009+45574.6081453*e)))):(n=(e=1/e)*(199.722374056+e*(e*(-.000145727889667*e-.290806748131)-13.308504545))-11.4311378756,r=45574.6081453+e*(7115.24019009+e*(2189.01116348+e*(139.612587808+1*e)))),n/r)},Om=function(e){var n,r;return e<-8?(n=e*e,(e*(r=p(-e)/e)*(6*n*r*r-12+n)-30)/(12*e*n*n)):e<-4?xm(e)/(e*e):e<-2?Pm(e):e<2?Sm(e):e<10?Am(n=1/e)/(e*e):e<100?jm(n=1/e)/(e*e):-p(e)/(12*e*e*e)},Um=un("gammaincinv:compute"),x0=.5,ha=.3333333333333333,Rm=.25,Iu=.2,Cu=.16666666666666666,Lm=.08333333333333333,_m=.041666666666666664,On=[0,0,0,0,0],Gu=function(e,n,r){var a,u,o,f,l,v,m,g,d,h,E,T,q,P,O,x,B,C,L,U,J,Ne,W,he,Pe,te,j,oe,qr,fc,_a,kn,Ve,Ba,gn,t0,f0,Fa,cc,Ia;if(n<x0?(f=!0,l=n,Fa=-1):(f=!1,l=r,Fa=1),gn=0,S(e-1)<1e-4&&(t0=0,L=f?n<.001?n+(qr=n*n)*x0+(te=qr*n)*ha+(oe=te*n)*Rm+(C=oe*n)*Iu+C*n*Cu:-p(1-n):-p(r),e===1?(gn=2,_a=L):(o=Y(e),gn=1)),r<1e-30&&e<x0&&(t0=0,L=-p(r*G(e))+(e-1)*p(-p(r*G(e))),gn=1,o=Y(e)),e>1&&e<500&&n<1e-80){for(t0=0,v=1/e,a=1/(e+1),L=(Y(e+1)+p(n))*v,q=L=b(L),Ba=0;Ba<10;Ba++)L=q*b(L*v)*N(1-L*a,v);gn=1,o=Y(e)}if((m=1/e*(p(n)+Y(e+1)))<p(Iu*(1+e))&&gn===0&&(f0=b(m),t0=0,j=(fc=(U=e*e)*e)*e,h=(P=e+1)*(E=P*P),d=E*E,g=(O=e+2)*O,x=e+3,On[0]=1,On[1]=1/P,On[2]=x0*(3*e+5)/(E*O),On[3]=ha*(31+8*U+33*e)/(h*O*x),On[4]=_m*(2888+1179*fc+125*j+3971*U+5661*e)/(d*g*x*(e+4)),L=f0*We(On,f0),o=Y(e),gn=1),e<10&&gn===0&&(T=M(e)/(Fu(e)*Nr),r<Z(.02,T)&&(t0=0,Pe=(he=(kn=1-e)*kn)*kn,B=M(-2/e*p(r/T)),L=e*ma(B),Ve=p(L),L>5?(W=(Ne=(J=Ve*Ve)*Ve)*Ve,f0=1/L,On[0]=Ve-1,On[1]=(3*kn-2*kn*Ve+J-2*Ve+2)*x0,On[2]=(24*kn*Ve-11*he-24*kn-6*J+12*Ve-12-9*kn*J+6*he*Ve+2*Ne)*Cu,On[3]=(-12*Pe*Ve+8.04*kn*J-114*he*Ve+(72+36*J)+(3*W-72*Ve+162)*(kn-168*kn*Ve)-(12*Ne+25*Pe)-(22*kn*Ne+36*he*J+120*he))*Lm,On[4]=0,L=L-Ve+kn*f0*We(On,f0)):(J=Ve*Ve,(cc=Ve-kn*(f0=1/L)*(Ve-1))<L&&(L-=cc)),o=Y(e),gn=1)),S(l-x0)<1e-5&&gn===0&&(t0=0,L=e-ha+(.019753086419753086+.007211444248481286*(v=1/e))*v,o=Y(e),gn=1),e<1&&gn===0&&(t0=0,L=b(f?1/e*(p(l)+Y(e+1)):1/e*(p(1-l)+Y(e+1))),o=Y(e),gn=1),gn===0){if(t0=1,v=1/e,B=Fa*(f0=Ee(2*l))/M(e*x0),!(f0<Qr))return Um("Warning: Overflow problems in one or more steps of the computation."),NaN;B+=(Em(B)+(qm(B)+Om(B)*v)*v)*v,L=e*ma(B),Ia=B,u=1/(-M(e/Qn)*b(-x0*e*Ia*Ia)/Fu(e))}return gn<2&&(_a=cm(L,e,t0,n,r,o,u,f)),_a},H0=function(e,n,r){return i(e)||i(n)?NaN:n<Ae?NaN:e>1||e<0?NaN:r===!0?e===0?w:e===1?0:Gu(n,1-e,e):e===0?0:e===1?w:Gu(n,e,1-e)},Bm=5e-324,Fm=function(e,n,r,a){var u,o,f,l,v,m,g,d,h,E,T,q,P,O,x,B,C,L,U,J,Ne,W,he,Pe,te,j,oe,qr;return v=r<a?H0(r,n,!0):H0(a,n,!1),v/=e,E=((j=M(1+(P=n/e)))+2)*(j-1)/(3*j),E+=((C=(B=j*j)*j)+9*B+21*j+5)*(te=v-P)/(36*B*(Pe=j+1)),E-=((L=B*B)-13*C+69*B+167*j+46)*(O=te*te)/(1620*(g=Pe*Pe)*C),E-=(7*(U=C*B)+21*L+70*C+26*B-93*j-31)*(x=O*te)/(6480*(d=Pe*g)*L),T=(28*L+131*C+402*B+581*j+208)*(j-1)/(1620*Pe*C),T-=(35*(J=C*C)-154*U-623*L-1636*C-3983*B-3514*j-925)*te/(12960*g*L),T-=(2132*(Ne=L*C)+7915*J+16821*U+35066*L+87490*C+141183*B+95993*j+21640)*O/(816480*U*d),q=-(3592*Ne+8375*J-1323*U-29198*L-89578*C-154413*B-116063*j-29632)*(j-1)/(816480*U*g),q-=(442043*(he=U*L)+2054169*(W=L*L)+3803094*Ne+3470754*J+2141568*U-2393568*L-19904934*C-34714674*B-23128299*j-5253353)*te/(146966400*J*d),(m=v+(E-=O*O*(75*J+202*U+188*L-888*C-1345*B+118*j+138)/(272160*(h=g*g)*U))/e+(T-=(11053*W+53308*Ne+117010*J+163924*U+116188*L-258428*C-677042*B-481940*j-105497)*x/(14696640*h*J))/(e*e)+(q-=(U*U*116932+819281*he+2378172*W+4341330*Ne+6806004*J+10622748*U+18739500*L+30651894*C+30869976*B+15431867*j+2919016)*O/(146966400*h*Ne))/(e*e*e))<=0&&(m=Bm),oe=m-P*p(m)+(1+P)*p(1+P)-P,u=1/(1+P),qr=((f=m<P?u:0)+(l=m<P?1:u))/2,o=ju(oe,P),Ou(o,qr,f,l,32,100)},Im=function(e,n,r,a,u,o){var f,l,v,m,g,d,h,E,T,q,P,O,x,B,C,L;B=0,l=!1,d=n,g=Bn(1,1-u),h=0,v=T=ee(1e7*n,1e7),m=T,E=o;do{if(h=B,m=v,v=T,B=(x=e(d))[0],C=x[1],L=x[2],E-=1,B===0)break;if(C===0?(h===0&&(h=e(n=d===r?a:r),T=n-d),T=e0(h)*e0(B)<0?T<0?(d-r)/2:(d-a)/2:T<0?(d-a)/2:(d-r)/2):L===0?T=B/C:(q=2*B,(T=S(O=2*C-B*(L/C))<1&&S(q)>=S(O)*an?B/C:q/O)*C/B<0&&S(T=B/C)>2*S(n)&&(T=2*(T<0?-1:1)*S(n))),(f=S(T/m))>.8&&f<2&&(S(T=T>0?(d-r)/2:(d-a)/2)>d&&(T=e0(T)*d),m=3*T),n=d,(d-=T)<r){if(P=S(r)<1&&S(d)>1&&an/S(d)<S(r)?1e3:d/r,S(P)<1&&(P=1/P),!l&&P>0&&P<3)d=n-(T=.99*(n-r)),l=!0;else if((d=n-(T=(n-r)/2))===r||d===a)break}else if(d>a){if(P=S(a)<1&&S(d)>1&&an/S(d)<S(a)?1e3:d/a,S(P)<1&&(P=1/P),!l&&P>0&&P<3)d=n-(T=.99*(n-a)),l=!0;else if((d=n-(T=(n-a)/2))===r||d===a)break}T>0?a=n:r=n}while(E&&S(d*g)<S(T));return d},Cm=wu.assign,Gm=function(e,n,r,a){return function(u){var o,f,l,v,m;return m=1-u,Cm(u,e,n,!0,a,o=[0,0],1,0),v=o[0]-r,f=o[1],a&&(f=-f),m===0&&(m=64*jn),u===0&&(u=64*jn),S(l=f*(-m*e+(n-2)*u+1))<m*u*an&&(l/=m*u),a&&(l=-l),f===0&&(f=(a?-1:1)*jn*64),[v,f,l]}},Km=32,Wm=1e3,_0=[0,0,0,0,0],D0=function(e,n,r,a){var u,o,f,l,v,m,g,d,h,E,T,q,P,O,x,B,C,L,U,J,Ne,W,he,Pe,te,j,oe;if(o=!1,a===0)return[1,0];if(r===0)return[0,1];if(e===1){if(n===1)return[r,1-r];q=n,n=e,e=q,q=a,a=r,r=q,o=!0}if(j=0,l=0,m=1,e===.5){if(n===.5)return j=Fn(r*Xn),j*=j,oe=Fn(a*Xn),[j,oe*=oe];n>.5&&(q=n,n=e,e=q,q=a,a=r,r=q,o=!o)}if(n===.5&&e>=.5&&r!==1)j=DN(e,r,J={}),oe=J.value;else{if(n===1)return r<a?e>1?(j=N(r,1/e),oe=-ve(p(r)/e)):oe=1-(j=N(r,1/e)):(j=b(R(-a)/e),oe=-ve(R(-a)/e)),o&&(q=oe,oe=j,j=q),[j,oe];if(e+n>5)r>.5&&(q=n,n=e,e=q,q=a,a=r,r=q,o=!o),h=Z(e,n),d=ee(e,n),M(h)>d-h&&h>5?oe=1-(j=zN(e,n,r)):(v=Rn(M(e/(Pe=e+n))),(f=h/Pe)>=.2&&f<=.8&&Pe>=10?oe=1-(j=(T=N(r,1/e))<.0025&&e+n<200?T*N(e*X(e,n),1/e):sm(r,Pe,v)):(e<n&&(q=n,n=e,e=q,q=a,a=r,r=q,o=!o),E=0,n<2&&(E=X(e,n)),E===0?oe=1:j=1-(oe=N(n*a*E,1/n))),oe>1e-5&&(oe=1-(j=Fm(e,n,r,a))));else if(e<1&&n<1){if(B=ke(U=(1-e)/(2-e-n),e,n)-r,S(B)/r<3*rn)return o?[1-U,U]:[U,1-U];B<0&&(q=n,n=e,e=q,q=a,a=r,r=q,o=!o,U=1-U),oe=1/(1+(L=N(e*r*X(e,n),1/e))),(j=L/(1+L))>U&&(j=U),m=U}else e>1&&n>1?(P=(n-1)/(e+n-2),ke(U=(e-1)/(e+n-2),e,n)-r<0&&(q=n,n=e,e=q,q=a,a=r,r=q,q=P,P=U,U=q,o=!o),C=p(r*e*X(e,n))/e,oe=(j=b(C))<.9?1-j:-ve(C),n<e&&j<.2&&(O=e-1,x=n-1,W=e*(Ne=e*e),he=n*n,_0[0]=0,_0[1]=1,_0[2]=x/O,O*=O,_0[3]=x*(3*e*n+5*n+Ne-e-4)/(2*(e+2)*O),O*=e+1,_0[4]=x*(33*e*he+31*he+8*Ne*he-30*e*n-47*n+11*Ne*n+6*W*n+18+4*e-W+Ne*Ne-10*Ne),_0[4]/=3*(e+3)*(e+2)*O,j=We(_0,j)),j>U&&(j=U),m=U):(n<e&&(q=n,n=e,e=q,q=a,a=r,r=q,o=!o),N(r,1/e)<.5?((j=N(r*e*X(e,n),1/e))===0&&(j=jn),oe=1-j):((oe=N(1-N(r,n*X(e,n)),1/n))===0&&(oe=jn),j=1-oe))}return j>.5&&(q=n,n=e,e=q,q=a,a=r,r=q,q=oe,oe=j,j=q,o=!o,te=1-l,l=1-m,m=te),l===0&&(o?j<(l=rn)&&(j=l):l=jn,j<l&&(j=l)),u=Km,j<1e-50&&(e<1||n<1)&&(u*=3,u/=2),g=Gm(e,n,r<a?r:a,r>=a),(j=Im(g,j,l,m,u,Wm))===l&&(j=0),o?[1-j,j]:[j,1-j]},Vr=function(e,n,r,a){return i(e)||i(n)||i(r)?NaN:n<=0||r<=0?NaN:e<0||e>1?NaN:a?D0(n,r,1-e,e)[0]:D0(n,r,e,1-e)[0]},Ku=function(e,n){return e<=0||n<=0?NaN:Vr(.5,e,n)},Wu=function(e,n){return e<=1||n<=1?NaN:(e-1)/(e+n-2)},Hu=function(e,n){var r,a;return e<=0||n<=0?NaN:(r=2*(n-e)*M((a=e+n)+1),r/=(a+2)*M(e*n))},Du=function(e,n){var r,a;return e<=0||n<=0?NaN:(a=M(e*n/((r=e+n)+1)),a/=r)},zu=function(e,n){var r,a;return e<=0||n<=0?NaN:(a=e*n,a/=(r=e+n)*r*(r+1))},$u=function(e,n,r){return i(e)||i(n)||i(r)||n<=0||r<=0?NaN:e<=0?V:e>=1?0:p(ke(e,n,r))};c($u,"factory",function(e,n){return i(e)||i(n)||e<=0||n<=0?k(NaN):function(r){return i(r)?NaN:r<=0?V:r>=1?0:p(ke(r,e,n))}});var e1=$u,Ju=function(e,n,r){var a;return i(e)||i(n)||i(r)||n<=0||r<=0?NaN:e<0||e>1?V:e===0?n<1?w:n>1?V:p(r):e===1?r<1?w:r>1?V:p(n):(a=(n-1)*p(e),a+=(r-1)*R(-e),a-=Hn(n,r))};c(Ju,"factory",function(e,n){var r;return i(e)||i(n)||e<=0||n<=0?k(NaN):(r=Hn(e,n),function(a){var u;return i(a)?NaN:a<0||a>1?V:a===0?e<1?w:e>1?V:p(n):a===1?n<1?w:n>1?V:p(e):(u=-r,u+=(e-1)*p(a)+(n-1)*R(-a))})});var Zu=Ju,Xu=function(e,n,r){var a,u,o,f,l;u=X(n,r),o=1,f=1,l=1;do f*=e/l,o+=a=X(n+l,r)/u*f,l+=1;while(S(a/o)>=rn);return o},Yu=function(e,n,r){return i(e)||i(n)||i(r)||n<=0||r<=0?NaN:Xu(e,n,r)};c(Yu,"factory",function(e,n){return i(e)||i(n)||e<=0||n<=0?k(NaN):function(r){return i(r)?NaN:Xu(r,e,n)}});var Qu=Yu,eo=function(e,n,r){var a;return i(e)||i(n)||i(r)||n<=0||r<=0?NaN:e<0||e>1?0:e===0?n<1?w:n>1?0:r:e===1?r<1?w:r>1?0:n:(a=(n-1)*p(e),a+=(r-1)*R(-e),a-=Hn(n,r),b(a))};c(eo,"factory",function(e,n){var r;return i(e)||i(n)||e<=0||n<=0?k(NaN):(r=Hn(e,n),function(a){var u;return i(a)?NaN:a<0||a>1?0:a===0?e<1?w:e>1?0:n:a===1?n<1?w:n>1?0:e:(u=-r,u+=(e-1)*p(a),u+=(n-1)*R(-a),b(u))})});var no=eo,ro=function(e,n,r){return i(e)||i(n)||i(r)||n<=0||r<=0||e<0||e>1?NaN:Vr(e,n,r)};c(ro,"factory",function(e,n){return i(e)||i(n)||e<=0||n<=0?k(NaN):function(r){return i(r)||r<0||r>1?NaN:Vr(r,e,n)}});var ao=ro,n1=be.isPrimitive;function je(){var e,n;if(!(this instanceof je))return arguments.length===0?new je:new je(arguments[0],arguments[1]);if(arguments.length){if(e=arguments[0],n=arguments[1],!n1(e))throw new TypeError("invalid argument. First shape parameter `alpha` must be a positive number. Value: `"+e+"`");if(!n1(n))throw new TypeError("invalid argument. Second shape parameter `beta` must be a positive number. Value: `"+n+"`")}else e=1,n=1;return _(this,"alpha",{configurable:!1,enumerable:!0,get:function(){return e},set:function(r){if(!n1(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");e=r}}),_(this,"beta",{configurable:!1,enumerable:!0,get:function(){return n},set:function(r){if(!n1(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");n=r}}),this}y(je.prototype,"entropy",function(){return qu(this.alpha,this.beta)}),y(je.prototype,"kurtosis",function(){return xu(this.alpha,this.beta)}),y(je.prototype,"mean",function(){return Pu(this.alpha,this.beta)}),y(je.prototype,"median",function(){return Ku(this.alpha,this.beta)}),y(je.prototype,"mode",function(){return Wu(this.alpha,this.beta)}),y(je.prototype,"skewness",function(){return Hu(this.alpha,this.beta)}),y(je.prototype,"stdev",function(){return Du(this.alpha,this.beta)}),y(je.prototype,"variance",function(){return zu(this.alpha,this.beta)}),c(je.prototype,"cdf",function(e){return $r(e,this.alpha,this.beta)}),c(je.prototype,"logcdf",function(e){return e1(e,this.alpha,this.beta)}),c(je.prototype,"logpdf",function(e){return Zu(e,this.alpha,this.beta)}),c(je.prototype,"mgf",function(e){return Qu(e,this.alpha,this.beta)}),c(je.prototype,"pdf",function(e){return no(e,this.alpha,this.beta)}),c(je.prototype,"quantile",function(e){return ao(e,this.alpha,this.beta)});var Hm=je,io=function(e,n,r){return i(e)||i(n)||i(r)||n<=0||r<=0?NaN:e<=0?0:e===w?1:$r(e/(1+e),n,r)},Dm=$r.factory;c(io,"factory",function(e,n){var r;return i(e)||i(n)||e<=0||n<=0?k(NaN):(r=Dm(e,n),function(a){return i(a)?NaN:a<=0?0:a===w?1:r(a/(1+a))})});var uo=io,oo=function(e,n){var r,a,u;return i(e)||e<=0||i(n)||n<=4?NaN:(u=e*(r=e+n-1)*(5*n-11)+(a=n-1)*a*(a-1),u*=6,u/=e*r*(n-3)*(n-4))},so=function(e,n){return e<=0||n<=1?NaN:e/(n-1)},to=function(e,n){return e<=0||n<=0?NaN:e<1?0:(e-1)/(n+1)},fo=function(e,n){var r;return i(e)||e<=0||i(n)||n<=3?NaN:(r=2*(2*e+n-1)/(n-3),r*=M((n-2)/(e*(e+n-1))))},co=function(e,n){var r;return i(e)||e<=0||i(n)||n<=2?NaN:M(e*(e+(r=n-1))/((r-1)*r*r))},vo=function(e,n){var r;return i(e)||e<=0||i(n)||n<=2?NaN:e*(e+(r=n-1))/((r-1)*r*r)},po=function(e,n,r){return i(e)||i(n)||i(r)||n<=0||r<=0?NaN:e<=0?V:e===w?0:e1(e/(1+e),n,r)},zm=e1.factory;c(po,"factory",function(e,n){var r;return i(e)||i(n)||e<=0||n<=0?k(NaN):(r=zm(e,n),function(a){return i(a)?NaN:a<=0?V:a===w?0:r(a/(1+a))})});var lo=po,No=function(e,n,r){var a;return i(e)||i(n)||i(r)||n<=0||r<=0?NaN:e<=0?V:(a=(n-1)*p(e),a-=(n+r)*R(e),a-=Hn(n,r))};c(No,"factory",function(e,n){var r;return i(e)||i(n)||e<=0||n<=0?k(NaN):(r=Hn(e,n),function(a){var u;return i(a)?NaN:a<=0?V:(u=(e-1)*p(a),u-=(e+n)*R(a),u-=r)})});var r1=No,mo=function(e,n,r){return i(e)||i(n)||i(r)||n<=0||r<=0?NaN:b(r1(e,n,r))},$m=r1.factory;c(mo,"factory",function(e,n){var r;return i(e)||i(n)||e<=0||n<=0?k(NaN):(r=$m(e,n),function(a){return i(a)?NaN:b(r(a))})});var ho=mo,bo=function(e,n,r){var a;return i(e)||i(n)||i(r)||n<=0||r<=0||e<0||e>1?NaN:(a=Vr(e,n,r))/(1-a)};c(bo,"factory",function(e,n){return i(e)||i(n)||e<=0||n<=0?k(NaN):function(r){var a;return i(r)||r<0||r>1?NaN:(a=Vr(r,e,n))/(1-a)}});var yo=bo,a1=be.isPrimitive;function Nn(){var e,n;if(!(this instanceof Nn))return arguments.length===0?new Nn:new Nn(arguments[0],arguments[1]);if(arguments.length){if(e=arguments[0],n=arguments[1],!a1(e))throw new TypeError("invalid argument. First shape parameter `alpha` must be a positive number. Value: `"+e+"`");if(!a1(n))throw new TypeError("invalid argument. Second shape parameter `beta` must be a positive number. Value: `"+n+"`")}else e=1,n=1;return _(this,"alpha",{configurable:!1,enumerable:!0,get:function(){return e},set:function(r){if(!a1(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");e=r}}),_(this,"beta",{configurable:!1,enumerable:!0,get:function(){return n},set:function(r){if(!a1(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");n=r}}),this}y(Nn.prototype,"kurtosis",function(){return oo(this.alpha,this.beta)}),y(Nn.prototype,"mean",function(){return so(this.alpha,this.beta)}),y(Nn.prototype,"mode",function(){return to(this.alpha,this.beta)}),y(Nn.prototype,"skewness",function(){return fo(this.alpha,this.beta)}),y(Nn.prototype,"stdev",function(){return co(this.alpha,this.beta)}),y(Nn.prototype,"variance",function(){return vo(this.alpha,this.beta)}),c(Nn.prototype,"cdf",function(e){return uo(e,this.alpha,this.beta)}),c(Nn.prototype,"logcdf",function(e){return lo(e,this.alpha,this.beta)}),c(Nn.prototype,"logpdf",function(e){return r1(e,this.alpha,this.beta)}),c(Nn.prototype,"pdf",function(e){return ho(e,this.alpha,this.beta)}),c(Nn.prototype,"quantile",function(e){return yo(e,this.alpha,this.beta)});var Jm=Nn,A=function(e){return D(e)===e&&e>=0},go=function(e,n,r){return i(e)||i(n)||i(r)||r<0||r>1||!A(n)||n===w?NaN:e<0?0:e>=n?1:(e=D(e+1e-7),ke(r,e+1,n-e,!0,!0))};c(go,"factory",function(e,n){return i(e)||i(n)||n<0||n>1||!A(e)||e===w?k(NaN):function(r){return i(r)?NaN:r<0?0:r>=e?1:(r=D(r+1e-7),ke(n,r+1,e-r,!0,!0))}});var z0=go,wo=function(e){return e<w&&e>V&&K(e)},Zm=ge.isPrimitive,ko=function(e){return Zm(e)&&wo(e)},Xm=ge.isObject,Eo=function(e){return Xm(e)&&wo(e.valueOf())},da=function(e){return ko(e)||Eo(e)};c(da,"isPrimitive",ko),c(da,"isObject",Eo);var Mr=da,Ym=Mr.isPrimitive,To=function(e){return Ym(e)&&e>0},Qm=Mr.isObject,Vo=function(e){return Qm(e)&&e.valueOf()>0},ba=function(e){return To(e)||Vo(e)};c(ba,"isPrimitive",To),c(ba,"isObject",Vo);var Mo=ba,qo=function(e,n){var r;return i(e)||i(n)||n<0||n>1||!A(e)||e===w?NaN:(1-6*(r=n*(1-n)))/(e*r)},ya=function(e,n){return i(e)||i(n)||n<0||n>1||!A(e)||e===w?NaN:e*n},xo=function(e,n){return i(e)||i(n)||n<0||n>1||!A(e)||e===w?NaN:En(ya(e,n))},Po=function(e,n){return i(e)||i(n)||n<0||n>1||!A(e)||e===w?NaN:D((e+1)*n)},So=function(e,n){return i(e)||i(n)||n<0||n>1||!A(e)||e===w?NaN:(1-2*n)/M(e*n*(1-n))},Ao=function(e,n){return i(e)||i(n)||n<0||n>1||!A(e)||e===w?NaN:M(e*n*(1-n))},jo=function(e,n){return i(e)||i(n)||n<0||n>1||!A(e)||e===w?NaN:e*n*(1-n)},i1=function e(n,r){return i(n)||i(r)?NaN:K(n)&&K(r)?n<0?e(-n+r-1,r):r<0?V:r===0?0:r===1?p(S(n)):n<r?V:n-r<2?e(n,n-r):-p(n+1)-Hn(n-r+1,r+1):NaN},Oo=function(e,n,r){var a;return i(e)||i(n)||i(r)||r<0||r>1||!A(n)||n===w?NaN:A(e)?e>n?V:r===0?e===0?0:V:r===1?e===n?0:V:(a=i1(n,e),a+=e*p(r)+(n-e)*R(-r)):V},Uo=function(e,n){return i(e)||i(n)?NaN:e===n?0:V};c(Uo,"factory",function(e){return i(e)?k(NaN):function(n){return i(n)?NaN:n===e?0:V}});var u1=Uo,Ro=u1.factory;c(Oo,"factory",function(e,n){return i(e)||i(n)||!A(e)||e===w||n<0||n>1?k(NaN):n===0||e===0?Ro(0):n===1?Ro(e):function(r){var a;return i(r)?NaN:A(r)?r>e?V:(a=i1(e,r),a+=r*p(n)+(e-r)*R(-n)):V}});var Lo=Oo,_o=function(e,n,r){var a;return i(e)||i(n)||i(r)||r<0||r>1||!A(n)||n===w?NaN:(a=1-r+r*b(e),N(a,n))};c(_o,"factory",function(e,n){return i(e)||i(n)||n<0||n>1||!A(e)||e===w?k(NaN):function(r){var a;return i(r)?NaN:(a=1-n+n*b(r),N(a,e))}});var Bo=_o,Fo=function(e,n,r){var a;return i(e)||i(n)||i(r)||r<0||r>1||!A(n)||n===w?NaN:A(e)?e>n?0:r===0?e===0?1:0:r===1?e===n?1:0:(a=i1(n,e),a+=e*p(r)+(n-e)*R(-r),b(a)):0},Io=function(e,n){return i(e)||i(n)?NaN:e===n?1:0};c(Io,"factory",function(e){return i(e)?k(NaN):function(n){return i(n)?NaN:n===e?1:0}});var o1=Io,Co=o1.factory;c(Fo,"factory",function(e,n){return i(e)||i(n)||!A(e)||e===w||n<0||n>1?k(NaN):n===0||e===0?Co(0):n===1?Co(e):function(r){var a;return i(r)?NaN:A(r)?r>e?0:(a=i1(e,r),a+=r*p(n)+(e-r)*R(-n),b(a)):0}});var Go=Fo,Ko=function(e,n,r,a){for(;e!==0&&z0(e-1,r,a)>=n;)e-=1;return e},Wo=function(e,n,r,a){for(e+=1;z0(e,r,a)<n;)e+=1;return e},Ho=function(e,n,r){var a,u,o,f,l;return i(e)||i(n)||i(r)||e<0||e>1||r<0||r>1||!A(n)||n===w?NaN:e===1||r===1?n:e===0||r===0||n===0?0:(f=n*r,a=1/(o=M(n*r*(1-r))),l=e<.5?-Ee(2*e)*ne:Ee(2*(1-e))*ne,u=En(f+o*(l+a*(l*l-1)/6)),z0(u,n,r)>=e?Ko(u,e,n,r):Wo(u,e,n,r))},Do=function(e,n){return i(e)||e<0||e>1?NaN:n};c(Do,"factory",function(e){return i(e)?k(NaN):function(n){return i(n)||n<0||n>1?NaN:e}});var u0=Do,zo=u0.factory;c(Ho,"factory",function(e,n){var r,a,u;return i(e)||i(n)||!A(e)||e===w||n<0||n>1?k(NaN):n===0||e===0?zo(0):n===1?zo(e):(u=e*n,a=M(e*n*(1-n)),r=1/a,function(o){var f,l;return i(o)||o<0||o>1?NaN:o===0?0:o===1?e:(l=o<.5?-Ee(2*o)*ne:Ee(2*(1-o))*ne,f=En(u+a*(l+r*(l*l-1)/6)),z0(f,e,n)>=o?Ko(f,o,e,n):Wo(f,o,e,n))})});var $o=Ho,Jo=Mo.isPrimitive,Zo=Gr.isPrimitive;function on(){var e,n;if(!(this instanceof on))return arguments.length===0?new on:new on(arguments[0],arguments[1]);if(arguments.length){if(e=arguments[0],n=arguments[1],!Jo(e))throw new TypeError("invalid argument. Number of trials `n` must be a positive integer. Value: `"+e+"`");if(!Zo(n))throw new TypeError("invalid argument. Success probability `p` must be a number between 0 and 1. Value: `"+n+"`")}else e=1,n=.5;return _(this,"n",{configurable:!1,enumerable:!0,get:function(){return e},set:function(r){if(!Jo(r))throw new TypeError("invalid value. Must be a positive integer. Value: `"+r+"`");e=r}}),_(this,"p",{configurable:!1,enumerable:!0,get:function(){return n},set:function(r){if(!Zo(r))throw new TypeError("invalid value. Must be a number between 0 and 1. Value: `"+r+"`");n=r}}),this}y(on.prototype,"kurtosis",function(){return qo(this.n,this.p)}),y(on.prototype,"mean",function(){return ya(this.n,this.p)}),y(on.prototype,"median",function(){return xo(this.n,this.p)}),y(on.prototype,"mode",function(){return Po(this.n,this.p)}),y(on.prototype,"skewness",function(){return So(this.n,this.p)}),y(on.prototype,"stdev",function(){return Ao(this.n,this.p)}),y(on.prototype,"variance",function(){return jo(this.n,this.p)}),c(on.prototype,"cdf",function(e){return z0(e,this.n,this.p)}),c(on.prototype,"logpmf",function(e){return Lo(e,this.n,this.p)}),c(on.prototype,"mgf",function(e){return Bo(e,this.n,this.p)}),c(on.prototype,"pmf",function(e){return Go(e,this.n,this.p)}),c(on.prototype,"quantile",function(e){return $o(e,this.n,this.p)});var eh=on,nh=function(e,n){var r,a,u,o;if(i(e)||i(n)||n<0||n>1||!A(e)||e===w)return NaN;if(n===0||n===1||e===0)return 0;for(r=e*p(o=1-n),a=b(r)*r,u=1;u<=e;u++)r+=p((e-u+1)/u)+p(n/o),a+=b(r)*r;return-a},rh=function(e){return!!(we(e)>>>31)},ah=function(e){return e===0?-64.85021904942025:e*(e*(e*(-.8750608600031904*e-16.157537187333652)-75.00855792314705)-122.88666844901361)-64.85021904942025},ih=function(e){return e===0?194.5506571482614:194.5506571482614+e*(485.3903996359137+e*(432.88106049129027+e*(165.02700983169885+e*(24.858464901423062+1*e))))},Xo=6123233995736766e-32,uh=2.414213562373095,oh=function(e){var n,r,a,u;return i(e)||e===0?e:e===w?Xn:e===V?-Xn:(e<0&&(r=!0,e=-e),n=0,e>uh?(a=Xn,n=1,e=-1/e):e<=.66?a=0:(a=Me,n=2,e=(e-1)/(e+1)),u=e*(u=(u=e*e)*ah(u)/ih(u))+e,n===2?u+=.5*Xo:n===1&&(u+=Xo),a+=u,r?-a:a)},s1=function(e,n){var r;return i(n)||i(e)?NaN:Sn(n)?n===w?Sn(e)?ln(F/4,e):ln(0,e):Sn(e)?ln(3*F/4,e):ln(F,e):Sn(e)?ln(F/2,e):e===0?n>=0&&!rh(n)?ln(0,e):ln(F,e):n===0?ln(F/2,e):(r=oh(e/n),n<0?r<=0?r+F:r-F:r)},sh=.3183098861837907,Yo=function(e,n,r){return i(e)||i(r)||i(n)||r<=0?NaN:sh*s1(e-n,r)+.5},th=.3183098861837907;c(Yo,"factory",function(e,n){return i(n)||i(e)||n<=0?k(NaN):function(r){return i(r)?NaN:th*s1(r-e,n)+.5}});var Qo=Yo,fh=ge.isPrimitive,e2=function(e){return fh(e)&&i(e)},ch=ge.isObject,n2=function(e){return ch(e)&&i(e.valueOf())},ga=function(e){return e2(e)||n2(e)};c(ga,"isPrimitive",e2),c(ga,"isObject",n2);var sn=ga,r2=function(e,n){return i(n)||i(e)||n<=0?NaN:p(n)+p(4*F)},a2=function(e,n){return i(n)||i(e)||n<=0?NaN:e},i2=function(e,n){return i(n)||i(e)||n<=0?NaN:e},vh=.3183098861837907,u2=function(e,n,r){return i(e)||i(r)||i(n)||r<=0?NaN:p(vh*s1(e-n,r)+.5)},ph=.3183098861837907;c(u2,"factory",function(e,n){return i(n)||i(e)||n<=0?k(NaN):function(r){return i(r)?NaN:p(ph*s1(r-e,n)+.5)}});var o2=u2,s2=function(e,n,r){return i(e)||i(r)||i(n)||r<=0?NaN:-(G0+p(r)+R(N((e-n)/r,2)))};c(s2,"factory",function(e,n){return i(n)||i(e)||n<=0?k(NaN):function(r){return i(r)?NaN:-(G0+p(n)+R(N((r-e)/n,2)))}});var t2=s2,f2=function(e,n,r){return i(e)||i(r)||i(n)||r<=0?NaN:1/(F*r*(1+N((e-n)/r,2)))};c(f2,"factory",function(e,n){var r;return i(n)||i(e)||n<=0?k(NaN):(r=n*F,function(a){return i(a)?NaN:1/(r*(1+N((a-e)/n,2)))})});var c2=f2,v2=function(e,n,r){return i(n)||i(r)||r<=0||i(e)||e<0||e>1?NaN:n+r*fa(F*(e-.5))};c(v2,"factory",function(e,n){return i(e)||i(n)||n<=0?k(NaN):function(r){return i(r)||r<0||r>1?NaN:e+n*fa(F*(r-.5))}});var p2=v2,l2=be.isPrimitive,N2=ge.isPrimitive;function Un(){var e,n;if(!(this instanceof Un))return arguments.length===0?new Un:new Un(arguments[0],arguments[1]);if(arguments.length){if(n=arguments[0],e=arguments[1],!N2(n)||sn(n))throw new TypeError("invalid argument. Location parameter `x0` must be a number primitive. Value: `"+n+"`");if(!l2(e))throw new TypeError("invalid argument. Scale parameter `gamma` must be a positive number. Value: `"+e+"`")}else n=0,e=1;return _(this,"x0",{configurable:!1,enumerable:!0,get:function(){return n},set:function(r){if(!N2(r)||sn(r))throw new TypeError("invalid value. Must be a number primitive. Value: `"+r+"`");n=r}}),_(this,"gamma",{configurable:!1,enumerable:!0,get:function(){return e},set:function(r){if(!l2(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");e=r}}),this}y(Un.prototype,"entropy",function(){return r2(this.x0,this.gamma)}),y(Un.prototype,"median",function(){return a2(this.x0,this.gamma)}),y(Un.prototype,"mode",function(){return i2(this.x0,this.gamma)}),c(Un.prototype,"cdf",function(e){return Qo(e,this.x0,this.gamma)}),c(Un.prototype,"logcdf",function(e){return o2(e,this.x0,this.gamma)}),c(Un.prototype,"logpdf",function(e){return t2(e,this.x0,this.gamma)}),c(Un.prototype,"pdf",function(e){return c2(e,this.x0,this.gamma)}),c(Un.prototype,"quantile",function(e){return p2(e,this.x0,this.gamma)});var lh=Un,m2=function(e,n,r){return i(e)||i(n)||i(r)||n<0||r<=0?NaN:n===0?e<0?0:1:e<=0?0:e===w?1:Kn(e*r,n)},h2=function(e,n){return i(e)||i(n)?NaN:e<n?0:1};c(h2,"factory",function(e){return i(e)?k(NaN):function(n){return i(n)?NaN:n<e?0:1}});var o0=h2,Nh=o0.factory;c(m2,"factory",function(e,n){return i(e)||i(n)||e<0||n<=0?k(NaN):e===0?Nh(0):function(r){return r<=0?0:r===w?1:Kn(r*n,e)}});var s0=m2,d2=function(e,n){return i(e)||i(n)||n<0?NaN:n===0?e<0?0:1:e<=0?0:s0(e*e,n/2,.5)},mh=o0.factory,hh=s0.factory;c(d2,"factory",function(e){var n;return e===0?mh(0):(n=hh(e/2,.5),function(r){return i(r)?NaN:r<0?0:n(r*r)})});var b2=d2,y2=function(e){var n;return i(e)||e<=0?NaN:Y(n=e/2)+.5*(e-me-(e-1)*Vn(n))},$0=function(e){return i(e)||e<0?NaN:ne*G((e+1)/2)/G(e/2)},t1=function(e){var n;return i(e)||e<0?NaN:e-(n=$0(e))*n},wa=function(e){var n,r;return i(e)||e<=0?NaN:$0(e)/((n=(r=M(t1(e)))*r)*r)*(1-2*n)},g2=function(e){var n,r;return i(e)||e<=0?NaN:(n=t1(e),r=M(n),2/n*(1-$0(e)*r*wa(e)-n))},w2=function(e){return i(e)||e<1?NaN:M(e-1)},k2=function(e){var n;return i(e)||e<0?NaN:(n=$0(e),M(e-n*n))},E2=function(e,n){var r,a;return i(e)||i(n)||n<0?NaN:n===0?e===0?w:V:e<0||e===w?V:(r=(1-(a=n/2))*me+(n-1)*p(e)-e*e/2,r-=Y(a))},T2=function(e,n){return i(e)||i(n)?NaN:e===n?w:V};c(T2,"factory",function(e){return i(e)?k(NaN):function(n){return i(n)?NaN:n===e?w:V}});var P0=T2,dh=P0.factory;c(E2,"factory",function(e){var n,r;return i(e)||e<0?k(NaN):e===0?dh(0):(r=e/2,n=e-1,function(a){var u;return i(a)?NaN:a<0||a===w?V:(u=(1-r)*me+n*p(a)-a*a/2,u-=Y(r))})});var V2=E2,M2=function(e,n){var r,a;return i(e)||i(n)||n<0?NaN:n===0?e===0?w:0:e<0?0:(r=N(2,1-(a=n/2))*N(e,n-1)*b(-e*e/2),r/=G(a))},q2=function(e,n){return i(e)||i(n)?NaN:e===n?w:0};c(q2,"factory",function(e){return i(e)?k(NaN):function(n){return i(n)?NaN:n===e?w:0}});var S0=q2,bh=S0.factory;c(M2,"factory",function(e){var n,r;return i(e)||e<0?k(NaN):e===0?bh(0):(r=e/2,n=e-1,function(a){var u;return i(a)?NaN:a<0?0:(u=N(2,1-r)*N(a,n)*b(-a*a/2),u/=G(r))})});var x2=M2,P2=function(e,n,r){return i(n)||i(r)||i(e)||n<0||r<=0||e<0||e>1?NaN:n===0?0:1/r*H0(e,n)},yh=u0.factory;c(P2,"factory",function(e,n){return i(e)||i(n)||e<0||n<=0?k(NaN):e===0?yh(0):function(r){return i(r)||r<0||r>1?NaN:1/n*H0(r,e)}});var A0=P2,S2=function(e,n){return M(A0(e,n/2,.5))},gh=A0.factory;c(S2,"factory",function(e){var n=gh(e/2,.5);return function(r){return M(n(r))}});var A2=S2,j2=be.isPrimitive;function mn(){var e;if(!(this instanceof mn))return arguments.length===0?new mn:new mn(arguments[0]);if(arguments.length){if(e=arguments[0],!j2(e))throw new TypeError("invalid argument. Rate parameter `k` must be a positive number. Value: `"+e+"`")}else e=1;return _(this,"k",{configurable:!1,enumerable:!0,get:function(){return e},set:function(n){if(!j2(n))throw new TypeError("invalid value. Must be a positive number. Value: `"+n+"`");e=n}}),this}y(mn.prototype,"entropy",function(){return y2(this.k)}),y(mn.prototype,"kurtosis",function(){return g2(this.k)}),y(mn.prototype,"mean",function(){return $0(this.k)}),y(mn.prototype,"mode",function(){return w2(this.k)}),y(mn.prototype,"skewness",function(){return wa(this.k)}),y(mn.prototype,"stdev",function(){return k2(this.k)}),y(mn.prototype,"variance",function(){return t1(this.k)}),c(mn.prototype,"cdf",function(e){return b2(e,this.k)}),c(mn.prototype,"logpdf",function(e){return V2(e,this.k)}),c(mn.prototype,"pdf",function(e){return x2(e,this.k)}),c(mn.prototype,"quantile",function(e){return A2(e,this.k)});var wh=mn,O2=function(e,n){return s0(e,n/2,.5)},kh=s0.factory;c(O2,"factory",function(e){return kh(e/2,.5)});var U2=O2,R2=function(e){var n;return i(e)||e<=0?NaN:(n=e/2)+p(2*G(n))+(1-n)*Vn(n)},L2=function(e){return i(e)||e<=0?NaN:12/e},_2=function(e){return i(e)||e<0?NaN:e},B2=function(e,n){return A0(e,n/2,.5)},Eh=A0.factory;c(B2,"factory",function(e){return Eh(e/2,.5)});var ka=B2,F2=function(e){return ka(.5,e)},I2=function(e){return i(e)||e<0?NaN:ee(e-2,0)},C2=function(e){return i(e)||e<=0?NaN:M(8/e)},G2=function(e){return i(e)||e<0?NaN:M(2*e)},K2=function(e){return i(e)||e<0?NaN:2*e},W2=function(e,n){return i(e)||i(n)||n<0||e>=.5?NaN:N(1-2*e,-n/2)};c(W2,"factory",function(e){return i(e)||e<0?k(NaN):function(n){return i(n)||n>=.5?NaN:N(1-2*n,-e/2)}});var H2=W2,Th=function(e,n){var r,a,u,o,f,l,v;return v=(n-e-pe+.5)/(u=e+pe-.5),e<1?n<=H?b(e*p(n)-n-Y(e)):N(n,e)*b(-n)/G(e):(S(v*v*e)<=100&&e>150?(r=e*(R(v)-v)+n*(.5-pe)/u,r=b(r)):(o=e*p(n/u),Z(o,f=e-n)<=H||ee(o,f)>=I?(a=f/e,Z(o,f)/2>H&&ee(o,f)/2<I?r=(l=N(n/u,e/2)*b(f/2))*l:Z(o,f)/4>H&&ee(o,f)/4<I&&n>e?(r=(l=N(n/u,e/4)*b(f/4))*l,r*=r):r=a>H&&a<I?N(n*b(a)/u,e):b(o+f)):r=N(n/u,e)*b(f)),r*=M(u/Tn)/xe(e))},Vh=function(e,n){var r,a,u,o,f,l,v;return v=(n-e-pe+.5)/(u=e+pe-.5),e<1?n<=H?b(e*p(n)-n-Y(e)):N(n,e)*b(-n)/G(e):(S(v*v*e)<=100&&e>150?(r=e*(R(v)-v)+n*(.5-pe)/u,r=b(r)):(o=e*p(n/u),Z(o,f=e-n)<=H||ee(o,f)>=I?(a=f/e,Z(o,f)/2>H&&ee(o,f)/2<I?r=(l=N(n/u,e/2)*b(f/2))*l:Z(o,f)/4>H&&ee(o,f)/4<I&&n>e?(r=(l=N(n/u,e/4)*b(f/4))*l,r*=r):r=a>H&&a<I?N(n*b(a)/u,e):b(o+f)):r=N(n/u,e)*b(f)),r*=M(u/Tn)/xe(e))},D2=function(e,n){var r;return e<=0?NaN:n<0?NaN:n===0?e>1?0:e===1?1:w:(r=Vh(e,n),n<1&&an*n<r?w:(r===0?(r=e*p(n)-n-Y(e)-p(n),r=b(r)):r/=n,r))},z2=function(e,n){var r;return e<=0?NaN:n<0?NaN:n===0?e>1?0:e===1?1:w:(r=Th(e,n),n<1&&an*n<r?w:(r===0?(r=e*p(n)-n-Y(e)-p(n),r=b(r)):r/=n,r))},$2=function(e,n,r){return i(e)||i(n)||i(r)||n<0||r<=0?NaN:e<0||e===w?0:n===0?e===0?w:0:z2(n,e*r)*r},Mh=S0.factory;c($2,"factory",function(e,n){return i(e)||i(n)||e<0||n<=0?k(NaN):e===0?Mh(0):function(r){return i(r)?NaN:r<0||r===w?0:z2(e,r*n)*n}});var J0=$2,J2=function(e,n){return J0(e,n/2,.5)},qh=J0.factory;c(J2,"factory",function(e){return qh(e/2,.5)});var Z2=J2,X2=be.isPrimitive;function tn(){var e;if(!(this instanceof tn))return arguments.length===0?new tn:new tn(arguments[0]);if(arguments.length){if(e=arguments[0],!X2(e))throw new TypeError("invalid argument. Rate parameter `k` must be a positive number. Value: `"+e+"`")}else e=1;return _(this,"k",{configurable:!1,enumerable:!0,get:function(){return e},set:function(n){if(!X2(n))throw new TypeError("invalid value. Must be a positive number. Value: `"+n+"`");e=n}}),this}y(tn.prototype,"entropy",function(){return R2(this.k)}),y(tn.prototype,"kurtosis",function(){return L2(this.k)}),y(tn.prototype,"mean",function(){return _2(this.k)}),y(tn.prototype,"median",function(){return F2(this.k)}),y(tn.prototype,"mode",function(){return I2(this.k)}),y(tn.prototype,"skewness",function(){return C2(this.k)}),y(tn.prototype,"stdev",function(){return G2(this.k)}),y(tn.prototype,"variance",function(){return K2(this.k)}),c(tn.prototype,"cdf",function(e){return U2(e,this.k)}),c(tn.prototype,"mgf",function(e){return H2(e,this.k)}),c(tn.prototype,"pdf",function(e){return Z2(e,this.k)}),c(tn.prototype,"quantile",function(e){return ka(e,this.k)});var xh=tn,Y2=function(e,n,r){return i(e)||i(n)||i(r)||n<0||r<=0?NaN:e<0||e===w?V:n===0?e===0?w:V:p(D2(n,e*r))+p(r)},Ph=P0.factory;c(Y2,"factory",function(e,n){return i(e)||i(n)||e<0||n<=0?k(NaN):e===0?Ph(0):function(r){return i(r)?NaN:r<0||r===w?V:p(D2(e,r*n))+p(n)}});var Z0=Y2,Q2=function(e,n){return Z0(e,n/2,.5)},Sh=Z0.factory;c(Q2,"factory",function(e){return Sh(e/2,.5)});var Ah=Q2,es=function(e,n,r){var a;return i(e)||i(n)||i(r)||r<0?NaN:r===0?e<n?0:1:e<n-r?0:e>n+r?1:(1+(a=(e-n)/r)+E0(a)/F)/2},jh=o0.factory;c(es,"factory",function(e,n){return i(e)||i(n)||n<0?k(NaN):n===0?jh(e):function(r){var a;return i(r)?NaN:r<e-n?0:r>e+n?1:(1+(a=(r-e)/n)+E0(a)/F)/2}});var Ea=es,Cn=9.869604401089358,ns=function(e,n){var r;return i(e)||i(n)||n<=0?NaN:(r=6*(90-Cn*Cn),r/=5*N(Cn-6,2))},rs=function(e,n){return i(e)||i(n)||n<=0?NaN:e},as=function(e,n){return i(e)||i(n)||n<=0?NaN:e},is=function(e,n){return i(e)||i(n)||n<=0?NaN:e},us=function(e,n){return i(e)||i(n)||n<=0?NaN:0},os=function(e,n){return i(e)||i(n)||n<=0?NaN:n*M(1/3-2/Cn)},ss=function(e,n){return i(e)||i(n)||n<=0?NaN:n*n*(1/3-2/Cn)},ts=function(e,n,r){var a;return i(e)||i(n)||i(r)||r<0?NaN:r===0?e<n?V:0:e<n-r?V:e>n+r?0:p((1+(a=(e-n)/r)+E0(a)/F)/2)},fs=function(e,n){return i(e)||i(n)?NaN:e<n?V:0};c(fs,"factory",function(e){return i(e)?k(NaN):function(n){return i(n)?NaN:n<e?V:0}});var X0=fs,Oh=X0.factory;c(ts,"factory",function(e,n){return i(e)||i(n)||n<0?k(NaN):n===0?Oh(e):function(r){var a;return i(r)?NaN:r<e-n?V:r>e+n?0:p((1+(a=(r-e)/n)+E0(a)/F)/2)}});var cs=ts,vs=9007199254740991;vs+=1;var f1=function(e){var n,r,a,u;return i(e)?NaN:Sn(e)?NaN:(n=S(e))>vs?1:(a=n-(r=D(n)))==.5?0:(u=a<.25?R0(F*a):a<.75?Fn(F*(a=.5-a)):-R0(F*(a=1-a)),r%2==1?-u:u)},ps=function(e,n,r){return i(e)||i(n)||i(r)||r<0?NaN:r===0?e===n?w:V:e<n-r||e>n+r?V:p(1+f1((e-n)/r))-p(2*r)},Uh=P0.factory;c(ps,"factory",function(e,n){return i(e)||i(n)||n<0?k(NaN):n===0?Uh(e):function(r){return i(r)?NaN:r<e-n||r>e+n?V:p(1+f1((r-e)/n))-p(2*n)}});var ls=ps,Rh=function(e){var n,r;return e===0?.16666666666666666:((e<0?-e:e)<=1?(n=e*(e*(-.789474443963537*e-163.72585752598383)-11561.443576500522)-351754.9648081514,r=e*(36157.827983443196+e*(1*e-277.7110814206028))-2.1105297888489086e6):(n=(e=1/e)*(e*(-351754.9648081514*e-11561.443576500522)-163.72585752598383)-.789474443963537,r=1+e*(e*(36157.827983443196+-2.1105297888489086e6*e)-277.7110814206028)),n/r)},Lh=709.782712893384+me,_h=-708.3964185322641-me,Bh=709.782712893384-me,Ns=function(e){var n;return e===0?e:(n=S(e),e>Lh||e<_h?e>0?w:V:n>1?n>=Bh?(n=b(.5*n),n*=.5*n,e<0&&(n=-n),n):(n=.5*(n=b(n))-.5/n,e<0&&(n=-n),n):e+e*(n*=n)*Rh(n))},ms=function(e,n,r){var a,u;return i(e)||i(n)||i(r)||r<=0?NaN:(a=Cn*Ns(u=r*e),a/=u*(Cn+u*u),a*=b(n*e))};c(ms,"factory",function(e,n){return i(e)||i(n)||n<=0?k(NaN):function(r){var a,u;return i(r)?NaN:(a=Cn*Ns(u=n*r),a/=u*(Cn+u*u),a*=b(e*r))}});var hs=ms,ds=function(e,n,r){return i(e)||i(n)||i(r)||r<0?NaN:r===0?e===n?w:0:e<n-r||e>n+r?0:(1+f1((e-n)/r))/(2*r)},Fh=S0.factory;c(ds,"factory",function(e,n){return i(e)||i(n)||n<0?k(NaN):n===0?Fh(e):function(r){return i(r)?NaN:r<e-n||r>e+n?0:(1+f1((r-e)/n))/(2*n)}});var bs=ds,Ih=1e4,Ch=1e-12,ys=function(e,n,r){var a,u,o,f;for(f=1,a=n-r,u=n+r;f<Ih;){if(o=(a+u)/2,u-a<Ch)return o;e>Ea(o,n,r)?a=o:u=o,f+=1}return o},gs=function(e,n,r){return i(n)||i(r)||i(e)||r<0||e<0||e>1?NaN:r===0?n:ys(e,n,r)},Gh=u0.factory;c(gs,"factory",function(e,n){return i(e)||i(n)||n<0?k(NaN):n===0?Gh(e):function(r){return i(r)||r<0||r>1?NaN:ys(r,e,n)}});var ws=gs,ks=be.isPrimitive,Es=ge.isPrimitive;function He(){var e,n;if(!(this instanceof He))return arguments.length===0?new He:new He(arguments[0],arguments[1]);if(arguments.length){if(e=arguments[0],n=arguments[1],!Es(e)||sn(e))throw new TypeError("invalid argument. Location parameter `mu` must be a number primitive. Value: `"+e+"`");if(!ks(n))throw new TypeError("invalid argument. Scale parameter `s` must be a positive number. Value: `"+n+"`")}else e=0,n=1;return _(this,"mu",{configurable:!1,enumerable:!0,get:function(){return e},set:function(r){if(!Es(r)||sn(r))throw new TypeError("invalid value. Must be a number primitive. Value: `"+r+"`");e=r}}),_(this,"s",{configurable:!1,enumerable:!0,get:function(){return n},set:function(r){if(!ks(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");n=r}}),this}y(He.prototype,"kurtosis",function(){return ns(this.mu,this.s)}),y(He.prototype,"mean",function(){return rs(this.mu,this.s)}),y(He.prototype,"median",function(){return as(this.mu,this.s)}),y(He.prototype,"mode",function(){return is(this.mu,this.s)}),y(He.prototype,"skewness",function(){return us(this.mu,this.s)}),y(He.prototype,"stdev",function(){return os(this.mu,this.s)}),y(He.prototype,"variance",function(){return ss(this.mu,this.s)}),c(He.prototype,"cdf",function(e){return Ea(e,this.mu,this.s)}),c(He.prototype,"logcdf",function(e){return cs(e,this.mu,this.s)}),c(He.prototype,"logpdf",function(e){return ls(e,this.mu,this.s)}),c(He.prototype,"mgf",function(e){return hs(e,this.mu,this.s)}),c(He.prototype,"pdf",function(e){return bs(e,this.mu,this.s)}),c(He.prototype,"quantile",function(e){return ws(e,this.mu,this.s)});var Kh=He,Ts=function(e){return i(e)?NaN:0},Vs=function(e){return e},Ms=function(e){return e},qs=function(e){return e},xs=function(e){return i(e)?NaN:0},Ps=function(e){return i(e)?NaN:0},Ss=function(e,n){return i(e)||i(n)?NaN:b(n*e)};c(Ss,"factory",function(e){return i(e)?k(NaN):function(n){return i(n)?NaN:b(e*n)}});var Ta=Ss;function Oe(){var e;if(!(this instanceof Oe))return arguments.length===0?new Oe:new Oe(arguments[0]);if(arguments.length){if(e=arguments[0],!ge(e)||i(e))throw new TypeError("invalid argument. Mean parameter `mu` must be a number. Value: `"+e+"`")}else e=0;return _(this,"mu",{configurable:!1,enumerable:!0,get:function(){return e},set:function(n){if(!ge(n)||i(n))throw new TypeError("invalid value. Must be a number. Value: `"+n+"`");e=n}}),this}y(Oe.prototype,"entropy",function(){return Ts(this.mu)}),y(Oe.prototype,"mean",function(){return Vs(this.mu)}),y(Oe.prototype,"mode",function(){return Ms(this.mu)}),y(Oe.prototype,"median",function(){return qs(this.mu)}),y(Oe.prototype,"stdev",function(){return xs(this.mu)}),y(Oe.prototype,"variance",function(){return Ps(this.mu)}),c(Oe.prototype,"cdf",function(e){return o0(e,this.mu)}),c(Oe.prototype,"logcdf",function(e){return X0(e,this.mu)}),c(Oe.prototype,"logpdf",function(e){return P0(e,this.mu)}),c(Oe.prototype,"logpmf",function(e){return u1(e,this.mu)}),c(Oe.prototype,"mgf",function(e){return Ta(e,this.mu)}),c(Oe.prototype,"pdf",function(e){return S0(e,this.mu)}),c(Oe.prototype,"pmf",function(e){return o1(e,this.mu)}),c(Oe.prototype,"quantile",function(e){return u0(e,this.mu)});var Wh=Oe,As=function(e,n,r){return i(e)||i(n)||i(r)||!K(n)||!K(r)||n>r?NaN:e<n?0:e>=r?1:(D(e)-n+1)/(r-n+1)};c(As,"factory",function(e,n){var r,a;return i(e)||i(n)||!K(e)||!K(n)||e>n?k(NaN):(r=e-1,a=n-e+1,function(u){return i(u)?NaN:u<e?0:u>=n?1:(D(u)-r)/a})});var js=As,Os=function(e,n){return i(e)||i(n)||!K(e)||!K(n)||e>n?NaN:p(n-e+1)},Us=function(e,n){var r;return i(e)||i(n)||!K(e)||!K(n)||e>n?NaN:-1.2*((r=N(n-e+1,2))+1)/(r-1)},Rs=function(e,n){return i(e)||i(n)||!K(e)||!K(n)||e>n?NaN:e/2+n/2},Ls=function(e,n){return i(e)||i(n)||!K(e)||!K(n)||e>n?NaN:e/2+n/2},_s=function(e,n){return i(e)||i(n)||!K(e)||!K(n)||e>n?NaN:0},Hh=M(1/12),Bs=function(e,n){return i(e)||i(n)||!K(e)||!K(n)||e>n?NaN:Hh*M(N(n-e+1,2)-1)},Fs=function(e,n){return i(e)||i(n)||!K(e)||!K(n)||e>n?NaN:(N(n-e+1,2)-1)/12},Is=function(e,n,r){return i(e)||i(n)||i(r)||!K(n)||!K(r)||n>r?NaN:e<n?V:e>=r?0:p(D(e)-n+1)-p(r-n+1)};c(Is,"factory",function(e,n){var r,a;return i(e)||i(n)||!K(e)||!K(n)||e>n?k(NaN):(a=e-1,r=p(n-e+1),function(u){return i(u)?NaN:u<e?V:u>=n?0:p(D(u)-a)-r})});var Cs=Is,Gs=function(e,n,r){return i(e)||i(n)||i(r)||!K(n)||!K(r)||n>r?NaN:e<n||e>r||!K(e)?V:-p(r-n+1)};c(Gs,"factory",function(e,n){var r;return i(e)||i(n)||!K(e)||!K(n)||e>n?k(NaN):(r=-p(n-e+1),function(a){return i(a)?NaN:a<e||a>n||!K(a)?V:r})});var Ks=Gs,Ws=function(e,n,r){var a,u;return i(e)||i(n)||i(r)||!K(n)||!K(r)||n>r?NaN:e===0?1:(u=r-n+1,a=b(e*n)*ve(e*u),a/=u*ve(e))};c(Ws,"factory",function(e,n){var r;return i(e)||i(n)||!K(e)||!K(n)||e>n?k(NaN):(r=n-e+1,function(a){var u;return i(a)?NaN:a===0?1:(u=b(a*e)*ve(a*r),u/=r*ve(a))})});var Hs=Ws,Ds=function(e,n,r){return i(e)||i(n)||i(r)||!K(n)||!K(r)||n>r?NaN:e<n||e>r||!K(e)?0:1/(r-n+1)};c(Ds,"factory",function(e,n){var r;return i(e)||i(n)||!K(e)||!K(n)||e>n?k(NaN):(r=1/(n-e+1),function(a){return i(a)?NaN:a<e||a>n||!K(a)?0:r})});var zs=Ds,$s=function(e,n,r){return i(e)||i(n)||i(r)||!K(n)||!K(r)||n>r||e<0||e>1?NaN:n+D(e*(r-n+1))};c($s,"factory",function(e,n){var r;return i(e)||i(n)||!K(e)||!K(n)||e>n?k(NaN):(r=n-e+1,function(a){return i(a)||a<0||a>1?NaN:e+D(a*r)})});var Js=$s,c1=Mr.isPrimitive;function De(){var e,n;if(!(this instanceof De))return arguments.length===0?new De:new De(arguments[0],arguments[1]);if(arguments.length){if(e=arguments[0],n=arguments[1],!c1(e))throw new TypeError("invalid argument. Minimum support `a` must be an integer. Value: `"+e+"`");if(!c1(n))throw new TypeError("invalid argument. Maximum support `b` must be an integer. Value: `"+n+"`");if(e>n)throw new RangeError("invalid arguments. Minimum support `a` must be less than or equal to maximum support `b`. Value: `"+e+","+n+"`")}else e=0,n=1;return _(this,"a",{configurable:!1,enumerable:!0,get:function(){return e},set:function(r){if(!c1(r))throw new TypeError("invalid value. Must be an integer. Value: `"+r+"`");if(r>n)throw new RangeError("invalid value. Must be smaller than or equal to `b`. Value: `"+r+"`");e=r}}),_(this,"b",{configurable:!1,enumerable:!0,get:function(){return n},set:function(r){if(!c1(r))throw new TypeError("invalid value. Must be an integer. Value: `"+r+"`");if(e>r)throw new RangeError("invalid value. Must be greater than or equal to `a`. Value: `"+r+"`");n=r}}),this}y(De.prototype,"entropy",function(){return Os(this.a,this.b)}),y(De.prototype,"kurtosis",function(){return Us(this.a,this.b)}),y(De.prototype,"mean",function(){return Rs(this.a,this.b)}),y(De.prototype,"median",function(){return Ls(this.a,this.b)}),y(De.prototype,"skewness",function(){return _s(this.a,this.b)}),y(De.prototype,"stdev",function(){return Bs(this.a,this.b)}),y(De.prototype,"variance",function(){return Fs(this.a,this.b)}),c(De.prototype,"cdf",function(e){return js(e,this.a,this.b)}),c(De.prototype,"logcdf",function(e){return Cs(e,this.a,this.b)}),c(De.prototype,"logpmf",function(e){return Ks(e,this.a,this.b)}),c(De.prototype,"mgf",function(e){return Hs(e,this.a,this.b)}),c(De.prototype,"pmf",function(e){return zs(e,this.a,this.b)}),c(De.prototype,"quantile",function(e){return Js(e,this.a,this.b)});var Dh=De,Zs=function(e,n,r){return A(n)?s0(e,n,r):NaN},zh=s0.factory;c(Zs,"factory",function(e,n){return A(e)?zh(e,n):k(NaN)});var Xs=Zs,Mn=function(e){return D(e)===e&&e>0},Ys=function(e,n){return!Mn(e)||i(n)||n<=0?NaN:(1-e)*Vn(e)+p(G(e)/n)+e},Qs=function(e,n){return!Mn(e)||i(n)||n<=0?NaN:6/e},et=function(e,n){return!Mn(e)||i(n)||n<=0?NaN:e/n},nt=function(e,n){return!Mn(e)||i(n)||n<=0?NaN:(e-1)/n},rt=function(e,n){return!Mn(e)||i(n)||n<=0?NaN:2/M(e)},at=function(e,n){return!Mn(e)||i(n)||n<=0?NaN:M(e)/n},it=function(e,n){return!Mn(e)||i(n)||n<=0?NaN:e/(n*n)},ut=function(e,n,r){return A(n)?Z0(e,n,r):NaN},$h=Z0.factory;c(ut,"factory",function(e,n){return A(e)?$h(e,n):k(NaN)});var ot=ut,st=function(e,n,r){return i(e)||!A(n)||i(r)||r<0||e>=r?NaN:N(1-e/r,-n)};c(st,"factory",function(e,n){return!A(e)||i(n)||n<0?k(NaN):function(r){return i(r)||r>=n?NaN:N(1-r/n,-e)}});var tt=st,ft=function(e,n,r){return A(n)?J0(e,n,r):NaN},Jh=J0.factory;c(ft,"factory",function(e,n){return A(e)?Jh(e,n):k(NaN)});var ct=ft,vt=function(e,n,r){return A(n)?A0(e,n,r):NaN},Zh=A0.factory;c(vt,"factory",function(e,n){return A(e)?Zh(e,n):k(NaN)});var pt=vt,lt=Mo.isPrimitive,Nt=be.isPrimitive;function fn(){var e,n;if(!(this instanceof fn))return arguments.length===0?new fn:new fn(arguments[0],arguments[1]);if(arguments.length){if(n=arguments[0],e=arguments[1],!lt(n))throw new TypeError("invalid argument. Shape parameter `k` must be a positive integer. Value: `"+n+"`");if(!Nt(e))throw new TypeError("invalid argument. Rate parameter `lambda` must be a positive number. Value: `"+e+"`")}else n=1,e=1;return _(this,"k",{configurable:!1,enumerable:!0,get:function(){return n},set:function(r){if(!lt(r))throw new TypeError("invalid value. Must be a positive integer. Value: `"+r+"`");n=r}}),_(this,"lambda",{configurable:!1,enumerable:!0,get:function(){return e},set:function(r){if(!Nt(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");e=r}}),this}y(fn.prototype,"entropy",function(){return Ys(this.k,this.lambda)}),y(fn.prototype,"kurtosis",function(){return Qs(this.k,this.lambda)}),y(fn.prototype,"mean",function(){return et(this.k,this.lambda)}),y(fn.prototype,"mode",function(){return nt(this.k,this.lambda)}),y(fn.prototype,"skewness",function(){return rt(this.k,this.lambda)}),y(fn.prototype,"stdev",function(){return at(this.k,this.lambda)}),y(fn.prototype,"variance",function(){return it(this.k,this.lambda)}),c(fn.prototype,"cdf",function(e){return Xs(e,this.k,this.lambda)}),c(fn.prototype,"logpdf",function(e){return ot(e,this.k,this.lambda)}),c(fn.prototype,"mgf",function(e){return tt(e,this.k,this.lambda)}),c(fn.prototype,"pdf",function(e){return ct(e,this.k,this.lambda)}),c(fn.prototype,"quantile",function(e){return pt(e,this.k,this.lambda)});var Xh=fn,mt=function(e,n){return i(n)||n<0||n===w?NaN:e<0?0:1-b(-n*e)};c(mt,"factory",function(e){return i(e)||e<0||e===w?k(NaN):function(n){return n<0?0:1-b(-e*n)}});var ht=mt,dt=function(e){return i(e)||e<0?NaN:1-p(e)},bt=function(e){return i(e)||e<0?NaN:6},yt=function(e){return i(e)||e<0?NaN:1/e},gt=function(e){return i(e)||e<0?NaN:1/e*me},wt=function(e){return i(e)||e<0?NaN:0},kt=function(e){return i(e)||e<0?NaN:2},Et=function(e){return i(e)||e<0?NaN:1/e},Tt=function(e){return i(e)||e<0?NaN:1/(e*e)},Vt=function(e,n){return i(n)||n<0||n===w?NaN:e<0?V:R(-b(-n*e))};c(Vt,"factory",function(e){return i(e)||e<0||e===w?k(NaN):function(n){return n<0?V:R(-b(-e*n))}});var Mt=Vt,qt=function(e,n){return i(e)||i(n)||n<0||n===w?NaN:e<0?V:-e*n+p(n)};c(qt,"factory",function(e){return i(e)||e<0||e===w?k(NaN):function(n){return i(n)?NaN:n<0?V:-n*e+p(e)}});var xt=qt,Pt=function(e,n){return i(e)||i(n)||n<=0||n===w||e>=n?NaN:n/(n-e)};c(Pt,"factory",function(e){return i(e)||e<=0||e===w?k(NaN):function(n){return i(n)||n>=e?NaN:e/(e-n)}});var St=Pt,At=function(e,n){var r;return i(e)||i(n)||n<0||n===w?NaN:e<0?0:b(-e/(r=1/n))/r};c(At,"factory",function(e){var n;return i(e)||e<0||e===w?k(NaN):(n=1/e,function(r){return i(r)?NaN:r<0?0:b(-r/n)/n})});var jt=At,Ot=function(e,n){return i(n)||n<0||n===w||i(e)||e<0||e>1?NaN:-p(1-e)/n};c(Ot,"factory",function(e){return e<0||e===w||i(e)?k(NaN):function(n){return i(n)||n<0||n>1?NaN:-p(1-n)/e}});var Ut=Ot,Rt=be.isPrimitive;function Ue(){var e;if(!(this instanceof Ue))return arguments.length===0?new Ue:new Ue(arguments[0]);if(arguments.length){if(e=arguments[0],!Rt(e))throw new TypeError("invalid argument. Rate parameter `lambda` must be a positive number. Value: `"+e+"`")}else e=1;return _(this,"lambda",{configurable:!1,enumerable:!0,get:function(){return e},set:function(n){if(!Rt(n))throw new TypeError("invalid value. Must be a positive number. Value: `"+n+"`");e=n}}),this}y(Ue.prototype,"entropy",function(){return dt(this.lambda)}),y(Ue.prototype,"kurtosis",function(){return bt(this.lambda)}),y(Ue.prototype,"mean",function(){return yt(this.lambda)}),y(Ue.prototype,"median",function(){return gt(this.lambda)}),y(Ue.prototype,"mode",function(){return wt(this.lambda)}),y(Ue.prototype,"skewness",function(){return kt(this.lambda)}),y(Ue.prototype,"stdev",function(){return Et(this.lambda)}),y(Ue.prototype,"variance",function(){return Tt(this.lambda)}),c(Ue.prototype,"cdf",function(e){return ht(e,this.lambda)}),c(Ue.prototype,"logcdf",function(e){return Mt(e,this.lambda)}),c(Ue.prototype,"logpdf",function(e){return xt(e,this.lambda)}),c(Ue.prototype,"mgf",function(e){return St(e,this.lambda)}),c(Ue.prototype,"pdf",function(e){return jt(e,this.lambda)}),c(Ue.prototype,"quantile",function(e){return Ut(e,this.lambda)});var Yh=Ue,Lt=function(e,n,r){return i(e)||i(n)||i(r)||n<=0||r<=0?NaN:e<=0?0:e===w?1:n*e>r?ke(n*e/(r+n*e),n/2,r/2,!0,!1):ke(r/(r+n*e),r/2,n/2,!0,!0)};c(Lt,"factory",function(e,n){return i(e)||i(n)||e<=0||n<=0?k(NaN):function(r){return i(r)?NaN:r<=0?0:r===w?1:e*r>n?ke(e*r/(n+e*r),e/2,n/2,!0,!1):ke(n/(n+e*r),n/2,e/2,!0,!0)}});var _t=Lt,Bt=function(e,n){var r,a,u,o;return i(e)||i(n)||e<=0||n<=0?NaN:(r=(e+n)/2,a=e/2,u=n/2,o=p(n/e)+Y(a)+Y(u)-Y(r),o+=(1-a)*Vn(a),o+=(-1-u)*Vn(u),o+=r*Vn(r))},Ft=function(e,n){return e<=0||n<=8?NaN:12*(e*(5*n-22)*(e+n-2)+(n-4)*N(n-2,2))/(e*(n-6)*(n-8)*(e+n-2))},It=function(e,n){return i(e)||i(n)||e<=0||n<=2?NaN:n/(n-2)},Ct=function(e,n){return e<=2||n<=0?NaN:(e-2)/e*(n/(n+2))},Gt=function(e,n){var r;return e<=0||n<=6?NaN:(r=(2*e+n-2)*M(8*(n-4)),r/=(n-6)*M(e*(e+n-2)))},Kt=function(e,n){var r;return e<=0||n<=4?NaN:(r=ne*(n/(n-2)),r*=M((e+n-2)/(e*(n-4))))},Wt=function(e,n){var r;return e<=0||n<=4?NaN:(r=2*n*n*(e+n-2),r/=e*N(n-2,2)*(n-4))},Qh=function(e,n,r,a,u){var o,f,l,v,m,g,d,h,E,T,q,P,O,x;if(!u)return N(r,e)*N(a,n);if(v=e+pe-.5,m=n+pe-.5,g=(O=e+n)+pe-.5,o=xe(O),o/=xe(e)*xe(n),o*=M(m/Tn),o*=M(v/g),h=(a*e-r*m)/m,Z(S(d=(r*n-a*v)/v),S(h))<.2)if(d*h>0||Z(e,n)<1)S(d)<.1?o*=b(e*R(d)):o*=N(r*g/v,e),S(h)<.1?o*=b(n*R(h)):o*=N(a*g/m,n);else if(ee(S(d),S(h))<.5)l=n/e,(f=e<n)&&l*h<.1||!f&&d/l>.1?(E=ve(l*R(h)),E=e*R(E=d+E+E*d),o*=b(E)):(E=ve(R(d)/l),E=n*R(E=h+E+E*h),o*=b(E));else if(S(d)<S(h))if((x=e*R(d)+n*p(a*g/m))<=H||x>=I){if((x+=p(o))>=I)return NaN;o=b(x)}else o*=b(x);else if((x=n*R(h)+e*p(r*g/v))<=H||x>=I){if((x+=p(o))>=I)return NaN;o=b(x)}else o*=b(x);else if(P=a*g/m,d=e*p(q=r*g/v),h=n*p(P),d>=I||d<=H||h>=I||h<=H)if(e<n)if(T=N(P,n/e),(E=e*(p(q)+p(T)))<I&&E>H)o*=N(T*q,e);else{if((h+=d+p(o))>=I)return NaN;o=b(h)}else if(T=N(q,e/n),(E=(p(T)+p(P))*n)<I&&E>H)o*=N(T*P,n);else{if((h+=d+p(o))>=I)return NaN;o=b(h)}else o*=N(q,e)*N(P,n);return o},v1=function(e,n,r){var a;return a=Qh(n,r,e,1-e,!0),a/=(1-e)*e},Ht=function(e,n,r){var a,u;return i(e)||i(n)||i(r)||n<=0||r<=0?NaN:e<0||e===w?0:e===0?n<2?w:n===2?1:0:(a=n*e)>r?r*n/((r+a)*(r+a))*v1(r/(r+a),r/2,n/2):((u=r+a)*n-e*n*n)/(u*u)*v1(a/(r+a),n/2,r/2)};c(Ht,"factory",function(e,n){var r,a,u,o;return i(e)||i(n)||e<=0||n<=0?k(NaN):(o=e*n,a=e/2,u=n/2,r=0,e<2?r=w:e===2&&(r=1),function(f){var l,v;return i(f)?NaN:f<0||f===w?0:f===0?r:(l=e*f)>n?o/((n+l)*(n+l))*v1(n/(n+l),u,a):((v=n+l)*e-f*e*e)/(v*v)*v1(e*f/(n+l),a,u)})});var Dt=Ht,zt=function(e,n,r){var a;return i(e)||i(n)||i(r)||n<=0||r<=0||e<0||e>1?NaN:r*(a=D0(n/2,r/2,e,1-e))[0]/(n*a[1])};c(zt,"factory",function(e,n){return i(e)||i(n)||e<=0||n<=0?k(NaN):function(r){var a;return i(r)||r<0||r>1?NaN:(a=D0(e/2,n/2,r,1-r),n*a[0]/(e*a[1]))}});var $t=zt,p1=be.isPrimitive;function wn(){var e,n;if(!(this instanceof wn))return arguments.length===0?new wn:new wn(arguments[0],arguments[1]);if(arguments.length){if(e=arguments[0],n=arguments[1],!p1(e))throw new TypeError("invalid argument. Numerator degrees of freedom `d1` must be a positive number. Value: `"+e+"`");if(!p1(n))throw new TypeError("invalid argument. Denominator degrees of freedom `d2` must be a positive number. Value: `"+n+"`")}else e=1,n=1;return _(this,"d1",{configurable:!1,enumerable:!0,get:function(){return e},set:function(r){if(!p1(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");e=r}}),_(this,"d2",{configurable:!1,enumerable:!0,get:function(){return n},set:function(r){if(!p1(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");n=r}}),this}y(wn.prototype,"entropy",function(){return Bt(this.d1,this.d2)}),y(wn.prototype,"kurtosis",function(){return Ft(this.d1,this.d2)}),y(wn.prototype,"mean",function(){return It(this.d1,this.d2)}),y(wn.prototype,"mode",function(){return Ct(this.d1,this.d2)}),y(wn.prototype,"skewness",function(){return Gt(this.d1,this.d2)}),y(wn.prototype,"stdev",function(){return Kt(this.d1,this.d2)}),y(wn.prototype,"variance",function(){return Wt(this.d1,this.d2)}),c(wn.prototype,"cdf",function(e){return _t(e,this.d1,this.d2)}),c(wn.prototype,"pdf",function(e){return Dt(e,this.d1,this.d2)}),c(wn.prototype,"quantile",function(e){return $t(e,this.d1,this.d2)});var ed=wn,Jt=function(e,n,r,a){return i(e)||i(n)||i(r)||i(a)||n<=0||r<=0?NaN:e<=a?0:b(-N((e-a)/r,-n))};c(Jt,"factory",function(e,n,r){return i(e)||i(n)||i(r)||e<=0||n<=0?k(NaN):function(a){return i(a)?NaN:a<=r?0:b(-N((a-r)/n,-e))}});var Zt=Jt,Xt=function(e,n,r){return i(e)||i(n)||i(r)||e<=0||n<=0?NaN:1+k0/e+k0+p(n/e)},Yt=function(e,n,r){var a,u,o,f;return i(e)||i(n)||i(r)||e<=0||n<=0?NaN:e<=4?w:(u=G(1-1/e),o=G(1-2/e),f=G(1-3/e),a=(G(1-4/e)-4*f*u+3*o*o)/N(o-u*u,2),a-=6)},Qt=function(e,n,r){return i(e)||i(n)||i(r)||e<=0||n<=0?NaN:e<=1?w:r+n*G(1-1/e)},e3=function(e,n,r){return i(e)||i(n)||i(r)||e<=0||n<=0?NaN:r+n*N(me,-1/e)},n3=function(e,n,r){var a;return i(e)||i(n)||i(r)||e<=0||n<=0?NaN:r+n*N(1+(a=1/e),-a)},r3=function(e,n,r){var a,u,o;return i(e)||i(n)||i(r)||e<=0||n<=0?NaN:e<=3?w:(a=(u=G(1-1/e))*u,o=G(1-2/e),(G(1-3/e)-3*o*u+2*a*u)/N(o-a,1.5))},a3=function(e,n,r){var a,u;return i(e)||i(n)||i(r)||e<=0||n<=0?NaN:e<=2?w:(a=G(1-1/e),u=G(1-2/e),n*M(u-a*a))},i3=function(e,n,r){var a;return i(e)||i(n)||i(r)||e<=0||n<=0?NaN:e<=2?w:(a=G(1-1/e),n*n*(G(1-2/e)-a*a))},u3=function(e,n,r,a){return i(e)||i(n)||i(r)||i(a)||n<=0||r<=0?NaN:e<=a?V:-N((e-a)/r,-n)};c(u3,"factory",function(e,n,r){return i(e)||i(n)||i(r)||e<=0||n<=0?k(NaN):function(a){return i(a)?NaN:a<=r?V:-N((a-r)/n,-e)}});var o3=u3,s3=function(e,n,r,a){var u;return i(e)||i(n)||i(r)||i(a)||n<=0||r<=0?NaN:e<=a?V:(u=(e-a)/r,p(n/r)-(1+n)*p(u)-N(u,-n))};c(s3,"factory",function(e,n,r){return i(e)||i(n)||i(r)||e<=0||n<=0?k(NaN):function(a){var u;return i(a)?NaN:a<=r?V:(u=(a-r)/n,p(e/n)-(1+e)*p(u)-N(u,-e))}});var l1=s3,t3=function(e,n,r,a){return i(e)||i(n)||i(r)||i(a)||n<=0||r<=0?NaN:b(l1(e,n,r,a))},nd=l1.factory;c(t3,"factory",function(e,n,r){var a;return i(e)||i(n)||i(r)||e<=0||n<=0?k(NaN):(a=nd(e,n,r),function(u){return i(u)?NaN:b(a(u,e,n,r))})});var f3=t3,c3=function(e,n,r,a){return i(e)||i(n)||i(r)||i(a)||e<0||e>1||n<=0||r<=0?NaN:a+r*N(-p(e),-1/n)};c(c3,"factory",function(e,n,r){return i(e)||i(n)||i(r)||e<=0||n<=0?k(NaN):function(a){return i(a)||a<0||a>1?NaN:r+n*N(-p(a),-1/e)}});var v3=c3,N1=be.isPrimitive,p3=ge.isPrimitive;function ze(){var e,n,r;if(!(this instanceof ze))return arguments.length===0?new ze:new ze(arguments[0],arguments[1],arguments[2]);if(arguments.length){if(e=arguments[0],n=arguments[1],r=arguments[2],!N1(e))throw new TypeError("invalid argument. Shape parameter `alpha` must be a positive number. Value: `"+e+"`");if(!N1(n))throw new TypeError("invalid argument. Scale parameter `s` must be a number primitive. Value: `"+n+"`");if(!p3(r)||i(r))throw new TypeError("invalid argument. Location parameter `m` must be a number primitive. Value: `"+r+"`")}else e=1,n=1,r=0;return _(this,"alpha",{configurable:!1,enumerable:!0,get:function(){return e},set:function(a){if(!N1(a))throw new TypeError("invalid value. Must be a positive number. Value: `"+a+"`");e=a}}),_(this,"s",{configurable:!1,enumerable:!0,get:function(){return n},set:function(a){if(!N1(a))throw new TypeError("invalid value. Must be a positive number. Value: `"+a+"`");n=a}}),_(this,"m",{configurable:!1,enumerable:!0,get:function(){return r},set:function(a){if(!p3(a)||i(a))throw new TypeError("invalid value. Must be a number primitive. Value: `"+a+"`");r=a}}),this}y(ze.prototype,"entropy",function(){return Xt(this.alpha,this.s,this.m)}),y(ze.prototype,"kurtosis",function(){return Yt(this.alpha,this.s,this.m)}),y(ze.prototype,"mean",function(){return Qt(this.alpha,this.s,this.m)}),y(ze.prototype,"median",function(){return e3(this.alpha,this.s,this.m)}),y(ze.prototype,"mode",function(){return n3(this.alpha,this.s,this.m)}),y(ze.prototype,"skewness",function(){return r3(this.alpha,this.s,this.m)}),y(ze.prototype,"stdev",function(){return a3(this.alpha,this.s,this.m)}),y(ze.prototype,"variance",function(){return i3(this.alpha,this.s,this.m)}),c(ze.prototype,"cdf",function(e){return Zt(e,this.alpha,this.s,this.m)}),c(ze.prototype,"logcdf",function(e){return o3(e,this.alpha,this.s,this.m)}),c(ze.prototype,"logpdf",function(e){return l1(e,this.alpha,this.s,this.m)}),c(ze.prototype,"pdf",function(e){return f3(e,this.alpha,this.s,this.m)}),c(ze.prototype,"quantile",function(e){return v3(e,this.alpha,this.s,this.m)});var rd=ze,l3=function(e,n){var r;return e<=0||n<=0?NaN:(r=e-p(n),r+=Y(e),r+=(1-e)*Vn(e))},N3=function(e,n){return i(e)||i(n)||e<=0||n<=0?NaN:6/e},m3=function(e,n){return e<=0||n<=0?NaN:e/n},h3=function(e,n){return e<1||n<=0?NaN:(e-1)/n},d3=function(e,n){return i(e)||i(n)||e<=0||n<=0?NaN:2/M(e)},b3=function(e,n){return e<=0||n<=0?NaN:M(e)/n},y3=function(e,n){return e<=0||n<=0?NaN:e/(n*n)},g3=function(e,n,r){return p(s0(e,n,r))},ad=X0.factory;c(g3,"factory",function(e,n){return i(e)||i(n)||e<0||n<=0?k(NaN):e===0?ad(0):function(r){return r<=0?V:r===w?0:p(Kn(r*n,e))}});var w3=g3,k3=function(e,n,r){return i(e)||i(n)||i(r)||n<0||r<=0||e>=r?NaN:N(1-e/r,-n)};c(k3,"factory",function(e,n){return i(e)||i(n)||e<0||n<=0?k(NaN):function(r){return r>=n?NaN:N(1-r/n,-e)}});var E3=k3,m1=be.isPrimitive;function $e(){var e,n;if(!(this instanceof $e))return arguments.length===0?new $e:new $e(arguments[0],arguments[1]);if(arguments.length){if(e=arguments[0],n=arguments[1],!m1(e))throw new TypeError("invalid argument. Shape parameter `alpha` must be a positive number. Value: `"+e+"`");if(!m1(n))throw new TypeError("invalid argument. Rate parameter `beta` must be a positive number. Value: `"+n+"`")}else e=1,n=1;return _(this,"alpha",{configurable:!1,enumerable:!0,get:function(){return e},set:function(r){if(!m1(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");e=r}}),_(this,"beta",{configurable:!1,enumerable:!0,get:function(){return n},set:function(r){if(!m1(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");n=r}}),this}y($e.prototype,"entropy",function(){return l3(this.alpha,this.beta)}),y($e.prototype,"kurtosis",function(){return N3(this.alpha,this.beta)}),y($e.prototype,"mean",function(){return m3(this.alpha,this.beta)}),y($e.prototype,"mode",function(){return h3(this.alpha,this.beta)}),y($e.prototype,"skewness",function(){return d3(this.alpha,this.beta)}),y($e.prototype,"stdev",function(){return b3(this.alpha,this.beta)}),y($e.prototype,"variance",function(){return y3(this.alpha,this.beta)}),c($e.prototype,"cdf",function(e){return s0(e,this.alpha,this.beta)}),c($e.prototype,"logcdf",function(e){return w3(e,this.alpha,this.beta)}),c($e.prototype,"logpdf",function(e){return Z0(e,this.alpha,this.beta)}),c($e.prototype,"mgf",function(e){return E3(e,this.alpha,this.beta)}),c($e.prototype,"pdf",function(e){return J0(e,this.alpha,this.beta)}),c($e.prototype,"quantile",function(e){return A0(e,this.alpha,this.beta)});var id=$e,T3=function(e,n){return i(e)||i(n)||n<0||n>1?NaN:e<0?0:e===w?1:(e=D(e),1-N(1-n,e+1))};c(T3,"factory",function(e){return i(e)||e<0||e>1?k(NaN):function(n){return i(n)?NaN:n<0?0:n===w?1:(n=D(n),1-N(1-e,n+1))}});var V3=T3,M3=function(e){var n;return i(e)||e<=0||e>=1?NaN:(n=1-e,(-e*p(e)-n*p(n))/e)},q3=function(e){return i(e)||e<=0||e>=1?NaN:6+e*e/(1-e)},x3=function(e){return i(e)||e<0||e>1?NaN:(1-e)/e},ud=function(e){return e===0?.3999999999940942:.3999999999940942+e*(.22222198432149784+.15313837699209373*e)},od=function(e){return e===0?.6666666666666735:.6666666666666735+e*(.2857142874366239+e*(.1818357216161805+.14798198605116586*e))},P3=1048575,sd=.3333333333333333,td=function(e){var n,r,a,u,o,f,l,v,m,g;return a=we(e),u=e-1,(P3&2+a)<3?u===0?0:u*u*(sd*u-.5):(m=(a&=P3)-398458|0,g=440401-a|0,r=(v=(f=(o=u/(2+u))*o)*f)*ud(v),l=f*od(v)+r,(m|=g)>0?o*((n=.5*u*u)+l)-n:o*(l-u))},fd=0x40000000000000,S3=1.4426950407214463,cd=16751713164886512e-26,vd=1048575,pd=2146435072,ld=1048576,Nd=1072693248,md=2147483647,Va=[0,0],hd=function(e){var n,r,a,u,o,f;if(i(e)||e<0)return NaN;if(C0(Va,e),r=Va[0],a=Va[1],f=0,r<ld){if(!(r&md|a))return V;f-=54,r=we(e*=fd)}return r>=pd?e+e:(f+=(r>>20)-Gn|0,e=Pn(e,(r&=vd)|(o=r+614244&1048576|0)^Nd),f+=o>>20|0,u=td(e),n=An(e-=1,0),(e+u)*cd+(e-n+u)*S3+n*S3+f)},A3=function(e){return i(e)||e<0||e>1?NaN:Wr(-1/hd(1-e))-1},j3=function(e){return i(e)||e<0||e>1?NaN:0},O3=function(e){return i(e)||e<=0||e>=1?NaN:(2-e)/M(1-e)},U3=function(e){return i(e)||e<=0||e>=1?NaN:M(1-e)/e},R3=function(e){return i(e)||e<=0||e>=1?NaN:(1-e)/(e*e)},L3=function(e,n){return i(e)||i(n)||n<0||n>1?NaN:e<0?V:e===w?0:(e=D(e),R(-N(1-n,e+1)))};c(L3,"factory",function(e){return i(e)||e<0||e>1?k(NaN):function(n){return i(n)?NaN:n<0?V:n===w?0:(n=D(n),R(-N(1-e,n+1)))}});var _3=L3,B3=function(e,n){var r;return i(e)||i(n)?NaN:n<0||n>1?NaN:A(e)?(r=1-n,p(n)+e*p(r)):V};c(B3,"factory",function(e){return i(e)||e<0||e>1?k(NaN):function(n){var r;return i(n)?NaN:A(n)?(r=1-e,p(e)+n*p(r)):V}});var F3=B3,I3=function(e,n){var r,a;return i(e)||!Kr(n)?NaN:e>=-p(a=1-n)?NaN:n*(r=b(e))/(1-a*r)};c(I3,"factory",function(e){return Kr(e)?function(n){var r,a;return i(n)?NaN:n>=-p(a=1-e)?NaN:(r=b(n),e*r/(1-a*r))}:k(NaN)});var C3=I3,G3=function(e,n){return i(e)||i(n)||n<0||n>1?NaN:A(e)?n*N(1-n,e):0};c(G3,"factory",function(e){return i(e)||e<0||e>1?k(NaN):function(n){return i(n)?NaN:A(n)?e*N(1-e,n):0}});var K3=G3,W3=function(e,n){return i(n)||i(e)||n<0||n>1||e<0||e>1?NaN:e===1?w:ee(0,Wr(p(1-e)/R(-n)-(1+1e-12)))};c(W3,"factory",function(e){return i(e)||e<0||e>1?k(NaN):function(n){return i(n)||n<0||n>1?NaN:n===1?w:ee(0,Wr(p(1-n)/R(-e)-(1+1e-12)))}});var H3=W3,D3=Gr.isPrimitive;function Re(){var e;if(!(this instanceof Re))return arguments.length===0?new Re:new Re(arguments[0]);if(arguments.length){if(e=arguments[0],!D3(e))throw new TypeError("invalid argument. Mean parameter `p` must be a probability. Value: `"+e+"`")}else e=.5;return _(this,"p",{configurable:!1,enumerable:!0,get:function(){return e},set:function(n){if(!D3(n))throw new TypeError("invalid value. Must be a probability. Value: `"+n+"`");e=n}}),this}y(Re.prototype,"entropy",function(){return M3(this.p)}),y(Re.prototype,"kurtosis",function(){return q3(this.p)}),y(Re.prototype,"mean",function(){return x3(this.p)}),y(Re.prototype,"median",function(){return A3(this.p)}),y(Re.prototype,"mode",function(){return j3(this.p)}),y(Re.prototype,"skewness",function(){return O3(this.p)}),y(Re.prototype,"stdev",function(){return U3(this.p)}),y(Re.prototype,"variance",function(){return R3(this.p)}),c(Re.prototype,"cdf",function(e){return V3(e,this.p)}),c(Re.prototype,"logcdf",function(e){return _3(e,this.p)}),c(Re.prototype,"logpmf",function(e){return F3(e,this.p)}),c(Re.prototype,"mgf",function(e){return C3(e,this.p)}),c(Re.prototype,"pmf",function(e){return K3(e,this.p)}),c(Re.prototype,"quantile",function(e){return H3(e,this.p)});var dd=Re,z3=function(e,n,r){return i(e)||i(n)||i(r)||r<=0?NaN:b(-b(-(e-n)/r))};c(z3,"factory",function(e,n){return i(e)||i(n)||n<=0?k(NaN):function(r){return i(r)?NaN:b(-b(-(r-e)/n))}});var $3=z3,J3=function(e,n){return i(e)||i(n)||n<=0?NaN:p(n)+k0+1},Z3=function(e,n){return i(e)||i(n)||n<=0?NaN:2.4},X3=function(e,n){return i(e)||i(n)||n<=0?NaN:e+n*k0},bd=p(me),Y3=function(e,n){return i(e)||i(n)||n<=0?NaN:e-n*bd},Q3=function(e,n){return i(e)||i(n)||n<=0?NaN:e},yd=[1.2020569031595942,1.03692775514337,1.008349277381923,1.0020083928260821,1.0004941886041194,1.0001227133475785,1.000030588236307,1.0000076371976379,1.0000019082127165,1.0000004769329869,1.000000119219926,1.0000000298035034,1.0000000074507118,1.0000000018626598,1.0000000004656628,1.0000000001164155,1.0000000000291038,1.000000000007276,1.000000000001819,1.0000000000004547,1.0000000000001137,1.0000000000000284,1.000000000000007,1.0000000000000018,1.0000000000000004,1.0000000000000002,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],gd=[-.5,1.6449340668482264,1.0823232337111381,1.0173430619844492,1.0040773561979444,1.000994575127818,1.000246086553308,1.0000612481350588,1.0000152822594086,1.000003817293265,1.0000009539620338,1.0000002384505027,1.000000059608189,1.0000000149015549,1.000000003725334,1.0000000009313275,1.000000000232831,1.0000000000582077,1.000000000014552,1.000000000003638,1.0000000000009095,1.0000000000002274,1.0000000000000568,1.0000000000000142,1.0000000000000036,1.0000000000000009,1.0000000000000002,1],wd=[1,.16666666666666666,-.03333333333333333,.023809523809523808,-.03333333333333333,.07575757575757576,-.2531135531135531,1.1666666666666667,-7.092156862745098,54.971177944862156,-529.1242424242424,6192.123188405797,-86580.25311355312,1.4255171666666667e6,-27298231067816094e-9,6015808739006424e-7,-15116315767092157e-6,4296146430611667e-4,-13711655205088332e-3,4883323189735932e-1,-0x448e22fd0e7564,0xbae4b5e068b9980,-40338071854059454e3,21150748638081993e5,-12086626522296526e7,7500866746076964e9,-5038778101481069e11,36528776484818122e12,-2849876930245088e15,23865427499683627e16,-21399949257225335e18,20500975723478097e20,-2093800591134638e23,22752696488463515e24,-26257710286239577e26,3212508210271803e29,-4159827816679471e31,5692069548203528e33,-8218362941978458e35,12502904327166994e37,-2001558323324837e40,33674982915364376e41,-5947097050313545e44,11011910323627977e46,-21355259545253502e48,43328896986641194e50,-9188552824166933e53,20346896776329074e55,-4700383395803573e58,1131804344548425e61,-28382249570693707e62,7406424897967885e65,-20096454802756605e67,5665717005080594e70,-16584511154136216e72,5036885995049238e75,-15861468237658186e77,51756743617545625e79,-17488921840217116e82,6116051999495218e85,-22122776912707833e87,8272277679877097e90,-3195892511141571e93,12750082223387793e95,-5250092308677413e98,22301817894241627e100,-976845219309552e104,4409836197845295e106,-2050857088646409e109,9821443327979128e111,-4841260079820888e114,24553088801480982e116,-12806926804084748e119,6867616710466858e122,-37846468581969106e124,2142610125066529e128,-12456727137183695e130,7434578755100016e133,-45535795304641704e135,2861211281685887e139,-1843772355203387e142,12181154536221047e144,-8248218718531412e147,5722587793783294e150,-40668530525059105e152,29596092064642052e155,-22049522565189457e158,168125970728896e163,-13116736213556958e164,10467894009478039e167,-8543289357883371e170,7128782132248655e173,-608029314555359e177,5299677642484992e179,-4719425916874586e182,4292841379140298e185,-39876744968232205e187,3781978041935888e191,-3661423368368119e194,3617609027237286e197,-3647077264519136e200,3750875543645441e203,-3934586729643903e206,4208821114819008e209,-4590229622061792e212,5103172577262957e215,-5782276230365695e218,6676248216783588e221,-7853530764445042e224,9410689406705872e227,-11484933873465185e230,14272958742848785e233,-1805955958690931e237,23261535307660807e239,-30495751715499594e242,4068580607643398e246,-5523103132197436e249,76277279396434395e251,-10715571119697886e255,15310200895969188e258,-22244891682179836e261,3286267919069014e265,-4935592895596035e268,7534957120083251e271,-11691485154584178e274,1843526146783894e278,-2953682617296808e281,4807932127750157e284,-7950212504588525e287,13352784187354634e290],kd=function(e){var n,r;return e===0?.2433929443359375:((e<0?-e:e)<=1?(n=.2433929443359375+e*(e*(.055761621477604675+e*(e*(.0004515345286457964+-9332412703570615e-21*e)-.003209124988790859))-.4909247051635357),r=1+e*(e*(.04196762233099861+e*(e*(.00024978985622317937+-10185578841856403e-21*e)-.00413421406552171))-.27996033431034445)):(n=(e=1/e)*(.0004515345286457964+e*(e*(.055761621477604675+e*(.2433929443359375*e-.4909247051635357))-.003209124988790859))-9332412703570615e-21,r=e*(.00024978985622317937+e*(e*(.04196762233099861+e*(1*e-.27996033431034445))-.00413421406552171))-10185578841856403e-21),n/r)},Ed=function(e){var n,r;return e===0?.5772156649015329:((e<0?-e:e)<=1?(n=.5772156649015329+e*(.24321064694010716+e*(.04173646739882165+e*(.003902520870728433+e*(.0002496063671518772+1101084409767329e-20*e)))),r=1+e*(.29520127712663174+e*(.043460910607305496+e*(.004349305820858264+e*(.0002557842261404885+10991819782396113e-21*e))))):(n=1101084409767329e-20+(e=1/e)*(.0002496063671518772+e*(.003902520870728433+e*(.04173646739882165+e*(.24321064694010716+.5772156649015329*e)))),r=10991819782396113e-21+e*(.0002557842261404885+e*(.004349305820858264+e*(.043460910607305496+e*(.29520127712663174+1*e))))),n/r)},Td=function(e){var n,r;return e===0?-.053725830002359504:((e<0?-e:e)<=1?(n=e*(.04451634732923656+e*(.012867767353451996+e*(.0009754177045739176+e*(7698751015736541e-20+e*(3280325100003831e-21+0*e)))))-.053725830002359504,r=1+e*(.3338319455303405+e*(.048779843129140764+e*(.0047903970857355845+e*(.00027077670395633634+e*(10695186753205734e-21+23627662397497864e-24*e)))))):(n=0+(e=1/e)*(3280325100003831e-21+e*(7698751015736541e-20+e*(.0009754177045739176+e*(.012867767353451996+e*(.04451634732923656+-.053725830002359504*e))))),r=23627662397497864e-24+e*(10695186753205734e-21+e*(.00027077670395633634+e*(.0047903970857355845+e*(.048779843129140764+e*(.3338319455303405+1*e)))))),n/r)},Vd=function(e){var n,r;return e===0?-2.497101906022594:((e<0?-e:e)<=1?(n=e*(e*(e*(e*(e*(e*(0+e*(0+0*e))-22925731059489392e-21)-.007017212405498024)-.13844861799574154)-.9392604353771099)-2.600133018094757)-2.497101906022594,r=1+e*(.7060390259377451+e*(.15739599649558628+e*(.010611795097684508+e*(e*(49340956392759e-19+e*(e*(7188337293654598e-24+-11292001134749475e-26*e)-23405548702528722e-23))-36910273311764616e-21))))):(n=0+(e=1/e)*(0+e*(0+e*(e*(e*(e*(e*(-2.497101906022594*e-2.600133018094757)-.9392604353771099)-.13844861799574154)-.007017212405498024)-22925731059489392e-21))),r=e*(7188337293654598e-24+e*(e*(49340956392759e-19+e*(e*(.010611795097684508+e*(.15739599649558628+e*(.7060390259377451+1*e)))-36910273311764616e-21))-23405548702528722e-23))-11292001134749475e-26),n/r)},Md=function(e){var n,r;return e===0?-4.785580284951356:((e<0?-e:e)<=1?(n=e*(e*(e*(e*(.0011514092388917874+e*(6399492042131645e-20+e*(1393489324453249e-21+e*(0+0*e))))-.0001892047582600767)-.21140713487441282)-1.8919736488197254)-4.785580284951356,r=1+e*(.24434533737818856+e*(.008733707544922887+e*(e*(e*(e*(4710012640030765e-24+e*(6998415452048457e-28*e-8333784406253855e-26))-21750464515767985e-22)-7437436828999331e-20)-.0011759276533443448)))):(n=0+(e=1/e)*(0+e*(1393489324453249e-21+e*(6399492042131645e-20+e*(.0011514092388917874+e*(e*(e*(-4.785580284951356*e-1.8919736488197254)-.21140713487441282)-.0001892047582600767))))),r=6998415452048457e-28+e*(e*(4710012640030765e-24+e*(e*(e*(e*(.008733707544922887+e*(.24434533737818856+1*e))-.0011759276533443448)-7437436828999331e-20)-21750464515767985e-22))-8333784406253855e-26)),n/r)},qd=function(e){var n,r;return e===0?-10.39489505733089:((e<0?-e:e)<=1?(n=e*(e*(e*(e*(e*(e*(-8214657090954655e-24*e-7855236337967234e-22)-3825293235079675e-20)-.001194591734169687)-.025115606465534634)-.34772826653924577)-2.858272196711067)-10.39489505733089,r=1+e*(.2081963335726719+e*(.019568765731720502+e*(.0011107963810248593+e*(40850774626603926e-21+e*(9555611230656935e-22+e*(1185071534740229e-23+2226094836273526e-30*e))))))):(n=(e=1/e)*(e*(e*(e*(e*(e*(-10.39489505733089*e-2.858272196711067)-.34772826653924577)-.025115606465534634)-.001194591734169687)-3825293235079675e-20)-7855236337967234e-22)-8214657090954655e-24,r=2226094836273526e-30+e*(1185071534740229e-23+e*(9555611230656935e-22+e*(40850774626603926e-21+e*(.0011107963810248593+e*(.019568765731720502+e*(.2081963335726719+1*e))))))),n/r)},xd=129,Pd=170,Sd=709,Ad=1.2433929443359375,jd=.6986598968505859,Od=function e(n){var r,a,u,o,f,l;if(i(n))return NaN;if(n===1)return NaN;if(n>=56)return 1;if(K(n)&&(o=0|n)===n){if(!(o<0))return 1&o?yd[(o-3)/2]:gd[o/2];if(!(1&(u=0|-o)))return 0;if((l=(u+1)/2|0)<=xd)return-wd[l]/(u+1)}return S(n)<tu?-.5-dr*n:(a=1-n,n<0?D(n/2)===n/2?0:(r=n,n=a,a=r,n>Pd?(r=2*E0(.5*a)*e(n),f=Y(n),(f-=n*p(Qn))>Sd?r<0?V:w:r*b(f)):2*E0(.5*a)*N(Qn,-n)*G(n)*e(n)):n<1?(r=kd(a),r-=Ad,r+=a,r/=a):n<=2?(r=1/(a=-a))+Ed(a):n<=4?(r=jd+1/-a)+Td(n-2):n<=7?(r=Vd(n-4),1+b(r)):n<15?(r=Md(n-7),1+b(r)):n<36?(r=qd(n-15),1+b(r)):1+N(2,-n))},Ud=12*M(6)*Od(3)/(F*F*F),e6=function(e,n){return i(e)||i(n)||n<=0?NaN:Ud},Rd=M(6),n6=function(e,n){return i(e)||i(n)||n<=0?NaN:F/Rd*n},r6=function(e,n){return i(e)||i(n)||n<=0?NaN:Cn/6*n*n},a6=function(e,n,r){return i(e)||i(n)||i(r)||r<=0?NaN:-b(-(e-n)/r)};c(a6,"factory",function(e,n){return i(e)||i(n)||n<=0?k(NaN):function(r){return i(r)?NaN:-b(-(r-e)/n)}});var i6=a6,u6=function(e,n,r){var a;return i(e)||i(n)||i(r)||r<=0?NaN:e===V?0:-(a=(e-n)/r)-b(-a)-p(r)};c(u6,"factory",function(e,n){var r;return i(e)||i(n)||n<=0?k(NaN):(r=p(n),function(a){var u;return i(a)?NaN:a===V?0:-(u=(a-e)/n)-b(-u)-r})});var o6=u6,s6=function(e,n,r){return i(e)||i(n)||i(r)||r<=0||e>=1/r?NaN:G(1-r*e)*b(n*e)};c(s6,"factory",function(e,n){return i(e)||i(n)||n<=0?k(NaN):function(r){return r>=1/n?NaN:G(1-n*r)*b(e*r)}});var t6=s6,f6=function(e,n,r){var a;return i(e)||i(n)||i(r)||r<=0?NaN:e===V?0:1/r*b(-(a=(e-n)/r)-b(-a))};c(f6,"factory",function(e,n){return i(e)||i(n)||n<=0?k(NaN):function(r){var a;return i(r)?NaN:r===V?0:1/n*b(-(a=(r-e)/n)-b(-a))}});var c6=f6,v6=function(e,n,r){return i(n)||i(r)||i(e)||r<=0||e<0||e>1?NaN:n-r*p(-p(e))};c(v6,"factory",function(e,n){return i(e)||i(n)||n<=0?k(NaN):function(r){return i(r)||r<0||r>1?NaN:e-n*p(-p(r))}});var p6=v6,l6=be.isPrimitive,N6=ge.isPrimitive;function Le(){var e,n;if(!(this instanceof Le))return arguments.length===0?new Le:new Le(arguments[0],arguments[1]);if(arguments.length){if(n=arguments[0],e=arguments[1],!N6(n)||sn(n))throw new TypeError("invalid argument. Location parameter `mu` must be a number primitive. Value: `"+n+"`");if(!l6(e))throw new TypeError("invalid argument. Scale parameter `beta` must be a positive number. Value: `"+e+"`")}else n=0,e=1;return _(this,"mu",{configurable:!1,enumerable:!0,get:function(){return n},set:function(r){if(!N6(r)||sn(r))throw new TypeError("invalid value. Must be a number primitive. Value: `"+r+"`");n=r}}),_(this,"beta",{configurable:!1,enumerable:!0,get:function(){return e},set:function(r){if(!l6(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");e=r}}),this}y(Le.prototype,"entropy",function(){return J3(this.mu,this.beta)}),y(Le.prototype,"kurtosis",function(){return Z3(this.mu,this.beta)}),y(Le.prototype,"mean",function(){return X3(this.mu,this.beta)}),y(Le.prototype,"median",function(){return Y3(this.mu,this.beta)}),y(Le.prototype,"mode",function(){return Q3(this.mu,this.beta)}),y(Le.prototype,"skewness",function(){return e6(this.mu,this.beta)}),y(Le.prototype,"stdev",function(){return n6(this.mu,this.beta)}),y(Le.prototype,"variance",function(){return r6(this.mu,this.beta)}),c(Le.prototype,"cdf",function(e){return $3(e,this.mu,this.beta)}),c(Le.prototype,"logcdf",function(e){return i6(e,this.mu,this.beta)}),c(Le.prototype,"logpdf",function(e){return o6(e,this.mu,this.beta)}),c(Le.prototype,"mgf",function(e){return t6(e,this.mu,this.beta)}),c(Le.prototype,"pdf",function(e){return c6(e,this.mu,this.beta)}),c(Le.prototype,"quantile",function(e){return p6(e,this.mu,this.beta)});var Ld=Le,_d=function(e){return D(e)===e&&e<0},z=function(e){return _d(e)?NaN:Y(e+1)},m6=function(e,n,r,a){var u,o,f,l;return i(e)||i(n)||i(r)||i(a)||!A(n)||!A(r)||!A(a)||n===w||r===w||r>n||a>n?NaN:(l=ee(0,a+r-n),f=Z(r,a),A(e)&&l<=e&&e<=f?(o=z(a)+z(r)+z(n-a)+z(n-r),u=z(n)+z(e)+z(a-e),u+=z(r-e)+z(n-r+e-a),b(o-u)):0)};c(m6,"factory",function(e,n,r){var a,u;return i(e)||i(n)||i(r)||!A(e)||!A(n)||!A(r)||e===w||n===w||n>e||r>e?k(NaN):(u=ee(0,r+n-e),a=Z(n,r),function(o){var f,l;return i(o)?NaN:A(o)&&u<=o&&o<=a?(l=z(r)+z(n)+z(e-r)+z(e-n),f=z(e)+z(o)+z(r-o),f+=z(n-o)+z(e-n+o-r),b(l-f)):0})});var h1=m6,h6=function(e){var n,r,a;for(n=e.length,r=0,a=0;a<n;a++)r+=e[a];return r},d6=function(e,n,r,a){var u,o,f,l,v;if(i(e)||i(n)||i(r)||i(a)||!A(n)||!A(r)||!A(a)||n===w||r===w||r>n||a>n)return NaN;if((e=lr(e))<ee(0,a+r-n))return 0;if(e>=Z(a,r))return 1;for((o=new b0(e+1))[e]=h1(e,n,r,a),v=e-1;v>=0;v--)f=(v+1)*(n-r-(a-v-1)),u=(r-v)*(a-v),o[v]=f/u*o[v+1];return l=h6(o),Z(l,1)};c(d6,"factory",function(e,n,r){return i(e)||i(n)||i(r)||!A(e)||!A(n)||!A(r)||e===w||n===w||n>e||r>e?k(NaN):function(a){var u,o,f,l,v;if(i(a))return NaN;if((a=lr(a))<ee(0,r+n-e))return 0;if(a>=Z(r,n))return 1;for((o=new b0(a+1))[a]=h1(a,e,n,r),v=a-1;v>=0;v--)f=(v+1)*(e-n-(r-v-1)),u=(n-v)*(r-v),o[v]=f/u*o[v+1];return l=h6(o),Z(l,1)}});var d1=d6,Bd=Mr.isPrimitive,b6=function(e){return Bd(e)&&e>=0},Fd=Mr.isObject,y6=function(e){return Fd(e)&&e.valueOf()>=0},Ma=function(e){return b6(e)||y6(e)};c(Ma,"isPrimitive",b6),c(Ma,"isObject",y6);var Id=Ma,g6=function(e,n,r){var a;return!A(e)||!A(n)||!A(r)||e===w||n===w||n>e||r>e?NaN:(a=e*e*(e-1)*(e*(e+1)-6*n*(e-n)-6*r*(e-r)),(a+=6*r*n*(e-n)*(e-r)*(5*e-6))/(r*n*(e-n)*(e-r)*(e-2)*(e-3)))},w6=function(e,n,r){return i(e)||i(n)||i(r)?NaN:!A(e)||!A(n)||!A(r)||e===w||n===w||n>e||r>e?NaN:r*(n/e)},k6=function(e,n,r){return!A(e)||!A(n)||!A(r)||e===w||n===w||n>e||r>e?NaN:D((r+1)*(n+1)/(e+2))},E6=function(e,n,r){return!A(e)||!A(n)||!A(r)||e===w||n===w||n>e||r>e?NaN:(e-2*n)*M(e-1)*(e-2*r)/(M(r*n*(e-n)*(e-r))*(e-2))},T6=function(e,n,r){return!A(e)||!A(n)||!A(r)||e===w||n===w||n>e||r>e?NaN:M(r*(n/e)*((e-n)/e)*((e-r)/(e-1)))},V6=function(e,n,r){return!A(e)||!A(n)||!A(r)||e===w||n===w||n>e||r>e?NaN:r*(n/e)*((e-n)/e)*((e-r)/(e-1))},M6=function(e,n,r,a){var u,o,f,l;return i(e)||i(n)||i(r)||i(a)||!A(n)||!A(r)||!A(a)||n===w||r===w||r>n||a>n?NaN:(l=ee(0,a+r-n),f=Z(r,a),A(e)&&l<=e&&e<=f?(o=z(a)+z(r)+z(n-a)+z(n-r),u=z(n)+z(e)+z(a-e),o-(u+=z(r-e)+z(n-r+e-a))):V)};c(M6,"factory",function(e,n,r){var a,u;return i(e)||i(n)||i(r)||!A(e)||!A(n)||!A(r)||e===w||n===w||n>e||r>e?k(NaN):(u=ee(0,r+n-e),a=Z(n,r),function(o){var f,l;return i(o)?NaN:A(o)&&u<=o&&o<=a?(l=z(r)+z(n)+z(e-r)+z(e-n),f=z(e)+z(o)+z(r-o),f+=z(n-o)+z(e-n+o-r),l-f):V})});var q6=M6,x6=function(e,n,r,a){var u;if(i(e)||i(n)||i(r)||i(a)||!A(n)||!A(r)||!A(a)||n===w||r===w||r>n||a>n||e<0||e>1)return NaN;if(e===0)return ee(0,a+r-n);if(e===1)return Z(a,r);for(u=ee(0,a+r-n);!(d1(u,n,r,a)>e);)u+=1;return u};c(x6,"factory",function(e,n,r){return i(e)||i(n)||i(r)||!A(e)||!A(n)||!A(r)||e===w||n===w||n>e||r>e?k(NaN):function(a){var u;if(i(a)||a<0||a>1)return NaN;if(a===0)return ee(0,r+n-e);if(a===1)return Z(r,n);for(u=ee(0,r+n-e);!(d1(u,e,n,r)>a);)u+=1;return u}});var P6=x6,Y0=Id.isPrimitive;function qn(e,n,r){if(!(this instanceof qn))return new qn(e,n,r);if(!Y0(e))throw new TypeError("invalid argument. Population size `N` must be a nonnegative integer. Value: `"+e+"`");if(!Y0(n))throw new TypeError("invalid argument. Subpopulation size `K` must be a nonnegative integer. Value: `"+n+"`");if(!Y0(r))throw new TypeError("invalid argument. Number of draws `n` must be a nonnegative integer. Value: `"+r+"`");if(n>e)throw new RangeError("invalid arguments. Subpopulation size `K` must be smaller than or equal to `N`.");if(r>e)throw new RangeError("invalid arguments. Number of draws `n` must be smaller than or equal to `N`.");return _(this,"N",{configurable:!1,enumerable:!0,get:function(){return e},set:function(a){if(!Y0(a))throw new TypeError("invalid value. Must be a nonnegative integer. Value: `"+a+"`");if(n>a)throw new RangeError("invalid value. Must be larger than or equal to `K`. Value: `"+a+"`");if(r>a)throw new RangeError("invalid value. Must be larger than or equal to `n`. Value: `"+a+"`");e=a}}),_(this,"K",{configurable:!1,enumerable:!0,get:function(){return n},set:function(a){if(!Y0(a))throw new TypeError("invalid value. Must be a nonnegative integer. Value: `"+a+"`");if(a>e)throw new RangeError("invalid value. Must be smaller than or equal to `N`. Value: `"+a+"`");n=a}}),_(this,"n",{configurable:!1,enumerable:!0,get:function(){return r},set:function(a){if(!Y0(a))throw new TypeError("invalid value. Must be a nonnegative integer. Value: `"+a+"`");if(a>e)throw new RangeError("invalid value. Must be smaller than or equal to `N`. Value: `"+a+"`");r=a}}),this}y(qn.prototype,"kurtosis",function(){return g6(this.N,this.K,this.n)}),y(qn.prototype,"mean",function(){return w6(this.N,this.K,this.n)}),y(qn.prototype,"mode",function(){return k6(this.N,this.K,this.n)}),y(qn.prototype,"skewness",function(){return E6(this.N,this.K,this.n)}),y(qn.prototype,"stdev",function(){return T6(this.N,this.K,this.n)}),y(qn.prototype,"variance",function(){return V6(this.N,this.K,this.n)}),c(qn.prototype,"cdf",function(e){return d1(e,this.N,this.K,this.n)}),c(qn.prototype,"logpmf",function(e){return q6(e,this.N,this.K,this.n)}),c(qn.prototype,"pmf",function(e){return h1(e,this.N,this.K,this.n)}),c(qn.prototype,"quantile",function(e){return P6(e,this.N,this.K,this.n)});var Cd=qn,S6=function(e,n,r){return i(e)||i(n)||i(r)||n<=0||r<=0?NaN:e<=0?0:Kn(r/e,n,!0,!0)};c(S6,"factory",function(e,n){return i(e)||i(n)||e<=0||n<=0?k(NaN):function(r){return i(r)?NaN:r<=0?0:Kn(n/r,e,!0,!0)}});var A6=S6,j6=function(e,n){var r;return e<=0||n<=0?NaN:(r=e+p(n*G(e)),r-=(1+e)*Vn(e))},O6=function(e,n){return i(e)||i(n)||e<=4||n<=0?NaN:(30*e-66)/((e-3)*(e-4))},U6=function(e,n){return e<=1||n<=0?NaN:n/(e-1)},R6=function(e,n){return e<=0||n<=0?NaN:n/(e+1)},L6=function(e,n,r){return i(n)||i(r)||i(e)||n<=0||r<=0||e<0||e>1?NaN:r/H0(e,n,!0)};c(L6,"factory",function(e,n){return i(e)||i(n)||e<=0||n<=0?k(NaN):function(r){return i(r)||r<0||r>1?NaN:n/H0(r,e,!0)}});var _6=L6,B6=function(e,n,r){var a;return i(e)||i(n)||i(r)||n<=0||r<=0?NaN:e<=0?V:(a=n*p(r)-Y(n),a-=(n+1)*p(e),a-=r/e)};c(B6,"factory",function(e,n){var r;return i(e)||i(n)||e<=0||n<=0?k(NaN):(r=e*p(n)-Y(e),function(a){return i(a)?NaN:a<=0?V:r-(e+1)*p(a)-n/a})});var F6=B6,I6=function(e,n){return i(e)||i(n)||e<=3||n<=0?NaN:4*M(e-2)/(e-3)},C6=function(e,n){return e<=2||n<=0?NaN:n/((e-1)*M(e-2))},G6=function(e,n){return e<=2||n<=0?NaN:n*n/(N(e-1,2)*(e-2))},K6=function(e,n,r){var a;return i(e)||i(n)||i(r)||n<=0||r<=0?NaN:e<=0?0:(a=n*p(r)-Y(n),a-=(n+1)*p(e),b(a-=r/e))};c(K6,"factory",function(e,n){var r;return i(e)||i(n)||e<=0||n<=0?k(NaN):(r=e*p(n)-Y(e),function(a){var u;return i(a)?NaN:a<=0?0:(u=r-(e+1)*p(a)-n/a,b(u))})});var W6=K6,b1=be.isPrimitive;function hn(){var e,n;if(!(this instanceof hn))return arguments.length===0?new hn:new hn(arguments[0],arguments[1]);if(arguments.length){if(e=arguments[0],n=arguments[1],!b1(e))throw new TypeError("invalid argument. First shape parameter `alpha` must be a positive number. Value: `"+e+"`");if(!b1(n))throw new TypeError("invalid argument. Second shape parameter `beta` must be a positive number. Value: `"+n+"`")}else e=1,n=1;return _(this,"alpha",{configurable:!1,enumerable:!0,get:function(){return e},set:function(r){if(!b1(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");e=r}}),_(this,"beta",{configurable:!1,enumerable:!0,get:function(){return n},set:function(r){if(!b1(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");n=r}}),this}y(hn.prototype,"entropy",function(){return j6(this.alpha,this.beta)}),y(hn.prototype,"kurtosis",function(){return O6(this.alpha,this.beta)}),y(hn.prototype,"mean",function(){return U6(this.alpha,this.beta)}),y(hn.prototype,"mode",function(){return R6(this.alpha,this.beta)}),y(hn.prototype,"skewness",function(){return I6(this.alpha,this.beta)}),y(hn.prototype,"stdev",function(){return C6(this.alpha,this.beta)}),y(hn.prototype,"variance",function(){return G6(this.alpha,this.beta)}),c(hn.prototype,"cdf",function(e){return A6(e,this.alpha,this.beta)}),c(hn.prototype,"logpdf",function(e){return F6(e,this.alpha,this.beta)}),c(hn.prototype,"pdf",function(e){return W6(e,this.alpha,this.beta)}),c(hn.prototype,"quantile",function(e){return _6(e,this.alpha,this.beta)});var Gd=hn,H6=function(e,n,r){return i(e)||i(n)||i(r)||n<=0||r<=0?NaN:e<=0?0:e>=1?1:1-N(1-N(e,n),r)};c(H6,"factory",function(e,n){return i(e)||i(n)||e<=0||n<=0?k(NaN):function(r){return i(r)?NaN:r<=0?0:r>=1?1:1-N(1-N(r,e),n)}});var D6=H6,z6=function(e,n){var r,a,u,o,f,l;return i(e)||e<=0||i(n)||n<=0?NaN:(o=n*X(1+1/e,n),f=n*X(1+2/e,n),l=n*X(1+3/e,n),a=n*X(1+4/e,n)-4*l*o+6*f*(u=o*o)-3*u*u,a/=(r=f-o*o)*r)},$6=function(e,n){return i(e)||e<=0||i(n)||n<=0?NaN:n*X(1+1/e,n)},J6=function(e,n){return i(e)||e<1||i(n)||n<1||e===1&&n===1?NaN:N((e-1)/(e*n-1),1/e)},Z6=function(e,n){var r,a,u;return i(e)||e<=0||i(n)||n<=0?NaN:(a=n*X(1+1/e,n),u=n*X(1+2/e,n),(n*X(1+3/e,n)-3*a*(r=u-a*a)-a*a*a)/N(r,1.5))},X6=function(e,n){var r,a;return i(e)||e<=0||i(n)||n<=0?NaN:(r=n*X(1+1/e,n),a=n*X(1+2/e,n),M(a-r*r))},Y6=function(e,n){var r;return i(e)||e<=0||i(n)||n<=0?NaN:(r=n*X(1+1/e,n),n*X(1+2/e,n)-r*r)},Q6=function(e,n,r){return i(e)||i(n)||i(r)||n<=0||r<=0?NaN:e<=0?V:e>=1?0:p(1-N(1-N(e,n),r))};c(Q6,"factory",function(e,n){return i(e)||i(n)||e<=0||n<=0?k(NaN):function(r){return i(r)?NaN:r<=0?V:r>=1?0:p(1-N(1-N(r,e),n))}});var e4=Q6,n4=function(e,n,r){var a;return i(e)||i(n)||i(r)||n<=0||r<=0?NaN:e<=0||e>=1?V:(a=p(n*r),a+=(n-1)*p(e),a+=(r-1)*p(1-N(e,n)))};c(n4,"factory",function(e,n){return i(e)||i(n)||e<=0||n<=0?k(NaN):function(r){var a;return i(r)?NaN:r<=0||r>=1?V:(a=p(e*n),a+=(e-1)*p(r),a+=(n-1)*p(1-N(r,e)))}});var r4=n4,a4=function(e,n,r){return i(e)||i(n)||i(r)||n<=0||r<=0?NaN:e<=0||e>=1?0:n*r*N(e,n-1)*N(1-N(e,n),r-1)};c(a4,"factory",function(e,n){return i(e)||i(n)||e<=0||n<=0?k(NaN):function(r){return i(r)?NaN:r<=0||r>=1?0:e*n*N(r,e-1)*N(1-N(r,e),n-1)}});var i4=a4,u4=function(e,n,r){return i(e)||i(n)||i(r)||n<=0||r<=0||e<0||e>1?NaN:N(1-N(1-e,1/r),1/n)};c(u4,"factory",function(e,n){return i(e)||i(n)||e<=0||n<=0?k(NaN):function(r){return i(r)||r<0||r>1?NaN:N(1-N(1-r,1/n),1/e)}});var o4=u4,y1=be.isPrimitive;function dn(){var e,n;if(!(this instanceof dn))return arguments.length===0?new dn:new dn(arguments[0],arguments[1]);if(arguments.length){if(e=arguments[0],n=arguments[1],!y1(e))throw new TypeError("invalid argument. First shape parameter `a` must be a positive number. Value: `"+e+"`");if(!y1(n))throw new TypeError("invalid argument. Second shape parameter `b` must be a positive number. Value: `"+n+"`")}else e=1,n=1;return _(this,"a",{configurable:!1,enumerable:!0,get:function(){return e},set:function(r){if(!y1(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");e=r}}),_(this,"b",{configurable:!1,enumerable:!0,get:function(){return n},set:function(r){if(!y1(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");n=r}}),this}y(dn.prototype,"kurtosis",function(){return z6(this.a,this.b)}),y(dn.prototype,"mean",function(){return $6(this.a,this.b)}),y(dn.prototype,"mode",function(){return J6(this.a,this.b)}),y(dn.prototype,"skewness",function(){return Z6(this.a,this.b)}),y(dn.prototype,"stdev",function(){return X6(this.a,this.b)}),y(dn.prototype,"variance",function(){return Y6(this.a,this.b)}),c(dn.prototype,"cdf",function(e){return D6(e,this.a,this.b)}),c(dn.prototype,"logcdf",function(e){return e4(e,this.a,this.b)}),c(dn.prototype,"logpdf",function(e){return r4(e,this.a,this.b)}),c(dn.prototype,"pdf",function(e){return i4(e,this.a,this.b)}),c(dn.prototype,"quantile",function(e){return o4(e,this.a,this.b)});var Kd=dn,Wd=function(e,n){return i(e)||e<=0||i(n)||n<=0?NaN:N(1-N(2,-1/n),1/e)},s4=function(e,n,r){var a;return i(e)||i(n)||i(r)||r<=0?NaN:(a=(e-n)/r,e<n?.5*b(a):1-.5*b(-a))};c(s4,"factory",function(e,n){return i(e)||i(n)||n<=0?k(NaN):function(r){var a;return i(r)?NaN:(a=(r-e)/n,r<e?.5*b(a):1-.5*b(-a))}});var t4=s4,f4=function(e,n){return i(e)||i(n)||n<=0?NaN:p(2*n*Tn)},c4=function(e,n){return i(e)||i(n)||n<=0?NaN:3},v4=function(e,n){return i(e)||i(n)||n<=0?NaN:e},p4=function(e,n){return i(e)||i(n)||n<=0?NaN:e},l4=function(e,n){return i(e)||i(n)||n<=0?NaN:e},N4=function(e,n){return i(e)||i(n)||n<=0?NaN:0},m4=function(e,n){return i(e)||i(n)||n<=0?NaN:ne*n},h4=function(e,n){return i(e)||i(n)||n<=0?NaN:2*n*n},zn=-.6931471805599453,d4=function(e,n,r){var a;return i(e)||i(n)||i(r)||r<=0?NaN:(a=(e-n)/r,e<n?zn+a:zn+R(-ve(-a)))};c(d4,"factory",function(e,n){return i(e)||i(n)||n<=0?k(NaN):function(r){var a;return i(r)?NaN:(a=(r-e)/n,r<e?zn+a:zn+R(-ve(-a)))}});var b4=d4,y4=function(e,n,r){return i(e)||i(n)||i(r)||r<=0?NaN:-(S((e-n)/r)+p(2*r))};c(y4,"factory",function(e,n){return i(e)||i(n)||n<=0?k(NaN):function(r){return i(r)?NaN:-(S((r-e)/n)+p(2*n))}});var g4=y4,w4=function(e,n,r){var a;return i(e)||i(n)||i(r)||r<=0||S(e)>=1/r?NaN:(a=r*e,b(n*e)/(1-N(a,2)))};c(w4,"factory",function(e,n){return i(e)||i(n)||n<=0?k(NaN):function(r){var a;return S(r)>=1/n?NaN:(a=n*r,b(e*r)/(1-N(a,2)))}});var k4=w4,E4=function(e,n,r){return i(e)||i(n)||i(r)||r<=0?NaN:.5*b(-S((e-n)/r))/r};c(E4,"factory",function(e,n){return i(e)||i(n)||n<=0?k(NaN):function(r){return i(r)?NaN:.5*b(-S((r-e)/n))/n}});var T4=E4,V4=function(e,n,r){return i(n)||i(r)||i(e)||r<=0||e<0||e>1?NaN:n-r*e0(e-.5)*p(1-2*S(e-.5))};c(V4,"factory",function(e,n){return i(e)||i(n)||n<=0?k(NaN):function(r){return i(r)||r<0||r>1?NaN:e-n*e0(r-.5)*p(1-2*S(r-.5))}});var M4=V4,q4=be.isPrimitive,x4=ge.isPrimitive;function _e(){var e,n;if(!(this instanceof _e))return arguments.length===0?new _e:new _e(arguments[0],arguments[1]);if(arguments.length){if(e=arguments[0],n=arguments[1],!x4(e)||sn(e))throw new TypeError("invalid argument. Location parameter `mu` must be a number primitive. Value: `"+e+"`");if(!q4(n))throw new TypeError("invalid argument. Scale parameter `b` must be a positive number. Value: `"+n+"`")}else e=0,n=1;return _(this,"mu",{configurable:!1,enumerable:!0,get:function(){return e},set:function(r){if(!x4(r)||sn(r))throw new TypeError("invalid value. Must be a number primitive. Value: `"+r+"`");e=r}}),_(this,"b",{configurable:!1,enumerable:!0,get:function(){return n},set:function(r){if(!q4(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");n=r}}),this}y(_e.prototype,"entropy",function(){return f4(this.mu,this.b)}),y(_e.prototype,"kurtosis",function(){return c4(this.mu,this.b)}),y(_e.prototype,"mean",function(){return v4(this.mu,this.b)}),y(_e.prototype,"median",function(){return p4(this.mu,this.b)}),y(_e.prototype,"mode",function(){return l4(this.mu,this.b)}),y(_e.prototype,"skewness",function(){return N4(this.mu,this.b)}),y(_e.prototype,"stdev",function(){return m4(this.mu,this.b)}),y(_e.prototype,"variance",function(){return h4(this.mu,this.b)}),c(_e.prototype,"cdf",function(e){return t4(e,this.mu,this.b)}),c(_e.prototype,"logcdf",function(e){return b4(e,this.mu,this.b)}),c(_e.prototype,"logpdf",function(e){return g4(e,this.mu,this.b)}),c(_e.prototype,"mgf",function(e){return k4(e,this.mu,this.b)}),c(_e.prototype,"pdf",function(e){return T4(e,this.mu,this.b)}),c(_e.prototype,"quantile",function(e){return M4(e,this.mu,this.b)});var Hd=_e,P4=function(e,n,r){var a;return i(e)||i(n)||i(r)||r<=0?NaN:e<n?0:(a=M(r/(2*(e-n))),T0(a))};c(P4,"factory",function(e,n){return i(e)||i(n)||n<=0?k(NaN):function(r){var a;return i(r)?NaN:r<e?0:(a=M(n/(2*(r-e))),T0(a))}});var S4=P4,Dd=3*k0,A4=function(e,n){return i(e)||i(n)||n<=0?NaN:(1+Dd+p(16*n*n*F))/2},j4=function(e,n){return i(e)||i(n)||n<=0?NaN:w},zd=2*N(Ee(.5),2),O4=function(e,n){return i(e)||i(n)||n<=0?NaN:e+n/zd},U4=function(e,n){return i(e)||i(n)||n<=0?NaN:e+n/3},R4=function(e,n){return i(e)||i(n)||n<=0?NaN:w},L4=function(e,n){return i(e)||i(n)||n<=0?NaN:w},_4=function(e,n,r){var a;return i(e)||i(n)||i(r)||r<=0?NaN:e<n?V:(a=M(r/(2*(e-n))),p(T0(a)))};c(_4,"factory",function(e,n){return i(e)||i(n)||n<=0?k(NaN):function(r){var a;return i(r)?NaN:r<e?V:(a=M(n/(2*(r-e))),p(T0(a)))}});var B4=_4,g1=1.8378770664093456,F4=function(e,n,r){var a;return i(e)||i(n)||i(r)||r<=0?NaN:e<=n?V:(a=e-n,.5*(p(r)-g1-r/a-3*p(a)))};c(F4,"factory",function(e,n){return i(e)||i(n)||n<=0?k(NaN):function(r){var a;return i(r)?NaN:r<=e?V:(a=r-e,.5*(p(n)-g1-n/a-3*p(a)))}});var I4=F4,C4=function(e,n,r){return i(e)||i(n)||i(r)||r<=0?NaN:e<=n?0:M(r/Qn)*b(-r/(2*(e-n)))/N(e-n,1.5)};c(C4,"factory",function(e,n){return i(e)||i(n)||n<=0?k(NaN):function(r){return i(r)?NaN:r<=e?0:M(n/Qn)*b(-n/(2*(r-e)))/N(r-e,1.5)}});var G4=C4,K4=function(e,n,r){var a;return i(n)||i(r)||i(e)||r<=0||e<0||e>1?NaN:n+r/(2*(a=Ee(e))*a)};c(K4,"factory",function(e,n){return i(e)||i(n)||n<=0?k(NaN):function(r){var a;return i(r)||r<0||r>1?NaN:(a=Ee(r),e+n/(2*a*a))}});var W4=K4,H4=be.isPrimitive,D4=ge.isPrimitive;function bn(){var e,n;if(!(this instanceof bn))return arguments.length===0?new bn:new bn(arguments[0],arguments[1]);if(arguments.length){if(e=arguments[0],n=arguments[1],!D4(e)||sn(e))throw new TypeError("invalid argument. Location parameter `mu` must be a number primitive. Value: `"+e+"`");if(!H4(n))throw new TypeError("invalid argument. Scale parameter `c` must be a positive number. Value: `"+n+"`")}else e=0,n=1;return _(this,"mu",{configurable:!1,enumerable:!0,get:function(){return e},set:function(r){if(!D4(r)||sn(r))throw new TypeError("invalid value. Must be a number primitive. Value: `"+r+"`");e=r}}),_(this,"c",{configurable:!1,enumerable:!0,get:function(){return n},set:function(r){if(!H4(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");n=r}}),this}y(bn.prototype,"entropy",function(){return A4(this.mu,this.c)}),y(bn.prototype,"mean",function(){return j4(this.mu,this.c)}),y(bn.prototype,"median",function(){return O4(this.mu,this.c)}),y(bn.prototype,"mode",function(){return U4(this.mu,this.c)}),y(bn.prototype,"stdev",function(){return R4(this.mu,this.c)}),y(bn.prototype,"variance",function(){return L4(this.mu,this.c)}),c(bn.prototype,"cdf",function(e){return S4(e,this.mu,this.c)}),c(bn.prototype,"logcdf",function(e){return B4(e,this.mu,this.c)}),c(bn.prototype,"logpdf",function(e){return I4(e,this.mu,this.c)}),c(bn.prototype,"pdf",function(e){return G4(e,this.mu,this.c)}),c(bn.prototype,"quantile",function(e){return W4(e,this.mu,this.c)});var $d=bn,z4=function(e,n,r){return i(e)||i(n)||i(r)||r<0?NaN:r===0?e<n?0:1:1/(1+b(-(e-n)/r))},Jd=o0.factory;c(z4,"factory",function(e,n){return i(e)||i(n)||n<0?k(NaN):n===0?Jd(e):function(r){return i(r)?NaN:1/(1+b(-(r-e)/n))}});var $4=z4,J4=function(e,n){return i(e)||i(n)||n<=0?NaN:p(n)+2},Z4=function(e,n){return i(e)||i(n)||n<=0?NaN:1.2},X4=function(e,n){return i(e)||i(n)||n<=0?NaN:e},Y4=function(e,n){return i(e)||i(n)||n<=0?NaN:e},Q4=function(e,n){return i(e)||i(n)||n<=0?NaN:e},e5=function(e,n){return i(e)||i(n)||n<=0?NaN:0},Zd=1.7320508075688772,n5=function(e,n){return i(e)||i(n)||n<=0?NaN:n*F/Zd},r5=function(e,n){return i(e)||i(n)||n<=0?NaN:n*n*Cn/3},a5=function(e){return e<=18?R(b(e)):e>33.3?e:e+b(-e)},i5=function(e,n,r){return i(e)||i(n)||i(r)||r<0?NaN:r===0?e<n?V:0:-a5(-(e-n)/r)},Xd=X0.factory;c(i5,"factory",function(e,n){return i(e)||i(n)||n<0?k(NaN):n===0?Xd(e):function(r){return i(r)?NaN:-a5(-(r-e)/n)}});var u5=i5,o5=function(e,n,r){var a;return i(e)||i(n)||i(r)||r<0?NaN:e===V?V:r===0?e===n?w:V:(a=-S((e-n)/r))-2*R(b(a))-p(r)},Yd=P0.factory;c(o5,"factory",function(e,n){var r;return i(e)||i(n)||n<0?k(NaN):n===0?Yd(e):(r=p(n),function(a){var u;return i(a)?NaN:a===V?V:(u=-S((a-e)/n))-2*R(b(u))-r})});var s5=o5,t5=function(e){return i(e)?NaN:Sn(e)?0:e===0?1:E0(e)/(F*e)},f5=function(e,n,r){var a;return i(a=r*e)||i(n)||r<0||S(a)>1?NaN:b(n*e)/t5(a)},Qd=Ta.factory;c(f5,"factory",function(e,n){return i(e)||i(n)||n<0?k(NaN):n===0?Qd(e):function(r){var a=n*r;return S(a)>1?NaN:b(e*r)/t5(a)}});var c5=f5,v5=function(e,n,r){var a,u;return i(e)||i(n)||i(r)||r<0?NaN:e===V?0:r===0?e===n?w:0:(u=S((e-n)/r),(a=b(-u))/(r*N(1+a,2)))},eb=S0.factory;c(v5,"factory",function(e,n){return i(e)||i(n)||n<0?k(NaN):n===0?eb(e):function(r){var a,u;return i(r)?NaN:r===V?0:(u=S((r-e)/n),(a=b(-u))/(n*N(1+a,2)))}});var p5=v5,l5=function(e,n,r){return i(n)||i(r)||i(e)||r<0||e<0||e>1?NaN:r===0?n:n+r*p(e/(1-e))},nb=u0.factory;c(l5,"factory",function(e,n){return i(e)||i(n)||n<0?k(NaN):n===0?nb(e):function(r){return i(r)||r<0||r>1?NaN:e+n*p(r/(1-r))}});var N5=l5,m5=be.isPrimitive,h5=ge.isPrimitive;function Be(){var e,n;if(!(this instanceof Be))return arguments.length===0?new Be:new Be(arguments[0],arguments[1]);if(arguments.length){if(e=arguments[0],n=arguments[1],!h5(e)||sn(e))throw new TypeError("invalid argument. Location parameter `mu` must be a number primitive. Value: `"+e+"`");if(!m5(n))throw new TypeError("invalid argument. Scale parameter `s` must be a positive number. Value: `"+n+"`")}else e=0,n=1;return _(this,"mu",{configurable:!1,enumerable:!0,get:function(){return e},set:function(r){if(!h5(r)||sn(r))throw new TypeError("invalid value. Must be a number primitive. Value: `"+r+"`");e=r}}),_(this,"s",{configurable:!1,enumerable:!0,get:function(){return n},set:function(r){if(!m5(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");n=r}}),this}y(Be.prototype,"entropy",function(){return J4(this.mu,this.s)}),y(Be.prototype,"kurtosis",function(){return Z4(this.mu,this.s)}),y(Be.prototype,"mean",function(){return X4(this.mu,this.s)}),y(Be.prototype,"median",function(){return Y4(this.mu,this.s)}),y(Be.prototype,"mode",function(){return Q4(this.mu,this.s)}),y(Be.prototype,"skewness",function(){return e5(this.mu,this.s)}),y(Be.prototype,"stdev",function(){return n5(this.mu,this.s)}),y(Be.prototype,"variance",function(){return r5(this.mu,this.s)}),c(Be.prototype,"cdf",function(e){return $4(e,this.mu,this.s)}),c(Be.prototype,"logcdf",function(e){return u5(e,this.mu,this.s)}),c(Be.prototype,"logpdf",function(e){return s5(e,this.mu,this.s)}),c(Be.prototype,"mgf",function(e){return c5(e,this.mu,this.s)}),c(Be.prototype,"pdf",function(e){return p5(e,this.mu,this.s)}),c(Be.prototype,"quantile",function(e){return N5(e,this.mu,this.s)});var rb=Be,d5=function(e,n,r){var a;return i(e)||i(n)||i(r)||r<0?NaN:r===0?e<n?0:1:(a=r*M(2),.5*T0(-(e-n)/a))},ab=o0.factory;c(d5,"factory",function(e,n){var r;return i(e)||i(n)||n<0?k(NaN):n===0?ab(e):(r=n*M(2),function(a){return i(a)?NaN:.5*T0(-(a-e)/r)})});var Q0=d5,b5=function(e,n,r){return i(e)||i(n)||i(r)||r<=0?NaN:e<=0?0:Q0(p(e),n,r)};c(b5,"factory",function(e,n){return i(e)||i(n)||n<=0?k(NaN):function(r){return i(r)?NaN:r<=0?0:Q0(p(r),e,n)}});var y5=b5,g5=function(e,n){return i(e)||i(n)||n<=0?NaN:p(n*b(e+.5)*Nr)},w5=function(e,n){var r,a;return i(e)||i(n)||n<=0?NaN:(r=b(4*(a=n*n)),r+=2*b(3*a),r+=3*b(2*a),r-=6)},k5=function(e,n){return i(e)||i(n)||n<=0?NaN:b(e+n*n/2)},E5=function(e,n){return i(e)||i(n)||n<=0?NaN:b(e)},T5=function(e,n){return i(e)||i(n)||n<=0?NaN:b(e-n*n)},V5=function(e,n){var r;return i(e)||i(n)||n<=0?NaN:((r=b(n*n))+2)*M(r-1)},M5=function(e,n){var r;return i(e)||i(n)||n<=0?NaN:M((b(r=n*n)-1)*b(2*e+r))},q5=function(e,n){var r;return i(e)||i(n)||n<=0?NaN:(b(r=n*n)-1)*b(2*e+r)},x5=function(e,n,r){var a,u;return i(e)||i(n)||i(r)||r<=0?NaN:e<=0?V:(u=-1/(2*(a=N(r,2))),-.5*p(2*a*F)-p(e)+u*N(p(e)-n,2))};c(x5,"factory",function(e,n){var r,a,u;return i(e)||i(n)||n<=0?k(NaN):(r=N(n,2),a=-.5*p(2*r*F),u=-1/(2*r),function(o){return i(o)?NaN:o<=0?V:a-p(o)+u*N(p(o)-e,2)})});var P5=x5,S5=function(e,n,r){var a;return i(e)||i(n)||i(r)||r<=0?NaN:e<=0?0:(a=N(r,2),1/e*(1/M(2*a*F))*b(-1/(2*a)*N(p(e)-n,2)))};c(S5,"factory",function(e,n){var r,a,u;return i(e)||i(n)||n<=0?k(NaN):(r=N(n,2),a=1/M(2*r*F),u=-1/(2*r),function(o){return i(o)?NaN:o<=0?0:1/o*a*b(u*N(p(o)-e,2))})});var A5=S5,ib=function(e){var n,r;return e===0?-.0005087819496582806:((e<0?-e:e)<=1?(n=e*(e*(.03348066254097446+e*(e*(e*(.02198786811111689+e*(.008226878746769157+e*(e*(0+0*e)-.005387729650712429)))-.03656379714117627)-.012692614766297404))-.008368748197417368)-.0005087819496582806,r=1+e*(e*(e*(1.5622155839842302+e*(.662328840472003+e*(e*(e*(.07952836873415717+e*(.0008862163904564247*e-.0023339375937419))-.05273963823400997)-.7122890234154284)))-1.5657455823417585)-.9700050433032906)):(n=0+(e=1/e)*(0+e*(e*(.008226878746769157+e*(.02198786811111689+e*(e*(e*(.03348066254097446+e*(-.0005087819496582806*e-.008368748197417368))-.012692614766297404)-.03656379714117627)))-.005387729650712429)),r=.0008862163904564247+e*(e*(.07952836873415717+e*(e*(e*(.662328840472003+e*(1.5622155839842302+e*(e*(1*e-.9700050433032906)-1.5657455823417585)))-.7122890234154284)-.05273963823400997))-.0023339375937419)),n/r)},ub=function(e){var n,r;return e===0?-.20243350835593876:((e<0?-e:e)<=1?(n=e*(.10526468069939171+e*(8.3705032834312+e*(17.644729840837403+e*(e*(e*(17.445385985570866+e*(21.12946554483405+-3.6719225470772936*e))-44.6382324441787)-18.851064805871424))))-.20243350835593876,r=1+e*(6.242641248542475+e*(3.971343795334387+e*(e*(e*(48.560921310873994+e*(10.826866735546016+e*(1.7211476576120028*e-22.643693341313973)))-20.14326346804852)-28.66081804998)))):(n=(e=1/e)*(21.12946554483405+e*(17.445385985570866+e*(e*(e*(17.644729840837403+e*(8.3705032834312+e*(.10526468069939171+-.20243350835593876*e)))-18.851064805871424)-44.6382324441787)))-3.6719225470772936,r=1.7211476576120028+e*(e*(10.826866735546016+e*(48.560921310873994+e*(e*(e*(3.971343795334387+e*(6.242641248542475+1*e))-28.66081804998)-20.14326346804852)))-22.643693341313973)),n/r)},ob=function(e){var n,r;return e===0?-.1311027816799519:((e<0?-e:e)<=1?(n=e*(e*(.11703015634199525+e*(.38707973897260434+e*(.3377855389120359+e*(.14286953440815717+e*(.029015791000532906+e*(.0021455899538880526+e*(e*(28522533178221704e-24+-681149956853777e-24*e)-6794655751811263e-22)))))))-.16379404719331705)-.1311027816799519,r=1+e*(3.4662540724256723+e*(5.381683457070069+e*(4.778465929458438+e*(2.5930192162362027+e*(.848854343457902+e*(.15226433829533179+e*(.011059242293464892+e*(0+e*(0+0*e)))))))))):(n=(e=1/e)*(28522533178221704e-24+e*(e*(.0021455899538880526+e*(.029015791000532906+e*(.14286953440815717+e*(.3377855389120359+e*(.38707973897260434+e*(.11703015634199525+e*(-.1311027816799519*e-.16379404719331705)))))))-6794655751811263e-22))-681149956853777e-24,r=0+e*(0+e*(0+e*(.011059242293464892+e*(.15226433829533179+e*(.848854343457902+e*(2.5930192162362027+e*(4.778465929458438+e*(5.381683457070069+e*(3.4662540724256723+1*e)))))))))),n/r)},sb=function(e){var n,r;return e===0?-.0350353787183178:((e<0?-e:e)<=1?(n=e*(e*(.018557330651423107+e*(.009508047013259196+e*(.0018712349281955923+e*(.00015754461742496055+e*(460469890584318e-20+e*(26633922742578204e-28*e-2304047769118826e-25))))))-.0022242652921344794)-.0350353787183178,r=1+e*(1.3653349817554064+e*(.7620591645536234+e*(.22009110576413124+e*(.03415891436709477+e*(.00263861676657016+e*(7646752923027944e-20+e*(0+0*e)))))))):(n=26633922742578204e-28+(e=1/e)*(e*(460469890584318e-20+e*(.00015754461742496055+e*(.0018712349281955923+e*(.009508047013259196+e*(.018557330651423107+e*(-.0350353787183178*e-.0022242652921344794))))))-2304047769118826e-25),r=0+e*(0+e*(7646752923027944e-20+e*(.00263861676657016+e*(.03415891436709477+e*(.22009110576413124+e*(.7620591645536234+e*(1.3653349817554064+1*e)))))))),n/r)},tb=function(e){var n,r;return e===0?-.016743100507663373:((e<0?-e:e)<=1?(n=e*(e*(.001056288621524929+e*(.00020938631748758808+e*(14962478375834237e-21+e*(44969678992770644e-23+e*(4625961635228786e-24+e*(9905570997331033e-32*e-2811287356288318e-29))))))-.0011295143874558028)-.016743100507663373,r=1+e*(.5914293448864175+e*(.1381518657490833+e*(.016074608709367652+e*(.0009640118070051656+e*(27533547476472603e-21+e*(282243172016108e-21+e*(0+0*e)))))))):(n=9905570997331033e-32+(e=1/e)*(e*(4625961635228786e-24+e*(44969678992770644e-23+e*(14962478375834237e-21+e*(.00020938631748758808+e*(.001056288621524929+e*(-.016743100507663373*e-.0011295143874558028))))))-2811287356288318e-29),r=0+e*(0+e*(282243172016108e-21+e*(27533547476472603e-21+e*(.0009640118070051656+e*(.016074608709367652+e*(.1381518657490833+e*(.5914293448864175+1*e)))))))),n/r)},fb=.08913147449493408,cb=2.249481201171875,vb=.807220458984375,pb=.9399557113647461,lb=.9836282730102539,j5=function(e){var n,r,a,u,o;return i(e)?NaN:e===1?w:e===-1?V:e===0?e:e>1||e<-1?NaN:(e<0?(n=-1,r=-e):(n=1,r=e),a=1-r,r<=.5?(u=r*(r+10),o=ib(r),n*(u*fb+u*o)):a>=.25?(u=M(-2*p(a)),o=ub(a-=.25),n*(u/(cb+o))):(a=M(-p(a)))<3?(o=ob(a-1.125),n*(vb*a+o*a)):a<6?(o=sb(a-3),n*(pb*a+o*a)):(o=tb(a-6),n*(lb*a+o*a)))},O5=function(e,n,r){return i(n)||i(r)||i(e)||r<0||e<0||e>1?NaN:r===0?n:n+r*M(2)*j5(2*e-1)},Nb=u0.factory;c(O5,"factory",function(e,n){var r,a;return i(e)||i(n)||n<0?k(NaN):(n===0&&Nb(e),r=e,a=n*M(2),function(u){return i(u)||u<0||u>1?NaN:r+a*j5(2*u-1)})});var w1=O5,U5=function(e,n,r){return i(n)||i(r)||i(e)||r<=0||e<0||e>1?NaN:b(n+r*w1(e,0,1))};c(U5,"factory",function(e,n){return i(e)||i(n)||n<=0?k(NaN):function(r){return i(r)||r<0||r>1?NaN:b(e+n*w1(r,0,1))}});var R5=U5,L5=be.isPrimitive,_5=ge.isPrimitive;function cn(){var e,n;if(!(this instanceof cn))return arguments.length===0?new cn:new cn(arguments[0],arguments[1]);if(arguments.length){if(n=arguments[0],e=arguments[1],!_5(n)||sn(n))throw new TypeError("invalid argument. Location parameter `mu` must be a number primitive. Value: `"+n+"`");if(!L5(e))throw new TypeError("invalid argument. Scale parameter `sigma` must be a positive number. Value: `"+e+"`")}else n=0,e=1;return _(this,"mu",{configurable:!1,enumerable:!0,get:function(){return n},set:function(r){if(!_5(r)||sn(r))throw new TypeError("invalid value. Must be a number primitive. Value: `"+r+"`");n=r}}),_(this,"sigma",{configurable:!1,enumerable:!0,get:function(){return e},set:function(r){if(!L5(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");e=r}}),this}y(cn.prototype,"entropy",function(){return g5(this.mu,this.sigma)}),y(cn.prototype,"kurtosis",function(){return w5(this.mu,this.sigma)}),y(cn.prototype,"mean",function(){return k5(this.mu,this.sigma)}),y(cn.prototype,"median",function(){return E5(this.mu,this.sigma)}),y(cn.prototype,"mode",function(){return T5(this.mu,this.sigma)}),y(cn.prototype,"skewness",function(){return V5(this.mu,this.sigma)}),y(cn.prototype,"stdev",function(){return M5(this.mu,this.sigma)}),y(cn.prototype,"variance",function(){return q5(this.mu,this.sigma)}),c(cn.prototype,"cdf",function(e){return y5(e,this.mu,this.sigma)}),c(cn.prototype,"logpdf",function(e){return P5(e,this.mu,this.sigma)}),c(cn.prototype,"pdf",function(e){return A5(e,this.mu,this.sigma)}),c(cn.prototype,"quantile",function(e){return R5(e,this.mu,this.sigma)});var mb=cn,B5=function(e,n,r){var a;return i(e)||i(n)||i(r)||n<=0||r<0||r>1?NaN:e<0?0:e===w?1:(a=D(e+1e-7),ke(r,n,a+1))};c(B5,"factory",function(e,n){return i(e)||i(n)||e<=0||n<0||n>1?k(NaN):function(r){var a;return i(r)?NaN:r<0?0:r===w?1:(a=D(r+1e-7),ke(n,e,a+1))}});var er=B5,F5=function(e,n){return i(e)||i(n)||e<=0||n<0||n>1?NaN:6/e+n*n/((1-n)*e)},I5=function(e,n){return i(e)||i(n)?NaN:e<=0||n<0||n>1?NaN:(1-n)*e/n},C5=function(e,n){return i(e)||i(n)||e<=0||n<0||n>1?NaN:D((1-n)*(e-1)/n)},G5=function(e,n){return i(e)||i(n)||e<=0||n<0||n>1?NaN:(2-n)/M((1-n)*e)},K5=function(e,n){return i(e)||i(n)||e<=0||n<0||n>1?NaN:M((1-n)*e)/n},W5=function(e,n){return i(e)||i(n)||e<=0||n<0||n>1?NaN:(1-n)*e/(n*n)},hb=function(e,n,r,a,u){var o,f,l,v,m,g,d,h,E,T,q,P,O,x;if(!u)return N(r,e)*N(a,n);if(v=e+pe-.5,m=n+pe-.5,g=(O=e+n)+pe-.5,o=xe(O),o/=xe(e)*xe(n),o*=M(m/Tn),o*=M(v/g),h=(a*e-r*m)/m,Z(S(d=(r*n-a*v)/v),S(h))<.2)if(d*h>0||Z(e,n)<1)S(d)<.1?o*=b(e*R(d)):o*=N(r*g/v,e),S(h)<.1?o*=b(n*R(h)):o*=N(a*g/m,n);else if(ee(S(d),S(h))<.5)l=n/e,(f=e<n)&&l*h<.1||!f&&d/l>.1?(E=ve(l*R(h)),E=e*R(E=d+E+E*d),o*=b(E)):(E=ve(R(d)/l),E=n*R(E=h+E+E*h),o*=b(E));else if(S(d)<S(h))if((x=e*R(d)+n*p(a*g/m))<=H||x>=I){if((x+=p(o))>=I)return NaN;o=b(x)}else o*=b(x);else if((x=n*R(h)+e*p(r*g/v))<=H||x>=I){if((x+=p(o))>=I)return NaN;o=b(x)}else o*=b(x);else if(P=a*g/m,d=e*p(q=r*g/v),h=n*p(P),d>=I||d<=H||h>=I||h<=H)if(e<n)if(T=N(P,n/e),(E=e*(p(q)+p(T)))<I&&E>H)o*=N(T*q,e);else{if((h+=d+p(o))>=I)return NaN;o=b(h)}else if(T=N(q,e/n),(E=(p(T)+p(P))*n)<I&&E>H)o*=N(T*P,n);else{if((h+=d+p(o))>=I)return NaN;o=b(h)}else o*=N(q,e)*N(P,n);return o},H5=function(e,n,r){var a;return e===1?0:(a=hb(n,r,e,1-e,!0),a/=(1-e)*e)},D5=function(e,n,r){return i(e)||i(n)||i(r)||n<=0||r<=0||r>1?NaN:A(e)&&r!==0?p(r)-p(n+e)+p(H5(r,n,e+1)):V};c(D5,"factory",function(e,n){return i(e)||i(n)||e<=0||n<=0||n>1?k(NaN):function(r){return i(r)?NaN:A(r)?p(n)-p(e+r)+p(H5(n,e,r+1)):V}});var z5=D5,$5=function(e,n,r){return i(e)||i(n)||i(r)||n<=0||r<0||r>1||e>=-p(r)?NaN:N((1-r)*b(e)/(1-r*b(e)),n)};c($5,"factory",function(e,n){return i(e)||i(n)||e<=0||n<0||n>1?k(NaN):function(r){return r>=-p(n)?NaN:N((1-n)*b(r)/(1-n*b(r)),e)}});var J5=$5,db=function(e,n,r,a,u){var o,f,l,v,m,g,d,h,E,T,q,P,O,x;if(!u)return N(r,e)*N(a,n);if(v=e+pe-.5,m=n+pe-.5,g=(O=e+n)+pe-.5,o=xe(O),o/=xe(e)*xe(n),o*=M(m/Tn),o*=M(v/g),h=(a*e-r*m)/m,Z(S(d=(r*n-a*v)/v),S(h))<.2)if(d*h>0||Z(e,n)<1)S(d)<.1?o*=b(e*R(d)):o*=N(r*g/v,e),S(h)<.1?o*=b(n*R(h)):o*=N(a*g/m,n);else if(ee(S(d),S(h))<.5)l=n/e,(f=e<n)&&l*h<.1||!f&&d/l>.1?(E=ve(l*R(h)),E=e*R(E=d+E+E*d),o*=b(E)):(E=ve(R(d)/l),E=n*R(E=h+E+E*h),o*=b(E));else if(S(d)<S(h))if((x=e*R(d)+n*p(a*g/m))<=H||x>=I){if((x+=p(o))>=I)return NaN;o=b(x)}else o*=b(x);else if((x=n*R(h)+e*p(r*g/v))<=H||x>=I){if((x+=p(o))>=I)return NaN;o=b(x)}else o*=b(x);else if(P=a*g/m,d=e*p(q=r*g/v),h=n*p(P),d>=I||d<=H||h>=I||h<=H)if(e<n)if(T=N(P,n/e),(E=e*(p(q)+p(T)))<I&&E>H)o*=N(T*q,e);else{if((h+=d+p(o))>=I)return NaN;o=b(h)}else if(T=N(q,e/n),(E=(p(T)+p(P))*n)<I&&E>H)o*=N(T*P,n);else{if((h+=d+p(o))>=I)return NaN;o=b(h)}else o*=N(q,e)*N(P,n);return o},Z5=function(e,n,r){var a;return e===1?0:(a=db(n,r,e,1-e,!0),a/=(1-e)*e)},X5=function(e,n,r){return i(e)||i(n)||i(r)||n<=0||r<=0||r>1?NaN:A(e)&&r!==0?r/(n+e)*Z5(r,n,e+1):0};c(X5,"factory",function(e,n){return i(e)||i(n)||e<=0||n<=0||n>1?k(NaN):function(r){return i(r)?NaN:A(r)?n/(e+r)*Z5(n,e,r+1):0}});var Y5=X5,k1={left:function(e,n,r,a){for(;;){if(e===0||er(e-1,r,a)<n)return e;e-=1}},right:function(e,n,r,a){for(;;)if(er(e+=1,r,a)>=n)return e}},Q5=function(e,n,r){var a,u,o,f,l,v;return i(n)||i(r)||i(e)||n<=0||r<0||r>1||e<0||e>1?NaN:e===0?0:e===1?w:(f=n*(v=1-r)/r,a=1/(o=M(n*v)/r),l=e<.5?-Ee(2*e)*ne:Ee(2*(1-e))*ne,u=En(f+o*(l+a*(l*l-1)/6)),er(u,n,r)>=e?k1.left(u,e,n,r):k1.right(u,e,n,r))};c(Q5,"factory",function(e,n){var r,a,u,o;return i(e)||i(n)||e<=0||n<0||n>1?k(NaN):(u=e*(o=1-n)/n,a=M(e*o)/n,r=(2/n-1)/a,function(f){var l,v;return i(f)||f<0||f>1?NaN:f===0?0:f===1?w:(v=f<.5?-Ee(2*f)*ne:Ee(2*(1-f))*ne,l=En(u+a*(v+r*(v*v-1)/6)),er(l,e,n)>=f?k1.left(l,f,e,n):k1.right(l,f,e,n))})});var ef=Q5,nf=Gr.isPrimitive,rf=be.isPrimitive;function yn(){var e,n;if(!(this instanceof yn))return arguments.length===0?new yn:new yn(arguments[0],arguments[1]);if(arguments.length){if(e=arguments[0],n=arguments[1],!rf(e))throw new TypeError("invalid argument. Number of trials until experiment is stopped `r` must be a positive number. Value: `"+e+"`");if(!nf(n))throw new TypeError("invalid argument. Success probability `p` must be a number between 0 and 1. Value: `"+n+"`")}else e=1,n=.5;return _(this,"r",{configurable:!1,enumerable:!0,get:function(){return e},set:function(r){if(!rf(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");e=r}}),_(this,"p",{configurable:!1,enumerable:!0,get:function(){return n},set:function(r){if(!nf(r))throw new TypeError("invalid value. Must be a number between 0 and 1. Value: `"+r+"`");n=r}}),this}y(yn.prototype,"kurtosis",function(){return F5(this.r,this.p)}),y(yn.prototype,"mean",function(){return I5(this.r,this.p)}),y(yn.prototype,"mode",function(){return C5(this.r,this.p)}),y(yn.prototype,"skewness",function(){return G5(this.r,this.p)}),y(yn.prototype,"stdev",function(){return K5(this.r,this.p)}),y(yn.prototype,"variance",function(){return W5(this.r,this.p)}),c(yn.prototype,"cdf",function(e){return er(e,this.r,this.p)}),c(yn.prototype,"logpmf",function(e){return z5(e,this.r,this.p)}),c(yn.prototype,"mgf",function(e){return J5(e,this.r,this.p)}),c(yn.prototype,"pmf",function(e){return Y5(e,this.r,this.p)}),c(yn.prototype,"quantile",function(e){return ef(e,this.r,this.p)});var bb=yn,af=function(e,n){return i(e)||i(n)||n<=0?NaN:.5*p(Qn*Tn*n*n)},uf=function(e,n){return i(e)||i(n)||n<=0?NaN:0},of=function(e,n){return i(e)||i(n)||n<=0?NaN:e},sf=function(e,n){return i(e)||i(n)||n<=0?NaN:e},tf=function(e,n){return i(e)||i(n)||n<=0?NaN:e},ff=function(e,n){return i(e)||i(n)||n<=0?NaN:0},cf=function(e,n){return i(e)||i(n)||n<=0?NaN:n},vf=function(e,n){return i(e)||i(n)||n<=0?NaN:n*n},pf=function(e,n,r){var a;return i(e)||i(n)||i(r)||r<0?NaN:r===0?e===n?w:V:(a=N(r,2),-.5*(2*p(r)+g1)+-1/(2*a)*N(e-n,2))},yb=P0.factory;c(pf,"factory",function(e,n){var r,a,u;return i(e)||i(n)||n<0?k(NaN):n===0?yb(e):(r=N(n,2),a=-.5*(2*p(n)+g1),u=-1/(2*r),function(o){return a+u*N(o-e,2)})});var lf=pf,Nf=function(e,n,r){return i(e)||i(n)||i(r)||r<=0?NaN:b(n*e+.5*N(r*e,2))};c(Nf,"factory",function(e,n){return i(e)||i(n)||n<=0?k(NaN):function(r){return i(r)?NaN:b(e*r+.5*N(n*r,2))}});var mf=Nf,hf=function(e,n,r){var a;return i(e)||i(n)||i(r)||r<0?NaN:r===0?e===n?w:0:(a=N(r,2),1/M(a*Qn)*b(-1/(2*a)*N(e-n,2)))},gb=S0.factory;c(hf,"factory",function(e,n){var r,a,u;return i(e)||i(n)||n<0?k(NaN):n===0?gb(e):(r=N(n,2),a=1/M(r*Qn),u=-1/(2*r),function(o){return i(o)?NaN:a*b(u*N(o-e,2))})});var df=hf,bf=be.isPrimitive,yf=ge.isPrimitive;function Je(){var e,n;if(!(this instanceof Je))return arguments.length===0?new Je:new Je(arguments[0],arguments[1]);if(arguments.length){if(n=arguments[0],e=arguments[1],!yf(n)||sn(n))throw new TypeError("invalid argument. Location parameter `mu` must be a number primitive. Value: `"+n+"`");if(!bf(e))throw new TypeError("invalid argument. Scale parameter `sigma` must be a positive number. Value: `"+e+"`")}else n=0,e=1;return _(this,"mu",{configurable:!1,enumerable:!0,get:function(){return n},set:function(r){if(!yf(r)||sn(r))throw new TypeError("invalid value. Must be a number primitive. Value: `"+r+"`");n=r}}),_(this,"sigma",{configurable:!1,enumerable:!0,get:function(){return e},set:function(r){if(!bf(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");e=r}}),this}y(Je.prototype,"entropy",function(){return af(this.mu,this.sigma)}),y(Je.prototype,"kurtosis",function(){return uf(this.mu,this.sigma)}),y(Je.prototype,"mean",function(){return of(this.mu,this.sigma)}),y(Je.prototype,"median",function(){return sf(this.mu,this.sigma)}),y(Je.prototype,"mode",function(){return tf(this.mu,this.sigma)}),y(Je.prototype,"skewness",function(){return ff(this.mu,this.sigma)}),y(Je.prototype,"stdev",function(){return cf(this.mu,this.sigma)}),y(Je.prototype,"variance",function(){return vf(this.mu,this.sigma)}),c(Je.prototype,"cdf",function(e){return Q0(e,this.mu,this.sigma)}),c(Je.prototype,"logpdf",function(e){return lf(e,this.mu,this.sigma)}),c(Je.prototype,"mgf",function(e){return mf(e,this.mu,this.sigma)}),c(Je.prototype,"pdf",function(e){return df(e,this.mu,this.sigma)}),c(Je.prototype,"quantile",function(e){return w1(e,this.mu,this.sigma)});var wb=Je,gf=function(e,n,r){return i(e)||i(n)||i(r)||n<=0||r<=0?NaN:e<r?0:1-N(r/e,n)};c(gf,"factory",function(e,n){return i(e)||i(n)||e<=0||n<=0?k(NaN):function(r){return i(r)?NaN:r<n?0:1-N(n/r,e)}});var wf=gf,kf=function(e,n){return i(e)||e<=0||i(n)||n<=0?NaN:p(n/e*b(1+1/e))},Ef=function(e,n){var r;return i(e)||e<=4||i(n)||n<=0?NaN:(r=6*(N(e,3)+N(e,2)-6*e-2),r/=e*(e-3)*(e-4))},Tf=function(e,n){return e<=0||n<=0?NaN:e<=1?w:e*n/(e-1)},Vf=function(e,n){return e<=0||n<=0?NaN:n*N(2,1/e)},Mf=function(e,n){return i(e)||e<=0||i(n)||n<=0?NaN:n},qf=function(e,n){return i(e)||e<=3||i(n)||n<=0?NaN:2*(1+e)/(e-3)*M((e-2)/e)},xf=function(e,n){return i(e)||e<=0||i(n)||n<=0?NaN:e<2?w:n*n*e/(N(e-1,2)*(e-2))},Pf=function(e,n,r){return i(e)||i(n)||i(r)||n<=0||r<=0?NaN:e<r?V:R(-N(r/e,n))};c(Pf,"factory",function(e,n){return i(e)||i(n)||e<=0||n<=0?k(NaN):function(r){return i(r)?NaN:r<n?V:R(-N(n/r,e))}});var Sf=Pf,Af=function(e,n,r){return i(e)||i(n)||i(r)||n<=0||r<=0?NaN:e>=r?p(n)+n*p(r)-(n+1)*p(e):V};c(Af,"factory",function(e,n){var r;return i(e)||i(n)||e<=0||n<=0?k(NaN):(r=p(e)+e*p(n),function(a){return i(a)?NaN:a>=n?r-(e+1)*p(a):V})});var jf=Af,Of=function(e,n,r){return i(e)||i(n)||i(r)||n<=0||r<=0?NaN:e>=r?n*N(r,n)/N(e,n+1):0};c(Of,"factory",function(e,n){var r;return i(e)||i(n)||e<=0||n<=0?k(NaN):(r=e*N(n,e),function(a){var u;return i(a)?NaN:a>=n?(u=N(a,e+1),r/u):0})});var Uf=Of,Rf=function(e,n,r){return i(n)||i(r)||i(e)||n<=0||r<=0||e<0||e>1?NaN:r/N(1-e,1/n)};c(Rf,"factory",function(e,n){var r;return i(e)||i(n)||e<=0||n<=0?k(NaN):(r=1/e,function(a){return i(a)||a<0||a>1?NaN:n/N(1-a,r)})});var Lf=Rf,E1=be.isPrimitive;function vn(){var e,n;if(!(this instanceof vn))return arguments.length===0?new vn:new vn(arguments[0],arguments[1]);if(arguments.length){if(e=arguments[0],n=arguments[1],!E1(e))throw new TypeError("invalid argument. First shape parameter `alpha` must be a positive number. Value: `"+e+"`");if(!E1(n))throw new TypeError("invalid argument. Second shape parameter `beta` must be a positive number. Value: `"+n+"`")}else e=1,n=1;return _(this,"alpha",{configurable:!1,enumerable:!0,get:function(){return e},set:function(r){if(!E1(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");e=r}}),_(this,"beta",{configurable:!1,enumerable:!0,get:function(){return n},set:function(r){if(!E1(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");n=r}}),this}y(vn.prototype,"entropy",function(){return kf(this.alpha,this.beta)}),y(vn.prototype,"kurtosis",function(){return Ef(this.alpha,this.beta)}),y(vn.prototype,"mean",function(){return Tf(this.alpha,this.beta)}),y(vn.prototype,"median",function(){return Vf(this.alpha,this.beta)}),y(vn.prototype,"mode",function(){return Mf(this.alpha,this.beta)}),y(vn.prototype,"skewness",function(){return qf(this.alpha,this.beta)}),y(vn.prototype,"variance",function(){return xf(this.alpha,this.beta)}),c(vn.prototype,"cdf",function(e){return wf(e,this.alpha,this.beta)}),c(vn.prototype,"logcdf",function(e){return Sf(e,this.alpha,this.beta)}),c(vn.prototype,"logpdf",function(e){return jf(e,this.alpha,this.beta)}),c(vn.prototype,"pdf",function(e){return Uf(e,this.alpha,this.beta)}),c(vn.prototype,"quantile",function(e){return Lf(e,this.alpha,this.beta)});var kb=vn,Eb=function(e,n){var r;return i(e)||e<=0||i(n)||n<=0?NaN:e<2?w:(r=n*n*e/(N(e-1,2)*(e-2)),M(r))},_f=function(e,n){return i(e)||i(n)||n<0?NaN:e<0?0:n===0||e===w?1:Kn(n,D(e)+1,!0,!0)},Tb=o0.factory;c(_f,"factory",function(e){return i(e)||e<0?k(NaN):e===0?Tb(0):function(n){return i(n)?NaN:n<0?0:n===w?1:Kn(e,D(n)+1,!0,!0)}});var nr=_f,Bf=function(e){var n,r;return i(e)||e<0?NaN:e===0?0:(n=function(a){var u,o;return o=1,u=a,function(){return(u*=a)*z(o+=1)/mr(o)}}(e),r=e*(1-p(e)),r+=b(-e)*zr(n))},Ff=function(e){return i(e)||e<=0?NaN:1/e},If=function(e){return i(e)||e<0?NaN:e},Cf=function(e){return i(e)||e<0?NaN:e===0?0:D(e+1/3-.02/e)},Gf=function(e){return i(e)||e<0?NaN:D(e)},Kf=function(e){return i(e)||e<=0?NaN:1/M(e)},Wf=function(e){return i(e)||e<0?NaN:M(e)},Hf=function(e){return i(e)||e<0?NaN:e},Df=function(e,n){return i(e)||i(n)||n<0?NaN:n===0?e===0?0:V:A(e)&&e!==w?e*p(n)-n-z(e):V},Vb=u1.factory;c(Df,"factory",function(e){return i(e)||e<0?k(NaN):e===0?Vb(0):function(n){return i(n)?NaN:A(n)&&n!==w?n*p(e)-e-z(n):V}});var zf=Df,$f=function(e,n){return i(e)||i(n)||n<=0?NaN:b(n*(b(e)-1))};c($f,"factory",function(e){return i(e)||e<=0?k(NaN):function(n){return b(e*(b(n)-1))}});var Jf=$f,Zf=function(e,n){var r;return i(e)||i(n)||n<0?NaN:n===0?e===0?1:0:A(e)&&e!==w?(r=e*p(n)-n-z(e),b(r)):0},Mb=o1.factory;c(Zf,"factory",function(e){return i(e)||e<0?k(NaN):e===0?Mb(0):function(n){var r;return i(n)?NaN:A(n)&&n!==w?(r=n*p(e)-e-z(n),b(r)):0}});var Xf=Zf,T1={left:function(e,n,r){for(;;){if(e===0||nr(e-1,r)<n)return e;e-=1}},right:function(e,n,r){for(;;)if(nr(e+=1,r)>=n)return e}},Yf=function(e,n){var r,a,u,o;return i(n)||n<0?NaN:i(e)||e<0||e>1?NaN:n===0||e===0?0:e===1?w:(r=1/(u=M(n)),o=e<.5?-Ee(2*e)*ne:Ee(2*(1-e))*ne,a=En(n+u*(o+r*(o*o-1)/6)),nr(a,n)>=e?T1.left(a,e,n):T1.right(a,e,n))},qb=u0.factory;c(Yf,"factory",function(e){var n,r;return i(e)||e<0?k(NaN):e===0?qb(0):(r=M(e),n=1/r,function(a){var u,o;return i(a)||a<0||a>1?NaN:a===0?0:a===1?w:(o=a<.5?-Ee(2*a)*ne:Ee(2*(1-a))*ne,u=En(e+r*(o+n*(o*o-1)/6)),nr(u,e)>=a?T1.left(u,a,e):T1.right(u,a,e))})});var Qf=Yf,e7=be.isPrimitive;function Ze(){var e;if(!(this instanceof Ze))return arguments.length===0?new Ze:new Ze(arguments[0]);if(arguments.length){if(e=arguments[0],!e7(e))throw new TypeError("invalid argument. Mean parameter `lambda` must be a positive number. Value: `"+e+"`")}else e=1;return _(this,"lambda",{configurable:!1,enumerable:!0,get:function(){return e},set:function(n){if(!e7(n))throw new TypeError("invalid value. Must be a positive number. Value: `"+n+"`");e=n}}),this}y(Ze.prototype,"entropy",function(){return Bf(this.lambda)}),y(Ze.prototype,"kurtosis",function(){return Ff(this.lambda)}),y(Ze.prototype,"mean",function(){return If(this.lambda)}),y(Ze.prototype,"median",function(){return Cf(this.lambda)}),y(Ze.prototype,"mode",function(){return Gf(this.lambda)}),y(Ze.prototype,"skewness",function(){return Kf(this.lambda)}),y(Ze.prototype,"stdev",function(){return Wf(this.lambda)}),y(Ze.prototype,"variance",function(){return Hf(this.lambda)}),c(Ze.prototype,"cdf",function(e){return nr(e,this.lambda)}),c(Ze.prototype,"logpmf",function(e){return zf(e,this.lambda)}),c(Ze.prototype,"mgf",function(e){return Jf(e,this.lambda)}),c(Ze.prototype,"pmf",function(e){return Xf(e,this.lambda)}),c(Ze.prototype,"quantile",function(e){return Qf(e,this.lambda)});var xb=Ze,n7=function(e,n){var r;return i(e)||i(n)||n<0?NaN:n===0?e<0?0:1:e<0?0:(r=N(n,2),1-b(-N(e,2)/(2*r)))},Pb=o0.factory;c(n7,"factory",function(e){var n;return i(e)||e<0?k(NaN):e===0?Pb(0):(n=N(e,2),function(r){return i(r)?NaN:r<0?0:1-b(-N(r,2)/(2*n))})});var r7=n7,a7=function(e){return i(e)||e<=0?NaN:1+p(e/ne)+.5*k0},Sb=-(6*F*F-24*F+16)/((4-F)*(4-F)),i7=function(e){return i(e)||e<0?NaN:Sb},qa=1.2533141373155003,u7=function(e){return i(e)||e<0?NaN:e*qa},Ab=M(2*me),o7=function(e){return i(e)||e<0?NaN:e*Ab},s7=function(e){return i(e)||e<0?NaN:e},jb=3.544907701811032*(F-3)/N(4-F,1.5),t7=function(e){return i(e)||e<0?NaN:jb},Ob=M(4-F),f7=function(e){return i(e)||e<0?NaN:Ob*e/ne},c7=function(e){return i(e)||e<0?NaN:(4-F)*e*e/2},v7=function(e,n){var r,a;return i(e)||i(n)||n<0?NaN:n===0?e<0?V:0:e<0?V:(r=N(n,2),(a=-N(e,2)/(2*r))<zn?R(-b(a)):p(-ve(a)))},Ub=X0.factory;c(v7,"factory",function(e){var n;return i(e)||e<0?k(NaN):e===0?Ub(0):(n=N(e,2),function(r){var a;return i(r)?NaN:r<0?V:(a=-N(r,2)/(2*n))<zn?R(-b(a)):p(-ve(a))})});var p7=v7,l7=function(e,n){var r;return i(e)||i(n)||n<0?NaN:n===0?e===0?w:V:e<0||e===w?V:(r=N(n,2),p(1/r*e)-N(e,2)/(2*r))},Rb=P0.factory;c(l7,"factory",function(e){var n,r;return i(e)||e<0?k(NaN):e===0?Rb(0):(r=N(e,2),n=1/r,function(a){return i(a)?NaN:a<0||a===w?V:p(n*a)-N(a,2)/(2*r)})});var N7=l7,m7=1e-300,Lb=2848094538889218e-321,_b=3725290298461914e-24,h7=.8450629115104675,Bb=.1283791670955126,Fb=1.0270333367641007,Ib=.12837916709551256,Cb=1,Gb=-.0023621185607526594,Kb=1,Wb=-.009864944034847148,Hb=1,Db=-.0098649429247001,zb=1,d7=function(e){var n,r,a,u,o,f,l;return i(e)?NaN:e===w?1:e===V?-1:e===0?e:(e<0?(n=!0,r=-e):(n=!1,r=e),r<.84375?r<_b?r<Lb?.125*(8*e+Fb*e):e+Bb*e:e+e*((u=Ib+(a=e*e)*_p(a))/(o=Cb+a*Fp(a))):r<1.25?(f=Gb+(o=r-1)*Cp(o),l=Kb+o*Kp(o),n?-h7-f/l:h7+f/l):r>=6?n?m7-1:1-m7:(o=1/(r*r),r<2.857142857142857?(u=Wb+o*Hp(o),o=Hb+o*zp(o)):(u=Db+o*Jp(o),o=zb+o*Xp(o)),a=An(r,0),u=b(-a*a-.5625)*b((a-r)*(a+r)+u/o),n?u/r-1:1-u/r))},b7=function(e,n){var r,a;return i(e)||i(n)||n<0?NaN:(a=1+(r=e*n)*b(r*r/2),a*=qa*(d7(r/ne)+1))};c(b7,"factory",function(e){return i(e)||e<0?k(NaN):function(n){var r,a;return i(n)?NaN:(a=1+(r=n*e)*b(r*r/2),a*=qa*(d7(r/ne)+1))}});var y7=b7,g7=function(e,n){var r;return i(e)||i(n)||n<0?NaN:n===0?e===0?w:0:e<0||e===w?0:1/(r=N(n,2))*e*b(-N(e,2)/(2*r))},$b=S0.factory;c(g7,"factory",function(e){var n,r;return i(e)||e<0?k(NaN):e===0?$b(0):(r=N(e,2),n=1/r,function(a){return i(a)?NaN:a<0||a===w?0:n*a*b(-N(a,2)/(2*r))})});var w7=g7,k7=function(e,n){return i(n)||n<0?NaN:i(e)||e<0||e>1?NaN:n===0?0:M(n*n*-2*R(-e))},Jb=u0.factory;c(k7,"factory",function(e){var n;return i(e)||e<0?k(NaN):e===0?Jb(0):(n=e*e,function(r){return i(r)||r<0||r>1?NaN:M(-2*n*R(-r))})});var E7=k7,T7=be.isPrimitive;function Fe(){var e;if(!(this instanceof Fe))return arguments.length===0?new Fe:new Fe(arguments[0]);if(arguments.length){if(e=arguments[0],!T7(e))throw new TypeError("invalid argument. Scale parameter `sigma` must be a positive number. Value: `"+e+"`")}else e=1;return _(this,"sigma",{configurable:!1,enumerable:!0,get:function(){return e},set:function(n){if(!T7(n))throw new TypeError("invalid value. Must be a positive number. Value: `"+n+"`");e=n}}),this}y(Fe.prototype,"entropy",function(){return a7(this.sigma)}),y(Fe.prototype,"kurtosis",function(){return i7(this.sigma)}),y(Fe.prototype,"mean",function(){return u7(this.sigma)}),y(Fe.prototype,"median",function(){return o7(this.sigma)}),y(Fe.prototype,"mode",function(){return s7(this.sigma)}),y(Fe.prototype,"skewness",function(){return t7(this.k,this.sigma)}),y(Fe.prototype,"stdev",function(){return f7(this.sigma)}),y(Fe.prototype,"variance",function(){return c7(this.sigma)}),c(Fe.prototype,"cdf",function(e){return r7(e,this.sigma)}),c(Fe.prototype,"logcdf",function(e){return p7(e,this.sigma)}),c(Fe.prototype,"logpdf",function(e){return N7(e,this.sigma)}),c(Fe.prototype,"mgf",function(e){return y7(e,this.sigma)}),c(Fe.prototype,"pdf",function(e){return w7(e,this.sigma)}),c(Fe.prototype,"quantile",function(e){return E7(e,this.sigma)});var Zb=Fe,rr=function(e){return e==e&&e>V&&e<w},Xb=/./,V7=function(e){return typeof e=="boolean"},Yb=fe(),M7=function(e){return typeof e=="object"&&(e instanceof Boolean||(Yb?_n(e):en(e)==="[object Boolean]"))},xa=function(e){return V7(e)||M7(e)};c(xa,"isPrimitive",V7),c(xa,"isObject",M7);var Qb=xa,ey=function(){return new Function("return this;")()},q7=typeof self=="object"?self:null,x7=typeof window=="object"?window:null,Pa={};(function(e){(function(){Pa=typeof e=="object"?e:null}).call(this)}).call(this,typeof vc<"u"?vc:typeof self<"u"?self:typeof window<"u"?window:{});var ny=Qb.isPrimitive,P7=function(e){if(arguments.length){if(!ny(e))throw new TypeError("invalid argument. Must provide a boolean primitive. Value: `"+e+"`.");if(e)return ey()}if(q7)return q7;if(x7)return x7;if(Pa)return Pa;throw new Error("unexpected error. Unable to resolve global object.")}(),ry=P7.document&&P7.document.childNodes,ay=Int8Array,iy=function(){return typeof Xb=="function"||typeof ay=="object"||typeof ry=="function"},Sa=function(){return/^\s*function\s*([^(]*)/i},uy=Sa();c(Sa,"REGEXP",uy);var oy=Sa,sy=Array.isArray?Array.isArray:function(e){return en(e)==="[object Array]"},Aa=function(e){return e!==null&&typeof e=="object"};c(Aa,"isObjectLikeArray",function(e){if(typeof e!="function")throw new TypeError("invalid argument. Must provide a function. Value: `"+e+"`.");return function(n){var r,a;if(!sy(n)||(r=n.length)===0)return!1;for(a=0;a<r;a++)if(e(n[a])===!1)return!1;return!0}}(Aa));var ty=Aa,fy=function(e){return ty(e)&&(e._isBuffer||e.constructor&&typeof e.constructor.isBuffer=="function"&&e.constructor.isBuffer(e))},cy=oy.REGEXP,S7=function(e){var n,r,a;if(((r=en(e).slice(8,-1))==="Object"||r==="Error")&&e.constructor){if(typeof(a=e.constructor).name=="string")return a.name;if(n=cy.exec(a.toString()))return n[1]}return fy(e)?"Buffer":r},vy=function(e){var n;return e===null?"null":(n=typeof e)=="object"?S7(e).toLowerCase():n},py=function(e){return S7(e).toLowerCase()},ly=iy()?py:vy,A7=function(e){return ly(e)==="function"},Ny=function(e){return e},ja,Oa=function(e,n){var r,a;if(!A7(e))throw new TypeError("invalid argument. First argument must be a function. Value: `"+e+"`.");if(arguments.length<2)r=Ny;else if(!A7(r=n))throw new TypeError("invalid argument. Hash function argument must be a function. Value: `"+r+"`.");return c(u,"cache",a={}),u;function u(){var o,f,l,v;for(o=new Array(arguments.length),v=0;v<arguments.length;v++)o[v]=arguments[v];return l=r(o).toString(),Qe(a,l)?a[l]:(f=e.apply(null,o),a[l]=f,f)}},j7=ja=Oa(function(e,n){var r;return n===0?e===0?1:0:(r=n*(n+1)/2,e<0||e>r?0:(e>r/2&&(e=r-e),ja(e-n,n-1)+ja(e,n-1)))}),O7=function(e,n){var r,a,u;if(i(e)||!Mn(n)||!rr(n))return NaN;if(e<0)return 0;if((e=En(e))>=n*(n+1)/2)return 1;for(r=b(-n*me),u=0,a=0;a<=e;a++)u+=j7(a,n)*r;return u};c(O7,"factory",function(e){var n,r;return Mn(e)&&rr(e)?(r=b(-e*me),n=e*(e+1)/2,function(a){var u,o;if(i(a))return NaN;if(a<0)return 0;if((a=En(a))>=n)return 1;for(o=0,u=0;u<=a;u++)o+=j7(u,e)*r;return o}):k(NaN)});var Ua,my=O7,U7=Ua=Oa(function(e,n){var r;return n===0?e===0?1:0:(r=n*(n+1)/2,e<0||e>r?0:(e>r/2&&(e=r-e),Ua(e-n,n-1)+Ua(e,n-1)))}),R7=function(e,n){return!i(e)&&Mn(n)&&rr(n)?e<0||e>n*(n+1)/2?0:b(p(U7(e,n))-n*me):NaN};c(R7,"factory",function(e){var n;return Mn(e)&&rr(e)?(n=e*(e+1)/2,function(r){return i(r)?NaN:r<0||r>n?0:b(p(U7(r,e))-e*me)}):k(NaN)});var Ra,hy=R7,L7=Ra=Oa(function(e,n){var r;return n===0?e===0?1:0:(r=n*(n+1)/2,e<0||e>r?0:(e>r/2&&(e=r-e),Ra(e-n,n-1)+Ra(e,n-1)))}),_7=function(e,n){var r,a,u;if(i(n)||!Mn(n)||!rr(n))return NaN;if(i(e)||e<0||e>1)return NaN;if(e===0)return 0;if(e===1)return n*(n+1)/2;for(r=b(-n*me),u=0,a=-1;u<e;)u+=r*L7(a+=1,n);return a};c(_7,"factory",function(e){var n;return!i(e)&&Mn(e)&&rr(e)?(n=b(-e*me),function(r){var a,u;if(i(r)||r<0||r>1)return NaN;if(r===0)return 0;if(r===1)return e*(e+1)/2;for(a=0,u=-1;a<r;)a+=n*L7(u+=1,e);return u}):k(NaN)});var dy=_7,B7=function(e,n){var r,a;return i(e)||i(n)||n<=0?NaN:e===0?.5:(a=n>2*(r=N(e,2))?ke(r/(n+r),.5,n/2,!0,!0)/2:ke(n/(n+r),n/2,.5,!0,!1)/2,e>0?1-a:a)};c(B7,"factory",function(e){return i(e)||e<=0?k(NaN):function(n){var r,a;return i(n)?NaN:n===0?.5:(r=N(n,2),a=e>2*r?ke(r/(e+r),.5,e/2,!0,!0)/2:ke(e/(e+r),e/2,.5,!0,!1)/2,n>0?1-a:a)}});var F7=B7,I7=function(e){var n,r;return i(e)||e<=0?NaN:(r=e/2,n=(e+1)/2,n*=Vn((1+e)/2)-Vn(r),n+=p(M(e)*X(r,.5)))},C7=function(e){return i(e)||e<=2?NaN:e<=4?w:6/(e-4)},G7=function(e){return i(e)||e<=1?NaN:0},K7=function(e){return i(e)||e<0?NaN:0},W7=function(e){return i(e)||e<0?NaN:0},H7=function(e){return i(e)||e<=3?NaN:0},D7=function(e){return i(e)||e<=1?NaN:e<=2?w:M(e/(e-2))},z7=function(e){return i(e)||e<=1?NaN:e<=2?w:e/(e-2)},$7=function(e,n){var r,a;return i(e)||i(n)||n<=0?NaN:e===0?zn:(a=n>2*(r=N(e,2))?ke(r/(n+r),.5,n/2,!0,!0)/2:ke(n/(n+r),n/2,.5,!0,!1)/2,e>0?R(-a):p(a))};c($7,"factory",function(e){return i(e)||e<=0?k(NaN):function(n){var r,a;return i(n)?NaN:n===0?zn:(r=N(n,2),a=e>2*r?ke(r/(e+r),.5,e/2,!0,!0)/2:ke(e/(e+r),e/2,.5,!0,!1)/2,n>0?R(-a):p(a))}});var J7=$7,Z7=function(e,n){var r;return i(e)||i(n)||n<=0?NaN:(r=p(M(n))+Hn(n/2,.5),(1+n)/2*p(n/(n+N(e,2)))-r)};c(Z7,"factory",function(e){var n,r;return i(e)||e<=0?k(NaN):(r=p(M(e))+Hn(e/2,.5),n=(1+e)/2,function(a){return i(a)?NaN:n*p(e/(e+N(a,2)))-r})});var X7=Z7,Y7=function(e,n){var r;return i(e)||i(n)||n<=0?NaN:(r=M(n)*X(n/2,.5),N(n/(n+N(e,2)),(1+n)/2)/r)};c(Y7,"factory",function(e){var n,r;return i(e)||e<=0?k(NaN):(r=M(e)*X(e/2,.5),n=(1+e)/2,function(a){return i(a)?NaN:N(e/(e+N(a,2)),n)/r})});var Q7=Y7,e8=function(e,n){var r,a;return i(n)||i(e)||n<=0||e<0||e>1?NaN:(a=D0(n/2,.5,2*(r=e>.5?1-e:e),1-2*r),e0(e-.5)*M(n*a[1]/a[0]))};c(e8,"factory",function(e){return i(e)||e<=0?k(NaN):function(n){var r,a;return i(n)||n<0||n>1?NaN:(a=D0(e/2,.5,2*(r=n>.5?1-n:n),1-2*r),e0(n-.5)*M(e*a[1]/a[0]))}});var n8=e8,r8=be.isPrimitive;function Xe(){var e;if(!(this instanceof Xe))return arguments.length===0?new Xe:new Xe(arguments[0]);if(arguments.length){if(e=arguments[0],!r8(e))throw new TypeError("invalid argument. Rate parameter `v` must be a positive number. Value: `"+e+"`")}else e=1;return _(this,"v",{configurable:!1,enumerable:!0,get:function(){return e},set:function(n){if(!r8(n))throw new TypeError("invalid value. Must be a positive number. Value: `"+n+"`");e=n}}),this}y(Xe.prototype,"entropy",function(){return I7(this.v)}),y(Xe.prototype,"kurtosis",function(){return C7(this.v)}),y(Xe.prototype,"mean",function(){return G7(this.v)}),y(Xe.prototype,"median",function(){return K7(this.v)}),y(Xe.prototype,"mode",function(){return W7(this.v)}),y(Xe.prototype,"skewness",function(){return H7(this.v)}),y(Xe.prototype,"stdev",function(){return D7(this.v)}),y(Xe.prototype,"variance",function(){return z7(this.v)}),c(Xe.prototype,"cdf",function(e){return F7(e,this.v)}),c(Xe.prototype,"logcdf",function(e){return J7(e,this.v)}),c(Xe.prototype,"logpdf",function(e){return X7(e,this.v)}),c(Xe.prototype,"pdf",function(e){return Q7(e,this.v)}),c(Xe.prototype,"quantile",function(e){return n8(e,this.v)});var by=Xe,a8=function(e,n,r,a){var u,o;return i(e)||i(n)||i(r)||i(a)||n>a||a>r?NaN:e<=n?0:(u=(r-n)*(a-n),o=(r-n)*(r-a),e<=a?N(e-n,2)/u:e<r?1-N(r-e,2)/o:1)};c(a8,"factory",function(e,n,r){var a,u;return i(e)||i(n)||i(r)?k(NaN):e<=r&&r<=n?(a=(n-e)*(r-e),u=(n-e)*(n-r),function(o){return i(o)?NaN:o<=e?0:o<=r?N(o-e,2)/a:o<n?1-N(n-o,2)/u:1}):k(NaN)});var i8=a8,u8=function(e,n,r){return i(e)||i(n)||i(r)||!(e<=r&&r<=n)?NaN:.5+p(.5*(n-e))},o8=function(e,n,r){return i(e)||i(n)||i(r)||!(e<=r&&r<=n)?NaN:-.6},s8=function(e,n,r){return i(e)||i(n)||i(r)||!(e<=r&&r<=n)?NaN:(e+n+r)/3},t8=function(e,n,r){return i(e)||i(n)||i(r)||!(e<=r&&r<=n)?NaN:r>=(e+n)/2?e+M(.5*(n-e)*(r-e)):n-M(.5*(n-e)*(n-r))},f8=function(e,n,r){return i(e)||i(n)||i(r)||!(e<=r&&r<=n)?NaN:r},c8=function(e,n,r){var a;return i(e)||i(n)||i(r)||!(e<=r&&r<=n)?NaN:(a=ne*(e+n-2*r)*(2*e-n-r)*(e-2*n+r),a/=5*N(e*e+n*n+r*r-e*n-e*r-n*r,1.5))},v8=function(e,n,r){return i(e)||i(n)||i(r)||!(e<=r&&r<=n)?NaN:M((e*e+n*n+r*r-e*n-e*r-n*r)/18)},p8=function(e,n,r){return i(e)||i(n)||i(r)||!(e<=r&&r<=n)?NaN:(e*e+n*n+r*r-e*n-e*r-n*r)/18},l8=function(e,n,r,a){var u,o;return i(e)||i(n)||i(r)||i(a)||n>a||a>r?NaN:e<=n?V:(u=(r-n)*(a-n),o=(r-n)*(r-a),e<=a?2*p(e-n)-p(u):e<r?p(1-N(r-e,2)/o):0)};c(l8,"factory",function(e,n,r){var a,u;return i(e)||i(n)||i(r)?k(NaN):e<=r&&r<=n?(a=(n-e)*(r-e),u=(n-e)*(n-r),function(o){return i(o)?NaN:o<=e?V:o<=r?2*p(o-e)-p(a):o<n?p(1-N(n-o,2)/u):0}):k(NaN)});var N8=l8,m8=function(e,n,r,a){var u,o,f;return i(e)||i(n)||i(r)||i(a)||n>a||a>r?NaN:e<n?V:(u=p(r-n)+p(a-n),o=p(r-n),f=p(r-n)+p(r-a),e<a?me+p(e-n)-u:e===a?me-o:e<=r?me+p(r-e)-f:V)};c(m8,"factory",function(e,n,r){var a,u,o;return i(e)||i(n)||i(r)||e>r||r>n?k(NaN):(a=p(n-e)+p(r-e),u=p(n-e),o=p(n-e)+p(n-r),function(f){return i(f)?NaN:f<e?V:f<r?me+p(f-e)-a:f===r?me-u:f<=n?me+p(n-f)-o:V})});var h8=m8,d8=function(e,n,r,a){var u,o,f,l;return i(e)||i(n)||i(r)||i(a)||n>a||a>r?NaN:e===0?1:(o=r-n,f=a-n,l=(u=r-a)*b(n*e)-o*b(a*e),l+=f*b(r*e),l*=2,l/=o*f*u*N(e,2))};c(d8,"factory",function(e,n,r){var a,u,o;return i(e)||i(n)||i(r)||e>r||r>n?k(NaN):(a=n-r,u=n-e,o=r-e,function(f){var l;return i(f)?NaN:f===0?1:(l=a*b(e*f)-u*b(r*f),l+=o*b(n*f),l*=2,l/=u*o*a*N(f,2))})});var b8=d8,y8=function(e,n,r,a){return i(e)||i(n)||i(r)||i(a)||n>a||a>r?NaN:e<n?0:e<a?2*(e-n)/((r-n)*(a-n)):e===a?2/(r-n):e<=r?2*(r-e)/((r-n)*(r-a)):0};c(y8,"factory",function(e,n,r){var a,u,o;return i(e)||i(n)||i(r)||e>r||r>n?k(NaN):(a=(n-e)*(r-e),u=n-e,o=(n-e)*(n-r),function(f){return i(f)?NaN:f<e?0:f<r?2*(f-e)/a:f===r?2/u:f<=n?2*(n-f)/o:0})});var g8=y8,w8=function(e,n,r,a){var u,o;return i(e)||i(n)||i(r)||i(a)||n>a||a>r||e<0||e>1?NaN:(o=(r-n)*(r-a),e<(u=(a-n)/(r-n))?n+M((r-n)*(a-n)*e):e>u?r-M(o*(1-e)):a)};c(w8,"factory",function(e,n,r){var a,u,o;return i(e)||i(n)||i(r)||e>r||r>n?k(NaN):(a=(r-e)/(n-e),u=(n-e)*(r-e),o=(n-e)*(n-r),function(f){return i(f)||f<0||f>1?NaN:f<a?e+M(u*f):f>a?n-M(o*(1-f)):r})});var k8=w8,ar=ge.isPrimitive;function Ie(){var e,n,r;if(!(this instanceof Ie))return arguments.length===0?new Ie:new Ie(arguments[0],arguments[1],arguments[2]);if(arguments.length){if(e=arguments[0],n=arguments[1],r=arguments[2],!ar(e)||i(e))throw new TypeError("invalid argument. Minimum support `a` must be a number primitive. Value: `"+e+"`");if(!ar(n)||i(n))throw new TypeError("invalid argument. Maximum support `b` must be a number primitive. Value: `"+n+"`");if(!ar(r)||i(r))throw new TypeError("invalid argument. Mode `c` must be a number primitive. Value: `"+r+"`");if(!(e<=r&&r<=n))throw new RangeError("invalid arguments. Parameters must satisfy `a <= c <= b`. Value: `"+e+","+n+","+r+"`")}else e=0,n=1,r=.5;return _(this,"a",{configurable:!1,enumerable:!0,get:function(){return e},set:function(a){if(!ar(a)||i(a))throw new TypeError("invalid value. Must be a number primitive. Value: `"+a+"`");if(a>n||a>r)throw new RangeError("invalid value. Must be smaller than or equal to `b` and `c`. Value: `"+a+"`");e=a}}),_(this,"b",{configurable:!1,enumerable:!0,get:function(){return n},set:function(a){if(!ar(a)||i(a))throw new TypeError("invalid value. Must be a number primitive. Value: `"+a+"`");if(e>a||r>a)throw new RangeError("invalid value. Must be greater than or equal to `a` and `c`. Value: `"+a+"`");n=a}}),_(this,"c",{configurable:!1,enumerable:!0,get:function(){return r},set:function(a){if(!ar(a)||i(a))throw new TypeError("invalid value. Must be a number primitive. Value: `"+a+"`");if(e>a||n<a)throw new RangeError("invalid value. Must be greater than or equal to `a` and smaller than or equal to `b`. Value: `"+a+"`");r=a}}),this}y(Ie.prototype,"entropy",function(){return u8(this.a,this.b,this.c)}),y(Ie.prototype,"kurtosis",function(){return o8(this.a,this.b,this.c)}),y(Ie.prototype,"mean",function(){return s8(this.a,this.b,this.c)}),y(Ie.prototype,"median",function(){return t8(this.a,this.b,this.c)}),y(Ie.prototype,"mode",function(){return f8(this.a,this.b,this.c)}),y(Ie.prototype,"skewness",function(){return c8(this.a,this.b,this.c)}),y(Ie.prototype,"stdev",function(){return v8(this.a,this.b,this.c)}),y(Ie.prototype,"variance",function(){return p8(this.a,this.b,this.c)}),c(Ie.prototype,"cdf",function(e){return i8(e,this.a,this.b,this.c)}),c(Ie.prototype,"logcdf",function(e){return N8(e,this.a,this.b,this.c)}),c(Ie.prototype,"logpdf",function(e){return h8(e,this.a,this.b,this.c)}),c(Ie.prototype,"mgf",function(e){return b8(e,this.a,this.b,this.c)}),c(Ie.prototype,"pdf",function(e){return g8(e,this.a,this.b,this.c)}),c(Ie.prototype,"quantile",function(e){return k8(e,this.a,this.b,this.c)});var yy=Ie,E8=(0,Q0.factory)(0,1),T8=function(e,n,r,a,u){var o,f,l,v;return i(e)||i(n)||i(r)||u<=0||n>=r?NaN:e<n||e>r?0:(o=2*N(u,2),f=1/M(o*F),l=-1/o,v=E8((r-a)/u)-E8((n-a)/u),f*b(l*N(e-a,2))/v)},V8=(0,Q0.factory)(0,1);c(T8,"factory",function(e,n,r,a){var u,o,f,l;return i(e)||i(n)||i(r)||i(a)||a<=0||e>=n?k(NaN):(u=2*N(a,2),o=1/M(u*F),f=-1/u,l=V8((n-r)/a)-V8((e-r)/a),function(v){return i(v)?NaN:v<e||v>n?0:o*b(f*N(v-r,2))/l})});var gy=T8,M8=function(e,n,r){return i(e)||i(n)||i(r)||n>=r?NaN:e<n?0:e>=r?1:(e-n)/(r-n)};c(M8,"factory",function(e,n){return i(e)||i(n)||e>=n?k(NaN):function(r){return i(r)?NaN:r<e?0:r>=n?1:(r-e)/(n-e)}});var q8=M8,x8=function(e,n){return e>=n?NaN:p(n-e)},P8=function(e,n){return i(e)||i(n)||e>=n?NaN:-1.2},S8=function(e,n){return e>=n?NaN:.5*(e+n)},A8=function(e,n){return e>=n?NaN:.5*(e+n)},j8=function(e,n){return i(e)||i(n)||e>=n?NaN:0},wy=M(1/12),O8=function(e,n){return e>=n?NaN:wy*(n-e)},U8=function(e,n){return e>=n?NaN:1/12*N(n-e,2)},R8=function(e,n,r){return i(e)||i(n)||i(r)||n>=r?NaN:e<n?V:e>=r?0:p((e-n)/(r-n))};c(R8,"factory",function(e,n){return i(e)||i(n)||e>=n?k(NaN):function(r){return i(r)?NaN:r<e?V:r>=n?0:p((r-e)/(n-e))}});var L8=R8,_8=function(e,n,r){return i(e)||i(n)||i(r)||n>=r?NaN:e<n||e>r?V:-p(r-n)};c(_8,"factory",function(e,n){return i(e)||i(n)||e>=n?k(NaN):function(r){return i(r)?NaN:r<e||r>n?V:-p(n-e)}});var B8=_8,F8=function(e,n,r){var a;return i(e)||i(n)||i(r)||n>=r?NaN:e===0?1:(a=b(e*r)-b(e*n),a/=e*(r-n))};c(F8,"factory",function(e,n){return i(e)||i(n)||e>=n?k(NaN):function(r){var a;return i(r)?NaN:r===0?1:(a=b(r*n)-b(r*e),a/=r*(n-e))}});var I8=F8,C8=function(e,n,r){return i(e)||i(n)||i(r)||n>=r?NaN:e<n||e>r?0:1/(r-n)};c(C8,"factory",function(e,n){return i(e)||i(n)||e>=n?k(NaN):function(r){return i(r)?NaN:r<e||r>n?0:1/(n-e)}});var G8=C8,K8=function(e,n,r){return i(n)||i(r)||n>=r?NaN:i(e)||e<0||e>1?NaN:n+e*(r-n)};c(K8,"factory",function(e,n){return i(e)||i(n)||e>=n?k(NaN):function(r){return i(r)||r<0||r>1?NaN:e+r*(n-e)}});var W8=K8,V1=ge.isPrimitive;function Ye(){var e,n;if(!(this instanceof Ye))return arguments.length===0?new Ye:new Ye(arguments[0],arguments[1]);if(arguments.length){if(e=arguments[0],n=arguments[1],!V1(e)||i(e))throw new TypeError("invalid argument. Minimum support `a` must be a number primitive. Value: `"+e+"`");if(!V1(n)||i(n))throw new TypeError("invalid argument. Maximum support `b` must be a number primitive. Value: `"+n+"`");if(e>=n)throw new RangeError("invalid arguments. Minimum support `a` must be less than maximum support `b`. Value: `"+e+","+n+"`")}else e=0,n=1;return _(this,"a",{configurable:!1,enumerable:!0,get:function(){return e},set:function(r){if(!V1(r)||i(r))throw new TypeError("invalid value. Must be a number primitive. Value: `"+r+"`");if(r>=n)throw new RangeError("invalid value. Must be smaller than `b`. Value: `"+r+"`");e=r}}),_(this,"b",{configurable:!1,enumerable:!0,get:function(){return n},set:function(r){if(!V1(r)||i(r))throw new TypeError("invalid value. Must be a number primitive. Value: `"+r+"`");if(e>=r)throw new RangeError("invalid value. Must be greater than `a`. Value: `"+r+"`");n=r}}),this}y(Ye.prototype,"entropy",function(){return x8(this.a,this.b)}),y(Ye.prototype,"kurtosis",function(){return P8(this.a,this.b)}),y(Ye.prototype,"mean",function(){return S8(this.a,this.b)}),y(Ye.prototype,"median",function(){return A8(this.a,this.b)}),y(Ye.prototype,"skewness",function(){return j8(this.a,this.b)}),y(Ye.prototype,"stdev",function(){return O8(this.a,this.b)}),y(Ye.prototype,"variance",function(){return U8(this.a,this.b)}),c(Ye.prototype,"cdf",function(e){return q8(e,this.a,this.b)}),c(Ye.prototype,"logcdf",function(e){return L8(e,this.a,this.b)}),c(Ye.prototype,"logpdf",function(e){return B8(e,this.a,this.b)}),c(Ye.prototype,"mgf",function(e){return I8(e,this.a,this.b)}),c(Ye.prototype,"pdf",function(e){return G8(e,this.a,this.b)}),c(Ye.prototype,"quantile",function(e){return W8(e,this.a,this.b)});var ky=Ye,H8=function(e,n,r){return i(e)||i(n)||i(r)||n<=0||r<=0?NaN:e<0?0:-ve(-N(e/r,n))};c(H8,"factory",function(e,n){return i(e)||i(n)||e<=0||n<=0?k(NaN):function(r){return i(r)?NaN:r<0?0:-ve(-N(r/n,e))}});var D8=H8,z8=function(e,n){return i(e)||i(n)||e<=0||n<=0?NaN:k0*(1-1/e)+p(n/e)+1},$8=function(e,n){var r,a,u,o,f;return i(e)||i(n)||e<=0||n<=0?NaN:(f=G(1+1/e),o=G(1+2/e),u=G(1+3/e),a=G(1+4/e),r=-6*N(f,4)+12*f*f*o-3*o*o-4*f*u+a,r/=N(o-f*f,2))},M1=function(e,n){return i(e)||i(n)||e<=0||n<=0?NaN:n*G(1+1/e)},J8=function(e,n){return i(e)||i(n)||e<=0||n<=0?NaN:n*N(me,1/e)},Z8=function(e,n){return i(e)||i(n)||e<=0||n<=0?NaN:e<=1?0:n*N((e-1)/e,1/e)},La=function(e,n){var r;return i(e)||i(n)||e<=0||n<=0?NaN:(r=M1(e,n),n*n*G(1+2/e)-r*r)},X8=function(e,n){var r,a,u,o;return i(e)||i(n)||e<=0||n<=0?NaN:(o=M1(e,n),r=La(e,n),a=M(r),u=G(1+3/e)*N(n,3),u-=3*o*r+N(o,3),u/=N(a,3))},Y8=function(e,n){var r;return i(e)||i(n)||e<=0||n<=0?NaN:(r=G(1+1/e),n*M(G(1+2/e)-r*r))},Q8=function(e,n,r){var a;return i(n)||i(r)||n<=0||r<=0?NaN:e<0?V:(a=-N(e/r,n))<zn?R(-b(a)):p(-ve(a))};c(Q8,"factory",function(e,n){return i(e)||i(n)||e<=0||n<=0?k(NaN):function(r){var a;return i(r)?NaN:r<0?V:(a=-N(r/n,e))<zn?R(-b(a)):p(-ve(a))}});var ec=Q8,nc=function(e,n,r){var a;return i(n)||i(r)||n<=0||r<=0?NaN:e<0||e===w||e===V?V:e===0?n===1?p(n/r):V:(a=e/r,p(n/r)+(n-1)*p(a)-N(a,n))};c(nc,"factory",function(e,n){var r;return i(e)||i(n)||e<=0||n<=0?k(NaN):(r=p(e/n),function(a){var u;return a<0||a===w||a===V?V:a===0?e===1?p(e/n):V:r+(e-1)*p(u=a/n)-N(u,e)})});var rc=nc,ac=function(e,n,r){var a,u,o,f;if(i(e)||i(n)||i(r)||n<=0||r<=0)return NaN;u=1,o=1,f=0;do u+=a=(o*=e*r/(f+=1))==0?0:o*G(1+f/n);while(a/u>rn);return u};c(ac,"factory",function(e,n){return i(e)||i(n)||e<=0||n<=0?k(NaN):function(r){var a,u,o,f;if(i(r))return NaN;u=1,o=1,f=0;do a=(o*=r*n/(f+=1))==0?0:o*G(1+f/e),u+=a;while(a/u>rn);return u}});var ic=ac,uc=function(e,n,r){var a;return i(n)||i(r)||n<=0||r<=0?NaN:e<0||e===w||e===V?0:e===0?n===1?n/r:0:n/r*N(a=e/r,n-1)*b(-N(a,n))};c(uc,"factory",function(e,n){return i(e)||i(n)||e<=0||n<=0?k(NaN):function(r){var a,u;return r<0||r===w||r===V?0:r===0?e===1?e/n:0:(u=N(a=r/n,e-1),e/n*u*b(-N(a,e)))}});var oc=uc,sc=function(e,n,r){return i(n)||i(r)||i(e)||n<=0||r<=0||e<0||e>1?NaN:r*N(-p(1-e),1/n)};c(sc,"factory",function(e,n){return i(e)||i(n)||e<=0||n<=0?k(NaN):function(r){return i(r)||r<0||r>1?NaN:n*N(-p(1-r),1/e)}});var tc=sc,q1=be.isPrimitive;function Ce(){var e,n;if(!(this instanceof Ce))return arguments.length===0?new Ce:new Ce(arguments[0],arguments[1]);if(arguments.length){if(n=arguments[0],e=arguments[1],!q1(n))throw new TypeError("invalid argument. Shape parameter `k` must be a positive number. Value: `"+n+"`");if(!q1(e))throw new TypeError("invalid argument. Scale parameter `lambda` must be a positive number. Value: `"+e+"`")}else n=1,e=1;return _(this,"k",{configurable:!1,enumerable:!0,get:function(){return n},set:function(r){if(!q1(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");n=r}}),_(this,"lambda",{configurable:!1,enumerable:!0,get:function(){return e},set:function(r){if(!q1(r))throw new TypeError("invalid value. Must be a positive number. Value: `"+r+"`");e=r}}),this}y(Ce.prototype,"entropy",function(){return z8(this.k,this.lambda)}),y(Ce.prototype,"kurtosis",function(){return $8(this.k,this.lambda)}),y(Ce.prototype,"mean",function(){return M1(this.k,this.lambda)}),y(Ce.prototype,"median",function(){return J8(this.k,this.lambda)}),y(Ce.prototype,"mode",function(){return Z8(this.k,this.lambda)}),y(Ce.prototype,"skewness",function(){return X8(this.k,this.lambda)}),y(Ce.prototype,"stdev",function(){return Y8(this.k,this.lambda)}),y(Ce.prototype,"variance",function(){return La(this.k,this.lambda)}),c(Ce.prototype,"cdf",function(e){return D8(e,this.k,this.lambda)}),c(Ce.prototype,"logcdf",function(e){return ec(e,this.k,this.lambda)}),c(Ce.prototype,"logpdf",function(e){return rc(e,this.k,this.lambda)}),c(Ce.prototype,"mgf",function(e){return ic(e,this.k,this.lambda)}),c(Ce.prototype,"pdf",function(e){return oc(e,this.k,this.lambda)}),c(Ce.prototype,"quantile",function(e){return tc(e,this.k,this.lambda)});var Ey=Ce,t={};return s(t,"base",{}),s(t.base,"dists",{}),s(t.base.dists,"arcsine",{}),s(t.base.dists.arcsine,"cdf",h0),s(t.base.dists.arcsine,"Arcsine",Av),s(t.base.dists.arcsine,"entropy",Xa),s(t.base.dists.arcsine,"kurtosis",Ya),s(t.base.dists.arcsine,"logcdf",wi),s(t.base.dists.arcsine,"logpdf",Ei),s(t.base.dists.arcsine,"mean",Qa),s(t.base.dists.arcsine,"median",ei),s(t.base.dists.arcsine,"mode",ni),s(t.base.dists.arcsine,"pdf",Vi),s(t.base.dists.arcsine,"quantile",ji),s(t.base.dists.arcsine,"skewness",ri),s(t.base.dists.arcsine,"stdev",ai),s(t.base.dists.arcsine,"variance",yi),s(t.base.dists,"bernoulli",{}),s(t.base.dists.bernoulli,"cdf",Ui),s(t.base.dists.bernoulli,"Bernoulli",Iv),s(t.base.dists.bernoulli,"entropy",_i),s(t.base.dists.bernoulli,"kurtosis",Bi),s(t.base.dists.bernoulli,"mean",Fi),s(t.base.dists.bernoulli,"median",Ci),s(t.base.dists.bernoulli,"mgf",$i),s(t.base.dists.bernoulli,"mode",Ii),s(t.base.dists.bernoulli,"pmf",Zi),s(t.base.dists.bernoulli,"quantile",Yi),s(t.base.dists.bernoulli,"skewness",Gi),s(t.base.dists.bernoulli,"stdev",Ki),s(t.base.dists.bernoulli,"variance",Wi),s(t.base.dists,"beta",{}),s(t.base.dists.beta,"cdf",$r),s(t.base.dists.beta,"Beta",Hm),s(t.base.dists.beta,"entropy",qu),s(t.base.dists.beta,"kurtosis",xu),s(t.base.dists.beta,"logcdf",e1),s(t.base.dists.beta,"logpdf",Zu),s(t.base.dists.beta,"mean",Pu),s(t.base.dists.beta,"median",Ku),s(t.base.dists.beta,"mgf",Qu),s(t.base.dists.beta,"mode",Wu),s(t.base.dists.beta,"pdf",no),s(t.base.dists.beta,"quantile",ao),s(t.base.dists.beta,"skewness",Hu),s(t.base.dists.beta,"stdev",Du),s(t.base.dists.beta,"variance",zu),s(t.base.dists,"betaprime",{}),s(t.base.dists.betaprime,"cdf",uo),s(t.base.dists.betaprime,"BetaPrime",Jm),s(t.base.dists.betaprime,"kurtosis",oo),s(t.base.dists.betaprime,"logcdf",lo),s(t.base.dists.betaprime,"logpdf",r1),s(t.base.dists.betaprime,"mean",so),s(t.base.dists.betaprime,"mode",to),s(t.base.dists.betaprime,"pdf",ho),s(t.base.dists.betaprime,"quantile",yo),s(t.base.dists.betaprime,"skewness",fo),s(t.base.dists.betaprime,"stdev",co),s(t.base.dists.betaprime,"variance",vo),s(t.base.dists,"binomial",{}),s(t.base.dists.binomial,"cdf",z0),s(t.base.dists.binomial,"Binomial",eh),s(t.base.dists.binomial,"entropy",nh),s(t.base.dists.binomial,"kurtosis",qo),s(t.base.dists.binomial,"logpmf",Lo),s(t.base.dists.binomial,"mean",ya),s(t.base.dists.binomial,"median",xo),s(t.base.dists.binomial,"mgf",Bo),s(t.base.dists.binomial,"mode",Po),s(t.base.dists.binomial,"pmf",Go),s(t.base.dists.binomial,"quantile",$o),s(t.base.dists.binomial,"skewness",So),s(t.base.dists.binomial,"stdev",Ao),s(t.base.dists.binomial,"variance",jo),s(t.base.dists,"cauchy",{}),s(t.base.dists.cauchy,"cdf",Qo),s(t.base.dists.cauchy,"Cauchy",lh),s(t.base.dists.cauchy,"entropy",r2),s(t.base.dists.cauchy,"logcdf",o2),s(t.base.dists.cauchy,"logpdf",t2),s(t.base.dists.cauchy,"median",a2),s(t.base.dists.cauchy,"mode",i2),s(t.base.dists.cauchy,"pdf",c2),s(t.base.dists.cauchy,"quantile",p2),s(t.base.dists,"chi",{}),s(t.base.dists.chi,"cdf",b2),s(t.base.dists.chi,"Chi",wh),s(t.base.dists.chi,"entropy",y2),s(t.base.dists.chi,"kurtosis",g2),s(t.base.dists.chi,"logpdf",V2),s(t.base.dists.chi,"mean",$0),s(t.base.dists.chi,"mode",w2),s(t.base.dists.chi,"pdf",x2),s(t.base.dists.chi,"quantile",A2),s(t.base.dists.chi,"skewness",wa),s(t.base.dists.chi,"stdev",k2),s(t.base.dists.chi,"variance",t1),s(t.base.dists,"chisquare",{}),s(t.base.dists.chisquare,"cdf",U2),s(t.base.dists.chisquare,"ChiSquare",xh),s(t.base.dists.chisquare,"entropy",R2),s(t.base.dists.chisquare,"kurtosis",L2),s(t.base.dists.chisquare,"logpdf",Ah),s(t.base.dists.chisquare,"mean",_2),s(t.base.dists.chisquare,"median",F2),s(t.base.dists.chisquare,"mgf",H2),s(t.base.dists.chisquare,"mode",I2),s(t.base.dists.chisquare,"pdf",Z2),s(t.base.dists.chisquare,"quantile",ka),s(t.base.dists.chisquare,"skewness",C2),s(t.base.dists.chisquare,"stdev",G2),s(t.base.dists.chisquare,"variance",K2),s(t.base.dists,"cosine",{}),s(t.base.dists.cosine,"cdf",Ea),s(t.base.dists.cosine,"Cosine",Kh),s(t.base.dists.cosine,"kurtosis",ns),s(t.base.dists.cosine,"logcdf",cs),s(t.base.dists.cosine,"logpdf",ls),s(t.base.dists.cosine,"mean",rs),s(t.base.dists.cosine,"median",as),s(t.base.dists.cosine,"mgf",hs),s(t.base.dists.cosine,"mode",is),s(t.base.dists.cosine,"pdf",bs),s(t.base.dists.cosine,"quantile",ws),s(t.base.dists.cosine,"skewness",us),s(t.base.dists.cosine,"stdev",os),s(t.base.dists.cosine,"variance",ss),s(t.base.dists,"degenerate",{}),s(t.base.dists.degenerate,"cdf",o0),s(t.base.dists.degenerate,"Degenerate",Wh),s(t.base.dists.degenerate,"entropy",Ts),s(t.base.dists.degenerate,"logcdf",X0),s(t.base.dists.degenerate,"logpdf",P0),s(t.base.dists.degenerate,"logpmf",u1),s(t.base.dists.degenerate,"mean",Vs),s(t.base.dists.degenerate,"median",qs),s(t.base.dists.degenerate,"mgf",Ta),s(t.base.dists.degenerate,"mode",Ms),s(t.base.dists.degenerate,"pdf",S0),s(t.base.dists.degenerate,"pmf",o1),s(t.base.dists.degenerate,"quantile",u0),s(t.base.dists.degenerate,"stdev",xs),s(t.base.dists.degenerate,"variance",Ps),s(t.base.dists,"discreteUniform",{}),s(t.base.dists.discreteUniform,"cdf",js),s(t.base.dists.discreteUniform,"DiscreteUniform",Dh),s(t,"entropy",Os),s(t.base.dists.discreteUniform,"kurtosis",Us),s(t.base.dists.discreteUniform,"logcdf",Cs),s(t.base.dists.discreteUniform,"logpmf",Ks),s(t.base.dists.discreteUniform,"mean",Rs),s(t.base.dists.discreteUniform,"median",Ls),s(t.base.dists.discreteUniform,"mgf",Hs),s(t.base.dists.discreteUniform,"pmf",zs),s(t.base.dists.discreteUniform,"quantile",Js),s(t.base.dists.discreteUniform,"skewness",_s),s(t.base.dists.discreteUniform,"stdev",Bs),s(t.base.dists.discreteUniform,"variance",Fs),s(t.base.dists,"erlang",{}),s(t.base.dists.erlang,"cdf",Xs),s(t.base.dists.erlang,"Erlang",Xh),s(t.base.dists.erlang,"entropy",Ys),s(t.base.dists.erlang,"kurtosis",Qs),s(t.base.dists.erlang,"logpdf",ot),s(t.base.dists.erlang,"mean",et),s(t.base.dists.erlang,"mgf",tt),s(t.base.dists.erlang,"mode",nt),s(t.base.dists.erlang,"pdf",ct),s(t.base.dists.erlang,"quantile",pt),s(t.base.dists.erlang,"skewness",rt),s(t.base.dists.erlang,"stdev",at),s(t.base.dists.erlang,"variance",it),s(t.base.dists,"exponential",{}),s(t.base.dists.exponential,"cdf",ht),s(t.base.dists.exponential,"Exponential",Yh),s(t.base.dists.exponential,"entropy",dt),s(t.base.dists.exponential,"kurtosis",bt),s(t.base.dists.exponential,"logcdf",Mt),s(t.base.dists.exponential,"logpdf",xt),s(t.base.dists.exponential,"mean",yt),s(t.base.dists.exponential,"median",gt),s(t.base.dists.exponential,"mgf",St),s(t.base.dists.exponential,"mode",wt),s(t.base.dists.exponential,"pdf",jt),s(t.base.dists.exponential,"quantile",Ut),s(t.base.dists.exponential,"skewness",kt),s(t.base.dists.exponential,"stdev",Et),s(t.base.dists.exponential,"variance",Tt),s(t.base.dists,"f",{}),s(t.base.dists.f,"cdf",_t),s(t.base.dists.f,"F",ed),s(t.base.dists.f,"entropy",Bt),s(t.base.dists.f,"kurtosis",Ft),s(t.base.dists.f,"mean",It),s(t.base.dists.f,"mode",Ct),s(t.base.dists.f,"pdf",Dt),s(t.base.dists.f,"quantile",$t),s(t.base.dists.f,"skewness",Gt),s(t.base.dists.f,"stdev",Kt),s(t.base.dists.f,"variance",Wt),s(t.base.dists,"frechet",{}),s(t.base.dists.frechet,"cdf",Zt),s(t.base.dists.frechet,"Frechet",rd),s(t.base.dists.frechet,"entropy",Xt),s(t.base.dists.frechet,"kurtosis",Yt),s(t.base.dists.frechet,"logcdf",o3),s(t.base.dists.frechet,"logpdf",l1),s(t.base.dists.frechet,"mean",Qt),s(t.base.dists.frechet,"median",e3),s(t.base.dists.frechet,"mode",n3),s(t.base.dists.frechet,"pdf",f3),s(t.base.dists.frechet,"quantile",v3),s(t.base.dists.frechet,"skewness",r3),s(t.base.dists.frechet,"stdev",a3),s(t.base.dists.frechet,"variance",i3),s(t.base.dists,"gamma",{}),s(t.base.dists.gamma,"cdf",s0),s(t.base.dists.gamma,"Gamma",id),s(t.base.dists.gamma,"entropy",l3),s(t.base.dists.gamma,"kurtosis",N3),s(t.base.dists.gamma,"logcdf",w3),s(t.base.dists.gamma,"logpdf",Z0),s(t.base.dists.gamma,"mean",m3),s(t.base.dists.gamma,"mgf",E3),s(t.base.dists.gamma,"mode",h3),s(t.base.dists.gamma,"pdf",J0),s(t.base.dists.gamma,"quantile",A0),s(t.base.dists.gamma,"skewness",d3),s(t.base.dists.gamma,"stdev",b3),s(t.base.dists.gamma,"variance",y3),s(t.base.dists,"geometric",{}),s(t.base.dists.geometric,"cdf",V3),s(t.base.dists.geometric,"Geometric",dd),s(t.base.dists.geometric,"entropy",M3),s(t.base.dists.geometric,"kurtosis",q3),s(t.base.dists.geometric,"logcdf",_3),s(t.base.dists.geometric,"logpmf",F3),s(t.base.dists.geometric,"mean",x3),s(t.base.dists.geometric,"median",A3),s(t.base.dists.geometric,"mgf",C3),s(t.base.dists.geometric,"mode",j3),s(t.base.dists.geometric,"pmf",K3),s(t.base.dists.geometric,"quantile",H3),s(t.base.dists.geometric,"skewness",O3),s(t.base.dists.geometric,"stdev",U3),s(t.base.dists.geometric,"variance",R3),s(t.base.dists,"gumbel",{}),s(t.base.dists.gumbel,"cdf",$3),s(t.base.dists.gumbel,"Gumbel",Ld),s(t.base.dists.gumbel,"entropy",J3),s(t.base.dists.gumbel,"kurtosis",Z3),s(t.base.dists.gumbel,"logcdf",i6),s(t.base.dists.gumbel,"logpdf",o6),s(t.base.dists.gumbel,"mean",X3),s(t.base.dists.gumbel,"median",Y3),s(t.base.dists.gumbel,"mgf",t6),s(t.base.dists.gumbel,"mode",Q3),s(t.base.dists.gumbel,"pdf",c6),s(t.base.dists.gumbel,"quantile",p6),s(t.base.dists.gumbel,"skewness",e6),s(t.base.dists.gumbel,"stdev",n6),s(t.base.dists.gumbel,"variance",r6),s(t.base.dists,"hypergeometric",{}),s(t.base.dists.hypergeometric,"cdf",d1),s(t.base.dists.hypergeometric,"Hypergeometric",Cd),s(t.base.dists.hypergeometric,"kurtosis",g6),s(t.base.dists.hypergeometric,"logpmf",q6),s(t.base.dists.hypergeometric,"mean",w6),s(t.base.dists.hypergeometric,"mode",k6),s(t.base.dists.hypergeometric,"pmf",h1),s(t.base.dists.hypergeometric,"quantile",P6),s(t.base.dists.hypergeometric,"skewness",E6),s(t.base.dists.hypergeometric,"stdev",T6),s(t.base.dists.hypergeometric,"variance",V6),s(t.base.dists,"invgamma",{}),s(t.base.dists.invgamma,"cdf",A6),s(t.base.dists.invgamma,"InvGamma",Gd),s(t.base.dists.invgamma,"entropy",j6),s(t.base.dists.invgamma,"kurtosis",O6),s(t.base.dists.invgamma,"logpdf",F6),s(t.base.dists.invgamma,"mean",U6),s(t.base.dists.invgamma,"mode",R6),s(t.base.dists.invgamma,"pdf",W6),s(t.base.dists.invgamma,"quantile",_6),s(t.base.dists.invgamma,"skewness",I6),s(t.base.dists.invgamma,"stdev",C6),s(t.base.dists.invgamma,"variance",G6),s(t.base.dists,"kumaraswamy",{}),s(t.base.dists.kumaraswamy,"cdf",D6),s(t.base.dists.kumaraswamy,"Kumaraswamy",Kd),s(t.base.dists.kumaraswamy,"kurtosis",z6),s(t.base.dists.kumaraswamy,"logcdf",e4),s(t.base.dists.kumaraswamy,"logpdf",r4),s(t.base.dists.kumaraswamy,"mean",$6),s(t.base.dists.kumaraswamy,"median",Wd),s(t.base.dists.kumaraswamy,"mode",J6),s(t.base.dists.kumaraswamy,"pdf",i4),s(t.base.dists.kumaraswamy,"quantile",o4),s(t.base.dists.kumaraswamy,"skewness",Z6),s(t.base.dists.kumaraswamy,"stdev",X6),s(t.base.dists.kumaraswamy,"variance",Y6),s(t.base.dists,"laplace",{}),s(t.base.dists.laplace,"cdf",t4),s(t.base.dists.laplace,"Laplace",Hd),s(t.base.dists.laplace,"entropy",f4),s(t.base.dists.laplace,"kurtosis",c4),s(t.base.dists.laplace,"logcdf",b4),s(t.base.dists.laplace,"logpdf",g4),s(t.base.dists.laplace,"mean",v4),s(t.base.dists.laplace,"median",p4),s(t.base.dists.laplace,"mgf",k4),s(t.base.dists.laplace,"mode",l4),s(t.base.dists.laplace,"pdf",T4),s(t.base.dists.laplace,"quantile",M4),s(t.base.dists.laplace,"skewness",N4),s(t.base.dists.laplace,"stdev",m4),s(t.base.dists.laplace,"variance",h4),s(t.base.dists,"levy",{}),s(t.base.dists.levy,"cdf",S4),s(t.base.dists.levy,"Levy",$d),s(t.base.dists.levy,"entropy",A4),s(t.base.dists.levy,"logcdf",B4),s(t.base.dists.levy,"logpdf",I4),s(t.base.dists.levy,"mean",j4),s(t.base.dists.levy,"median",O4),s(t.base.dists.levy,"mode",U4),s(t.base.dists.levy,"pdf",G4),s(t.base.dists.levy,"quantile",W4),s(t.base.dists.levy,"stdev",R4),s(t.base.dists.levy,"variance",L4),s(t.base.dists,"logistic",{}),s(t.base.dists.logistic,"cdf",$4),s(t.base.dists.logistic,"Logistic",rb),s(t.base.dists.logistic,"entropy",J4),s(t.base.dists.logistic,"kurtosis",Z4),s(t.base.dists.logistic,"logcdf",u5),s(t.base.dists.logistic,"logpdf",s5),s(t.base.dists.logistic,"mean",X4),s(t.base.dists.logistic,"median",Y4),s(t.base.dists.logistic,"mgf",c5),s(t.base.dists.logistic,"mode",Q4),s(t.base.dists.logistic,"pdf",p5),s(t.base.dists.logistic,"quantile",N5),s(t.base.dists.logistic,"skewness",e5),s(t.base.dists.logistic,"stdev",n5),s(t.base.dists.logistic,"variance",r5),s(t.base.dists,"lognormal",{}),s(t.base.dists.lognormal,"cdf",y5),s(t.base.dists.lognormal,"LogNormal",mb),s(t.base.dists.lognormal,"entropy",g5),s(t.base.dists.lognormal,"kurtosis",w5),s(t.base.dists.lognormal,"logpdf",P5),s(t.base.dists.lognormal,"mean",k5),s(t.base.dists.lognormal,"median",E5),s(t.base.dists.lognormal,"mode",T5),s(t.base.dists.lognormal,"pdf",A5),s(t.base.dists.lognormal,"quantile",R5),s(t.base.dists.lognormal,"skewness",V5),s(t.base.dists.lognormal,"stdev",M5),s(t.base.dists.lognormal,"variance",q5),s(t.base.dists,"negativeBinomial",{}),s(t.base.dists.negativeBinomial,"cdf",er),s(t.base.dists.negativeBinomial,"NegativeBinomial",bb),s(t.base.dists.negativeBinomial,"kurtosis",F5),s(t.base.dists.negativeBinomial,"logpmf",z5),s(t.base.dists.negativeBinomial,"mean",I5),s(t.base.dists.negativeBinomial,"mgf",J5),s(t.base.dists.negativeBinomial,"mode",C5),s(t.base.dists.negativeBinomial,"pmf",Y5),s(t.base.dists.negativeBinomial,"quantile",ef),s(t.base.dists.negativeBinomial,"skewness",G5),s(t.base.dists.negativeBinomial,"stdev",K5),s(t.base.dists.negativeBinomial,"variance",W5),s(t.base.dists,"normal",{}),s(t.base.dists.normal,"cdf",Q0),s(t.base.dists.normal,"Normal",wb),s(t.base.dists.normal,"entropy",af),s(t.base.dists.normal,"kurtosis",uf),s(t.base.dists.normal,"logpdf",lf),s(t.base.dists.normal,"mean",of),s(t.base.dists.normal,"median",sf),s(t.base.dists.normal,"mgf",mf),s(t.base.dists.normal,"mode",tf),s(t.base.dists.normal,"pdf",df),s(t.base.dists.normal,"quantile",w1),s(t.base.dists.normal,"skewness",ff),s(t.base.dists.normal,"stdev",cf),s(t.base.dists.normal,"variance",vf),s(t.base.dists,"pareto1",{}),s(t.base.dists.pareto1,"cdf",wf),s(t.base.dists.pareto1,"Pareto1",kb),s(t.base.dists.pareto1,"entropy",kf),s(t.base.dists.pareto1,"kurtosis",Ef),s(t.base.dists.pareto1,"logcdf",Sf),s(t.base.dists.pareto1,"logpdf",jf),s(t.base.dists.pareto1,"mean",Tf),s(t.base.dists.pareto1,"median",Vf),s(t.base.dists.pareto1,"mode",Mf),s(t.base.dists.pareto1,"pdf",Uf),s(t.base.dists.pareto1,"quantile",Lf),s(t.base.dists.pareto1,"skewness",qf),s(t.base.dists.pareto1,"stdev",Eb),s(t.base.dists.pareto1,"variance",xf),s(t.base.dists,"poisson",{}),s(t.base.dists.poisson,"cdf",nr),s(t.base.dists.poisson,"Poisson",xb),s(t.base.dists.poisson,"entropy",Bf),s(t.base.dists.poisson,"kurtosis",Ff),s(t.base.dists.poisson,"logpmf",zf),s(t.base.dists.poisson,"mean",If),s(t.base.dists.poisson,"median",Cf),s(t.base.dists.poisson,"mgf",Jf),s(t.base.dists.poisson,"mode",Gf),s(t.base.dists.poisson,"pmf",Xf),s(t.base.dists.poisson,"quantile",Qf),s(t.base.dists.poisson,"skewness",Kf),s(t.base.dists.poisson,"stdev",Wf),s(t.base.dists.poisson,"variance",Hf),s(t.base.dists,"rayleigh",{}),s(t.base.dists.rayleigh,"cdf",r7),s(t.base.dists.rayleigh,"Rayleigh",Zb),s(t.base.dists.rayleigh,"entropy",a7),s(t.base.dists.rayleigh,"kurtosis",i7),s(t.base.dists.rayleigh,"logcdf",p7),s(t.base.dists.rayleigh,"logpdf",N7),s(t.base.dists.rayleigh,"mean",u7),s(t.base.dists.rayleigh,"median",o7),s(t.base.dists.rayleigh,"mgf",y7),s(t.base.dists.rayleigh,"mode",s7),s(t.base.dists.rayleigh,"pdf",w7),s(t.base.dists.rayleigh,"quantile",E7),s(t.base.dists.rayleigh,"skewness",t7),s(t.base.dists.rayleigh,"stdev",f7),s(t.base.dists.rayleigh,"variance",c7),s(t.base.dists,"signrank",{}),s(t.base.dists.signrank,"cdf",my),s(t.base.dists.signrank,"pdf",hy),s(t.base.dists.signrank,"quantile",dy),s(t.base.dists,"t",{}),s(t.base.dists.t,"cdf",F7),s(t.base.dists.t,"T",by),s(t.base.dists.t,"entropy",I7),s(t.base.dists.t,"kurtosis",C7),s(t,"logcdf",J7),s(t,"logpdf",X7),s(t.base.dists.t,"mean",G7),s(t.base.dists.t,"median",K7),s(t.base.dists.t,"mode",W7),s(t.base.dists.t,"pdf",Q7),s(t.base.dists.t,"quantile",n8),s(t.base.dists.t,"skewness",H7),s(t.base.dists.t,"stdev",D7),s(t.base.dists.t,"variance",z7),s(t.base.dists,"triangular",{}),s(t.base.dists.triangular,"cdf",i8),s(t.base.dists.triangular,"Triangular",yy),s(t.base.dists.triangular,"entropy",u8),s(t.base.dists.triangular,"kurtosis",o8),s(t.base.dists.triangular,"logcdf",N8),s(t.base.dists.triangular,"logpdf",h8),s(t.base.dists.triangular,"mean",s8),s(t.base.dists.triangular,"median",t8),s(t.base.dists.triangular,"mgf",b8),s(t.base.dists.triangular,"mode",f8),s(t.base.dists.triangular,"pdf",g8),s(t.base.dists.triangular,"quantile",k8),s(t.base.dists.triangular,"skewness",c8),s(t.base.dists.triangular,"stdev",v8),s(t.base.dists.triangular,"variance",p8),s(t,"pdf",gy),s(t.base.dists,"uniform",{}),s(t.base.dists.uniform,"cdf",q8),s(t.base.dists.uniform,"Uniform",ky),s(t.base.dists.uniform,"entropy",x8),s(t.base.dists.uniform,"kurtosis",P8),s(t.base.dists.uniform,"logcdf",L8),s(t.base.dists.uniform,"logpdf",B8),s(t.base.dists.uniform,"mean",S8),s(t.base.dists.uniform,"median",A8),s(t.base.dists.uniform,"mgf",I8),s(t.base.dists.uniform,"pdf",G8),s(t.base.dists.uniform,"quantile",W8),s(t.base.dists.uniform,"skewness",j8),s(t.base.dists.uniform,"stdev",O8),s(t.base.dists.uniform,"variance",U8),s(t.base.dists,"weibull",{}),s(t.base.dists.weibull,"cdf",D8),s(t.base.dists.weibull,"Weibull",Ey),s(t.base.dists.weibull,"entropy",z8),s(t.base.dists.weibull,"kurtosis",$8),s(t.base.dists.weibull,"logcdf",ec),s(t.base.dists.weibull,"logpdf",rc),s(t.base.dists.weibull,"mean",M1),s(t.base.dists.weibull,"median",J8),s(t.base.dists.weibull,"mgf",ic),s(t.base.dists.weibull,"mode",Z8),s(t.base.dists.weibull,"pdf",oc),s(t.base.dists.weibull,"quantile",tc),s(t.base.dists.weibull,"skewness",X8),s(t.base.dists.weibull,"stdev",Y8),s(t.base.dists.weibull,"variance",La),t})})(Nc);var qy=Nc.exports;const xy=lc(qy),ir=xy.base.dists,pc=ir.normal.cdf;function Py(de,le,se,pn,ae,re){let xn=pc(de,le,se),v0=pc(de,pn,ae);return re*xn+(1-re)*v0}const Sy={uniform:(de,le=0,se=1)=>ir.uniform.cdf(de,le,se),normal:(de,le=0,se=1)=>ir.normal.cdf(de,le,se),laplace:(de,le=0,se=1)=>ir.laplace.cdf(de,le,se),logistic:(de,le=0,se=1)=>ir.logistic.cdf(de,le,se),cauchy:(de,le=0,se=1)=>ir.cauchy.cdf(de,le,se),bimodal:(de,le=-3,se=.6,pn=3,ae=1.3,re=.5)=>Py(de,le,se,pn,ae,re)},Ay=(de,le,se)=>Array.from({length:(le-de)/se+1},(pn,ae)=>de+ae*se);Ay(-5,5,.01);function jy(de,le){for(var se=le[0],pn=Math.abs(de-se),ae=0;ae<le.length;ae++){var re=Math.abs(de-le[ae]);re<pn&&(pn=re,se=le[ae])}return se}const mc={};mc.galton=function(de){let le=c0.Engine,se=c0.Render,pn=c0.Runner,ae=c0.Events,re=c0.Body,xn=c0.World,v0=c0.Bodies,p0=le.create({enableSleeping:!1}),$n=p0.world;const B0=500,j0=500;let _=se.create({element:document.body,engine:p0,options:{width:B0,height:j0,wireframes:!1}});se.run(_);let s=pn.create({delta:1e3/(60*10),maxFrameTime:1e3/20});pn.run(s,p0);const c=20,i=j0/2,M=i-c,Me=4;let xr=1e3;const Pr=10,l0=(ie,fe,$)=>{xn.add($n,v0.rectangle(ie,fe,1,1,{isStatic:!0,render:{fillStyle:"#ffffff",visible:!0,opacity:$},collisionFilter:{group:0}}))};function Rn(ie,fe,$,ce,qe,Qe,Se,Ln){const en=Math.abs(Ln-Qe)>Math.abs(Se-qe);en&&([qe,Qe]=[Qe,qe],[Se,Ln]=[Ln,Se]),qe>Se&&([qe,Se]=[Se,qe],[Qe,Ln]=[Ln,Qe]);const or=Se-qe,Sr=(Ln-Qe)/or;let _n=Qe+ce(qe)*Sr;for(let d0=ie(qe)+1;d0<fe(Se);d0++)en?(l0(ie(_n),d0,ce(_n)),l0(ie(_n)+1,d0,$(_n))):(l0(d0,ie(_n),ce(_n)),l0(d0,ie(_n)+1,$(_n))),_n+=Sr}function F(ie,fe,$,ce){const qe=Math.floor,Qe=Math.round,Se=en=>en-Math.floor(en),Ln=en=>1-Se(en);Rn(qe,Qe,Se,Ln,ie,fe,$,ce),Rn(qe,Qe,Se,Ln,$,ce,ie,fe),l0(ie,fe,1),l0($,ce,1)}p0.gravity.y=0;let N0={},m0={},k=[],O0=1/0,h0=0;const y=Sy[de];for(let ie=0;ie<B0/Me;ie++){const fe=ie*Me,$=y((fe-B0/2)/40);let ce=i-$*M;m0[ce]=fe,ce<O0&&(O0=ce),ce>h0&&(h0=ce),k.push(ce)}for(let ie=0;ie<B0/Me;ie++){const fe=ie*Me,$=(h0-k[ie])*(c-i)/(h0-O0)+i,ce=v0.rectangle(fe,$,Me,Me,{isSensor:!0,isStatic:!0,render:{fillStyle:"#ff00ff",visible:!1},collisionFilter:{group:0}});k[ie]=$,m0[$]=fe,xn.add($n,ce),ie>0&&F(m0[k[ie-1]],k[ie-1],m0[k[ie]],k[ie])}let ur={};return ae.on(s,"beforeTick",function(ie){for(let fe=0;fe<$n.bodies.length;fe++){const $=$n.bodies[fe];if($.velocity.x>0&&!$.isStatic){const ce=$.position.x,qe=$.position.y,Qe=ur[$.id];ce>=Qe&&(re.setPosition($,{x:Qe,y:qe}),re.setVelocity($,{x:0,y:Pr}))}}for(let fe=0;fe<$n.bodies.length;fe++){const $=$n.bodies[fe];if($.velocity.y>0&&!$.isStatic){const ce=$.position.x,qe=$.position.y;(N0[ce]&&qe>=j0-N0[ce]-Me/2||qe>=j0-Me/2)&&(N0[ce]||(N0[ce]=Me/2),re.setPosition($,{x:ce,y:j0-N0[ce]}),re.setStatic($,!0),N0[ce]+=Me)}}}),setInterval(()=>{if(xr-- >0){const fe=Math.random()*(h0-O0)+O0,$=v0.rectangle(10,fe,Me,Me,{isSensor:!0,frictionAir:0,render:{fillStyle:"#ff00ff",visible:!0},collisionFilter:{group:0}});$.id="square"+xr,ur[$.id]=m0[jy(fe,k)],re.setVelocity($,{x:Pr,y:0}),xn.add($n,$)}}),{engine:p0,runner:s,render:_,canvas:_.canvas,stop:function(){c0.Render.stop(_),c0.Runner.stop(s)}}};Vy.Demo.create({fullPage:!0,preventZoom:!0,startExample:!0,appendTo:document.body,toolbar:{title:"matter-tools",url:"https://github.com/liabru/matter-tools",reset:!0,source:!0,inspector:!0,tools:!0,fullscreen:!0,exampleSelect:!0},tools:{inspector:!0,gui:!0},examples:[{name:"Galton Board",id:"galton",init:()=>mc.galton("bimodal"),sourceLink:"./galton.js"}]});
+var Hi = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {};
+function M7(Ve) {
+  return Ve && Ve.__esModule && Object.prototype.hasOwnProperty.call(Ve, "default") ? Ve.default : Ve;
+}
+var k7 = { exports: {} };
+/*!
+ * matter-js 0.19.0 by @liabru
+ * http://brm.io/matter-js/
+ * License MIT
+ * 
+ * The MIT License (MIT)
+ * 
+ * Copyright (c) Liam Brummitt and contributors.
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+(function(Ve, He) {
+  (function(ge, P) {
+    Ve.exports = P();
+  })(Hi, function() {
+    return (
+      /******/
+      function(ee) {
+        var ge = {};
+        function P(f) {
+          if (ge[f])
+            return ge[f].exports;
+          var b = ge[f] = {
+            /******/
+            i: f,
+            /******/
+            l: !1,
+            /******/
+            exports: {}
+            /******/
+          };
+          return ee[f].call(b.exports, b, b.exports, P), b.l = !0, b.exports;
+        }
+        return P.m = ee, P.c = ge, P.d = function(f, b, d) {
+          P.o(f, b) || Object.defineProperty(f, b, { enumerable: !0, get: d });
+        }, P.r = function(f) {
+          typeof Symbol < "u" && Symbol.toStringTag && Object.defineProperty(f, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(f, "__esModule", { value: !0 });
+        }, P.t = function(f, b) {
+          if (b & 1 && (f = P(f)), b & 8 || b & 4 && typeof f == "object" && f && f.__esModule)
+            return f;
+          var d = /* @__PURE__ */ Object.create(null);
+          if (P.r(d), Object.defineProperty(d, "default", { enumerable: !0, value: f }), b & 2 && typeof f != "string")
+            for (var h in f)
+              P.d(d, h, (function(x) {
+                return f[x];
+              }).bind(null, h));
+          return d;
+        }, P.n = function(f) {
+          var b = f && f.__esModule ? (
+            /******/
+            function() {
+              return f.default;
+            }
+          ) : (
+            /******/
+            function() {
+              return f;
+            }
+          );
+          return P.d(b, "a", b), b;
+        }, P.o = function(f, b) {
+          return Object.prototype.hasOwnProperty.call(f, b);
+        }, P.p = "", P(P.s = 20);
+      }([
+        /* 0 */
+        /***/
+        function(ee, ge) {
+          var P = {};
+          ee.exports = P, function() {
+            P._baseDelta = 1e3 / 60, P._nextId = 0, P._seed = 0, P._nowStartTime = +/* @__PURE__ */ new Date(), P._warnedOnce = {}, P._decomp = null, P.extend = function(b, d) {
+              var h, x;
+              typeof d == "boolean" ? (h = 2, x = d) : (h = 1, x = !0);
+              for (var g = h; g < arguments.length; g++) {
+                var w = arguments[g];
+                if (w)
+                  for (var l in w)
+                    x && w[l] && w[l].constructor === Object && (!b[l] || b[l].constructor === Object) ? (b[l] = b[l] || {}, P.extend(b[l], x, w[l])) : b[l] = w[l];
+              }
+              return b;
+            }, P.clone = function(b, d) {
+              return P.extend({}, d, b);
+            }, P.keys = function(b) {
+              if (Object.keys)
+                return Object.keys(b);
+              var d = [];
+              for (var h in b)
+                d.push(h);
+              return d;
+            }, P.values = function(b) {
+              var d = [];
+              if (Object.keys) {
+                for (var h = Object.keys(b), x = 0; x < h.length; x++)
+                  d.push(b[h[x]]);
+                return d;
+              }
+              for (var g in b)
+                d.push(b[g]);
+              return d;
+            }, P.get = function(b, d, h, x) {
+              d = d.split(".").slice(h, x);
+              for (var g = 0; g < d.length; g += 1)
+                b = b[d[g]];
+              return b;
+            }, P.set = function(b, d, h, x, g) {
+              var w = d.split(".").slice(x, g);
+              return P.get(b, d, 0, -1)[w[w.length - 1]] = h, h;
+            }, P.shuffle = function(b) {
+              for (var d = b.length - 1; d > 0; d--) {
+                var h = Math.floor(P.random() * (d + 1)), x = b[d];
+                b[d] = b[h], b[h] = x;
+              }
+              return b;
+            }, P.choose = function(b) {
+              return b[Math.floor(P.random() * b.length)];
+            }, P.isElement = function(b) {
+              return typeof HTMLElement < "u" ? b instanceof HTMLElement : !!(b && b.nodeType && b.nodeName);
+            }, P.isArray = function(b) {
+              return Object.prototype.toString.call(b) === "[object Array]";
+            }, P.isFunction = function(b) {
+              return typeof b == "function";
+            }, P.isPlainObject = function(b) {
+              return typeof b == "object" && b.constructor === Object;
+            }, P.isString = function(b) {
+              return toString.call(b) === "[object String]";
+            }, P.clamp = function(b, d, h) {
+              return b < d ? d : b > h ? h : b;
+            }, P.sign = function(b) {
+              return b < 0 ? -1 : 1;
+            }, P.now = function() {
+              if (typeof window < "u" && window.performance) {
+                if (window.performance.now)
+                  return window.performance.now();
+                if (window.performance.webkitNow)
+                  return window.performance.webkitNow();
+              }
+              return Date.now ? Date.now() : /* @__PURE__ */ new Date() - P._nowStartTime;
+            }, P.random = function(b, d) {
+              return b = typeof b < "u" ? b : 0, d = typeof d < "u" ? d : 1, b + f() * (d - b);
+            };
+            var f = function() {
+              return P._seed = (P._seed * 9301 + 49297) % 233280, P._seed / 233280;
+            };
+            P.colorToNumber = function(b) {
+              return b = b.replace("#", ""), b.length == 3 && (b = b.charAt(0) + b.charAt(0) + b.charAt(1) + b.charAt(1) + b.charAt(2) + b.charAt(2)), parseInt(b, 16);
+            }, P.logLevel = 1, P.log = function() {
+              console && P.logLevel > 0 && P.logLevel <= 3 && console.log.apply(console, ["matter-js:"].concat(Array.prototype.slice.call(arguments)));
+            }, P.info = function() {
+              console && P.logLevel > 0 && P.logLevel <= 2 && console.info.apply(console, ["matter-js:"].concat(Array.prototype.slice.call(arguments)));
+            }, P.warn = function() {
+              console && P.logLevel > 0 && P.logLevel <= 3 && console.warn.apply(console, ["matter-js:"].concat(Array.prototype.slice.call(arguments)));
+            }, P.warnOnce = function() {
+              var b = Array.prototype.slice.call(arguments).join(" ");
+              P._warnedOnce[b] || (P.warn(b), P._warnedOnce[b] = !0);
+            }, P.deprecated = function(b, d, h) {
+              b[d] = P.chain(function() {
+                P.warnOnce("🔅 deprecated 🔅", h);
+              }, b[d]);
+            }, P.nextId = function() {
+              return P._nextId++;
+            }, P.indexOf = function(b, d) {
+              if (b.indexOf)
+                return b.indexOf(d);
+              for (var h = 0; h < b.length; h++)
+                if (b[h] === d)
+                  return h;
+              return -1;
+            }, P.map = function(b, d) {
+              if (b.map)
+                return b.map(d);
+              for (var h = [], x = 0; x < b.length; x += 1)
+                h.push(d(b[x]));
+              return h;
+            }, P.topologicalSort = function(b) {
+              var d = [], h = [], x = [];
+              for (var g in b)
+                !h[g] && !x[g] && P._topologicalSort(g, h, x, b, d);
+              return d;
+            }, P._topologicalSort = function(b, d, h, x, g) {
+              var w = x[b] || [];
+              h[b] = !0;
+              for (var l = 0; l < w.length; l += 1) {
+                var t = w[l];
+                h[t] || d[t] || P._topologicalSort(t, d, h, x, g);
+              }
+              h[b] = !1, d[b] = !0, g.push(b);
+            }, P.chain = function() {
+              for (var b = [], d = 0; d < arguments.length; d += 1) {
+                var h = arguments[d];
+                h._chained ? b.push.apply(b, h._chained) : b.push(h);
+              }
+              var x = function() {
+                for (var g, w = new Array(arguments.length), l = 0, t = arguments.length; l < t; l++)
+                  w[l] = arguments[l];
+                for (l = 0; l < b.length; l += 1) {
+                  var o = b[l].apply(g, w);
+                  typeof o < "u" && (g = o);
+                }
+                return g;
+              };
+              return x._chained = b, x;
+            }, P.chainPathBefore = function(b, d, h) {
+              return P.set(b, d, P.chain(
+                h,
+                P.get(b, d)
+              ));
+            }, P.chainPathAfter = function(b, d, h) {
+              return P.set(b, d, P.chain(
+                P.get(b, d),
+                h
+              ));
+            }, P.setDecomp = function(b) {
+              P._decomp = b;
+            }, P.getDecomp = function() {
+              var b = P._decomp;
+              try {
+                !b && typeof window < "u" && (b = window.decomp), !b && typeof Hi < "u" && (b = Hi.decomp);
+              } catch {
+                b = null;
+              }
+              return b;
+            };
+          }();
+        },
+        /* 1 */
+        /***/
+        function(ee, ge) {
+          var P = {};
+          ee.exports = P, function() {
+            P.create = function(f) {
+              var b = {
+                min: { x: 0, y: 0 },
+                max: { x: 0, y: 0 }
+              };
+              return f && P.update(b, f), b;
+            }, P.update = function(f, b, d) {
+              f.min.x = 1 / 0, f.max.x = -1 / 0, f.min.y = 1 / 0, f.max.y = -1 / 0;
+              for (var h = 0; h < b.length; h++) {
+                var x = b[h];
+                x.x > f.max.x && (f.max.x = x.x), x.x < f.min.x && (f.min.x = x.x), x.y > f.max.y && (f.max.y = x.y), x.y < f.min.y && (f.min.y = x.y);
+              }
+              d && (d.x > 0 ? f.max.x += d.x : f.min.x += d.x, d.y > 0 ? f.max.y += d.y : f.min.y += d.y);
+            }, P.contains = function(f, b) {
+              return b.x >= f.min.x && b.x <= f.max.x && b.y >= f.min.y && b.y <= f.max.y;
+            }, P.overlaps = function(f, b) {
+              return f.min.x <= b.max.x && f.max.x >= b.min.x && f.max.y >= b.min.y && f.min.y <= b.max.y;
+            }, P.translate = function(f, b) {
+              f.min.x += b.x, f.max.x += b.x, f.min.y += b.y, f.max.y += b.y;
+            }, P.shift = function(f, b) {
+              var d = f.max.x - f.min.x, h = f.max.y - f.min.y;
+              f.min.x = b.x, f.max.x = b.x + d, f.min.y = b.y, f.max.y = b.y + h;
+            };
+          }();
+        },
+        /* 2 */
+        /***/
+        function(ee, ge) {
+          var P = {};
+          ee.exports = P, function() {
+            P.create = function(f, b) {
+              return { x: f || 0, y: b || 0 };
+            }, P.clone = function(f) {
+              return { x: f.x, y: f.y };
+            }, P.magnitude = function(f) {
+              return Math.sqrt(f.x * f.x + f.y * f.y);
+            }, P.magnitudeSquared = function(f) {
+              return f.x * f.x + f.y * f.y;
+            }, P.rotate = function(f, b, d) {
+              var h = Math.cos(b), x = Math.sin(b);
+              d || (d = {});
+              var g = f.x * h - f.y * x;
+              return d.y = f.x * x + f.y * h, d.x = g, d;
+            }, P.rotateAbout = function(f, b, d, h) {
+              var x = Math.cos(b), g = Math.sin(b);
+              h || (h = {});
+              var w = d.x + ((f.x - d.x) * x - (f.y - d.y) * g);
+              return h.y = d.y + ((f.x - d.x) * g + (f.y - d.y) * x), h.x = w, h;
+            }, P.normalise = function(f) {
+              var b = P.magnitude(f);
+              return b === 0 ? { x: 0, y: 0 } : { x: f.x / b, y: f.y / b };
+            }, P.dot = function(f, b) {
+              return f.x * b.x + f.y * b.y;
+            }, P.cross = function(f, b) {
+              return f.x * b.y - f.y * b.x;
+            }, P.cross3 = function(f, b, d) {
+              return (b.x - f.x) * (d.y - f.y) - (b.y - f.y) * (d.x - f.x);
+            }, P.add = function(f, b, d) {
+              return d || (d = {}), d.x = f.x + b.x, d.y = f.y + b.y, d;
+            }, P.sub = function(f, b, d) {
+              return d || (d = {}), d.x = f.x - b.x, d.y = f.y - b.y, d;
+            }, P.mult = function(f, b) {
+              return { x: f.x * b, y: f.y * b };
+            }, P.div = function(f, b) {
+              return { x: f.x / b, y: f.y / b };
+            }, P.perp = function(f, b) {
+              return b = b === !0 ? -1 : 1, { x: b * -f.y, y: b * f.x };
+            }, P.neg = function(f) {
+              return { x: -f.x, y: -f.y };
+            }, P.angle = function(f, b) {
+              return Math.atan2(b.y - f.y, b.x - f.x);
+            }, P._temp = [
+              P.create(),
+              P.create(),
+              P.create(),
+              P.create(),
+              P.create(),
+              P.create()
+            ];
+          }();
+        },
+        /* 3 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f;
+          var b = P(2), d = P(0);
+          (function() {
+            f.create = function(h, x) {
+              for (var g = [], w = 0; w < h.length; w++) {
+                var l = h[w], t = {
+                  x: l.x,
+                  y: l.y,
+                  index: w,
+                  body: x,
+                  isInternal: !1
+                };
+                g.push(t);
+              }
+              return g;
+            }, f.fromPath = function(h, x) {
+              var g = /L?\s*([-\d.e]+)[\s,]*([-\d.e]+)*/ig, w = [];
+              return h.replace(g, function(l, t, o) {
+                w.push({ x: parseFloat(t), y: parseFloat(o) });
+              }), f.create(w, x);
+            }, f.centre = function(h) {
+              for (var x = f.area(h, !0), g = { x: 0, y: 0 }, w, l, t, o = 0; o < h.length; o++)
+                t = (o + 1) % h.length, w = b.cross(h[o], h[t]), l = b.mult(b.add(h[o], h[t]), w), g = b.add(g, l);
+              return b.div(g, 6 * x);
+            }, f.mean = function(h) {
+              for (var x = { x: 0, y: 0 }, g = 0; g < h.length; g++)
+                x.x += h[g].x, x.y += h[g].y;
+              return b.div(x, h.length);
+            }, f.area = function(h, x) {
+              for (var g = 0, w = h.length - 1, l = 0; l < h.length; l++)
+                g += (h[w].x - h[l].x) * (h[w].y + h[l].y), w = l;
+              return x ? g / 2 : Math.abs(g) / 2;
+            }, f.inertia = function(h, x) {
+              for (var g = 0, w = 0, l = h, t, o, i = 0; i < l.length; i++)
+                o = (i + 1) % l.length, t = Math.abs(b.cross(l[o], l[i])), g += t * (b.dot(l[o], l[o]) + b.dot(l[o], l[i]) + b.dot(l[i], l[i])), w += t;
+              return x / 6 * (g / w);
+            }, f.translate = function(h, x, g) {
+              g = typeof g < "u" ? g : 1;
+              var w = h.length, l = x.x * g, t = x.y * g, o;
+              for (o = 0; o < w; o++)
+                h[o].x += l, h[o].y += t;
+              return h;
+            }, f.rotate = function(h, x, g) {
+              if (x !== 0) {
+                var w = Math.cos(x), l = Math.sin(x), t = g.x, o = g.y, i = h.length, c, E, O, D;
+                for (D = 0; D < i; D++)
+                  c = h[D], E = c.x - t, O = c.y - o, c.x = t + (E * w - O * l), c.y = o + (E * l + O * w);
+                return h;
+              }
+            }, f.contains = function(h, x) {
+              for (var g = x.x, w = x.y, l = h.length, t = h[l - 1], o, i = 0; i < l; i++) {
+                if (o = h[i], (g - t.x) * (o.y - t.y) + (w - t.y) * (t.x - o.x) > 0)
+                  return !1;
+                t = o;
+              }
+              return !0;
+            }, f.scale = function(h, x, g, w) {
+              if (x === 1 && g === 1)
+                return h;
+              w = w || f.centre(h);
+              for (var l, t, o = 0; o < h.length; o++)
+                l = h[o], t = b.sub(l, w), h[o].x = w.x + t.x * x, h[o].y = w.y + t.y * g;
+              return h;
+            }, f.chamfer = function(h, x, g, w, l) {
+              typeof x == "number" ? x = [x] : x = x || [8], g = typeof g < "u" ? g : -1, w = w || 2, l = l || 14;
+              for (var t = [], o = 0; o < h.length; o++) {
+                var i = h[o - 1 >= 0 ? o - 1 : h.length - 1], c = h[o], E = h[(o + 1) % h.length], O = x[o < x.length ? o : x.length - 1];
+                if (O === 0) {
+                  t.push(c);
+                  continue;
+                }
+                var D = b.normalise({
+                  x: c.y - i.y,
+                  y: i.x - c.x
+                }), U = b.normalise({
+                  x: E.y - c.y,
+                  y: c.x - E.x
+                }), S = Math.sqrt(2 * Math.pow(O, 2)), T = b.mult(d.clone(D), O), L = b.normalise(b.mult(b.add(D, U), 0.5)), I = b.sub(c, b.mult(L, S)), N = g;
+                g === -1 && (N = Math.pow(O, 0.32) * 1.75), N = d.clamp(N, w, l), N % 2 === 1 && (N += 1);
+                for (var q = Math.acos(b.dot(D, U)), G = q / N, m = 0; m < N; m++)
+                  t.push(b.add(b.rotate(T, G * m), I));
+              }
+              return t;
+            }, f.clockwiseSort = function(h) {
+              var x = f.mean(h);
+              return h.sort(function(g, w) {
+                return b.angle(x, g) - b.angle(x, w);
+              }), h;
+            }, f.isConvex = function(h) {
+              var x = 0, g = h.length, w, l, t, o;
+              if (g < 3)
+                return null;
+              for (w = 0; w < g; w++)
+                if (l = (w + 1) % g, t = (w + 2) % g, o = (h[l].x - h[w].x) * (h[t].y - h[l].y), o -= (h[l].y - h[w].y) * (h[t].x - h[l].x), o < 0 ? x |= 1 : o > 0 && (x |= 2), x === 3)
+                  return !1;
+              return x !== 0 ? !0 : null;
+            }, f.hull = function(h) {
+              var x = [], g = [], w, l;
+              for (h = h.slice(0), h.sort(function(t, o) {
+                var i = t.x - o.x;
+                return i !== 0 ? i : t.y - o.y;
+              }), l = 0; l < h.length; l += 1) {
+                for (w = h[l]; g.length >= 2 && b.cross3(g[g.length - 2], g[g.length - 1], w) <= 0; )
+                  g.pop();
+                g.push(w);
+              }
+              for (l = h.length - 1; l >= 0; l -= 1) {
+                for (w = h[l]; x.length >= 2 && b.cross3(x[x.length - 2], x[x.length - 1], w) <= 0; )
+                  x.pop();
+                x.push(w);
+              }
+              return x.pop(), g.pop(), x.concat(g);
+            };
+          })();
+        },
+        /* 4 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f;
+          var b = P(3), d = P(2), h = P(7), x = P(0), g = P(1), w = P(11);
+          (function() {
+            f._timeCorrection = !0, f._inertiaScale = 4, f._nextCollidingGroupId = 1, f._nextNonCollidingGroupId = -1, f._nextCategory = 1, f._baseDelta = 1e3 / 60, f.create = function(t) {
+              var o = {
+                id: x.nextId(),
+                type: "body",
+                label: "Body",
+                parts: [],
+                plugin: {},
+                angle: 0,
+                vertices: b.fromPath("L 0 0 L 40 0 L 40 40 L 0 40"),
+                position: { x: 0, y: 0 },
+                force: { x: 0, y: 0 },
+                torque: 0,
+                positionImpulse: { x: 0, y: 0 },
+                constraintImpulse: { x: 0, y: 0, angle: 0 },
+                totalContacts: 0,
+                speed: 0,
+                angularSpeed: 0,
+                velocity: { x: 0, y: 0 },
+                angularVelocity: 0,
+                isSensor: !1,
+                isStatic: !1,
+                isSleeping: !1,
+                motion: 0,
+                sleepThreshold: 60,
+                density: 1e-3,
+                restitution: 0,
+                friction: 0.1,
+                frictionStatic: 0.5,
+                frictionAir: 0.01,
+                collisionFilter: {
+                  category: 1,
+                  mask: 4294967295,
+                  group: 0
+                },
+                slop: 0.05,
+                timeScale: 1,
+                render: {
+                  visible: !0,
+                  opacity: 1,
+                  strokeStyle: null,
+                  fillStyle: null,
+                  lineWidth: null,
+                  sprite: {
+                    xScale: 1,
+                    yScale: 1,
+                    xOffset: 0,
+                    yOffset: 0
+                  }
+                },
+                events: null,
+                bounds: null,
+                chamfer: null,
+                circleRadius: 0,
+                positionPrev: null,
+                anglePrev: 0,
+                parent: null,
+                axes: null,
+                area: 0,
+                mass: 0,
+                inertia: 0,
+                deltaTime: 16.666666666666668,
+                _original: null
+              }, i = x.extend(o, t);
+              return l(i, t), i;
+            }, f.nextGroup = function(t) {
+              return t ? f._nextNonCollidingGroupId-- : f._nextCollidingGroupId++;
+            }, f.nextCategory = function() {
+              return f._nextCategory = f._nextCategory << 1, f._nextCategory;
+            };
+            var l = function(t, o) {
+              o = o || {}, f.set(t, {
+                bounds: t.bounds || g.create(t.vertices),
+                positionPrev: t.positionPrev || d.clone(t.position),
+                anglePrev: t.anglePrev || t.angle,
+                vertices: t.vertices,
+                parts: t.parts || [t],
+                isStatic: t.isStatic,
+                isSleeping: t.isSleeping,
+                parent: t.parent || t
+              }), b.rotate(t.vertices, t.angle, t.position), w.rotate(t.axes, t.angle), g.update(t.bounds, t.vertices, t.velocity), f.set(t, {
+                axes: o.axes || t.axes,
+                area: o.area || t.area,
+                mass: o.mass || t.mass,
+                inertia: o.inertia || t.inertia
+              });
+              var i = t.isStatic ? "#14151f" : x.choose(["#f19648", "#f5d259", "#f55a3c", "#063e7b", "#ececd1"]), c = t.isStatic ? "#555" : "#ccc", E = t.isStatic && t.render.fillStyle === null ? 1 : 0;
+              t.render.fillStyle = t.render.fillStyle || i, t.render.strokeStyle = t.render.strokeStyle || c, t.render.lineWidth = t.render.lineWidth || E, t.render.sprite.xOffset += -(t.bounds.min.x - t.position.x) / (t.bounds.max.x - t.bounds.min.x), t.render.sprite.yOffset += -(t.bounds.min.y - t.position.y) / (t.bounds.max.y - t.bounds.min.y);
+            };
+            f.set = function(t, o, i) {
+              var c;
+              typeof o == "string" && (c = o, o = {}, o[c] = i);
+              for (c in o)
+                if (Object.prototype.hasOwnProperty.call(o, c))
+                  switch (i = o[c], c) {
+                    case "isStatic":
+                      f.setStatic(t, i);
+                      break;
+                    case "isSleeping":
+                      h.set(t, i);
+                      break;
+                    case "mass":
+                      f.setMass(t, i);
+                      break;
+                    case "density":
+                      f.setDensity(t, i);
+                      break;
+                    case "inertia":
+                      f.setInertia(t, i);
+                      break;
+                    case "vertices":
+                      f.setVertices(t, i);
+                      break;
+                    case "position":
+                      f.setPosition(t, i);
+                      break;
+                    case "angle":
+                      f.setAngle(t, i);
+                      break;
+                    case "velocity":
+                      f.setVelocity(t, i);
+                      break;
+                    case "angularVelocity":
+                      f.setAngularVelocity(t, i);
+                      break;
+                    case "speed":
+                      f.setSpeed(t, i);
+                      break;
+                    case "angularSpeed":
+                      f.setAngularSpeed(t, i);
+                      break;
+                    case "parts":
+                      f.setParts(t, i);
+                      break;
+                    case "centre":
+                      f.setCentre(t, i);
+                      break;
+                    default:
+                      t[c] = i;
+                  }
+            }, f.setStatic = function(t, o) {
+              for (var i = 0; i < t.parts.length; i++) {
+                var c = t.parts[i];
+                c.isStatic = o, o ? (c._original = {
+                  restitution: c.restitution,
+                  friction: c.friction,
+                  mass: c.mass,
+                  inertia: c.inertia,
+                  density: c.density,
+                  inverseMass: c.inverseMass,
+                  inverseInertia: c.inverseInertia
+                }, c.restitution = 0, c.friction = 1, c.mass = c.inertia = c.density = 1 / 0, c.inverseMass = c.inverseInertia = 0, c.positionPrev.x = c.position.x, c.positionPrev.y = c.position.y, c.anglePrev = c.angle, c.angularVelocity = 0, c.speed = 0, c.angularSpeed = 0, c.motion = 0) : c._original && (c.restitution = c._original.restitution, c.friction = c._original.friction, c.mass = c._original.mass, c.inertia = c._original.inertia, c.density = c._original.density, c.inverseMass = c._original.inverseMass, c.inverseInertia = c._original.inverseInertia, c._original = null);
+              }
+            }, f.setMass = function(t, o) {
+              var i = t.inertia / (t.mass / 6);
+              t.inertia = i * (o / 6), t.inverseInertia = 1 / t.inertia, t.mass = o, t.inverseMass = 1 / t.mass, t.density = t.mass / t.area;
+            }, f.setDensity = function(t, o) {
+              f.setMass(t, o * t.area), t.density = o;
+            }, f.setInertia = function(t, o) {
+              t.inertia = o, t.inverseInertia = 1 / t.inertia;
+            }, f.setVertices = function(t, o) {
+              o[0].body === t ? t.vertices = o : t.vertices = b.create(o, t), t.axes = w.fromVertices(t.vertices), t.area = b.area(t.vertices), f.setMass(t, t.density * t.area);
+              var i = b.centre(t.vertices);
+              b.translate(t.vertices, i, -1), f.setInertia(t, f._inertiaScale * b.inertia(t.vertices, t.mass)), b.translate(t.vertices, t.position), g.update(t.bounds, t.vertices, t.velocity);
+            }, f.setParts = function(t, o, i) {
+              var c;
+              for (o = o.slice(0), t.parts.length = 0, t.parts.push(t), t.parent = t, c = 0; c < o.length; c++) {
+                var E = o[c];
+                E !== t && (E.parent = t, t.parts.push(E));
+              }
+              if (t.parts.length !== 1) {
+                if (i = typeof i < "u" ? i : !0, i) {
+                  var O = [];
+                  for (c = 0; c < o.length; c++)
+                    O = O.concat(o[c].vertices);
+                  b.clockwiseSort(O);
+                  var D = b.hull(O), U = b.centre(D);
+                  f.setVertices(t, D), b.translate(t.vertices, U);
+                }
+                var S = f._totalProperties(t);
+                t.area = S.area, t.parent = t, t.position.x = S.centre.x, t.position.y = S.centre.y, t.positionPrev.x = S.centre.x, t.positionPrev.y = S.centre.y, f.setMass(t, S.mass), f.setInertia(t, S.inertia), f.setPosition(t, S.centre);
+              }
+            }, f.setCentre = function(t, o, i) {
+              i ? (t.positionPrev.x += o.x, t.positionPrev.y += o.y, t.position.x += o.x, t.position.y += o.y) : (t.positionPrev.x = o.x - (t.position.x - t.positionPrev.x), t.positionPrev.y = o.y - (t.position.y - t.positionPrev.y), t.position.x = o.x, t.position.y = o.y);
+            }, f.setPosition = function(t, o, i) {
+              var c = d.sub(o, t.position);
+              i ? (t.positionPrev.x = t.position.x, t.positionPrev.y = t.position.y, t.velocity.x = c.x, t.velocity.y = c.y, t.speed = d.magnitude(c)) : (t.positionPrev.x += c.x, t.positionPrev.y += c.y);
+              for (var E = 0; E < t.parts.length; E++) {
+                var O = t.parts[E];
+                O.position.x += c.x, O.position.y += c.y, b.translate(O.vertices, c), g.update(O.bounds, O.vertices, t.velocity);
+              }
+            }, f.setAngle = function(t, o, i) {
+              var c = o - t.angle;
+              i ? (t.anglePrev = t.angle, t.angularVelocity = c, t.angularSpeed = Math.abs(c)) : t.anglePrev += c;
+              for (var E = 0; E < t.parts.length; E++) {
+                var O = t.parts[E];
+                O.angle += c, b.rotate(O.vertices, c, t.position), w.rotate(O.axes, c), g.update(O.bounds, O.vertices, t.velocity), E > 0 && d.rotateAbout(O.position, c, t.position, O.position);
+              }
+            }, f.setVelocity = function(t, o) {
+              var i = t.deltaTime / f._baseDelta;
+              t.positionPrev.x = t.position.x - o.x * i, t.positionPrev.y = t.position.y - o.y * i, t.velocity.x = (t.position.x - t.positionPrev.x) / i, t.velocity.y = (t.position.y - t.positionPrev.y) / i, t.speed = d.magnitude(t.velocity);
+            }, f.getVelocity = function(t) {
+              var o = f._baseDelta / t.deltaTime;
+              return {
+                x: (t.position.x - t.positionPrev.x) * o,
+                y: (t.position.y - t.positionPrev.y) * o
+              };
+            }, f.getSpeed = function(t) {
+              return d.magnitude(f.getVelocity(t));
+            }, f.setSpeed = function(t, o) {
+              f.setVelocity(t, d.mult(d.normalise(f.getVelocity(t)), o));
+            }, f.setAngularVelocity = function(t, o) {
+              var i = t.deltaTime / f._baseDelta;
+              t.anglePrev = t.angle - o * i, t.angularVelocity = (t.angle - t.anglePrev) / i, t.angularSpeed = Math.abs(t.angularVelocity);
+            }, f.getAngularVelocity = function(t) {
+              return (t.angle - t.anglePrev) * f._baseDelta / t.deltaTime;
+            }, f.getAngularSpeed = function(t) {
+              return Math.abs(f.getAngularVelocity(t));
+            }, f.setAngularSpeed = function(t, o) {
+              f.setAngularVelocity(t, x.sign(f.getAngularVelocity(t)) * o);
+            }, f.translate = function(t, o, i) {
+              f.setPosition(t, d.add(t.position, o), i);
+            }, f.rotate = function(t, o, i, c) {
+              if (!i)
+                f.setAngle(t, t.angle + o, c);
+              else {
+                var E = Math.cos(o), O = Math.sin(o), D = t.position.x - i.x, U = t.position.y - i.y;
+                f.setPosition(t, {
+                  x: i.x + (D * E - U * O),
+                  y: i.y + (D * O + U * E)
+                }, c), f.setAngle(t, t.angle + o, c);
+              }
+            }, f.scale = function(t, o, i, c) {
+              var E = 0, O = 0;
+              c = c || t.position;
+              for (var D = 0; D < t.parts.length; D++) {
+                var U = t.parts[D];
+                b.scale(U.vertices, o, i, c), U.axes = w.fromVertices(U.vertices), U.area = b.area(U.vertices), f.setMass(U, t.density * U.area), b.translate(U.vertices, { x: -U.position.x, y: -U.position.y }), f.setInertia(U, f._inertiaScale * b.inertia(U.vertices, U.mass)), b.translate(U.vertices, { x: U.position.x, y: U.position.y }), D > 0 && (E += U.area, O += U.inertia), U.position.x = c.x + (U.position.x - c.x) * o, U.position.y = c.y + (U.position.y - c.y) * i, g.update(U.bounds, U.vertices, t.velocity);
+              }
+              t.parts.length > 1 && (t.area = E, t.isStatic || (f.setMass(t, t.density * E), f.setInertia(t, O))), t.circleRadius && (o === i ? t.circleRadius *= o : t.circleRadius = null);
+            }, f.update = function(t, o) {
+              o = (typeof o < "u" ? o : 1e3 / 60) * t.timeScale;
+              var i = o * o, c = f._timeCorrection ? o / (t.deltaTime || o) : 1, E = 1 - t.frictionAir * (o / x._baseDelta), O = (t.position.x - t.positionPrev.x) * c, D = (t.position.y - t.positionPrev.y) * c;
+              t.velocity.x = O * E + t.force.x / t.mass * i, t.velocity.y = D * E + t.force.y / t.mass * i, t.positionPrev.x = t.position.x, t.positionPrev.y = t.position.y, t.position.x += t.velocity.x, t.position.y += t.velocity.y, t.deltaTime = o, t.angularVelocity = (t.angle - t.anglePrev) * E * c + t.torque / t.inertia * i, t.anglePrev = t.angle, t.angle += t.angularVelocity;
+              for (var U = 0; U < t.parts.length; U++) {
+                var S = t.parts[U];
+                b.translate(S.vertices, t.velocity), U > 0 && (S.position.x += t.velocity.x, S.position.y += t.velocity.y), t.angularVelocity !== 0 && (b.rotate(S.vertices, t.angularVelocity, t.position), w.rotate(S.axes, t.angularVelocity), U > 0 && d.rotateAbout(S.position, t.angularVelocity, t.position, S.position)), g.update(S.bounds, S.vertices, t.velocity);
+              }
+            }, f.updateVelocities = function(t) {
+              var o = f._baseDelta / t.deltaTime, i = t.velocity;
+              i.x = (t.position.x - t.positionPrev.x) * o, i.y = (t.position.y - t.positionPrev.y) * o, t.speed = Math.sqrt(i.x * i.x + i.y * i.y), t.angularVelocity = (t.angle - t.anglePrev) * o, t.angularSpeed = Math.abs(t.angularVelocity);
+            }, f.applyForce = function(t, o, i) {
+              var c = { x: o.x - t.position.x, y: o.y - t.position.y };
+              t.force.x += i.x, t.force.y += i.y, t.torque += c.x * i.y - c.y * i.x;
+            }, f._totalProperties = function(t) {
+              for (var o = {
+                mass: 0,
+                area: 0,
+                inertia: 0,
+                centre: { x: 0, y: 0 }
+              }, i = t.parts.length === 1 ? 0 : 1; i < t.parts.length; i++) {
+                var c = t.parts[i], E = c.mass !== 1 / 0 ? c.mass : 1;
+                o.mass += E, o.area += c.area, o.inertia += c.inertia, o.centre = d.add(o.centre, d.mult(c.position, E));
+              }
+              return o.centre = d.div(o.centre, o.mass), o;
+            };
+          })();
+        },
+        /* 5 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f;
+          var b = P(0);
+          (function() {
+            f.on = function(d, h, x) {
+              for (var g = h.split(" "), w, l = 0; l < g.length; l++)
+                w = g[l], d.events = d.events || {}, d.events[w] = d.events[w] || [], d.events[w].push(x);
+              return x;
+            }, f.off = function(d, h, x) {
+              if (!h) {
+                d.events = {};
+                return;
+              }
+              typeof h == "function" && (x = h, h = b.keys(d.events).join(" "));
+              for (var g = h.split(" "), w = 0; w < g.length; w++) {
+                var l = d.events[g[w]], t = [];
+                if (x && l)
+                  for (var o = 0; o < l.length; o++)
+                    l[o] !== x && t.push(l[o]);
+                d.events[g[w]] = t;
+              }
+            }, f.trigger = function(d, h, x) {
+              var g, w, l, t, o = d.events;
+              if (o && b.keys(o).length > 0) {
+                x || (x = {}), g = h.split(" ");
+                for (var i = 0; i < g.length; i++)
+                  if (w = g[i], l = o[w], l) {
+                    t = b.clone(x, !1), t.name = w, t.source = d;
+                    for (var c = 0; c < l.length; c++)
+                      l[c].apply(d, [t]);
+                  }
+              }
+            };
+          })();
+        },
+        /* 6 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f;
+          var b = P(5), d = P(0), h = P(1), x = P(4);
+          (function() {
+            f.create = function(g) {
+              return d.extend({
+                id: d.nextId(),
+                type: "composite",
+                parent: null,
+                isModified: !1,
+                bodies: [],
+                constraints: [],
+                composites: [],
+                label: "Composite",
+                plugin: {},
+                cache: {
+                  allBodies: null,
+                  allConstraints: null,
+                  allComposites: null
+                }
+              }, g);
+            }, f.setModified = function(g, w, l, t) {
+              if (g.isModified = w, w && g.cache && (g.cache.allBodies = null, g.cache.allConstraints = null, g.cache.allComposites = null), l && g.parent && f.setModified(g.parent, w, l, t), t)
+                for (var o = 0; o < g.composites.length; o++) {
+                  var i = g.composites[o];
+                  f.setModified(i, w, l, t);
+                }
+            }, f.add = function(g, w) {
+              var l = [].concat(w);
+              b.trigger(g, "beforeAdd", { object: w });
+              for (var t = 0; t < l.length; t++) {
+                var o = l[t];
+                switch (o.type) {
+                  case "body":
+                    if (o.parent !== o) {
+                      d.warn("Composite.add: skipped adding a compound body part (you must add its parent instead)");
+                      break;
+                    }
+                    f.addBody(g, o);
+                    break;
+                  case "constraint":
+                    f.addConstraint(g, o);
+                    break;
+                  case "composite":
+                    f.addComposite(g, o);
+                    break;
+                  case "mouseConstraint":
+                    f.addConstraint(g, o.constraint);
+                    break;
+                }
+              }
+              return b.trigger(g, "afterAdd", { object: w }), g;
+            }, f.remove = function(g, w, l) {
+              var t = [].concat(w);
+              b.trigger(g, "beforeRemove", { object: w });
+              for (var o = 0; o < t.length; o++) {
+                var i = t[o];
+                switch (i.type) {
+                  case "body":
+                    f.removeBody(g, i, l);
+                    break;
+                  case "constraint":
+                    f.removeConstraint(g, i, l);
+                    break;
+                  case "composite":
+                    f.removeComposite(g, i, l);
+                    break;
+                  case "mouseConstraint":
+                    f.removeConstraint(g, i.constraint);
+                    break;
+                }
+              }
+              return b.trigger(g, "afterRemove", { object: w }), g;
+            }, f.addComposite = function(g, w) {
+              return g.composites.push(w), w.parent = g, f.setModified(g, !0, !0, !1), g;
+            }, f.removeComposite = function(g, w, l) {
+              var t = d.indexOf(g.composites, w);
+              if (t !== -1 && f.removeCompositeAt(g, t), l)
+                for (var o = 0; o < g.composites.length; o++)
+                  f.removeComposite(g.composites[o], w, !0);
+              return g;
+            }, f.removeCompositeAt = function(g, w) {
+              return g.composites.splice(w, 1), f.setModified(g, !0, !0, !1), g;
+            }, f.addBody = function(g, w) {
+              return g.bodies.push(w), f.setModified(g, !0, !0, !1), g;
+            }, f.removeBody = function(g, w, l) {
+              var t = d.indexOf(g.bodies, w);
+              if (t !== -1 && f.removeBodyAt(g, t), l)
+                for (var o = 0; o < g.composites.length; o++)
+                  f.removeBody(g.composites[o], w, !0);
+              return g;
+            }, f.removeBodyAt = function(g, w) {
+              return g.bodies.splice(w, 1), f.setModified(g, !0, !0, !1), g;
+            }, f.addConstraint = function(g, w) {
+              return g.constraints.push(w), f.setModified(g, !0, !0, !1), g;
+            }, f.removeConstraint = function(g, w, l) {
+              var t = d.indexOf(g.constraints, w);
+              if (t !== -1 && f.removeConstraintAt(g, t), l)
+                for (var o = 0; o < g.composites.length; o++)
+                  f.removeConstraint(g.composites[o], w, !0);
+              return g;
+            }, f.removeConstraintAt = function(g, w) {
+              return g.constraints.splice(w, 1), f.setModified(g, !0, !0, !1), g;
+            }, f.clear = function(g, w, l) {
+              if (l)
+                for (var t = 0; t < g.composites.length; t++)
+                  f.clear(g.composites[t], w, !0);
+              return w ? g.bodies = g.bodies.filter(function(o) {
+                return o.isStatic;
+              }) : g.bodies.length = 0, g.constraints.length = 0, g.composites.length = 0, f.setModified(g, !0, !0, !1), g;
+            }, f.allBodies = function(g) {
+              if (g.cache && g.cache.allBodies)
+                return g.cache.allBodies;
+              for (var w = [].concat(g.bodies), l = 0; l < g.composites.length; l++)
+                w = w.concat(f.allBodies(g.composites[l]));
+              return g.cache && (g.cache.allBodies = w), w;
+            }, f.allConstraints = function(g) {
+              if (g.cache && g.cache.allConstraints)
+                return g.cache.allConstraints;
+              for (var w = [].concat(g.constraints), l = 0; l < g.composites.length; l++)
+                w = w.concat(f.allConstraints(g.composites[l]));
+              return g.cache && (g.cache.allConstraints = w), w;
+            }, f.allComposites = function(g) {
+              if (g.cache && g.cache.allComposites)
+                return g.cache.allComposites;
+              for (var w = [].concat(g.composites), l = 0; l < g.composites.length; l++)
+                w = w.concat(f.allComposites(g.composites[l]));
+              return g.cache && (g.cache.allComposites = w), w;
+            }, f.get = function(g, w, l) {
+              var t, o;
+              switch (l) {
+                case "body":
+                  t = f.allBodies(g);
+                  break;
+                case "constraint":
+                  t = f.allConstraints(g);
+                  break;
+                case "composite":
+                  t = f.allComposites(g).concat(g);
+                  break;
+              }
+              return t ? (o = t.filter(function(i) {
+                return i.id.toString() === w.toString();
+              }), o.length === 0 ? null : o[0]) : null;
+            }, f.move = function(g, w, l) {
+              return f.remove(g, w), f.add(l, w), g;
+            }, f.rebase = function(g) {
+              for (var w = f.allBodies(g).concat(f.allConstraints(g)).concat(f.allComposites(g)), l = 0; l < w.length; l++)
+                w[l].id = d.nextId();
+              return g;
+            }, f.translate = function(g, w, l) {
+              for (var t = l ? f.allBodies(g) : g.bodies, o = 0; o < t.length; o++)
+                x.translate(t[o], w);
+              return g;
+            }, f.rotate = function(g, w, l, t) {
+              for (var o = Math.cos(w), i = Math.sin(w), c = t ? f.allBodies(g) : g.bodies, E = 0; E < c.length; E++) {
+                var O = c[E], D = O.position.x - l.x, U = O.position.y - l.y;
+                x.setPosition(O, {
+                  x: l.x + (D * o - U * i),
+                  y: l.y + (D * i + U * o)
+                }), x.rotate(O, w);
+              }
+              return g;
+            }, f.scale = function(g, w, l, t, o) {
+              for (var i = o ? f.allBodies(g) : g.bodies, c = 0; c < i.length; c++) {
+                var E = i[c], O = E.position.x - t.x, D = E.position.y - t.y;
+                x.setPosition(E, {
+                  x: t.x + O * w,
+                  y: t.y + D * l
+                }), x.scale(E, w, l);
+              }
+              return g;
+            }, f.bounds = function(g) {
+              for (var w = f.allBodies(g), l = [], t = 0; t < w.length; t += 1) {
+                var o = w[t];
+                l.push(o.bounds.min, o.bounds.max);
+              }
+              return h.create(l);
+            };
+          })();
+        },
+        /* 7 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f;
+          var b = P(4), d = P(5), h = P(0);
+          (function() {
+            f._motionWakeThreshold = 0.18, f._motionSleepThreshold = 0.08, f._minBias = 0.9, f.update = function(x, g) {
+              for (var w = g / h._baseDelta, l = f._motionSleepThreshold, t = 0; t < x.length; t++) {
+                var o = x[t], i = b.getSpeed(o), c = b.getAngularSpeed(o), E = i * i + c * c;
+                if (o.force.x !== 0 || o.force.y !== 0) {
+                  f.set(o, !1);
+                  continue;
+                }
+                var O = Math.min(o.motion, E), D = Math.max(o.motion, E);
+                o.motion = f._minBias * O + (1 - f._minBias) * D, o.sleepThreshold > 0 && o.motion < l ? (o.sleepCounter += 1, o.sleepCounter >= o.sleepThreshold / w && f.set(o, !0)) : o.sleepCounter > 0 && (o.sleepCounter -= 1);
+              }
+            }, f.afterCollisions = function(x) {
+              for (var g = f._motionSleepThreshold, w = 0; w < x.length; w++) {
+                var l = x[w];
+                if (l.isActive) {
+                  var t = l.collision, o = t.bodyA.parent, i = t.bodyB.parent;
+                  if (!(o.isSleeping && i.isSleeping || o.isStatic || i.isStatic) && (o.isSleeping || i.isSleeping)) {
+                    var c = o.isSleeping && !o.isStatic ? o : i, E = c === o ? i : o;
+                    !c.isStatic && E.motion > g && f.set(c, !1);
+                  }
+                }
+              }
+            }, f.set = function(x, g) {
+              var w = x.isSleeping;
+              g ? (x.isSleeping = !0, x.sleepCounter = x.sleepThreshold, x.positionImpulse.x = 0, x.positionImpulse.y = 0, x.positionPrev.x = x.position.x, x.positionPrev.y = x.position.y, x.anglePrev = x.angle, x.speed = 0, x.angularSpeed = 0, x.motion = 0, w || d.trigger(x, "sleepStart")) : (x.isSleeping = !1, x.sleepCounter = 0, w && d.trigger(x, "sleepEnd"));
+            };
+          })();
+        },
+        /* 8 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f;
+          var b = P(3), d = P(9);
+          (function() {
+            var h = [], x = {
+              overlap: 0,
+              axis: null
+            }, g = {
+              overlap: 0,
+              axis: null
+            };
+            f.create = function(w, l) {
+              return {
+                pair: null,
+                collided: !1,
+                bodyA: w,
+                bodyB: l,
+                parentA: w.parent,
+                parentB: l.parent,
+                depth: 0,
+                normal: { x: 0, y: 0 },
+                tangent: { x: 0, y: 0 },
+                penetration: { x: 0, y: 0 },
+                supports: []
+              };
+            }, f.collides = function(w, l, t) {
+              if (f._overlapAxes(x, w.vertices, l.vertices, w.axes), x.overlap <= 0 || (f._overlapAxes(g, l.vertices, w.vertices, l.axes), g.overlap <= 0))
+                return null;
+              var o = t && t.table[d.id(w, l)], i;
+              o ? i = o.collision : (i = f.create(w, l), i.collided = !0, i.bodyA = w.id < l.id ? w : l, i.bodyB = w.id < l.id ? l : w, i.parentA = i.bodyA.parent, i.parentB = i.bodyB.parent), w = i.bodyA, l = i.bodyB;
+              var c;
+              x.overlap < g.overlap ? c = x : c = g;
+              var E = i.normal, O = i.supports, D = c.axis, U = D.x, S = D.y;
+              U * (l.position.x - w.position.x) + S * (l.position.y - w.position.y) < 0 ? (E.x = U, E.y = S) : (E.x = -U, E.y = -S), i.tangent.x = -E.y, i.tangent.y = E.x, i.depth = c.overlap, i.penetration.x = E.x * i.depth, i.penetration.y = E.y * i.depth;
+              var T = f._findSupports(w, l, E, 1), L = 0;
+              if (b.contains(w.vertices, T[0]) && (O[L++] = T[0]), b.contains(w.vertices, T[1]) && (O[L++] = T[1]), L < 2) {
+                var I = f._findSupports(l, w, E, -1);
+                b.contains(l.vertices, I[0]) && (O[L++] = I[0]), L < 2 && b.contains(l.vertices, I[1]) && (O[L++] = I[1]);
+              }
+              return L === 0 && (O[L++] = T[0]), O.length = L, i;
+            }, f._overlapAxes = function(w, l, t, o) {
+              var i = l.length, c = t.length, E = l[0].x, O = l[0].y, D = t[0].x, U = t[0].y, S = o.length, T = Number.MAX_VALUE, L = 0, I, N, q, G, m, Z;
+              for (m = 0; m < S; m++) {
+                var Y = o[m], X = Y.x, _ = Y.y, ne = E * X + O * _, ce = D * X + U * _, ye = ne, be = ce;
+                for (Z = 1; Z < i; Z += 1)
+                  G = l[Z].x * X + l[Z].y * _, G > ye ? ye = G : G < ne && (ne = G);
+                for (Z = 1; Z < c; Z += 1)
+                  G = t[Z].x * X + t[Z].y * _, G > be ? be = G : G < ce && (ce = G);
+                if (N = ye - ce, q = be - ne, I = N < q ? N : q, I < T && (T = I, L = m, I <= 0))
+                  break;
+              }
+              w.axis = o[L], w.overlap = T;
+            }, f._projectToAxis = function(w, l, t) {
+              for (var o = l[0].x * t.x + l[0].y * t.y, i = o, c = 1; c < l.length; c += 1) {
+                var E = l[c].x * t.x + l[c].y * t.y;
+                E > i ? i = E : E < o && (o = E);
+              }
+              w.min = o, w.max = i;
+            }, f._findSupports = function(w, l, t, o) {
+              var i = l.vertices, c = i.length, E = w.position.x, O = w.position.y, D = t.x * o, U = t.y * o, S = Number.MAX_VALUE, T, L, I, N, q;
+              for (q = 0; q < c; q += 1)
+                L = i[q], N = D * (E - L.x) + U * (O - L.y), N < S && (S = N, T = L);
+              return I = i[(c + T.index - 1) % c], S = D * (E - I.x) + U * (O - I.y), L = i[(T.index + 1) % c], D * (E - L.x) + U * (O - L.y) < S ? (h[0] = T, h[1] = L, h) : (h[0] = T, h[1] = I, h);
+            };
+          })();
+        },
+        /* 9 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f;
+          var b = P(16);
+          (function() {
+            f.create = function(d, h) {
+              var x = d.bodyA, g = d.bodyB, w = {
+                id: f.id(x, g),
+                bodyA: x,
+                bodyB: g,
+                collision: d,
+                contacts: [],
+                activeContacts: [],
+                separation: 0,
+                isActive: !0,
+                confirmedActive: !0,
+                isSensor: x.isSensor || g.isSensor,
+                timeCreated: h,
+                timeUpdated: h,
+                inverseMass: 0,
+                friction: 0,
+                frictionStatic: 0,
+                restitution: 0,
+                slop: 0
+              };
+              return f.update(w, d, h), w;
+            }, f.update = function(d, h, x) {
+              var g = d.contacts, w = h.supports, l = d.activeContacts, t = h.parentA, o = h.parentB, i = t.vertices.length;
+              d.isActive = !0, d.timeUpdated = x, d.collision = h, d.separation = h.depth, d.inverseMass = t.inverseMass + o.inverseMass, d.friction = t.friction < o.friction ? t.friction : o.friction, d.frictionStatic = t.frictionStatic > o.frictionStatic ? t.frictionStatic : o.frictionStatic, d.restitution = t.restitution > o.restitution ? t.restitution : o.restitution, d.slop = t.slop > o.slop ? t.slop : o.slop, h.pair = d, l.length = 0;
+              for (var c = 0; c < w.length; c++) {
+                var E = w[c], O = E.body === t ? E.index : i + E.index, D = g[O];
+                D ? l.push(D) : l.push(g[O] = b.create(E));
+              }
+            }, f.setActive = function(d, h, x) {
+              h ? (d.isActive = !0, d.timeUpdated = x) : (d.isActive = !1, d.activeContacts.length = 0);
+            }, f.id = function(d, h) {
+              return d.id < h.id ? "A" + d.id + "B" + h.id : "A" + h.id + "B" + d.id;
+            };
+          })();
+        },
+        /* 10 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f;
+          var b = P(3), d = P(2), h = P(7), x = P(1), g = P(11), w = P(0);
+          (function() {
+            f._warming = 0.4, f._torqueDampen = 1, f._minLength = 1e-6, f.create = function(l) {
+              var t = l;
+              t.bodyA && !t.pointA && (t.pointA = { x: 0, y: 0 }), t.bodyB && !t.pointB && (t.pointB = { x: 0, y: 0 });
+              var o = t.bodyA ? d.add(t.bodyA.position, t.pointA) : t.pointA, i = t.bodyB ? d.add(t.bodyB.position, t.pointB) : t.pointB, c = d.magnitude(d.sub(o, i));
+              t.length = typeof t.length < "u" ? t.length : c, t.id = t.id || w.nextId(), t.label = t.label || "Constraint", t.type = "constraint", t.stiffness = t.stiffness || (t.length > 0 ? 1 : 0.7), t.damping = t.damping || 0, t.angularStiffness = t.angularStiffness || 0, t.angleA = t.bodyA ? t.bodyA.angle : t.angleA, t.angleB = t.bodyB ? t.bodyB.angle : t.angleB, t.plugin = {};
+              var E = {
+                visible: !0,
+                lineWidth: 2,
+                strokeStyle: "#ffffff",
+                type: "line",
+                anchors: !0
+              };
+              return t.length === 0 && t.stiffness > 0.1 ? (E.type = "pin", E.anchors = !1) : t.stiffness < 0.9 && (E.type = "spring"), t.render = w.extend(E, t.render), t;
+            }, f.preSolveAll = function(l) {
+              for (var t = 0; t < l.length; t += 1) {
+                var o = l[t], i = o.constraintImpulse;
+                o.isStatic || i.x === 0 && i.y === 0 && i.angle === 0 || (o.position.x += i.x, o.position.y += i.y, o.angle += i.angle);
+              }
+            }, f.solveAll = function(l, t) {
+              for (var o = w.clamp(t / w._baseDelta, 0, 1), i = 0; i < l.length; i += 1) {
+                var c = l[i], E = !c.bodyA || c.bodyA && c.bodyA.isStatic, O = !c.bodyB || c.bodyB && c.bodyB.isStatic;
+                (E || O) && f.solve(l[i], o);
+              }
+              for (i = 0; i < l.length; i += 1)
+                c = l[i], E = !c.bodyA || c.bodyA && c.bodyA.isStatic, O = !c.bodyB || c.bodyB && c.bodyB.isStatic, !E && !O && f.solve(l[i], o);
+            }, f.solve = function(l, t) {
+              var o = l.bodyA, i = l.bodyB, c = l.pointA, E = l.pointB;
+              if (!(!o && !i)) {
+                o && !o.isStatic && (d.rotate(c, o.angle - l.angleA, c), l.angleA = o.angle), i && !i.isStatic && (d.rotate(E, i.angle - l.angleB, E), l.angleB = i.angle);
+                var O = c, D = E;
+                if (o && (O = d.add(o.position, c)), i && (D = d.add(i.position, E)), !(!O || !D)) {
+                  var U = d.sub(O, D), S = d.magnitude(U);
+                  S < f._minLength && (S = f._minLength);
+                  var T = (S - l.length) / S, L = l.stiffness >= 1 || l.length === 0, I = L ? l.stiffness * t : l.stiffness * t * t, N = l.damping * t, q = d.mult(U, T * I), G = (o ? o.inverseMass : 0) + (i ? i.inverseMass : 0), m = (o ? o.inverseInertia : 0) + (i ? i.inverseInertia : 0), Z = G + m, Y, X, _, ne, ce;
+                  if (N > 0) {
+                    var ye = d.create();
+                    _ = d.div(U, S), ce = d.sub(
+                      i && d.sub(i.position, i.positionPrev) || ye,
+                      o && d.sub(o.position, o.positionPrev) || ye
+                    ), ne = d.dot(_, ce);
+                  }
+                  o && !o.isStatic && (X = o.inverseMass / G, o.constraintImpulse.x -= q.x * X, o.constraintImpulse.y -= q.y * X, o.position.x -= q.x * X, o.position.y -= q.y * X, N > 0 && (o.positionPrev.x -= N * _.x * ne * X, o.positionPrev.y -= N * _.y * ne * X), Y = d.cross(c, q) / Z * f._torqueDampen * o.inverseInertia * (1 - l.angularStiffness), o.constraintImpulse.angle -= Y, o.angle -= Y), i && !i.isStatic && (X = i.inverseMass / G, i.constraintImpulse.x += q.x * X, i.constraintImpulse.y += q.y * X, i.position.x += q.x * X, i.position.y += q.y * X, N > 0 && (i.positionPrev.x += N * _.x * ne * X, i.positionPrev.y += N * _.y * ne * X), Y = d.cross(E, q) / Z * f._torqueDampen * i.inverseInertia * (1 - l.angularStiffness), i.constraintImpulse.angle += Y, i.angle += Y);
+                }
+              }
+            }, f.postSolveAll = function(l) {
+              for (var t = 0; t < l.length; t++) {
+                var o = l[t], i = o.constraintImpulse;
+                if (!(o.isStatic || i.x === 0 && i.y === 0 && i.angle === 0)) {
+                  h.set(o, !1);
+                  for (var c = 0; c < o.parts.length; c++) {
+                    var E = o.parts[c];
+                    b.translate(E.vertices, i), c > 0 && (E.position.x += i.x, E.position.y += i.y), i.angle !== 0 && (b.rotate(E.vertices, i.angle, o.position), g.rotate(E.axes, i.angle), c > 0 && d.rotateAbout(E.position, i.angle, o.position, E.position)), x.update(E.bounds, E.vertices, o.velocity);
+                  }
+                  i.angle *= f._warming, i.x *= f._warming, i.y *= f._warming;
+                }
+              }
+            }, f.pointAWorld = function(l) {
+              return {
+                x: (l.bodyA ? l.bodyA.position.x : 0) + (l.pointA ? l.pointA.x : 0),
+                y: (l.bodyA ? l.bodyA.position.y : 0) + (l.pointA ? l.pointA.y : 0)
+              };
+            }, f.pointBWorld = function(l) {
+              return {
+                x: (l.bodyB ? l.bodyB.position.x : 0) + (l.pointB ? l.pointB.x : 0),
+                y: (l.bodyB ? l.bodyB.position.y : 0) + (l.pointB ? l.pointB.y : 0)
+              };
+            };
+          })();
+        },
+        /* 11 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f;
+          var b = P(2), d = P(0);
+          (function() {
+            f.fromVertices = function(h) {
+              for (var x = {}, g = 0; g < h.length; g++) {
+                var w = (g + 1) % h.length, l = b.normalise({
+                  x: h[w].y - h[g].y,
+                  y: h[g].x - h[w].x
+                }), t = l.y === 0 ? 1 / 0 : l.x / l.y;
+                t = t.toFixed(3).toString(), x[t] = l;
+              }
+              return d.values(x);
+            }, f.rotate = function(h, x) {
+              if (x !== 0)
+                for (var g = Math.cos(x), w = Math.sin(x), l = 0; l < h.length; l++) {
+                  var t = h[l], o;
+                  o = t.x * g - t.y * w, t.y = t.x * w + t.y * g, t.x = o;
+                }
+            };
+          })();
+        },
+        /* 12 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f;
+          var b = P(3), d = P(0), h = P(4), x = P(1), g = P(2);
+          (function() {
+            f.rectangle = function(w, l, t, o, i) {
+              i = i || {};
+              var c = {
+                label: "Rectangle Body",
+                position: { x: w, y: l },
+                vertices: b.fromPath("L 0 0 L " + t + " 0 L " + t + " " + o + " L 0 " + o)
+              };
+              if (i.chamfer) {
+                var E = i.chamfer;
+                c.vertices = b.chamfer(
+                  c.vertices,
+                  E.radius,
+                  E.quality,
+                  E.qualityMin,
+                  E.qualityMax
+                ), delete i.chamfer;
+              }
+              return h.create(d.extend({}, c, i));
+            }, f.trapezoid = function(w, l, t, o, i, c) {
+              c = c || {}, i *= 0.5;
+              var E = (1 - i * 2) * t, O = t * i, D = O + E, U = D + O, S;
+              i < 0.5 ? S = "L 0 0 L " + O + " " + -o + " L " + D + " " + -o + " L " + U + " 0" : S = "L 0 0 L " + D + " " + -o + " L " + U + " 0";
+              var T = {
+                label: "Trapezoid Body",
+                position: { x: w, y: l },
+                vertices: b.fromPath(S)
+              };
+              if (c.chamfer) {
+                var L = c.chamfer;
+                T.vertices = b.chamfer(
+                  T.vertices,
+                  L.radius,
+                  L.quality,
+                  L.qualityMin,
+                  L.qualityMax
+                ), delete c.chamfer;
+              }
+              return h.create(d.extend({}, T, c));
+            }, f.circle = function(w, l, t, o, i) {
+              o = o || {};
+              var c = {
+                label: "Circle Body",
+                circleRadius: t
+              };
+              i = i || 25;
+              var E = Math.ceil(Math.max(10, Math.min(i, t)));
+              return E % 2 === 1 && (E += 1), f.polygon(w, l, E, t, d.extend({}, c, o));
+            }, f.polygon = function(w, l, t, o, i) {
+              if (i = i || {}, t < 3)
+                return f.circle(w, l, o, i);
+              for (var c = 2 * Math.PI / t, E = "", O = c * 0.5, D = 0; D < t; D += 1) {
+                var U = O + D * c, S = Math.cos(U) * o, T = Math.sin(U) * o;
+                E += "L " + S.toFixed(3) + " " + T.toFixed(3) + " ";
+              }
+              var L = {
+                label: "Polygon Body",
+                position: { x: w, y: l },
+                vertices: b.fromPath(E)
+              };
+              if (i.chamfer) {
+                var I = i.chamfer;
+                L.vertices = b.chamfer(
+                  L.vertices,
+                  I.radius,
+                  I.quality,
+                  I.qualityMin,
+                  I.qualityMax
+                ), delete i.chamfer;
+              }
+              return h.create(d.extend({}, L, i));
+            }, f.fromVertices = function(w, l, t, o, i, c, E, O) {
+              var D = d.getDecomp(), U, S, T, L, I, N, q, G, m, Z, Y;
+              for (U = !!(D && D.quickDecomp), o = o || {}, T = [], i = typeof i < "u" ? i : !1, c = typeof c < "u" ? c : 0.01, E = typeof E < "u" ? E : 10, O = typeof O < "u" ? O : 0.01, d.isArray(t[0]) || (t = [t]), Z = 0; Z < t.length; Z += 1)
+                if (N = t[Z], L = b.isConvex(N), I = !L, I && !U && d.warnOnce(
+                  "Bodies.fromVertices: Install the 'poly-decomp' library and use Common.setDecomp or provide 'decomp' as a global to decompose concave vertices."
+                ), L || !U)
+                  L ? N = b.clockwiseSort(N) : N = b.hull(N), T.push({
+                    position: { x: w, y: l },
+                    vertices: N
+                  });
+                else {
+                  var X = N.map(function(Ce) {
+                    return [Ce.x, Ce.y];
+                  });
+                  D.makeCCW(X), c !== !1 && D.removeCollinearPoints(X, c), O !== !1 && D.removeDuplicatePoints && D.removeDuplicatePoints(X, O);
+                  var _ = D.quickDecomp(X);
+                  for (q = 0; q < _.length; q++) {
+                    var ne = _[q], ce = ne.map(function(Ce) {
+                      return {
+                        x: Ce[0],
+                        y: Ce[1]
+                      };
+                    });
+                    E > 0 && b.area(ce) < E || T.push({
+                      position: b.centre(ce),
+                      vertices: ce
+                    });
+                  }
+                }
+              for (q = 0; q < T.length; q++)
+                T[q] = h.create(d.extend(T[q], o));
+              if (i) {
+                var ye = 5;
+                for (q = 0; q < T.length; q++) {
+                  var be = T[q];
+                  for (G = q + 1; G < T.length; G++) {
+                    var Re = T[G];
+                    if (x.overlaps(be.bounds, Re.bounds)) {
+                      var he = be.vertices, We = Re.vertices;
+                      for (m = 0; m < be.vertices.length; m++)
+                        for (Y = 0; Y < Re.vertices.length; Y++) {
+                          var je = g.magnitudeSquared(g.sub(he[(m + 1) % he.length], We[Y])), Sn = g.magnitudeSquared(g.sub(he[m], We[(Y + 1) % We.length]));
+                          je < ye && Sn < ye && (he[m].isInternal = !0, We[Y].isInternal = !0);
+                        }
+                    }
+                  }
+                }
+              }
+              return T.length > 1 ? (S = h.create(d.extend({ parts: T.slice(0) }, o)), h.setPosition(S, { x: w, y: l }), S) : T[0];
+            };
+          })();
+        },
+        /* 13 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f;
+          var b = P(0), d = P(8);
+          (function() {
+            f.create = function(h) {
+              var x = {
+                bodies: [],
+                pairs: null
+              };
+              return b.extend(x, h);
+            }, f.setBodies = function(h, x) {
+              h.bodies = x.slice(0);
+            }, f.clear = function(h) {
+              h.bodies = [];
+            }, f.collisions = function(h) {
+              var x = [], g = h.pairs, w = h.bodies, l = w.length, t = f.canCollide, o = d.collides, i, c;
+              for (w.sort(f._compareBoundsX), i = 0; i < l; i++) {
+                var E = w[i], O = E.bounds, D = E.bounds.max.x, U = E.bounds.max.y, S = E.bounds.min.y, T = E.isStatic || E.isSleeping, L = E.parts.length, I = L === 1;
+                for (c = i + 1; c < l; c++) {
+                  var N = w[c], q = N.bounds;
+                  if (q.min.x > D)
+                    break;
+                  if (!(U < q.min.y || S > q.max.y) && !(T && (N.isStatic || N.isSleeping)) && t(E.collisionFilter, N.collisionFilter)) {
+                    var G = N.parts.length;
+                    if (I && G === 1) {
+                      var m = o(E, N, g);
+                      m && x.push(m);
+                    } else
+                      for (var Z = L > 1 ? 1 : 0, Y = G > 1 ? 1 : 0, X = Z; X < L; X++)
+                        for (var _ = E.parts[X], O = _.bounds, ne = Y; ne < G; ne++) {
+                          var ce = N.parts[ne], q = ce.bounds;
+                          if (!(O.min.x > q.max.x || O.max.x < q.min.x || O.max.y < q.min.y || O.min.y > q.max.y)) {
+                            var m = o(_, ce, g);
+                            m && x.push(m);
+                          }
+                        }
+                  }
+                }
+              }
+              return x;
+            }, f.canCollide = function(h, x) {
+              return h.group === x.group && h.group !== 0 ? h.group > 0 : (h.mask & x.category) !== 0 && (x.mask & h.category) !== 0;
+            }, f._compareBoundsX = function(h, x) {
+              return h.bounds.min.x - x.bounds.min.x;
+            };
+          })();
+        },
+        /* 14 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f;
+          var b = P(0);
+          (function() {
+            f.create = function(d) {
+              var h = {};
+              return d || b.log("Mouse.create: element was undefined, defaulting to document.body", "warn"), h.element = d || document.body, h.absolute = { x: 0, y: 0 }, h.position = { x: 0, y: 0 }, h.mousedownPosition = { x: 0, y: 0 }, h.mouseupPosition = { x: 0, y: 0 }, h.offset = { x: 0, y: 0 }, h.scale = { x: 1, y: 1 }, h.wheelDelta = 0, h.button = -1, h.pixelRatio = parseInt(h.element.getAttribute("data-pixel-ratio"), 10) || 1, h.sourceEvents = {
+                mousemove: null,
+                mousedown: null,
+                mouseup: null,
+                mousewheel: null
+              }, h.mousemove = function(x) {
+                var g = f._getRelativeMousePosition(x, h.element, h.pixelRatio), w = x.changedTouches;
+                w && (h.button = 0, x.preventDefault()), h.absolute.x = g.x, h.absolute.y = g.y, h.position.x = h.absolute.x * h.scale.x + h.offset.x, h.position.y = h.absolute.y * h.scale.y + h.offset.y, h.sourceEvents.mousemove = x;
+              }, h.mousedown = function(x) {
+                var g = f._getRelativeMousePosition(x, h.element, h.pixelRatio), w = x.changedTouches;
+                w ? (h.button = 0, x.preventDefault()) : h.button = x.button, h.absolute.x = g.x, h.absolute.y = g.y, h.position.x = h.absolute.x * h.scale.x + h.offset.x, h.position.y = h.absolute.y * h.scale.y + h.offset.y, h.mousedownPosition.x = h.position.x, h.mousedownPosition.y = h.position.y, h.sourceEvents.mousedown = x;
+              }, h.mouseup = function(x) {
+                var g = f._getRelativeMousePosition(x, h.element, h.pixelRatio), w = x.changedTouches;
+                w && x.preventDefault(), h.button = -1, h.absolute.x = g.x, h.absolute.y = g.y, h.position.x = h.absolute.x * h.scale.x + h.offset.x, h.position.y = h.absolute.y * h.scale.y + h.offset.y, h.mouseupPosition.x = h.position.x, h.mouseupPosition.y = h.position.y, h.sourceEvents.mouseup = x;
+              }, h.mousewheel = function(x) {
+                h.wheelDelta = Math.max(-1, Math.min(1, x.wheelDelta || -x.detail)), x.preventDefault();
+              }, f.setElement(h, h.element), h;
+            }, f.setElement = function(d, h) {
+              d.element = h, h.addEventListener("mousemove", d.mousemove), h.addEventListener("mousedown", d.mousedown), h.addEventListener("mouseup", d.mouseup), h.addEventListener("mousewheel", d.mousewheel), h.addEventListener("DOMMouseScroll", d.mousewheel), h.addEventListener("touchmove", d.mousemove), h.addEventListener("touchstart", d.mousedown), h.addEventListener("touchend", d.mouseup);
+            }, f.clearSourceEvents = function(d) {
+              d.sourceEvents.mousemove = null, d.sourceEvents.mousedown = null, d.sourceEvents.mouseup = null, d.sourceEvents.mousewheel = null, d.wheelDelta = 0;
+            }, f.setOffset = function(d, h) {
+              d.offset.x = h.x, d.offset.y = h.y, d.position.x = d.absolute.x * d.scale.x + d.offset.x, d.position.y = d.absolute.y * d.scale.y + d.offset.y;
+            }, f.setScale = function(d, h) {
+              d.scale.x = h.x, d.scale.y = h.y, d.position.x = d.absolute.x * d.scale.x + d.offset.x, d.position.y = d.absolute.y * d.scale.y + d.offset.y;
+            }, f._getRelativeMousePosition = function(d, h, x) {
+              var g = h.getBoundingClientRect(), w = document.documentElement || document.body.parentNode || document.body, l = window.pageXOffset !== void 0 ? window.pageXOffset : w.scrollLeft, t = window.pageYOffset !== void 0 ? window.pageYOffset : w.scrollTop, o = d.changedTouches, i, c;
+              return o ? (i = o[0].pageX - g.left - l, c = o[0].pageY - g.top - t) : (i = d.pageX - g.left - l, c = d.pageY - g.top - t), {
+                x: i / (h.clientWidth / (h.width || h.clientWidth) * x),
+                y: c / (h.clientHeight / (h.height || h.clientHeight) * x)
+              };
+            };
+          })();
+        },
+        /* 15 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f;
+          var b = P(0);
+          (function() {
+            f._registry = {}, f.register = function(d) {
+              if (f.isPlugin(d) || b.warn("Plugin.register:", f.toString(d), "does not implement all required fields."), d.name in f._registry) {
+                var h = f._registry[d.name], x = f.versionParse(d.version).number, g = f.versionParse(h.version).number;
+                x > g ? (b.warn("Plugin.register:", f.toString(h), "was upgraded to", f.toString(d)), f._registry[d.name] = d) : x < g ? b.warn("Plugin.register:", f.toString(h), "can not be downgraded to", f.toString(d)) : d !== h && b.warn("Plugin.register:", f.toString(d), "is already registered to different plugin object");
+              } else
+                f._registry[d.name] = d;
+              return d;
+            }, f.resolve = function(d) {
+              return f._registry[f.dependencyParse(d).name];
+            }, f.toString = function(d) {
+              return typeof d == "string" ? d : (d.name || "anonymous") + "@" + (d.version || d.range || "0.0.0");
+            }, f.isPlugin = function(d) {
+              return d && d.name && d.version && d.install;
+            }, f.isUsed = function(d, h) {
+              return d.used.indexOf(h) > -1;
+            }, f.isFor = function(d, h) {
+              var x = d.for && f.dependencyParse(d.for);
+              return !d.for || h.name === x.name && f.versionSatisfies(h.version, x.range);
+            }, f.use = function(d, h) {
+              if (d.uses = (d.uses || []).concat(h || []), d.uses.length === 0) {
+                b.warn("Plugin.use:", f.toString(d), "does not specify any dependencies to install.");
+                return;
+              }
+              for (var x = f.dependencies(d), g = b.topologicalSort(x), w = [], l = 0; l < g.length; l += 1)
+                if (g[l] !== d.name) {
+                  var t = f.resolve(g[l]);
+                  if (!t) {
+                    w.push("❌ " + g[l]);
+                    continue;
+                  }
+                  f.isUsed(d, t.name) || (f.isFor(t, d) || (b.warn("Plugin.use:", f.toString(t), "is for", t.for, "but installed on", f.toString(d) + "."), t._warned = !0), t.install ? t.install(d) : (b.warn("Plugin.use:", f.toString(t), "does not specify an install function."), t._warned = !0), t._warned ? (w.push("🔶 " + f.toString(t)), delete t._warned) : w.push("✅ " + f.toString(t)), d.used.push(t.name));
+                }
+              w.length > 0 && b.info(w.join("  "));
+            }, f.dependencies = function(d, h) {
+              var x = f.dependencyParse(d), g = x.name;
+              if (h = h || {}, !(g in h)) {
+                d = f.resolve(d) || d, h[g] = b.map(d.uses || [], function(l) {
+                  f.isPlugin(l) && f.register(l);
+                  var t = f.dependencyParse(l), o = f.resolve(l);
+                  return o && !f.versionSatisfies(o.version, t.range) ? (b.warn(
+                    "Plugin.dependencies:",
+                    f.toString(o),
+                    "does not satisfy",
+                    f.toString(t),
+                    "used by",
+                    f.toString(x) + "."
+                  ), o._warned = !0, d._warned = !0) : o || (b.warn(
+                    "Plugin.dependencies:",
+                    f.toString(l),
+                    "used by",
+                    f.toString(x),
+                    "could not be resolved."
+                  ), d._warned = !0), t.name;
+                });
+                for (var w = 0; w < h[g].length; w += 1)
+                  f.dependencies(h[g][w], h);
+                return h;
+              }
+            }, f.dependencyParse = function(d) {
+              if (b.isString(d)) {
+                var h = /^[\w-]+(@(\*|[\^~]?\d+\.\d+\.\d+(-[0-9A-Za-z-+]+)?))?$/;
+                return h.test(d) || b.warn("Plugin.dependencyParse:", d, "is not a valid dependency string."), {
+                  name: d.split("@")[0],
+                  range: d.split("@")[1] || "*"
+                };
+              }
+              return {
+                name: d.name,
+                range: d.range || d.version
+              };
+            }, f.versionParse = function(d) {
+              var h = /^(\*)|(\^|~|>=|>)?\s*((\d+)\.(\d+)\.(\d+))(-[0-9A-Za-z-+]+)?$/;
+              h.test(d) || b.warn("Plugin.versionParse:", d, "is not a valid version or range.");
+              var x = h.exec(d), g = Number(x[4]), w = Number(x[5]), l = Number(x[6]);
+              return {
+                isRange: !!(x[1] || x[2]),
+                version: x[3],
+                range: d,
+                operator: x[1] || x[2] || "",
+                major: g,
+                minor: w,
+                patch: l,
+                parts: [g, w, l],
+                prerelease: x[7],
+                number: g * 1e8 + w * 1e4 + l
+              };
+            }, f.versionSatisfies = function(d, h) {
+              h = h || "*";
+              var x = f.versionParse(h), g = f.versionParse(d);
+              if (x.isRange) {
+                if (x.operator === "*" || d === "*")
+                  return !0;
+                if (x.operator === ">")
+                  return g.number > x.number;
+                if (x.operator === ">=")
+                  return g.number >= x.number;
+                if (x.operator === "~")
+                  return g.major === x.major && g.minor === x.minor && g.patch >= x.patch;
+                if (x.operator === "^")
+                  return x.major > 0 ? g.major === x.major && g.number >= x.number : x.minor > 0 ? g.minor === x.minor && g.patch >= x.patch : g.patch === x.patch;
+              }
+              return d === h || d === "*";
+            };
+          })();
+        },
+        /* 16 */
+        /***/
+        function(ee, ge) {
+          var P = {};
+          ee.exports = P, function() {
+            P.create = function(f) {
+              return {
+                vertex: f,
+                normalImpulse: 0,
+                tangentImpulse: 0
+              };
+            };
+          }();
+        },
+        /* 17 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f;
+          var b = P(7), d = P(18), h = P(13), x = P(19), g = P(5), w = P(6), l = P(10), t = P(0), o = P(4);
+          (function() {
+            f.create = function(i) {
+              i = i || {};
+              var c = {
+                positionIterations: 6,
+                velocityIterations: 4,
+                constraintIterations: 2,
+                enableSleeping: !1,
+                events: [],
+                plugin: {},
+                gravity: {
+                  x: 0,
+                  y: 1,
+                  scale: 1e-3
+                },
+                timing: {
+                  timestamp: 0,
+                  timeScale: 1,
+                  lastDelta: 0,
+                  lastElapsed: 0
+                }
+              }, E = t.extend(c, i);
+              return E.world = i.world || w.create({ label: "World" }), E.pairs = i.pairs || x.create(), E.detector = i.detector || h.create(), E.grid = { buckets: [] }, E.world.gravity = E.gravity, E.broadphase = E.grid, E.metrics = {}, E;
+            }, f.update = function(i, c) {
+              var E = t.now(), O = i.world, D = i.detector, U = i.pairs, S = i.timing, T = S.timestamp, L;
+              c = typeof c < "u" ? c : t._baseDelta, c *= S.timeScale, S.timestamp += c, S.lastDelta = c;
+              var I = {
+                timestamp: S.timestamp,
+                delta: c
+              };
+              g.trigger(i, "beforeUpdate", I);
+              var N = w.allBodies(O), q = w.allConstraints(O);
+              for (O.isModified && (h.setBodies(D, N), w.setModified(O, !1, !1, !0)), i.enableSleeping && b.update(N, c), f._bodiesApplyGravity(N, i.gravity), c > 0 && f._bodiesUpdate(N, c), l.preSolveAll(N), L = 0; L < i.constraintIterations; L++)
+                l.solveAll(q, c);
+              l.postSolveAll(N), D.pairs = i.pairs;
+              var G = h.collisions(D);
+              x.update(U, G, T), i.enableSleeping && b.afterCollisions(U.list), U.collisionStart.length > 0 && g.trigger(i, "collisionStart", { pairs: U.collisionStart });
+              var m = t.clamp(20 / i.positionIterations, 0, 1);
+              for (d.preSolvePosition(U.list), L = 0; L < i.positionIterations; L++)
+                d.solvePosition(U.list, c, m);
+              for (d.postSolvePosition(N), l.preSolveAll(N), L = 0; L < i.constraintIterations; L++)
+                l.solveAll(q, c);
+              for (l.postSolveAll(N), d.preSolveVelocity(U.list), L = 0; L < i.velocityIterations; L++)
+                d.solveVelocity(U.list, c);
+              return f._bodiesUpdateVelocities(N), U.collisionActive.length > 0 && g.trigger(i, "collisionActive", { pairs: U.collisionActive }), U.collisionEnd.length > 0 && g.trigger(i, "collisionEnd", { pairs: U.collisionEnd }), f._bodiesClearForces(N), g.trigger(i, "afterUpdate", I), i.timing.lastElapsed = t.now() - E, i;
+            }, f.merge = function(i, c) {
+              if (t.extend(i, c), c.world) {
+                i.world = c.world, f.clear(i);
+                for (var E = w.allBodies(i.world), O = 0; O < E.length; O++) {
+                  var D = E[O];
+                  b.set(D, !1), D.id = t.nextId();
+                }
+              }
+            }, f.clear = function(i) {
+              x.clear(i.pairs), h.clear(i.detector);
+            }, f._bodiesClearForces = function(i) {
+              for (var c = i.length, E = 0; E < c; E++) {
+                var O = i[E];
+                O.force.x = 0, O.force.y = 0, O.torque = 0;
+              }
+            }, f._bodiesApplyGravity = function(i, c) {
+              var E = typeof c.scale < "u" ? c.scale : 1e-3, O = i.length;
+              if (!(c.x === 0 && c.y === 0 || E === 0))
+                for (var D = 0; D < O; D++) {
+                  var U = i[D];
+                  U.isStatic || U.isSleeping || (U.force.y += U.mass * c.y * E, U.force.x += U.mass * c.x * E);
+                }
+            }, f._bodiesUpdate = function(i, c) {
+              for (var E = i.length, O = 0; O < E; O++) {
+                var D = i[O];
+                D.isStatic || D.isSleeping || o.update(D, c);
+              }
+            }, f._bodiesUpdateVelocities = function(i) {
+              for (var c = i.length, E = 0; E < c; E++)
+                o.updateVelocities(i[E]);
+            };
+          })();
+        },
+        /* 18 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f;
+          var b = P(3), d = P(0), h = P(1);
+          (function() {
+            f._restingThresh = 2, f._restingThreshTangent = Math.sqrt(6), f._positionDampen = 0.9, f._positionWarming = 0.8, f._frictionNormalMultiplier = 5, f._frictionMaxStatic = Number.MAX_VALUE, f.preSolvePosition = function(x) {
+              var g, w, l, t = x.length;
+              for (g = 0; g < t; g++)
+                w = x[g], w.isActive && (l = w.activeContacts.length, w.collision.parentA.totalContacts += l, w.collision.parentB.totalContacts += l);
+            }, f.solvePosition = function(x, g, w) {
+              var l, t, o, i, c, E, O, D, U = f._positionDampen * (w || 1), S = d.clamp(g / d._baseDelta, 0, 1), T = x.length;
+              for (l = 0; l < T; l++)
+                t = x[l], !(!t.isActive || t.isSensor) && (o = t.collision, i = o.parentA, c = o.parentB, E = o.normal, t.separation = E.x * (c.positionImpulse.x + o.penetration.x - i.positionImpulse.x) + E.y * (c.positionImpulse.y + o.penetration.y - i.positionImpulse.y));
+              for (l = 0; l < T; l++)
+                t = x[l], !(!t.isActive || t.isSensor) && (o = t.collision, i = o.parentA, c = o.parentB, E = o.normal, D = t.separation - t.slop * S, (i.isStatic || c.isStatic) && (D *= 2), i.isStatic || i.isSleeping || (O = U / i.totalContacts, i.positionImpulse.x += E.x * D * O, i.positionImpulse.y += E.y * D * O), c.isStatic || c.isSleeping || (O = U / c.totalContacts, c.positionImpulse.x -= E.x * D * O, c.positionImpulse.y -= E.y * D * O));
+            }, f.postSolvePosition = function(x) {
+              for (var g = f._positionWarming, w = x.length, l = b.translate, t = h.update, o = 0; o < w; o++) {
+                var i = x[o], c = i.positionImpulse, E = c.x, O = c.y, D = i.velocity;
+                if (i.totalContacts = 0, E !== 0 || O !== 0) {
+                  for (var U = 0; U < i.parts.length; U++) {
+                    var S = i.parts[U];
+                    l(S.vertices, c), t(S.bounds, S.vertices, D), S.position.x += E, S.position.y += O;
+                  }
+                  i.positionPrev.x += E, i.positionPrev.y += O, E * D.x + O * D.y < 0 ? (c.x = 0, c.y = 0) : (c.x *= g, c.y *= g);
+                }
+              }
+            }, f.preSolveVelocity = function(x) {
+              var g = x.length, w, l;
+              for (w = 0; w < g; w++) {
+                var t = x[w];
+                if (!(!t.isActive || t.isSensor)) {
+                  var o = t.activeContacts, i = o.length, c = t.collision, E = c.parentA, O = c.parentB, D = c.normal, U = c.tangent;
+                  for (l = 0; l < i; l++) {
+                    var S = o[l], T = S.vertex, L = S.normalImpulse, I = S.tangentImpulse;
+                    if (L !== 0 || I !== 0) {
+                      var N = D.x * L + U.x * I, q = D.y * L + U.y * I;
+                      E.isStatic || E.isSleeping || (E.positionPrev.x += N * E.inverseMass, E.positionPrev.y += q * E.inverseMass, E.anglePrev += E.inverseInertia * ((T.x - E.position.x) * q - (T.y - E.position.y) * N)), O.isStatic || O.isSleeping || (O.positionPrev.x -= N * O.inverseMass, O.positionPrev.y -= q * O.inverseMass, O.anglePrev -= O.inverseInertia * ((T.x - O.position.x) * q - (T.y - O.position.y) * N));
+                    }
+                  }
+                }
+              }
+            }, f.solveVelocity = function(x, g) {
+              var w = g / d._baseDelta, l = w * w, t = l * w, o = -f._restingThresh * w, i = f._restingThreshTangent, c = f._frictionNormalMultiplier * w, E = f._frictionMaxStatic, O = x.length, D, U, S, T;
+              for (S = 0; S < O; S++) {
+                var L = x[S];
+                if (!(!L.isActive || L.isSensor)) {
+                  var I = L.collision, N = I.parentA, q = I.parentB, G = N.velocity, m = q.velocity, Z = I.normal.x, Y = I.normal.y, X = I.tangent.x, _ = I.tangent.y, ne = L.activeContacts, ce = ne.length, ye = 1 / ce, be = N.inverseMass + q.inverseMass, Re = L.friction * L.frictionStatic * c;
+                  for (G.x = N.position.x - N.positionPrev.x, G.y = N.position.y - N.positionPrev.y, m.x = q.position.x - q.positionPrev.x, m.y = q.position.y - q.positionPrev.y, N.angularVelocity = N.angle - N.anglePrev, q.angularVelocity = q.angle - q.anglePrev, T = 0; T < ce; T++) {
+                    var he = ne[T], We = he.vertex, je = We.x - N.position.x, Sn = We.y - N.position.y, Ce = We.x - q.position.x, _e = We.y - q.position.y, Wn = G.x - Sn * N.angularVelocity, Wi = G.y + je * N.angularVelocity, gi = m.x - _e * q.angularVelocity, Ge = m.y + Ce * q.angularVelocity, Gi = Wn - gi, zi = Wi - Ge, zr = Z * Gi + Y * zi, Jn = X * Gi + _ * zi, ji = L.separation + zr, Ni = Math.min(ji, 1);
+                    Ni = ji < 0 ? 0 : Ni;
+                    var mr = Ni * Re;
+                    Jn < -mr || Jn > mr ? (U = Jn > 0 ? Jn : -Jn, D = L.friction * (Jn > 0 ? 1 : -1) * t, D < -U ? D = -U : D > U && (D = U)) : (D = Jn, U = E);
+                    var Ki = je * Y - Sn * Z, Qi = Ce * Y - _e * Z, yi = ye / (be + N.inverseInertia * Ki * Ki + q.inverseInertia * Qi * Qi), Zr = (1 + L.restitution) * zr * yi;
+                    if (D *= yi, zr < o)
+                      he.normalImpulse = 0;
+                    else {
+                      var ja = he.normalImpulse;
+                      he.normalImpulse += Zr, he.normalImpulse > 0 && (he.normalImpulse = 0), Zr = he.normalImpulse - ja;
+                    }
+                    if (Jn < -i || Jn > i)
+                      he.tangentImpulse = 0;
+                    else {
+                      var sr = he.tangentImpulse;
+                      he.tangentImpulse += D, he.tangentImpulse < -U && (he.tangentImpulse = -U), he.tangentImpulse > U && (he.tangentImpulse = U), D = he.tangentImpulse - sr;
+                    }
+                    var Jr = Z * Zr + X * D, Xr = Y * Zr + _ * D;
+                    N.isStatic || N.isSleeping || (N.positionPrev.x += Jr * N.inverseMass, N.positionPrev.y += Xr * N.inverseMass, N.anglePrev += (je * Xr - Sn * Jr) * N.inverseInertia), q.isStatic || q.isSleeping || (q.positionPrev.x -= Jr * q.inverseMass, q.positionPrev.y -= Xr * q.inverseMass, q.anglePrev -= (Ce * Xr - _e * Jr) * q.inverseInertia);
+                  }
+                }
+              }
+            };
+          })();
+        },
+        /* 19 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f;
+          var b = P(9), d = P(0);
+          (function() {
+            f.create = function(h) {
+              return d.extend({
+                table: {},
+                list: [],
+                collisionStart: [],
+                collisionActive: [],
+                collisionEnd: []
+              }, h);
+            }, f.update = function(h, x, g) {
+              var w = h.list, l = w.length, t = h.table, o = x.length, i = h.collisionStart, c = h.collisionEnd, E = h.collisionActive, O, D, U, S;
+              for (i.length = 0, c.length = 0, E.length = 0, S = 0; S < l; S++)
+                w[S].confirmedActive = !1;
+              for (S = 0; S < o; S++)
+                O = x[S], U = O.pair, U ? (U.isActive ? E.push(U) : i.push(U), b.update(U, O, g), U.confirmedActive = !0) : (U = b.create(O, g), t[U.id] = U, i.push(U), w.push(U));
+              var T = [];
+              for (l = w.length, S = 0; S < l; S++)
+                U = w[S], U.confirmedActive || (b.setActive(U, !1, g), c.push(U), !U.collision.bodyA.isSleeping && !U.collision.bodyB.isSleeping && T.push(S));
+              for (S = 0; S < T.length; S++)
+                D = T[S] - S, U = w[D], w.splice(D, 1), delete t[U.id];
+            }, f.clear = function(h) {
+              return h.table = {}, h.list.length = 0, h.collisionStart.length = 0, h.collisionActive.length = 0, h.collisionEnd.length = 0, h;
+            };
+          })();
+        },
+        /* 20 */
+        /***/
+        function(ee, ge, P) {
+          var f = ee.exports = P(21);
+          f.Axes = P(11), f.Bodies = P(12), f.Body = P(4), f.Bounds = P(1), f.Collision = P(8), f.Common = P(0), f.Composite = P(6), f.Composites = P(22), f.Constraint = P(10), f.Contact = P(16), f.Detector = P(13), f.Engine = P(17), f.Events = P(5), f.Grid = P(23), f.Mouse = P(14), f.MouseConstraint = P(24), f.Pair = P(9), f.Pairs = P(19), f.Plugin = P(15), f.Query = P(25), f.Render = P(26), f.Resolver = P(18), f.Runner = P(27), f.SAT = P(28), f.Sleeping = P(7), f.Svg = P(29), f.Vector = P(2), f.Vertices = P(3), f.World = P(30), f.Engine.run = f.Runner.run, f.Common.deprecated(f.Engine, "run", "Engine.run ➤ use Matter.Runner.run(engine) instead");
+        },
+        /* 21 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f;
+          var b = P(15), d = P(0);
+          (function() {
+            f.name = "matter-js", f.version = "0.19.0", f.uses = [], f.used = [], f.use = function() {
+              b.use(f, Array.prototype.slice.call(arguments));
+            }, f.before = function(h, x) {
+              return h = h.replace(/^Matter./, ""), d.chainPathBefore(f, h, x);
+            }, f.after = function(h, x) {
+              return h = h.replace(/^Matter./, ""), d.chainPathAfter(f, h, x);
+            };
+          })();
+        },
+        /* 22 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f;
+          var b = P(6), d = P(10), h = P(0), x = P(4), g = P(12), w = h.deprecated;
+          (function() {
+            f.stack = function(l, t, o, i, c, E, O) {
+              for (var D = b.create({ label: "Stack" }), U = l, S = t, T, L = 0, I = 0; I < i; I++) {
+                for (var N = 0, q = 0; q < o; q++) {
+                  var G = O(U, S, q, I, T, L);
+                  if (G) {
+                    var m = G.bounds.max.y - G.bounds.min.y, Z = G.bounds.max.x - G.bounds.min.x;
+                    m > N && (N = m), x.translate(G, { x: Z * 0.5, y: m * 0.5 }), U = G.bounds.max.x + c, b.addBody(D, G), T = G, L += 1;
+                  } else
+                    U += c;
+                }
+                S += N + E, U = l;
+              }
+              return D;
+            }, f.chain = function(l, t, o, i, c, E) {
+              for (var O = l.bodies, D = 1; D < O.length; D++) {
+                var U = O[D - 1], S = O[D], T = U.bounds.max.y - U.bounds.min.y, L = U.bounds.max.x - U.bounds.min.x, I = S.bounds.max.y - S.bounds.min.y, N = S.bounds.max.x - S.bounds.min.x, q = {
+                  bodyA: U,
+                  pointA: { x: L * t, y: T * o },
+                  bodyB: S,
+                  pointB: { x: N * i, y: I * c }
+                }, G = h.extend(q, E);
+                b.addConstraint(l, d.create(G));
+              }
+              return l.label += " Chain", l;
+            }, f.mesh = function(l, t, o, i, c) {
+              var E = l.bodies, O, D, U, S, T;
+              for (O = 0; O < o; O++) {
+                for (D = 1; D < t; D++)
+                  U = E[D - 1 + O * t], S = E[D + O * t], b.addConstraint(l, d.create(h.extend({ bodyA: U, bodyB: S }, c)));
+                if (O > 0)
+                  for (D = 0; D < t; D++)
+                    U = E[D + (O - 1) * t], S = E[D + O * t], b.addConstraint(l, d.create(h.extend({ bodyA: U, bodyB: S }, c))), i && D > 0 && (T = E[D - 1 + (O - 1) * t], b.addConstraint(l, d.create(h.extend({ bodyA: T, bodyB: S }, c)))), i && D < t - 1 && (T = E[D + 1 + (O - 1) * t], b.addConstraint(l, d.create(h.extend({ bodyA: T, bodyB: S }, c))));
+              }
+              return l.label += " Mesh", l;
+            }, f.pyramid = function(l, t, o, i, c, E, O) {
+              return f.stack(l, t, o, i, c, E, function(D, U, S, T, L, I) {
+                var N = Math.min(i, Math.ceil(o / 2)), q = L ? L.bounds.max.x - L.bounds.min.x : 0;
+                if (!(T > N)) {
+                  T = N - T;
+                  var G = T, m = o - 1 - T;
+                  if (!(S < G || S > m)) {
+                    I === 1 && x.translate(L, { x: (S + (o % 2 === 1 ? 1 : -1)) * q, y: 0 });
+                    var Z = L ? S * q : 0;
+                    return O(l + Z + S * c, U, S, T, L, I);
+                  }
+                }
+              });
+            }, f.newtonsCradle = function(l, t, o, i, c) {
+              for (var E = b.create({ label: "Newtons Cradle" }), O = 0; O < o; O++) {
+                var D = 1.9, U = g.circle(
+                  l + O * (i * D),
+                  t + c,
+                  i,
+                  { inertia: 1 / 0, restitution: 1, friction: 0, frictionAir: 1e-4, slop: 1 }
+                ), S = d.create({ pointA: { x: l + O * (i * D), y: t }, bodyB: U });
+                b.addBody(E, U), b.addConstraint(E, S);
+              }
+              return E;
+            }, w(f, "newtonsCradle", "Composites.newtonsCradle ➤ moved to newtonsCradle example"), f.car = function(l, t, o, i, c) {
+              var E = x.nextGroup(!0), O = 20, D = -o * 0.5 + O, U = o * 0.5 - O, S = 0, T = b.create({ label: "Car" }), L = g.rectangle(l, t, o, i, {
+                collisionFilter: {
+                  group: E
+                },
+                chamfer: {
+                  radius: i * 0.5
+                },
+                density: 2e-4
+              }), I = g.circle(l + D, t + S, c, {
+                collisionFilter: {
+                  group: E
+                },
+                friction: 0.8
+              }), N = g.circle(l + U, t + S, c, {
+                collisionFilter: {
+                  group: E
+                },
+                friction: 0.8
+              }), q = d.create({
+                bodyB: L,
+                pointB: { x: D, y: S },
+                bodyA: I,
+                stiffness: 1,
+                length: 0
+              }), G = d.create({
+                bodyB: L,
+                pointB: { x: U, y: S },
+                bodyA: N,
+                stiffness: 1,
+                length: 0
+              });
+              return b.addBody(T, L), b.addBody(T, I), b.addBody(T, N), b.addConstraint(T, q), b.addConstraint(T, G), T;
+            }, w(f, "car", "Composites.car ➤ moved to car example"), f.softBody = function(l, t, o, i, c, E, O, D, U, S) {
+              U = h.extend({ inertia: 1 / 0 }, U), S = h.extend({ stiffness: 0.2, render: { type: "line", anchors: !1 } }, S);
+              var T = f.stack(l, t, o, i, c, E, function(L, I) {
+                return g.circle(L, I, D, U);
+              });
+              return f.mesh(T, o, i, O, S), T.label = "Soft Body", T;
+            }, w(f, "softBody", "Composites.softBody ➤ moved to softBody and cloth examples");
+          })();
+        },
+        /* 23 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f;
+          var b = P(9), d = P(0), h = d.deprecated;
+          (function() {
+            f.create = function(x) {
+              var g = {
+                buckets: {},
+                pairs: {},
+                pairsList: [],
+                bucketWidth: 48,
+                bucketHeight: 48
+              };
+              return d.extend(g, x);
+            }, f.update = function(x, g, w, l) {
+              var t, o, i, c = w.world, E = x.buckets, O, D, U = !1;
+              for (t = 0; t < g.length; t++) {
+                var S = g[t];
+                if (!(S.isSleeping && !l) && !(c.bounds && (S.bounds.max.x < c.bounds.min.x || S.bounds.min.x > c.bounds.max.x || S.bounds.max.y < c.bounds.min.y || S.bounds.min.y > c.bounds.max.y))) {
+                  var T = f._getRegion(x, S);
+                  if (!S.region || T.id !== S.region.id || l) {
+                    (!S.region || l) && (S.region = T);
+                    var L = f._regionUnion(T, S.region);
+                    for (o = L.startCol; o <= L.endCol; o++)
+                      for (i = L.startRow; i <= L.endRow; i++) {
+                        D = f._getBucketId(o, i), O = E[D];
+                        var I = o >= T.startCol && o <= T.endCol && i >= T.startRow && i <= T.endRow, N = o >= S.region.startCol && o <= S.region.endCol && i >= S.region.startRow && i <= S.region.endRow;
+                        !I && N && N && O && f._bucketRemoveBody(x, O, S), (S.region === T || I && !N || l) && (O || (O = f._createBucket(E, D)), f._bucketAddBody(x, O, S));
+                      }
+                    S.region = T, U = !0;
+                  }
+                }
+              }
+              U && (x.pairsList = f._createActivePairsList(x));
+            }, h(f, "update", "Grid.update ➤ replaced by Matter.Detector"), f.clear = function(x) {
+              x.buckets = {}, x.pairs = {}, x.pairsList = [];
+            }, h(f, "clear", "Grid.clear ➤ replaced by Matter.Detector"), f._regionUnion = function(x, g) {
+              var w = Math.min(x.startCol, g.startCol), l = Math.max(x.endCol, g.endCol), t = Math.min(x.startRow, g.startRow), o = Math.max(x.endRow, g.endRow);
+              return f._createRegion(w, l, t, o);
+            }, f._getRegion = function(x, g) {
+              var w = g.bounds, l = Math.floor(w.min.x / x.bucketWidth), t = Math.floor(w.max.x / x.bucketWidth), o = Math.floor(w.min.y / x.bucketHeight), i = Math.floor(w.max.y / x.bucketHeight);
+              return f._createRegion(l, t, o, i);
+            }, f._createRegion = function(x, g, w, l) {
+              return {
+                id: x + "," + g + "," + w + "," + l,
+                startCol: x,
+                endCol: g,
+                startRow: w,
+                endRow: l
+              };
+            }, f._getBucketId = function(x, g) {
+              return "C" + x + "R" + g;
+            }, f._createBucket = function(x, g) {
+              var w = x[g] = [];
+              return w;
+            }, f._bucketAddBody = function(x, g, w) {
+              var l = x.pairs, t = b.id, o = g.length, i;
+              for (i = 0; i < o; i++) {
+                var c = g[i];
+                if (!(w.id === c.id || w.isStatic && c.isStatic)) {
+                  var E = t(w, c), O = l[E];
+                  O ? O[2] += 1 : l[E] = [w, c, 1];
+                }
+              }
+              g.push(w);
+            }, f._bucketRemoveBody = function(x, g, w) {
+              var l = x.pairs, t = b.id, o;
+              g.splice(d.indexOf(g, w), 1);
+              var i = g.length;
+              for (o = 0; o < i; o++) {
+                var c = l[t(w, g[o])];
+                c && (c[2] -= 1);
+              }
+            }, f._createActivePairsList = function(x) {
+              var g, w = x.pairs, l = d.keys(w), t = l.length, o = [], i;
+              for (i = 0; i < t; i++)
+                g = w[l[i]], g[2] > 0 ? o.push(g) : delete w[l[i]];
+              return o;
+            };
+          })();
+        },
+        /* 24 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f;
+          var b = P(3), d = P(7), h = P(14), x = P(5), g = P(13), w = P(10), l = P(6), t = P(0), o = P(1);
+          (function() {
+            f.create = function(i, c) {
+              var E = (i ? i.mouse : null) || (c ? c.mouse : null);
+              E || (i && i.render && i.render.canvas ? E = h.create(i.render.canvas) : c && c.element ? E = h.create(c.element) : (E = h.create(), t.warn("MouseConstraint.create: options.mouse was undefined, options.element was undefined, may not function as expected")));
+              var O = w.create({
+                label: "Mouse Constraint",
+                pointA: E.position,
+                pointB: { x: 0, y: 0 },
+                length: 0.01,
+                stiffness: 0.1,
+                angularStiffness: 1,
+                render: {
+                  strokeStyle: "#90EE90",
+                  lineWidth: 3
+                }
+              }), D = {
+                type: "mouseConstraint",
+                mouse: E,
+                element: null,
+                body: null,
+                constraint: O,
+                collisionFilter: {
+                  category: 1,
+                  mask: 4294967295,
+                  group: 0
+                }
+              }, U = t.extend(D, c);
+              return x.on(i, "beforeUpdate", function() {
+                var S = l.allBodies(i.world);
+                f.update(U, S), f._triggerEvents(U);
+              }), U;
+            }, f.update = function(i, c) {
+              var E = i.mouse, O = i.constraint, D = i.body;
+              if (E.button === 0) {
+                if (O.bodyB)
+                  d.set(O.bodyB, !1), O.pointA = E.position;
+                else
+                  for (var U = 0; U < c.length; U++)
+                    if (D = c[U], o.contains(D.bounds, E.position) && g.canCollide(D.collisionFilter, i.collisionFilter))
+                      for (var S = D.parts.length > 1 ? 1 : 0; S < D.parts.length; S++) {
+                        var T = D.parts[S];
+                        if (b.contains(T.vertices, E.position)) {
+                          O.pointA = E.position, O.bodyB = i.body = D, O.pointB = { x: E.position.x - D.position.x, y: E.position.y - D.position.y }, O.angleB = D.angle, d.set(D, !1), x.trigger(i, "startdrag", { mouse: E, body: D });
+                          break;
+                        }
+                      }
+              } else
+                O.bodyB = i.body = null, O.pointB = null, D && x.trigger(i, "enddrag", { mouse: E, body: D });
+            }, f._triggerEvents = function(i) {
+              var c = i.mouse, E = c.sourceEvents;
+              E.mousemove && x.trigger(i, "mousemove", { mouse: c }), E.mousedown && x.trigger(i, "mousedown", { mouse: c }), E.mouseup && x.trigger(i, "mouseup", { mouse: c }), h.clearSourceEvents(c);
+            };
+          })();
+        },
+        /* 25 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f;
+          var b = P(2), d = P(8), h = P(1), x = P(12), g = P(3);
+          (function() {
+            f.collides = function(w, l) {
+              for (var t = [], o = l.length, i = w.bounds, c = d.collides, E = h.overlaps, O = 0; O < o; O++) {
+                var D = l[O], U = D.parts.length, S = U === 1 ? 0 : 1;
+                if (E(D.bounds, i))
+                  for (var T = S; T < U; T++) {
+                    var L = D.parts[T];
+                    if (E(L.bounds, i)) {
+                      var I = c(L, w);
+                      if (I) {
+                        t.push(I);
+                        break;
+                      }
+                    }
+                  }
+              }
+              return t;
+            }, f.ray = function(w, l, t, o) {
+              o = o || 1e-100;
+              for (var i = b.angle(l, t), c = b.magnitude(b.sub(l, t)), E = (t.x + l.x) * 0.5, O = (t.y + l.y) * 0.5, D = x.rectangle(E, O, c, o, { angle: i }), U = f.collides(D, w), S = 0; S < U.length; S += 1) {
+                var T = U[S];
+                T.body = T.bodyB = T.bodyA;
+              }
+              return U;
+            }, f.region = function(w, l, t) {
+              for (var o = [], i = 0; i < w.length; i++) {
+                var c = w[i], E = h.overlaps(c.bounds, l);
+                (E && !t || !E && t) && o.push(c);
+              }
+              return o;
+            }, f.point = function(w, l) {
+              for (var t = [], o = 0; o < w.length; o++) {
+                var i = w[o];
+                if (h.contains(i.bounds, l))
+                  for (var c = i.parts.length === 1 ? 0 : 1; c < i.parts.length; c++) {
+                    var E = i.parts[c];
+                    if (h.contains(E.bounds, l) && g.contains(E.vertices, l)) {
+                      t.push(i);
+                      break;
+                    }
+                  }
+              }
+              return t;
+            };
+          })();
+        },
+        /* 26 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f;
+          var b = P(4), d = P(0), h = P(6), x = P(1), g = P(5), w = P(2), l = P(14);
+          (function() {
+            var t, o;
+            typeof window < "u" && (t = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame || function(S) {
+              window.setTimeout(function() {
+                S(d.now());
+              }, 1e3 / 60);
+            }, o = window.cancelAnimationFrame || window.mozCancelAnimationFrame || window.webkitCancelAnimationFrame || window.msCancelAnimationFrame), f._goodFps = 30, f._goodDelta = 1e3 / 60, f.create = function(S) {
+              var T = {
+                engine: null,
+                element: null,
+                canvas: null,
+                mouse: null,
+                frameRequestId: null,
+                timing: {
+                  historySize: 60,
+                  delta: 0,
+                  deltaHistory: [],
+                  lastTime: 0,
+                  lastTimestamp: 0,
+                  lastElapsed: 0,
+                  timestampElapsed: 0,
+                  timestampElapsedHistory: [],
+                  engineDeltaHistory: [],
+                  engineElapsedHistory: [],
+                  elapsedHistory: []
+                },
+                options: {
+                  width: 800,
+                  height: 600,
+                  pixelRatio: 1,
+                  background: "#14151f",
+                  wireframeBackground: "#14151f",
+                  hasBounds: !!S.bounds,
+                  enabled: !0,
+                  wireframes: !0,
+                  showSleeping: !0,
+                  showDebug: !1,
+                  showStats: !1,
+                  showPerformance: !1,
+                  showBounds: !1,
+                  showVelocity: !1,
+                  showCollisions: !1,
+                  showSeparations: !1,
+                  showAxes: !1,
+                  showPositions: !1,
+                  showAngleIndicator: !1,
+                  showIds: !1,
+                  showVertexNumbers: !1,
+                  showConvexHulls: !1,
+                  showInternalEdges: !1,
+                  showMousePosition: !1
+                }
+              }, L = d.extend(T, S);
+              return L.canvas && (L.canvas.width = L.options.width || L.canvas.width, L.canvas.height = L.options.height || L.canvas.height), L.mouse = S.mouse, L.engine = S.engine, L.canvas = L.canvas || E(L.options.width, L.options.height), L.context = L.canvas.getContext("2d"), L.textures = {}, L.bounds = L.bounds || {
+                min: {
+                  x: 0,
+                  y: 0
+                },
+                max: {
+                  x: L.canvas.width,
+                  y: L.canvas.height
+                }
+              }, L.controller = f, L.options.showBroadphase = !1, L.options.pixelRatio !== 1 && f.setPixelRatio(L, L.options.pixelRatio), d.isElement(L.element) && L.element.appendChild(L.canvas), L;
+            }, f.run = function(S) {
+              (function T(L) {
+                S.frameRequestId = t(T), i(S, L), f.world(S, L), (S.options.showStats || S.options.showDebug) && f.stats(S, S.context, L), (S.options.showPerformance || S.options.showDebug) && f.performance(S, S.context, L);
+              })();
+            }, f.stop = function(S) {
+              o(S.frameRequestId);
+            }, f.setPixelRatio = function(S, T) {
+              var L = S.options, I = S.canvas;
+              T === "auto" && (T = O(I)), L.pixelRatio = T, I.setAttribute("data-pixel-ratio", T), I.width = L.width * T, I.height = L.height * T, I.style.width = L.width + "px", I.style.height = L.height + "px";
+            }, f.lookAt = function(S, T, L, I) {
+              I = typeof I < "u" ? I : !0, T = d.isArray(T) ? T : [T], L = L || {
+                x: 0,
+                y: 0
+              };
+              for (var N = {
+                min: { x: 1 / 0, y: 1 / 0 },
+                max: { x: -1 / 0, y: -1 / 0 }
+              }, q = 0; q < T.length; q += 1) {
+                var G = T[q], m = G.bounds ? G.bounds.min : G.min || G.position || G, Z = G.bounds ? G.bounds.max : G.max || G.position || G;
+                m && Z && (m.x < N.min.x && (N.min.x = m.x), Z.x > N.max.x && (N.max.x = Z.x), m.y < N.min.y && (N.min.y = m.y), Z.y > N.max.y && (N.max.y = Z.y));
+              }
+              var Y = N.max.x - N.min.x + 2 * L.x, X = N.max.y - N.min.y + 2 * L.y, _ = S.canvas.height, ne = S.canvas.width, ce = ne / _, ye = Y / X, be = 1, Re = 1;
+              ye > ce ? Re = ye / ce : be = ce / ye, S.options.hasBounds = !0, S.bounds.min.x = N.min.x, S.bounds.max.x = N.min.x + Y * be, S.bounds.min.y = N.min.y, S.bounds.max.y = N.min.y + X * Re, I && (S.bounds.min.x += Y * 0.5 - Y * be * 0.5, S.bounds.max.x += Y * 0.5 - Y * be * 0.5, S.bounds.min.y += X * 0.5 - X * Re * 0.5, S.bounds.max.y += X * 0.5 - X * Re * 0.5), S.bounds.min.x -= L.x, S.bounds.max.x -= L.x, S.bounds.min.y -= L.y, S.bounds.max.y -= L.y, S.mouse && (l.setScale(S.mouse, {
+                x: (S.bounds.max.x - S.bounds.min.x) / S.canvas.width,
+                y: (S.bounds.max.y - S.bounds.min.y) / S.canvas.height
+              }), l.setOffset(S.mouse, S.bounds.min));
+            }, f.startViewTransform = function(S) {
+              var T = S.bounds.max.x - S.bounds.min.x, L = S.bounds.max.y - S.bounds.min.y, I = T / S.options.width, N = L / S.options.height;
+              S.context.setTransform(
+                S.options.pixelRatio / I,
+                0,
+                0,
+                S.options.pixelRatio / N,
+                0,
+                0
+              ), S.context.translate(-S.bounds.min.x, -S.bounds.min.y);
+            }, f.endViewTransform = function(S) {
+              S.context.setTransform(S.options.pixelRatio, 0, 0, S.options.pixelRatio, 0, 0);
+            }, f.world = function(S, T) {
+              var L = d.now(), I = S.engine, N = I.world, q = S.canvas, G = S.context, m = S.options, Z = S.timing, Y = h.allBodies(N), X = h.allConstraints(N), _ = m.wireframes ? m.wireframeBackground : m.background, ne = [], ce = [], ye, be = {
+                timestamp: I.timing.timestamp
+              };
+              if (g.trigger(S, "beforeRender", be), S.currentBackground !== _ && U(S, _), G.globalCompositeOperation = "source-in", G.fillStyle = "transparent", G.fillRect(0, 0, q.width, q.height), G.globalCompositeOperation = "source-over", m.hasBounds) {
+                for (ye = 0; ye < Y.length; ye++) {
+                  var Re = Y[ye];
+                  x.overlaps(Re.bounds, S.bounds) && ne.push(Re);
+                }
+                for (ye = 0; ye < X.length; ye++) {
+                  var he = X[ye], We = he.bodyA, je = he.bodyB, Sn = he.pointA, Ce = he.pointB;
+                  We && (Sn = w.add(We.position, he.pointA)), je && (Ce = w.add(je.position, he.pointB)), !(!Sn || !Ce) && (x.contains(S.bounds, Sn) || x.contains(S.bounds, Ce)) && ce.push(he);
+                }
+                f.startViewTransform(S), S.mouse && (l.setScale(S.mouse, {
+                  x: (S.bounds.max.x - S.bounds.min.x) / S.options.width,
+                  y: (S.bounds.max.y - S.bounds.min.y) / S.options.height
+                }), l.setOffset(S.mouse, S.bounds.min));
+              } else
+                ce = X, ne = Y, S.options.pixelRatio !== 1 && S.context.setTransform(S.options.pixelRatio, 0, 0, S.options.pixelRatio, 0, 0);
+              !m.wireframes || I.enableSleeping && m.showSleeping ? f.bodies(S, ne, G) : (m.showConvexHulls && f.bodyConvexHulls(S, ne, G), f.bodyWireframes(S, ne, G)), m.showBounds && f.bodyBounds(S, ne, G), (m.showAxes || m.showAngleIndicator) && f.bodyAxes(S, ne, G), m.showPositions && f.bodyPositions(S, ne, G), m.showVelocity && f.bodyVelocity(S, ne, G), m.showIds && f.bodyIds(S, ne, G), m.showSeparations && f.separations(S, I.pairs.list, G), m.showCollisions && f.collisions(S, I.pairs.list, G), m.showVertexNumbers && f.vertexNumbers(S, ne, G), m.showMousePosition && f.mousePosition(S, S.mouse, G), f.constraints(ce, G), m.hasBounds && f.endViewTransform(S), g.trigger(S, "afterRender", be), Z.lastElapsed = d.now() - L;
+            }, f.stats = function(S, T, L) {
+              for (var I = S.engine, N = I.world, q = h.allBodies(N), G = 0, m = 55, Z = 44, Y = 0, X = 0, _ = 0; _ < q.length; _ += 1)
+                G += q[_].parts.length;
+              var ne = {
+                Part: G,
+                Body: q.length,
+                Cons: h.allConstraints(N).length,
+                Comp: h.allComposites(N).length,
+                Pair: I.pairs.list.length
+              };
+              T.fillStyle = "#0e0f19", T.fillRect(Y, X, m * 5.5, Z), T.font = "12px Arial", T.textBaseline = "top", T.textAlign = "right";
+              for (var ce in ne) {
+                var ye = ne[ce];
+                T.fillStyle = "#aaa", T.fillText(ce, Y + m, X + 8), T.fillStyle = "#eee", T.fillText(ye, Y + m, X + 26), Y += m;
+              }
+            }, f.performance = function(S, T) {
+              var L = S.engine, I = S.timing, N = I.deltaHistory, q = I.elapsedHistory, G = I.timestampElapsedHistory, m = I.engineDeltaHistory, Z = I.engineElapsedHistory, Y = L.timing.lastDelta, X = c(N), _ = c(q), ne = c(m), ce = c(Z), ye = c(G), be = ye / X || 0, Re = 1e3 / X || 0, he = 4, We = 12, je = 60, Sn = 34, Ce = 10, _e = 69;
+              T.fillStyle = "#0e0f19", T.fillRect(0, 50, We * 4 + je * 5 + 22, Sn), f.status(
+                T,
+                Ce,
+                _e,
+                je,
+                he,
+                N.length,
+                Math.round(Re) + " fps",
+                Re / f._goodFps,
+                function(Wn) {
+                  return N[Wn] / X - 1;
+                }
+              ), f.status(
+                T,
+                Ce + We + je,
+                _e,
+                je,
+                he,
+                m.length,
+                Y.toFixed(2) + " dt",
+                f._goodDelta / Y,
+                function(Wn) {
+                  return m[Wn] / ne - 1;
+                }
+              ), f.status(
+                T,
+                Ce + (We + je) * 2,
+                _e,
+                je,
+                he,
+                Z.length,
+                ce.toFixed(2) + " ut",
+                1 - ce / f._goodFps,
+                function(Wn) {
+                  return Z[Wn] / ce - 1;
+                }
+              ), f.status(
+                T,
+                Ce + (We + je) * 3,
+                _e,
+                je,
+                he,
+                q.length,
+                _.toFixed(2) + " rt",
+                1 - _ / f._goodFps,
+                function(Wn) {
+                  return q[Wn] / _ - 1;
+                }
+              ), f.status(
+                T,
+                Ce + (We + je) * 4,
+                _e,
+                je,
+                he,
+                G.length,
+                be.toFixed(2) + " x",
+                be * be * be,
+                function(Wn) {
+                  return (G[Wn] / N[Wn] / be || 0) - 1;
+                }
+              );
+            }, f.status = function(S, T, L, I, N, q, G, m, Z) {
+              S.strokeStyle = "#888", S.fillStyle = "#444", S.lineWidth = 1, S.fillRect(T, L + 7, I, 1), S.beginPath(), S.moveTo(T, L + 7 - N * d.clamp(0.4 * Z(0), -2, 2));
+              for (var Y = 0; Y < I; Y += 1)
+                S.lineTo(T + Y, L + 7 - (Y < q ? N * d.clamp(0.4 * Z(Y), -2, 2) : 0));
+              S.stroke(), S.fillStyle = "hsl(" + d.clamp(25 + 95 * m, 0, 120) + ",100%,60%)", S.fillRect(T, L - 7, 4, 4), S.font = "12px Arial", S.textBaseline = "middle", S.textAlign = "right", S.fillStyle = "#eee", S.fillText(G, T + I, L - 5);
+            }, f.constraints = function(S, T) {
+              for (var L = T, I = 0; I < S.length; I++) {
+                var N = S[I];
+                if (!(!N.render.visible || !N.pointA || !N.pointB)) {
+                  var q = N.bodyA, G = N.bodyB, m, Z;
+                  if (q ? m = w.add(q.position, N.pointA) : m = N.pointA, N.render.type === "pin")
+                    L.beginPath(), L.arc(m.x, m.y, 3, 0, 2 * Math.PI), L.closePath();
+                  else {
+                    if (G ? Z = w.add(G.position, N.pointB) : Z = N.pointB, L.beginPath(), L.moveTo(m.x, m.y), N.render.type === "spring")
+                      for (var Y = w.sub(Z, m), X = w.perp(w.normalise(Y)), _ = Math.ceil(d.clamp(N.length / 5, 12, 20)), ne, ce = 1; ce < _; ce += 1)
+                        ne = ce % 2 === 0 ? 1 : -1, L.lineTo(
+                          m.x + Y.x * (ce / _) + X.x * ne * 4,
+                          m.y + Y.y * (ce / _) + X.y * ne * 4
+                        );
+                    L.lineTo(Z.x, Z.y);
+                  }
+                  N.render.lineWidth && (L.lineWidth = N.render.lineWidth, L.strokeStyle = N.render.strokeStyle, L.stroke()), N.render.anchors && (L.fillStyle = N.render.strokeStyle, L.beginPath(), L.arc(m.x, m.y, 3, 0, 2 * Math.PI), L.arc(Z.x, Z.y, 3, 0, 2 * Math.PI), L.closePath(), L.fill());
+                }
+              }
+            }, f.bodies = function(S, T, L) {
+              var I = L;
+              S.engine;
+              var N = S.options, q = N.showInternalEdges || !N.wireframes, G, m, Z, Y;
+              for (Z = 0; Z < T.length; Z++)
+                if (G = T[Z], !!G.render.visible) {
+                  for (Y = G.parts.length > 1 ? 1 : 0; Y < G.parts.length; Y++)
+                    if (m = G.parts[Y], !!m.render.visible) {
+                      if (N.showSleeping && G.isSleeping ? I.globalAlpha = 0.5 * m.render.opacity : m.render.opacity !== 1 && (I.globalAlpha = m.render.opacity), m.render.sprite && m.render.sprite.texture && !N.wireframes) {
+                        var X = m.render.sprite, _ = D(S, X.texture);
+                        I.translate(m.position.x, m.position.y), I.rotate(m.angle), I.drawImage(
+                          _,
+                          _.width * -X.xOffset * X.xScale,
+                          _.height * -X.yOffset * X.yScale,
+                          _.width * X.xScale,
+                          _.height * X.yScale
+                        ), I.rotate(-m.angle), I.translate(-m.position.x, -m.position.y);
+                      } else {
+                        if (m.circleRadius)
+                          I.beginPath(), I.arc(m.position.x, m.position.y, m.circleRadius, 0, 2 * Math.PI);
+                        else {
+                          I.beginPath(), I.moveTo(m.vertices[0].x, m.vertices[0].y);
+                          for (var ne = 1; ne < m.vertices.length; ne++)
+                            !m.vertices[ne - 1].isInternal || q ? I.lineTo(m.vertices[ne].x, m.vertices[ne].y) : I.moveTo(m.vertices[ne].x, m.vertices[ne].y), m.vertices[ne].isInternal && !q && I.moveTo(m.vertices[(ne + 1) % m.vertices.length].x, m.vertices[(ne + 1) % m.vertices.length].y);
+                          I.lineTo(m.vertices[0].x, m.vertices[0].y), I.closePath();
+                        }
+                        N.wireframes ? (I.lineWidth = 1, I.strokeStyle = "#bbb", I.stroke()) : (I.fillStyle = m.render.fillStyle, m.render.lineWidth && (I.lineWidth = m.render.lineWidth, I.strokeStyle = m.render.strokeStyle, I.stroke()), I.fill());
+                      }
+                      I.globalAlpha = 1;
+                    }
+                }
+            }, f.bodyWireframes = function(S, T, L) {
+              var I = L, N = S.options.showInternalEdges, q, G, m, Z, Y;
+              for (I.beginPath(), m = 0; m < T.length; m++)
+                if (q = T[m], !!q.render.visible)
+                  for (Y = q.parts.length > 1 ? 1 : 0; Y < q.parts.length; Y++) {
+                    for (G = q.parts[Y], I.moveTo(G.vertices[0].x, G.vertices[0].y), Z = 1; Z < G.vertices.length; Z++)
+                      !G.vertices[Z - 1].isInternal || N ? I.lineTo(G.vertices[Z].x, G.vertices[Z].y) : I.moveTo(G.vertices[Z].x, G.vertices[Z].y), G.vertices[Z].isInternal && !N && I.moveTo(G.vertices[(Z + 1) % G.vertices.length].x, G.vertices[(Z + 1) % G.vertices.length].y);
+                    I.lineTo(G.vertices[0].x, G.vertices[0].y);
+                  }
+              I.lineWidth = 1, I.strokeStyle = "#bbb", I.stroke();
+            }, f.bodyConvexHulls = function(S, T, L) {
+              var I = L, N, q, G;
+              for (I.beginPath(), q = 0; q < T.length; q++)
+                if (N = T[q], !(!N.render.visible || N.parts.length === 1)) {
+                  for (I.moveTo(N.vertices[0].x, N.vertices[0].y), G = 1; G < N.vertices.length; G++)
+                    I.lineTo(N.vertices[G].x, N.vertices[G].y);
+                  I.lineTo(N.vertices[0].x, N.vertices[0].y);
+                }
+              I.lineWidth = 1, I.strokeStyle = "rgba(255,255,255,0.2)", I.stroke();
+            }, f.vertexNumbers = function(S, T, L) {
+              var I = L, N, q, G;
+              for (N = 0; N < T.length; N++) {
+                var m = T[N].parts;
+                for (G = m.length > 1 ? 1 : 0; G < m.length; G++) {
+                  var Z = m[G];
+                  for (q = 0; q < Z.vertices.length; q++)
+                    I.fillStyle = "rgba(255,255,255,0.2)", I.fillText(N + "_" + q, Z.position.x + (Z.vertices[q].x - Z.position.x) * 0.8, Z.position.y + (Z.vertices[q].y - Z.position.y) * 0.8);
+                }
+              }
+            }, f.mousePosition = function(S, T, L) {
+              var I = L;
+              I.fillStyle = "rgba(255,255,255,0.8)", I.fillText(T.position.x + "  " + T.position.y, T.position.x + 5, T.position.y - 5);
+            }, f.bodyBounds = function(S, T, L) {
+              var I = L;
+              S.engine;
+              var N = S.options;
+              I.beginPath();
+              for (var q = 0; q < T.length; q++) {
+                var G = T[q];
+                if (G.render.visible)
+                  for (var m = T[q].parts, Z = m.length > 1 ? 1 : 0; Z < m.length; Z++) {
+                    var Y = m[Z];
+                    I.rect(Y.bounds.min.x, Y.bounds.min.y, Y.bounds.max.x - Y.bounds.min.x, Y.bounds.max.y - Y.bounds.min.y);
+                  }
+              }
+              N.wireframes ? I.strokeStyle = "rgba(255,255,255,0.08)" : I.strokeStyle = "rgba(0,0,0,0.1)", I.lineWidth = 1, I.stroke();
+            }, f.bodyAxes = function(S, T, L) {
+              var I = L;
+              S.engine;
+              var N = S.options, q, G, m, Z;
+              for (I.beginPath(), G = 0; G < T.length; G++) {
+                var Y = T[G], X = Y.parts;
+                if (Y.render.visible)
+                  if (N.showAxes)
+                    for (m = X.length > 1 ? 1 : 0; m < X.length; m++)
+                      for (q = X[m], Z = 0; Z < q.axes.length; Z++) {
+                        var _ = q.axes[Z];
+                        I.moveTo(q.position.x, q.position.y), I.lineTo(q.position.x + _.x * 20, q.position.y + _.y * 20);
+                      }
+                  else
+                    for (m = X.length > 1 ? 1 : 0; m < X.length; m++)
+                      for (q = X[m], Z = 0; Z < q.axes.length; Z++)
+                        I.moveTo(q.position.x, q.position.y), I.lineTo(
+                          (q.vertices[0].x + q.vertices[q.vertices.length - 1].x) / 2,
+                          (q.vertices[0].y + q.vertices[q.vertices.length - 1].y) / 2
+                        );
+              }
+              N.wireframes ? (I.strokeStyle = "indianred", I.lineWidth = 1) : (I.strokeStyle = "rgba(255, 255, 255, 0.4)", I.globalCompositeOperation = "overlay", I.lineWidth = 2), I.stroke(), I.globalCompositeOperation = "source-over";
+            }, f.bodyPositions = function(S, T, L) {
+              var I = L;
+              S.engine;
+              var N = S.options, q, G, m, Z;
+              for (I.beginPath(), m = 0; m < T.length; m++)
+                if (q = T[m], !!q.render.visible)
+                  for (Z = 0; Z < q.parts.length; Z++)
+                    G = q.parts[Z], I.arc(G.position.x, G.position.y, 3, 0, 2 * Math.PI, !1), I.closePath();
+              for (N.wireframes ? I.fillStyle = "indianred" : I.fillStyle = "rgba(0,0,0,0.5)", I.fill(), I.beginPath(), m = 0; m < T.length; m++)
+                q = T[m], q.render.visible && (I.arc(q.positionPrev.x, q.positionPrev.y, 2, 0, 2 * Math.PI, !1), I.closePath());
+              I.fillStyle = "rgba(255,165,0,0.8)", I.fill();
+            }, f.bodyVelocity = function(S, T, L) {
+              var I = L;
+              I.beginPath();
+              for (var N = 0; N < T.length; N++) {
+                var q = T[N];
+                if (q.render.visible) {
+                  var G = b.getVelocity(q);
+                  I.moveTo(q.position.x, q.position.y), I.lineTo(q.position.x + G.x, q.position.y + G.y);
+                }
+              }
+              I.lineWidth = 3, I.strokeStyle = "cornflowerblue", I.stroke();
+            }, f.bodyIds = function(S, T, L) {
+              var I = L, N, q;
+              for (N = 0; N < T.length; N++)
+                if (T[N].render.visible) {
+                  var G = T[N].parts;
+                  for (q = G.length > 1 ? 1 : 0; q < G.length; q++) {
+                    var m = G[q];
+                    I.font = "12px Arial", I.fillStyle = "rgba(255,255,255,0.5)", I.fillText(m.id, m.position.x + 10, m.position.y - 10);
+                  }
+                }
+            }, f.collisions = function(S, T, L) {
+              var I = L, N = S.options, q, G, m, Z;
+              for (I.beginPath(), m = 0; m < T.length; m++)
+                if (q = T[m], !!q.isActive)
+                  for (G = q.collision, Z = 0; Z < q.activeContacts.length; Z++) {
+                    var Y = q.activeContacts[Z], X = Y.vertex;
+                    I.rect(X.x - 1.5, X.y - 1.5, 3.5, 3.5);
+                  }
+              for (N.wireframes ? I.fillStyle = "rgba(255,255,255,0.7)" : I.fillStyle = "orange", I.fill(), I.beginPath(), m = 0; m < T.length; m++)
+                if (q = T[m], !!q.isActive && (G = q.collision, q.activeContacts.length > 0)) {
+                  var _ = q.activeContacts[0].vertex.x, ne = q.activeContacts[0].vertex.y;
+                  q.activeContacts.length === 2 && (_ = (q.activeContacts[0].vertex.x + q.activeContacts[1].vertex.x) / 2, ne = (q.activeContacts[0].vertex.y + q.activeContacts[1].vertex.y) / 2), G.bodyB === G.supports[0].body || G.bodyA.isStatic === !0 ? I.moveTo(_ - G.normal.x * 8, ne - G.normal.y * 8) : I.moveTo(_ + G.normal.x * 8, ne + G.normal.y * 8), I.lineTo(_, ne);
+                }
+              N.wireframes ? I.strokeStyle = "rgba(255,165,0,0.7)" : I.strokeStyle = "orange", I.lineWidth = 1, I.stroke();
+            }, f.separations = function(S, T, L) {
+              var I = L, N = S.options, q, G, m, Z, Y;
+              for (I.beginPath(), Y = 0; Y < T.length; Y++)
+                if (q = T[Y], !!q.isActive) {
+                  G = q.collision, m = G.bodyA, Z = G.bodyB;
+                  var X = 1;
+                  !Z.isStatic && !m.isStatic && (X = 0.5), Z.isStatic && (X = 0), I.moveTo(Z.position.x, Z.position.y), I.lineTo(Z.position.x - G.penetration.x * X, Z.position.y - G.penetration.y * X), X = 1, !Z.isStatic && !m.isStatic && (X = 0.5), m.isStatic && (X = 0), I.moveTo(m.position.x, m.position.y), I.lineTo(m.position.x + G.penetration.x * X, m.position.y + G.penetration.y * X);
+                }
+              N.wireframes ? I.strokeStyle = "rgba(255,165,0,0.5)" : I.strokeStyle = "orange", I.stroke();
+            }, f.inspector = function(S, T) {
+              S.engine;
+              var L = S.selected, I = S.render, N = I.options, q;
+              if (N.hasBounds) {
+                var G = I.bounds.max.x - I.bounds.min.x, m = I.bounds.max.y - I.bounds.min.y, Z = G / I.options.width, Y = m / I.options.height;
+                T.scale(1 / Z, 1 / Y), T.translate(-I.bounds.min.x, -I.bounds.min.y);
+              }
+              for (var X = 0; X < L.length; X++) {
+                var _ = L[X].data;
+                switch (T.translate(0.5, 0.5), T.lineWidth = 1, T.strokeStyle = "rgba(255,165,0,0.9)", T.setLineDash([1, 2]), _.type) {
+                  case "body":
+                    q = _.bounds, T.beginPath(), T.rect(
+                      Math.floor(q.min.x - 3),
+                      Math.floor(q.min.y - 3),
+                      Math.floor(q.max.x - q.min.x + 6),
+                      Math.floor(q.max.y - q.min.y + 6)
+                    ), T.closePath(), T.stroke();
+                    break;
+                  case "constraint":
+                    var ne = _.pointA;
+                    _.bodyA && (ne = _.pointB), T.beginPath(), T.arc(ne.x, ne.y, 10, 0, 2 * Math.PI), T.closePath(), T.stroke();
+                    break;
+                }
+                T.setLineDash([]), T.translate(-0.5, -0.5);
+              }
+              S.selectStart !== null && (T.translate(0.5, 0.5), T.lineWidth = 1, T.strokeStyle = "rgba(255,165,0,0.6)", T.fillStyle = "rgba(255,165,0,0.1)", q = S.selectBounds, T.beginPath(), T.rect(
+                Math.floor(q.min.x),
+                Math.floor(q.min.y),
+                Math.floor(q.max.x - q.min.x),
+                Math.floor(q.max.y - q.min.y)
+              ), T.closePath(), T.stroke(), T.fill(), T.translate(-0.5, -0.5)), N.hasBounds && T.setTransform(1, 0, 0, 1, 0, 0);
+            };
+            var i = function(S, T) {
+              var L = S.engine, I = S.timing, N = I.historySize, q = L.timing.timestamp;
+              I.delta = T - I.lastTime || f._goodDelta, I.lastTime = T, I.timestampElapsed = q - I.lastTimestamp || 0, I.lastTimestamp = q, I.deltaHistory.unshift(I.delta), I.deltaHistory.length = Math.min(I.deltaHistory.length, N), I.engineDeltaHistory.unshift(L.timing.lastDelta), I.engineDeltaHistory.length = Math.min(I.engineDeltaHistory.length, N), I.timestampElapsedHistory.unshift(I.timestampElapsed), I.timestampElapsedHistory.length = Math.min(I.timestampElapsedHistory.length, N), I.engineElapsedHistory.unshift(L.timing.lastElapsed), I.engineElapsedHistory.length = Math.min(I.engineElapsedHistory.length, N), I.elapsedHistory.unshift(I.lastElapsed), I.elapsedHistory.length = Math.min(I.elapsedHistory.length, N);
+            }, c = function(S) {
+              for (var T = 0, L = 0; L < S.length; L += 1)
+                T += S[L];
+              return T / S.length || 0;
+            }, E = function(S, T) {
+              var L = document.createElement("canvas");
+              return L.width = S, L.height = T, L.oncontextmenu = function() {
+                return !1;
+              }, L.onselectstart = function() {
+                return !1;
+              }, L;
+            }, O = function(S) {
+              var T = S.getContext("2d"), L = window.devicePixelRatio || 1, I = T.webkitBackingStorePixelRatio || T.mozBackingStorePixelRatio || T.msBackingStorePixelRatio || T.oBackingStorePixelRatio || T.backingStorePixelRatio || 1;
+              return L / I;
+            }, D = function(S, T) {
+              var L = S.textures[T];
+              return L || (L = S.textures[T] = new Image(), L.src = T, L);
+            }, U = function(S, T) {
+              var L = T;
+              /(jpg|gif|png)$/.test(T) && (L = "url(" + T + ")"), S.canvas.style.background = L, S.canvas.style.backgroundSize = "contain", S.currentBackground = T;
+            };
+          })();
+        },
+        /* 27 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f;
+          var b = P(5), d = P(17), h = P(0);
+          (function() {
+            var x, g;
+            if (typeof window < "u" && (x = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame, g = window.cancelAnimationFrame || window.mozCancelAnimationFrame || window.webkitCancelAnimationFrame || window.msCancelAnimationFrame), !x) {
+              var w;
+              x = function(l) {
+                w = setTimeout(function() {
+                  l(h.now());
+                }, 1e3 / 60);
+              }, g = function() {
+                clearTimeout(w);
+              };
+            }
+            f.create = function(l) {
+              var t = {
+                fps: 60,
+                deltaSampleSize: 60,
+                counterTimestamp: 0,
+                frameCounter: 0,
+                deltaHistory: [],
+                timePrev: null,
+                frameRequestId: null,
+                isFixed: !1,
+                enabled: !0
+              }, o = h.extend(t, l);
+              return o.delta = o.delta || 1e3 / o.fps, o.deltaMin = o.deltaMin || 1e3 / o.fps, o.deltaMax = o.deltaMax || 1e3 / (o.fps * 0.5), o.fps = 1e3 / o.delta, o;
+            }, f.run = function(l, t) {
+              return typeof l.positionIterations < "u" && (t = l, l = f.create()), function o(i) {
+                l.frameRequestId = x(o), i && l.enabled && f.tick(l, t, i);
+              }(), l;
+            }, f.tick = function(l, t, o) {
+              var i = t.timing, c;
+              l.isFixed ? c = l.delta : (c = o - l.timePrev || l.delta, l.timePrev = o, l.deltaHistory.push(c), l.deltaHistory = l.deltaHistory.slice(-l.deltaSampleSize), c = Math.min.apply(null, l.deltaHistory), c = c < l.deltaMin ? l.deltaMin : c, c = c > l.deltaMax ? l.deltaMax : c, l.delta = c);
+              var E = {
+                timestamp: i.timestamp
+              };
+              b.trigger(l, "beforeTick", E), l.frameCounter += 1, o - l.counterTimestamp >= 1e3 && (l.fps = l.frameCounter * ((o - l.counterTimestamp) / 1e3), l.counterTimestamp = o, l.frameCounter = 0), b.trigger(l, "tick", E), b.trigger(l, "beforeUpdate", E), d.update(t, c), b.trigger(l, "afterUpdate", E), b.trigger(l, "afterTick", E);
+            }, f.stop = function(l) {
+              g(l.frameRequestId);
+            }, f.start = function(l, t) {
+              f.run(l, t);
+            };
+          })();
+        },
+        /* 28 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f;
+          var b = P(8), d = P(0), h = d.deprecated;
+          (function() {
+            f.collides = function(x, g) {
+              return b.collides(x, g);
+            }, h(f, "collides", "SAT.collides ➤ replaced by Collision.collides");
+          })();
+        },
+        /* 29 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f, P(1);
+          var b = P(0);
+          (function() {
+            f.pathToVertices = function(d, h) {
+              typeof window < "u" && !("SVGPathSeg" in window) && b.warn("Svg.pathToVertices: SVGPathSeg not defined, a polyfill is required.");
+              var x, g, w, l, t, o, i, c, E, O, D = [], U, S, T = 0, L = 0, I = 0;
+              h = h || 15;
+              var N = function(G, m, Z) {
+                var Y = Z % 2 === 1 && Z > 1;
+                if (!E || G != E.x || m != E.y) {
+                  E && Y ? (U = E.x, S = E.y) : (U = 0, S = 0);
+                  var X = {
+                    x: U + G,
+                    y: S + m
+                  };
+                  (Y || !E) && (E = X), D.push(X), L = U + G, I = S + m;
+                }
+              }, q = function(G) {
+                var m = G.pathSegTypeAsLetter.toUpperCase();
+                if (m !== "Z") {
+                  switch (m) {
+                    case "M":
+                    case "L":
+                    case "T":
+                    case "C":
+                    case "S":
+                    case "Q":
+                      L = G.x, I = G.y;
+                      break;
+                    case "H":
+                      L = G.x;
+                      break;
+                    case "V":
+                      I = G.y;
+                      break;
+                  }
+                  N(L, I, G.pathSegType);
+                }
+              };
+              for (f._svgPathToAbsolute(d), w = d.getTotalLength(), o = [], x = 0; x < d.pathSegList.numberOfItems; x += 1)
+                o.push(d.pathSegList.getItem(x));
+              for (i = o.concat(); T < w; ) {
+                if (O = d.getPathSegAtLength(T), t = o[O], t != c) {
+                  for (; i.length && i[0] != t; )
+                    q(i.shift());
+                  c = t;
+                }
+                switch (t.pathSegTypeAsLetter.toUpperCase()) {
+                  case "C":
+                  case "T":
+                  case "S":
+                  case "Q":
+                  case "A":
+                    l = d.getPointAtLength(T), N(l.x, l.y, 0);
+                    break;
+                }
+                T += h;
+              }
+              for (x = 0, g = i.length; x < g; ++x)
+                q(i[x]);
+              return D;
+            }, f._svgPathToAbsolute = function(d) {
+              for (var h, x, g, w, l, t, o = d.pathSegList, i = 0, c = 0, E = o.numberOfItems, O = 0; O < E; ++O) {
+                var D = o.getItem(O), U = D.pathSegTypeAsLetter;
+                if (/[MLHVCSQTA]/.test(U))
+                  "x" in D && (i = D.x), "y" in D && (c = D.y);
+                else
+                  switch ("x1" in D && (g = i + D.x1), "x2" in D && (l = i + D.x2), "y1" in D && (w = c + D.y1), "y2" in D && (t = c + D.y2), "x" in D && (i += D.x), "y" in D && (c += D.y), U) {
+                    case "m":
+                      o.replaceItem(d.createSVGPathSegMovetoAbs(i, c), O);
+                      break;
+                    case "l":
+                      o.replaceItem(d.createSVGPathSegLinetoAbs(i, c), O);
+                      break;
+                    case "h":
+                      o.replaceItem(d.createSVGPathSegLinetoHorizontalAbs(i), O);
+                      break;
+                    case "v":
+                      o.replaceItem(d.createSVGPathSegLinetoVerticalAbs(c), O);
+                      break;
+                    case "c":
+                      o.replaceItem(d.createSVGPathSegCurvetoCubicAbs(i, c, g, w, l, t), O);
+                      break;
+                    case "s":
+                      o.replaceItem(d.createSVGPathSegCurvetoCubicSmoothAbs(i, c, l, t), O);
+                      break;
+                    case "q":
+                      o.replaceItem(d.createSVGPathSegCurvetoQuadraticAbs(i, c, g, w), O);
+                      break;
+                    case "t":
+                      o.replaceItem(d.createSVGPathSegCurvetoQuadraticSmoothAbs(i, c), O);
+                      break;
+                    case "a":
+                      o.replaceItem(d.createSVGPathSegArcAbs(i, c, D.r1, D.r2, D.angle, D.largeArcFlag, D.sweepFlag), O);
+                      break;
+                    case "z":
+                    case "Z":
+                      i = h, c = x;
+                      break;
+                  }
+                (U == "M" || U == "m") && (h = i, x = c);
+              }
+            };
+          })();
+        },
+        /* 30 */
+        /***/
+        function(ee, ge, P) {
+          var f = {};
+          ee.exports = f;
+          var b = P(6);
+          P(0), function() {
+            f.create = b.create, f.add = b.add, f.remove = b.remove, f.clear = b.clear, f.addComposite = b.addComposite, f.addBody = b.addBody, f.addConstraint = b.addConstraint;
+          }();
+        }
+        /******/
+      ])
+    );
+  });
+})(k7);
+var My = k7.exports;
+const Cr = /* @__PURE__ */ M7(My);
+var T7 = { exports: {} };
+/* @license Apache-2.0 */
+(function(Ve, He) {
+  (function(ee) {
+    Ve.exports = ee();
+  })(function() {
+    var ee = typeof Object.defineProperty == "function" ? Object.defineProperty : null, ge = function() {
+      try {
+        return ee({}, "x", {}), !0;
+      } catch {
+        return !1;
+      }
+    }, P = Object.defineProperty, f = Object.prototype, b = f.toString, d = f.__defineGetter__, h = f.__defineSetter__, x = f.__lookupGetter__, g = f.__lookupSetter__, w = function(e, n, r) {
+      var a, s, u, p;
+      if (typeof e != "object" || e === null || b.call(e) === "[object Array]")
+        throw new TypeError("invalid argument. First argument must be an object. Value: `" + e + "`.");
+      if (typeof r != "object" || r === null || b.call(r) === "[object Array]")
+        throw new TypeError("invalid argument. Property descriptor must be an object. Value: `" + r + "`.");
+      if ((s = "value" in r) && (x.call(e, n) || g.call(e, n) ? (a = e.__proto__, e.__proto__ = f, delete e[n], e[n] = r.value, e.__proto__ = a) : e[n] = r.value), u = "get" in r, p = "set" in r, s && (u || p))
+        throw new Error("invalid argument. Cannot specify one or more accessors and a value or writable attribute in the property descriptor.");
+      return u && d && d.call(e, n, r.get), p && h && h.call(e, n, r.set), e;
+    }, l = ge() ? P : w, t = function(e, n, r) {
+      l(e, n, { configurable: !1, enumerable: !0, writable: !1, value: r });
+    }, o = function(e, n, r) {
+      l(e, n, { configurable: !1, enumerable: !1, writable: !1, value: r });
+    }, i = function(e) {
+      return e != e;
+    }, c = Math.sqrt, E = 0.7853981633974483, O = function(e) {
+      var n, r;
+      return e === 0 ? 0.16666666666666713 : ((e < 0 ? -e : e) <= 1 ? (n = e * (19.562619833175948 + e * (e * (5.444622390564711 + e * (0.004253011369004428 * e - 0.6019598008014124)) - 16.262479672107002)) - 8.198089802484825, r = e * (139.51056146574857 + e * (e * (70.49610280856842 + e * (1 * e - 14.740913729888538)) - 147.1791292232726)) - 49.18853881490881) : (n = 0.004253011369004428 + (e = 1 / e) * (e * (5.444622390564711 + e * (e * (19.562619833175948 + -8.198089802484825 * e) - 16.262479672107002)) - 0.6019598008014124), r = 1 + e * (e * (70.49610280856842 + e * (e * (139.51056146574857 + -49.18853881490881 * e) - 147.1791292232726)) - 14.740913729888538)), n / r);
+    }, D = function(e) {
+      var n, r;
+      return e === 0 ? 0.08333333333333809 : ((e < 0 ? -e : e) <= 1 ? (n = 28.536655482610616 + e * (e * (6.968710824104713 + e * (0.002967721961301243 * e - 0.5634242780008963)) - 25.56901049652825), r = 342.43986579130785 + e * (e * (147.0656354026815 + e * (1 * e - 21.947795316429207)) - 383.8770957603691)) : (n = 0.002967721961301243 + (e = 1 / e) * (e * (6.968710824104713 + e * (28.536655482610616 * e - 25.56901049652825)) - 0.5634242780008963), r = 1 + e * (e * (147.0656354026815 + e * (342.43986579130785 * e - 383.8770957603691)) - 21.947795316429207)), n / r);
+    }, U = 6123233995736766e-32, S = function(e) {
+      var n, r, a, s, u;
+      if (i(e))
+        return NaN;
+      if (e > 0 ? a = e : (n = !0, a = -e), a > 1)
+        return NaN;
+      if (a > 0.625)
+        s = (r = 1 - a) * D(r), r = c(r + r), u = E - r, u -= r = r * s - U, u += E;
+      else {
+        if (a < 1e-8)
+          return e;
+        u = a * (u = (r = a * a) * O(r)) + a;
+      }
+      return n ? -u : u;
+    }, T = 3.141592653589793, L = 2 / T, I = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n >= r ? NaN : e < n ? 0 : e >= r ? 1 : L * S(c((e - n) / (r - n)));
+    }, N = function(e) {
+      return function() {
+        return e;
+      };
+    }, q = 2 / T;
+    o(I, "factory", function(e, n) {
+      return i(e) || i(n) || e >= n ? N(NaN) : function(r) {
+        return i(r) ? NaN : r < e ? 0 : r >= n ? 1 : q * S(c((r - e) / (n - e)));
+      };
+    });
+    var G = I, m = function(e, n, r) {
+      l(e, n, { configurable: !1, enumerable: !1, get: r });
+    }, Z = function(e) {
+      return typeof e == "number";
+    }, Y = function() {
+      return typeof Symbol == "function" && typeof Symbol("foo") == "symbol";
+    }(), X = function() {
+      return Y && typeof Symbol.toStringTag == "symbol";
+    }, _ = Object.prototype.toString, ne = function(e) {
+      return _.call(e);
+    }, ce = Object.prototype.hasOwnProperty, ye = function(e, n) {
+      return e != null && ce.call(e, n);
+    }, be = typeof Symbol == "function" ? Symbol.toStringTag : "", Re = function(e) {
+      var n, r, a;
+      if (e == null)
+        return _.call(e);
+      r = e[be], n = ye(e, be);
+      try {
+        e[be] = void 0;
+      } catch {
+        return _.call(e);
+      }
+      return a = _.call(e), n ? e[be] = r : delete e[be], a;
+    }, he = X() ? Re : ne, We = Number, je = We.prototype.toString, Sn = Boolean.prototype.toString, Ce = function(e) {
+      try {
+        return Sn.call(e), !0;
+      } catch {
+        return !1;
+      }
+    }, _e = function(e) {
+      try {
+        return je.call(e), !0;
+      } catch {
+        return !1;
+      }
+    }, Wn = X(), Wi = function(e) {
+      return typeof e == "object" && (e instanceof We || (Wn ? _e(e) : he(e) === "[object Number]"));
+    }, gi = function(e) {
+      return Z(e) || Wi(e);
+    };
+    o(gi, "isPrimitive", Z), o(gi, "isObject", Wi);
+    var Ge = gi, Gi = typeof Uint32Array == "function", zi = function(e) {
+      return Gi && e instanceof Uint32Array || he(e) === "[object Uint32Array]";
+    }, zr = 4294967295, Jn = typeof Uint32Array == "function" ? Uint32Array : null, ji = typeof Uint32Array == "function" ? Uint32Array : void 0, Ni = function() {
+      throw new Error("not implemented");
+    }, mr = function() {
+      var e, n;
+      if (typeof Jn != "function")
+        return !1;
+      try {
+        n = new Jn(n = [1, 3.14, -3.14, zr + 1, zr + 2]), e = zi(n) && n[0] === 1 && n[1] === 3 && n[2] === zr - 2 && n[3] === 0 && n[4] === 1;
+      } catch {
+        e = !1;
+      }
+      return e;
+    }() ? ji : Ni, Ki = typeof Float64Array == "function", Qi = function(e) {
+      return Ki && e instanceof Float64Array || he(e) === "[object Float64Array]";
+    }, yi = typeof Float64Array == "function" ? Float64Array : null, Zr = typeof Float64Array == "function" ? Float64Array : void 0, ja = function() {
+      throw new Error("not implemented");
+    }, sr = function() {
+      var e, n;
+      if (typeof yi != "function")
+        return !1;
+      try {
+        n = new yi([1, 3.14, -3.14, NaN]), e = Qi(n) && n[0] === 1 && n[1] === 3.14 && n[2] === -3.14 && n[3] != n[3];
+      } catch {
+        e = !1;
+      }
+      return e;
+    }() ? Zr : ja, Jr = typeof Uint8Array == "function", Xr = function(e) {
+      return Jr && e instanceof Uint8Array || he(e) === "[object Uint8Array]";
+    }, Ka = 255, it = typeof Uint8Array == "function" ? Uint8Array : null, E7 = typeof Uint8Array == "function" ? Uint8Array : void 0, P7 = function() {
+      throw new Error("not implemented");
+    }, V7 = function() {
+      var e, n;
+      if (typeof it != "function")
+        return !1;
+      try {
+        n = new it(n = [1, 3.14, -3.14, Ka + 1, Ka + 2]), e = Xr(n) && n[0] === 1 && n[1] === 3 && n[2] === Ka - 2 && n[3] === 0 && n[4] === 1;
+      } catch {
+        e = !1;
+      }
+      return e;
+    }() ? E7 : P7, C7 = typeof Uint16Array == "function", A7 = function(e) {
+      return C7 && e instanceof Uint16Array || he(e) === "[object Uint16Array]";
+    }, Qa = 65535, at = typeof Uint16Array == "function" ? Uint16Array : null, I7 = typeof Uint16Array == "function" ? Uint16Array : void 0, tt, B7 = function() {
+      throw new Error("not implemented");
+    }, ot = { uint16: function() {
+      var e, n;
+      if (typeof at != "function")
+        return !1;
+      try {
+        n = new at(n = [1, 3.14, -3.14, Qa + 1, Qa + 2]), e = A7(n) && n[0] === 1 && n[1] === 3 && n[2] === Qa - 2 && n[3] === 0 && n[4] === 1;
+      } catch {
+        e = !1;
+      }
+      return e;
+    }() ? I7 : B7, uint8: V7 };
+    (tt = new ot.uint16(1))[0] = 4660;
+    var Yr = new ot.uint8(tt.buffer)[0] === 52, R7 = Yr === !0 ? 1 : 0, st = new sr(1), L7 = new mr(st.buffer), Ke = function(e) {
+      return st[0] = e, L7[R7];
+    }, q7 = Yr === !0 ? 1 : 0, $a = new sr(1), F7 = new mr($a.buffer), Xn = function(e, n) {
+      return $a[0] = e, F7[q7] = n >>> 0, $a[0];
+    }, ur = 1023, j = We.NEGATIVE_INFINITY, O7 = function(e) {
+      return e === 0 ? 0.3999999999940942 : 0.3999999999940942 + e * (0.22222198432149784 + 0.15313837699209373 * e);
+    }, D7 = function(e) {
+      return e === 0 ? 0.6666666666666735 : 0.6666666666666735 + e * (0.2857142874366239 + e * (0.1818357216161805 + 0.14798198605116586 * e));
+    }, $i = 0.6931471803691238, Zi = 19082149292705877e-26, U7 = 18014398509481984, H7 = 0.3333333333333333, ut = 1048575, W7 = 2146435072, G7 = 1048576, z7 = 1072693248, M = function(e) {
+      var n, r, a, s, u, p, k, y, C, F, B;
+      return e === 0 ? j : i(e) || e < 0 ? NaN : (s = 0, (r = Ke(e)) < G7 && (s -= 54, r = Ke(e *= U7)), r >= W7 ? e + e : (s += (r >> 20) - ur | 0, s += (k = 614244 + (r &= ut) & 1048576 | 0) >> 20 | 0, p = (e = Xn(e, r | k ^ z7)) - 1, (ut & 2 + r) < 3 ? p === 0 ? s === 0 ? 0 : s * $i + s * Zi : (u = p * p * (0.5 - H7 * p), s === 0 ? p - u : s * $i - (u - s * Zi - p)) : (k = r - 398458 | 0, y = 440401 - r | 0, a = (F = (B = (C = p / (2 + p)) * C) * B) * O7(F), u = B * D7(F) + a, (k |= y) > 0 ? (n = 0.5 * p * p, s === 0 ? p - (n - C * (n + u)) : s * $i - (n - (C * (n + u) + s * Zi) - p)) : s === 0 ? p - C * (p - u) : s * $i - (C * (p - u) - s * Zi - p))));
+    }, j7 = M(E), ft = function(e, n) {
+      return i(e) || i(n) || e >= n ? NaN : j7 + M(n - e);
+    }, ct = function(e, n) {
+      return i(e) || i(n) || e >= n ? NaN : -1.5;
+    }, lt = function(e, n) {
+      return e >= n ? NaN : 0.5 * (e + n);
+    }, vt = function(e, n) {
+      return e >= n ? NaN : 0.5 * (e + n);
+    }, pt = function(e, n) {
+      return i(e) || i(n) || e >= n ? NaN : e;
+    }, mt = function(e, n) {
+      return i(e) || i(n) || e >= n ? NaN : 0;
+    }, K7 = 0.35355339059327373, ht = function(e, n) {
+      return e >= n ? NaN : K7 * (n - e);
+    }, Ne = Math.floor, pe = function(e) {
+      return Ne(e) === e;
+    }, Q7 = function(e) {
+      return pe(e / 2);
+    }, bi = function(e) {
+      return Q7(e > 0 ? e - 1 : e + 1);
+    }, H = Number.POSITIVE_INFINITY, Yn = function(e) {
+      return e === H || e === j;
+    }, Za, Ja, J = function(e) {
+      return Math.abs(e);
+    };
+    Yr === !0 ? (Za = 1, Ja = 0) : (Za = 0, Ja = 1);
+    var Xa, Ya, dt = { HIGH: Za, LOW: Ja };
+    Yr === !0 ? (Xa = 1, Ya = 0) : (Xa = 0, Ya = 1);
+    var gt = { HIGH: Xa, LOW: Ya }, Nt = new sr(1), yt = new mr(Nt.buffer), $7 = gt.HIGH, Z7 = gt.LOW, bt = function(e, n) {
+      return Nt[0] = n, e[0] = yt[$7], e[1] = yt[Z7], e;
+    }, _r = function(e, n) {
+      return arguments.length === 1 ? bt([0, 0], e) : bt(e, n);
+    }, J7 = Yr === !0 ? 0 : 1, X7 = Yr === !0 ? 0 : 1, _a = new sr(1), Y7 = new mr(_a.buffer), _n = function(e, n) {
+      return _a[0] = e, Y7[X7] = n >>> 0, _a[0];
+    }, e0 = function(e) {
+      return 0 | e;
+    }, wt = new sr(1), xt = new mr(wt.buffer), _7 = dt.HIGH, ev = dt.LOW, n0 = function(e, n) {
+      return xt[_7] = e, xt[ev] = n, wt[0];
+    }, nv = 2147483648, rv = 2147483647, r0 = [0, 0], Rn = function(e, n) {
+      var r, a;
+      return _r(r0, e), r = r0[0], r &= rv, a = Ke(n), n0(r |= a &= nv, r0[1]);
+    }, iv = function(e, n) {
+      return n === j ? H : n === H ? 0 : n > 0 ? bi(n) ? e : 0 : bi(n) ? Rn(H, e) : H;
+    }, av = 2147483647, tv = 1072693247, Ji = 1e300, Xi = 1e-300, ov = function(e, n) {
+      return (Ke(e) & av) <= tv ? n < 0 ? Ji * Ji : Xi * Xi : n > 0 ? Ji * Ji : Xi * Xi;
+    }, sv = function(e, n) {
+      return e === -1 ? (e - e) / (e - e) : e === 1 ? 1 : J(e) < 1 == (n === H) ? 0 : H;
+    }, uv = function(e) {
+      return e === 0 ? 0.5999999999999946 : 0.5999999999999946 + e * (0.4285714285785502 + e * (0.33333332981837743 + e * (0.272728123808534 + e * (0.23066074577556175 + 0.20697501780033842 * e))));
+    }, fv = 1048575, St = 1048576, cv = 1072693248, lv = 536870912, vv = 524288, pv = 20, mv = 9007199254740992, hv = 0.9617966939259756, dv = 0.9617967009544373, gv = -7028461650952758e-24, Nv = [1, 1.5], yv = [0, 0.5849624872207642], bv = [0, 1350039202129749e-23], wv = function(e, n, r) {
+      var a, s, u, p, k, y, C, F, B, A, W, z, K, $, ae, Q, ue, le, se, te;
+      return le = 0, r < St && (le -= 53, r = Ke(n *= mv)), le += (r >> pv) - ur | 0, r = (se = r & fv | 0) | cv | 0, se <= 235662 ? te = 0 : se < 767610 ? te = 1 : (te = 0, le += 1, r -= St), n = Xn(n, r), C = Nv[te], p = _n(s = (Q = n - C) * (ue = 1 / (n + C)), 0), a = (r >> 1 | lv) + vv, k = ue * (Q - p * (y = Xn(0, a += te << 18)) - p * (n - (y - C))), ae = (u = s * s) * u * uv(u), y = _n(y = 3 + (u = p * p) + (ae += k * (p + s)), 0), B = _n(B = (Q = p * y) + (ue = k * y + (ae - (y - 3 - u)) * s), 0), A = dv * B, W = gv * B + (ue - (B - Q)) * hv + bv[te], F = yv[te], K = W - ((z = _n(z = A + W + F + ($ = le), 0)) - $ - F - A), e[0] = z, e[1] = K, e;
+    }, xv = function(e) {
+      return e === 0 ? 0.5 : 0.5 + e * (0.25 * e - 0.3333333333333333);
+    }, Sv = 1.4426950408889634, Mv = 1.4426950216293335, kv = 19259629911266175e-24, Tv = function(e, n) {
+      var r, a, s, u, p, k;
+      return u = (s = n - 1) * s * xv(s), r = (k = s * kv - u * Sv) - ((a = _n(a = (p = Mv * s) + k, 0)) - p), e[0] = a, e[1] = r, e;
+    }, Ev = 1023, Pv = -1023, Vv = -1074, er = 22250738585072014e-324, Cv = 4503599627370496, Mt = function(e, n) {
+      return i(n) || Yn(n) ? (e[0] = n, e[1] = 0, e) : n !== 0 && J(n) < er ? (e[0] = n * Cv, e[1] = -52, e) : (e[0] = n, e[1] = 0, e);
+    }, Av = function(e, n) {
+      return arguments.length === 1 ? Mt([0, 0], e) : Mt(e, n);
+    }, Iv = 2146435072, Bv = function(e) {
+      var n = Ke(e);
+      return (n = (n & Iv) >>> 20) - ur | 0;
+    }, Rv = 2220446049250313e-31, Lv = 2148532223, i0 = [0, 0], a0 = [0, 0], ir = function(e, n) {
+      var r, a;
+      return e === 0 || i(e) || Yn(e) ? e : (Av(i0, e), e = i0[0], n += i0[1], (n += Bv(e)) < Vv ? Rn(0, e) : n > Ev ? e < 0 ? j : H : (n <= Pv ? (n += 52, a = Rv) : a = 1, _r(a0, e), r = a0[0], r &= Lv, a * n0(r |= n + ur << 20, a0[1])));
+    }, Oe = 0.6931471805599453, qv = function(e) {
+      return e === 0 ? 0.16666666666666602 : 0.16666666666666602 + e * (e * (6613756321437934e-20 + e * (41381367970572385e-24 * e - 16533902205465252e-22)) - 0.0027777777777015593);
+    }, Fv = function(e) {
+      return e === 0 ? 0.16666666666666602 : 0.16666666666666602 + e * (e * (6613756321437934e-20 + e * (41381367970572385e-24 * e - 16533902205465252e-22)) - 0.0027777777777015593);
+    }, kt = 2147483647, Tt = 1048575, Et = 1048576, Ov = 1071644672, wi = 20, Dv = 0.6931471824645996, Uv = -1904654299957768e-24, Hv = function(e, n, r) {
+      var a, s, u, p, k, y, C, F, B;
+      return B = ((F = e & kt | 0) >> wi) - ur | 0, C = 0, F > Ov && (s = Xn(0, ((C = e + (Et >> B + 1) >>> 0) & ~(Tt >> (B = ((C & kt) >> wi) - ur | 0))) >>> 0), C = (C & Tt | Et) >> wi - B >>> 0, e < 0 && (C = -C), n -= s), k = (p = (r - ((s = _n(s = r + n, 0)) - n)) * Oe + s * Uv) - ((y = (u = s * Dv) + p) - u), a = y - (s = y * y) * Fv(s), e = Ke(y = 1 - (y * a / (a - 2) - (k + y * k) - y)), e = e0(e), y = (e += C << wi >>> 0) >> wi <= 0 ? ir(y, C) : Xn(y, e);
+    }, t0 = 2147483647, Wv = 1072693247, Gv = 1105199104, zv = 1139802112, Pt = 1083179008, jv = 1072693248, Kv = 1083231232, Qv = 3230714880, Vt = 31, Ar = 1e300, Ir = 1e-300, $v = 8008566259537294e-32, hr = [0, 0], Ct = [0, 0], V = function e(n, r) {
+      var a, s, u, p, k, y, C, F, B, A, W, z, K, $;
+      if (i(n) || i(r))
+        return NaN;
+      if (_r(hr, r), k = hr[0], hr[1] === 0) {
+        if (r === 0)
+          return 1;
+        if (r === 1)
+          return n;
+        if (r === -1)
+          return 1 / n;
+        if (r === 0.5)
+          return c(n);
+        if (r === -0.5)
+          return 1 / c(n);
+        if (r === 2)
+          return n * n;
+        if (r === 3)
+          return n * n * n;
+        if (r === 4)
+          return (n *= n) * n;
+        if (Yn(r))
+          return sv(n, r);
+      }
+      if (_r(hr, n), p = hr[0], hr[1] === 0) {
+        if (p === 0)
+          return iv(n, r);
+        if (n === 1)
+          return 1;
+        if (n === -1 && bi(r))
+          return -1;
+        if (Yn(n))
+          return n === j ? e(-0, -r) : r < 0 ? 0 : H;
+      }
+      if (n < 0 && pe(r) === !1)
+        return (n - n) / (n - n);
+      if (u = J(n), a = p & t0 | 0, s = k & t0 | 0, C = k >>> Vt | 0, y = (y = p >>> Vt | 0) && bi(r) ? -1 : 1, s > Gv) {
+        if (s > zv)
+          return ov(n, r);
+        if (a < Wv)
+          return C === 1 ? y * Ar * Ar : y * Ir * Ir;
+        if (a > jv)
+          return C === 0 ? y * Ar * Ar : y * Ir * Ir;
+        W = Tv(Ct, u);
+      } else
+        W = wv(Ct, u, a);
+      if (A = (r - (F = _n(r, 0))) * W[0] + r * W[1], B = F * W[0], _r(hr, z = A + B), K = e0(hr[0]), $ = e0(hr[1]), K >= Pt) {
+        if (K - Pt | $ || A + $v > z - B)
+          return y * Ar * Ar;
+      } else if ((K & t0) >= Kv && (K - Qv | $ || A <= z - B))
+        return y * Ir * Ir;
+      return y * (z = Hv(K, B, A));
+    }, At = function(e, n) {
+      return e >= n ? NaN : 0.125 * V(n - e, 2);
+    }, ei = 1.1447298858494002, It = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n >= r ? NaN : e < n ? j : e >= r ? 0 : Oe - ei + M(S(c((e - n) / (r - n))));
+    };
+    o(It, "factory", function(e, n) {
+      return i(e) || i(n) || e >= n ? N(NaN) : function(r) {
+        return i(r) ? NaN : r < e ? j : r >= n ? 0 : Oe - ei + M(S(c((r - e) / (n - e))));
+      };
+    });
+    var Bt = It, Rt = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n >= r ? NaN : e < n || e > r ? j : -(ei + M((e - n) * (r - e)) / 2);
+    };
+    o(Rt, "factory", function(e, n) {
+      return i(e) || i(n) || e >= n ? N(NaN) : function(r) {
+        return i(r) ? NaN : r < e || r > n ? j : -(ei + M((r - e) * (n - r)) / 2);
+      };
+    });
+    var Lt = Rt, qt = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n >= r ? NaN : e < n || e > r ? 0 : 1 / (T * c((e - n) * (r - e)));
+    };
+    o(qt, "factory", function(e, n) {
+      return i(e) || i(n) || e >= n ? N(NaN) : function(r) {
+        return i(r) ? NaN : r < e || r > n ? 0 : 1 / (T * c((r - e) * (n - r)));
+      };
+    });
+    var Ft = qt, Zv = function(e) {
+      return e === 0 ? 0.0416666666666666 : 0.0416666666666666 + e * (2480158728947673e-20 * e - 0.001388888888887411);
+    }, Jv = function(e) {
+      return e === 0 ? -27557314351390663e-23 : e * (2087572321298175e-24 + -11359647557788195e-27 * e) - 27557314351390663e-23;
+    }, xi = function(e, n) {
+      var r, a, s, u;
+      return s = (u = e * e) * u, a = u * Zv(u), a += s * s * Jv(u), (s = 1 - (r = 0.5 * u)) + (1 - s - r + (u * a - e * n));
+    }, Ot = -0.16666666666666632, Xv = 0.00833333333332249, Yv = -1984126982985795e-19, _v = 27557313707070068e-22, e8 = -25050760253406863e-24, n8 = 158969099521155e-24, Si = function(e, n) {
+      var r, a, s;
+      return r = Xv + (s = e * e) * (Yv + s * _v) + s * (s * s) * (e8 + s * n8), a = s * e, n === 0 ? e + a * (Ot + s * r) : e - (s * (0.5 * n - a * r) - n - a * Ot);
+    }, Dt = new sr(1), r8 = new mr(Dt.buffer), i8 = function(e) {
+      return Dt[0] = e, r8[J7];
+    }, Ut = [10680707, 7228996, 1387004, 2578385, 16069853, 12639074, 9804092, 4427841, 16666979, 11263675, 12935607, 2387514, 4345298, 14681673, 3074569, 13734428, 16653803, 1880361, 10960616, 8533493, 3062596, 8710556, 7349940, 6258241, 3772886, 3769171, 3798172, 8675211, 12450088, 3874808, 9961438, 366607, 15675153, 9132554, 7151469, 3571407, 2607881, 12013382, 4155038, 6285869, 7677882, 13102053, 15825725, 473591, 9065106, 15363067, 6271263, 9264392, 5636912, 4652155, 7056368, 13614112, 10155062, 1944035, 9527646, 15080200, 6658437, 6231200, 6832269, 16767104, 5075751, 3212806, 1398474, 7579849, 6349435, 12618859], a8 = [1.570796251296997, 7549789415861596e-23, 5390302529957765e-30, 3282003415807913e-37, 1270655753080676e-44, 12293330898111133e-52, 27337005381646456e-60, 21674168387780482e-67], o0 = 16777216, s0 = 5960464477539063e-23, u0 = _i(20), Ht = _i(20), Yi = _i(20), vn = _i(20);
+    function _i(e) {
+      var n, r;
+      for (n = [], r = 0; r < e; r++)
+        n.push(0);
+      return n;
+    }
+    var t8 = function(e, n, r, a) {
+      var s, u, p, k, y, C, F;
+      for (p = a - 1, (u = (r - 3) / 24 | 0) < 0 && (u = 0), k = r - 24 * (u + 1), C = u - p, F = p + 4, y = 0; y <= F; y++)
+        u0[y] = C < 0 ? 0 : Ut[C], C += 1;
+      for (y = 0; y <= 4; y++) {
+        for (s = 0, C = 0; C <= p; C++)
+          s += e[C] * u0[p + (y - C)];
+        Ht[y] = s;
+      }
+      return function B(A, W, z, K, $, ae, Q, ue, le) {
+        var se, te, xe, Fe, me, De, Ye, Be, ie;
+        for (Fe = ae, ie = K[z], Be = z, me = 0; Be > 0; me++)
+          te = s0 * ie | 0, vn[me] = ie - o0 * te | 0, ie = K[Be - 1] + te, Be -= 1;
+        if (ie = ir(ie, $), ie -= 8 * Ne(0.125 * ie), ie -= Ye = 0 | ie, xe = 0, $ > 0 ? (Ye += me = vn[z - 1] >> 24 - $, vn[z - 1] -= me << 24 - $, xe = vn[z - 1] >> 23 - $) : $ === 0 ? xe = vn[z - 1] >> 23 : ie >= 0.5 && (xe = 2), xe > 0) {
+          for (Ye += 1, se = 0, me = 0; me < z; me++)
+            Be = vn[me], se === 0 ? Be !== 0 && (se = 1, vn[me] = 16777216 - Be) : vn[me] = 16777215 - Be;
+          if ($ > 0)
+            switch ($) {
+              case 1:
+                vn[z - 1] &= 8388607;
+                break;
+              case 2:
+                vn[z - 1] &= 4194303;
+            }
+          xe === 2 && (ie = 1 - ie, se !== 0 && (ie -= ir(1, $)));
+        }
+        if (ie === 0) {
+          for (Be = 0, me = z - 1; me >= ae; me--)
+            Be |= vn[me];
+          if (Be === 0) {
+            for (De = 1; vn[ae - De] === 0; De++)
+              ;
+            for (me = z + 1; me <= z + De; me++) {
+              for (le[ue + me] = Ut[Q + me], te = 0, Be = 0; Be <= ue; Be++)
+                te += A[Be] * le[ue + (me - Be)];
+              K[me] = te;
+            }
+            return B(A, W, z += De, K, $, ae, Q, ue, le);
+          }
+        }
+        if (ie === 0)
+          for (z -= 1, $ -= 24; vn[z] === 0; )
+            z -= 1, $ -= 24;
+        else
+          (ie = ir(ie, -$)) >= o0 ? (te = s0 * ie | 0, vn[z] = ie - o0 * te | 0, $ += 24, vn[z += 1] = te) : vn[z] = 0 | ie;
+        for (te = ir(1, $), me = z; me >= 0; me--)
+          K[me] = te * vn[me], te *= s0;
+        for (me = z; me >= 0; me--) {
+          for (te = 0, De = 0; De <= Fe && De <= z - me; De++)
+            te += a8[De] * K[me + De];
+          Yi[z - me] = te;
+        }
+        for (te = 0, me = z; me >= 0; me--)
+          te += Yi[me];
+        for (W[0] = xe === 0 ? te : -te, te = Yi[0] - te, me = 1; me <= z; me++)
+          te += Yi[me];
+        return W[1] = xe === 0 ? te : -te, 7 & Ye;
+      }(e, n, 4, Ht, k, 4, u, p, u0);
+    }, jn = Math.round, o8 = 0.6366197723675814, s8 = 1.5707963267341256, u8 = 6077100506506192e-26, f8 = 6077100506303966e-26, c8 = 20222662487959506e-37, l8 = 20222662487111665e-37, v8 = 84784276603689e-45, Wt = 2047, ea = function(e, n, r) {
+      var a, s, u, p, k;
+      return u = e - (a = jn(e * o8)) * s8, p = a * u8, k = n >> 20 | 0, r[0] = u - p, k - (Ke(r[0]) >> 20 & Wt) > 16 && (p = a * c8 - ((s = u) - (u = s - (p = a * f8)) - p), r[0] = u - p, k - (Ke(r[0]) >> 20 & Wt) > 49 && (p = a * v8 - ((s = u) - (u = s - (p = a * l8)) - p), r[0] = u - p)), r[1] = u - r[0] - p, a;
+    }, p8 = 0, m8 = 16777216, Br = 1.5707963267341256, jr = 6077100506506192e-26, na = 2 * jr, ra = 3 * jr, ia = 4 * jr, h8 = 2147483647, d8 = 2146435072, g8 = 1048575, N8 = 598523, y8 = 1072243195, b8 = 1073928572, w8 = 1074752122, x8 = 1074977148, S8 = 1075183036, M8 = 1075388923, k8 = 1075594811, T8 = 1094263291, Mi = [0, 0, 0], ki = [0, 0], f0 = function(e, n) {
+      var r, a, s, u, p, k, y;
+      if ((s = Ke(e) & h8 | 0) <= y8)
+        return n[0] = e, n[1] = 0, 0;
+      if (s <= w8)
+        return (s & g8) === N8 ? ea(e, s, n) : s <= b8 ? e > 0 ? (y = e - Br, n[0] = y - jr, n[1] = y - n[0] - jr, 1) : (y = e + Br, n[0] = y + jr, n[1] = y - n[0] + jr, -1) : e > 0 ? (y = e - 2 * Br, n[0] = y - na, n[1] = y - n[0] - na, 2) : (y = e + 2 * Br, n[0] = y + na, n[1] = y - n[0] + na, -2);
+      if (s <= k8)
+        return s <= S8 ? s === x8 ? ea(e, s, n) : e > 0 ? (y = e - 3 * Br, n[0] = y - ra, n[1] = y - n[0] - ra, 3) : (y = e + 3 * Br, n[0] = y + ra, n[1] = y - n[0] + ra, -3) : s === M8 ? ea(e, s, n) : e > 0 ? (y = e - 4 * Br, n[0] = y - ia, n[1] = y - n[0] - ia, 4) : (y = e + 4 * Br, n[0] = y + ia, n[1] = y - n[0] + ia, -4);
+      if (s < T8)
+        return ea(e, s, n);
+      if (s >= d8)
+        return n[0] = NaN, n[1] = NaN, 0;
+      for (r = i8(e), y = n0(s - ((a = (s >> 20) - 1046) << 20 | 0), r), p = 0; p < 2; p++)
+        Mi[p] = 0 | y, y = (y - Mi[p]) * m8;
+      for (Mi[2] = y, u = 3; Mi[u - 1] === p8; )
+        u -= 1;
+      return k = t8(Mi, ki, a, u), e < 0 ? (n[0] = -ki[0], n[1] = -ki[1], -k) : (n[0] = ki[0], n[1] = ki[1], k);
+    }, E8 = 2147483647, P8 = 2146435072, V8 = 1072243195, C8 = 1045430272, dr = [0, 0], ar = function(e) {
+      var n;
+      if (n = Ke(e), (n &= E8) <= V8)
+        return n < C8 ? e : Si(e, 0);
+      if (n >= P8)
+        return NaN;
+      switch (3 & f0(e, dr)) {
+        case 0:
+          return Si(dr[0], dr[1]);
+        case 1:
+          return xi(dr[0], dr[1]);
+        case 2:
+          return -Si(dr[0], dr[1]);
+        default:
+          return -xi(dr[0], dr[1]);
+      }
+    }, gr = 1.5707963267948966, Gt = function(e, n, r) {
+      return i(n) || i(r) || n >= r ? NaN : i(e) || e < 0 || e > 1 ? NaN : n + V(ar(gr * e), 2) * (r - n);
+    };
+    o(Gt, "factory", function(e, n) {
+      return i(e) || i(n) || e >= n ? N(NaN) : function(r) {
+        return i(r) || r < 0 || r > 1 ? NaN : e + V(ar(gr * r), 2) * (n - e);
+      };
+    });
+    var zt = Gt, aa = Ge.isPrimitive;
+    function pn() {
+      var e, n;
+      if (!(this instanceof pn))
+        return arguments.length === 0 ? new pn() : new pn(arguments[0], arguments[1]);
+      if (arguments.length) {
+        if (e = arguments[0], n = arguments[1], !aa(e) || i(e))
+          throw new TypeError("invalid argument. Minimum support `a` must be a number primitive. Value: `" + e + "`");
+        if (!aa(n) || i(n))
+          throw new TypeError("invalid argument. Maximum support `b` must be a number primitive. Value: `" + n + "`");
+        if (e >= n)
+          throw new RangeError("invalid arguments. Minimum support `a` must be less than maximum support `b`. Value: `" + e + "," + n + "`");
+      } else
+        e = 0, n = 1;
+      return l(this, "a", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(r) {
+        if (!aa(r) || i(r))
+          throw new TypeError("invalid value. Must be a number primitive. Value: `" + r + "`");
+        if (r >= n)
+          throw new RangeError("invalid value. Must be less than `b`. Value: `" + r + "`");
+        e = r;
+      } }), l(this, "b", { configurable: !1, enumerable: !0, get: function() {
+        return n;
+      }, set: function(r) {
+        if (!aa(r) || i(r))
+          throw new TypeError("invalid value. Must be a number primitive. Value: `" + r + "`");
+        if (r <= e)
+          throw new RangeError("invalid value. Must be greater than `a`. Value: `" + r + "`");
+        n = r;
+      } }), this;
+    }
+    m(pn.prototype, "entropy", function() {
+      return ft(this.a, this.b);
+    }), m(pn.prototype, "kurtosis", function() {
+      return ct(this.a, this.b);
+    }), m(pn.prototype, "mean", function() {
+      return lt(this.a, this.b);
+    }), m(pn.prototype, "median", function() {
+      return vt(this.a, this.b);
+    }), m(pn.prototype, "mode", function() {
+      return pt(this.a, this.b);
+    }), m(pn.prototype, "skewness", function() {
+      return mt(this.a, this.b);
+    }), m(pn.prototype, "stdev", function() {
+      return ht(this.a, this.b);
+    }), m(pn.prototype, "variance", function() {
+      return At(this.a, this.b);
+    }), o(pn.prototype, "cdf", function(e) {
+      return G(e, this.a, this.b);
+    }), o(pn.prototype, "logcdf", function(e) {
+      return Bt(e, this.a, this.b);
+    }), o(pn.prototype, "logpdf", function(e) {
+      return Lt(e, this.a, this.b);
+    }), o(pn.prototype, "pdf", function(e) {
+      return Ft(e, this.a, this.b);
+    }), o(pn.prototype, "quantile", function(e) {
+      return zt(e, this.a, this.b);
+    });
+    var A8 = pn, jt = function(e, n) {
+      return i(e) || i(n) || n < 0 || n > 1 ? NaN : e < 0 ? 0 : e >= 1 ? 1 : 1 - n;
+    };
+    o(jt, "factory", function(e) {
+      return i(e) || e < 0 || e > 1 ? N(NaN) : function(n) {
+        return i(n) ? NaN : n < 0 ? 0 : n >= 1 ? 1 : 1 - e;
+      };
+    });
+    var Kt = jt, I8 = Ge.isPrimitive, Qt = function(e) {
+      return I8(e) && e >= 0 && e <= 1;
+    }, B8 = Ge.isObject, $t = function(e) {
+      return B8(e) && e.valueOf() >= 0 && e.valueOf() <= 1;
+    }, c0 = function(e) {
+      return Qt(e) || $t(e);
+    };
+    o(c0, "isPrimitive", Qt), o(c0, "isObject", $t);
+    var ta = c0, Zt = function(e) {
+      var n;
+      return i(e) || e < 0 || e > 1 ? NaN : e === 0 || e === 1 ? 0 : -(n = 1 - e) * M(n) - e * M(e);
+    }, Jt = function(e) {
+      return i(e) || e < 0 || e > 1 ? NaN : 1 / (e * (1 - e)) - 6;
+    }, Xt = function(e) {
+      return i(e) || e < 0 || e > 1 ? NaN : e;
+    }, Yt = function(e) {
+      return i(e) || e < 0 || e > 1 ? NaN : e <= 0.5 ? 0 : 1;
+    }, _t = function(e) {
+      return i(e) || e < 0 || e > 1 ? NaN : e <= 0.5 ? 0 : 1;
+    }, eo = function(e) {
+      return i(e) || e < 0 || e > 1 ? NaN : e === 0 ? H : e === 1 ? j : (1 - 2 * e) / c(e * (1 - e));
+    }, no = function(e) {
+      return i(e) || e < 0 || e > 1 ? NaN : c((1 - e) * e);
+    }, ro = function(e) {
+      return i(e) || e < 0 || e > 1 ? NaN : e * (1 - e);
+    }, oa = function(e) {
+      return e >= 0 && e <= 1;
+    }, sa = Math.ceil, Ti = function(e) {
+      return e < 0 ? sa(e) : Ne(e);
+    }, R8 = function(e, n, r) {
+      var a, s, u;
+      return u = (a = e - n) - (s = a * a) * qv(s), ir(1 - (n - a * u / (2 - u) - e), r);
+    }, L8 = 0.6931471803691238, q8 = 19082149292705877e-26, io = 1.4426950408889634, F8 = 709.782712893384, O8 = -745.1332191019411, ao = 1 / (1 << 28), D8 = -ao, R = function(e) {
+      var n;
+      return i(e) || e === H ? e : e === j ? 0 : e > F8 ? H : e < O8 ? 0 : e > D8 && e < ao ? 1 + e : (n = Ti(e < 0 ? io * e - 0.5 : io * e + 0.5), R8(e - n * L8, n * q8, n));
+    }, to = function(e, n) {
+      return i(e) || !oa(n) ? NaN : 1 - n + n * R(e);
+    };
+    o(to, "factory", function(e) {
+      return oa(e) ? function(n) {
+        return i(n) ? NaN : 1 - e + e * R(n);
+      } : N(NaN);
+    });
+    var oo = to, so = function(e, n) {
+      return i(e) || i(n) || n < 0 || n > 1 ? NaN : e === 0 ? 1 - n : e === 1 ? n : 0;
+    };
+    o(so, "factory", function(e) {
+      return i(e) || e < 0 || e > 1 ? N(NaN) : function(n) {
+        return i(n) ? NaN : n === 0 ? 1 - e : n === 1 ? e : 0;
+      };
+    });
+    var uo = so, fo = function(e, n) {
+      return i(n) || i(e) || n < 0 || n > 1 || e < 0 || e > 1 ? NaN : e <= 1 - n ? 0 : 1;
+    };
+    o(fo, "factory", function(e) {
+      return i(e) || e < 0 || e > 1 ? N(NaN) : function(n) {
+        return i(n) || n < 0 || n > 1 ? NaN : n <= 1 - e ? 0 : 1;
+      };
+    });
+    var co = fo, lo = ta.isPrimitive;
+    function Mn() {
+      var e;
+      if (!(this instanceof Mn))
+        return arguments.length === 0 ? new Mn() : new Mn(arguments[0]);
+      if (arguments.length) {
+        if (e = arguments[0], !lo(e))
+          throw new TypeError("invalid argument. Mean parameter `p` must be a probability. Value: `" + e + "`");
+      } else
+        e = 0.5;
+      return l(this, "p", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(n) {
+        if (!lo(n))
+          throw new TypeError("invalid value. Must be a probability. Value: `" + n + "`");
+        e = n;
+      } }), this;
+    }
+    m(Mn.prototype, "entropy", function() {
+      return Zt(this.p);
+    }), m(Mn.prototype, "kurtosis", function() {
+      return Jt(this.p);
+    }), m(Mn.prototype, "mean", function() {
+      return Xt(this.p);
+    }), m(Mn.prototype, "median", function() {
+      return _t(this.p);
+    }), m(Mn.prototype, "mode", function() {
+      return Yt(this.p);
+    }), m(Mn.prototype, "skewness", function() {
+      return eo(this.p);
+    }), m(Mn.prototype, "stdev", function() {
+      return no(this.p);
+    }), m(Mn.prototype, "variance", function() {
+      return ro(this.p);
+    }), o(Mn.prototype, "cdf", function(e) {
+      return Kt(e, this.p);
+    }), o(Mn.prototype, "mgf", function(e) {
+      return oo(e, this.p);
+    }), o(Mn.prototype, "pmf", function(e) {
+      return uo(e, this.p);
+    }), o(Mn.prototype, "quantile", function(e) {
+      return co(e, this.p);
+    });
+    var U8 = Mn, H8 = 0.34657359027997264, W8 = function(e) {
+      return e === 0 ? -0.03333333333333313 : e * (0.0015873015872548146 + e * (e * (4008217827329362e-21 + -20109921818362437e-23 * e) - 793650757867488e-19)) - 0.03333333333333313;
+    }, G8 = 709.782712893384, l0 = 0.6931471803691238, v0 = 19082149292705877e-26, vo = 1.4426950408889634, z8 = 38.816242111356935, j8 = 1.0397207708399179, Le = function(e) {
+      var n, r, a, s, u, p, k, y, C, F, B, A;
+      if (e === H || i(e))
+        return e;
+      if (e === j)
+        return -1;
+      if (e === 0)
+        return e;
+      if (e < 0 ? (r = !0, k = -e) : (r = !1, k = e), k >= z8) {
+        if (r)
+          return -1;
+        if (k >= G8)
+          return H;
+      }
+      if (u = 0 | Ke(k), k > H8)
+        k < j8 ? r ? (a = e + l0, s = -v0, A = -1) : (a = e - l0, s = v0, A = 1) : (A = r ? vo * e - 0.5 : vo * e + 0.5, a = e - (F = A |= 0) * l0, s = F * v0), C = a - (e = a - s) - s;
+      else {
+        if (u < 1016070144)
+          return e;
+        A = 0;
+      }
+      return B = (y = e * (n = 0.5 * e)) * (((p = 1 + y * W8(y)) - (F = 3 - p * n)) / (6 - e * F)), A === 0 ? e - (e * B - y) : (B = e * (B - C) - C, B -= y, A === -1 ? 0.5 * (e - B) - 0.5 : A === 1 ? e < -0.25 ? -2 * (B - (e + 0.5)) : 1 + 2 * (e - B) : A <= -2 || A > 56 ? (a = Ke(k = 1 - (B - e)) + (A << 20) | 0, (k = Xn(k, a)) - 1) : (F = 1, A < 20 ? k = (F = Xn(F, a = 1072693248 - (2097152 >> A) | 0)) - (B - e) : (k = e - (B + (F = Xn(F, a = ur - A << 20 | 0))), k += 1), a = Ke(k) + (A << 20) | 0, Xn(k, a)));
+    }, K8 = function(e) {
+      return e === 0 ? 0.6666666666666735 : 0.6666666666666735 + e * (0.3999999999940942 + e * (0.2857142874366239 + e * (0.22222198432149784 + e * (0.1818357216161805 + e * (0.15313837699209373 + 0.14798198605116586 * e)))));
+    }, p0 = 0.6931471803691238, m0 = 19082149292705877e-26, Q8 = 0.41421356237309503, $8 = -0.2928932188134525, Z8 = 1862645149230957e-24, J8 = 5551115123125783e-32, X8 = 9007199254740992, Y8 = 0.6666666666666666, oe = function(e) {
+      var n, r, a, s, u, p, k, y, C, F;
+      if (e < -1 || i(e))
+        return NaN;
+      if (e === -1)
+        return j;
+      if (e === H || e === 0)
+        return e;
+      if (F = 1, (a = e < 0 ? -e : e) < Q8) {
+        if (a < Z8)
+          return a < J8 ? e : e - e * e * 0.5;
+        e > $8 && (F = 0, s = e, r = 1);
+      }
+      return F !== 0 && (a < X8 ? (u = (F = ((r = Ke(C = 1 + e)) >> 20) - ur) > 0 ? 1 - (C - e) : e - (C - 1), u /= C) : (F = ((r = Ke(C = e)) >> 20) - ur, u = 0), (r &= 1048575) < 434334 ? C = Xn(C, 1072693248 | r) : (F += 1, C = Xn(C, 1071644672 | r), r = 1048576 - r >> 2), s = C - 1), n = 0.5 * s * s, r === 0 ? s === 0 ? F * p0 + (u += F * m0) : F * p0 - ((y = n * (1 - Y8 * s)) - (F * m0 + u) - s) : (y = (k = (p = s / (2 + s)) * p) * K8(k), F === 0 ? s - (n - p * (n + y)) : F * p0 - (n - (p * (n + y) + (F * m0 + u)) - s));
+    }, Kn = 2.718281828459045, kn = 2220446049250313e-31, h0 = function(e) {
+      var n, r;
+      return e === 0 ? 1 / 0 : ((e < 0 ? -e : e) <= 1 ? (n = 709811.662581658 + e * (679979.8474157227 + e * (293136.7857211597 + e * (74887.54032914672 + e * (12555.290582413863 + e * (1443.4299244417066 + e * (115.24194596137347 + e * (6.309239205732627 + e * (0.22668404630224365 + e * (0.004826466289237662 + 4624429436045379e-20 * e))))))))), r = 0 + e * (362880 + e * (1026576 + e * (1172700 + e * (723680 + e * (269325 + e * (63273 + e * (9450 + e * (870 + e * (45 + 1 * e)))))))))) : (n = 4624429436045379e-20 + (e = 1 / e) * (0.004826466289237662 + e * (0.22668404630224365 + e * (6.309239205732627 + e * (115.24194596137347 + e * (1443.4299244417066 + e * (12555.290582413863 + e * (74887.54032914672 + e * (293136.7857211597 + e * (679979.8474157227 + 709811.662581658 * e))))))))), r = 1 + e * (45 + e * (870 + e * (9450 + e * (63273 + e * (269325 + e * (723680 + e * (1172700 + e * (1026576 + e * (362880 + 0 * e)))))))))), n / r);
+    }, d0 = 10.900511, Me = function(e, n) {
+      var r, a, s, u, p, k, y;
+      return i(e) || i(n) ? NaN : e < 0 || n < 0 ? NaN : n === 1 ? 1 / e : e === 1 ? 1 / n : (y = e + n) < kn ? (p = y / e, p /= n) : y === e && n < kn ? 1 / n : y === n && e < kn ? 1 / e : (e < n && (k = n, n = e, e = k), a = e + d0 - 0.5, s = n + d0 - 0.5, u = y + d0 - 0.5, p = h0(e) * (h0(n) / h0(y)), J(n * (r = e - 0.5 - n)) < 100 * u && e > 100 ? p *= R(r * oe(-n / u)) : p *= V(a / u, r), p *= V(u > 1e10 ? a / u * (s / u) : a * s / (u * u), n), p *= c(Kn / s));
+    }, po = function(e) {
+      return e === 0 && 1 / e === H;
+    }, Ee = function(e, n) {
+      var r, a, s, u;
+      if ((r = arguments.length) === 2)
+        return i(e) || i(n) ? NaN : e === H || n === H ? H : e === n && e === 0 ? po(e) ? e : n : e > n ? e : n;
+      for (a = j, u = 0; u < r; u++) {
+        if (s = arguments[u], i(s) || s === H)
+          return s;
+        (s > a || s === a && s === 0 && po(s)) && (a = s);
+      }
+      return a;
+    }, g0 = function(e) {
+      return e === 0 && 1 / e === j;
+    }, Se = function(e, n) {
+      var r, a, s, u;
+      if ((r = arguments.length) === 2)
+        return i(e) || i(n) ? NaN : e === j || n === j ? j : e === n && e === 0 ? g0(e) ? e : n : e < n ? e : n;
+      for (a = H, u = 0; u < r; u++) {
+        if (s = arguments[u], i(s) || s === j)
+          return s;
+        (s < a || s === a && s === 0 && g0(s)) && (a = s);
+      }
+      return a;
+    }, Tn = 17976931348623157e292, _8 = 2147483647, Ei = 2.5066282746310007, e9 = function(e) {
+      return e === 0 ? 0.08333333333334822 : 0.08333333333334822 + e * (0.0034722222160545866 + e * (e * (7873113957930937e-19 * e - 22954996161337813e-20) - 0.0026813261780578124));
+    }, n9 = 143.01608, mo = function(e) {
+      var n, r, a;
+      return n = 1 + (n = 1 / e) * e9(n), r = R(e), r = e > n9 ? (a = V(e, 0.5 * e - 0.25)) * (a / r) : V(e, e - 0.5) / r, Ei * r * n;
+    }, Rr = 0.5772156649015329, ho = function(e, n) {
+      return n / ((1 + Rr * e) * e);
+    }, r9 = function(e) {
+      var n, r;
+      return e === 0 ? 1 : ((e < 0 ? -e : e) <= 1 ? (n = 1 + e * (0.4942148268014971 + e * (0.20744822764843598 + e * (0.04763678004571372 + e * (0.010421379756176158 + e * (0.0011913514700658638 + e * (16011952247675185e-20 + 0 * e)))))), r = 1 + e * (0.0714304917030273 + e * (e * (0.035823639860549865 + e * (0.011813978522206043 + e * (e * (5396055804933034e-19 + -23158187332412014e-21 * e) - 0.004456419138517973))) - 0.23459179571824335))) : (n = 0 + (e = 1 / e) * (16011952247675185e-20 + e * (0.0011913514700658638 + e * (0.010421379756176158 + e * (0.04763678004571372 + e * (0.20744822764843598 + e * (0.4942148268014971 + 1 * e)))))), r = e * (5396055804933034e-19 + e * (e * (0.011813978522206043 + e * (0.035823639860549865 + e * (e * (0.0714304917030273 + 1 * e) - 0.23459179571824335))) - 0.004456419138517973)) - 23158187332412014e-21), n / r);
+    }, ve = function(e) {
+      var n, r, a, s;
+      if (pe(e) && e < 0 || e === j || i(e))
+        return NaN;
+      if (e === 0)
+        return g0(e) ? j : H;
+      if (e > 171.61447887182297)
+        return H;
+      if (e < -170.5674972726612)
+        return 0;
+      if ((r = J(e)) > 33)
+        return e >= 0 ? mo(e) : (n = 1 & (a = Ne(r)) ? 1 : -1, (s = r - a) > 0.5 && (s = r - (a += 1)), s = r * ar(T * s), n * T / (J(s) * mo(r)));
+      for (s = 1; e >= 3; )
+        s *= e -= 1;
+      for (; e < 0; ) {
+        if (e > -1e-9)
+          return ho(e, s);
+        s /= e, e += 1;
+      }
+      for (; e < 2; ) {
+        if (e < 1e-9)
+          return ho(e, s);
+        s /= e, e += 1;
+      }
+      return e === 2 ? s : s * r9(e -= 2);
+    }, i9 = [1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800, 39916800, 479001600, 6227020800, 87178291200, 1307674368e3, 20922789888e3, 355687428096e3, 6402373705728e3, 121645100408832e3, 243290200817664e4, 5109094217170944e4, 11240007277776077e5, 2585201673888498e7, 6204484017332394e8, 15511210043330986e9, 40329146112660565e10, 10888869450418352e12, 30488834461171387e13, 8841761993739702e15, 26525285981219107e16, 8222838654177922e18, 2631308369336935e20, 8683317618811886e21, 29523279903960416e22, 10333147966386145e24, 37199332678990125e25, 13763753091226346e27, 5230226174666011e29, 20397882081197444e30, 8159152832478977e32, 3345252661316381e34, 140500611775288e37, 6041526306337383e37, 2658271574788449e39, 11962222086548019e40, 5502622159812089e42, 25862324151116818e43, 12413915592536073e45, 6082818640342675e47, 30414093201713376e48, 15511187532873822e50, 8065817517094388e52, 42748832840600255e53, 2308436973392414e56, 12696403353658276e57, 7109985878048635e59, 40526919504877214e60, 23505613312828785e62, 13868311854568984e64, 832098711274139e67, 5075802138772248e68, 3146997326038794e70, 198260831540444e73, 12688693218588417e73, 8247650592082472e75, 5443449390774431e77, 3647111091818868e79, 24800355424368305e80, 1711224524281413e83, 11978571669969892e84, 8504785885678623e86, 61234458376886085e87, 44701154615126844e89, 3307885441519386e92, 248091408113954e95, 18854947016660504e95, 14518309202828587e97, 11324281178206297e99, 8946182130782976e101, 7156945704626381e103, 5797126020747368e105, 4753643337012842e107, 3945523969720659e109, 3314240134565353e111, 281710411438055e114, 24227095383672734e114, 2107757298379528e117, 18548264225739844e118, 1650795516090846e121, 14857159644817615e122, 1352001527678403e125, 12438414054641308e126, 11567725070816416e128, 1087366156656743e131, 1032997848823906e133, 9916779348709496e134, 9619275968248212e136, 9426890448883248e138, 9332621544394415e140, 9332621544394415e142, 942594775983836e145, 9614466715035127e146, 990290071648618e149, 10299016745145628e150, 1081396758240291e153, 11462805637347084e154, 1226520203196138e157, 1324641819451829e159, 14438595832024937e160, 1588245541522743e163, 17629525510902446e164, 1974506857221074e167, 22311927486598138e168, 25435597334721877e170, 2925093693493016e173, 3393108684451898e175, 3969937160808721e177, 4684525849754291e179, 5574585761207606e181, 6689502913449127e183, 8094298525273444e185, 9875044200833601e187, 1214630436702533e190, 1506141741511141e192, 1882677176888926e194, 2372173242880047e196, 30126600184576594e197, 3856204823625804e200, 4974504222477287e202, 6466855489220474e204, 847158069087882e207, 11182486511960043e208, 14872707060906857e210, 19929427461615188e212, 26904727073180504e214, 3659042881952549e217, 5012888748274992e219, 6917786472619489e221, 9615723196941089e223, 13462012475717526e225, 1898143759076171e228, 2695364137888163e230, 3854370717180073e232, 55502938327393044e233, 8047926057471992e236, 11749972043909107e238, 1727245890454639e241, 25563239178728654e242, 380892263763057e246, 5713383956445855e247, 862720977423324e250, 13113358856834524e251, 20063439050956823e253, 30897696138473508e255, 4789142901463394e258, 7471062926282894e260, 11729568794264145e262, 1853271869493735e265, 29467022724950384e266, 47147236359920616e268, 7590705053947219e271, 12296942187394494e273, 20044015765453026e275, 3287218585534296e278, 5423910666131589e280, 9003691705778438e282, 1503616514864999e285, 25260757449731984e286, 4269068009004705e289, 7257415615307999e291], a9 = 170, Pi = function(e) {
+      return i(e) ? NaN : pe(e) ? e < 0 ? NaN : e <= a9 ? i9[e] : H : ve(e + 1);
+    }, go = function(e) {
+      var n, r;
+      return e === 0 ? 1 / 0 : ((e < 0 ? -e : e) <= 1 ? (n = 3847467039331777e-5 + e * (3685766504351951e-5 + e * (1588920245372942e-5 + e * (4059208354298835e-6 + e * (6805476611834733e-7 + e * (7823975500312005e-8 + e * (6246580776401795e-9 + e * (341986.3488721347 + e * (12287.194511824551 + e * (261.61404416416684 + 2.5066282746310007 * e))))))))), r = 0 + e * (362880 + e * (1026576 + e * (1172700 + e * (723680 + e * (269325 + e * (63273 + e * (9450 + e * (870 + e * (45 + 1 * e)))))))))) : (n = 2.5066282746310007 + (e = 1 / e) * (261.61404416416684 + e * (12287.194511824551 + e * (341986.3488721347 + e * (6246580776401795e-9 + e * (7823975500312005e-8 + e * (6805476611834733e-7 + e * (4059208354298835e-6 + e * (1588920245372942e-5 + e * (3685766504351951e-5 + 3847467039331777e-5 * e))))))))), r = 1 + e * (45 + e * (870 + e * (9450 + e * (63273 + e * (269325 + e * (723680 + e * (1172700 + e * (1026576 + e * (362880 + 0 * e)))))))))), n / r);
+    }, qe = 10.900511, No = 170, t9 = 4269068009004705e289, o9 = function e(n, r) {
+      var a, s, u;
+      return n < kn ? r > No ? (s = e(r, No - r), s *= n, 1 / (s *= t9)) : 1 / (n * ve(n + r)) : (u = n + qe - 0.5, n + r === n ? a = J(r) < 10 ? R((0.5 - n) * oe(r / u)) : 1 : (a = J(r) < 10 ? R((0.5 - n) * oe(r / u)) : V(u / (u + r), n - 0.5), a *= go(n) / go(n + r)), a *= V(Kn / (u + r), r));
+    }, yo = 170, N0 = function(e, n) {
+      var r, a, s;
+      if (e <= 0 || e + n <= 0)
+        return ve(e) / ve(e + n);
+      if ((a = Ne(n)) === n) {
+        if ((s = Ne(e)) === e && e <= yo && e + n <= yo)
+          return Pi(s - 1) / Pi(a + s - 1);
+        if (J(n) < 20) {
+          if (n === 0)
+            return 1;
+          if (n < 0) {
+            for (r = e -= 1, n += 1; n !== 0; )
+              r *= e -= 1, n += 1;
+            return r;
+          }
+          for (r = 1 / e, n -= 1; n !== 0; )
+            r /= e += 1, n -= 1;
+          return r;
+        }
+      }
+      return o9(e, n);
+    }, Nr = [0, 0], s9 = 2147483647, u9 = 1072243195, f9 = 1044381696, c9 = 2146435072, Kr = function(e) {
+      var n;
+      if (n = Ke(e), (n &= s9) <= u9)
+        return n < f9 ? 1 : xi(e, 0);
+      if (n >= c9)
+        return NaN;
+      switch (3 & f0(e, Nr)) {
+        case 0:
+          return xi(Nr[0], Nr[1]);
+        case 1:
+          return -Si(Nr[0], Nr[1]);
+        case 2:
+          return -xi(Nr[0], Nr[1]);
+        default:
+          return Si(Nr[0], Nr[1]);
+      }
+    }, Lr = function(e) {
+      var n, r;
+      return i(e) ? NaN : Yn(e) ? NaN : (n = J(r = e % 2)) === 0 || n === 1 ? Rn(0, r) : n < 0.25 ? ar(T * r) : n < 0.75 ? Rn(Kr(T * (n = 0.5 - n)), r) : n < 1.25 ? (r = Rn(1, r) - r, ar(T * r)) : n < 1.75 ? -Rn(Kr(T * (n -= 1.5)), r) : (r -= Rn(2, r), ar(T * r));
+    }, l9 = function(e) {
+      return e === 0 ? 0.06735230105312927 : 0.06735230105312927 + e * (0.007385550860814029 + e * (0.0011927076318336207 + e * (22086279071390839e-20 + 25214456545125733e-21 * e)));
+    }, v9 = function(e) {
+      return e === 0 ? 0.020580808432516733 : 0.020580808432516733 + e * (0.0028905138367341563 + e * (5100697921535113e-19 + e * (10801156724758394e-20 + 44864094961891516e-21 * e)));
+    }, p9 = function(e) {
+      return e === 0 ? 1.3920053346762105 : 1.3920053346762105 + e * (0.7219355475671381 + e * (0.17193386563280308 + e * (0.01864591917156529 + e * (7779424963818936e-19 + 7326684307446256e-21 * e))));
+    }, m9 = function(e) {
+      return e === 0 ? 0.21498241596060885 : 0.21498241596060885 + e * (0.325778796408931 + e * (0.14635047265246445 + e * (0.02664227030336386 + e * (0.0018402845140733772 + 3194753265841009e-20 * e))));
+    }, h9 = function(e) {
+      return e === 0 ? -0.032788541075985965 : e * (0.006100538702462913 + e * (31563207090362595e-20 * e - 0.0014034646998923284)) - 0.032788541075985965;
+    }, d9 = function(e) {
+      return e === 0 ? 0.01797067508118204 : 0.01797067508118204 + e * (e * (881081882437654e-18 + -31275416837512086e-20 * e) - 0.0036845201678113826);
+    }, g9 = function(e) {
+      return e === 0 ? -0.010314224129834144 : e * (0.0022596478090061247 + e * (3355291926355191e-19 * e - 5385953053567405e-19)) - 0.010314224129834144;
+    }, N9 = function(e) {
+      return e === 0 ? 0.6328270640250934 : 0.6328270640250934 + e * (1.4549225013723477 + e * (0.9777175279633727 + e * (0.22896372806469245 + 0.013381091853678766 * e)));
+    }, y9 = function(e) {
+      return e === 0 ? 2.4559779371304113 : 2.4559779371304113 + e * (2.128489763798934 + e * (0.7692851504566728 + e * (0.10422264559336913 + 0.003217092422824239 * e)));
+    }, b9 = function(e) {
+      return e === 0 ? 0.08333333333333297 : 0.08333333333333297 + e * (e * (7936505586430196e-19 + e * (e * (8363399189962821e-19 + -0.0016309293409657527 * e) - 59518755745034e-17)) - 0.0027777777772877554);
+    }, w9 = 0.07721566490153287, x9 = 0.3224670334241136, S9 = 1, M9 = -0.07721566490153287, k9 = 0.48383612272381005, T9 = -0.1475877229945939, E9 = 0.06462494023913339, P9 = -0.07721566490153287, V9 = 1, C9 = 0.4189385332046727, ua = 1.4616321449683622, A9 = 4503599627370496, I9 = 288230376151711740, B9 = 8470329472543003e-37, bo = 1.4616321449683622, R9 = -0.12148629053584961, L9 = -3638676997039505e-33, ke = function(e) {
+      var n, r, a, s, u, p, k, y, C, F, B;
+      if (i(e) || Yn(e))
+        return e;
+      if (e === 0)
+        return H;
+      if (e < 0 ? (n = !0, e = -e) : n = !1, e < B9)
+        return -M(e);
+      if (n) {
+        if (e >= A9 || (k = Lr(e)) === 0)
+          return H;
+        r = M(T / J(k * e));
+      }
+      if (e === 1 || e === 2)
+        return 0;
+      if (e < 2)
+        switch (e <= 0.9 ? (B = -M(e), e >= ua - 1 + 0.27 ? (C = 1 - e, a = 0) : e >= ua - 1 - 0.27 ? (C = e - (bo - 1), a = 1) : (C = e, a = 2)) : (B = 0, e >= ua + 0.27 ? (C = 2 - e, a = 0) : e >= ua - 0.27 ? (C = e - bo, a = 1) : (C = e - 1, a = 2)), a) {
+          case 0:
+            B += C * (p = w9 + (F = C * C) * l9(F)) + (u = F * (x9 + F * v9(F))) - 0.5 * C;
+            break;
+          case 1:
+            p = k9 + (y = (F = C * C) * C) * h9(y), u = T9 + y * d9(y), s = E9 + y * g9(y), B += R9 + (F * p - (L9 - y * (u + C * s)));
+            break;
+          case 2:
+            B += -0.5 * C + (p = C * (P9 + C * N9(C))) / (u = V9 + C * y9(C));
+        }
+      else if (e < 8)
+        switch (B = 0.5 * (C = e - (a = Ti(e))) + C * (M9 + C * m9(C)) / (S9 + C * p9(C)), F = 1, a) {
+          case 7:
+            F *= C + 6;
+          case 6:
+            F *= C + 5;
+          case 5:
+            F *= C + 4;
+          case 4:
+            F *= C + 3;
+          case 3:
+            B += M(F *= C + 2);
+        }
+      else
+        B = e < I9 ? (e - 0.5) * ((k = M(e)) - 1) + (y = C9 + (F = 1 / e) * b9(C = F * F)) : e * (M(e) - 1);
+      return n && (B = r - B), B;
+    }, wo = 14901161193847656e-24, fe = 709.782712893384, q9 = function(e, n) {
+      var r, a, s;
+      if ((a = R(-n)) !== 0)
+        for (r = a, s = 1; s < e; ++s)
+          r /= s, a += r *= n;
+      return a;
+    }, F9 = function(e) {
+      return e === 0 ? -0.3250421072470015 : e * (e * (-23763016656650163e-21 * e - 0.005770270296489442) - 0.02848174957559851) - 0.3250421072470015;
+    }, O9 = function(e) {
+      return e === 0 ? -0.3250421072470015 : e * (e * (-23763016656650163e-21 * e - 0.005770270296489442) - 0.02848174957559851) - 0.3250421072470015;
+    }, D9 = function(e) {
+      return e === 0 ? 0.39791722395915535 : 0.39791722395915535 + e * (0.0650222499887673 + e * (0.005081306281875766 + e * (13249473800432164e-20 + -3960228278775368e-21 * e)));
+    }, U9 = function(e) {
+      return e === 0 ? 0.39791722395915535 : 0.39791722395915535 + e * (0.0650222499887673 + e * (0.005081306281875766 + e * (13249473800432164e-20 + -3960228278775368e-21 * e)));
+    }, H9 = function(e) {
+      return e === 0 ? 0.41485611868374833 : 0.41485611868374833 + e * (e * (0.31834661990116175 + e * (e * (0.035478304325618236 + -0.002166375594868791 * e) - 0.11089469428239668)) - 0.3722078760357013);
+    }, W9 = function(e) {
+      return e === 0 ? 0.41485611868374833 : 0.41485611868374833 + e * (e * (0.31834661990116175 + e * (e * (0.035478304325618236 + -0.002166375594868791 * e) - 0.11089469428239668)) - 0.3722078760357013);
+    }, G9 = function(e) {
+      return e === 0 ? 0.10642088040084423 : 0.10642088040084423 + e * (0.540397917702171 + e * (0.07182865441419627 + e * (0.12617121980876164 + e * (0.01363708391202905 + 0.011984499846799107 * e))));
+    }, z9 = function(e) {
+      return e === 0 ? 0.10642088040084423 : 0.10642088040084423 + e * (0.540397917702171 + e * (0.07182865441419627 + e * (0.12617121980876164 + e * (0.01363708391202905 + 0.011984499846799107 * e))));
+    }, j9 = function(e) {
+      return e === 0 ? -0.6938585727071818 : e * (e * (e * (e * (e * (-9.814329344169145 * e - 81.2874355063066) - 184.60509290671104) - 162.39666946257347) - 62.375332450326006) - 10.558626225323291) - 0.6938585727071818;
+    }, K9 = function(e) {
+      return e === 0 ? -0.6938585727071818 : e * (e * (e * (e * (e * (-9.814329344169145 * e - 81.2874355063066) - 184.60509290671104) - 162.39666946257347) - 62.375332450326006) - 10.558626225323291) - 0.6938585727071818;
+    }, Q9 = function(e) {
+      return e === 0 ? 19.651271667439257 : 19.651271667439257 + e * (137.65775414351904 + e * (434.56587747522923 + e * (645.3872717332679 + e * (429.00814002756783 + e * (108.63500554177944 + e * (6.570249770319282 + -0.0604244152148581 * e))))));
+    }, $9 = function(e) {
+      return e === 0 ? 19.651271667439257 : 19.651271667439257 + e * (137.65775414351904 + e * (434.56587747522923 + e * (645.3872717332679 + e * (429.00814002756783 + e * (108.63500554177944 + e * (6.570249770319282 + -0.0604244152148581 * e))))));
+    }, Z9 = function(e) {
+      return e === 0 ? -0.799283237680523 : e * (e * (e * (e * (-483.5191916086514 * e - 1025.0951316110772) - 637.5664433683896) - 160.63638485582192) - 17.757954917754752) - 0.799283237680523;
+    }, J9 = function(e) {
+      return e === 0 ? -0.799283237680523 : e * (e * (e * (e * (-483.5191916086514 * e - 1025.0951316110772) - 637.5664433683896) - 160.63638485582192) - 17.757954917754752) - 0.799283237680523;
+    }, X9 = function(e) {
+      return e === 0 ? 30.33806074348246 : 30.33806074348246 + e * (325.7925129965739 + e * (1536.729586084437 + e * (3199.8582195085955 + e * (2553.0504064331644 + e * (474.52854120695537 + -22.44095244658582 * e)))));
+    }, Y9 = function(e) {
+      return e === 0 ? 30.33806074348246 : 30.33806074348246 + e * (325.7925129965739 + e * (1536.729586084437 + e * (3199.8582195085955 + e * (2553.0504064331644 + e * (474.52854120695537 + -22.44095244658582 * e)))));
+    }, fa = 1e-300, _9 = 13877787807814457e-33, xo = 0.8450629115104675, ep = 0.12837916709551256, np = 1, rp = -0.0023621185607526594, ip = 1, ap = -0.009864944034847148, tp = 1, op = -0.0098649429247001, sp = 1, qr = function(e) {
+      var n, r, a, s, u, p, k, y;
+      if (i(e))
+        return NaN;
+      if (e === H)
+        return 0;
+      if (e === j)
+        return 2;
+      if (e === 0)
+        return 1;
+      if (e < 0 ? (n = !0, r = -e) : (n = !1, r = e), r < 0.84375)
+        return r < _9 ? 1 - e : (p = (s = ep + (a = e * e) * O9(a)) / (u = np + a * U9(a)), e < 0.25 ? 1 - (e + e * p) : (s = e * p, 0.5 - (s += e - 0.5)));
+      if (r < 1.25)
+        return k = rp + (u = r - 1) * W9(u), y = ip + u * z9(u), n ? 1 + xo + k / y : 1 - xo - k / y;
+      if (r < 28) {
+        if (u = 1 / (r * r), r < 2.857142857142857)
+          s = ap + u * K9(u), u = tp + u * $9(u);
+        else {
+          if (e < -6)
+            return 2 - fa;
+          s = op + u * J9(u), u = sp + u * Y9(u);
+        }
+        return a = _n(r, 0), s = R(-a * a - 0.5625) * R((a - r) * (a + r) + s / u), n ? 2 - s / r : s / r;
+      }
+      return n ? 2 - fa : fa * fa;
+    }, up = function(e, n) {
+      var r, a, s, u, p;
+      if ((u = qr(c(n))) !== 0 && e > 1) {
+        for (a = R(-n) / c(T * n), a *= n, s = a /= r = 0.5, p = 2; p < e; ++p)
+          a /= p - r, s += a *= n;
+        u += s;
+      }
+      return u;
+    }, de = -708.3964185322641, So = function(e, n) {
+      var r;
+      return r = e * M(n), n >= 1 ? r < fe && -n > de ? V(n, e) * R(-n) : e >= 1 ? V(n / R(n / e), e) : R(r - n) : r > de ? V(n, e) * R(-n) : n / e < fe ? V(n / R(n / e), e) : R(r - n);
+    }, y0 = function(e, n) {
+      var r, a;
+      if ((a = e.length) < 2 || n === 0)
+        return a === 0 ? 0 : e[0];
+      for (r = e[a -= 1] * n + e[a - 1], a -= 2; a >= 0; )
+        r = r * n + e[a], a -= 1;
+      return r;
+    };
+    o(y0, "factory", function(e) {
+      var n, r, a, s;
+      if (e.length > 500)
+        return function(u) {
+          return y0(e, u);
+        };
+      if (n = "return function evalpoly(x){", (r = e.length) === 0)
+        n += "return 0.0;";
+      else if (r === 1)
+        n += "return " + e[0] + ";";
+      else {
+        for (n += "if(x===0.0){return " + e[0] + ";}", n += "return " + e[0], a = r - 1, s = 1; s < r; s++)
+          n += "+x*", s < a && (n += "("), n += e[s];
+        for (s = 0; s < a - 1; s++)
+          n += ")";
+        n += ";";
+      }
+      return n += "}", n += "//# sourceURL=evalpoly.factory.js", new Function(n)();
+    });
+    var mn = y0, yr = 6.283185307179586, fp = function(e) {
+      return e === 0 ? -0.3333333333333333 : e * (0.08333333333333333 + e * (e * (0.0011574074074074073 + e * (3527336860670194e-19 + e * (e * (3919263178522438e-20 + e * (e * (e * (8296711340953087e-22 + e * (e * (6707853543401498e-24 + e * (10261809784240309e-24 + e * (914769958223679e-24 * e - 4382036018453353e-24))) - 17665952736826078e-23)) - 185406221071516e-20) - 21854485106799924e-22)) - 1787551440329218e-19))) - 0.014814814814814815)) - 0.3333333333333333;
+    }, cp = function(e) {
+      return e === 0 ? -0.001851851851851852 : e * (e * (0.0026455026455026454 + e * (e * (20576131687242798e-20 + e * (e * (e * (764916091608111e-20 + e * (e * (4647127802807434e-24 + e * (1378633446915721e-22 + e * (11951628599778148e-24 * e - 5752545603517705e-23))) - 16120900894563446e-22)) - 18098550334489977e-21) - 4018775720164609e-22)) - 9902263374485596e-19)) - 0.003472222222222222) - 0.001851851851851852;
+    }, lp = function(e) {
+      return e === 0 ? 0.004133597883597883 : 0.004133597883597883 + e * (e * (7716049382716049e-19 + e * (20093878600823047e-22 + e * (e * (52923448829120125e-21 + e * (e * (3423578734096138e-23 + e * (13721957309062932e-22 + e * (14280614206064242e-23 * e - 6298992138380055e-22))) - 12760635188618728e-21)) - 10736653226365161e-20))) - 0.0026813271604938273);
+    }, vp = function(e) {
+      return e === 0 ? 6494341563786008e-19 : 6494341563786008e-19 + e * (22947209362139917e-20 + e * (e * (26772063206283885e-20 + e * (e * (e * (11082654115347302e-21 + e * (14230900732435883e-22 * e - 56749528269915965e-22)) - 2396505113867297e-22) - 7561801671883977e-20)) - 4691894943952557e-19));
+    }, pp = function(e) {
+      return e === 0 ? -8618882909167117e-19 : e * (7840392217200666e-19 + e * (e * (e * (6641498215465122e-20 + e * (11375726970678419e-21 * e - 3968365047179435e-20)) - 14638452578843418e-22) - 2990724803031902e-19)) - 8618882909167117e-19;
+    }, mp = function(e) {
+      return e === 0 ? -33679855336635813e-20 : e * (e * (2772753244959392e-19 + e * (e * (6797780477937208e-20 + e * (1419062920643967e-22 + e * (e * (8018470256334202e-21 + -2291481176508095e-21 * e) - 13594048189768693e-21))) - 19932570516188847e-20)) - 6972813758365858e-20) - 33679855336635813e-20;
+    }, hp = function(e) {
+      return e === 0 ? 5313079364639922e-19 : 5313079364639922e-19 + e * (e * (2708782096718045e-19 + e * (7902353232660328e-22 + e * (e * (561168275310625e-19 + -18329116582843375e-21 * e) - 8153969367561969e-20))) - 5921664373536939e-19);
+    }, dp = function(e) {
+      return e === 0 ? 34436760689237765e-20 : 34436760689237765e-20 + e * (5171790908260592e-20 + e * (e * (2812695154763237e-19 + -10976582244684731e-20 * e) - 33493161081142234e-20));
+    }, gp = function(e) {
+      return e === 0 ? -6526239185953094e-19 : e * (8394987206720873e-19 + -438297098541721e-18 * e) - 6526239185953094e-19;
+    }, tr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], Np = function(e, n) {
+      var r, a, s, u, p;
+      return u = e * (s = -M(1 + (a = (n - e) / e)) + a), p = c(2 * s), n < e && (p = -p), tr[0] = fp(p), tr[1] = cp(p), tr[2] = lp(p), tr[3] = vp(p), tr[4] = pp(p), tr[5] = mp(p), tr[6] = hp(p), tr[7] = dp(p), tr[8] = gp(p), tr[9] = -5967612901927463e-19, r = mn(tr, 1 / e), r *= R(-u) / c(yr * e), n < e && (r = -r), r += qr(c(u)) / 2;
+    }, yp = eval, Mo = function() {
+      var e;
+      try {
+        yp('"use strict"; (function* () {})'), e = !0;
+      } catch {
+        e = !1;
+      }
+      return e;
+    }, bp = 1e6, wp = function(e, n) {
+      var r, a, s, u, p;
+      if (p = {}, arguments.length > 1 && (p = n), r = p.tolerance || kn, s = p.maxTerms || bp, u = p.initialValue || 0, typeof e.next == "function") {
+        for (a of e)
+          if (J(r * (u += a)) >= J(a) || --s == 0)
+            break;
+      } else
+        do
+          u += a = e();
+        while (J(r * u) < J(a) && --s);
+      return u;
+    }, xp = 1e6, Sp = function(e, n) {
+      var r, a, s, u, p;
+      p = {}, arguments.length > 1 && (p = n), r = p.tolerance || kn, s = p.maxTerms || xp, u = p.initialValue || 0;
+      do
+        u += a = e();
+      while (J(r * u) < J(a) && --s);
+      return u;
+    }, ca = Mo() ? wp : Sp, Mp = function(e, n) {
+      var r = 1, a = e, s = n;
+      return function() {
+        var u = r;
+        return r *= s / (a += 1), u;
+      };
+    }, b0 = function(e, n, r) {
+      var a;
+      return r = r || 0, a = Mp(e, n), ca(a, { initialValue: r });
+    }, Xe = function(e) {
+      var n, r;
+      return e === 0 ? 1 / 0 : ((e < 0 ? -e : e) <= 1 ? (n = 709811.662581658 + e * (679979.8474157227 + e * (293136.7857211597 + e * (74887.54032914672 + e * (12555.290582413863 + e * (1443.4299244417066 + e * (115.24194596137347 + e * (6.309239205732627 + e * (0.22668404630224365 + e * (0.004826466289237662 + 4624429436045379e-20 * e))))))))), r = 0 + e * (362880 + e * (1026576 + e * (1172700 + e * (723680 + e * (269325 + e * (63273 + e * (9450 + e * (870 + e * (45 + 1 * e)))))))))) : (n = 4624429436045379e-20 + (e = 1 / e) * (0.004826466289237662 + e * (0.22668404630224365 + e * (6.309239205732627 + e * (115.24194596137347 + e * (1443.4299244417066 + e * (12555.290582413863 + e * (74887.54032914672 + e * (293136.7857211597 + e * (679979.8474157227 + 709811.662581658 * e))))))))), r = 1 + e * (45 + e * (870 + e * (9450 + e * (63273 + e * (269325 + e * (723680 + e * (1172700 + e * (1026576 + e * (362880 + 0 * e)))))))))), n / r);
+    }, ko = function(e, n) {
+      var r, a, s, u, p, k, y;
+      return y = (n - e - qe + 0.5) / (s = e + qe - 0.5), e < 1 ? n <= de ? R(e * M(n) - n - ke(e)) : V(n, e) * R(-n) / ve(e) : (J(y * y * e) <= 100 && e > 150 ? (r = e * (oe(y) - y) + n * (0.5 - qe) / s, r = R(r)) : (u = e * M(n / s), Se(u, p = e - n) <= de || Ee(u, p) >= fe ? (a = p / e, Se(u, p) / 2 > de && Ee(u, p) / 2 < fe ? r = (k = V(n / s, e / 2) * R(p / 2)) * k : Se(u, p) / 4 > de && Ee(u, p) / 4 < fe && n > e ? (r = (k = V(n / s, e / 4) * R(p / 4)) * k, r *= r) : r = a > de && a < fe ? V(n * R(a) / s, e) : R(u + p)) : r = V(n / s, e) * R(p)), r *= c(s / Kn) / Xe(e));
+    }, kp = function(e, n) {
+      var r;
+      if (i(e) || i(n))
+        return NaN;
+      if (n === 0)
+        return 0;
+      if (e === 0)
+        return -1;
+      if (e < 0 && n % 2 == 0 && (e = -e), e > 0) {
+        if ((J(n * (e - 1)) < 0.5 || J(n) < 0.2) && (r = M(e) * n) < 0.5)
+          return Le(r);
+      } else if (Ti(n) !== n)
+        return NaN;
+      return V(e, n) - 1;
+    }, Tp = function(e) {
+      var n, r;
+      return e === 0 ? -0.01803556856784494 : ((e < 0 ? -e : e) <= 1 ? (n = e * (0.02512664961998968 + e * (0.049410315156753225 + e * (0.0172491608709614 + e * (e * (e * (0 * e - 3245886498259485e-20) - 5410098692152044e-19) - 2594535632054381e-19)))) - 0.01803556856784494, r = 1 + e * (1.962029871977952 + e * (1.4801966942423133 + e * (0.5413914320717209 + e * (0.09885042511280101 + e * (0.008213096746488934 + e * (22493629192211576e-20 + -22335276320861708e-23 * e))))))) : (n = 0 + (e = 1 / e) * (e * (e * (e * (0.0172491608709614 + e * (0.049410315156753225 + e * (0.02512664961998968 + -0.01803556856784494 * e))) - 2594535632054381e-19) - 5410098692152044e-19) - 3245886498259485e-20), r = e * (22493629192211576e-20 + e * (0.008213096746488934 + e * (0.09885042511280101 + e * (0.5413914320717209 + e * (1.4801966942423133 + e * (1.962029871977952 + 1 * e)))))) - 22335276320861708e-23), n / r);
+    }, Ep = function(e) {
+      var n, r;
+      return e === 0 ? 0.04906224540690395 : ((e < 0 ? -e : e) <= 1 ? (n = 0.04906224540690395 + e * (e * (e * (e * (e * (-0.0010034668769627955 * e - 0.024014982064857155) - 0.1584135863906922) - 0.4065671242119384) - 0.4149833583594954) - 0.09691175301595212), r = 1 + e * (3.0234982984646304 + e * (3.4873958536072385 + e * (1.9141558827442668 + e * (0.5071377386143635 + e * (0.05770397226904519 + 0.001957681026011072 * e)))))) : (n = (e = 1 / e) * (e * (e * (e * (e * (0.04906224540690395 * e - 0.09691175301595212) - 0.4149833583594954) - 0.4065671242119384) - 0.1584135863906922) - 0.024014982064857155) - 0.0010034668769627955, r = 0.001957681026011072 + e * (0.05770397226904519 + e * (0.5071377386143635 + e * (1.9141558827442668 + e * (3.4873958536072385 + e * (3.0234982984646304 + 1 * e)))))), n / r);
+    }, Pp = function(e) {
+      var n, r;
+      return e === 0 ? -0.029232972183027003 : ((e < 0 ? -e : e) <= 1 ? (n = e * (0.14421626775719232 + e * (e * (0.05428096940550536 + e * (e * (4311713426792973e-19 + 0 * e) - 0.008505359768683364)) - 0.14244039073863127)) - 0.029232972183027003, r = 1 + e * (e * (0.846973248876495 + e * (e * (0.02558279715597587 + e * (-8271935218912905e-22 * e - 0.0010066679553914337)) - 0.22009515181499575)) - 1.5016935605448505)) : (n = 0 + (e = 1 / e) * (4311713426792973e-19 + e * (e * (0.05428096940550536 + e * (e * (0.14421626775719232 + -0.029232972183027003 * e) - 0.14244039073863127)) - 0.008505359768683364)), r = e * (e * (0.02558279715597587 + e * (e * (0.846973248876495 + e * (1 * e - 1.5016935605448505)) - 0.22009515181499575)) - 0.0010066679553914337) - 8271935218912905e-22), n / r);
+    }, Vp = 0.15896368026733398, Cp = 0.5281534194946289, Ap = 0.45201730728149414, To = function(e, n, r) {
+      var a, s, u, p;
+      if (e < kn)
+        return -M(e);
+      if (n === 0 || r === 0)
+        return 0;
+      if (s = 0, e > 2) {
+        if (e >= 3) {
+          do
+            r -= 1, s += M(e -= 1);
+          while (e >= 3);
+          r = e - 2;
+        }
+        return u = r * (e + 1), p = Tp(r), s += u * Vp + u * p;
+      }
+      return e < 1 && (s += -M(e), r = n, n = e, e += 1), e <= 1.5 ? (u = Ep(n), s += (a = n * r) * Cp + a * u) : (u = r * n, p = Pp(-r), s += u * Ap + u * p);
+    }, Ip = function(e) {
+      return i(e) ? NaN : e < 0 ? e < -0.5 ? ve(1 + e) - 1 : Le(-oe(e) + To(e + 2, e + 1, e)) : e < 2 ? Le(To(e + 1, e, e - 1)) : ve(1 + e) - 1;
+    }, Bp = function(e, n) {
+      var r, a, s, u;
+      return r = -n, n = -n, a = e + 1, s = 1, function() {
+        return u = r / a, r *= n, r /= s += 1, a += 1, u;
+      };
+    }, Rp = function(e, n, r) {
+      var a, s, u, p;
+      return s = ((a = Ip(e)) + 1) / e, a -= u = kp(n, e), a /= e, p = Bp(e, n), a = -(u += 1) * ca(p, { initialValue: ((r ? s : 0) - a) / u }), r && (a = -a), [a, s];
+    }, en = 11754943508222875e-54, Lp = 1e6, qp = function(e, n) {
+      var r, a, s;
+      return a = {}, arguments.length > 1 && (a = n), r = a.maxIter || Lp, s = a.tolerance || kn, a.keep ? function(u, p, k) {
+        var y, C, F, B, A, W;
+        if ((F = (W = (y = typeof u.next == "function") ? u.next().value : u())[1]) === 0 && (F = en), B = F, A = 0, y === !0)
+          do
+            (W = u.next().value) && ((A = W[1] + W[0] * A) === 0 && (A = en), (B = W[1] + W[0] / B) === 0 && (B = en), F *= C = B * (A = 1 / A));
+          while (W && J(C - 1) > p && --k);
+        else
+          do
+            (W = u()) && ((A = W[1] + W[0] * A) === 0 && (A = en), (B = W[1] + W[0] / B) === 0 && (B = en), F *= C = B * (A = 1 / A));
+          while (W && J(C - 1) > p && --k);
+        return F;
+      }(e, s, r) : function(u, p, k) {
+        var y, C, F, B, A, W, z;
+        if (B = (z = (y = typeof u.next == "function") ? u.next().value : u())[1], F = z[0], B === 0 && (B = en), A = B, W = 0, y === !0)
+          do
+            (z = u.next().value) && ((W = z[1] + z[0] * W) === 0 && (W = en), (A = z[1] + z[0] / A) === 0 && (A = en), B *= C = A * (W = 1 / W));
+          while (J(C - 1) > p && --k);
+        else
+          do
+            (z = u()) && ((W = z[1] + z[0] * W) === 0 && (W = en), (A = z[1] + z[0] / A) === 0 && (A = en), B *= C = A * (W = 1 / W));
+          while (z && J(C - 1) > p && --k);
+        return F / B;
+      }(e, s, r);
+    }, Fp = 1e6, Op = function(e, n) {
+      var r, a, s;
+      return a = {}, arguments.length > 1 && (a = n), s = a.tolerance || kn, r = a.maxIter || Fp, a.keep ? function(u, p, k) {
+        var y, C, F, B, A;
+        (B = (A = u())[1]) === 0 && (B = en), C = B, F = 0;
+        do
+          (A = u()) && ((F = A[1] + A[0] * F) === 0 && (F = en), (C = A[1] + A[0] / C) === 0 && (C = en), B *= y = C * (F = 1 / F));
+        while (A && J(y - 1) > p && --k);
+        return B;
+      }(e, s, r) : function(u, p, k) {
+        var y, C, F, B, A, W;
+        A = (W = u())[1], C = W[0], A === 0 && (A = en), F = A, B = 0;
+        do
+          (W = u()) && ((B = W[1] + W[0] * B) === 0 && (B = en), (F = W[1] + W[0] / F) === 0 && (F = en), A *= y = F * (B = 1 / B));
+        while (W && J(y - 1) > p && --k);
+        return C / A;
+      }(e, s, r);
+    }, Eo = Mo() ? qp : Op, Dp = function(e, n) {
+      var r = n - e + 1, a = e, s = 0;
+      return function() {
+        return [(s += 1) * (a - s), r += 2];
+      };
+    }, Po = function(e, n) {
+      var r = Dp(e, n);
+      return 1 / (n - e + 1 + Eo(r));
+    }, Up = 170, fr = function e(n, r, a, s) {
+      var u, p, k, y, C, F, B, A, W, z, K, $, ae;
+      if (n < 0 || r <= 0)
+        return NaN;
+      if (p = a === void 0 || a, B = s, A = 0, r >= Up && !p)
+        return B && 4 * r < n ? (A = r * M(n) - n, A += M(Po(r, n))) : !B && r > 4 * n ? (A = r * M(n) - n, A += M(b0(r, n, y = 0) / r)) : (A = e(r, n, !0, B)) === 0 ? B ? (A = M(A = 1 + 1 / (12 * r) + 1 / (288 * r * r)) - r + (r - 0.5) * M(r), A += M(Ei)) : (A = r * M(n) - n, A += M(b0(r, n, y = 0) / r)) : A = M(A) + ke(r), A > fe ? H : R(A);
+      switch (r < 30 && r <= n + 1 && n < fe ? C = !(W = ($ = Ne(r)) === r) && J($ - r) === 0.5 : W = C = !1, W && n > 0.6 ? (B = !B, k = 0) : C && n > 0.2 ? (B = !B, k = 1) : n < wo && r > 1 ? k = 6 : n < 0.5 ? k = -0.4 / M(n) < r ? 2 : 3 : n < 1.1 ? k = 0.75 * n < r ? 2 : 3 : (F = !1, p && r > 20 && (z = J((n - r) / r), r > 200 ? 20 / r > z * z && (F = !0) : z < 0.4 && (F = !0)), F ? k = 5 : n - 1 / (3 * n) < r ? k = 2 : (k = 4, B = !B)), k) {
+        case 0:
+          A = q9(r, n), p === !1 && (A *= ve(r));
+          break;
+        case 1:
+          A = up(r, n), p === !1 && (A *= ve(r));
+          break;
+        case 2:
+          (A = p ? ko(r, n) : So(r, n)) !== 0 && (y = 0, u = !1, B && (y = p ? 1 : ve(r), p || A >= 1 || Tn * A > y ? (y /= A, p || r < 1 || Tn / r > y ? (y *= -r, u = !0) : y = 0) : y = 0)), A *= b0(r, n, y) / r, u && (B = !1, A = -A);
+          break;
+        case 3:
+          A = (K = Rp(r, n, B = !B))[0], ae = K[1], B = !1, p && (A /= ae);
+          break;
+        case 4:
+          (A = p ? ko(r, n) : So(r, n)) !== 0 && (A *= Po(r, n));
+          break;
+        case 5:
+          A = Np(r, n), n >= r && (B = !B);
+          break;
+        case 6:
+          A = p ? V(n, r) / ve(r + 1) : V(n, r) / r, A *= 1 - r * n / (r + 1);
+      }
+      return p && A > 1 && (A = 1), B && (A = (p ? 1 : ve(r)) - A), A;
+    }, Hp = function(e, n) {
+      var r;
+      return r = e * M(n), n >= 1 ? r < fe && -n > de ? V(n, e) * R(-n) : e >= 1 ? V(n / R(n / e), e) : R(r - n) : r > de ? V(n, e) * R(-n) : n / e < fe ? V(n / R(n / e), e) : R(r - n);
+    }, Wp = function(e, n) {
+      var r, a, s, u, p, k, y;
+      return y = (n - e - qe + 0.5) / (s = e + qe - 0.5), e < 1 ? n <= de ? R(e * M(n) - n - ke(e)) : V(n, e) * R(-n) / ve(e) : (J(y * y * e) <= 100 && e > 150 ? (r = e * (oe(y) - y) + n * (0.5 - qe) / s, r = R(r)) : (u = e * M(n / s), Se(u, p = e - n) <= de || Ee(u, p) >= fe ? (a = p / e, Se(u, p) / 2 > de && Ee(u, p) / 2 < fe ? r = (k = V(n / s, e / 2) * R(p / 2)) * k : Se(u, p) / 4 > de && Ee(u, p) / 4 < fe && n > e ? (r = (k = V(n / s, e / 4) * R(p / 4)) * k, r *= r) : r = a > de && a < fe ? V(n * R(a) / s, e) : R(u + p)) : r = V(n / s, e) * R(p)), r *= c(s / Kn) / Xe(e));
+    }, Fr = new Array(30), Or = function(e, n, r, a, s, u, p) {
+      var k, y, C, F, B, A, W, z, K, $, ae, Q, ue, le, se, te, xe, Fe;
+      if (xe = e + (A = n - 1) / 2, $ = a < 0.35 ? oe(-a) : M(r), (Q = Wp(n, Fe = -xe * $)) <= er)
+        return s;
+      for (p ? (k = Q / N0(e, n), k /= V(xe, n)) : k = Hp(n, Fe) / V(xe, n), k *= u, Fr[0] = 1, ue = fr(Fe, n, !0, !0), F = s + k * (ue /= Q), C = 1, W = $ / 2, W *= W, z = 1, ae = 4 * xe * xe, B = n, se = 1; se < Fr.length; ++se) {
+        for (C += 2, Fr[se] = 0, K = n - se, y = 3, le = 1; le < se; ++le)
+          K = le * n - se, Fr[se] += K * Fr[se - le] / Pi(y), y += 2;
+        if (Fr[se] /= se, Fr[se] += A / Pi(C), ue = (B * (B + 1) * ue + (Fe + B + 1) * z) / ae, z *= W, B += 2, F += te = k * Fr[se] * ue, te > 1) {
+          if (J(te) < J(kn * F))
+            break;
+        } else if (J(te / kn) < J(F))
+          break;
+      }
+      return F;
+    }, w0 = function(e, n, r) {
+      var a, s;
+      if (r === 0)
+        return 1;
+      for (a = 1, s = 0; s < r; s++)
+        a *= (e + s) / (n + s);
+      return a;
+    }, Gp = function(e, n) {
+      var r, a, s;
+      if ((r = arguments.length) === 0)
+        return H;
+      if (r === 2)
+        return Ee(J(e), J(n));
+      for (a = [], s = 0; s < r; s++)
+        a.push(J(arguments[s]));
+      return Ee.apply(null, a);
+    }, zp = function(e, n) {
+      var r, a, s;
+      if ((r = arguments.length) === 0)
+        return H;
+      if (r === 2)
+        return Se(J(e), J(n));
+      for (a = [], s = 0; s < r; s++)
+        a.push(J(arguments[s]));
+      return Se.apply(null, a);
+    }, x0 = function(e, n, r, a, s) {
+      var u, p, k, y, C, F, B, A, W, z, K, $, ae, Q;
+      if (!s)
+        return V(r, e) * V(a, n);
+      if (y = e + qe - 0.5, C = n + qe - 0.5, F = (ae = e + n) + qe - 0.5, u = Xe(ae), u /= Xe(e) * Xe(n), u *= c(C / Kn), u *= c(y / F), zp(B = (r * n - a * y) / y, A = (a * e - r * C) / C) < 0.2)
+        if (B * A > 0 || Se(e, n) < 1)
+          J(B) < 0.1 ? u *= R(e * oe(B)) : u *= V(r * F / y, e), J(A) < 0.1 ? u *= R(n * oe(A)) : u *= V(a * F / C, n);
+        else if (Gp(B, A) < 0.5)
+          k = n / e, (p = e < n) && k * A < 0.1 || !p && B / k > 0.1 ? (W = Le(k * oe(A)), W = e * oe(W = B + W + W * B), u *= R(W)) : (W = Le(oe(B) / k), W = n * oe(W = A + W + W * A), u *= R(W));
+        else if (J(B) < J(A))
+          if ((Q = e * oe(B) + n * M(a * F / C)) <= de || Q >= fe) {
+            if ((Q += M(u)) >= fe)
+              return NaN;
+            u = R(Q);
+          } else
+            u *= R(Q);
+        else if ((Q = n * oe(A) + e * M(r * F / y)) <= de || Q >= fe) {
+          if ((Q += M(u)) >= fe)
+            return NaN;
+          u = R(Q);
+        } else
+          u *= R(Q);
+      else if ($ = a * F / C, B = e * M(K = r * F / y), A = n * M($), B >= fe || B <= de || A >= fe || A <= de)
+        if (e < n)
+          if (z = V($, n / e), (W = e * (M(K) + M(z))) < fe && W > de)
+            u *= V(z * K, e);
+          else {
+            if ((A += B + M(u)) >= fe)
+              return NaN;
+            u = R(A);
+          }
+        else if (z = V(K, e / n), (W = (M(z) + M($)) * n) < fe && W > de)
+          u *= V(z * $, n);
+        else {
+          if ((A += B + M(u)) >= fe)
+            return NaN;
+          u = R(A);
+        }
+      else
+        u *= V(K, e) * V($, n);
+      return u;
+    }, jp = { keep: !0, maxIter: 1e3 }, Vo = function(e, n, r, a, s, u) {
+      var p, k;
+      return p = x0(e, n, r, a, s), u && (u[1] = p), p === 0 ? p : (k = /* @__PURE__ */ function(y, C, F, B) {
+        var A = 0;
+        return function() {
+          var W, z, K;
+          return z = (y + A - 1) * (y + C + A - 1) * A * (C - A) * F * F, W = y + 2 * A - 1, K = A, K += A * (C - A) * F / (y + 2 * A - 1), K += (y + A) * (y * B - C * F + 1 + A * (2 - F)) / (y + 2 * A + 1), A += 1, [z /= W * W, K];
+        };
+      }(e, n, r, a), p / Eo(k, jp));
+    }, Co = function e(n, r) {
+      var a, s;
+      if (i(n) || i(r))
+        return NaN;
+      if (!pe(n) || !pe(r))
+        return NaN;
+      if (r < 0)
+        return 0;
+      if (n < 0)
+        return a = e(-n + r - 1, r), bi(r) && (a = -a), a;
+      if (r > n)
+        return 0;
+      if (r === 0 || r === n)
+        return 1;
+      if (r === 1 || r === n - 1)
+        return n;
+      for (n - r < r && (r = n - r), a = n, s = 2; s <= r; s++)
+        a *= (n - s + 1) / s;
+      return pe(a) ? a : jn(a);
+    }, Kp = function(e, n, r, a) {
+      var s, u, p, k, y;
+      if ((u = V(r, e)) > er)
+        for (k = u, y = Ne(e - 1); y > n; y--)
+          u += k *= (y + 1) * a / ((e - y) * r);
+      else if ((p = Ne(e * r)) <= n + 1 && (p = Ne(n + 2)), u = V(r, p) * V(a, e - p), (u *= Co(Ne(e), Ne(p))) == 0)
+        for (y = p - 1; y > n; y--)
+          u += V(r, y) * V(a, e - y), u *= Co(Ne(e), Ne(y));
+      else {
+        for (k = u, s = u, y = p - 1; y > n; y--)
+          u += k *= (y + 1) * a / ((e - y) * r);
+        for (k = s, y = p + 1; y <= e; y++)
+          u += k *= (e - y + 1) * r / (y * a);
+      }
+      return u;
+    }, Vi = function(e, n, r, a, s, u, p) {
+      var k, y, C, F;
+      if (k = x0(e, n, r, a, u), p && (p[1] = k), (k /= e) == 0)
+        return k;
+      for (C = 1, y = 1, F = 0; F < s - 1; ++F)
+        C += y *= (e + n + F) * r / (e + F + 1);
+      return k *= C;
+    }, Ao = { maxTerms: 100 }, cr = function(e, n, r, a, s, u, p) {
+      var k, y, C, F, B, A, W, z;
+      return s ? (y = e + qe - 0.5, C = n + qe - 0.5, F = (W = e + n) + qe - 0.5, k = Xe(W) / (Xe(e) * Xe(n)), B = M(F / C) * (n - 0.5), A = M(r * F / y) * e, B > de && B < fe && A > de && A < fe ? (k *= e * n < 10 * C ? R((n - 0.5) * oe(e / C)) : V(F / C, n - 0.5), k *= V(r * F / y, e), k *= c(y / Kn), u && (u[1] = k * V(p, n))) : (k = M(k) + B + A + (M(y) - 1) / 2, u && (u[1] = R(k + n * M(p))), k = R(k))) : k = V(r, e), k < er ? a : (z = function(K, $, ae, Q) {
+        var ue = 1 - $, le = 1;
+        return function() {
+          var se = Q / K;
+          return K += 1, Q *= ue * ae / le, le += 1, ue += 1, se;
+        };
+      }(e, n, r, k), Ao.initialValue = a, ca(z, Ao));
+    }, Qp = 1 / T, Io = function(e, n, r, a, s, u, p, k) {
+      var y, C, F, B, A, W, z, K, $, ae, Q;
+      if (Q = 1 - e, W = k, u[z = k + p] = -1, i(e) || e < 0 || e > 1)
+        return u[W] = NaN, u[z] = NaN, u;
+      if (a) {
+        if (n < 0 || r < 0)
+          return u[W] = NaN, u[z] = NaN, u;
+        if (n === 0) {
+          if (r === 0)
+            return u[W] = NaN, u[z] = NaN, u;
+          if (r > 0)
+            return u[W] = s ? 0 : 1, u;
+        } else if (r === 0 && n > 0)
+          return u[W] = s ? 1 : 0, u;
+      } else if (n <= 0 || r <= 0)
+        return u[W] = NaN, u[z] = NaN, u;
+      return e === 0 ? (u[z] = n === 1 ? 1 : n < 1 ? Tn / 2 : 2 * er, s ? (u[W] = a ? 1 : Me(n, r), u) : (u[W] = 0, u)) : e === 1 ? (u[z] = r === 1 ? 1 : r < 1 ? Tn / 2 : 2 * er, u[W] = s ? 0 : a ? 1 : Me(n, r), u) : n === 0.5 && r === 0.5 ? (u[z] = Qp * c(Q * e), ae = S(c(s ? Q : e)), ae /= gr, a || (ae *= T), u[W] = ae, u) : (n === 1 && (A = r, r = n, n = A, A = Q, Q = e, e = A, s = !s), r === 1 ? n === 1 ? (u[W] = s ? Q : e, u[z] = 1, u) : (u[z] = n * V(e, n - 1), ae = Q < 0.5 ? s ? -Le(n * oe(-Q)) : R(n * oe(-Q)) : s ? -(V(e, n) - 1) : V(e, n), a || (ae /= n), u[W] = ae, u) : (Se(n, r) <= 1 ? (e > 0.5 && (A = r, r = n, n = A, A = Q, Q = e, e = A, s = !s), Ee(n, r) <= 1 ? n >= Se(0.2, r) || V(e, n) <= 0.9 ? s ? (C = -(a ? 1 : Me(n, r)), s = !1, C = -cr(n, r, e, C, a, u, Q)) : C = cr(n, r, e, 0, a, u, Q) : (A = r, r = n, n = A, A = Q, Q = e, e = A, s = !s, Q >= 0.3 ? s ? (C = -(a ? 1 : Me(n, r)), s = !1, C = -cr(n, r, e, C, a, u, Q)) : C = cr(n, r, e, 0, a, u, Q) : (y = a ? 1 : w0(n + r, n, 20), C = Vi(n, r, e, Q, 20, a, u), s ? (C -= a ? 1 : Me(n, r), s = !1, C = -Or(n + 20, r, e, Q, C, y, a)) : C = Or(n + 20, r, e, Q, C, y, a))) : r <= 1 || e < 0.1 && V(r * e, n) <= 0.7 ? s ? (C = -(a ? 1 : Me(n, r)), s = !1, C = -cr(n, r, e, C, a, u, Q)) : C = cr(n, r, e, 0, a, u, Q) : (A = r, r = n, n = A, A = Q, Q = e, e = A, s = !s, Q >= 0.3 ? s ? (C = -(a ? 1 : Me(n, r)), s = !1, C = -cr(n, r, e, C, a, u, Q)) : C = cr(n, r, e, 0, a, u, Q) : n >= 15 ? s ? (C = -(a ? 1 : Me(n, r)), s = !1, C = -Or(n, r, e, Q, C, 1, a)) : C = Or(n, r, e, Q, 0, 1, a) : (y = a ? 1 : w0(n + r, n, 20), C = Vi(n, r, e, Q, 20, a, u), s ? (C -= a ? 1 : Me(n, r), s = !1, C = -Or(n + 20, r, e, Q, C, y, a)) : C = Or(n + 20, r, e, Q, C, y, a)))) : ((n < r ? n - (n + r) * e : (n + r) * Q - r) < 0 && (A = r, r = n, n = A, A = Q, Q = e, e = A, s = !s), r < 40 ? Ne(n) === n && Ne(r) === r && n < _8 - 100 ? (C = Kp($ = r + (K = n - 1), K, e, Q), a || (C *= Me(n, r))) : r * e <= 0.7 ? s ? (C = -(a ? 1 : Me(n, r)), s = !1, C = -cr(n, r, e, C, a, u, Q)) : C = cr(n, r, e, 0, a, u, Q) : n > 15 ? (($ = Ne(r)) === r && ($ -= 1), F = r - $, y = a ? 1 : w0(n + F, F, $), C = Vi(F, n, Q, e, $, a), C = Or(n, F, e, Q, C, 1, a), C /= y) : a ? ((F = r - ($ = Ne(r))) <= 0 && ($ -= 1, F += 1), C = Vi(F, n, Q, e, $, a), C += Vi(n, F, e, Q, 20, a), s && (C -= 1), C = Or(n + 20, F, e, Q, C, 1, a), s && (C = -C, s = !1)) : C = Vo(n, r, e, Q, a, u) : C = Vo(n, r, e, Q, a, u)), u[z] < 0 && (u[z] = x0(n, r, e, Q, !0)), B = Q * e, u[z] !== 0 && (Tn * B < u[z] ? u[z] = Tn / 2 : u[z] /= B), u[W] = s ? (a ? 1 : Me(n, r)) - C : C, u));
+    }, Bo = function(e, n, r, a, s) {
+      return Io(e, n, r, a, s, [0, 0], 1, 0);
+    };
+    o(Bo, "assign", Io);
+    var Ro = Bo, $p = Ro.assign, Qe = function(e, n, r, a, s) {
+      var u = [0, 0];
+      return $p(e, n, r, a = a !== !1, s = s === !0, u, 1, 0), u[0];
+    }, Lo = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e <= 0 ? 0 : e >= 1 ? 1 : Qe(e, n, r);
+    };
+    o(Lo, "factory", function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : function(r) {
+        return i(r) ? NaN : r <= 0 ? 0 : r >= 1 ? 1 : Qe(r, e, n);
+      };
+    });
+    var la = Lo, Zp = Ge.isPrimitive, qo = function(e) {
+      return Zp(e) && e > 0;
+    }, Jp = Ge.isObject, Fo = function(e) {
+      return Jp(e) && e.valueOf() > 0;
+    }, S0 = function(e) {
+      return qo(e) || Fo(e);
+    };
+    o(S0, "isPrimitive", qo), o(S0, "isObject", Fo);
+    var Ue = S0, Xp = function(e) {
+      return e === 0 ? 0.13333333333320124 : 0.13333333333320124 + e * (0.021869488294859542 + e * (0.0035920791075913124 + e * (5880412408202641e-19 + e * (7817944429395571e-20 + -18558637485527546e-21 * e))));
+    }, Yp = function(e) {
+      return e === 0 ? 0.05396825397622605 : 0.05396825397622605 + e * (0.0088632398235993 + e * (0.0014562094543252903 + e * (2464631348184699e-19 + e * (7140724913826082e-20 + 2590730518636337e-20 * e))));
+    }, _p = 0.7853981633974483, em = 3061616997868383e-32, nm = 0.3333333333333341, rm = 2147483647, Oo = function(e, n, r) {
+      var a, s, u, p, k, y, C, F, B;
+      return (s = (a = Ke(e)) & rm | 0) >= 1072010280 && (e < 0 && (e = -e, n = -n), e = (B = _p - e) + (F = em - n), n = 0), p = n + (B = e * e) * ((k = B * e) * ((p = Xp(F = B * B)) + (C = B * Yp(F))) + n), F = e + (p += nm * k), s >= 1072010280 ? (1 - (a >> 30 & 2)) * ((C = r) - 2 * (e - (F * F / (F + C) - p))) : r === 1 ? F : (_n(B = F, 0), C = p - (B - e), _n(y = u = -1 / F, 0), y + u * ((k = 1 + y * B) + y * C));
+    }, M0 = [0, 0], im = 2147483647, am = 1072243195, tm = 2146435072, om = 1044381696, k0 = function(e) {
+      var n, r;
+      return n = Ke(e), (n &= im) <= am ? n < om ? e : Oo(e, 0, 1) : n >= tm ? NaN : (r = f0(e, M0), Oo(M0[0], M0[1], 1 - ((1 & r) << 1)));
+    }, sm = function(e) {
+      return e === 0 ? 0.08333333333333333 : 0.08333333333333333 + e * (e * (0.003968253968253968 + e * (e * (0.007575757575757576 + e * (e * (0.08333333333333333 + -0.4432598039215686 * e) - 0.021092796092796094)) - 0.004166666666666667)) - 0.008333333333333333);
+    }, um = function(e) {
+      var n;
+      return M(e -= 1) + 1 / (2 * e) - (n = 1 / (e * e)) * sm(n);
+    }, fm = function(e) {
+      var n, r;
+      return e === 0 ? 0.25479851061131553 : ((e < 0 ? -e : e) <= 1 ? (n = 0.25479851061131553 + e * (e * (e * (e * (e * (0 * e - 0.002071332116774595) - 0.04525132144873906) - 0.28919126444774784) - 0.6503185377089651) - 0.3255503118680449), r = 1 + e * (2.076711702373047 + e * (1.4606242909763516 + e * (0.43593529692665967 + e * (0.054151797245674226 + e * (0.0021284987017821146 + -5578984132167551e-22 * e)))))) : (n = 0 + (e = 1 / e) * (e * (e * (e * (e * (0.25479851061131553 * e - 0.3255503118680449) - 0.6503185377089651) - 0.28919126444774784) - 0.04525132144873906) - 0.002071332116774595), r = e * (0.0021284987017821146 + e * (0.054151797245674226 + e * (0.43593529692665967 + e * (1.4606242909763516 + e * (2.076711702373047 + 1 * e))))) - 5578984132167551e-22), n / r);
+    }, cm = 1.4616321446374059, lm = 3309564688275257e-25, vm = 9016312093258695e-35, pm = 0.9955816268920898, mm = function(e) {
+      var n, r;
+      return n = e - cm, n -= lm, n -= vm, r = fm(e - 1), n * pm + n * r;
+    }, hm = 10, Qn = function(e) {
+      var n, r;
+      if (i(e) || e === 0)
+        return NaN;
+      if (e <= -1) {
+        if ((n = (e = 1 - e) - Ne(e)) > 0.5 && (n -= 1), n === 0)
+          return NaN;
+        r = T / k0(T * n);
+      } else
+        r = 0;
+      if (e >= hm)
+        return r += um(e);
+      for (; e > 2; )
+        r += 1 / (e -= 1);
+      for (; e < 1; )
+        r -= 1 / e, e += 1;
+      return r += mm(e);
+    }, Ci = 0.9189385332046728, Do = [1276642195630063e-46, -3401102254316749e-45, 1025680058010471e-43, -35475981581010704e-43, 14292273559424982e-41, -6831888753985767e-39, 39628370610464347e-38, -2868042435334643e-35, 2683181998482699e-33, -3399615005417722e-31, 6221098041892606e-29, -1809129475572494e-26, 981082564692473e-23, -1384948176067564e-20, 0.16663894804518634], dm = Do.length, gm = function(e) {
+      var n, r, a, s, u;
+      if (e < -1.1 || e > 1.1)
+        return NaN;
+      for (a = 0, s = 0, n = 2 * e, u = 0; u < dm; u++)
+        r = a, s = n * (a = s) - r + Do[u];
+      return 0.5 * (s - r);
+    }, Nm = 9490626562425156e-8, ym = 3745194030963158e291, Ai = function(e) {
+      return e < 10 ? NaN : e >= ym ? 0 : e < Nm ? gm(2 * V(10 / e, 2) - 1) / e : 1 / (12 * e);
+    }, lr = function(e, n) {
+      var r, a, s;
+      return a = Se(e, n), s = Ee(e, n), a < 0 ? NaN : a === 0 ? H : s === H ? j : a >= 10 ? (r = Ai(a) + Ai(s) - Ai(a + s), -0.5 * M(s) + Ci + r + (a - 0.5) * M(a / (a + s)) + s * oe(-a / (a + s))) : s >= 10 ? (r = Ai(s) - Ai(a + s), ke(a) + r + a - a * M(a + s) + (s - 0.5) * oe(-a / (a + s))) : M(ve(a) * (ve(s) / ve(a + s)));
+    }, Uo = function(e, n) {
+      var r;
+      return e <= 0 || n <= 0 ? NaN : (r = lr(e, n), r -= (e - 1) * Qn(e), r -= (n - 1) * Qn(n), r += (e + n - 2) * Qn(e + n));
+    }, Ho = function(e, n) {
+      var r, a, s, u;
+      return e <= 0 || n <= 0 ? NaN : (u = (a = e - n) * a * ((s = e + n) + 1), u -= (r = e * n) * (s + 2), u *= 6, u /= r * (s + 2) * (s + 3));
+    }, Wo = function(e, n) {
+      return e <= 0 || n <= 0 ? NaN : e / (e + n);
+    }, bm = function(e) {
+      var n, r;
+      return e === 0 ? -5087819496582806e-19 : ((e < 0 ? -e : e) <= 1 ? (n = e * (e * (0.03348066254097446 + e * (e * (e * (0.02198786811111689 + e * (0.008226878746769157 + e * (e * (0 + 0 * e) - 0.005387729650712429))) - 0.03656379714117627) - 0.012692614766297404)) - 0.008368748197417368) - 5087819496582806e-19, r = 1 + e * (e * (e * (1.5622155839842302 + e * (0.662328840472003 + e * (e * (e * (0.07952836873415717 + e * (8862163904564247e-19 * e - 0.0023339375937419)) - 0.05273963823400997) - 0.7122890234154284))) - 1.5657455823417585) - 0.9700050433032906)) : (n = 0 + (e = 1 / e) * (0 + e * (e * (0.008226878746769157 + e * (0.02198786811111689 + e * (e * (e * (0.03348066254097446 + e * (-5087819496582806e-19 * e - 0.008368748197417368)) - 0.012692614766297404) - 0.03656379714117627))) - 0.005387729650712429)), r = 8862163904564247e-19 + e * (e * (0.07952836873415717 + e * (e * (e * (0.662328840472003 + e * (1.5622155839842302 + e * (e * (1 * e - 0.9700050433032906) - 1.5657455823417585))) - 0.7122890234154284) - 0.05273963823400997)) - 0.0023339375937419)), n / r);
+    }, wm = function(e) {
+      var n, r;
+      return e === 0 ? -0.20243350835593876 : ((e < 0 ? -e : e) <= 1 ? (n = e * (0.10526468069939171 + e * (8.3705032834312 + e * (17.644729840837403 + e * (e * (e * (17.445385985570866 + e * (21.12946554483405 + -3.6719225470772936 * e)) - 44.6382324441787) - 18.851064805871424)))) - 0.20243350835593876, r = 1 + e * (6.242641248542475 + e * (3.971343795334387 + e * (e * (e * (48.560921310873994 + e * (10.826866735546016 + e * (1.7211476576120028 * e - 22.643693341313973))) - 20.14326346804852) - 28.66081804998)))) : (n = (e = 1 / e) * (21.12946554483405 + e * (17.445385985570866 + e * (e * (e * (17.644729840837403 + e * (8.3705032834312 + e * (0.10526468069939171 + -0.20243350835593876 * e))) - 18.851064805871424) - 44.6382324441787))) - 3.6719225470772936, r = 1.7211476576120028 + e * (e * (10.826866735546016 + e * (48.560921310873994 + e * (e * (e * (3.971343795334387 + e * (6.242641248542475 + 1 * e)) - 28.66081804998) - 20.14326346804852))) - 22.643693341313973)), n / r);
+    }, xm = function(e) {
+      var n, r;
+      return e === 0 ? -0.1311027816799519 : ((e < 0 ? -e : e) <= 1 ? (n = e * (e * (0.11703015634199525 + e * (0.38707973897260434 + e * (0.3377855389120359 + e * (0.14286953440815717 + e * (0.029015791000532906 + e * (0.0021455899538880526 + e * (e * (28522533178221704e-24 + -681149956853777e-24 * e) - 6794655751811263e-22))))))) - 0.16379404719331705) - 0.1311027816799519, r = 1 + e * (3.4662540724256723 + e * (5.381683457070069 + e * (4.778465929458438 + e * (2.5930192162362027 + e * (0.848854343457902 + e * (0.15226433829533179 + e * (0.011059242293464892 + e * (0 + e * (0 + 0 * e)))))))))) : (n = (e = 1 / e) * (28522533178221704e-24 + e * (e * (0.0021455899538880526 + e * (0.029015791000532906 + e * (0.14286953440815717 + e * (0.3377855389120359 + e * (0.38707973897260434 + e * (0.11703015634199525 + e * (-0.1311027816799519 * e - 0.16379404719331705))))))) - 6794655751811263e-22)) - 681149956853777e-24, r = 0 + e * (0 + e * (0 + e * (0.011059242293464892 + e * (0.15226433829533179 + e * (0.848854343457902 + e * (2.5930192162362027 + e * (4.778465929458438 + e * (5.381683457070069 + e * (3.4662540724256723 + 1 * e)))))))))), n / r);
+    }, Sm = function(e) {
+      var n, r;
+      return e === 0 ? -0.0350353787183178 : ((e < 0 ? -e : e) <= 1 ? (n = e * (e * (0.018557330651423107 + e * (0.009508047013259196 + e * (0.0018712349281955923 + e * (15754461742496055e-20 + e * (460469890584318e-20 + e * (26633922742578204e-28 * e - 2304047769118826e-25)))))) - 0.0022242652921344794) - 0.0350353787183178, r = 1 + e * (1.3653349817554064 + e * (0.7620591645536234 + e * (0.22009110576413124 + e * (0.03415891436709477 + e * (0.00263861676657016 + e * (7646752923027944e-20 + e * (0 + 0 * e)))))))) : (n = 26633922742578204e-28 + (e = 1 / e) * (e * (460469890584318e-20 + e * (15754461742496055e-20 + e * (0.0018712349281955923 + e * (0.009508047013259196 + e * (0.018557330651423107 + e * (-0.0350353787183178 * e - 0.0022242652921344794)))))) - 2304047769118826e-25), r = 0 + e * (0 + e * (7646752923027944e-20 + e * (0.00263861676657016 + e * (0.03415891436709477 + e * (0.22009110576413124 + e * (0.7620591645536234 + e * (1.3653349817554064 + 1 * e)))))))), n / r);
+    }, Mm = function(e) {
+      var n, r;
+      return e === 0 ? -0.016743100507663373 : ((e < 0 ? -e : e) <= 1 ? (n = e * (e * (0.001056288621524929 + e * (20938631748758808e-20 + e * (14962478375834237e-21 + e * (44969678992770644e-23 + e * (4625961635228786e-24 + e * (9905570997331033e-32 * e - 2811287356288318e-29)))))) - 0.0011295143874558028) - 0.016743100507663373, r = 1 + e * (0.5914293448864175 + e * (0.1381518657490833 + e * (0.016074608709367652 + e * (9640118070051656e-19 + e * (27533547476472603e-21 + e * (282243172016108e-21 + e * (0 + 0 * e)))))))) : (n = 9905570997331033e-32 + (e = 1 / e) * (e * (4625961635228786e-24 + e * (44969678992770644e-23 + e * (14962478375834237e-21 + e * (20938631748758808e-20 + e * (0.001056288621524929 + e * (-0.016743100507663373 * e - 0.0011295143874558028)))))) - 2811287356288318e-29), r = 0 + e * (0 + e * (282243172016108e-21 + e * (27533547476472603e-21 + e * (9640118070051656e-19 + e * (0.016074608709367652 + e * (0.1381518657490833 + e * (0.5914293448864175 + 1 * e)))))))), n / r);
+    }, km = 0.08913147449493408, Tm = 2.249481201171875, Em = 0.807220458984375, Pm = 0.9399557113647461, Vm = 0.9836282730102539, $e = function(e) {
+      var n, r, a, s;
+      return i(e) ? NaN : e === 0 ? H : e === 2 ? j : e === 1 ? 0 : e > 2 || e < 0 ? NaN : (e > 1 ? (n = -1, r = 2 - e) : (n = 1, r = e), (e = 1 - r) <= 0.5 ? (a = e * (e + 10), s = bm(e), n * (a * km + a * s)) : r >= 0.25 ? (a = c(-2 * M(r)), s = wm(r -= 0.25), n * (a / (Tm + s))) : (r = c(-M(r))) < 3 ? (s = xm(r - 1.125), n * (Em * r + s * r)) : r < 6 ? (s = Sm(r - 3), n * (Pm * r + s * r)) : (s = Mm(r - 6), n * (Vm * r + s * r)));
+    }, Cm = 6123233995736766e-32, Am = function(e) {
+      var n;
+      return i(e) ? NaN : e < -1 || e > 1 ? NaN : e > 0.5 ? 2 * S(c(0.5 - 0.5 * e)) : (n = E - S(e), n += Cm, n += E);
+    }, Pe = 1.4142135623730951, Im = function(e) {
+      return e === 0 ? 0.16666666666666666 : 0.16666666666666666 + 0.16666666666666666 * e;
+    }, Bm = function(e) {
+      return e === 0 ? 0.058333333333333334 : 0.058333333333333334 + e * (0.06666666666666667 + 0.008333333333333333 * e);
+    }, Rm = function(e) {
+      return e === 0 ? 0.0251984126984127 : 0.0251984126984127 + e * (0.026785714285714284 + e * (0.0017857142857142857 + 1984126984126984e-19 * e));
+    }, Lm = function(e) {
+      return e === 0 ? 0.012039792768959435 : 0.012039792768959435 + e * (0.010559964726631394 + e * (e * (3747795414462081e-19 + 27557319223985893e-22 * e) - 0.0011078042328042327));
+    }, qm = function(e) {
+      return e === 0 ? 0.003837005972422639 : 0.003837005972422639 + e * (0.00610392115600449 + e * (e * (5945867404200738e-19 + e * (2505210838544172e-23 * e - 6270542728876062e-20)) - 0.0016095979637646305));
+    }, Fm = function(e) {
+      return e === 0 ? 0.0032177478835464946 : 0.0032177478835464946 + e * (0.0010898206731540065 + e * (e * (6908420797309686e-19 + e * (e * (154012654012654e-19 + 16059043836821613e-26 * e) - 16376804137220805e-20)) - 0.0012579159844784845));
+    }, Om = function(e) {
+      return e === 0 ? 0.001743826229834001 : 0.001743826229834001 + e * (3353097688001788e-20 + e * (e * (6451304695145635e-19 + e * (e * (49255746366361444e-21 + e * (7647163731819816e-28 * e - 39851014346715405e-22)) - 249472580470431e-18)) - 7624513544032393e-19));
+    }, Dm = function(e) {
+      return e === 0 ? 9647274732138864e-19 : 9647274732138864e-19 + e * (e * (e * (5140660578834113e-19 + e * (e * (9086710793521991e-20 + e * (e * (10914179173496788e-22 + 28114572543455206e-31 * e) - 15303004486655377e-21)) - 29133414466938067e-20)) - 36307660358786886e-20) - 3110108632631878e-19);
+    }, Um = function(e) {
+      return e === 0 ? 5422926281312969e-19 : 5422926281312969e-19 + e * (e * (e * (35764655430568635e-20 + e * (e * (12645437628698076e-20 + e * (e * (4890304529197534e-21 + e * (822063524662433e-32 * e - 3123956959982987e-22)) - 33202652391372056e-21)) - 28690924218514614e-20)) - 10230378073700413e-20) - 3694266780000966e-19);
+    }, Hm = 0, vr = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0], Go = function(e, n) {
+      var r, a;
+      return a = N0(e / 2, 0.5) * c(e * T) * (n - 0.5), r = 1 / e, vr[1] = Im(r), vr[2] = Bm(r), vr[3] = Rm(r), vr[4] = Lm(r), vr[5] = qm(r), vr[6] = Fm(r), vr[7] = Om(r), vr[8] = Dm(r), vr[9] = Um(r), Hm + a * mn(vr, a * a);
+    }, Dr = [0, 0, 0, 0, 0, 0, 0], va = function(e, n) {
+      var r, a, s, u, p, k, y;
+      return y = N0(e / 2, 0.5) * c(e * T) * n, s = e + 2, u = e + 4, p = e + 6, Dr[0] = 1, Dr[1] = -(e + 1) / (2 * s), s *= e + 2, Dr[2] = -e * (e + 1) * (e + 3) / (8 * s * u), s *= e + 2, Dr[3] = -e * (e + 1) * (e + 5) * ((3 * e + 7) * e - 2) / (48 * s * u * p), s *= e + 2, u *= e + 4, Dr[4] = -e * (e + 1) * (e + 7) * (((((15 * e + 154) * e + 465) * e + 286) * e - 336) * e + 64) / (384 * s * u * p * (e + 8)), s *= e + 2, Dr[5] = -e * (e + 1) * (e + 3) * (e + 9) * ((((((35 * e + 452) * e + 1573) * e + 600) * e - 2020) * e + 928) * e - 128) / (1280 * s * u * p * (e + 8) * (e + 10)), s *= e + 2, u *= e + 4, p *= e + 6, Dr[6] = -e * (e + 1) * (e + 11) * (((((((((((945 * e + 31506) * e + 425858) * e + 2980236) * e + 11266745) * e + 20675018) * e + 7747124) * e - 22574632) * e - 8565600) * e + 18108416) * e - 7099392) * e + 884736) / (46080 * s * u * p * (e + 8) * (e + 10) * (e + 12)), k = c(e), a = V(k * y, 1 / e), r = mn(Dr, a * a), r *= k, -(r /= a);
+    }, T0 = function(e, n) {
+      var r, a, s, u, p, k;
+      return e > 1e20 ? -$e(2 * n) * Pe : (u = ((94.5 / ((a = 48 / ((r = 1 / (e - 0.5)) * r)) + (s = ((20700 * r / a - 98) * r - 16) * r + 96.36)) - 3) / a + 1) * c(r * gr) * e, (k = V(2 * u * n, 2 / e)) > 0.05 + r ? (k = (p = -$e(2 * n) * Pe) * p, e < 5 && (s += 0.3 * (e - 4.5) * (p + 0.6)), k = Le(r * (k = (((((0.4 * k + 6.3) * k + 36) * k + 94.5) / (s += (((0.05 * u * p - 5) * p - 7) * p - 2) * p + a) - k - 3) / a + 1) * p) * k)) : k = ((1 / (((e + 6) / (e * k) - 0.089 * u - 0.822) * (e + 2) * 3) + 0.5 / (e + 4)) * k - 1) * (e + 1) / (e + 2) + 1 / k, -c(e * k));
+    }, zo = 268435456, Wm = 1 / 3, Gm = 106 / 3, zm = 0.8549879733383485, jm = function(e, n, r) {
+      var a, s, u, p, k, y, C, F, B, A, W, z, K;
+      if (p = 0, n > r ? (k = r, r = n, n = k, u = !0) : u = !1, Ne(e) === e && e < 20)
+        switch (a = ir(1, Gm), Ne(e)) {
+          case 1:
+            p = n === 0.5 ? 0 : -Kr(T * n) / ar(T * n);
+            break;
+          case 2:
+            p = (2 * n - 1) / c(2 * n * r);
+            break;
+          case 4:
+            s = c(4 * n * r), A = 4 * Kr(Am(s) / 3) / s, W = c(A - 4), p = n - 0.5 < 0 ? -W : W;
+            break;
+          case 6:
+            if (n < 1e-150)
+              return (u ? -1 : 1) * T0(e, n);
+            K = V(z = 4 * (n - n * n), Wm), B = 6 * (1 + zm * (1 / K - 1));
+            do
+              y = B, B = 2 * (8 * z * (B * (F = (C = B * B) * C)) - 270 * C + 2187) / (5 * (4 * z * F - 216 * B - 243));
+            while (J((B - y) / B) > a);
+            B = c(B - e), p = n - 0.5 < 0 ? -B : B;
+            break;
+          default:
+            p = e > zo ? $e(2 * n) * Pe : e < 3 ? n > 0.2742 - 0.0242143 * e ? Go(e, n) : va(e, n) : n > ir(1, jn(e / -0.654)) ? T0(e, n) : va(e, n);
+        }
+      else
+        p = e > zo ? -$e(2 * n) * Pe : e < 3 ? n > 0.2742 - 0.0242143 * e ? Go(e, n) : va(e, n) : n > ir(1, jn(e / -0.654)) ? T0(e, n) : va(e, n);
+      return u ? -p : p;
+    }, Km = function(e, n, r) {
+      var a, s, u;
+      return u = jm(a = 2 * e, s = n / 2, 1 - s), r && (r.value = u * u / (a + u * u)), a / (a + u * u);
+    }, ze = [0, 0, 0, 0, 0, 0, 0], Ii = [0, 0, 0, 0], Qm = function(e, n, r) {
+      var a, s, u, p, k, y, C;
+      return a = $e(2 * r), a /= -c(e / 2), Ii[0] = a, k = (p = (y = n - e) * y) * y, ze[0] = -y * Pe / 2, ze[1] = (1 - 2 * y) / 8, ze[2] = -y * Pe / 48, ze[3] = -1 / 192, ze[4] = -y * Pe / 3840, ze[5] = 0, ze[6] = 0, Ii[1] = mn(ze, a), ze[0] = y * Pe * (3 * y - 2) / 12, ze[1] = (20 * p - 12 * y + 1) / 128, ze[2] = y * Pe * (20 * y - 1) / 960, ze[3] = (16 * p + 30 * y - 15) / 4608, ze[4] = y * Pe * (21 * y + 32) / 53760, ze[5] = (-32 * p + 63) / 368640, ze[6] = -y * Pe * (120 * y + 17) / 25804480, Ii[2] = mn(ze, a), ze[0] = y * Pe * (-75 * p + 80 * y - 16) / 480, ze[1] = (-1080 * k + 868 * p - 90 * y - 45) / 9216, ze[2] = y * Pe * (-1190 * p + 84 * y + 373) / 53760, ze[3] = (-2240 * k - 2508 * p + 2100 * y - 165) / 368640, ze[4] = 0, ze[5] = 0, ze[6] = 0, Ii[3] = mn(ze, a), u = mn(Ii, 1 / e), C = -R(-(s = u * u) / 2), s === 0 ? 0.5 : (1 + u * c((1 + C) / s)) / 2;
+    }, pa = Tn / 4, jo = function(e, n) {
+      return function(r) {
+        var a;
+        return (a = 1 - r) == 0 ? [-pa, -pa] : r === 0 ? [-pa, -pa] : [M(r) + n * M(a) + e, 1 / r - n / a];
+      };
+    }, br = function(e) {
+      return e === 0 || i(e) ? e : e < 0 ? -1 : 1;
+    }, Ko = function(e, n, r, a, s, u) {
+      var p, k, y, C, F, B, A, W, z, K;
+      z = 0, p = 0, F = n, C = ir(1, 1 - s), A = Tn, k = Tn, y = Tn, B = u;
+      do {
+        if (p = z, y = k, k = A, z = (W = e(F))[0], K = W[1], B -= 1, z === 0)
+          break;
+        if (K === 0 ? (p === 0 && (p = e(n = F === r ? a : r), A = n - F), A = br(p) * br(z) < 0 ? A < 0 ? (F - r) / 2 : (F - a) / 2 : A < 0 ? (F - a) / 2 : (F - r) / 2) : A = z / K, J(2 * A) > J(y) && (A = A > 0 ? (F - r) / 2 : (F - a) / 2), n = F, (F -= A) <= r) {
+          if ((F = n - (A = 0.5 * (n - r))) === r || F === a)
+            break;
+        } else if (F >= a && ((F = n - (A = 0.5 * (n - a))) === r || F === a))
+          break;
+        A > 0 ? a = n : r = n;
+      } while (B && J(F * C) < J(A));
+      return F;
+    }, $m = function(e) {
+      return e === 0 ? -1 : e * (5 * e - 5) - 1;
+    }, Zm = function(e) {
+      return e === 0 ? 1 : 1 + e * (21 + e * (46 * e - 69));
+    }, Jm = function(e) {
+      return e === 0 ? 1 : 1 + e * (21 + e * (46 * e - 69));
+    }, Xm = function(e) {
+      return e === 0 ? 7 : 7 + e * (e * (33 + e * (31 * e - 62)) - 2);
+    }, Ym = function(e) {
+      return e === 0 ? 25 : 25 + e * (e * (e * (88 + e * (46 * e - 115)) - 17) - 52);
+    }, _m = function(e) {
+      return e === 0 ? 7 : 7 + e * (12 + e * (52 * e - 78));
+    }, eh = function(e) {
+      return e === 0 ? -7 : e * (2 + e * (183 + e * (185 * e - 370))) - 7;
+    }, nh = function(e) {
+      return e === 0 ? -533 : e * (776 + e * (e * (10240 + e * (5410 * e - 13525)) - 1835)) - 533;
+    }, rh = function(e) {
+      return e === 0 ? -1579 : e * (3747 + e * (e * (e * (45588 + e * (15071 * e - 45213)) - 15821) - 3372)) - 1579;
+    }, ih = function(e) {
+      return e === 0 ? 449 : 449 + e * (e * (e * (6686 + e * (3704 * e - 9260)) - 769) - 1259);
+    }, ah = function(e) {
+      return e === 0 ? 63149 : 63149 + e * (e * (140052 + e * (e * (2239932 + e * (750479 * e - 2251437)) - 727469)) - 151557);
+    }, th = function(e) {
+      return e === 0 ? 29233 : 29233 + e * (e * (105222 + e * (146879 + e * (e * (3195183 + e * (729754 * e - 2554139)) - 1602610))) - 78755);
+    }, oh = function(e) {
+      return e === 0 ? 1 : 1 + e * (13 * e - 13);
+    }, Te = [0, 0, 0, 0, 0, 0], Bi = [0, 0, 0, 0], sh = function(e, n, r) {
+      var a, s, u, p, k, y, C, F, B, A, W, z, K, $, ae, Q, ue, le, se, te;
+      return k = $e(2 * e) / -c(n / 2), le = ar(r), ue = Kr(r), Bi[0] = k, ae = le * le, Q = ue * ue, B = (z = (K = le * ue) * K) * (W = z * K), F = W * W, C = (A = z * z) * W, Te[0] = (2 * ae - 1) / (3 * K), Te[1] = -$m(ae) / (36 * z), Te[2] = Jm(ae) / (1620 * W), Te[3] = Xm(ae) / (6480 * A), Te[4] = Ym(ae) / (90720 * B), Te[5] = 0, Bi[1] = mn(Te, k), Te[0] = -_m(ae) / (405 * W), Te[1] = eh(ae) / (2592 * A), Te[2] = -nh(ae) / (204120 * B), Te[3] = -rh(ae) / (2099520 * F), Te[4] = 0, Te[5] = 0, Bi[2] = mn(Te, k), Te[0] = ih(ae) / (102060 * B), Te[1] = -ah(ae) / (20995200 * F), Te[2] = th(ae) / (36741600 * C), Te[3] = 0, Te[4] = 0, Te[5] = 0, Bi[3] = mn(Te, k), u = ue / le, u *= u, $ = -(y = mn(Bi, 1 / n)) * y / (2 * ae) + M(ae) + Q * M(Q) / ae, J(y) < 0.7 ? (Te[0] = ae, Te[1] = K, Te[2] = (1 - 2 * ae) / 3, Te[3] = oh(ae) / (36 * K), Te[4] = Zm(ae) / (270 * z), Te[5] = 0, te = mn(Te, y)) : (se = R($), Te[0] = se, Te[1] = u, Te[2] = 0, Te[3] = 3 * u * (3 * u + 1) / 6, Te[4] = 4 * u * (4 * u + 1) * (4 * u + 2) / 24, Te[5] = 5 * u * (5 * u + 1) * (5 * u + 2) * (5 * u + 3) / 120, ((te = mn(Te, se)) - ae) * y < 0 && (te = 1 - te)), y < 0 ? (s = 0, a = ae) : (s = ae, a = 1), (te < s || te > a) && (te = (s + a) / 2), p = jo(-$, u), te = Ko(p, te, s, a, 32, 100);
+    }, Ri = 1e3, Li = 60 * Ri, qi = 60 * Li, Fi = 24 * qi, uh = 365.25 * Fi;
+    function ma(e, n, r) {
+      if (!(e < n))
+        return e < 1.5 * n ? Math.floor(e / n) + " " + r : Math.ceil(e / n) + " " + r + "s";
+    }
+    var E0, Ae = {};
+    function P0(e) {
+      function n() {
+        if (n.enabled) {
+          var r = n, a = +/* @__PURE__ */ new Date(), s = a - (E0 || a);
+          r.diff = s, r.prev = E0, r.curr = a, E0 = a;
+          for (var u = new Array(arguments.length), p = 0; p < u.length; p++)
+            u[p] = arguments[p];
+          u[0] = Ae.coerce(u[0]), typeof u[0] != "string" && u.unshift("%O");
+          var k = 0;
+          u[0] = u[0].replace(/%([a-zA-Z%])/g, function(y, C) {
+            if (y === "%%")
+              return y;
+            k++;
+            var F = Ae.formatters[C];
+            if (typeof F == "function") {
+              var B = u[k];
+              y = F.call(r, B), u.splice(k, 1), k--;
+            }
+            return y;
+          }), Ae.formatArgs.call(r, u), (n.log || Ae.log || console.log.bind(console)).apply(r, u);
+        }
+      }
+      return n.namespace = e, n.enabled = Ae.enabled(e), n.useColors = Ae.useColors(), n.color = function(r) {
+        var a, s = 0;
+        for (a in r)
+          s = (s << 5) - s + r.charCodeAt(a), s |= 0;
+        return Ae.colors[Math.abs(s) % Ae.colors.length];
+      }(e), typeof Ae.init == "function" && Ae.init(n), n;
+    }
+    (Ae = Ae = P0.debug = P0.default = P0).coerce = function(e) {
+      return e instanceof Error ? e.stack || e.message : e;
+    }, Ae.disable = function() {
+      Ae.enable("");
+    }, Ae.enable = function(e) {
+      Ae.save(e), Ae.names = [], Ae.skips = [];
+      for (var n = (typeof e == "string" ? e : "").split(/[\s,]+/), r = n.length, a = 0; a < r; a++)
+        n[a] && ((e = n[a].replace(/\*/g, ".*?"))[0] === "-" ? Ae.skips.push(new RegExp("^" + e.substr(1) + "$")) : Ae.names.push(new RegExp("^" + e + "$")));
+    }, Ae.enabled = function(e) {
+      var n, r;
+      for (n = 0, r = Ae.skips.length; n < r; n++)
+        if (Ae.skips[n].test(e))
+          return !1;
+      for (n = 0, r = Ae.names.length; n < r; n++)
+        if (Ae.names[n].test(e))
+          return !0;
+      return !1;
+    }, Ae.humanize = function(e, n) {
+      n = n || {};
+      var r, a = typeof e;
+      if (a === "string" && e.length > 0)
+        return function(s) {
+          if (!((s = String(s)).length > 100)) {
+            var u = /^((?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|years?|yrs?|y)?$/i.exec(s);
+            if (u) {
+              var p = parseFloat(u[1]);
+              switch ((u[2] || "ms").toLowerCase()) {
+                case "years":
+                case "year":
+                case "yrs":
+                case "yr":
+                case "y":
+                  return p * uh;
+                case "days":
+                case "day":
+                case "d":
+                  return p * Fi;
+                case "hours":
+                case "hour":
+                case "hrs":
+                case "hr":
+                case "h":
+                  return p * qi;
+                case "minutes":
+                case "minute":
+                case "mins":
+                case "min":
+                case "m":
+                  return p * Li;
+                case "seconds":
+                case "second":
+                case "secs":
+                case "sec":
+                case "s":
+                  return p * Ri;
+                case "milliseconds":
+                case "millisecond":
+                case "msecs":
+                case "msec":
+                case "ms":
+                  return p;
+                default:
+                  return;
+              }
+            }
+          }
+        }(e);
+      if (a === "number" && isNaN(e) === !1)
+        return n.long ? ma(r = e, Fi, "day") || ma(r, qi, "hour") || ma(r, Li, "minute") || ma(r, Ri, "second") || r + " ms" : function(s) {
+          return s >= Fi ? Math.round(s / Fi) + "d" : s >= qi ? Math.round(s / qi) + "h" : s >= Li ? Math.round(s / Li) + "m" : s >= Ri ? Math.round(s / Ri) + "s" : s + "ms";
+        }(e);
+      throw new Error("val is not a non-empty string or a valid number. val=" + JSON.stringify(e));
+    }, Ae.names = [], Ae.skips = [], Ae.formatters = {};
+    var Qo, wr, xr, Ze = Qo = {};
+    function V0() {
+      throw new Error("setTimeout has not been defined");
+    }
+    function C0() {
+      throw new Error("clearTimeout has not been defined");
+    }
+    function $o(e) {
+      if (wr === setTimeout)
+        return setTimeout(e, 0);
+      if ((wr === V0 || !wr) && setTimeout)
+        return wr = setTimeout, setTimeout(e, 0);
+      try {
+        return wr(e, 0);
+      } catch {
+        try {
+          return wr.call(null, e, 0);
+        } catch {
+          return wr.call(this, e, 0);
+        }
+      }
+    }
+    (function() {
+      try {
+        wr = typeof setTimeout == "function" ? setTimeout : V0;
+      } catch {
+        wr = V0;
+      }
+      try {
+        xr = typeof clearTimeout == "function" ? clearTimeout : C0;
+      } catch {
+        xr = C0;
+      }
+    })();
+    var Qr, Sr = [], ni = !1, ha = -1;
+    function fh() {
+      ni && Qr && (ni = !1, Qr.length ? Sr = Qr.concat(Sr) : ha = -1, Sr.length && Zo());
+    }
+    function Zo() {
+      if (!ni) {
+        var e = $o(fh);
+        ni = !0;
+        for (var n = Sr.length; n; ) {
+          for (Qr = Sr, Sr = []; ++ha < n; )
+            Qr && Qr[ha].run();
+          ha = -1, n = Sr.length;
+        }
+        Qr = null, ni = !1, function(r) {
+          if (xr === clearTimeout)
+            return clearTimeout(r);
+          if ((xr === C0 || !xr) && clearTimeout)
+            return xr = clearTimeout, clearTimeout(r);
+          try {
+            xr(r);
+          } catch {
+            try {
+              return xr.call(null, r);
+            } catch {
+              return xr.call(this, r);
+            }
+          }
+        }(e);
+      }
+    }
+    function Jo(e, n) {
+      this.fun = e, this.array = n;
+    }
+    function Mr() {
+    }
+    Ze.nextTick = function(e) {
+      var n = new Array(arguments.length - 1);
+      if (arguments.length > 1)
+        for (var r = 1; r < arguments.length; r++)
+          n[r - 1] = arguments[r];
+      Sr.push(new Jo(e, n)), Sr.length !== 1 || ni || $o(Zo);
+    }, Jo.prototype.run = function() {
+      this.fun.apply(null, this.array);
+    }, Ze.title = "browser", Ze.browser = !0, Ze.env = {}, Ze.argv = [], Ze.version = "", Ze.versions = {}, Ze.on = Mr, Ze.addListener = Mr, Ze.once = Mr, Ze.off = Mr, Ze.removeListener = Mr, Ze.removeAllListeners = Mr, Ze.emit = Mr, Ze.prependListener = Mr, Ze.prependOnceListener = Mr, Ze.listeners = function(e) {
+      return [];
+    }, Ze.binding = function(e) {
+      throw new Error("process.binding is not supported");
+    }, Ze.cwd = function() {
+      return "/";
+    }, Ze.chdir = function(e) {
+      throw new Error("process.chdir is not supported");
+    }, Ze.umask = function() {
+      return 0;
+    };
+    var En = {};
+    (function(e) {
+      (function() {
+        function n() {
+          var r;
+          try {
+            r = En.storage.debug;
+          } catch {
+          }
+          return !r && e !== void 0 && "env" in e && (r = e.env.DEBUG), r;
+        }
+        (En = En = Ae).log = function() {
+          return typeof console == "object" && console.log && Function.prototype.apply.call(console.log, console, arguments);
+        }, En.formatArgs = function(r) {
+          var a = this.useColors;
+          if (r[0] = (a ? "%c" : "") + this.namespace + (a ? " %c" : " ") + r[0] + (a ? "%c " : " ") + "+" + En.humanize(this.diff), !!a) {
+            var s = "color: " + this.color;
+            r.splice(1, 0, s, "color: inherit");
+            var u = 0, p = 0;
+            r[0].replace(/%[a-zA-Z%]/g, function(k) {
+              k !== "%%" && k === "%c" && (p = ++u);
+            }), r.splice(p, 0, s);
+          }
+        }, En.save = function(r) {
+          try {
+            r == null ? En.storage.removeItem("debug") : En.storage.debug = r;
+          } catch {
+          }
+        }, En.load = n, En.useColors = function() {
+          return typeof window < "u" && window.process && window.process.type === "renderer" ? !0 : typeof document < "u" && document.documentElement && document.documentElement.style && document.documentElement.style.WebkitAppearance || typeof window < "u" && window.console && (window.console.firebug || window.console.exception && window.console.table) || typeof navigator < "u" && navigator.userAgent && navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31 || typeof navigator < "u" && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/);
+        }, En.storage = typeof chrome < "u" && chrome.storage !== void 0 ? chrome.storage.local : function() {
+          try {
+            return window.localStorage;
+          } catch {
+          }
+        }(), En.colors = ["lightseagreen", "forestgreen", "goldenrod", "dodgerblue", "darkorchid", "crimson"], En.formatters.j = function(r) {
+          try {
+            return JSON.stringify(r);
+          } catch (a) {
+            return "[UnexpectedJSONParseError]: " + a.message;
+          }
+        }, En.enable(n());
+      }).call(this);
+    }).call(this, Qo);
+    var da = 34028234663852886e22, Xo = En("gammaincinv:higher_newton"), ch = function(e, n, r, a, s, u, p, k) {
+      var y, C, F, B, A, W, z, K, $;
+      $ = e, W = 1, z = 1, B = n * n, C = e;
+      do {
+        if (A = ($ = e) * $, r === 0) {
+          if ((y = (1 - n) * M($) + $ + u) > M(da))
+            return Xo("Warning: overflow problems in one or more steps of the computation. The initial approximation to the root is returned."), C;
+          K = R(y);
+        } else
+          K = -p * $;
+        K = k ? -K * (fr($, n, !0, !1) - a) : K * (fr($, n, !0, !0) - s), a > 1e-120 || z > 1 ? (F = (2 * A - 4 * $ * n + 4 * $ + 2 * B - 3 * n + 1) / A, e = $ + K * (1 + K * (0.5 * ($ - n + 1) / $ + K * (F /= 6)))) : e = $ + K, W = J($ / e - 1), z += 1, ($ = e) < 0 && ($ = C, z = 100);
+      } while (W > 2e-14 && z < 35);
+      return (W > 2e-14 || z > 99) && Xo("Warning: the number of iterations in the Newton method reached the upper limit N=35. The last value obtained for the root is given as output."), $ || 0;
+    }, lh = function(e) {
+      return e === 0 ? 0 : 0 + e * (1 + e * (1 + e * (1.5 + e * (2.6666666666666665 + e * (5.208333333333333 + 10.8 * e)))));
+    }, vh = function(e) {
+      return e === 0 ? 1 : 1 + e * (1 + e * (0.3333333333333333 + e * (0.027777777777777776 + e * (e * (2314814814814815e-19 + 5878894767783657e-20 * e) - 0.003703703703703704))));
+    }, ph = 1e-8, mh = 0.08333333333333333, hh = 0.008333333333333333, ri = [1, 0, 0, 0, 0, 0], A0 = function(e) {
+      var n, r, a, s, u, p, k, y, C;
+      if (C = e * e * 0.5, e === 0 ? u = 0 : e < -1 ? (y = R(-1 - C), u = lh(y)) : e < 1 ? u = vh(y = e) : (u = (y = 11 + C) + (p = M(y)), y = 1 / y, s = (a = (r = (n = p * p) * p) * p) * p, ri[1] = 0.5 * (2 - p), ri[2] = (-9 * p + 6 + 2 * n) / 6, ri[3] = -(3 * r + 36 * p - 22 * n - 12) * mh, ri[4] = (60 + 350 * n - 300 * p - 125 * r + 12 * a) / 60, ri[5] = -(-120 - 274 * a + 900 * p - 1700 * n + 1125 * r + 20 * s) * hh, u += p * y * mn(ri, y)), y = 1, e > -3.5 && e < -0.03 || e > 0.03 && e < 40) {
+        y = 1, k = u;
+        do
+          u = k * (C + M(k)) / (k - 1), y = J(k / u - 1), k = u;
+        while (y > ph);
+      }
+      return u;
+    }, dh = [1.9963790515900766, -0.0017971032528832887, 13129285796384672e-21, -2340875228178749e-22, 72291210671127e-22, -3280997607821e-22, 19875070901e-21, -1509214183e-21, 1375340084e-22, -145728923e-22, 17532367e-22, -2351465e-22, 346551e-22, -55471e-22, 9548e-22, -1748e-22, 332e-22, -58e-22], gh = function(e, n) {
+      var r, a, s, u, p;
+      a = 0, s = 0, r = n + n, p = e;
+      do
+        u = s, a = r * (s = a) - u + dh[p], p -= 1;
+      while (p >= 0);
+      return (a - u) / 2;
+    }, Nh = function(e) {
+      return e === 0 ? 0.025721014990011306 : 0.025721014990011306 + e * (0.08247596616699963 + e * (e * (6099292666946337e-19 + e * (250505279903e-15 * e - 33543297638406e-17)) - 0.0025328157302663564));
+    }, yh = function(e) {
+      return e === 0 ? 0.08333333333333333 : 0.08333333333333333 + e * (e * (7936507936507937e-19 + -5952380952380953e-19 * e) - 0.002777777777777778);
+    }, bh = 0.30865217988013566, wh = function(e) {
+      var n;
+      return e < en ? da : e < 1 ? ke(e + 1) - (e + 0.5) * M(e) + e - Ci : e < 2 ? ke(e) - (e - 0.5) * M(e) + e - Ci : e < 3 ? ke(e - 1) - (e - 0.5) * M(e) + e - Ci + M(e - 1) : e < 12 ? gh(17, n = 18 / (e * e) - 1) / (12 * e) : (n = 1 / (e * e), e < 1e3 ? Nh(n) / (bh + n) / e : yh(n) / e);
+    }, Yo = function(e) {
+      return e >= 3 ? R(wh(e)) : e > 0 ? ve(e) / (R(-e + (e - 0.5) * M(e)) * Ei) : da;
+    }, xh = function(e) {
+      var n, r;
+      return e === 0 ? -0.3333333333438 : ((e < 0 ? -e : e) <= 1 ? (n = e * (e * (e * (-4293658292782e-17 * e - 0.004923635739372) - 0.05041806657154) - 0.2070740359969) - 0.3333333333438, r = 1 + e * (0.7045554412463 + e * (0.2118190062224 + e * (0.03048648397436 + 0.001605037988091 * e)))) : (n = (e = 1 / e) * (e * (e * (-0.3333333333438 * e - 0.2070740359969) - 0.05041806657154) - 0.004923635739372) - 4293658292782e-17, r = 0.001605037988091 + e * (0.03048648397436 + e * (0.2118190062224 + e * (0.7045554412463 + 1 * e)))), n / r);
+    }, Sh = function(e) {
+      var n;
+      return J(e) < 1 ? xh(e) : (n = A0(e), M(e / (n - 1)) / e);
+    }, Mh = function(e) {
+      var n, r;
+      return e === 0 ? -0.0172847633523 : ((e < 0 ? -e : e) <= 1 ? (n = e * (e * (e * (-614830384279e-17 * e - 60683488776e-14) - 0.00464910887221) - 0.0159372646475) - 0.0172847633523, r = 1 + e * (0.764050615669 + e * (0.297143406325 + e * (0.0579490176079 + 0.00574558524851 * e)))) : (n = (e = 1 / e) * (e * (e * (-0.0172847633523 * e - 0.0159372646475) - 0.00464910887221) - 60683488776e-14) - 614830384279e-17, r = 0.00574558524851 + e * (0.0579490176079 + e * (0.297143406325 + e * (0.764050615669 + 1 * e)))), n / r);
+    }, kh = function(e) {
+      var n, r;
+      return e === 0 ? -0.0172839517431 : ((e < 0 ? -e : e) <= 1 ? (n = e * (e * (e * (249634036069e-17 * e - 391032032692e-15) - 0.00357406772616) - 0.0146362417966) - 0.0172839517431, r = 1 + e * (0.690560400696 + e * (0.249962384741 + e * (0.0443843438769 + 0.00424073217211 * e)))) : (n = 249634036069e-17 + (e = 1 / e) * (e * (e * (-0.0172839517431 * e - 0.0146362417966) - 0.00357406772616) - 391032032692e-15), r = 0.00424073217211 + e * (0.0443843438769 + e * (0.249962384741 + e * (0.690560400696 + 1 * e)))), n / r);
+    }, Th = function(e) {
+      var n, r;
+      return e === 0 ? 0.99994466948 : ((e < 0 ? -e : e) <= 1 ? (n = 0.99994466948 + e * (104.649839762 + e * (857.204033806 + e * (731.901559577 + 45.5174411671 * e))), r = 1 + e * (104.526456943 + e * (823.313447808 + e * (3119.93802124 + 3970.03311219 * e)))) : (n = 45.5174411671 + (e = 1 / e) * (731.901559577 + e * (857.204033806 + e * (104.649839762 + 0.99994466948 * e))), r = 3970.03311219 + e * (3119.93802124 + e * (823.313447808 + e * (104.526456943 + 1 * e)))), n / r);
+    }, Eh = function(e) {
+      var n, r;
+      return e < -5 ? (12 - (r = e * e) - (n = M(-e)) * n * 6) / (12 * r * e) : e < -2 ? Mh(e) : e < 2 ? kh(e) : e < 1e3 ? (r = 1 / e, Th(e) / (-12 * e)) : -1 / (12 * e);
+    }, Ph = function(e) {
+      var n, r;
+      return e === 0 ? 0.0495346498136 : ((e < 0 ? -e : e) <= 1 ? (n = 0.0495346498136 + e * (0.0299521337141 + e * (0.00688296911516 + e * (512634846317e-15 + -201411722031e-16 * e))), r = 1 + e * (0.759803615283 + e * (0.261547111595 + e * (0.0464854522477 + 0.00403751193496 * e)))) : (n = (e = 1 / e) * (512634846317e-15 + e * (0.00688296911516 + e * (0.0299521337141 + 0.0495346498136 * e))) - 201411722031e-16, r = 0.00403751193496 + e * (0.0464854522477 + e * (0.261547111595 + e * (0.759803615283 + 1 * e)))), n / r);
+    }, Vh = function(e) {
+      var n, r;
+      return e === 0 ? 0.00452313583942 : ((e < 0 ? -e : e) <= 1 ? (n = 0.00452313583942 + e * (0.00120744920113 + e * (e * (-535770949796e-17 * e - 504476066942e-16) - 789724156582e-16)), r = 1 + e * (0.912203410349 + e * (0.405368773071 + e * (0.0901638932349 + 0.00948935714996 * e)))) : (n = (e = 1 / e) * (e * (e * (0.00120744920113 + 0.00452313583942 * e) - 789724156582e-16) - 504476066942e-16) - 535770949796e-17, r = 0.00948935714996 + e * (0.0901638932349 + e * (0.405368773071 + e * (0.912203410349 + 1 * e)))), n / r);
+    }, Ch = function(e) {
+      var n, r;
+      return e === 0 ? 0.00439937562904 : ((e < 0 ? -e : e) <= 1 ? (n = 0.00439937562904 + e * (487225670639e-15 + e * (e * (529110969589e-17 + 15716677175e-17 * e) - 128470657374e-15)), r = 1 + e * (0.794435257415 + e * (0.333094721709 + e * (0.0703527806143 + 0.00806110846078 * e)))) : (n = 15716677175e-17 + (e = 1 / e) * (529110969589e-17 + e * (e * (487225670639e-15 + 0.00439937562904 * e) - 128470657374e-15)), r = 0.00806110846078 + e * (0.0703527806143 + e * (0.333094721709 + e * (0.794435257415 + 1 * e)))), n / r);
+    }, Ah = function(e) {
+      var n, r;
+      return e === 0 ? -0.0011481191232 : ((e < 0 ? -e : e) <= 1 ? (n = e * (e * (1.51623048511 + e * (0.0730002451555 * e - 0.218472031183)) - 0.112850923276) - 0.0011481191232, r = 1 + e * (14.2482206905 + e * (69.7360396285 + e * (218.938950816 + 277.067027185 * e)))) : (n = 0.0730002451555 + (e = 1 / e) * (e * (1.51623048511 + e * (-0.0011481191232 * e - 0.112850923276)) - 0.218472031183), r = 277.067027185 + e * (218.938950816 + e * (69.7360396285 + e * (14.2482206905 + 1 * e)))), n / r);
+    }, Ih = function(e) {
+      var n, r;
+      return e === 0 ? -145727889667e-15 : ((e < 0 ? -e : e) <= 1 ? (n = e * (e * (e * (199.722374056 + -11.4311378756 * e) - 13.308504545) - 0.290806748131) - 145727889667e-15, r = 1 + e * (139.612587808 + e * (2189.01116348 + e * (7115.24019009 + 45574.6081453 * e)))) : (n = (e = 1 / e) * (199.722374056 + e * (e * (-145727889667e-15 * e - 0.290806748131) - 13.308504545)) - 11.4311378756, r = 45574.6081453 + e * (7115.24019009 + e * (2189.01116348 + e * (139.612587808 + 1 * e)))), n / r);
+    }, Bh = function(e) {
+      var n, r;
+      return e < -8 ? (n = e * e, (e * (r = M(-e) / e) * (6 * n * r * r - 12 + n) - 30) / (12 * e * n * n)) : e < -4 ? Ph(e) / (e * e) : e < -2 ? Vh(e) : e < 2 ? Ch(e) : e < 10 ? Ah(n = 1 / e) / (e * e) : e < 100 ? Ih(n = 1 / e) / (e * e) : -M(e) / (12 * e * e * e);
+    }, Rh = En("gammaincinv:compute"), Ur = 0.5, I0 = 0.3333333333333333, Lh = 0.25, _o = 0.2, es = 0.16666666666666666, qh = 0.08333333333333333, Fh = 0.041666666666666664, nr = [0, 0, 0, 0, 0], ns = function(e, n, r) {
+      var a, s, u, p, k, y, C, F, B, A, W, z, K, $, ae, Q, ue, le, se, te, xe, Fe, me, De, Ye, Be, ie, Ie, Ui, w7, _0, zn, Je, et, Hn, Pr, Vr, nt, x7, rt;
+      if (n < Ur ? (p = !0, k = n, nt = -1) : (p = !1, k = r, nt = 1), Hn = 0, J(e - 1) < 1e-4 && (Pr = 0, se = p ? n < 1e-3 ? n + (Ui = n * n) * Ur + (Be = Ui * n) * I0 + (Ie = Be * n) * Lh + (le = Ie * n) * _o + le * n * es : -M(1 - n) : -M(r), e === 1 ? (Hn = 2, _0 = se) : (u = ke(e), Hn = 1)), r < 1e-30 && e < Ur && (Pr = 0, se = -M(r * ve(e)) + (e - 1) * M(-M(r * ve(e))), Hn = 1, u = ke(e)), e > 1 && e < 500 && n < 1e-80) {
+        for (Pr = 0, y = 1 / e, a = 1 / (e + 1), se = (ke(e + 1) + M(n)) * y, K = se = R(se), et = 0; et < 10; et++)
+          se = K * R(se * y) * V(1 - se * a, y);
+        Hn = 1, u = ke(e);
+      }
+      if ((C = 1 / e * (M(n) + ke(e + 1))) < M(_o * (1 + e)) && Hn === 0 && (Vr = R(C), Pr = 0, ie = (w7 = (te = e * e) * e) * e, A = ($ = e + 1) * (W = $ * $), B = W * W, F = (ae = e + 2) * ae, Q = e + 3, nr[0] = 1, nr[1] = 1 / $, nr[2] = Ur * (3 * e + 5) / (W * ae), nr[3] = I0 * (31 + 8 * te + 33 * e) / (A * ae * Q), nr[4] = Fh * (2888 + 1179 * w7 + 125 * ie + 3971 * te + 5661 * e) / (B * F * Q * (e + 4)), se = Vr * mn(nr, Vr), u = ke(e), Hn = 1), e < 10 && Hn === 0 && (z = c(e) / (Yo(e) * Ei), r < Se(0.02, z) && (Pr = 0, Ye = (De = (zn = 1 - e) * zn) * zn, ue = c(-2 / e * M(r / z)), se = e * A0(ue), Je = M(se), se > 5 ? (me = (Fe = (xe = Je * Je) * Je) * Je, Vr = 1 / se, nr[0] = Je - 1, nr[1] = (3 * zn - 2 * zn * Je + xe - 2 * Je + 2) * Ur, nr[2] = (24 * zn * Je - 11 * De - 24 * zn - 6 * xe + 12 * Je - 12 - 9 * zn * xe + 6 * De * Je + 2 * Fe) * es, nr[3] = (-12 * Ye * Je + 8.04 * zn * xe - 114 * De * Je + (72 + 36 * xe) + (3 * me - 72 * Je + 162) * (zn - 168 * zn * Je) - (12 * Fe + 25 * Ye) - (22 * zn * Fe + 36 * De * xe + 120 * De)) * qh, nr[4] = 0, se = se - Je + zn * Vr * mn(nr, Vr)) : (xe = Je * Je, (x7 = Je - zn * (Vr = 1 / se) * (Je - 1)) < se && (se -= x7)), u = ke(e), Hn = 1)), J(k - Ur) < 1e-5 && Hn === 0 && (Pr = 0, se = e - I0 + (0.019753086419753086 + 0.007211444248481286 * (y = 1 / e)) * y, u = ke(e), Hn = 1), e < 1 && Hn === 0 && (Pr = 0, se = R(p ? 1 / e * (M(k) + ke(e + 1)) : 1 / e * (M(1 - k) + ke(e + 1))), u = ke(e), Hn = 1), Hn === 0) {
+        if (Pr = 1, y = 1 / e, ue = nt * (Vr = $e(2 * k)) / c(e * Ur), !(Vr < da))
+          return Rh("Warning: Overflow problems in one or more steps of the computation."), NaN;
+        ue += (Sh(ue) + (Eh(ue) + Bh(ue) * y) * y) * y, se = e * A0(ue), rt = ue, s = 1 / (-c(e / yr) * R(-Ur * e * rt * rt) / Yo(e));
+      }
+      return Hn < 2 && (_0 = ch(se, e, Pr, n, r, u, s, p)), _0;
+    }, ii = function(e, n, r) {
+      return i(e) || i(n) ? NaN : n < en ? NaN : e > 1 || e < 0 ? NaN : r === !0 ? e === 0 ? H : e === 1 ? 0 : ns(n, 1 - e, e) : e === 0 ? 0 : e === 1 ? H : ns(n, e, 1 - e);
+    }, Oh = 5e-324, Dh = function(e, n, r, a) {
+      var s, u, p, k, y, C, F, B, A, W, z, K, $, ae, Q, ue, le, se, te, xe, Fe, me, De, Ye, Be, ie, Ie, Ui;
+      return y = r < a ? ii(r, n, !0) : ii(a, n, !1), y /= e, W = ((ie = c(1 + ($ = n / e))) + 2) * (ie - 1) / (3 * ie), W += ((le = (ue = ie * ie) * ie) + 9 * ue + 21 * ie + 5) * (Be = y - $) / (36 * ue * (Ye = ie + 1)), W -= ((se = ue * ue) - 13 * le + 69 * ue + 167 * ie + 46) * (ae = Be * Be) / (1620 * (F = Ye * Ye) * le), W -= (7 * (te = le * ue) + 21 * se + 70 * le + 26 * ue - 93 * ie - 31) * (Q = ae * Be) / (6480 * (B = Ye * F) * se), z = (28 * se + 131 * le + 402 * ue + 581 * ie + 208) * (ie - 1) / (1620 * Ye * le), z -= (35 * (xe = le * le) - 154 * te - 623 * se - 1636 * le - 3983 * ue - 3514 * ie - 925) * Be / (12960 * F * se), z -= (2132 * (Fe = se * le) + 7915 * xe + 16821 * te + 35066 * se + 87490 * le + 141183 * ue + 95993 * ie + 21640) * ae / (816480 * te * B), K = -(3592 * Fe + 8375 * xe - 1323 * te - 29198 * se - 89578 * le - 154413 * ue - 116063 * ie - 29632) * (ie - 1) / (816480 * te * F), K -= (442043 * (De = te * se) + 2054169 * (me = se * se) + 3803094 * Fe + 3470754 * xe + 2141568 * te - 2393568 * se - 19904934 * le - 34714674 * ue - 23128299 * ie - 5253353) * Be / (146966400 * xe * B), (C = y + (W -= ae * ae * (75 * xe + 202 * te + 188 * se - 888 * le - 1345 * ue + 118 * ie + 138) / (272160 * (A = F * F) * te)) / e + (z -= (11053 * me + 53308 * Fe + 117010 * xe + 163924 * te + 116188 * se - 258428 * le - 677042 * ue - 481940 * ie - 105497) * Q / (14696640 * A * xe)) / (e * e) + (K -= (te * te * 116932 + 819281 * De + 2378172 * me + 4341330 * Fe + 6806004 * xe + 10622748 * te + 18739500 * se + 30651894 * le + 30869976 * ue + 15431867 * ie + 2919016) * ae / (146966400 * A * Fe)) / (e * e * e)) <= 0 && (C = Oh), Ie = C - $ * M(C) + (1 + $) * M(1 + $) - $, s = 1 / (1 + $), Ui = ((p = C < $ ? s : 0) + (k = C < $ ? 1 : s)) / 2, u = jo(Ie, $), Ko(u, Ui, p, k, 32, 100);
+    }, Uh = function(e, n, r, a, s, u) {
+      var p, k, y, C, F, B, A, W, z, K, $, ae, Q, ue, le, se;
+      ue = 0, k = !1, B = n, F = ir(1, 1 - s), A = 0, y = z = Ee(1e7 * n, 1e7), C = z, W = u;
+      do {
+        if (A = ue, C = y, y = z, ue = (Q = e(B))[0], le = Q[1], se = Q[2], W -= 1, ue === 0)
+          break;
+        if (le === 0 ? (A === 0 && (A = e(n = B === r ? a : r), z = n - B), z = br(A) * br(ue) < 0 ? z < 0 ? (B - r) / 2 : (B - a) / 2 : z < 0 ? (B - a) / 2 : (B - r) / 2) : se === 0 ? z = ue / le : (K = 2 * ue, (z = J(ae = 2 * le - ue * (se / le)) < 1 && J(K) >= J(ae) * Tn ? ue / le : K / ae) * le / ue < 0 && J(z = ue / le) > 2 * J(n) && (z = 2 * (z < 0 ? -1 : 1) * J(n))), (p = J(z / C)) > 0.8 && p < 2 && (J(z = z > 0 ? (B - r) / 2 : (B - a) / 2) > B && (z = br(z) * B), C = 3 * z), n = B, (B -= z) < r) {
+          if ($ = J(r) < 1 && J(B) > 1 && Tn / J(B) < J(r) ? 1e3 : B / r, J($) < 1 && ($ = 1 / $), !k && $ > 0 && $ < 3)
+            B = n - (z = 0.99 * (n - r)), k = !0;
+          else if ((B = n - (z = (n - r) / 2)) === r || B === a)
+            break;
+        } else if (B > a) {
+          if ($ = J(a) < 1 && J(B) > 1 && Tn / J(B) < J(a) ? 1e3 : B / a, J($) < 1 && ($ = 1 / $), !k && $ > 0 && $ < 3)
+            B = n - (z = 0.99 * (n - a)), k = !0;
+          else if ((B = n - (z = (n - a) / 2)) === r || B === a)
+            break;
+        }
+        z > 0 ? a = n : r = n;
+      } while (W && J(B * F) < J(z));
+      return B;
+    }, Hh = Ro.assign, Wh = function(e, n, r, a) {
+      return function(s) {
+        var u, p, k, y, C;
+        return C = 1 - s, Hh(s, e, n, !0, a, u = [0, 0], 1, 0), y = u[0] - r, p = u[1], a && (p = -p), C === 0 && (C = 64 * er), s === 0 && (s = 64 * er), J(k = p * (-C * e + (n - 2) * s + 1)) < C * s * Tn && (k /= C * s), a && (k = -k), p === 0 && (p = (a ? -1 : 1) * er * 64), [y, p, k];
+      };
+    }, Gh = 32, zh = 1e3, $r = [0, 0, 0, 0, 0], ai = function(e, n, r, a) {
+      var s, u, p, k, y, C, F, B, A, W, z, K, $, ae, Q, ue, le, se, te, xe, Fe, me, De, Ye, Be, ie, Ie;
+      if (u = !1, a === 0)
+        return [1, 0];
+      if (r === 0)
+        return [0, 1];
+      if (e === 1) {
+        if (n === 1)
+          return [r, 1 - r];
+        K = n, n = e, e = K, K = a, a = r, r = K, u = !0;
+      }
+      if (ie = 0, k = 0, C = 1, e === 0.5) {
+        if (n === 0.5)
+          return ie = ar(r * gr), ie *= ie, Ie = ar(a * gr), [ie, Ie *= Ie];
+        n > 0.5 && (K = n, n = e, e = K, K = a, a = r, r = K, u = !u);
+      }
+      if (n === 0.5 && e >= 0.5 && r !== 1)
+        ie = Km(e, r, xe = {}), Ie = xe.value;
+      else {
+        if (n === 1)
+          return r < a ? e > 1 ? (ie = V(r, 1 / e), Ie = -Le(M(r) / e)) : Ie = 1 - (ie = V(r, 1 / e)) : (ie = R(oe(-a) / e), Ie = -Le(oe(-a) / e)), u && (K = Ie, Ie = ie, ie = K), [ie, Ie];
+        if (e + n > 5)
+          r > 0.5 && (K = n, n = e, e = K, K = a, a = r, r = K, u = !u), A = Se(e, n), B = Ee(e, n), c(A) > B - A && A > 5 ? Ie = 1 - (ie = Qm(e, n, r)) : (y = S(c(e / (Ye = e + n))), (p = A / Ye) >= 0.2 && p <= 0.8 && Ye >= 10 ? Ie = 1 - (ie = (z = V(r, 1 / e)) < 25e-4 && e + n < 200 ? z * V(e * Me(e, n), 1 / e) : sh(r, Ye, y)) : (e < n && (K = n, n = e, e = K, K = a, a = r, r = K, u = !u), W = 0, n < 2 && (W = Me(e, n)), W === 0 ? Ie = 1 : ie = 1 - (Ie = V(n * a * W, 1 / n))), Ie > 1e-5 && (Ie = 1 - (ie = Dh(e, n, r, a))));
+        else if (e < 1 && n < 1) {
+          if (ue = Qe(te = (1 - e) / (2 - e - n), e, n) - r, J(ue) / r < 3 * kn)
+            return u ? [1 - te, te] : [te, 1 - te];
+          ue < 0 && (K = n, n = e, e = K, K = a, a = r, r = K, u = !u, te = 1 - te), Ie = 1 / (1 + (se = V(e * r * Me(e, n), 1 / e))), (ie = se / (1 + se)) > te && (ie = te), C = te;
+        } else
+          e > 1 && n > 1 ? ($ = (n - 1) / (e + n - 2), Qe(te = (e - 1) / (e + n - 2), e, n) - r < 0 && (K = n, n = e, e = K, K = a, a = r, r = K, K = $, $ = te, te = K, u = !u), le = M(r * e * Me(e, n)) / e, Ie = (ie = R(le)) < 0.9 ? 1 - ie : -Le(le), n < e && ie < 0.2 && (ae = e - 1, Q = n - 1, me = e * (Fe = e * e), De = n * n, $r[0] = 0, $r[1] = 1, $r[2] = Q / ae, ae *= ae, $r[3] = Q * (3 * e * n + 5 * n + Fe - e - 4) / (2 * (e + 2) * ae), ae *= e + 1, $r[4] = Q * (33 * e * De + 31 * De + 8 * Fe * De - 30 * e * n - 47 * n + 11 * Fe * n + 6 * me * n + 18 + 4 * e - me + Fe * Fe - 10 * Fe), $r[4] /= 3 * (e + 3) * (e + 2) * ae, ie = mn($r, ie)), ie > te && (ie = te), C = te) : (n < e && (K = n, n = e, e = K, K = a, a = r, r = K, u = !u), V(r, 1 / e) < 0.5 ? ((ie = V(r * e * Me(e, n), 1 / e)) === 0 && (ie = er), Ie = 1 - ie) : ((Ie = V(1 - V(r, n * Me(e, n)), 1 / n)) === 0 && (Ie = er), ie = 1 - Ie));
+      }
+      return ie > 0.5 && (K = n, n = e, e = K, K = a, a = r, r = K, K = Ie, Ie = ie, ie = K, u = !u, Be = 1 - k, k = 1 - C, C = Be), k === 0 && (u ? ie < (k = kn) && (ie = k) : k = er, ie < k && (ie = k)), s = Gh, ie < 1e-50 && (e < 1 || n < 1) && (s *= 3, s /= 2), F = Wh(e, n, r < a ? r : a, r >= a), (ie = Uh(F, ie, k, C, s, zh)) === k && (ie = 0), u ? [1 - ie, ie] : [ie, 1 - ie];
+    }, Oi = function(e, n, r, a) {
+      return i(e) || i(n) || i(r) ? NaN : n <= 0 || r <= 0 ? NaN : e < 0 || e > 1 ? NaN : a ? ai(n, r, 1 - e, e)[0] : ai(n, r, e, 1 - e)[0];
+    }, rs = function(e, n) {
+      return e <= 0 || n <= 0 ? NaN : Oi(0.5, e, n);
+    }, is = function(e, n) {
+      return e <= 1 || n <= 1 ? NaN : (e - 1) / (e + n - 2);
+    }, as = function(e, n) {
+      var r, a;
+      return e <= 0 || n <= 0 ? NaN : (r = 2 * (n - e) * c((a = e + n) + 1), r /= (a + 2) * c(e * n));
+    }, ts = function(e, n) {
+      var r, a;
+      return e <= 0 || n <= 0 ? NaN : (a = c(e * n / ((r = e + n) + 1)), a /= r);
+    }, os = function(e, n) {
+      var r, a;
+      return e <= 0 || n <= 0 ? NaN : (a = e * n, a /= (r = e + n) * r * (r + 1));
+    }, ss = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e <= 0 ? j : e >= 1 ? 0 : M(Qe(e, n, r));
+    };
+    o(ss, "factory", function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : function(r) {
+        return i(r) ? NaN : r <= 0 ? j : r >= 1 ? 0 : M(Qe(r, e, n));
+      };
+    });
+    var ga = ss, us = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e < 0 || e > 1 ? j : e === 0 ? n < 1 ? H : n > 1 ? j : M(r) : e === 1 ? r < 1 ? H : r > 1 ? j : M(n) : (a = (n - 1) * M(e), a += (r - 1) * oe(-e), a -= lr(n, r));
+    };
+    o(us, "factory", function(e, n) {
+      var r;
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : (r = lr(e, n), function(a) {
+        var s;
+        return i(a) ? NaN : a < 0 || a > 1 ? j : a === 0 ? e < 1 ? H : e > 1 ? j : M(n) : a === 1 ? n < 1 ? H : n > 1 ? j : M(e) : (s = -r, s += (e - 1) * M(a) + (n - 1) * oe(-a));
+      });
+    });
+    var fs = us, cs = function(e, n, r) {
+      var a, s, u, p, k;
+      s = Me(n, r), u = 1, p = 1, k = 1;
+      do
+        p *= e / k, u += a = Me(n + k, r) / s * p, k += 1;
+      while (J(a / u) >= kn);
+      return u;
+    }, ls = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : cs(e, n, r);
+    };
+    o(ls, "factory", function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : function(r) {
+        return i(r) ? NaN : cs(r, e, n);
+      };
+    });
+    var vs = ls, ps = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e < 0 || e > 1 ? 0 : e === 0 ? n < 1 ? H : n > 1 ? 0 : r : e === 1 ? r < 1 ? H : r > 1 ? 0 : n : (a = (n - 1) * M(e), a += (r - 1) * oe(-e), a -= lr(n, r), R(a));
+    };
+    o(ps, "factory", function(e, n) {
+      var r;
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : (r = lr(e, n), function(a) {
+        var s;
+        return i(a) ? NaN : a < 0 || a > 1 ? 0 : a === 0 ? e < 1 ? H : e > 1 ? 0 : n : a === 1 ? n < 1 ? H : n > 1 ? 0 : e : (s = -r, s += (e - 1) * M(a), s += (n - 1) * oe(-a), R(s));
+      });
+    });
+    var ms = ps, hs = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 || e < 0 || e > 1 ? NaN : Oi(e, n, r);
+    };
+    o(hs, "factory", function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : function(r) {
+        return i(r) || r < 0 || r > 1 ? NaN : Oi(r, e, n);
+      };
+    });
+    var ds = hs, Na = Ue.isPrimitive;
+    function nn() {
+      var e, n;
+      if (!(this instanceof nn))
+        return arguments.length === 0 ? new nn() : new nn(arguments[0], arguments[1]);
+      if (arguments.length) {
+        if (e = arguments[0], n = arguments[1], !Na(e))
+          throw new TypeError("invalid argument. First shape parameter `alpha` must be a positive number. Value: `" + e + "`");
+        if (!Na(n))
+          throw new TypeError("invalid argument. Second shape parameter `beta` must be a positive number. Value: `" + n + "`");
+      } else
+        e = 1, n = 1;
+      return l(this, "alpha", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(r) {
+        if (!Na(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        e = r;
+      } }), l(this, "beta", { configurable: !1, enumerable: !0, get: function() {
+        return n;
+      }, set: function(r) {
+        if (!Na(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        n = r;
+      } }), this;
+    }
+    m(nn.prototype, "entropy", function() {
+      return Uo(this.alpha, this.beta);
+    }), m(nn.prototype, "kurtosis", function() {
+      return Ho(this.alpha, this.beta);
+    }), m(nn.prototype, "mean", function() {
+      return Wo(this.alpha, this.beta);
+    }), m(nn.prototype, "median", function() {
+      return rs(this.alpha, this.beta);
+    }), m(nn.prototype, "mode", function() {
+      return is(this.alpha, this.beta);
+    }), m(nn.prototype, "skewness", function() {
+      return as(this.alpha, this.beta);
+    }), m(nn.prototype, "stdev", function() {
+      return ts(this.alpha, this.beta);
+    }), m(nn.prototype, "variance", function() {
+      return os(this.alpha, this.beta);
+    }), o(nn.prototype, "cdf", function(e) {
+      return la(e, this.alpha, this.beta);
+    }), o(nn.prototype, "logcdf", function(e) {
+      return ga(e, this.alpha, this.beta);
+    }), o(nn.prototype, "logpdf", function(e) {
+      return fs(e, this.alpha, this.beta);
+    }), o(nn.prototype, "mgf", function(e) {
+      return vs(e, this.alpha, this.beta);
+    }), o(nn.prototype, "pdf", function(e) {
+      return ms(e, this.alpha, this.beta);
+    }), o(nn.prototype, "quantile", function(e) {
+      return ds(e, this.alpha, this.beta);
+    });
+    var jh = nn, gs = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e <= 0 ? 0 : e === H ? 1 : la(e / (1 + e), n, r);
+    }, Kh = la.factory;
+    o(gs, "factory", function(e, n) {
+      var r;
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : (r = Kh(e, n), function(a) {
+        return i(a) ? NaN : a <= 0 ? 0 : a === H ? 1 : r(a / (1 + a));
+      });
+    });
+    var Ns = gs, ys = function(e, n) {
+      var r, a, s;
+      return i(e) || e <= 0 || i(n) || n <= 4 ? NaN : (s = e * (r = e + n - 1) * (5 * n - 11) + (a = n - 1) * a * (a - 1), s *= 6, s /= e * r * (n - 3) * (n - 4));
+    }, bs = function(e, n) {
+      return e <= 0 || n <= 1 ? NaN : e / (n - 1);
+    }, ws = function(e, n) {
+      return e <= 0 || n <= 0 ? NaN : e < 1 ? 0 : (e - 1) / (n + 1);
+    }, xs = function(e, n) {
+      var r;
+      return i(e) || e <= 0 || i(n) || n <= 3 ? NaN : (r = 2 * (2 * e + n - 1) / (n - 3), r *= c((n - 2) / (e * (e + n - 1))));
+    }, Ss = function(e, n) {
+      var r;
+      return i(e) || e <= 0 || i(n) || n <= 2 ? NaN : c(e * (e + (r = n - 1)) / ((r - 1) * r * r));
+    }, Ms = function(e, n) {
+      var r;
+      return i(e) || e <= 0 || i(n) || n <= 2 ? NaN : e * (e + (r = n - 1)) / ((r - 1) * r * r);
+    }, ks = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e <= 0 ? j : e === H ? 0 : ga(e / (1 + e), n, r);
+    }, Qh = ga.factory;
+    o(ks, "factory", function(e, n) {
+      var r;
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : (r = Qh(e, n), function(a) {
+        return i(a) ? NaN : a <= 0 ? j : a === H ? 0 : r(a / (1 + a));
+      });
+    });
+    var Ts = ks, Es = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e <= 0 ? j : (a = (n - 1) * M(e), a -= (n + r) * oe(e), a -= lr(n, r));
+    };
+    o(Es, "factory", function(e, n) {
+      var r;
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : (r = lr(e, n), function(a) {
+        var s;
+        return i(a) ? NaN : a <= 0 ? j : (s = (e - 1) * M(a), s -= (e + n) * oe(a), s -= r);
+      });
+    });
+    var ya = Es, Ps = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : R(ya(e, n, r));
+    }, $h = ya.factory;
+    o(Ps, "factory", function(e, n) {
+      var r;
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : (r = $h(e, n), function(a) {
+        return i(a) ? NaN : R(r(a));
+      });
+    });
+    var Vs = Ps, Cs = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 || e < 0 || e > 1 ? NaN : (a = Oi(e, n, r)) / (1 - a);
+    };
+    o(Cs, "factory", function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : function(r) {
+        var a;
+        return i(r) || r < 0 || r > 1 ? NaN : (a = Oi(r, e, n)) / (1 - a);
+      };
+    });
+    var As = Cs, ba = Ue.isPrimitive;
+    function Ln() {
+      var e, n;
+      if (!(this instanceof Ln))
+        return arguments.length === 0 ? new Ln() : new Ln(arguments[0], arguments[1]);
+      if (arguments.length) {
+        if (e = arguments[0], n = arguments[1], !ba(e))
+          throw new TypeError("invalid argument. First shape parameter `alpha` must be a positive number. Value: `" + e + "`");
+        if (!ba(n))
+          throw new TypeError("invalid argument. Second shape parameter `beta` must be a positive number. Value: `" + n + "`");
+      } else
+        e = 1, n = 1;
+      return l(this, "alpha", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(r) {
+        if (!ba(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        e = r;
+      } }), l(this, "beta", { configurable: !1, enumerable: !0, get: function() {
+        return n;
+      }, set: function(r) {
+        if (!ba(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        n = r;
+      } }), this;
+    }
+    m(Ln.prototype, "kurtosis", function() {
+      return ys(this.alpha, this.beta);
+    }), m(Ln.prototype, "mean", function() {
+      return bs(this.alpha, this.beta);
+    }), m(Ln.prototype, "mode", function() {
+      return ws(this.alpha, this.beta);
+    }), m(Ln.prototype, "skewness", function() {
+      return xs(this.alpha, this.beta);
+    }), m(Ln.prototype, "stdev", function() {
+      return Ss(this.alpha, this.beta);
+    }), m(Ln.prototype, "variance", function() {
+      return Ms(this.alpha, this.beta);
+    }), o(Ln.prototype, "cdf", function(e) {
+      return Ns(e, this.alpha, this.beta);
+    }), o(Ln.prototype, "logcdf", function(e) {
+      return Ts(e, this.alpha, this.beta);
+    }), o(Ln.prototype, "logpdf", function(e) {
+      return ya(e, this.alpha, this.beta);
+    }), o(Ln.prototype, "pdf", function(e) {
+      return Vs(e, this.alpha, this.beta);
+    }), o(Ln.prototype, "quantile", function(e) {
+      return As(e, this.alpha, this.beta);
+    });
+    var Zh = Ln, re = function(e) {
+      return Ne(e) === e && e >= 0;
+    }, Is = function(e, n, r) {
+      return i(e) || i(n) || i(r) || r < 0 || r > 1 || !re(n) || n === H ? NaN : e < 0 ? 0 : e >= n ? 1 : (e = Ne(e + 1e-7), Qe(r, e + 1, n - e, !0, !0));
+    };
+    o(Is, "factory", function(e, n) {
+      return i(e) || i(n) || n < 0 || n > 1 || !re(e) || e === H ? N(NaN) : function(r) {
+        return i(r) ? NaN : r < 0 ? 0 : r >= e ? 1 : (r = Ne(r + 1e-7), Qe(n, r + 1, e - r, !0, !0));
+      };
+    });
+    var ti = Is, Bs = function(e) {
+      return e < H && e > j && pe(e);
+    }, Jh = Ge.isPrimitive, Rs = function(e) {
+      return Jh(e) && Bs(e);
+    }, Xh = Ge.isObject, Ls = function(e) {
+      return Xh(e) && Bs(e.valueOf());
+    }, B0 = function(e) {
+      return Rs(e) || Ls(e);
+    };
+    o(B0, "isPrimitive", Rs), o(B0, "isObject", Ls);
+    var Di = B0, Yh = Di.isPrimitive, qs = function(e) {
+      return Yh(e) && e > 0;
+    }, _h = Di.isObject, Fs = function(e) {
+      return _h(e) && e.valueOf() > 0;
+    }, R0 = function(e) {
+      return qs(e) || Fs(e);
+    };
+    o(R0, "isPrimitive", qs), o(R0, "isObject", Fs);
+    var Os = R0, Ds = function(e, n) {
+      var r;
+      return i(e) || i(n) || n < 0 || n > 1 || !re(e) || e === H ? NaN : (1 - 6 * (r = n * (1 - n))) / (e * r);
+    }, L0 = function(e, n) {
+      return i(e) || i(n) || n < 0 || n > 1 || !re(e) || e === H ? NaN : e * n;
+    }, Us = function(e, n) {
+      return i(e) || i(n) || n < 0 || n > 1 || !re(e) || e === H ? NaN : jn(L0(e, n));
+    }, Hs = function(e, n) {
+      return i(e) || i(n) || n < 0 || n > 1 || !re(e) || e === H ? NaN : Ne((e + 1) * n);
+    }, Ws = function(e, n) {
+      return i(e) || i(n) || n < 0 || n > 1 || !re(e) || e === H ? NaN : (1 - 2 * n) / c(e * n * (1 - n));
+    }, Gs = function(e, n) {
+      return i(e) || i(n) || n < 0 || n > 1 || !re(e) || e === H ? NaN : c(e * n * (1 - n));
+    }, zs = function(e, n) {
+      return i(e) || i(n) || n < 0 || n > 1 || !re(e) || e === H ? NaN : e * n * (1 - n);
+    }, wa = function e(n, r) {
+      return i(n) || i(r) ? NaN : pe(n) && pe(r) ? n < 0 ? e(-n + r - 1, r) : r < 0 ? j : r === 0 ? 0 : r === 1 ? M(J(n)) : n < r ? j : n - r < 2 ? e(n, n - r) : -M(n + 1) - lr(n - r + 1, r + 1) : NaN;
+    }, js = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || r < 0 || r > 1 || !re(n) || n === H ? NaN : re(e) ? e > n ? j : r === 0 ? e === 0 ? 0 : j : r === 1 ? e === n ? 0 : j : (a = wa(n, e), a += e * M(r) + (n - e) * oe(-r)) : j;
+    }, Ks = function(e, n) {
+      return i(e) || i(n) ? NaN : e === n ? 0 : j;
+    };
+    o(Ks, "factory", function(e) {
+      return i(e) ? N(NaN) : function(n) {
+        return i(n) ? NaN : n === e ? 0 : j;
+      };
+    });
+    var xa = Ks, Qs = xa.factory;
+    o(js, "factory", function(e, n) {
+      return i(e) || i(n) || !re(e) || e === H || n < 0 || n > 1 ? N(NaN) : n === 0 || e === 0 ? Qs(0) : n === 1 ? Qs(e) : function(r) {
+        var a;
+        return i(r) ? NaN : re(r) ? r > e ? j : (a = wa(e, r), a += r * M(n) + (e - r) * oe(-n)) : j;
+      };
+    });
+    var $s = js, Zs = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || r < 0 || r > 1 || !re(n) || n === H ? NaN : (a = 1 - r + r * R(e), V(a, n));
+    };
+    o(Zs, "factory", function(e, n) {
+      return i(e) || i(n) || n < 0 || n > 1 || !re(e) || e === H ? N(NaN) : function(r) {
+        var a;
+        return i(r) ? NaN : (a = 1 - n + n * R(r), V(a, e));
+      };
+    });
+    var Js = Zs, Xs = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || r < 0 || r > 1 || !re(n) || n === H ? NaN : re(e) ? e > n ? 0 : r === 0 ? e === 0 ? 1 : 0 : r === 1 ? e === n ? 1 : 0 : (a = wa(n, e), a += e * M(r) + (n - e) * oe(-r), R(a)) : 0;
+    }, Ys = function(e, n) {
+      return i(e) || i(n) ? NaN : e === n ? 1 : 0;
+    };
+    o(Ys, "factory", function(e) {
+      return i(e) ? N(NaN) : function(n) {
+        return i(n) ? NaN : n === e ? 1 : 0;
+      };
+    });
+    var Sa = Ys, _s = Sa.factory;
+    o(Xs, "factory", function(e, n) {
+      return i(e) || i(n) || !re(e) || e === H || n < 0 || n > 1 ? N(NaN) : n === 0 || e === 0 ? _s(0) : n === 1 ? _s(e) : function(r) {
+        var a;
+        return i(r) ? NaN : re(r) ? r > e ? 0 : (a = wa(e, r), a += r * M(n) + (e - r) * oe(-n), R(a)) : 0;
+      };
+    });
+    var eu = Xs, nu = function(e, n, r, a) {
+      for (; e !== 0 && ti(e - 1, r, a) >= n; )
+        e -= 1;
+      return e;
+    }, ru = function(e, n, r, a) {
+      for (e += 1; ti(e, r, a) < n; )
+        e += 1;
+      return e;
+    }, iu = function(e, n, r) {
+      var a, s, u, p, k;
+      return i(e) || i(n) || i(r) || e < 0 || e > 1 || r < 0 || r > 1 || !re(n) || n === H ? NaN : e === 1 || r === 1 ? n : e === 0 || r === 0 || n === 0 ? 0 : (p = n * r, a = 1 / (u = c(n * r * (1 - r))), k = e < 0.5 ? -$e(2 * e) * Pe : $e(2 * (1 - e)) * Pe, s = jn(p + u * (k + a * (k * k - 1) / 6)), ti(s, n, r) >= e ? nu(s, e, n, r) : ru(s, e, n, r));
+    }, au = function(e, n) {
+      return i(e) || e < 0 || e > 1 ? NaN : n;
+    };
+    o(au, "factory", function(e) {
+      return i(e) ? N(NaN) : function(n) {
+        return i(n) || n < 0 || n > 1 ? NaN : e;
+      };
+    });
+    var kr = au, tu = kr.factory;
+    o(iu, "factory", function(e, n) {
+      var r, a, s;
+      return i(e) || i(n) || !re(e) || e === H || n < 0 || n > 1 ? N(NaN) : n === 0 || e === 0 ? tu(0) : n === 1 ? tu(e) : (s = e * n, a = c(e * n * (1 - n)), r = 1 / a, function(u) {
+        var p, k;
+        return i(u) || u < 0 || u > 1 ? NaN : u === 0 ? 0 : u === 1 ? e : (k = u < 0.5 ? -$e(2 * u) * Pe : $e(2 * (1 - u)) * Pe, p = jn(s + a * (k + r * (k * k - 1) / 6)), ti(p, e, n) >= u ? nu(p, u, e, n) : ru(p, u, e, n));
+      });
+    });
+    var ou = iu, su = Os.isPrimitive, uu = ta.isPrimitive;
+    function Pn() {
+      var e, n;
+      if (!(this instanceof Pn))
+        return arguments.length === 0 ? new Pn() : new Pn(arguments[0], arguments[1]);
+      if (arguments.length) {
+        if (e = arguments[0], n = arguments[1], !su(e))
+          throw new TypeError("invalid argument. Number of trials `n` must be a positive integer. Value: `" + e + "`");
+        if (!uu(n))
+          throw new TypeError("invalid argument. Success probability `p` must be a number between 0 and 1. Value: `" + n + "`");
+      } else
+        e = 1, n = 0.5;
+      return l(this, "n", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(r) {
+        if (!su(r))
+          throw new TypeError("invalid value. Must be a positive integer. Value: `" + r + "`");
+        e = r;
+      } }), l(this, "p", { configurable: !1, enumerable: !0, get: function() {
+        return n;
+      }, set: function(r) {
+        if (!uu(r))
+          throw new TypeError("invalid value. Must be a number between 0 and 1. Value: `" + r + "`");
+        n = r;
+      } }), this;
+    }
+    m(Pn.prototype, "kurtosis", function() {
+      return Ds(this.n, this.p);
+    }), m(Pn.prototype, "mean", function() {
+      return L0(this.n, this.p);
+    }), m(Pn.prototype, "median", function() {
+      return Us(this.n, this.p);
+    }), m(Pn.prototype, "mode", function() {
+      return Hs(this.n, this.p);
+    }), m(Pn.prototype, "skewness", function() {
+      return Ws(this.n, this.p);
+    }), m(Pn.prototype, "stdev", function() {
+      return Gs(this.n, this.p);
+    }), m(Pn.prototype, "variance", function() {
+      return zs(this.n, this.p);
+    }), o(Pn.prototype, "cdf", function(e) {
+      return ti(e, this.n, this.p);
+    }), o(Pn.prototype, "logpmf", function(e) {
+      return $s(e, this.n, this.p);
+    }), o(Pn.prototype, "mgf", function(e) {
+      return Js(e, this.n, this.p);
+    }), o(Pn.prototype, "pmf", function(e) {
+      return eu(e, this.n, this.p);
+    }), o(Pn.prototype, "quantile", function(e) {
+      return ou(e, this.n, this.p);
+    });
+    var ed = Pn, nd = function(e, n) {
+      var r, a, s, u;
+      if (i(e) || i(n) || n < 0 || n > 1 || !re(e) || e === H)
+        return NaN;
+      if (n === 0 || n === 1 || e === 0)
+        return 0;
+      for (r = e * M(u = 1 - n), a = R(r) * r, s = 1; s <= e; s++)
+        r += M((e - s + 1) / s) + M(n / u), a += R(r) * r;
+      return -a;
+    }, rd = function(e) {
+      return !!(Ke(e) >>> 31);
+    }, id = function(e) {
+      return e === 0 ? -64.85021904942025 : e * (e * (e * (-0.8750608600031904 * e - 16.157537187333652) - 75.00855792314705) - 122.88666844901361) - 64.85021904942025;
+    }, ad = function(e) {
+      return e === 0 ? 194.5506571482614 : 194.5506571482614 + e * (485.3903996359137 + e * (432.88106049129027 + e * (165.02700983169885 + e * (24.858464901423062 + 1 * e))));
+    }, fu = 6123233995736766e-32, td = 2.414213562373095, od = function(e) {
+      var n, r, a, s;
+      return i(e) || e === 0 ? e : e === H ? gr : e === j ? -gr : (e < 0 && (r = !0, e = -e), n = 0, e > td ? (a = gr, n = 1, e = -1 / e) : e <= 0.66 ? a = 0 : (a = E, n = 2, e = (e - 1) / (e + 1)), s = e * (s = (s = e * e) * id(s) / ad(s)) + e, n === 2 ? s += 0.5 * fu : n === 1 && (s += fu), a += s, r ? -a : a);
+    }, Ma = function(e, n) {
+      var r;
+      return i(n) || i(e) ? NaN : Yn(n) ? n === H ? Yn(e) ? Rn(T / 4, e) : Rn(0, e) : Yn(e) ? Rn(3 * T / 4, e) : Rn(T, e) : Yn(e) ? Rn(T / 2, e) : e === 0 ? n >= 0 && !rd(n) ? Rn(0, e) : Rn(T, e) : n === 0 ? Rn(T / 2, e) : (r = od(e / n), n < 0 ? r <= 0 ? r + T : r - T : r);
+    }, sd = 0.3183098861837907, cu = function(e, n, r) {
+      return i(e) || i(r) || i(n) || r <= 0 ? NaN : sd * Ma(e - n, r) + 0.5;
+    }, ud = 0.3183098861837907;
+    o(cu, "factory", function(e, n) {
+      return i(n) || i(e) || n <= 0 ? N(NaN) : function(r) {
+        return i(r) ? NaN : ud * Ma(r - e, n) + 0.5;
+      };
+    });
+    var lu = cu, fd = Ge.isPrimitive, vu = function(e) {
+      return fd(e) && i(e);
+    }, cd = Ge.isObject, pu = function(e) {
+      return cd(e) && i(e.valueOf());
+    }, q0 = function(e) {
+      return vu(e) || pu(e);
+    };
+    o(q0, "isPrimitive", vu), o(q0, "isObject", pu);
+    var Vn = q0, mu = function(e, n) {
+      return i(n) || i(e) || n <= 0 ? NaN : M(n) + M(4 * T);
+    }, hu = function(e, n) {
+      return i(n) || i(e) || n <= 0 ? NaN : e;
+    }, du = function(e, n) {
+      return i(n) || i(e) || n <= 0 ? NaN : e;
+    }, ld = 0.3183098861837907, gu = function(e, n, r) {
+      return i(e) || i(r) || i(n) || r <= 0 ? NaN : M(ld * Ma(e - n, r) + 0.5);
+    }, vd = 0.3183098861837907;
+    o(gu, "factory", function(e, n) {
+      return i(n) || i(e) || n <= 0 ? N(NaN) : function(r) {
+        return i(r) ? NaN : M(vd * Ma(r - e, n) + 0.5);
+      };
+    });
+    var Nu = gu, yu = function(e, n, r) {
+      return i(e) || i(r) || i(n) || r <= 0 ? NaN : -(ei + M(r) + oe(V((e - n) / r, 2)));
+    };
+    o(yu, "factory", function(e, n) {
+      return i(n) || i(e) || n <= 0 ? N(NaN) : function(r) {
+        return i(r) ? NaN : -(ei + M(n) + oe(V((r - e) / n, 2)));
+      };
+    });
+    var bu = yu, wu = function(e, n, r) {
+      return i(e) || i(r) || i(n) || r <= 0 ? NaN : 1 / (T * r * (1 + V((e - n) / r, 2)));
+    };
+    o(wu, "factory", function(e, n) {
+      var r;
+      return i(n) || i(e) || n <= 0 ? N(NaN) : (r = n * T, function(a) {
+        return i(a) ? NaN : 1 / (r * (1 + V((a - e) / n, 2)));
+      });
+    });
+    var xu = wu, Su = function(e, n, r) {
+      return i(n) || i(r) || r <= 0 || i(e) || e < 0 || e > 1 ? NaN : n + r * k0(T * (e - 0.5));
+    };
+    o(Su, "factory", function(e, n) {
+      return i(e) || i(n) || n <= 0 ? N(NaN) : function(r) {
+        return i(r) || r < 0 || r > 1 ? NaN : e + n * k0(T * (r - 0.5));
+      };
+    });
+    var Mu = Su, ku = Ue.isPrimitive, Tu = Ge.isPrimitive;
+    function rr() {
+      var e, n;
+      if (!(this instanceof rr))
+        return arguments.length === 0 ? new rr() : new rr(arguments[0], arguments[1]);
+      if (arguments.length) {
+        if (n = arguments[0], e = arguments[1], !Tu(n) || Vn(n))
+          throw new TypeError("invalid argument. Location parameter `x0` must be a number primitive. Value: `" + n + "`");
+        if (!ku(e))
+          throw new TypeError("invalid argument. Scale parameter `gamma` must be a positive number. Value: `" + e + "`");
+      } else
+        n = 0, e = 1;
+      return l(this, "x0", { configurable: !1, enumerable: !0, get: function() {
+        return n;
+      }, set: function(r) {
+        if (!Tu(r) || Vn(r))
+          throw new TypeError("invalid value. Must be a number primitive. Value: `" + r + "`");
+        n = r;
+      } }), l(this, "gamma", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(r) {
+        if (!ku(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        e = r;
+      } }), this;
+    }
+    m(rr.prototype, "entropy", function() {
+      return mu(this.x0, this.gamma);
+    }), m(rr.prototype, "median", function() {
+      return hu(this.x0, this.gamma);
+    }), m(rr.prototype, "mode", function() {
+      return du(this.x0, this.gamma);
+    }), o(rr.prototype, "cdf", function(e) {
+      return lu(e, this.x0, this.gamma);
+    }), o(rr.prototype, "logcdf", function(e) {
+      return Nu(e, this.x0, this.gamma);
+    }), o(rr.prototype, "logpdf", function(e) {
+      return bu(e, this.x0, this.gamma);
+    }), o(rr.prototype, "pdf", function(e) {
+      return xu(e, this.x0, this.gamma);
+    }), o(rr.prototype, "quantile", function(e) {
+      return Mu(e, this.x0, this.gamma);
+    });
+    var pd = rr, Eu = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n < 0 || r <= 0 ? NaN : n === 0 ? e < 0 ? 0 : 1 : e <= 0 ? 0 : e === H ? 1 : fr(e * r, n);
+    }, Pu = function(e, n) {
+      return i(e) || i(n) ? NaN : e < n ? 0 : 1;
+    };
+    o(Pu, "factory", function(e) {
+      return i(e) ? N(NaN) : function(n) {
+        return i(n) ? NaN : n < e ? 0 : 1;
+      };
+    });
+    var Tr = Pu, md = Tr.factory;
+    o(Eu, "factory", function(e, n) {
+      return i(e) || i(n) || e < 0 || n <= 0 ? N(NaN) : e === 0 ? md(0) : function(r) {
+        return r <= 0 ? 0 : r === H ? 1 : fr(r * n, e);
+      };
+    });
+    var Er = Eu, Vu = function(e, n) {
+      return i(e) || i(n) || n < 0 ? NaN : n === 0 ? e < 0 ? 0 : 1 : e <= 0 ? 0 : Er(e * e, n / 2, 0.5);
+    }, hd = Tr.factory, dd = Er.factory;
+    o(Vu, "factory", function(e) {
+      var n;
+      return e === 0 ? hd(0) : (n = dd(e / 2, 0.5), function(r) {
+        return i(r) ? NaN : r < 0 ? 0 : n(r * r);
+      });
+    });
+    var Cu = Vu, Au = function(e) {
+      var n;
+      return i(e) || e <= 0 ? NaN : ke(n = e / 2) + 0.5 * (e - Oe - (e - 1) * Qn(n));
+    }, oi = function(e) {
+      return i(e) || e < 0 ? NaN : Pe * ve((e + 1) / 2) / ve(e / 2);
+    }, ka = function(e) {
+      var n;
+      return i(e) || e < 0 ? NaN : e - (n = oi(e)) * n;
+    }, F0 = function(e) {
+      var n, r;
+      return i(e) || e <= 0 ? NaN : oi(e) / ((n = (r = c(ka(e))) * r) * r) * (1 - 2 * n);
+    }, Iu = function(e) {
+      var n, r;
+      return i(e) || e <= 0 ? NaN : (n = ka(e), r = c(n), 2 / n * (1 - oi(e) * r * F0(e) - n));
+    }, Bu = function(e) {
+      return i(e) || e < 1 ? NaN : c(e - 1);
+    }, Ru = function(e) {
+      var n;
+      return i(e) || e < 0 ? NaN : (n = oi(e), c(e - n * n));
+    }, Lu = function(e, n) {
+      var r, a;
+      return i(e) || i(n) || n < 0 ? NaN : n === 0 ? e === 0 ? H : j : e < 0 || e === H ? j : (r = (1 - (a = n / 2)) * Oe + (n - 1) * M(e) - e * e / 2, r -= ke(a));
+    }, qu = function(e, n) {
+      return i(e) || i(n) ? NaN : e === n ? H : j;
+    };
+    o(qu, "factory", function(e) {
+      return i(e) ? N(NaN) : function(n) {
+        return i(n) ? NaN : n === e ? H : j;
+      };
+    });
+    var Hr = qu, gd = Hr.factory;
+    o(Lu, "factory", function(e) {
+      var n, r;
+      return i(e) || e < 0 ? N(NaN) : e === 0 ? gd(0) : (r = e / 2, n = e - 1, function(a) {
+        var s;
+        return i(a) ? NaN : a < 0 || a === H ? j : (s = (1 - r) * Oe + n * M(a) - a * a / 2, s -= ke(r));
+      });
+    });
+    var Fu = Lu, Ou = function(e, n) {
+      var r, a;
+      return i(e) || i(n) || n < 0 ? NaN : n === 0 ? e === 0 ? H : 0 : e < 0 ? 0 : (r = V(2, 1 - (a = n / 2)) * V(e, n - 1) * R(-e * e / 2), r /= ve(a));
+    }, Du = function(e, n) {
+      return i(e) || i(n) ? NaN : e === n ? H : 0;
+    };
+    o(Du, "factory", function(e) {
+      return i(e) ? N(NaN) : function(n) {
+        return i(n) ? NaN : n === e ? H : 0;
+      };
+    });
+    var Wr = Du, Nd = Wr.factory;
+    o(Ou, "factory", function(e) {
+      var n, r;
+      return i(e) || e < 0 ? N(NaN) : e === 0 ? Nd(0) : (r = e / 2, n = e - 1, function(a) {
+        var s;
+        return i(a) ? NaN : a < 0 ? 0 : (s = V(2, 1 - r) * V(a, n) * R(-a * a / 2), s /= ve(r));
+      });
+    });
+    var Uu = Ou, Hu = function(e, n, r) {
+      return i(n) || i(r) || i(e) || n < 0 || r <= 0 || e < 0 || e > 1 ? NaN : n === 0 ? 0 : 1 / r * ii(e, n);
+    }, yd = kr.factory;
+    o(Hu, "factory", function(e, n) {
+      return i(e) || i(n) || e < 0 || n <= 0 ? N(NaN) : e === 0 ? yd(0) : function(r) {
+        return i(r) || r < 0 || r > 1 ? NaN : 1 / n * ii(r, e);
+      };
+    });
+    var Gr = Hu, Wu = function(e, n) {
+      return c(Gr(e, n / 2, 0.5));
+    }, bd = Gr.factory;
+    o(Wu, "factory", function(e) {
+      var n = bd(e / 2, 0.5);
+      return function(r) {
+        return c(n(r));
+      };
+    });
+    var Gu = Wu, zu = Ue.isPrimitive;
+    function qn() {
+      var e;
+      if (!(this instanceof qn))
+        return arguments.length === 0 ? new qn() : new qn(arguments[0]);
+      if (arguments.length) {
+        if (e = arguments[0], !zu(e))
+          throw new TypeError("invalid argument. Rate parameter `k` must be a positive number. Value: `" + e + "`");
+      } else
+        e = 1;
+      return l(this, "k", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(n) {
+        if (!zu(n))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + n + "`");
+        e = n;
+      } }), this;
+    }
+    m(qn.prototype, "entropy", function() {
+      return Au(this.k);
+    }), m(qn.prototype, "kurtosis", function() {
+      return Iu(this.k);
+    }), m(qn.prototype, "mean", function() {
+      return oi(this.k);
+    }), m(qn.prototype, "mode", function() {
+      return Bu(this.k);
+    }), m(qn.prototype, "skewness", function() {
+      return F0(this.k);
+    }), m(qn.prototype, "stdev", function() {
+      return Ru(this.k);
+    }), m(qn.prototype, "variance", function() {
+      return ka(this.k);
+    }), o(qn.prototype, "cdf", function(e) {
+      return Cu(e, this.k);
+    }), o(qn.prototype, "logpdf", function(e) {
+      return Fu(e, this.k);
+    }), o(qn.prototype, "pdf", function(e) {
+      return Uu(e, this.k);
+    }), o(qn.prototype, "quantile", function(e) {
+      return Gu(e, this.k);
+    });
+    var wd = qn, ju = function(e, n) {
+      return Er(e, n / 2, 0.5);
+    }, xd = Er.factory;
+    o(ju, "factory", function(e) {
+      return xd(e / 2, 0.5);
+    });
+    var Ku = ju, Qu = function(e) {
+      var n;
+      return i(e) || e <= 0 ? NaN : (n = e / 2) + M(2 * ve(n)) + (1 - n) * Qn(n);
+    }, $u = function(e) {
+      return i(e) || e <= 0 ? NaN : 12 / e;
+    }, Zu = function(e) {
+      return i(e) || e < 0 ? NaN : e;
+    }, Ju = function(e, n) {
+      return Gr(e, n / 2, 0.5);
+    }, Sd = Gr.factory;
+    o(Ju, "factory", function(e) {
+      return Sd(e / 2, 0.5);
+    });
+    var O0 = Ju, Xu = function(e) {
+      return O0(0.5, e);
+    }, Yu = function(e) {
+      return i(e) || e < 0 ? NaN : Ee(e - 2, 0);
+    }, _u = function(e) {
+      return i(e) || e <= 0 ? NaN : c(8 / e);
+    }, e1 = function(e) {
+      return i(e) || e < 0 ? NaN : c(2 * e);
+    }, n1 = function(e) {
+      return i(e) || e < 0 ? NaN : 2 * e;
+    }, r1 = function(e, n) {
+      return i(e) || i(n) || n < 0 || e >= 0.5 ? NaN : V(1 - 2 * e, -n / 2);
+    };
+    o(r1, "factory", function(e) {
+      return i(e) || e < 0 ? N(NaN) : function(n) {
+        return i(n) || n >= 0.5 ? NaN : V(1 - 2 * n, -e / 2);
+      };
+    });
+    var i1 = r1, Md = function(e, n) {
+      var r, a, s, u, p, k, y;
+      return y = (n - e - qe + 0.5) / (s = e + qe - 0.5), e < 1 ? n <= de ? R(e * M(n) - n - ke(e)) : V(n, e) * R(-n) / ve(e) : (J(y * y * e) <= 100 && e > 150 ? (r = e * (oe(y) - y) + n * (0.5 - qe) / s, r = R(r)) : (u = e * M(n / s), Se(u, p = e - n) <= de || Ee(u, p) >= fe ? (a = p / e, Se(u, p) / 2 > de && Ee(u, p) / 2 < fe ? r = (k = V(n / s, e / 2) * R(p / 2)) * k : Se(u, p) / 4 > de && Ee(u, p) / 4 < fe && n > e ? (r = (k = V(n / s, e / 4) * R(p / 4)) * k, r *= r) : r = a > de && a < fe ? V(n * R(a) / s, e) : R(u + p)) : r = V(n / s, e) * R(p)), r *= c(s / Kn) / Xe(e));
+    }, kd = function(e, n) {
+      var r, a, s, u, p, k, y;
+      return y = (n - e - qe + 0.5) / (s = e + qe - 0.5), e < 1 ? n <= de ? R(e * M(n) - n - ke(e)) : V(n, e) * R(-n) / ve(e) : (J(y * y * e) <= 100 && e > 150 ? (r = e * (oe(y) - y) + n * (0.5 - qe) / s, r = R(r)) : (u = e * M(n / s), Se(u, p = e - n) <= de || Ee(u, p) >= fe ? (a = p / e, Se(u, p) / 2 > de && Ee(u, p) / 2 < fe ? r = (k = V(n / s, e / 2) * R(p / 2)) * k : Se(u, p) / 4 > de && Ee(u, p) / 4 < fe && n > e ? (r = (k = V(n / s, e / 4) * R(p / 4)) * k, r *= r) : r = a > de && a < fe ? V(n * R(a) / s, e) : R(u + p)) : r = V(n / s, e) * R(p)), r *= c(s / Kn) / Xe(e));
+    }, a1 = function(e, n) {
+      var r;
+      return e <= 0 ? NaN : n < 0 ? NaN : n === 0 ? e > 1 ? 0 : e === 1 ? 1 : H : (r = kd(e, n), n < 1 && Tn * n < r ? H : (r === 0 ? (r = e * M(n) - n - ke(e) - M(n), r = R(r)) : r /= n, r));
+    }, t1 = function(e, n) {
+      var r;
+      return e <= 0 ? NaN : n < 0 ? NaN : n === 0 ? e > 1 ? 0 : e === 1 ? 1 : H : (r = Md(e, n), n < 1 && Tn * n < r ? H : (r === 0 ? (r = e * M(n) - n - ke(e) - M(n), r = R(r)) : r /= n, r));
+    }, o1 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n < 0 || r <= 0 ? NaN : e < 0 || e === H ? 0 : n === 0 ? e === 0 ? H : 0 : t1(n, e * r) * r;
+    }, Td = Wr.factory;
+    o(o1, "factory", function(e, n) {
+      return i(e) || i(n) || e < 0 || n <= 0 ? N(NaN) : e === 0 ? Td(0) : function(r) {
+        return i(r) ? NaN : r < 0 || r === H ? 0 : t1(e, r * n) * n;
+      };
+    });
+    var si = o1, s1 = function(e, n) {
+      return si(e, n / 2, 0.5);
+    }, Ed = si.factory;
+    o(s1, "factory", function(e) {
+      return Ed(e / 2, 0.5);
+    });
+    var u1 = s1, f1 = Ue.isPrimitive;
+    function Cn() {
+      var e;
+      if (!(this instanceof Cn))
+        return arguments.length === 0 ? new Cn() : new Cn(arguments[0]);
+      if (arguments.length) {
+        if (e = arguments[0], !f1(e))
+          throw new TypeError("invalid argument. Rate parameter `k` must be a positive number. Value: `" + e + "`");
+      } else
+        e = 1;
+      return l(this, "k", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(n) {
+        if (!f1(n))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + n + "`");
+        e = n;
+      } }), this;
+    }
+    m(Cn.prototype, "entropy", function() {
+      return Qu(this.k);
+    }), m(Cn.prototype, "kurtosis", function() {
+      return $u(this.k);
+    }), m(Cn.prototype, "mean", function() {
+      return Zu(this.k);
+    }), m(Cn.prototype, "median", function() {
+      return Xu(this.k);
+    }), m(Cn.prototype, "mode", function() {
+      return Yu(this.k);
+    }), m(Cn.prototype, "skewness", function() {
+      return _u(this.k);
+    }), m(Cn.prototype, "stdev", function() {
+      return e1(this.k);
+    }), m(Cn.prototype, "variance", function() {
+      return n1(this.k);
+    }), o(Cn.prototype, "cdf", function(e) {
+      return Ku(e, this.k);
+    }), o(Cn.prototype, "mgf", function(e) {
+      return i1(e, this.k);
+    }), o(Cn.prototype, "pdf", function(e) {
+      return u1(e, this.k);
+    }), o(Cn.prototype, "quantile", function(e) {
+      return O0(e, this.k);
+    });
+    var Pd = Cn, c1 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n < 0 || r <= 0 ? NaN : e < 0 || e === H ? j : n === 0 ? e === 0 ? H : j : M(a1(n, e * r)) + M(r);
+    }, Vd = Hr.factory;
+    o(c1, "factory", function(e, n) {
+      return i(e) || i(n) || e < 0 || n <= 0 ? N(NaN) : e === 0 ? Vd(0) : function(r) {
+        return i(r) ? NaN : r < 0 || r === H ? j : M(a1(e, r * n)) + M(n);
+      };
+    });
+    var ui = c1, l1 = function(e, n) {
+      return ui(e, n / 2, 0.5);
+    }, Cd = ui.factory;
+    o(l1, "factory", function(e) {
+      return Cd(e / 2, 0.5);
+    });
+    var Ad = l1, v1 = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || r < 0 ? NaN : r === 0 ? e < n ? 0 : 1 : e < n - r ? 0 : e > n + r ? 1 : (1 + (a = (e - n) / r) + Lr(a) / T) / 2;
+    }, Id = Tr.factory;
+    o(v1, "factory", function(e, n) {
+      return i(e) || i(n) || n < 0 ? N(NaN) : n === 0 ? Id(e) : function(r) {
+        var a;
+        return i(r) ? NaN : r < e - n ? 0 : r > e + n ? 1 : (1 + (a = (r - e) / n) + Lr(a) / T) / 2;
+      };
+    });
+    var D0 = v1, or = 9.869604401089358, p1 = function(e, n) {
+      var r;
+      return i(e) || i(n) || n <= 0 ? NaN : (r = 6 * (90 - or * or), r /= 5 * V(or - 6, 2));
+    }, m1 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : e;
+    }, h1 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : e;
+    }, d1 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : e;
+    }, g1 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : 0;
+    }, N1 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : n * c(1 / 3 - 2 / or);
+    }, y1 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : n * n * (1 / 3 - 2 / or);
+    }, b1 = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || r < 0 ? NaN : r === 0 ? e < n ? j : 0 : e < n - r ? j : e > n + r ? 0 : M((1 + (a = (e - n) / r) + Lr(a) / T) / 2);
+    }, w1 = function(e, n) {
+      return i(e) || i(n) ? NaN : e < n ? j : 0;
+    };
+    o(w1, "factory", function(e) {
+      return i(e) ? N(NaN) : function(n) {
+        return i(n) ? NaN : n < e ? j : 0;
+      };
+    });
+    var fi = w1, Bd = fi.factory;
+    o(b1, "factory", function(e, n) {
+      return i(e) || i(n) || n < 0 ? N(NaN) : n === 0 ? Bd(e) : function(r) {
+        var a;
+        return i(r) ? NaN : r < e - n ? j : r > e + n ? 0 : M((1 + (a = (r - e) / n) + Lr(a) / T) / 2);
+      };
+    });
+    var x1 = b1, S1 = 9007199254740991;
+    S1 += 1;
+    var Ta = function(e) {
+      var n, r, a, s;
+      return i(e) ? NaN : Yn(e) ? NaN : (n = J(e)) > S1 ? 1 : (a = n - (r = Ne(n))) == 0.5 ? 0 : (s = a < 0.25 ? Kr(T * a) : a < 0.75 ? ar(T * (a = 0.5 - a)) : -Kr(T * (a = 1 - a)), r % 2 == 1 ? -s : s);
+    }, M1 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || r < 0 ? NaN : r === 0 ? e === n ? H : j : e < n - r || e > n + r ? j : M(1 + Ta((e - n) / r)) - M(2 * r);
+    }, Rd = Hr.factory;
+    o(M1, "factory", function(e, n) {
+      return i(e) || i(n) || n < 0 ? N(NaN) : n === 0 ? Rd(e) : function(r) {
+        return i(r) ? NaN : r < e - n || r > e + n ? j : M(1 + Ta((r - e) / n)) - M(2 * n);
+      };
+    });
+    var k1 = M1, Ld = function(e) {
+      var n, r;
+      return e === 0 ? 0.16666666666666666 : ((e < 0 ? -e : e) <= 1 ? (n = e * (e * (-0.789474443963537 * e - 163.72585752598383) - 11561.443576500522) - 351754.9648081514, r = e * (36157.827983443196 + e * (1 * e - 277.7110814206028)) - 2.1105297888489086e6) : (n = (e = 1 / e) * (e * (-351754.9648081514 * e - 11561.443576500522) - 163.72585752598383) - 0.789474443963537, r = 1 + e * (e * (36157.827983443196 + -2.1105297888489086e6 * e) - 277.7110814206028)), n / r);
+    }, qd = 709.782712893384 + Oe, Fd = -708.3964185322641 - Oe, Od = 709.782712893384 - Oe, T1 = function(e) {
+      var n;
+      return e === 0 ? e : (n = J(e), e > qd || e < Fd ? e > 0 ? H : j : n > 1 ? n >= Od ? (n = R(0.5 * n), n *= 0.5 * n, e < 0 && (n = -n), n) : (n = 0.5 * (n = R(n)) - 0.5 / n, e < 0 && (n = -n), n) : e + e * (n *= n) * Ld(n));
+    }, E1 = function(e, n, r) {
+      var a, s;
+      return i(e) || i(n) || i(r) || r <= 0 ? NaN : (a = or * T1(s = r * e), a /= s * (or + s * s), a *= R(n * e));
+    };
+    o(E1, "factory", function(e, n) {
+      return i(e) || i(n) || n <= 0 ? N(NaN) : function(r) {
+        var a, s;
+        return i(r) ? NaN : (a = or * T1(s = n * r), a /= s * (or + s * s), a *= R(e * r));
+      };
+    });
+    var P1 = E1, V1 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || r < 0 ? NaN : r === 0 ? e === n ? H : 0 : e < n - r || e > n + r ? 0 : (1 + Ta((e - n) / r)) / (2 * r);
+    }, Dd = Wr.factory;
+    o(V1, "factory", function(e, n) {
+      return i(e) || i(n) || n < 0 ? N(NaN) : n === 0 ? Dd(e) : function(r) {
+        return i(r) ? NaN : r < e - n || r > e + n ? 0 : (1 + Ta((r - e) / n)) / (2 * n);
+      };
+    });
+    var C1 = V1, Ud = 1e4, Hd = 1e-12, A1 = function(e, n, r) {
+      var a, s, u, p;
+      for (p = 1, a = n - r, s = n + r; p < Ud; ) {
+        if (u = (a + s) / 2, s - a < Hd)
+          return u;
+        e > D0(u, n, r) ? a = u : s = u, p += 1;
+      }
+      return u;
+    }, I1 = function(e, n, r) {
+      return i(n) || i(r) || i(e) || r < 0 || e < 0 || e > 1 ? NaN : r === 0 ? n : A1(e, n, r);
+    }, Wd = kr.factory;
+    o(I1, "factory", function(e, n) {
+      return i(e) || i(n) || n < 0 ? N(NaN) : n === 0 ? Wd(e) : function(r) {
+        return i(r) || r < 0 || r > 1 ? NaN : A1(r, e, n);
+      };
+    });
+    var B1 = I1, R1 = Ue.isPrimitive, L1 = Ge.isPrimitive;
+    function hn() {
+      var e, n;
+      if (!(this instanceof hn))
+        return arguments.length === 0 ? new hn() : new hn(arguments[0], arguments[1]);
+      if (arguments.length) {
+        if (e = arguments[0], n = arguments[1], !L1(e) || Vn(e))
+          throw new TypeError("invalid argument. Location parameter `mu` must be a number primitive. Value: `" + e + "`");
+        if (!R1(n))
+          throw new TypeError("invalid argument. Scale parameter `s` must be a positive number. Value: `" + n + "`");
+      } else
+        e = 0, n = 1;
+      return l(this, "mu", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(r) {
+        if (!L1(r) || Vn(r))
+          throw new TypeError("invalid value. Must be a number primitive. Value: `" + r + "`");
+        e = r;
+      } }), l(this, "s", { configurable: !1, enumerable: !0, get: function() {
+        return n;
+      }, set: function(r) {
+        if (!R1(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        n = r;
+      } }), this;
+    }
+    m(hn.prototype, "kurtosis", function() {
+      return p1(this.mu, this.s);
+    }), m(hn.prototype, "mean", function() {
+      return m1(this.mu, this.s);
+    }), m(hn.prototype, "median", function() {
+      return h1(this.mu, this.s);
+    }), m(hn.prototype, "mode", function() {
+      return d1(this.mu, this.s);
+    }), m(hn.prototype, "skewness", function() {
+      return g1(this.mu, this.s);
+    }), m(hn.prototype, "stdev", function() {
+      return N1(this.mu, this.s);
+    }), m(hn.prototype, "variance", function() {
+      return y1(this.mu, this.s);
+    }), o(hn.prototype, "cdf", function(e) {
+      return D0(e, this.mu, this.s);
+    }), o(hn.prototype, "logcdf", function(e) {
+      return x1(e, this.mu, this.s);
+    }), o(hn.prototype, "logpdf", function(e) {
+      return k1(e, this.mu, this.s);
+    }), o(hn.prototype, "mgf", function(e) {
+      return P1(e, this.mu, this.s);
+    }), o(hn.prototype, "pdf", function(e) {
+      return C1(e, this.mu, this.s);
+    }), o(hn.prototype, "quantile", function(e) {
+      return B1(e, this.mu, this.s);
+    });
+    var Gd = hn, q1 = function(e) {
+      return i(e) ? NaN : 0;
+    }, F1 = function(e) {
+      return e;
+    }, O1 = function(e) {
+      return e;
+    }, D1 = function(e) {
+      return e;
+    }, U1 = function(e) {
+      return i(e) ? NaN : 0;
+    }, H1 = function(e) {
+      return i(e) ? NaN : 0;
+    }, W1 = function(e, n) {
+      return i(e) || i(n) ? NaN : R(n * e);
+    };
+    o(W1, "factory", function(e) {
+      return i(e) ? N(NaN) : function(n) {
+        return i(n) ? NaN : R(e * n);
+      };
+    });
+    var U0 = W1;
+    function rn() {
+      var e;
+      if (!(this instanceof rn))
+        return arguments.length === 0 ? new rn() : new rn(arguments[0]);
+      if (arguments.length) {
+        if (e = arguments[0], !Ge(e) || i(e))
+          throw new TypeError("invalid argument. Mean parameter `mu` must be a number. Value: `" + e + "`");
+      } else
+        e = 0;
+      return l(this, "mu", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(n) {
+        if (!Ge(n) || i(n))
+          throw new TypeError("invalid value. Must be a number. Value: `" + n + "`");
+        e = n;
+      } }), this;
+    }
+    m(rn.prototype, "entropy", function() {
+      return q1(this.mu);
+    }), m(rn.prototype, "mean", function() {
+      return F1(this.mu);
+    }), m(rn.prototype, "mode", function() {
+      return O1(this.mu);
+    }), m(rn.prototype, "median", function() {
+      return D1(this.mu);
+    }), m(rn.prototype, "stdev", function() {
+      return U1(this.mu);
+    }), m(rn.prototype, "variance", function() {
+      return H1(this.mu);
+    }), o(rn.prototype, "cdf", function(e) {
+      return Tr(e, this.mu);
+    }), o(rn.prototype, "logcdf", function(e) {
+      return fi(e, this.mu);
+    }), o(rn.prototype, "logpdf", function(e) {
+      return Hr(e, this.mu);
+    }), o(rn.prototype, "logpmf", function(e) {
+      return xa(e, this.mu);
+    }), o(rn.prototype, "mgf", function(e) {
+      return U0(e, this.mu);
+    }), o(rn.prototype, "pdf", function(e) {
+      return Wr(e, this.mu);
+    }), o(rn.prototype, "pmf", function(e) {
+      return Sa(e, this.mu);
+    }), o(rn.prototype, "quantile", function(e) {
+      return kr(e, this.mu);
+    });
+    var zd = rn, G1 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || !pe(n) || !pe(r) || n > r ? NaN : e < n ? 0 : e >= r ? 1 : (Ne(e) - n + 1) / (r - n + 1);
+    };
+    o(G1, "factory", function(e, n) {
+      var r, a;
+      return i(e) || i(n) || !pe(e) || !pe(n) || e > n ? N(NaN) : (r = e - 1, a = n - e + 1, function(s) {
+        return i(s) ? NaN : s < e ? 0 : s >= n ? 1 : (Ne(s) - r) / a;
+      });
+    });
+    var z1 = G1, j1 = function(e, n) {
+      return i(e) || i(n) || !pe(e) || !pe(n) || e > n ? NaN : M(n - e + 1);
+    }, K1 = function(e, n) {
+      var r;
+      return i(e) || i(n) || !pe(e) || !pe(n) || e > n ? NaN : -1.2 * ((r = V(n - e + 1, 2)) + 1) / (r - 1);
+    }, Q1 = function(e, n) {
+      return i(e) || i(n) || !pe(e) || !pe(n) || e > n ? NaN : e / 2 + n / 2;
+    }, $1 = function(e, n) {
+      return i(e) || i(n) || !pe(e) || !pe(n) || e > n ? NaN : e / 2 + n / 2;
+    }, Z1 = function(e, n) {
+      return i(e) || i(n) || !pe(e) || !pe(n) || e > n ? NaN : 0;
+    }, jd = c(1 / 12), J1 = function(e, n) {
+      return i(e) || i(n) || !pe(e) || !pe(n) || e > n ? NaN : jd * c(V(n - e + 1, 2) - 1);
+    }, X1 = function(e, n) {
+      return i(e) || i(n) || !pe(e) || !pe(n) || e > n ? NaN : (V(n - e + 1, 2) - 1) / 12;
+    }, Y1 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || !pe(n) || !pe(r) || n > r ? NaN : e < n ? j : e >= r ? 0 : M(Ne(e) - n + 1) - M(r - n + 1);
+    };
+    o(Y1, "factory", function(e, n) {
+      var r, a;
+      return i(e) || i(n) || !pe(e) || !pe(n) || e > n ? N(NaN) : (a = e - 1, r = M(n - e + 1), function(s) {
+        return i(s) ? NaN : s < e ? j : s >= n ? 0 : M(Ne(s) - a) - r;
+      });
+    });
+    var _1 = Y1, ef = function(e, n, r) {
+      return i(e) || i(n) || i(r) || !pe(n) || !pe(r) || n > r ? NaN : e < n || e > r || !pe(e) ? j : -M(r - n + 1);
+    };
+    o(ef, "factory", function(e, n) {
+      var r;
+      return i(e) || i(n) || !pe(e) || !pe(n) || e > n ? N(NaN) : (r = -M(n - e + 1), function(a) {
+        return i(a) ? NaN : a < e || a > n || !pe(a) ? j : r;
+      });
+    });
+    var nf = ef, rf = function(e, n, r) {
+      var a, s;
+      return i(e) || i(n) || i(r) || !pe(n) || !pe(r) || n > r ? NaN : e === 0 ? 1 : (s = r - n + 1, a = R(e * n) * Le(e * s), a /= s * Le(e));
+    };
+    o(rf, "factory", function(e, n) {
+      var r;
+      return i(e) || i(n) || !pe(e) || !pe(n) || e > n ? N(NaN) : (r = n - e + 1, function(a) {
+        var s;
+        return i(a) ? NaN : a === 0 ? 1 : (s = R(a * e) * Le(a * r), s /= r * Le(a));
+      });
+    });
+    var af = rf, tf = function(e, n, r) {
+      return i(e) || i(n) || i(r) || !pe(n) || !pe(r) || n > r ? NaN : e < n || e > r || !pe(e) ? 0 : 1 / (r - n + 1);
+    };
+    o(tf, "factory", function(e, n) {
+      var r;
+      return i(e) || i(n) || !pe(e) || !pe(n) || e > n ? N(NaN) : (r = 1 / (n - e + 1), function(a) {
+        return i(a) ? NaN : a < e || a > n || !pe(a) ? 0 : r;
+      });
+    });
+    var of = tf, sf = function(e, n, r) {
+      return i(e) || i(n) || i(r) || !pe(n) || !pe(r) || n > r || e < 0 || e > 1 ? NaN : n + Ne(e * (r - n + 1));
+    };
+    o(sf, "factory", function(e, n) {
+      var r;
+      return i(e) || i(n) || !pe(e) || !pe(n) || e > n ? N(NaN) : (r = n - e + 1, function(a) {
+        return i(a) || a < 0 || a > 1 ? NaN : e + Ne(a * r);
+      });
+    });
+    var uf = sf, Ea = Di.isPrimitive;
+    function dn() {
+      var e, n;
+      if (!(this instanceof dn))
+        return arguments.length === 0 ? new dn() : new dn(arguments[0], arguments[1]);
+      if (arguments.length) {
+        if (e = arguments[0], n = arguments[1], !Ea(e))
+          throw new TypeError("invalid argument. Minimum support `a` must be an integer. Value: `" + e + "`");
+        if (!Ea(n))
+          throw new TypeError("invalid argument. Maximum support `b` must be an integer. Value: `" + n + "`");
+        if (e > n)
+          throw new RangeError("invalid arguments. Minimum support `a` must be less than or equal to maximum support `b`. Value: `" + e + "," + n + "`");
+      } else
+        e = 0, n = 1;
+      return l(this, "a", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(r) {
+        if (!Ea(r))
+          throw new TypeError("invalid value. Must be an integer. Value: `" + r + "`");
+        if (r > n)
+          throw new RangeError("invalid value. Must be smaller than or equal to `b`. Value: `" + r + "`");
+        e = r;
+      } }), l(this, "b", { configurable: !1, enumerable: !0, get: function() {
+        return n;
+      }, set: function(r) {
+        if (!Ea(r))
+          throw new TypeError("invalid value. Must be an integer. Value: `" + r + "`");
+        if (e > r)
+          throw new RangeError("invalid value. Must be greater than or equal to `a`. Value: `" + r + "`");
+        n = r;
+      } }), this;
+    }
+    m(dn.prototype, "entropy", function() {
+      return j1(this.a, this.b);
+    }), m(dn.prototype, "kurtosis", function() {
+      return K1(this.a, this.b);
+    }), m(dn.prototype, "mean", function() {
+      return Q1(this.a, this.b);
+    }), m(dn.prototype, "median", function() {
+      return $1(this.a, this.b);
+    }), m(dn.prototype, "skewness", function() {
+      return Z1(this.a, this.b);
+    }), m(dn.prototype, "stdev", function() {
+      return J1(this.a, this.b);
+    }), m(dn.prototype, "variance", function() {
+      return X1(this.a, this.b);
+    }), o(dn.prototype, "cdf", function(e) {
+      return z1(e, this.a, this.b);
+    }), o(dn.prototype, "logcdf", function(e) {
+      return _1(e, this.a, this.b);
+    }), o(dn.prototype, "logpmf", function(e) {
+      return nf(e, this.a, this.b);
+    }), o(dn.prototype, "mgf", function(e) {
+      return af(e, this.a, this.b);
+    }), o(dn.prototype, "pmf", function(e) {
+      return of(e, this.a, this.b);
+    }), o(dn.prototype, "quantile", function(e) {
+      return uf(e, this.a, this.b);
+    });
+    var Kd = dn, ff = function(e, n, r) {
+      return re(n) ? Er(e, n, r) : NaN;
+    }, Qd = Er.factory;
+    o(ff, "factory", function(e, n) {
+      return re(e) ? Qd(e, n) : N(NaN);
+    });
+    var cf = ff, $n = function(e) {
+      return Ne(e) === e && e > 0;
+    }, lf = function(e, n) {
+      return !$n(e) || i(n) || n <= 0 ? NaN : (1 - e) * Qn(e) + M(ve(e) / n) + e;
+    }, vf = function(e, n) {
+      return !$n(e) || i(n) || n <= 0 ? NaN : 6 / e;
+    }, pf = function(e, n) {
+      return !$n(e) || i(n) || n <= 0 ? NaN : e / n;
+    }, mf = function(e, n) {
+      return !$n(e) || i(n) || n <= 0 ? NaN : (e - 1) / n;
+    }, hf = function(e, n) {
+      return !$n(e) || i(n) || n <= 0 ? NaN : 2 / c(e);
+    }, df = function(e, n) {
+      return !$n(e) || i(n) || n <= 0 ? NaN : c(e) / n;
+    }, gf = function(e, n) {
+      return !$n(e) || i(n) || n <= 0 ? NaN : e / (n * n);
+    }, Nf = function(e, n, r) {
+      return re(n) ? ui(e, n, r) : NaN;
+    }, $d = ui.factory;
+    o(Nf, "factory", function(e, n) {
+      return re(e) ? $d(e, n) : N(NaN);
+    });
+    var yf = Nf, bf = function(e, n, r) {
+      return i(e) || !re(n) || i(r) || r < 0 || e >= r ? NaN : V(1 - e / r, -n);
+    };
+    o(bf, "factory", function(e, n) {
+      return !re(e) || i(n) || n < 0 ? N(NaN) : function(r) {
+        return i(r) || r >= n ? NaN : V(1 - r / n, -e);
+      };
+    });
+    var wf = bf, xf = function(e, n, r) {
+      return re(n) ? si(e, n, r) : NaN;
+    }, Zd = si.factory;
+    o(xf, "factory", function(e, n) {
+      return re(e) ? Zd(e, n) : N(NaN);
+    });
+    var Sf = xf, Mf = function(e, n, r) {
+      return re(n) ? Gr(e, n, r) : NaN;
+    }, Jd = Gr.factory;
+    o(Mf, "factory", function(e, n) {
+      return re(e) ? Jd(e, n) : N(NaN);
+    });
+    var kf = Mf, Tf = Os.isPrimitive, Ef = Ue.isPrimitive;
+    function An() {
+      var e, n;
+      if (!(this instanceof An))
+        return arguments.length === 0 ? new An() : new An(arguments[0], arguments[1]);
+      if (arguments.length) {
+        if (n = arguments[0], e = arguments[1], !Tf(n))
+          throw new TypeError("invalid argument. Shape parameter `k` must be a positive integer. Value: `" + n + "`");
+        if (!Ef(e))
+          throw new TypeError("invalid argument. Rate parameter `lambda` must be a positive number. Value: `" + e + "`");
+      } else
+        n = 1, e = 1;
+      return l(this, "k", { configurable: !1, enumerable: !0, get: function() {
+        return n;
+      }, set: function(r) {
+        if (!Tf(r))
+          throw new TypeError("invalid value. Must be a positive integer. Value: `" + r + "`");
+        n = r;
+      } }), l(this, "lambda", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(r) {
+        if (!Ef(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        e = r;
+      } }), this;
+    }
+    m(An.prototype, "entropy", function() {
+      return lf(this.k, this.lambda);
+    }), m(An.prototype, "kurtosis", function() {
+      return vf(this.k, this.lambda);
+    }), m(An.prototype, "mean", function() {
+      return pf(this.k, this.lambda);
+    }), m(An.prototype, "mode", function() {
+      return mf(this.k, this.lambda);
+    }), m(An.prototype, "skewness", function() {
+      return hf(this.k, this.lambda);
+    }), m(An.prototype, "stdev", function() {
+      return df(this.k, this.lambda);
+    }), m(An.prototype, "variance", function() {
+      return gf(this.k, this.lambda);
+    }), o(An.prototype, "cdf", function(e) {
+      return cf(e, this.k, this.lambda);
+    }), o(An.prototype, "logpdf", function(e) {
+      return yf(e, this.k, this.lambda);
+    }), o(An.prototype, "mgf", function(e) {
+      return wf(e, this.k, this.lambda);
+    }), o(An.prototype, "pdf", function(e) {
+      return Sf(e, this.k, this.lambda);
+    }), o(An.prototype, "quantile", function(e) {
+      return kf(e, this.k, this.lambda);
+    });
+    var Xd = An, Pf = function(e, n) {
+      return i(n) || n < 0 || n === H ? NaN : e < 0 ? 0 : 1 - R(-n * e);
+    };
+    o(Pf, "factory", function(e) {
+      return i(e) || e < 0 || e === H ? N(NaN) : function(n) {
+        return n < 0 ? 0 : 1 - R(-e * n);
+      };
+    });
+    var Vf = Pf, Cf = function(e) {
+      return i(e) || e < 0 ? NaN : 1 - M(e);
+    }, Af = function(e) {
+      return i(e) || e < 0 ? NaN : 6;
+    }, If = function(e) {
+      return i(e) || e < 0 ? NaN : 1 / e;
+    }, Bf = function(e) {
+      return i(e) || e < 0 ? NaN : 1 / e * Oe;
+    }, Rf = function(e) {
+      return i(e) || e < 0 ? NaN : 0;
+    }, Lf = function(e) {
+      return i(e) || e < 0 ? NaN : 2;
+    }, qf = function(e) {
+      return i(e) || e < 0 ? NaN : 1 / e;
+    }, Ff = function(e) {
+      return i(e) || e < 0 ? NaN : 1 / (e * e);
+    }, Of = function(e, n) {
+      return i(n) || n < 0 || n === H ? NaN : e < 0 ? j : oe(-R(-n * e));
+    };
+    o(Of, "factory", function(e) {
+      return i(e) || e < 0 || e === H ? N(NaN) : function(n) {
+        return n < 0 ? j : oe(-R(-e * n));
+      };
+    });
+    var Df = Of, Uf = function(e, n) {
+      return i(e) || i(n) || n < 0 || n === H ? NaN : e < 0 ? j : -e * n + M(n);
+    };
+    o(Uf, "factory", function(e) {
+      return i(e) || e < 0 || e === H ? N(NaN) : function(n) {
+        return i(n) ? NaN : n < 0 ? j : -n * e + M(e);
+      };
+    });
+    var Hf = Uf, Wf = function(e, n) {
+      return i(e) || i(n) || n <= 0 || n === H || e >= n ? NaN : n / (n - e);
+    };
+    o(Wf, "factory", function(e) {
+      return i(e) || e <= 0 || e === H ? N(NaN) : function(n) {
+        return i(n) || n >= e ? NaN : e / (e - n);
+      };
+    });
+    var Gf = Wf, zf = function(e, n) {
+      var r;
+      return i(e) || i(n) || n < 0 || n === H ? NaN : e < 0 ? 0 : R(-e / (r = 1 / n)) / r;
+    };
+    o(zf, "factory", function(e) {
+      var n;
+      return i(e) || e < 0 || e === H ? N(NaN) : (n = 1 / e, function(r) {
+        return i(r) ? NaN : r < 0 ? 0 : R(-r / n) / n;
+      });
+    });
+    var jf = zf, Kf = function(e, n) {
+      return i(n) || n < 0 || n === H || i(e) || e < 0 || e > 1 ? NaN : -M(1 - e) / n;
+    };
+    o(Kf, "factory", function(e) {
+      return e < 0 || e === H || i(e) ? N(NaN) : function(n) {
+        return i(n) || n < 0 || n > 1 ? NaN : -M(1 - n) / e;
+      };
+    });
+    var Qf = Kf, $f = Ue.isPrimitive;
+    function an() {
+      var e;
+      if (!(this instanceof an))
+        return arguments.length === 0 ? new an() : new an(arguments[0]);
+      if (arguments.length) {
+        if (e = arguments[0], !$f(e))
+          throw new TypeError("invalid argument. Rate parameter `lambda` must be a positive number. Value: `" + e + "`");
+      } else
+        e = 1;
+      return l(this, "lambda", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(n) {
+        if (!$f(n))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + n + "`");
+        e = n;
+      } }), this;
+    }
+    m(an.prototype, "entropy", function() {
+      return Cf(this.lambda);
+    }), m(an.prototype, "kurtosis", function() {
+      return Af(this.lambda);
+    }), m(an.prototype, "mean", function() {
+      return If(this.lambda);
+    }), m(an.prototype, "median", function() {
+      return Bf(this.lambda);
+    }), m(an.prototype, "mode", function() {
+      return Rf(this.lambda);
+    }), m(an.prototype, "skewness", function() {
+      return Lf(this.lambda);
+    }), m(an.prototype, "stdev", function() {
+      return qf(this.lambda);
+    }), m(an.prototype, "variance", function() {
+      return Ff(this.lambda);
+    }), o(an.prototype, "cdf", function(e) {
+      return Vf(e, this.lambda);
+    }), o(an.prototype, "logcdf", function(e) {
+      return Df(e, this.lambda);
+    }), o(an.prototype, "logpdf", function(e) {
+      return Hf(e, this.lambda);
+    }), o(an.prototype, "mgf", function(e) {
+      return Gf(e, this.lambda);
+    }), o(an.prototype, "pdf", function(e) {
+      return jf(e, this.lambda);
+    }), o(an.prototype, "quantile", function(e) {
+      return Qf(e, this.lambda);
+    });
+    var Yd = an, Zf = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e <= 0 ? 0 : e === H ? 1 : n * e > r ? Qe(n * e / (r + n * e), n / 2, r / 2, !0, !1) : Qe(r / (r + n * e), r / 2, n / 2, !0, !0);
+    };
+    o(Zf, "factory", function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : function(r) {
+        return i(r) ? NaN : r <= 0 ? 0 : r === H ? 1 : e * r > n ? Qe(e * r / (n + e * r), e / 2, n / 2, !0, !1) : Qe(n / (n + e * r), n / 2, e / 2, !0, !0);
+      };
+    });
+    var Jf = Zf, Xf = function(e, n) {
+      var r, a, s, u;
+      return i(e) || i(n) || e <= 0 || n <= 0 ? NaN : (r = (e + n) / 2, a = e / 2, s = n / 2, u = M(n / e) + ke(a) + ke(s) - ke(r), u += (1 - a) * Qn(a), u += (-1 - s) * Qn(s), u += r * Qn(r));
+    }, Yf = function(e, n) {
+      return e <= 0 || n <= 8 ? NaN : 12 * (e * (5 * n - 22) * (e + n - 2) + (n - 4) * V(n - 2, 2)) / (e * (n - 6) * (n - 8) * (e + n - 2));
+    }, _f = function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 2 ? NaN : n / (n - 2);
+    }, e2 = function(e, n) {
+      return e <= 2 || n <= 0 ? NaN : (e - 2) / e * (n / (n + 2));
+    }, n2 = function(e, n) {
+      var r;
+      return e <= 0 || n <= 6 ? NaN : (r = (2 * e + n - 2) * c(8 * (n - 4)), r /= (n - 6) * c(e * (e + n - 2)));
+    }, r2 = function(e, n) {
+      var r;
+      return e <= 0 || n <= 4 ? NaN : (r = Pe * (n / (n - 2)), r *= c((e + n - 2) / (e * (n - 4))));
+    }, i2 = function(e, n) {
+      var r;
+      return e <= 0 || n <= 4 ? NaN : (r = 2 * n * n * (e + n - 2), r /= e * V(n - 2, 2) * (n - 4));
+    }, _d = function(e, n, r, a, s) {
+      var u, p, k, y, C, F, B, A, W, z, K, $, ae, Q;
+      if (!s)
+        return V(r, e) * V(a, n);
+      if (y = e + qe - 0.5, C = n + qe - 0.5, F = (ae = e + n) + qe - 0.5, u = Xe(ae), u /= Xe(e) * Xe(n), u *= c(C / Kn), u *= c(y / F), A = (a * e - r * C) / C, Se(J(B = (r * n - a * y) / y), J(A)) < 0.2)
+        if (B * A > 0 || Se(e, n) < 1)
+          J(B) < 0.1 ? u *= R(e * oe(B)) : u *= V(r * F / y, e), J(A) < 0.1 ? u *= R(n * oe(A)) : u *= V(a * F / C, n);
+        else if (Ee(J(B), J(A)) < 0.5)
+          k = n / e, (p = e < n) && k * A < 0.1 || !p && B / k > 0.1 ? (W = Le(k * oe(A)), W = e * oe(W = B + W + W * B), u *= R(W)) : (W = Le(oe(B) / k), W = n * oe(W = A + W + W * A), u *= R(W));
+        else if (J(B) < J(A))
+          if ((Q = e * oe(B) + n * M(a * F / C)) <= de || Q >= fe) {
+            if ((Q += M(u)) >= fe)
+              return NaN;
+            u = R(Q);
+          } else
+            u *= R(Q);
+        else if ((Q = n * oe(A) + e * M(r * F / y)) <= de || Q >= fe) {
+          if ((Q += M(u)) >= fe)
+            return NaN;
+          u = R(Q);
+        } else
+          u *= R(Q);
+      else if ($ = a * F / C, B = e * M(K = r * F / y), A = n * M($), B >= fe || B <= de || A >= fe || A <= de)
+        if (e < n)
+          if (z = V($, n / e), (W = e * (M(K) + M(z))) < fe && W > de)
+            u *= V(z * K, e);
+          else {
+            if ((A += B + M(u)) >= fe)
+              return NaN;
+            u = R(A);
+          }
+        else if (z = V(K, e / n), (W = (M(z) + M($)) * n) < fe && W > de)
+          u *= V(z * $, n);
+        else {
+          if ((A += B + M(u)) >= fe)
+            return NaN;
+          u = R(A);
+        }
+      else
+        u *= V(K, e) * V($, n);
+      return u;
+    }, Pa = function(e, n, r) {
+      var a;
+      return a = _d(n, r, e, 1 - e, !0), a /= (1 - e) * e;
+    }, a2 = function(e, n, r) {
+      var a, s;
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e < 0 || e === H ? 0 : e === 0 ? n < 2 ? H : n === 2 ? 1 : 0 : (a = n * e) > r ? r * n / ((r + a) * (r + a)) * Pa(r / (r + a), r / 2, n / 2) : ((s = r + a) * n - e * n * n) / (s * s) * Pa(a / (r + a), n / 2, r / 2);
+    };
+    o(a2, "factory", function(e, n) {
+      var r, a, s, u;
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : (u = e * n, a = e / 2, s = n / 2, r = 0, e < 2 ? r = H : e === 2 && (r = 1), function(p) {
+        var k, y;
+        return i(p) ? NaN : p < 0 || p === H ? 0 : p === 0 ? r : (k = e * p) > n ? u / ((n + k) * (n + k)) * Pa(n / (n + k), s, a) : ((y = n + k) * e - p * e * e) / (y * y) * Pa(e * p / (n + k), a, s);
+      });
+    });
+    var t2 = a2, o2 = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 || e < 0 || e > 1 ? NaN : r * (a = ai(n / 2, r / 2, e, 1 - e))[0] / (n * a[1]);
+    };
+    o(o2, "factory", function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : function(r) {
+        var a;
+        return i(r) || r < 0 || r > 1 ? NaN : (a = ai(e / 2, n / 2, r, 1 - r), n * a[0] / (e * a[1]));
+      };
+    });
+    var s2 = o2, Va = Ue.isPrimitive;
+    function Gn() {
+      var e, n;
+      if (!(this instanceof Gn))
+        return arguments.length === 0 ? new Gn() : new Gn(arguments[0], arguments[1]);
+      if (arguments.length) {
+        if (e = arguments[0], n = arguments[1], !Va(e))
+          throw new TypeError("invalid argument. Numerator degrees of freedom `d1` must be a positive number. Value: `" + e + "`");
+        if (!Va(n))
+          throw new TypeError("invalid argument. Denominator degrees of freedom `d2` must be a positive number. Value: `" + n + "`");
+      } else
+        e = 1, n = 1;
+      return l(this, "d1", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(r) {
+        if (!Va(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        e = r;
+      } }), l(this, "d2", { configurable: !1, enumerable: !0, get: function() {
+        return n;
+      }, set: function(r) {
+        if (!Va(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        n = r;
+      } }), this;
+    }
+    m(Gn.prototype, "entropy", function() {
+      return Xf(this.d1, this.d2);
+    }), m(Gn.prototype, "kurtosis", function() {
+      return Yf(this.d1, this.d2);
+    }), m(Gn.prototype, "mean", function() {
+      return _f(this.d1, this.d2);
+    }), m(Gn.prototype, "mode", function() {
+      return e2(this.d1, this.d2);
+    }), m(Gn.prototype, "skewness", function() {
+      return n2(this.d1, this.d2);
+    }), m(Gn.prototype, "stdev", function() {
+      return r2(this.d1, this.d2);
+    }), m(Gn.prototype, "variance", function() {
+      return i2(this.d1, this.d2);
+    }), o(Gn.prototype, "cdf", function(e) {
+      return Jf(e, this.d1, this.d2);
+    }), o(Gn.prototype, "pdf", function(e) {
+      return t2(e, this.d1, this.d2);
+    }), o(Gn.prototype, "quantile", function(e) {
+      return s2(e, this.d1, this.d2);
+    });
+    var eg = Gn, u2 = function(e, n, r, a) {
+      return i(e) || i(n) || i(r) || i(a) || n <= 0 || r <= 0 ? NaN : e <= a ? 0 : R(-V((e - a) / r, -n));
+    };
+    o(u2, "factory", function(e, n, r) {
+      return i(e) || i(n) || i(r) || e <= 0 || n <= 0 ? N(NaN) : function(a) {
+        return i(a) ? NaN : a <= r ? 0 : R(-V((a - r) / n, -e));
+      };
+    });
+    var f2 = u2, c2 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || e <= 0 || n <= 0 ? NaN : 1 + Rr / e + Rr + M(n / e);
+    }, l2 = function(e, n, r) {
+      var a, s, u, p;
+      return i(e) || i(n) || i(r) || e <= 0 || n <= 0 ? NaN : e <= 4 ? H : (s = ve(1 - 1 / e), u = ve(1 - 2 / e), p = ve(1 - 3 / e), a = (ve(1 - 4 / e) - 4 * p * s + 3 * u * u) / V(u - s * s, 2), a -= 6);
+    }, v2 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || e <= 0 || n <= 0 ? NaN : e <= 1 ? H : r + n * ve(1 - 1 / e);
+    }, p2 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || e <= 0 || n <= 0 ? NaN : r + n * V(Oe, -1 / e);
+    }, m2 = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || e <= 0 || n <= 0 ? NaN : r + n * V(1 + (a = 1 / e), -a);
+    }, h2 = function(e, n, r) {
+      var a, s, u;
+      return i(e) || i(n) || i(r) || e <= 0 || n <= 0 ? NaN : e <= 3 ? H : (a = (s = ve(1 - 1 / e)) * s, u = ve(1 - 2 / e), (ve(1 - 3 / e) - 3 * u * s + 2 * a * s) / V(u - a, 1.5));
+    }, d2 = function(e, n, r) {
+      var a, s;
+      return i(e) || i(n) || i(r) || e <= 0 || n <= 0 ? NaN : e <= 2 ? H : (a = ve(1 - 1 / e), s = ve(1 - 2 / e), n * c(s - a * a));
+    }, g2 = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || e <= 0 || n <= 0 ? NaN : e <= 2 ? H : (a = ve(1 - 1 / e), n * n * (ve(1 - 2 / e) - a * a));
+    }, N2 = function(e, n, r, a) {
+      return i(e) || i(n) || i(r) || i(a) || n <= 0 || r <= 0 ? NaN : e <= a ? j : -V((e - a) / r, -n);
+    };
+    o(N2, "factory", function(e, n, r) {
+      return i(e) || i(n) || i(r) || e <= 0 || n <= 0 ? N(NaN) : function(a) {
+        return i(a) ? NaN : a <= r ? j : -V((a - r) / n, -e);
+      };
+    });
+    var y2 = N2, b2 = function(e, n, r, a) {
+      var s;
+      return i(e) || i(n) || i(r) || i(a) || n <= 0 || r <= 0 ? NaN : e <= a ? j : (s = (e - a) / r, M(n / r) - (1 + n) * M(s) - V(s, -n));
+    };
+    o(b2, "factory", function(e, n, r) {
+      return i(e) || i(n) || i(r) || e <= 0 || n <= 0 ? N(NaN) : function(a) {
+        var s;
+        return i(a) ? NaN : a <= r ? j : (s = (a - r) / n, M(e / n) - (1 + e) * M(s) - V(s, -e));
+      };
+    });
+    var Ca = b2, w2 = function(e, n, r, a) {
+      return i(e) || i(n) || i(r) || i(a) || n <= 0 || r <= 0 ? NaN : R(Ca(e, n, r, a));
+    }, ng = Ca.factory;
+    o(w2, "factory", function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || e <= 0 || n <= 0 ? N(NaN) : (a = ng(e, n, r), function(s) {
+        return i(s) ? NaN : R(a(s, e, n, r));
+      });
+    });
+    var x2 = w2, S2 = function(e, n, r, a) {
+      return i(e) || i(n) || i(r) || i(a) || e < 0 || e > 1 || n <= 0 || r <= 0 ? NaN : a + r * V(-M(e), -1 / n);
+    };
+    o(S2, "factory", function(e, n, r) {
+      return i(e) || i(n) || i(r) || e <= 0 || n <= 0 ? N(NaN) : function(a) {
+        return i(a) || a < 0 || a > 1 ? NaN : r + n * V(-M(a), -1 / e);
+      };
+    });
+    var M2 = S2, Aa = Ue.isPrimitive, k2 = Ge.isPrimitive;
+    function gn() {
+      var e, n, r;
+      if (!(this instanceof gn))
+        return arguments.length === 0 ? new gn() : new gn(arguments[0], arguments[1], arguments[2]);
+      if (arguments.length) {
+        if (e = arguments[0], n = arguments[1], r = arguments[2], !Aa(e))
+          throw new TypeError("invalid argument. Shape parameter `alpha` must be a positive number. Value: `" + e + "`");
+        if (!Aa(n))
+          throw new TypeError("invalid argument. Scale parameter `s` must be a number primitive. Value: `" + n + "`");
+        if (!k2(r) || i(r))
+          throw new TypeError("invalid argument. Location parameter `m` must be a number primitive. Value: `" + r + "`");
+      } else
+        e = 1, n = 1, r = 0;
+      return l(this, "alpha", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(a) {
+        if (!Aa(a))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + a + "`");
+        e = a;
+      } }), l(this, "s", { configurable: !1, enumerable: !0, get: function() {
+        return n;
+      }, set: function(a) {
+        if (!Aa(a))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + a + "`");
+        n = a;
+      } }), l(this, "m", { configurable: !1, enumerable: !0, get: function() {
+        return r;
+      }, set: function(a) {
+        if (!k2(a) || i(a))
+          throw new TypeError("invalid value. Must be a number primitive. Value: `" + a + "`");
+        r = a;
+      } }), this;
+    }
+    m(gn.prototype, "entropy", function() {
+      return c2(this.alpha, this.s, this.m);
+    }), m(gn.prototype, "kurtosis", function() {
+      return l2(this.alpha, this.s, this.m);
+    }), m(gn.prototype, "mean", function() {
+      return v2(this.alpha, this.s, this.m);
+    }), m(gn.prototype, "median", function() {
+      return p2(this.alpha, this.s, this.m);
+    }), m(gn.prototype, "mode", function() {
+      return m2(this.alpha, this.s, this.m);
+    }), m(gn.prototype, "skewness", function() {
+      return h2(this.alpha, this.s, this.m);
+    }), m(gn.prototype, "stdev", function() {
+      return d2(this.alpha, this.s, this.m);
+    }), m(gn.prototype, "variance", function() {
+      return g2(this.alpha, this.s, this.m);
+    }), o(gn.prototype, "cdf", function(e) {
+      return f2(e, this.alpha, this.s, this.m);
+    }), o(gn.prototype, "logcdf", function(e) {
+      return y2(e, this.alpha, this.s, this.m);
+    }), o(gn.prototype, "logpdf", function(e) {
+      return Ca(e, this.alpha, this.s, this.m);
+    }), o(gn.prototype, "pdf", function(e) {
+      return x2(e, this.alpha, this.s, this.m);
+    }), o(gn.prototype, "quantile", function(e) {
+      return M2(e, this.alpha, this.s, this.m);
+    });
+    var rg = gn, T2 = function(e, n) {
+      var r;
+      return e <= 0 || n <= 0 ? NaN : (r = e - M(n), r += ke(e), r += (1 - e) * Qn(e));
+    }, E2 = function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? NaN : 6 / e;
+    }, P2 = function(e, n) {
+      return e <= 0 || n <= 0 ? NaN : e / n;
+    }, V2 = function(e, n) {
+      return e < 1 || n <= 0 ? NaN : (e - 1) / n;
+    }, C2 = function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? NaN : 2 / c(e);
+    }, A2 = function(e, n) {
+      return e <= 0 || n <= 0 ? NaN : c(e) / n;
+    }, I2 = function(e, n) {
+      return e <= 0 || n <= 0 ? NaN : e / (n * n);
+    }, B2 = function(e, n, r) {
+      return M(Er(e, n, r));
+    }, ig = fi.factory;
+    o(B2, "factory", function(e, n) {
+      return i(e) || i(n) || e < 0 || n <= 0 ? N(NaN) : e === 0 ? ig(0) : function(r) {
+        return r <= 0 ? j : r === H ? 0 : M(fr(r * n, e));
+      };
+    });
+    var R2 = B2, L2 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n < 0 || r <= 0 || e >= r ? NaN : V(1 - e / r, -n);
+    };
+    o(L2, "factory", function(e, n) {
+      return i(e) || i(n) || e < 0 || n <= 0 ? N(NaN) : function(r) {
+        return r >= n ? NaN : V(1 - r / n, -e);
+      };
+    });
+    var q2 = L2, Ia = Ue.isPrimitive;
+    function Nn() {
+      var e, n;
+      if (!(this instanceof Nn))
+        return arguments.length === 0 ? new Nn() : new Nn(arguments[0], arguments[1]);
+      if (arguments.length) {
+        if (e = arguments[0], n = arguments[1], !Ia(e))
+          throw new TypeError("invalid argument. Shape parameter `alpha` must be a positive number. Value: `" + e + "`");
+        if (!Ia(n))
+          throw new TypeError("invalid argument. Rate parameter `beta` must be a positive number. Value: `" + n + "`");
+      } else
+        e = 1, n = 1;
+      return l(this, "alpha", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(r) {
+        if (!Ia(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        e = r;
+      } }), l(this, "beta", { configurable: !1, enumerable: !0, get: function() {
+        return n;
+      }, set: function(r) {
+        if (!Ia(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        n = r;
+      } }), this;
+    }
+    m(Nn.prototype, "entropy", function() {
+      return T2(this.alpha, this.beta);
+    }), m(Nn.prototype, "kurtosis", function() {
+      return E2(this.alpha, this.beta);
+    }), m(Nn.prototype, "mean", function() {
+      return P2(this.alpha, this.beta);
+    }), m(Nn.prototype, "mode", function() {
+      return V2(this.alpha, this.beta);
+    }), m(Nn.prototype, "skewness", function() {
+      return C2(this.alpha, this.beta);
+    }), m(Nn.prototype, "stdev", function() {
+      return A2(this.alpha, this.beta);
+    }), m(Nn.prototype, "variance", function() {
+      return I2(this.alpha, this.beta);
+    }), o(Nn.prototype, "cdf", function(e) {
+      return Er(e, this.alpha, this.beta);
+    }), o(Nn.prototype, "logcdf", function(e) {
+      return R2(e, this.alpha, this.beta);
+    }), o(Nn.prototype, "logpdf", function(e) {
+      return ui(e, this.alpha, this.beta);
+    }), o(Nn.prototype, "mgf", function(e) {
+      return q2(e, this.alpha, this.beta);
+    }), o(Nn.prototype, "pdf", function(e) {
+      return si(e, this.alpha, this.beta);
+    }), o(Nn.prototype, "quantile", function(e) {
+      return Gr(e, this.alpha, this.beta);
+    });
+    var ag = Nn, F2 = function(e, n) {
+      return i(e) || i(n) || n < 0 || n > 1 ? NaN : e < 0 ? 0 : e === H ? 1 : (e = Ne(e), 1 - V(1 - n, e + 1));
+    };
+    o(F2, "factory", function(e) {
+      return i(e) || e < 0 || e > 1 ? N(NaN) : function(n) {
+        return i(n) ? NaN : n < 0 ? 0 : n === H ? 1 : (n = Ne(n), 1 - V(1 - e, n + 1));
+      };
+    });
+    var O2 = F2, D2 = function(e) {
+      var n;
+      return i(e) || e <= 0 || e >= 1 ? NaN : (n = 1 - e, (-e * M(e) - n * M(n)) / e);
+    }, U2 = function(e) {
+      return i(e) || e <= 0 || e >= 1 ? NaN : 6 + e * e / (1 - e);
+    }, H2 = function(e) {
+      return i(e) || e < 0 || e > 1 ? NaN : (1 - e) / e;
+    }, tg = function(e) {
+      return e === 0 ? 0.3999999999940942 : 0.3999999999940942 + e * (0.22222198432149784 + 0.15313837699209373 * e);
+    }, og = function(e) {
+      return e === 0 ? 0.6666666666666735 : 0.6666666666666735 + e * (0.2857142874366239 + e * (0.1818357216161805 + 0.14798198605116586 * e));
+    }, W2 = 1048575, sg = 0.3333333333333333, ug = function(e) {
+      var n, r, a, s, u, p, k, y, C, F;
+      return a = Ke(e), s = e - 1, (W2 & 2 + a) < 3 ? s === 0 ? 0 : s * s * (sg * s - 0.5) : (C = (a &= W2) - 398458 | 0, F = 440401 - a | 0, r = (y = (p = (u = s / (2 + s)) * u) * p) * tg(y), k = p * og(y) + r, (C |= F) > 0 ? u * ((n = 0.5 * s * s) + k) - n : u * (k - s));
+    }, fg = 18014398509481984, G2 = 1.4426950407214463, cg = 16751713164886512e-26, lg = 1048575, vg = 2146435072, pg = 1048576, mg = 1072693248, hg = 2147483647, H0 = [0, 0], dg = function(e) {
+      var n, r, a, s, u, p;
+      if (i(e) || e < 0)
+        return NaN;
+      if (_r(H0, e), r = H0[0], a = H0[1], p = 0, r < pg) {
+        if (!(r & hg | a))
+          return j;
+        p -= 54, r = Ke(e *= fg);
+      }
+      return r >= vg ? e + e : (p += (r >> 20) - ur | 0, e = Xn(e, (r &= lg) | (u = r + 614244 & 1048576 | 0) ^ mg), p += u >> 20 | 0, s = ug(e), n = _n(e -= 1, 0), (e + s) * cg + (e - n + s) * G2 + n * G2 + p);
+    }, z2 = function(e) {
+      return i(e) || e < 0 || e > 1 ? NaN : sa(-1 / dg(1 - e)) - 1;
+    }, j2 = function(e) {
+      return i(e) || e < 0 || e > 1 ? NaN : 0;
+    }, K2 = function(e) {
+      return i(e) || e <= 0 || e >= 1 ? NaN : (2 - e) / c(1 - e);
+    }, Q2 = function(e) {
+      return i(e) || e <= 0 || e >= 1 ? NaN : c(1 - e) / e;
+    }, $2 = function(e) {
+      return i(e) || e <= 0 || e >= 1 ? NaN : (1 - e) / (e * e);
+    }, Z2 = function(e, n) {
+      return i(e) || i(n) || n < 0 || n > 1 ? NaN : e < 0 ? j : e === H ? 0 : (e = Ne(e), oe(-V(1 - n, e + 1)));
+    };
+    o(Z2, "factory", function(e) {
+      return i(e) || e < 0 || e > 1 ? N(NaN) : function(n) {
+        return i(n) ? NaN : n < 0 ? j : n === H ? 0 : (n = Ne(n), oe(-V(1 - e, n + 1)));
+      };
+    });
+    var J2 = Z2, X2 = function(e, n) {
+      var r;
+      return i(e) || i(n) ? NaN : n < 0 || n > 1 ? NaN : re(e) ? (r = 1 - n, M(n) + e * M(r)) : j;
+    };
+    o(X2, "factory", function(e) {
+      return i(e) || e < 0 || e > 1 ? N(NaN) : function(n) {
+        var r;
+        return i(n) ? NaN : re(n) ? (r = 1 - e, M(e) + n * M(r)) : j;
+      };
+    });
+    var Y2 = X2, _2 = function(e, n) {
+      var r, a;
+      return i(e) || !oa(n) ? NaN : e >= -M(a = 1 - n) ? NaN : n * (r = R(e)) / (1 - a * r);
+    };
+    o(_2, "factory", function(e) {
+      return oa(e) ? function(n) {
+        var r, a;
+        return i(n) ? NaN : n >= -M(a = 1 - e) ? NaN : (r = R(n), e * r / (1 - a * r));
+      } : N(NaN);
+    });
+    var ec = _2, nc = function(e, n) {
+      return i(e) || i(n) || n < 0 || n > 1 ? NaN : re(e) ? n * V(1 - n, e) : 0;
+    };
+    o(nc, "factory", function(e) {
+      return i(e) || e < 0 || e > 1 ? N(NaN) : function(n) {
+        return i(n) ? NaN : re(n) ? e * V(1 - e, n) : 0;
+      };
+    });
+    var rc = nc, ic = function(e, n) {
+      return i(n) || i(e) || n < 0 || n > 1 || e < 0 || e > 1 ? NaN : e === 1 ? H : Ee(0, sa(M(1 - e) / oe(-n) - (1 + 1e-12)));
+    };
+    o(ic, "factory", function(e) {
+      return i(e) || e < 0 || e > 1 ? N(NaN) : function(n) {
+        return i(n) || n < 0 || n > 1 ? NaN : n === 1 ? H : Ee(0, sa(M(1 - n) / oe(-e) - (1 + 1e-12)));
+      };
+    });
+    var ac = ic, tc = ta.isPrimitive;
+    function tn() {
+      var e;
+      if (!(this instanceof tn))
+        return arguments.length === 0 ? new tn() : new tn(arguments[0]);
+      if (arguments.length) {
+        if (e = arguments[0], !tc(e))
+          throw new TypeError("invalid argument. Mean parameter `p` must be a probability. Value: `" + e + "`");
+      } else
+        e = 0.5;
+      return l(this, "p", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(n) {
+        if (!tc(n))
+          throw new TypeError("invalid value. Must be a probability. Value: `" + n + "`");
+        e = n;
+      } }), this;
+    }
+    m(tn.prototype, "entropy", function() {
+      return D2(this.p);
+    }), m(tn.prototype, "kurtosis", function() {
+      return U2(this.p);
+    }), m(tn.prototype, "mean", function() {
+      return H2(this.p);
+    }), m(tn.prototype, "median", function() {
+      return z2(this.p);
+    }), m(tn.prototype, "mode", function() {
+      return j2(this.p);
+    }), m(tn.prototype, "skewness", function() {
+      return K2(this.p);
+    }), m(tn.prototype, "stdev", function() {
+      return Q2(this.p);
+    }), m(tn.prototype, "variance", function() {
+      return $2(this.p);
+    }), o(tn.prototype, "cdf", function(e) {
+      return O2(e, this.p);
+    }), o(tn.prototype, "logcdf", function(e) {
+      return J2(e, this.p);
+    }), o(tn.prototype, "logpmf", function(e) {
+      return Y2(e, this.p);
+    }), o(tn.prototype, "mgf", function(e) {
+      return ec(e, this.p);
+    }), o(tn.prototype, "pmf", function(e) {
+      return rc(e, this.p);
+    }), o(tn.prototype, "quantile", function(e) {
+      return ac(e, this.p);
+    });
+    var gg = tn, oc = function(e, n, r) {
+      return i(e) || i(n) || i(r) || r <= 0 ? NaN : R(-R(-(e - n) / r));
+    };
+    o(oc, "factory", function(e, n) {
+      return i(e) || i(n) || n <= 0 ? N(NaN) : function(r) {
+        return i(r) ? NaN : R(-R(-(r - e) / n));
+      };
+    });
+    var sc = oc, uc = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : M(n) + Rr + 1;
+    }, fc = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : 2.4;
+    }, cc = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : e + n * Rr;
+    }, Ng = M(Oe), lc = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : e - n * Ng;
+    }, vc = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : e;
+    }, yg = [1.2020569031595942, 1.03692775514337, 1.008349277381923, 1.0020083928260821, 1.0004941886041194, 1.0001227133475785, 1.000030588236307, 1.0000076371976379, 1.0000019082127165, 1.0000004769329869, 1.000000119219926, 1.0000000298035034, 1.0000000074507118, 1.0000000018626598, 1.0000000004656628, 1.0000000001164155, 1.0000000000291038, 1.000000000007276, 1.000000000001819, 1.0000000000004547, 1.0000000000001137, 1.0000000000000284, 1.000000000000007, 1.0000000000000018, 1.0000000000000004, 1.0000000000000002, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], bg = [-0.5, 1.6449340668482264, 1.0823232337111381, 1.0173430619844492, 1.0040773561979444, 1.000994575127818, 1.000246086553308, 1.0000612481350588, 1.0000152822594086, 1.000003817293265, 1.0000009539620338, 1.0000002384505027, 1.000000059608189, 1.0000000149015549, 1.000000003725334, 1.0000000009313275, 1.000000000232831, 1.0000000000582077, 1.000000000014552, 1.000000000003638, 1.0000000000009095, 1.0000000000002274, 1.0000000000000568, 1.0000000000000142, 1.0000000000000036, 1.0000000000000009, 1.0000000000000002, 1], wg = [1, 0.16666666666666666, -0.03333333333333333, 0.023809523809523808, -0.03333333333333333, 0.07575757575757576, -0.2531135531135531, 1.1666666666666667, -7.092156862745098, 54.971177944862156, -529.1242424242424, 6192.123188405797, -86580.25311355312, 1.4255171666666667e6, -27298231067816094e-9, 6015808739006424e-7, -15116315767092157e-6, 4296146430611667e-4, -13711655205088332e-3, 4883323189735932e-1, -19296579341940068, 841693047573682600, -40338071854059454e3, 21150748638081993e5, -12086626522296526e7, 7500866746076964e9, -5038778101481069e11, 36528776484818122e12, -2849876930245088e15, 23865427499683627e16, -21399949257225335e18, 20500975723478097e20, -2093800591134638e23, 22752696488463515e24, -26257710286239577e26, 3212508210271803e29, -4159827816679471e31, 5692069548203528e33, -8218362941978458e35, 12502904327166994e37, -2001558323324837e40, 33674982915364376e41, -5947097050313545e44, 11011910323627977e46, -21355259545253502e48, 43328896986641194e50, -9188552824166933e53, 20346896776329074e55, -4700383395803573e58, 1131804344548425e61, -28382249570693707e62, 7406424897967885e65, -20096454802756605e67, 5665717005080594e70, -16584511154136216e72, 5036885995049238e75, -15861468237658186e77, 51756743617545625e79, -17488921840217116e82, 6116051999495218e85, -22122776912707833e87, 8272277679877097e90, -3195892511141571e93, 12750082223387793e95, -5250092308677413e98, 22301817894241627e100, -976845219309552e104, 4409836197845295e106, -2050857088646409e109, 9821443327979128e111, -4841260079820888e114, 24553088801480982e116, -12806926804084748e119, 6867616710466858e122, -37846468581969106e124, 2142610125066529e128, -12456727137183695e130, 7434578755100016e133, -45535795304641704e135, 2861211281685887e139, -1843772355203387e142, 12181154536221047e144, -8248218718531412e147, 5722587793783294e150, -40668530525059105e152, 29596092064642052e155, -22049522565189457e158, 168125970728896e163, -13116736213556958e164, 10467894009478039e167, -8543289357883371e170, 7128782132248655e173, -608029314555359e177, 5299677642484992e179, -4719425916874586e182, 4292841379140298e185, -39876744968232205e187, 3781978041935888e191, -3661423368368119e194, 3617609027237286e197, -3647077264519136e200, 3750875543645441e203, -3934586729643903e206, 4208821114819008e209, -4590229622061792e212, 5103172577262957e215, -5782276230365695e218, 6676248216783588e221, -7853530764445042e224, 9410689406705872e227, -11484933873465185e230, 14272958742848785e233, -1805955958690931e237, 23261535307660807e239, -30495751715499594e242, 4068580607643398e246, -5523103132197436e249, 76277279396434395e251, -10715571119697886e255, 15310200895969188e258, -22244891682179836e261, 3286267919069014e265, -4935592895596035e268, 7534957120083251e271, -11691485154584178e274, 1843526146783894e278, -2953682617296808e281, 4807932127750157e284, -7950212504588525e287, 13352784187354634e290], xg = function(e) {
+      var n, r;
+      return e === 0 ? 0.2433929443359375 : ((e < 0 ? -e : e) <= 1 ? (n = 0.2433929443359375 + e * (e * (0.055761621477604675 + e * (e * (4515345286457964e-19 + -9332412703570615e-21 * e) - 0.003209124988790859)) - 0.4909247051635357), r = 1 + e * (e * (0.04196762233099861 + e * (e * (24978985622317937e-20 + -10185578841856403e-21 * e) - 0.00413421406552171)) - 0.27996033431034445)) : (n = (e = 1 / e) * (4515345286457964e-19 + e * (e * (0.055761621477604675 + e * (0.2433929443359375 * e - 0.4909247051635357)) - 0.003209124988790859)) - 9332412703570615e-21, r = e * (24978985622317937e-20 + e * (e * (0.04196762233099861 + e * (1 * e - 0.27996033431034445)) - 0.00413421406552171)) - 10185578841856403e-21), n / r);
+    }, Sg = function(e) {
+      var n, r;
+      return e === 0 ? 0.5772156649015329 : ((e < 0 ? -e : e) <= 1 ? (n = 0.5772156649015329 + e * (0.24321064694010716 + e * (0.04173646739882165 + e * (0.003902520870728433 + e * (2496063671518772e-19 + 1101084409767329e-20 * e)))), r = 1 + e * (0.29520127712663174 + e * (0.043460910607305496 + e * (0.004349305820858264 + e * (2557842261404885e-19 + 10991819782396113e-21 * e))))) : (n = 1101084409767329e-20 + (e = 1 / e) * (2496063671518772e-19 + e * (0.003902520870728433 + e * (0.04173646739882165 + e * (0.24321064694010716 + 0.5772156649015329 * e)))), r = 10991819782396113e-21 + e * (2557842261404885e-19 + e * (0.004349305820858264 + e * (0.043460910607305496 + e * (0.29520127712663174 + 1 * e))))), n / r);
+    }, Mg = function(e) {
+      var n, r;
+      return e === 0 ? -0.053725830002359504 : ((e < 0 ? -e : e) <= 1 ? (n = e * (0.04451634732923656 + e * (0.012867767353451996 + e * (9754177045739176e-19 + e * (7698751015736541e-20 + e * (3280325100003831e-21 + 0 * e))))) - 0.053725830002359504, r = 1 + e * (0.3338319455303405 + e * (0.048779843129140764 + e * (0.0047903970857355845 + e * (27077670395633634e-20 + e * (10695186753205734e-21 + 23627662397497864e-24 * e)))))) : (n = 0 + (e = 1 / e) * (3280325100003831e-21 + e * (7698751015736541e-20 + e * (9754177045739176e-19 + e * (0.012867767353451996 + e * (0.04451634732923656 + -0.053725830002359504 * e))))), r = 23627662397497864e-24 + e * (10695186753205734e-21 + e * (27077670395633634e-20 + e * (0.0047903970857355845 + e * (0.048779843129140764 + e * (0.3338319455303405 + 1 * e)))))), n / r);
+    }, kg = function(e) {
+      var n, r;
+      return e === 0 ? -2.497101906022594 : ((e < 0 ? -e : e) <= 1 ? (n = e * (e * (e * (e * (e * (e * (0 + e * (0 + 0 * e)) - 22925731059489392e-21) - 0.007017212405498024) - 0.13844861799574154) - 0.9392604353771099) - 2.600133018094757) - 2.497101906022594, r = 1 + e * (0.7060390259377451 + e * (0.15739599649558628 + e * (0.010611795097684508 + e * (e * (49340956392759e-19 + e * (e * (7188337293654598e-24 + -11292001134749475e-26 * e) - 23405548702528722e-23)) - 36910273311764616e-21))))) : (n = 0 + (e = 1 / e) * (0 + e * (0 + e * (e * (e * (e * (e * (-2.497101906022594 * e - 2.600133018094757) - 0.9392604353771099) - 0.13844861799574154) - 0.007017212405498024) - 22925731059489392e-21))), r = e * (7188337293654598e-24 + e * (e * (49340956392759e-19 + e * (e * (0.010611795097684508 + e * (0.15739599649558628 + e * (0.7060390259377451 + 1 * e))) - 36910273311764616e-21)) - 23405548702528722e-23)) - 11292001134749475e-26), n / r);
+    }, Tg = function(e) {
+      var n, r;
+      return e === 0 ? -4.785580284951356 : ((e < 0 ? -e : e) <= 1 ? (n = e * (e * (e * (e * (0.0011514092388917874 + e * (6399492042131645e-20 + e * (1393489324453249e-21 + e * (0 + 0 * e)))) - 1892047582600767e-19) - 0.21140713487441282) - 1.8919736488197254) - 4.785580284951356, r = 1 + e * (0.24434533737818856 + e * (0.008733707544922887 + e * (e * (e * (e * (4710012640030765e-24 + e * (6998415452048457e-28 * e - 8333784406253855e-26)) - 21750464515767985e-22) - 7437436828999331e-20) - 0.0011759276533443448)))) : (n = 0 + (e = 1 / e) * (0 + e * (1393489324453249e-21 + e * (6399492042131645e-20 + e * (0.0011514092388917874 + e * (e * (e * (-4.785580284951356 * e - 1.8919736488197254) - 0.21140713487441282) - 1892047582600767e-19))))), r = 6998415452048457e-28 + e * (e * (4710012640030765e-24 + e * (e * (e * (e * (0.008733707544922887 + e * (0.24434533737818856 + 1 * e)) - 0.0011759276533443448) - 7437436828999331e-20) - 21750464515767985e-22)) - 8333784406253855e-26)), n / r);
+    }, Eg = function(e) {
+      var n, r;
+      return e === 0 ? -10.39489505733089 : ((e < 0 ? -e : e) <= 1 ? (n = e * (e * (e * (e * (e * (e * (-8214657090954655e-24 * e - 7855236337967234e-22) - 3825293235079675e-20) - 0.001194591734169687) - 0.025115606465534634) - 0.34772826653924577) - 2.858272196711067) - 10.39489505733089, r = 1 + e * (0.2081963335726719 + e * (0.019568765731720502 + e * (0.0011107963810248593 + e * (40850774626603926e-21 + e * (9555611230656935e-22 + e * (1185071534740229e-23 + 2226094836273526e-30 * e))))))) : (n = (e = 1 / e) * (e * (e * (e * (e * (e * (-10.39489505733089 * e - 2.858272196711067) - 0.34772826653924577) - 0.025115606465534634) - 0.001194591734169687) - 3825293235079675e-20) - 7855236337967234e-22) - 8214657090954655e-24, r = 2226094836273526e-30 + e * (1185071534740229e-23 + e * (9555611230656935e-22 + e * (40850774626603926e-21 + e * (0.0011107963810248593 + e * (0.019568765731720502 + e * (0.2081963335726719 + 1 * e))))))), n / r);
+    }, Pg = 129, Vg = 170, Cg = 709, Ag = 1.2433929443359375, Ig = 0.6986598968505859, Bg = function e(n) {
+      var r, a, s, u, p, k;
+      if (i(n))
+        return NaN;
+      if (n === 1)
+        return NaN;
+      if (n >= 56)
+        return 1;
+      if (pe(n) && (u = 0 | n) === n) {
+        if (!(u < 0))
+          return 1 & u ? yg[(u - 3) / 2] : bg[u / 2];
+        if (!(1 & (s = 0 | -u)))
+          return 0;
+        if ((k = (s + 1) / 2 | 0) <= Pg)
+          return -wg[k] / (s + 1);
+      }
+      return J(n) < wo ? -0.5 - Ci * n : (a = 1 - n, n < 0 ? Ne(n / 2) === n / 2 ? 0 : (r = n, n = a, a = r, n > Vg ? (r = 2 * Lr(0.5 * a) * e(n), p = ke(n), (p -= n * M(yr)) > Cg ? r < 0 ? j : H : r * R(p)) : 2 * Lr(0.5 * a) * V(yr, -n) * ve(n) * e(n)) : n < 1 ? (r = xg(a), r -= Ag, r += a, r /= a) : n <= 2 ? (r = 1 / (a = -a)) + Sg(a) : n <= 4 ? (r = Ig + 1 / -a) + Mg(n - 2) : n <= 7 ? (r = kg(n - 4), 1 + R(r)) : n < 15 ? (r = Tg(n - 7), 1 + R(r)) : n < 36 ? (r = Eg(n - 15), 1 + R(r)) : 1 + V(2, -n));
+    }, Rg = 12 * c(6) * Bg(3) / (T * T * T), pc = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : Rg;
+    }, Lg = c(6), mc = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : T / Lg * n;
+    }, hc = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : or / 6 * n * n;
+    }, dc = function(e, n, r) {
+      return i(e) || i(n) || i(r) || r <= 0 ? NaN : -R(-(e - n) / r);
+    };
+    o(dc, "factory", function(e, n) {
+      return i(e) || i(n) || n <= 0 ? N(NaN) : function(r) {
+        return i(r) ? NaN : -R(-(r - e) / n);
+      };
+    });
+    var gc = dc, Nc = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || r <= 0 ? NaN : e === j ? 0 : -(a = (e - n) / r) - R(-a) - M(r);
+    };
+    o(Nc, "factory", function(e, n) {
+      var r;
+      return i(e) || i(n) || n <= 0 ? N(NaN) : (r = M(n), function(a) {
+        var s;
+        return i(a) ? NaN : a === j ? 0 : -(s = (a - e) / n) - R(-s) - r;
+      });
+    });
+    var yc = Nc, bc = function(e, n, r) {
+      return i(e) || i(n) || i(r) || r <= 0 || e >= 1 / r ? NaN : ve(1 - r * e) * R(n * e);
+    };
+    o(bc, "factory", function(e, n) {
+      return i(e) || i(n) || n <= 0 ? N(NaN) : function(r) {
+        return r >= 1 / n ? NaN : ve(1 - n * r) * R(e * r);
+      };
+    });
+    var wc = bc, xc = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || r <= 0 ? NaN : e === j ? 0 : 1 / r * R(-(a = (e - n) / r) - R(-a));
+    };
+    o(xc, "factory", function(e, n) {
+      return i(e) || i(n) || n <= 0 ? N(NaN) : function(r) {
+        var a;
+        return i(r) ? NaN : r === j ? 0 : 1 / n * R(-(a = (r - e) / n) - R(-a));
+      };
+    });
+    var Sc = xc, Mc = function(e, n, r) {
+      return i(n) || i(r) || i(e) || r <= 0 || e < 0 || e > 1 ? NaN : n - r * M(-M(e));
+    };
+    o(Mc, "factory", function(e, n) {
+      return i(e) || i(n) || n <= 0 ? N(NaN) : function(r) {
+        return i(r) || r < 0 || r > 1 ? NaN : e - n * M(-M(r));
+      };
+    });
+    var kc = Mc, Tc = Ue.isPrimitive, Ec = Ge.isPrimitive;
+    function on() {
+      var e, n;
+      if (!(this instanceof on))
+        return arguments.length === 0 ? new on() : new on(arguments[0], arguments[1]);
+      if (arguments.length) {
+        if (n = arguments[0], e = arguments[1], !Ec(n) || Vn(n))
+          throw new TypeError("invalid argument. Location parameter `mu` must be a number primitive. Value: `" + n + "`");
+        if (!Tc(e))
+          throw new TypeError("invalid argument. Scale parameter `beta` must be a positive number. Value: `" + e + "`");
+      } else
+        n = 0, e = 1;
+      return l(this, "mu", { configurable: !1, enumerable: !0, get: function() {
+        return n;
+      }, set: function(r) {
+        if (!Ec(r) || Vn(r))
+          throw new TypeError("invalid value. Must be a number primitive. Value: `" + r + "`");
+        n = r;
+      } }), l(this, "beta", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(r) {
+        if (!Tc(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        e = r;
+      } }), this;
+    }
+    m(on.prototype, "entropy", function() {
+      return uc(this.mu, this.beta);
+    }), m(on.prototype, "kurtosis", function() {
+      return fc(this.mu, this.beta);
+    }), m(on.prototype, "mean", function() {
+      return cc(this.mu, this.beta);
+    }), m(on.prototype, "median", function() {
+      return lc(this.mu, this.beta);
+    }), m(on.prototype, "mode", function() {
+      return vc(this.mu, this.beta);
+    }), m(on.prototype, "skewness", function() {
+      return pc(this.mu, this.beta);
+    }), m(on.prototype, "stdev", function() {
+      return mc(this.mu, this.beta);
+    }), m(on.prototype, "variance", function() {
+      return hc(this.mu, this.beta);
+    }), o(on.prototype, "cdf", function(e) {
+      return sc(e, this.mu, this.beta);
+    }), o(on.prototype, "logcdf", function(e) {
+      return gc(e, this.mu, this.beta);
+    }), o(on.prototype, "logpdf", function(e) {
+      return yc(e, this.mu, this.beta);
+    }), o(on.prototype, "mgf", function(e) {
+      return wc(e, this.mu, this.beta);
+    }), o(on.prototype, "pdf", function(e) {
+      return Sc(e, this.mu, this.beta);
+    }), o(on.prototype, "quantile", function(e) {
+      return kc(e, this.mu, this.beta);
+    });
+    var qg = on, Fg = function(e) {
+      return Ne(e) === e && e < 0;
+    }, we = function(e) {
+      return Fg(e) ? NaN : ke(e + 1);
+    }, Pc = function(e, n, r, a) {
+      var s, u, p, k;
+      return i(e) || i(n) || i(r) || i(a) || !re(n) || !re(r) || !re(a) || n === H || r === H || r > n || a > n ? NaN : (k = Ee(0, a + r - n), p = Se(r, a), re(e) && k <= e && e <= p ? (u = we(a) + we(r) + we(n - a) + we(n - r), s = we(n) + we(e) + we(a - e), s += we(r - e) + we(n - r + e - a), R(u - s)) : 0);
+    };
+    o(Pc, "factory", function(e, n, r) {
+      var a, s;
+      return i(e) || i(n) || i(r) || !re(e) || !re(n) || !re(r) || e === H || n === H || n > e || r > e ? N(NaN) : (s = Ee(0, r + n - e), a = Se(n, r), function(u) {
+        var p, k;
+        return i(u) ? NaN : re(u) && s <= u && u <= a ? (k = we(r) + we(n) + we(e - r) + we(e - n), p = we(e) + we(u) + we(r - u), p += we(n - u) + we(e - n + u - r), R(k - p)) : 0;
+      });
+    });
+    var Ba = Pc, Vc = function(e) {
+      var n, r, a;
+      for (n = e.length, r = 0, a = 0; a < n; a++)
+        r += e[a];
+      return r;
+    }, Cc = function(e, n, r, a) {
+      var s, u, p, k, y;
+      if (i(e) || i(n) || i(r) || i(a) || !re(n) || !re(r) || !re(a) || n === H || r === H || r > n || a > n)
+        return NaN;
+      if ((e = Ti(e)) < Ee(0, a + r - n))
+        return 0;
+      if (e >= Se(a, r))
+        return 1;
+      for ((u = new sr(e + 1))[e] = Ba(e, n, r, a), y = e - 1; y >= 0; y--)
+        p = (y + 1) * (n - r - (a - y - 1)), s = (r - y) * (a - y), u[y] = p / s * u[y + 1];
+      return k = Vc(u), Se(k, 1);
+    };
+    o(Cc, "factory", function(e, n, r) {
+      return i(e) || i(n) || i(r) || !re(e) || !re(n) || !re(r) || e === H || n === H || n > e || r > e ? N(NaN) : function(a) {
+        var s, u, p, k, y;
+        if (i(a))
+          return NaN;
+        if ((a = Ti(a)) < Ee(0, r + n - e))
+          return 0;
+        if (a >= Se(r, n))
+          return 1;
+        for ((u = new sr(a + 1))[a] = Ba(a, e, n, r), y = a - 1; y >= 0; y--)
+          p = (y + 1) * (e - n - (r - y - 1)), s = (n - y) * (r - y), u[y] = p / s * u[y + 1];
+        return k = Vc(u), Se(k, 1);
+      };
+    });
+    var Ra = Cc, Og = Di.isPrimitive, Ac = function(e) {
+      return Og(e) && e >= 0;
+    }, Dg = Di.isObject, Ic = function(e) {
+      return Dg(e) && e.valueOf() >= 0;
+    }, W0 = function(e) {
+      return Ac(e) || Ic(e);
+    };
+    o(W0, "isPrimitive", Ac), o(W0, "isObject", Ic);
+    var Ug = W0, Bc = function(e, n, r) {
+      var a;
+      return !re(e) || !re(n) || !re(r) || e === H || n === H || n > e || r > e ? NaN : (a = e * e * (e - 1) * (e * (e + 1) - 6 * n * (e - n) - 6 * r * (e - r)), (a += 6 * r * n * (e - n) * (e - r) * (5 * e - 6)) / (r * n * (e - n) * (e - r) * (e - 2) * (e - 3)));
+    }, Rc = function(e, n, r) {
+      return i(e) || i(n) || i(r) ? NaN : !re(e) || !re(n) || !re(r) || e === H || n === H || n > e || r > e ? NaN : r * (n / e);
+    }, Lc = function(e, n, r) {
+      return !re(e) || !re(n) || !re(r) || e === H || n === H || n > e || r > e ? NaN : Ne((r + 1) * (n + 1) / (e + 2));
+    }, qc = function(e, n, r) {
+      return !re(e) || !re(n) || !re(r) || e === H || n === H || n > e || r > e ? NaN : (e - 2 * n) * c(e - 1) * (e - 2 * r) / (c(r * n * (e - n) * (e - r)) * (e - 2));
+    }, Fc = function(e, n, r) {
+      return !re(e) || !re(n) || !re(r) || e === H || n === H || n > e || r > e ? NaN : c(r * (n / e) * ((e - n) / e) * ((e - r) / (e - 1)));
+    }, Oc = function(e, n, r) {
+      return !re(e) || !re(n) || !re(r) || e === H || n === H || n > e || r > e ? NaN : r * (n / e) * ((e - n) / e) * ((e - r) / (e - 1));
+    }, Dc = function(e, n, r, a) {
+      var s, u, p, k;
+      return i(e) || i(n) || i(r) || i(a) || !re(n) || !re(r) || !re(a) || n === H || r === H || r > n || a > n ? NaN : (k = Ee(0, a + r - n), p = Se(r, a), re(e) && k <= e && e <= p ? (u = we(a) + we(r) + we(n - a) + we(n - r), s = we(n) + we(e) + we(a - e), u - (s += we(r - e) + we(n - r + e - a))) : j);
+    };
+    o(Dc, "factory", function(e, n, r) {
+      var a, s;
+      return i(e) || i(n) || i(r) || !re(e) || !re(n) || !re(r) || e === H || n === H || n > e || r > e ? N(NaN) : (s = Ee(0, r + n - e), a = Se(n, r), function(u) {
+        var p, k;
+        return i(u) ? NaN : re(u) && s <= u && u <= a ? (k = we(r) + we(n) + we(e - r) + we(e - n), p = we(e) + we(u) + we(r - u), p += we(n - u) + we(e - n + u - r), k - p) : j;
+      });
+    });
+    var Uc = Dc, Hc = function(e, n, r, a) {
+      var s;
+      if (i(e) || i(n) || i(r) || i(a) || !re(n) || !re(r) || !re(a) || n === H || r === H || r > n || a > n || e < 0 || e > 1)
+        return NaN;
+      if (e === 0)
+        return Ee(0, a + r - n);
+      if (e === 1)
+        return Se(a, r);
+      for (s = Ee(0, a + r - n); !(Ra(s, n, r, a) > e); )
+        s += 1;
+      return s;
+    };
+    o(Hc, "factory", function(e, n, r) {
+      return i(e) || i(n) || i(r) || !re(e) || !re(n) || !re(r) || e === H || n === H || n > e || r > e ? N(NaN) : function(a) {
+        var s;
+        if (i(a) || a < 0 || a > 1)
+          return NaN;
+        if (a === 0)
+          return Ee(0, r + n - e);
+        if (a === 1)
+          return Se(r, n);
+        for (s = Ee(0, r + n - e); !(Ra(s, e, n, r) > a); )
+          s += 1;
+        return s;
+      };
+    });
+    var Wc = Hc, ci = Ug.isPrimitive;
+    function Zn(e, n, r) {
+      if (!(this instanceof Zn))
+        return new Zn(e, n, r);
+      if (!ci(e))
+        throw new TypeError("invalid argument. Population size `N` must be a nonnegative integer. Value: `" + e + "`");
+      if (!ci(n))
+        throw new TypeError("invalid argument. Subpopulation size `K` must be a nonnegative integer. Value: `" + n + "`");
+      if (!ci(r))
+        throw new TypeError("invalid argument. Number of draws `n` must be a nonnegative integer. Value: `" + r + "`");
+      if (n > e)
+        throw new RangeError("invalid arguments. Subpopulation size `K` must be smaller than or equal to `N`.");
+      if (r > e)
+        throw new RangeError("invalid arguments. Number of draws `n` must be smaller than or equal to `N`.");
+      return l(this, "N", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(a) {
+        if (!ci(a))
+          throw new TypeError("invalid value. Must be a nonnegative integer. Value: `" + a + "`");
+        if (n > a)
+          throw new RangeError("invalid value. Must be larger than or equal to `K`. Value: `" + a + "`");
+        if (r > a)
+          throw new RangeError("invalid value. Must be larger than or equal to `n`. Value: `" + a + "`");
+        e = a;
+      } }), l(this, "K", { configurable: !1, enumerable: !0, get: function() {
+        return n;
+      }, set: function(a) {
+        if (!ci(a))
+          throw new TypeError("invalid value. Must be a nonnegative integer. Value: `" + a + "`");
+        if (a > e)
+          throw new RangeError("invalid value. Must be smaller than or equal to `N`. Value: `" + a + "`");
+        n = a;
+      } }), l(this, "n", { configurable: !1, enumerable: !0, get: function() {
+        return r;
+      }, set: function(a) {
+        if (!ci(a))
+          throw new TypeError("invalid value. Must be a nonnegative integer. Value: `" + a + "`");
+        if (a > e)
+          throw new RangeError("invalid value. Must be smaller than or equal to `N`. Value: `" + a + "`");
+        r = a;
+      } }), this;
+    }
+    m(Zn.prototype, "kurtosis", function() {
+      return Bc(this.N, this.K, this.n);
+    }), m(Zn.prototype, "mean", function() {
+      return Rc(this.N, this.K, this.n);
+    }), m(Zn.prototype, "mode", function() {
+      return Lc(this.N, this.K, this.n);
+    }), m(Zn.prototype, "skewness", function() {
+      return qc(this.N, this.K, this.n);
+    }), m(Zn.prototype, "stdev", function() {
+      return Fc(this.N, this.K, this.n);
+    }), m(Zn.prototype, "variance", function() {
+      return Oc(this.N, this.K, this.n);
+    }), o(Zn.prototype, "cdf", function(e) {
+      return Ra(e, this.N, this.K, this.n);
+    }), o(Zn.prototype, "logpmf", function(e) {
+      return Uc(e, this.N, this.K, this.n);
+    }), o(Zn.prototype, "pmf", function(e) {
+      return Ba(e, this.N, this.K, this.n);
+    }), o(Zn.prototype, "quantile", function(e) {
+      return Wc(e, this.N, this.K, this.n);
+    });
+    var Hg = Zn, Gc = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e <= 0 ? 0 : fr(r / e, n, !0, !0);
+    };
+    o(Gc, "factory", function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : function(r) {
+        return i(r) ? NaN : r <= 0 ? 0 : fr(n / r, e, !0, !0);
+      };
+    });
+    var zc = Gc, jc = function(e, n) {
+      var r;
+      return e <= 0 || n <= 0 ? NaN : (r = e + M(n * ve(e)), r -= (1 + e) * Qn(e));
+    }, Kc = function(e, n) {
+      return i(e) || i(n) || e <= 4 || n <= 0 ? NaN : (30 * e - 66) / ((e - 3) * (e - 4));
+    }, Qc = function(e, n) {
+      return e <= 1 || n <= 0 ? NaN : n / (e - 1);
+    }, $c = function(e, n) {
+      return e <= 0 || n <= 0 ? NaN : n / (e + 1);
+    }, Zc = function(e, n, r) {
+      return i(n) || i(r) || i(e) || n <= 0 || r <= 0 || e < 0 || e > 1 ? NaN : r / ii(e, n, !0);
+    };
+    o(Zc, "factory", function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : function(r) {
+        return i(r) || r < 0 || r > 1 ? NaN : n / ii(r, e, !0);
+      };
+    });
+    var Jc = Zc, Xc = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e <= 0 ? j : (a = n * M(r) - ke(n), a -= (n + 1) * M(e), a -= r / e);
+    };
+    o(Xc, "factory", function(e, n) {
+      var r;
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : (r = e * M(n) - ke(e), function(a) {
+        return i(a) ? NaN : a <= 0 ? j : r - (e + 1) * M(a) - n / a;
+      });
+    });
+    var Yc = Xc, _c = function(e, n) {
+      return i(e) || i(n) || e <= 3 || n <= 0 ? NaN : 4 * c(e - 2) / (e - 3);
+    }, e3 = function(e, n) {
+      return e <= 2 || n <= 0 ? NaN : n / ((e - 1) * c(e - 2));
+    }, n3 = function(e, n) {
+      return e <= 2 || n <= 0 ? NaN : n * n / (V(e - 1, 2) * (e - 2));
+    }, r3 = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e <= 0 ? 0 : (a = n * M(r) - ke(n), a -= (n + 1) * M(e), R(a -= r / e));
+    };
+    o(r3, "factory", function(e, n) {
+      var r;
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : (r = e * M(n) - ke(e), function(a) {
+        var s;
+        return i(a) ? NaN : a <= 0 ? 0 : (s = r - (e + 1) * M(a) - n / a, R(s));
+      });
+    });
+    var i3 = r3, La = Ue.isPrimitive;
+    function Fn() {
+      var e, n;
+      if (!(this instanceof Fn))
+        return arguments.length === 0 ? new Fn() : new Fn(arguments[0], arguments[1]);
+      if (arguments.length) {
+        if (e = arguments[0], n = arguments[1], !La(e))
+          throw new TypeError("invalid argument. First shape parameter `alpha` must be a positive number. Value: `" + e + "`");
+        if (!La(n))
+          throw new TypeError("invalid argument. Second shape parameter `beta` must be a positive number. Value: `" + n + "`");
+      } else
+        e = 1, n = 1;
+      return l(this, "alpha", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(r) {
+        if (!La(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        e = r;
+      } }), l(this, "beta", { configurable: !1, enumerable: !0, get: function() {
+        return n;
+      }, set: function(r) {
+        if (!La(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        n = r;
+      } }), this;
+    }
+    m(Fn.prototype, "entropy", function() {
+      return jc(this.alpha, this.beta);
+    }), m(Fn.prototype, "kurtosis", function() {
+      return Kc(this.alpha, this.beta);
+    }), m(Fn.prototype, "mean", function() {
+      return Qc(this.alpha, this.beta);
+    }), m(Fn.prototype, "mode", function() {
+      return $c(this.alpha, this.beta);
+    }), m(Fn.prototype, "skewness", function() {
+      return _c(this.alpha, this.beta);
+    }), m(Fn.prototype, "stdev", function() {
+      return e3(this.alpha, this.beta);
+    }), m(Fn.prototype, "variance", function() {
+      return n3(this.alpha, this.beta);
+    }), o(Fn.prototype, "cdf", function(e) {
+      return zc(e, this.alpha, this.beta);
+    }), o(Fn.prototype, "logpdf", function(e) {
+      return Yc(e, this.alpha, this.beta);
+    }), o(Fn.prototype, "pdf", function(e) {
+      return i3(e, this.alpha, this.beta);
+    }), o(Fn.prototype, "quantile", function(e) {
+      return Jc(e, this.alpha, this.beta);
+    });
+    var Wg = Fn, a3 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e <= 0 ? 0 : e >= 1 ? 1 : 1 - V(1 - V(e, n), r);
+    };
+    o(a3, "factory", function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : function(r) {
+        return i(r) ? NaN : r <= 0 ? 0 : r >= 1 ? 1 : 1 - V(1 - V(r, e), n);
+      };
+    });
+    var t3 = a3, o3 = function(e, n) {
+      var r, a, s, u, p, k;
+      return i(e) || e <= 0 || i(n) || n <= 0 ? NaN : (u = n * Me(1 + 1 / e, n), p = n * Me(1 + 2 / e, n), k = n * Me(1 + 3 / e, n), a = n * Me(1 + 4 / e, n) - 4 * k * u + 6 * p * (s = u * u) - 3 * s * s, a /= (r = p - u * u) * r);
+    }, s3 = function(e, n) {
+      return i(e) || e <= 0 || i(n) || n <= 0 ? NaN : n * Me(1 + 1 / e, n);
+    }, u3 = function(e, n) {
+      return i(e) || e < 1 || i(n) || n < 1 || e === 1 && n === 1 ? NaN : V((e - 1) / (e * n - 1), 1 / e);
+    }, f3 = function(e, n) {
+      var r, a, s;
+      return i(e) || e <= 0 || i(n) || n <= 0 ? NaN : (a = n * Me(1 + 1 / e, n), s = n * Me(1 + 2 / e, n), (n * Me(1 + 3 / e, n) - 3 * a * (r = s - a * a) - a * a * a) / V(r, 1.5));
+    }, c3 = function(e, n) {
+      var r, a;
+      return i(e) || e <= 0 || i(n) || n <= 0 ? NaN : (r = n * Me(1 + 1 / e, n), a = n * Me(1 + 2 / e, n), c(a - r * r));
+    }, l3 = function(e, n) {
+      var r;
+      return i(e) || e <= 0 || i(n) || n <= 0 ? NaN : (r = n * Me(1 + 1 / e, n), n * Me(1 + 2 / e, n) - r * r);
+    }, v3 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e <= 0 ? j : e >= 1 ? 0 : M(1 - V(1 - V(e, n), r));
+    };
+    o(v3, "factory", function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : function(r) {
+        return i(r) ? NaN : r <= 0 ? j : r >= 1 ? 0 : M(1 - V(1 - V(r, e), n));
+      };
+    });
+    var p3 = v3, m3 = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e <= 0 || e >= 1 ? j : (a = M(n * r), a += (n - 1) * M(e), a += (r - 1) * M(1 - V(e, n)));
+    };
+    o(m3, "factory", function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : function(r) {
+        var a;
+        return i(r) ? NaN : r <= 0 || r >= 1 ? j : (a = M(e * n), a += (e - 1) * M(r), a += (n - 1) * M(1 - V(r, e)));
+      };
+    });
+    var h3 = m3, d3 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e <= 0 || e >= 1 ? 0 : n * r * V(e, n - 1) * V(1 - V(e, n), r - 1);
+    };
+    o(d3, "factory", function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : function(r) {
+        return i(r) ? NaN : r <= 0 || r >= 1 ? 0 : e * n * V(r, e - 1) * V(1 - V(r, e), n - 1);
+      };
+    });
+    var g3 = d3, N3 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 || e < 0 || e > 1 ? NaN : V(1 - V(1 - e, 1 / r), 1 / n);
+    };
+    o(N3, "factory", function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : function(r) {
+        return i(r) || r < 0 || r > 1 ? NaN : V(1 - V(1 - r, 1 / n), 1 / e);
+      };
+    });
+    var y3 = N3, qa = Ue.isPrimitive;
+    function On() {
+      var e, n;
+      if (!(this instanceof On))
+        return arguments.length === 0 ? new On() : new On(arguments[0], arguments[1]);
+      if (arguments.length) {
+        if (e = arguments[0], n = arguments[1], !qa(e))
+          throw new TypeError("invalid argument. First shape parameter `a` must be a positive number. Value: `" + e + "`");
+        if (!qa(n))
+          throw new TypeError("invalid argument. Second shape parameter `b` must be a positive number. Value: `" + n + "`");
+      } else
+        e = 1, n = 1;
+      return l(this, "a", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(r) {
+        if (!qa(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        e = r;
+      } }), l(this, "b", { configurable: !1, enumerable: !0, get: function() {
+        return n;
+      }, set: function(r) {
+        if (!qa(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        n = r;
+      } }), this;
+    }
+    m(On.prototype, "kurtosis", function() {
+      return o3(this.a, this.b);
+    }), m(On.prototype, "mean", function() {
+      return s3(this.a, this.b);
+    }), m(On.prototype, "mode", function() {
+      return u3(this.a, this.b);
+    }), m(On.prototype, "skewness", function() {
+      return f3(this.a, this.b);
+    }), m(On.prototype, "stdev", function() {
+      return c3(this.a, this.b);
+    }), m(On.prototype, "variance", function() {
+      return l3(this.a, this.b);
+    }), o(On.prototype, "cdf", function(e) {
+      return t3(e, this.a, this.b);
+    }), o(On.prototype, "logcdf", function(e) {
+      return p3(e, this.a, this.b);
+    }), o(On.prototype, "logpdf", function(e) {
+      return h3(e, this.a, this.b);
+    }), o(On.prototype, "pdf", function(e) {
+      return g3(e, this.a, this.b);
+    }), o(On.prototype, "quantile", function(e) {
+      return y3(e, this.a, this.b);
+    });
+    var Gg = On, zg = function(e, n) {
+      return i(e) || e <= 0 || i(n) || n <= 0 ? NaN : V(1 - V(2, -1 / n), 1 / e);
+    }, b3 = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || r <= 0 ? NaN : (a = (e - n) / r, e < n ? 0.5 * R(a) : 1 - 0.5 * R(-a));
+    };
+    o(b3, "factory", function(e, n) {
+      return i(e) || i(n) || n <= 0 ? N(NaN) : function(r) {
+        var a;
+        return i(r) ? NaN : (a = (r - e) / n, r < e ? 0.5 * R(a) : 1 - 0.5 * R(-a));
+      };
+    });
+    var w3 = b3, x3 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : M(2 * n * Kn);
+    }, S3 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : 3;
+    }, M3 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : e;
+    }, k3 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : e;
+    }, T3 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : e;
+    }, E3 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : 0;
+    }, P3 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : Pe * n;
+    }, V3 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : 2 * n * n;
+    }, pr = -0.6931471805599453, C3 = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || r <= 0 ? NaN : (a = (e - n) / r, e < n ? pr + a : pr + oe(-Le(-a)));
+    };
+    o(C3, "factory", function(e, n) {
+      return i(e) || i(n) || n <= 0 ? N(NaN) : function(r) {
+        var a;
+        return i(r) ? NaN : (a = (r - e) / n, r < e ? pr + a : pr + oe(-Le(-a)));
+      };
+    });
+    var A3 = C3, I3 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || r <= 0 ? NaN : -(J((e - n) / r) + M(2 * r));
+    };
+    o(I3, "factory", function(e, n) {
+      return i(e) || i(n) || n <= 0 ? N(NaN) : function(r) {
+        return i(r) ? NaN : -(J((r - e) / n) + M(2 * n));
+      };
+    });
+    var B3 = I3, R3 = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || r <= 0 || J(e) >= 1 / r ? NaN : (a = r * e, R(n * e) / (1 - V(a, 2)));
+    };
+    o(R3, "factory", function(e, n) {
+      return i(e) || i(n) || n <= 0 ? N(NaN) : function(r) {
+        var a;
+        return J(r) >= 1 / n ? NaN : (a = n * r, R(e * r) / (1 - V(a, 2)));
+      };
+    });
+    var L3 = R3, q3 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || r <= 0 ? NaN : 0.5 * R(-J((e - n) / r)) / r;
+    };
+    o(q3, "factory", function(e, n) {
+      return i(e) || i(n) || n <= 0 ? N(NaN) : function(r) {
+        return i(r) ? NaN : 0.5 * R(-J((r - e) / n)) / n;
+      };
+    });
+    var F3 = q3, O3 = function(e, n, r) {
+      return i(n) || i(r) || i(e) || r <= 0 || e < 0 || e > 1 ? NaN : n - r * br(e - 0.5) * M(1 - 2 * J(e - 0.5));
+    };
+    o(O3, "factory", function(e, n) {
+      return i(e) || i(n) || n <= 0 ? N(NaN) : function(r) {
+        return i(r) || r < 0 || r > 1 ? NaN : e - n * br(r - 0.5) * M(1 - 2 * J(r - 0.5));
+      };
+    });
+    var D3 = O3, U3 = Ue.isPrimitive, H3 = Ge.isPrimitive;
+    function sn() {
+      var e, n;
+      if (!(this instanceof sn))
+        return arguments.length === 0 ? new sn() : new sn(arguments[0], arguments[1]);
+      if (arguments.length) {
+        if (e = arguments[0], n = arguments[1], !H3(e) || Vn(e))
+          throw new TypeError("invalid argument. Location parameter `mu` must be a number primitive. Value: `" + e + "`");
+        if (!U3(n))
+          throw new TypeError("invalid argument. Scale parameter `b` must be a positive number. Value: `" + n + "`");
+      } else
+        e = 0, n = 1;
+      return l(this, "mu", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(r) {
+        if (!H3(r) || Vn(r))
+          throw new TypeError("invalid value. Must be a number primitive. Value: `" + r + "`");
+        e = r;
+      } }), l(this, "b", { configurable: !1, enumerable: !0, get: function() {
+        return n;
+      }, set: function(r) {
+        if (!U3(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        n = r;
+      } }), this;
+    }
+    m(sn.prototype, "entropy", function() {
+      return x3(this.mu, this.b);
+    }), m(sn.prototype, "kurtosis", function() {
+      return S3(this.mu, this.b);
+    }), m(sn.prototype, "mean", function() {
+      return M3(this.mu, this.b);
+    }), m(sn.prototype, "median", function() {
+      return k3(this.mu, this.b);
+    }), m(sn.prototype, "mode", function() {
+      return T3(this.mu, this.b);
+    }), m(sn.prototype, "skewness", function() {
+      return E3(this.mu, this.b);
+    }), m(sn.prototype, "stdev", function() {
+      return P3(this.mu, this.b);
+    }), m(sn.prototype, "variance", function() {
+      return V3(this.mu, this.b);
+    }), o(sn.prototype, "cdf", function(e) {
+      return w3(e, this.mu, this.b);
+    }), o(sn.prototype, "logcdf", function(e) {
+      return A3(e, this.mu, this.b);
+    }), o(sn.prototype, "logpdf", function(e) {
+      return B3(e, this.mu, this.b);
+    }), o(sn.prototype, "mgf", function(e) {
+      return L3(e, this.mu, this.b);
+    }), o(sn.prototype, "pdf", function(e) {
+      return F3(e, this.mu, this.b);
+    }), o(sn.prototype, "quantile", function(e) {
+      return D3(e, this.mu, this.b);
+    });
+    var jg = sn, W3 = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || r <= 0 ? NaN : e < n ? 0 : (a = c(r / (2 * (e - n))), qr(a));
+    };
+    o(W3, "factory", function(e, n) {
+      return i(e) || i(n) || n <= 0 ? N(NaN) : function(r) {
+        var a;
+        return i(r) ? NaN : r < e ? 0 : (a = c(n / (2 * (r - e))), qr(a));
+      };
+    });
+    var G3 = W3, Kg = 3 * Rr, z3 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : (1 + Kg + M(16 * n * n * T)) / 2;
+    }, j3 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : H;
+    }, Qg = 2 * V($e(0.5), 2), K3 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : e + n / Qg;
+    }, Q3 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : e + n / 3;
+    }, $3 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : H;
+    }, Z3 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : H;
+    }, J3 = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || r <= 0 ? NaN : e < n ? j : (a = c(r / (2 * (e - n))), M(qr(a)));
+    };
+    o(J3, "factory", function(e, n) {
+      return i(e) || i(n) || n <= 0 ? N(NaN) : function(r) {
+        var a;
+        return i(r) ? NaN : r < e ? j : (a = c(n / (2 * (r - e))), M(qr(a)));
+      };
+    });
+    var X3 = J3, Fa = 1.8378770664093456, Y3 = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || r <= 0 ? NaN : e <= n ? j : (a = e - n, 0.5 * (M(r) - Fa - r / a - 3 * M(a)));
+    };
+    o(Y3, "factory", function(e, n) {
+      return i(e) || i(n) || n <= 0 ? N(NaN) : function(r) {
+        var a;
+        return i(r) ? NaN : r <= e ? j : (a = r - e, 0.5 * (M(n) - Fa - n / a - 3 * M(a)));
+      };
+    });
+    var _3 = Y3, el = function(e, n, r) {
+      return i(e) || i(n) || i(r) || r <= 0 ? NaN : e <= n ? 0 : c(r / yr) * R(-r / (2 * (e - n))) / V(e - n, 1.5);
+    };
+    o(el, "factory", function(e, n) {
+      return i(e) || i(n) || n <= 0 ? N(NaN) : function(r) {
+        return i(r) ? NaN : r <= e ? 0 : c(n / yr) * R(-n / (2 * (r - e))) / V(r - e, 1.5);
+      };
+    });
+    var nl = el, rl = function(e, n, r) {
+      var a;
+      return i(n) || i(r) || i(e) || r <= 0 || e < 0 || e > 1 ? NaN : n + r / (2 * (a = $e(e)) * a);
+    };
+    o(rl, "factory", function(e, n) {
+      return i(e) || i(n) || n <= 0 ? N(NaN) : function(r) {
+        var a;
+        return i(r) || r < 0 || r > 1 ? NaN : (a = $e(r), e + n / (2 * a * a));
+      };
+    });
+    var il = rl, al = Ue.isPrimitive, tl = Ge.isPrimitive;
+    function Dn() {
+      var e, n;
+      if (!(this instanceof Dn))
+        return arguments.length === 0 ? new Dn() : new Dn(arguments[0], arguments[1]);
+      if (arguments.length) {
+        if (e = arguments[0], n = arguments[1], !tl(e) || Vn(e))
+          throw new TypeError("invalid argument. Location parameter `mu` must be a number primitive. Value: `" + e + "`");
+        if (!al(n))
+          throw new TypeError("invalid argument. Scale parameter `c` must be a positive number. Value: `" + n + "`");
+      } else
+        e = 0, n = 1;
+      return l(this, "mu", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(r) {
+        if (!tl(r) || Vn(r))
+          throw new TypeError("invalid value. Must be a number primitive. Value: `" + r + "`");
+        e = r;
+      } }), l(this, "c", { configurable: !1, enumerable: !0, get: function() {
+        return n;
+      }, set: function(r) {
+        if (!al(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        n = r;
+      } }), this;
+    }
+    m(Dn.prototype, "entropy", function() {
+      return z3(this.mu, this.c);
+    }), m(Dn.prototype, "mean", function() {
+      return j3(this.mu, this.c);
+    }), m(Dn.prototype, "median", function() {
+      return K3(this.mu, this.c);
+    }), m(Dn.prototype, "mode", function() {
+      return Q3(this.mu, this.c);
+    }), m(Dn.prototype, "stdev", function() {
+      return $3(this.mu, this.c);
+    }), m(Dn.prototype, "variance", function() {
+      return Z3(this.mu, this.c);
+    }), o(Dn.prototype, "cdf", function(e) {
+      return G3(e, this.mu, this.c);
+    }), o(Dn.prototype, "logcdf", function(e) {
+      return X3(e, this.mu, this.c);
+    }), o(Dn.prototype, "logpdf", function(e) {
+      return _3(e, this.mu, this.c);
+    }), o(Dn.prototype, "pdf", function(e) {
+      return nl(e, this.mu, this.c);
+    }), o(Dn.prototype, "quantile", function(e) {
+      return il(e, this.mu, this.c);
+    });
+    var $g = Dn, ol = function(e, n, r) {
+      return i(e) || i(n) || i(r) || r < 0 ? NaN : r === 0 ? e < n ? 0 : 1 : 1 / (1 + R(-(e - n) / r));
+    }, Zg = Tr.factory;
+    o(ol, "factory", function(e, n) {
+      return i(e) || i(n) || n < 0 ? N(NaN) : n === 0 ? Zg(e) : function(r) {
+        return i(r) ? NaN : 1 / (1 + R(-(r - e) / n));
+      };
+    });
+    var sl = ol, ul = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : M(n) + 2;
+    }, fl = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : 1.2;
+    }, cl = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : e;
+    }, ll = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : e;
+    }, vl = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : e;
+    }, pl = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : 0;
+    }, Jg = 1.7320508075688772, ml = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : n * T / Jg;
+    }, hl = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : n * n * or / 3;
+    }, dl = function(e) {
+      return e <= 18 ? oe(R(e)) : e > 33.3 ? e : e + R(-e);
+    }, gl = function(e, n, r) {
+      return i(e) || i(n) || i(r) || r < 0 ? NaN : r === 0 ? e < n ? j : 0 : -dl(-(e - n) / r);
+    }, Xg = fi.factory;
+    o(gl, "factory", function(e, n) {
+      return i(e) || i(n) || n < 0 ? N(NaN) : n === 0 ? Xg(e) : function(r) {
+        return i(r) ? NaN : -dl(-(r - e) / n);
+      };
+    });
+    var Nl = gl, yl = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || r < 0 ? NaN : e === j ? j : r === 0 ? e === n ? H : j : (a = -J((e - n) / r)) - 2 * oe(R(a)) - M(r);
+    }, Yg = Hr.factory;
+    o(yl, "factory", function(e, n) {
+      var r;
+      return i(e) || i(n) || n < 0 ? N(NaN) : n === 0 ? Yg(e) : (r = M(n), function(a) {
+        var s;
+        return i(a) ? NaN : a === j ? j : (s = -J((a - e) / n)) - 2 * oe(R(s)) - r;
+      });
+    });
+    var bl = yl, wl = function(e) {
+      return i(e) ? NaN : Yn(e) ? 0 : e === 0 ? 1 : Lr(e) / (T * e);
+    }, xl = function(e, n, r) {
+      var a;
+      return i(a = r * e) || i(n) || r < 0 || J(a) > 1 ? NaN : R(n * e) / wl(a);
+    }, _g = U0.factory;
+    o(xl, "factory", function(e, n) {
+      return i(e) || i(n) || n < 0 ? N(NaN) : n === 0 ? _g(e) : function(r) {
+        var a = n * r;
+        return J(a) > 1 ? NaN : R(e * r) / wl(a);
+      };
+    });
+    var Sl = xl, Ml = function(e, n, r) {
+      var a, s;
+      return i(e) || i(n) || i(r) || r < 0 ? NaN : e === j ? 0 : r === 0 ? e === n ? H : 0 : (s = J((e - n) / r), (a = R(-s)) / (r * V(1 + a, 2)));
+    }, eN = Wr.factory;
+    o(Ml, "factory", function(e, n) {
+      return i(e) || i(n) || n < 0 ? N(NaN) : n === 0 ? eN(e) : function(r) {
+        var a, s;
+        return i(r) ? NaN : r === j ? 0 : (s = J((r - e) / n), (a = R(-s)) / (n * V(1 + a, 2)));
+      };
+    });
+    var kl = Ml, Tl = function(e, n, r) {
+      return i(n) || i(r) || i(e) || r < 0 || e < 0 || e > 1 ? NaN : r === 0 ? n : n + r * M(e / (1 - e));
+    }, nN = kr.factory;
+    o(Tl, "factory", function(e, n) {
+      return i(e) || i(n) || n < 0 ? N(NaN) : n === 0 ? nN(e) : function(r) {
+        return i(r) || r < 0 || r > 1 ? NaN : e + n * M(r / (1 - r));
+      };
+    });
+    var El = Tl, Pl = Ue.isPrimitive, Vl = Ge.isPrimitive;
+    function un() {
+      var e, n;
+      if (!(this instanceof un))
+        return arguments.length === 0 ? new un() : new un(arguments[0], arguments[1]);
+      if (arguments.length) {
+        if (e = arguments[0], n = arguments[1], !Vl(e) || Vn(e))
+          throw new TypeError("invalid argument. Location parameter `mu` must be a number primitive. Value: `" + e + "`");
+        if (!Pl(n))
+          throw new TypeError("invalid argument. Scale parameter `s` must be a positive number. Value: `" + n + "`");
+      } else
+        e = 0, n = 1;
+      return l(this, "mu", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(r) {
+        if (!Vl(r) || Vn(r))
+          throw new TypeError("invalid value. Must be a number primitive. Value: `" + r + "`");
+        e = r;
+      } }), l(this, "s", { configurable: !1, enumerable: !0, get: function() {
+        return n;
+      }, set: function(r) {
+        if (!Pl(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        n = r;
+      } }), this;
+    }
+    m(un.prototype, "entropy", function() {
+      return ul(this.mu, this.s);
+    }), m(un.prototype, "kurtosis", function() {
+      return fl(this.mu, this.s);
+    }), m(un.prototype, "mean", function() {
+      return cl(this.mu, this.s);
+    }), m(un.prototype, "median", function() {
+      return ll(this.mu, this.s);
+    }), m(un.prototype, "mode", function() {
+      return vl(this.mu, this.s);
+    }), m(un.prototype, "skewness", function() {
+      return pl(this.mu, this.s);
+    }), m(un.prototype, "stdev", function() {
+      return ml(this.mu, this.s);
+    }), m(un.prototype, "variance", function() {
+      return hl(this.mu, this.s);
+    }), o(un.prototype, "cdf", function(e) {
+      return sl(e, this.mu, this.s);
+    }), o(un.prototype, "logcdf", function(e) {
+      return Nl(e, this.mu, this.s);
+    }), o(un.prototype, "logpdf", function(e) {
+      return bl(e, this.mu, this.s);
+    }), o(un.prototype, "mgf", function(e) {
+      return Sl(e, this.mu, this.s);
+    }), o(un.prototype, "pdf", function(e) {
+      return kl(e, this.mu, this.s);
+    }), o(un.prototype, "quantile", function(e) {
+      return El(e, this.mu, this.s);
+    });
+    var rN = un, Cl = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || r < 0 ? NaN : r === 0 ? e < n ? 0 : 1 : (a = r * c(2), 0.5 * qr(-(e - n) / a));
+    }, iN = Tr.factory;
+    o(Cl, "factory", function(e, n) {
+      var r;
+      return i(e) || i(n) || n < 0 ? N(NaN) : n === 0 ? iN(e) : (r = n * c(2), function(a) {
+        return i(a) ? NaN : 0.5 * qr(-(a - e) / r);
+      });
+    });
+    var li = Cl, Al = function(e, n, r) {
+      return i(e) || i(n) || i(r) || r <= 0 ? NaN : e <= 0 ? 0 : li(M(e), n, r);
+    };
+    o(Al, "factory", function(e, n) {
+      return i(e) || i(n) || n <= 0 ? N(NaN) : function(r) {
+        return i(r) ? NaN : r <= 0 ? 0 : li(M(r), e, n);
+      };
+    });
+    var Il = Al, Bl = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : M(n * R(e + 0.5) * Ei);
+    }, Rl = function(e, n) {
+      var r, a;
+      return i(e) || i(n) || n <= 0 ? NaN : (r = R(4 * (a = n * n)), r += 2 * R(3 * a), r += 3 * R(2 * a), r -= 6);
+    }, Ll = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : R(e + n * n / 2);
+    }, ql = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : R(e);
+    }, Fl = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : R(e - n * n);
+    }, Ol = function(e, n) {
+      var r;
+      return i(e) || i(n) || n <= 0 ? NaN : ((r = R(n * n)) + 2) * c(r - 1);
+    }, Dl = function(e, n) {
+      var r;
+      return i(e) || i(n) || n <= 0 ? NaN : c((R(r = n * n) - 1) * R(2 * e + r));
+    }, Ul = function(e, n) {
+      var r;
+      return i(e) || i(n) || n <= 0 ? NaN : (R(r = n * n) - 1) * R(2 * e + r);
+    }, Hl = function(e, n, r) {
+      var a, s;
+      return i(e) || i(n) || i(r) || r <= 0 ? NaN : e <= 0 ? j : (s = -1 / (2 * (a = V(r, 2))), -0.5 * M(2 * a * T) - M(e) + s * V(M(e) - n, 2));
+    };
+    o(Hl, "factory", function(e, n) {
+      var r, a, s;
+      return i(e) || i(n) || n <= 0 ? N(NaN) : (r = V(n, 2), a = -0.5 * M(2 * r * T), s = -1 / (2 * r), function(u) {
+        return i(u) ? NaN : u <= 0 ? j : a - M(u) + s * V(M(u) - e, 2);
+      });
+    });
+    var Wl = Hl, Gl = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || r <= 0 ? NaN : e <= 0 ? 0 : (a = V(r, 2), 1 / e * (1 / c(2 * a * T)) * R(-1 / (2 * a) * V(M(e) - n, 2)));
+    };
+    o(Gl, "factory", function(e, n) {
+      var r, a, s;
+      return i(e) || i(n) || n <= 0 ? N(NaN) : (r = V(n, 2), a = 1 / c(2 * r * T), s = -1 / (2 * r), function(u) {
+        return i(u) ? NaN : u <= 0 ? 0 : 1 / u * a * R(s * V(M(u) - e, 2));
+      });
+    });
+    var zl = Gl, aN = function(e) {
+      var n, r;
+      return e === 0 ? -5087819496582806e-19 : ((e < 0 ? -e : e) <= 1 ? (n = e * (e * (0.03348066254097446 + e * (e * (e * (0.02198786811111689 + e * (0.008226878746769157 + e * (e * (0 + 0 * e) - 0.005387729650712429))) - 0.03656379714117627) - 0.012692614766297404)) - 0.008368748197417368) - 5087819496582806e-19, r = 1 + e * (e * (e * (1.5622155839842302 + e * (0.662328840472003 + e * (e * (e * (0.07952836873415717 + e * (8862163904564247e-19 * e - 0.0023339375937419)) - 0.05273963823400997) - 0.7122890234154284))) - 1.5657455823417585) - 0.9700050433032906)) : (n = 0 + (e = 1 / e) * (0 + e * (e * (0.008226878746769157 + e * (0.02198786811111689 + e * (e * (e * (0.03348066254097446 + e * (-5087819496582806e-19 * e - 0.008368748197417368)) - 0.012692614766297404) - 0.03656379714117627))) - 0.005387729650712429)), r = 8862163904564247e-19 + e * (e * (0.07952836873415717 + e * (e * (e * (0.662328840472003 + e * (1.5622155839842302 + e * (e * (1 * e - 0.9700050433032906) - 1.5657455823417585))) - 0.7122890234154284) - 0.05273963823400997)) - 0.0023339375937419)), n / r);
+    }, tN = function(e) {
+      var n, r;
+      return e === 0 ? -0.20243350835593876 : ((e < 0 ? -e : e) <= 1 ? (n = e * (0.10526468069939171 + e * (8.3705032834312 + e * (17.644729840837403 + e * (e * (e * (17.445385985570866 + e * (21.12946554483405 + -3.6719225470772936 * e)) - 44.6382324441787) - 18.851064805871424)))) - 0.20243350835593876, r = 1 + e * (6.242641248542475 + e * (3.971343795334387 + e * (e * (e * (48.560921310873994 + e * (10.826866735546016 + e * (1.7211476576120028 * e - 22.643693341313973))) - 20.14326346804852) - 28.66081804998)))) : (n = (e = 1 / e) * (21.12946554483405 + e * (17.445385985570866 + e * (e * (e * (17.644729840837403 + e * (8.3705032834312 + e * (0.10526468069939171 + -0.20243350835593876 * e))) - 18.851064805871424) - 44.6382324441787))) - 3.6719225470772936, r = 1.7211476576120028 + e * (e * (10.826866735546016 + e * (48.560921310873994 + e * (e * (e * (3.971343795334387 + e * (6.242641248542475 + 1 * e)) - 28.66081804998) - 20.14326346804852))) - 22.643693341313973)), n / r);
+    }, oN = function(e) {
+      var n, r;
+      return e === 0 ? -0.1311027816799519 : ((e < 0 ? -e : e) <= 1 ? (n = e * (e * (0.11703015634199525 + e * (0.38707973897260434 + e * (0.3377855389120359 + e * (0.14286953440815717 + e * (0.029015791000532906 + e * (0.0021455899538880526 + e * (e * (28522533178221704e-24 + -681149956853777e-24 * e) - 6794655751811263e-22))))))) - 0.16379404719331705) - 0.1311027816799519, r = 1 + e * (3.4662540724256723 + e * (5.381683457070069 + e * (4.778465929458438 + e * (2.5930192162362027 + e * (0.848854343457902 + e * (0.15226433829533179 + e * (0.011059242293464892 + e * (0 + e * (0 + 0 * e)))))))))) : (n = (e = 1 / e) * (28522533178221704e-24 + e * (e * (0.0021455899538880526 + e * (0.029015791000532906 + e * (0.14286953440815717 + e * (0.3377855389120359 + e * (0.38707973897260434 + e * (0.11703015634199525 + e * (-0.1311027816799519 * e - 0.16379404719331705))))))) - 6794655751811263e-22)) - 681149956853777e-24, r = 0 + e * (0 + e * (0 + e * (0.011059242293464892 + e * (0.15226433829533179 + e * (0.848854343457902 + e * (2.5930192162362027 + e * (4.778465929458438 + e * (5.381683457070069 + e * (3.4662540724256723 + 1 * e)))))))))), n / r);
+    }, sN = function(e) {
+      var n, r;
+      return e === 0 ? -0.0350353787183178 : ((e < 0 ? -e : e) <= 1 ? (n = e * (e * (0.018557330651423107 + e * (0.009508047013259196 + e * (0.0018712349281955923 + e * (15754461742496055e-20 + e * (460469890584318e-20 + e * (26633922742578204e-28 * e - 2304047769118826e-25)))))) - 0.0022242652921344794) - 0.0350353787183178, r = 1 + e * (1.3653349817554064 + e * (0.7620591645536234 + e * (0.22009110576413124 + e * (0.03415891436709477 + e * (0.00263861676657016 + e * (7646752923027944e-20 + e * (0 + 0 * e)))))))) : (n = 26633922742578204e-28 + (e = 1 / e) * (e * (460469890584318e-20 + e * (15754461742496055e-20 + e * (0.0018712349281955923 + e * (0.009508047013259196 + e * (0.018557330651423107 + e * (-0.0350353787183178 * e - 0.0022242652921344794)))))) - 2304047769118826e-25), r = 0 + e * (0 + e * (7646752923027944e-20 + e * (0.00263861676657016 + e * (0.03415891436709477 + e * (0.22009110576413124 + e * (0.7620591645536234 + e * (1.3653349817554064 + 1 * e)))))))), n / r);
+    }, uN = function(e) {
+      var n, r;
+      return e === 0 ? -0.016743100507663373 : ((e < 0 ? -e : e) <= 1 ? (n = e * (e * (0.001056288621524929 + e * (20938631748758808e-20 + e * (14962478375834237e-21 + e * (44969678992770644e-23 + e * (4625961635228786e-24 + e * (9905570997331033e-32 * e - 2811287356288318e-29)))))) - 0.0011295143874558028) - 0.016743100507663373, r = 1 + e * (0.5914293448864175 + e * (0.1381518657490833 + e * (0.016074608709367652 + e * (9640118070051656e-19 + e * (27533547476472603e-21 + e * (282243172016108e-21 + e * (0 + 0 * e)))))))) : (n = 9905570997331033e-32 + (e = 1 / e) * (e * (4625961635228786e-24 + e * (44969678992770644e-23 + e * (14962478375834237e-21 + e * (20938631748758808e-20 + e * (0.001056288621524929 + e * (-0.016743100507663373 * e - 0.0011295143874558028)))))) - 2811287356288318e-29), r = 0 + e * (0 + e * (282243172016108e-21 + e * (27533547476472603e-21 + e * (9640118070051656e-19 + e * (0.016074608709367652 + e * (0.1381518657490833 + e * (0.5914293448864175 + 1 * e)))))))), n / r);
+    }, fN = 0.08913147449493408, cN = 2.249481201171875, lN = 0.807220458984375, vN = 0.9399557113647461, pN = 0.9836282730102539, jl = function(e) {
+      var n, r, a, s, u;
+      return i(e) ? NaN : e === 1 ? H : e === -1 ? j : e === 0 ? e : e > 1 || e < -1 ? NaN : (e < 0 ? (n = -1, r = -e) : (n = 1, r = e), a = 1 - r, r <= 0.5 ? (s = r * (r + 10), u = aN(r), n * (s * fN + s * u)) : a >= 0.25 ? (s = c(-2 * M(a)), u = tN(a -= 0.25), n * (s / (cN + u))) : (a = c(-M(a))) < 3 ? (u = oN(a - 1.125), n * (lN * a + u * a)) : a < 6 ? (u = sN(a - 3), n * (vN * a + u * a)) : (u = uN(a - 6), n * (pN * a + u * a)));
+    }, Kl = function(e, n, r) {
+      return i(n) || i(r) || i(e) || r < 0 || e < 0 || e > 1 ? NaN : r === 0 ? n : n + r * c(2) * jl(2 * e - 1);
+    }, mN = kr.factory;
+    o(Kl, "factory", function(e, n) {
+      var r, a;
+      return i(e) || i(n) || n < 0 ? N(NaN) : (n === 0 && mN(e), r = e, a = n * c(2), function(s) {
+        return i(s) || s < 0 || s > 1 ? NaN : r + a * jl(2 * s - 1);
+      });
+    });
+    var Oa = Kl, Ql = function(e, n, r) {
+      return i(n) || i(r) || i(e) || r <= 0 || e < 0 || e > 1 ? NaN : R(n + r * Oa(e, 0, 1));
+    };
+    o(Ql, "factory", function(e, n) {
+      return i(e) || i(n) || n <= 0 ? N(NaN) : function(r) {
+        return i(r) || r < 0 || r > 1 ? NaN : R(e + n * Oa(r, 0, 1));
+      };
+    });
+    var $l = Ql, Zl = Ue.isPrimitive, Jl = Ge.isPrimitive;
+    function In() {
+      var e, n;
+      if (!(this instanceof In))
+        return arguments.length === 0 ? new In() : new In(arguments[0], arguments[1]);
+      if (arguments.length) {
+        if (n = arguments[0], e = arguments[1], !Jl(n) || Vn(n))
+          throw new TypeError("invalid argument. Location parameter `mu` must be a number primitive. Value: `" + n + "`");
+        if (!Zl(e))
+          throw new TypeError("invalid argument. Scale parameter `sigma` must be a positive number. Value: `" + e + "`");
+      } else
+        n = 0, e = 1;
+      return l(this, "mu", { configurable: !1, enumerable: !0, get: function() {
+        return n;
+      }, set: function(r) {
+        if (!Jl(r) || Vn(r))
+          throw new TypeError("invalid value. Must be a number primitive. Value: `" + r + "`");
+        n = r;
+      } }), l(this, "sigma", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(r) {
+        if (!Zl(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        e = r;
+      } }), this;
+    }
+    m(In.prototype, "entropy", function() {
+      return Bl(this.mu, this.sigma);
+    }), m(In.prototype, "kurtosis", function() {
+      return Rl(this.mu, this.sigma);
+    }), m(In.prototype, "mean", function() {
+      return Ll(this.mu, this.sigma);
+    }), m(In.prototype, "median", function() {
+      return ql(this.mu, this.sigma);
+    }), m(In.prototype, "mode", function() {
+      return Fl(this.mu, this.sigma);
+    }), m(In.prototype, "skewness", function() {
+      return Ol(this.mu, this.sigma);
+    }), m(In.prototype, "stdev", function() {
+      return Dl(this.mu, this.sigma);
+    }), m(In.prototype, "variance", function() {
+      return Ul(this.mu, this.sigma);
+    }), o(In.prototype, "cdf", function(e) {
+      return Il(e, this.mu, this.sigma);
+    }), o(In.prototype, "logpdf", function(e) {
+      return Wl(e, this.mu, this.sigma);
+    }), o(In.prototype, "pdf", function(e) {
+      return zl(e, this.mu, this.sigma);
+    }), o(In.prototype, "quantile", function(e) {
+      return $l(e, this.mu, this.sigma);
+    });
+    var hN = In, Xl = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || n <= 0 || r < 0 || r > 1 ? NaN : e < 0 ? 0 : e === H ? 1 : (a = Ne(e + 1e-7), Qe(r, n, a + 1));
+    };
+    o(Xl, "factory", function(e, n) {
+      return i(e) || i(n) || e <= 0 || n < 0 || n > 1 ? N(NaN) : function(r) {
+        var a;
+        return i(r) ? NaN : r < 0 ? 0 : r === H ? 1 : (a = Ne(r + 1e-7), Qe(n, e, a + 1));
+      };
+    });
+    var vi = Xl, Yl = function(e, n) {
+      return i(e) || i(n) || e <= 0 || n < 0 || n > 1 ? NaN : 6 / e + n * n / ((1 - n) * e);
+    }, _l = function(e, n) {
+      return i(e) || i(n) ? NaN : e <= 0 || n < 0 || n > 1 ? NaN : (1 - n) * e / n;
+    }, e6 = function(e, n) {
+      return i(e) || i(n) || e <= 0 || n < 0 || n > 1 ? NaN : Ne((1 - n) * (e - 1) / n);
+    }, n6 = function(e, n) {
+      return i(e) || i(n) || e <= 0 || n < 0 || n > 1 ? NaN : (2 - n) / c((1 - n) * e);
+    }, r6 = function(e, n) {
+      return i(e) || i(n) || e <= 0 || n < 0 || n > 1 ? NaN : c((1 - n) * e) / n;
+    }, i6 = function(e, n) {
+      return i(e) || i(n) || e <= 0 || n < 0 || n > 1 ? NaN : (1 - n) * e / (n * n);
+    }, dN = function(e, n, r, a, s) {
+      var u, p, k, y, C, F, B, A, W, z, K, $, ae, Q;
+      if (!s)
+        return V(r, e) * V(a, n);
+      if (y = e + qe - 0.5, C = n + qe - 0.5, F = (ae = e + n) + qe - 0.5, u = Xe(ae), u /= Xe(e) * Xe(n), u *= c(C / Kn), u *= c(y / F), A = (a * e - r * C) / C, Se(J(B = (r * n - a * y) / y), J(A)) < 0.2)
+        if (B * A > 0 || Se(e, n) < 1)
+          J(B) < 0.1 ? u *= R(e * oe(B)) : u *= V(r * F / y, e), J(A) < 0.1 ? u *= R(n * oe(A)) : u *= V(a * F / C, n);
+        else if (Ee(J(B), J(A)) < 0.5)
+          k = n / e, (p = e < n) && k * A < 0.1 || !p && B / k > 0.1 ? (W = Le(k * oe(A)), W = e * oe(W = B + W + W * B), u *= R(W)) : (W = Le(oe(B) / k), W = n * oe(W = A + W + W * A), u *= R(W));
+        else if (J(B) < J(A))
+          if ((Q = e * oe(B) + n * M(a * F / C)) <= de || Q >= fe) {
+            if ((Q += M(u)) >= fe)
+              return NaN;
+            u = R(Q);
+          } else
+            u *= R(Q);
+        else if ((Q = n * oe(A) + e * M(r * F / y)) <= de || Q >= fe) {
+          if ((Q += M(u)) >= fe)
+            return NaN;
+          u = R(Q);
+        } else
+          u *= R(Q);
+      else if ($ = a * F / C, B = e * M(K = r * F / y), A = n * M($), B >= fe || B <= de || A >= fe || A <= de)
+        if (e < n)
+          if (z = V($, n / e), (W = e * (M(K) + M(z))) < fe && W > de)
+            u *= V(z * K, e);
+          else {
+            if ((A += B + M(u)) >= fe)
+              return NaN;
+            u = R(A);
+          }
+        else if (z = V(K, e / n), (W = (M(z) + M($)) * n) < fe && W > de)
+          u *= V(z * $, n);
+        else {
+          if ((A += B + M(u)) >= fe)
+            return NaN;
+          u = R(A);
+        }
+      else
+        u *= V(K, e) * V($, n);
+      return u;
+    }, a6 = function(e, n, r) {
+      var a;
+      return e === 1 ? 0 : (a = dN(n, r, e, 1 - e, !0), a /= (1 - e) * e);
+    }, t6 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 || r > 1 ? NaN : re(e) && r !== 0 ? M(r) - M(n + e) + M(a6(r, n, e + 1)) : j;
+    };
+    o(t6, "factory", function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 || n > 1 ? N(NaN) : function(r) {
+        return i(r) ? NaN : re(r) ? M(n) - M(e + r) + M(a6(n, e, r + 1)) : j;
+      };
+    });
+    var o6 = t6, s6 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n <= 0 || r < 0 || r > 1 || e >= -M(r) ? NaN : V((1 - r) * R(e) / (1 - r * R(e)), n);
+    };
+    o(s6, "factory", function(e, n) {
+      return i(e) || i(n) || e <= 0 || n < 0 || n > 1 ? N(NaN) : function(r) {
+        return r >= -M(n) ? NaN : V((1 - n) * R(r) / (1 - n * R(r)), e);
+      };
+    });
+    var u6 = s6, gN = function(e, n, r, a, s) {
+      var u, p, k, y, C, F, B, A, W, z, K, $, ae, Q;
+      if (!s)
+        return V(r, e) * V(a, n);
+      if (y = e + qe - 0.5, C = n + qe - 0.5, F = (ae = e + n) + qe - 0.5, u = Xe(ae), u /= Xe(e) * Xe(n), u *= c(C / Kn), u *= c(y / F), A = (a * e - r * C) / C, Se(J(B = (r * n - a * y) / y), J(A)) < 0.2)
+        if (B * A > 0 || Se(e, n) < 1)
+          J(B) < 0.1 ? u *= R(e * oe(B)) : u *= V(r * F / y, e), J(A) < 0.1 ? u *= R(n * oe(A)) : u *= V(a * F / C, n);
+        else if (Ee(J(B), J(A)) < 0.5)
+          k = n / e, (p = e < n) && k * A < 0.1 || !p && B / k > 0.1 ? (W = Le(k * oe(A)), W = e * oe(W = B + W + W * B), u *= R(W)) : (W = Le(oe(B) / k), W = n * oe(W = A + W + W * A), u *= R(W));
+        else if (J(B) < J(A))
+          if ((Q = e * oe(B) + n * M(a * F / C)) <= de || Q >= fe) {
+            if ((Q += M(u)) >= fe)
+              return NaN;
+            u = R(Q);
+          } else
+            u *= R(Q);
+        else if ((Q = n * oe(A) + e * M(r * F / y)) <= de || Q >= fe) {
+          if ((Q += M(u)) >= fe)
+            return NaN;
+          u = R(Q);
+        } else
+          u *= R(Q);
+      else if ($ = a * F / C, B = e * M(K = r * F / y), A = n * M($), B >= fe || B <= de || A >= fe || A <= de)
+        if (e < n)
+          if (z = V($, n / e), (W = e * (M(K) + M(z))) < fe && W > de)
+            u *= V(z * K, e);
+          else {
+            if ((A += B + M(u)) >= fe)
+              return NaN;
+            u = R(A);
+          }
+        else if (z = V(K, e / n), (W = (M(z) + M($)) * n) < fe && W > de)
+          u *= V(z * $, n);
+        else {
+          if ((A += B + M(u)) >= fe)
+            return NaN;
+          u = R(A);
+        }
+      else
+        u *= V(K, e) * V($, n);
+      return u;
+    }, f6 = function(e, n, r) {
+      var a;
+      return e === 1 ? 0 : (a = gN(n, r, e, 1 - e, !0), a /= (1 - e) * e);
+    }, c6 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 || r > 1 ? NaN : re(e) && r !== 0 ? r / (n + e) * f6(r, n, e + 1) : 0;
+    };
+    o(c6, "factory", function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 || n > 1 ? N(NaN) : function(r) {
+        return i(r) ? NaN : re(r) ? n / (e + r) * f6(n, e, r + 1) : 0;
+      };
+    });
+    var l6 = c6, Da = { left: function(e, n, r, a) {
+      for (; ; ) {
+        if (e === 0 || vi(e - 1, r, a) < n)
+          return e;
+        e -= 1;
+      }
+    }, right: function(e, n, r, a) {
+      for (; ; )
+        if (vi(e += 1, r, a) >= n)
+          return e;
+    } }, v6 = function(e, n, r) {
+      var a, s, u, p, k, y;
+      return i(n) || i(r) || i(e) || n <= 0 || r < 0 || r > 1 || e < 0 || e > 1 ? NaN : e === 0 ? 0 : e === 1 ? H : (p = n * (y = 1 - r) / r, a = 1 / (u = c(n * y) / r), k = e < 0.5 ? -$e(2 * e) * Pe : $e(2 * (1 - e)) * Pe, s = jn(p + u * (k + a * (k * k - 1) / 6)), vi(s, n, r) >= e ? Da.left(s, e, n, r) : Da.right(s, e, n, r));
+    };
+    o(v6, "factory", function(e, n) {
+      var r, a, s, u;
+      return i(e) || i(n) || e <= 0 || n < 0 || n > 1 ? N(NaN) : (s = e * (u = 1 - n) / n, a = c(e * u) / n, r = (2 / n - 1) / a, function(p) {
+        var k, y;
+        return i(p) || p < 0 || p > 1 ? NaN : p === 0 ? 0 : p === 1 ? H : (y = p < 0.5 ? -$e(2 * p) * Pe : $e(2 * (1 - p)) * Pe, k = jn(s + a * (y + r * (y * y - 1) / 6)), vi(k, e, n) >= p ? Da.left(k, p, e, n) : Da.right(k, p, e, n));
+      });
+    });
+    var p6 = v6, m6 = ta.isPrimitive, h6 = Ue.isPrimitive;
+    function Un() {
+      var e, n;
+      if (!(this instanceof Un))
+        return arguments.length === 0 ? new Un() : new Un(arguments[0], arguments[1]);
+      if (arguments.length) {
+        if (e = arguments[0], n = arguments[1], !h6(e))
+          throw new TypeError("invalid argument. Number of trials until experiment is stopped `r` must be a positive number. Value: `" + e + "`");
+        if (!m6(n))
+          throw new TypeError("invalid argument. Success probability `p` must be a number between 0 and 1. Value: `" + n + "`");
+      } else
+        e = 1, n = 0.5;
+      return l(this, "r", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(r) {
+        if (!h6(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        e = r;
+      } }), l(this, "p", { configurable: !1, enumerable: !0, get: function() {
+        return n;
+      }, set: function(r) {
+        if (!m6(r))
+          throw new TypeError("invalid value. Must be a number between 0 and 1. Value: `" + r + "`");
+        n = r;
+      } }), this;
+    }
+    m(Un.prototype, "kurtosis", function() {
+      return Yl(this.r, this.p);
+    }), m(Un.prototype, "mean", function() {
+      return _l(this.r, this.p);
+    }), m(Un.prototype, "mode", function() {
+      return e6(this.r, this.p);
+    }), m(Un.prototype, "skewness", function() {
+      return n6(this.r, this.p);
+    }), m(Un.prototype, "stdev", function() {
+      return r6(this.r, this.p);
+    }), m(Un.prototype, "variance", function() {
+      return i6(this.r, this.p);
+    }), o(Un.prototype, "cdf", function(e) {
+      return vi(e, this.r, this.p);
+    }), o(Un.prototype, "logpmf", function(e) {
+      return o6(e, this.r, this.p);
+    }), o(Un.prototype, "mgf", function(e) {
+      return u6(e, this.r, this.p);
+    }), o(Un.prototype, "pmf", function(e) {
+      return l6(e, this.r, this.p);
+    }), o(Un.prototype, "quantile", function(e) {
+      return p6(e, this.r, this.p);
+    });
+    var NN = Un, d6 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : 0.5 * M(yr * Kn * n * n);
+    }, g6 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : 0;
+    }, N6 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : e;
+    }, y6 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : e;
+    }, b6 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : e;
+    }, w6 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : 0;
+    }, x6 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : n;
+    }, S6 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : n * n;
+    }, M6 = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || r < 0 ? NaN : r === 0 ? e === n ? H : j : (a = V(r, 2), -0.5 * (2 * M(r) + Fa) + -1 / (2 * a) * V(e - n, 2));
+    }, yN = Hr.factory;
+    o(M6, "factory", function(e, n) {
+      var r, a, s;
+      return i(e) || i(n) || n < 0 ? N(NaN) : n === 0 ? yN(e) : (r = V(n, 2), a = -0.5 * (2 * M(n) + Fa), s = -1 / (2 * r), function(u) {
+        return a + s * V(u - e, 2);
+      });
+    });
+    var k6 = M6, T6 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || r <= 0 ? NaN : R(n * e + 0.5 * V(r * e, 2));
+    };
+    o(T6, "factory", function(e, n) {
+      return i(e) || i(n) || n <= 0 ? N(NaN) : function(r) {
+        return i(r) ? NaN : R(e * r + 0.5 * V(n * r, 2));
+      };
+    });
+    var E6 = T6, P6 = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || r < 0 ? NaN : r === 0 ? e === n ? H : 0 : (a = V(r, 2), 1 / c(a * yr) * R(-1 / (2 * a) * V(e - n, 2)));
+    }, bN = Wr.factory;
+    o(P6, "factory", function(e, n) {
+      var r, a, s;
+      return i(e) || i(n) || n < 0 ? N(NaN) : n === 0 ? bN(e) : (r = V(n, 2), a = 1 / c(r * yr), s = -1 / (2 * r), function(u) {
+        return i(u) ? NaN : a * R(s * V(u - e, 2));
+      });
+    });
+    var V6 = P6, C6 = Ue.isPrimitive, A6 = Ge.isPrimitive;
+    function yn() {
+      var e, n;
+      if (!(this instanceof yn))
+        return arguments.length === 0 ? new yn() : new yn(arguments[0], arguments[1]);
+      if (arguments.length) {
+        if (n = arguments[0], e = arguments[1], !A6(n) || Vn(n))
+          throw new TypeError("invalid argument. Location parameter `mu` must be a number primitive. Value: `" + n + "`");
+        if (!C6(e))
+          throw new TypeError("invalid argument. Scale parameter `sigma` must be a positive number. Value: `" + e + "`");
+      } else
+        n = 0, e = 1;
+      return l(this, "mu", { configurable: !1, enumerable: !0, get: function() {
+        return n;
+      }, set: function(r) {
+        if (!A6(r) || Vn(r))
+          throw new TypeError("invalid value. Must be a number primitive. Value: `" + r + "`");
+        n = r;
+      } }), l(this, "sigma", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(r) {
+        if (!C6(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        e = r;
+      } }), this;
+    }
+    m(yn.prototype, "entropy", function() {
+      return d6(this.mu, this.sigma);
+    }), m(yn.prototype, "kurtosis", function() {
+      return g6(this.mu, this.sigma);
+    }), m(yn.prototype, "mean", function() {
+      return N6(this.mu, this.sigma);
+    }), m(yn.prototype, "median", function() {
+      return y6(this.mu, this.sigma);
+    }), m(yn.prototype, "mode", function() {
+      return b6(this.mu, this.sigma);
+    }), m(yn.prototype, "skewness", function() {
+      return w6(this.mu, this.sigma);
+    }), m(yn.prototype, "stdev", function() {
+      return x6(this.mu, this.sigma);
+    }), m(yn.prototype, "variance", function() {
+      return S6(this.mu, this.sigma);
+    }), o(yn.prototype, "cdf", function(e) {
+      return li(e, this.mu, this.sigma);
+    }), o(yn.prototype, "logpdf", function(e) {
+      return k6(e, this.mu, this.sigma);
+    }), o(yn.prototype, "mgf", function(e) {
+      return E6(e, this.mu, this.sigma);
+    }), o(yn.prototype, "pdf", function(e) {
+      return V6(e, this.mu, this.sigma);
+    }), o(yn.prototype, "quantile", function(e) {
+      return Oa(e, this.mu, this.sigma);
+    });
+    var wN = yn, I6 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e < r ? 0 : 1 - V(r / e, n);
+    };
+    o(I6, "factory", function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : function(r) {
+        return i(r) ? NaN : r < n ? 0 : 1 - V(n / r, e);
+      };
+    });
+    var B6 = I6, R6 = function(e, n) {
+      return i(e) || e <= 0 || i(n) || n <= 0 ? NaN : M(n / e * R(1 + 1 / e));
+    }, L6 = function(e, n) {
+      var r;
+      return i(e) || e <= 4 || i(n) || n <= 0 ? NaN : (r = 6 * (V(e, 3) + V(e, 2) - 6 * e - 2), r /= e * (e - 3) * (e - 4));
+    }, q6 = function(e, n) {
+      return e <= 0 || n <= 0 ? NaN : e <= 1 ? H : e * n / (e - 1);
+    }, F6 = function(e, n) {
+      return e <= 0 || n <= 0 ? NaN : n * V(2, 1 / e);
+    }, O6 = function(e, n) {
+      return i(e) || e <= 0 || i(n) || n <= 0 ? NaN : n;
+    }, D6 = function(e, n) {
+      return i(e) || e <= 3 || i(n) || n <= 0 ? NaN : 2 * (1 + e) / (e - 3) * c((e - 2) / e);
+    }, U6 = function(e, n) {
+      return i(e) || e <= 0 || i(n) || n <= 0 ? NaN : e < 2 ? H : n * n * e / (V(e - 1, 2) * (e - 2));
+    }, H6 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e < r ? j : oe(-V(r / e, n));
+    };
+    o(H6, "factory", function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : function(r) {
+        return i(r) ? NaN : r < n ? j : oe(-V(n / r, e));
+      };
+    });
+    var W6 = H6, G6 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e >= r ? M(n) + n * M(r) - (n + 1) * M(e) : j;
+    };
+    o(G6, "factory", function(e, n) {
+      var r;
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : (r = M(e) + e * M(n), function(a) {
+        return i(a) ? NaN : a >= n ? r - (e + 1) * M(a) : j;
+      });
+    });
+    var z6 = G6, j6 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e >= r ? n * V(r, n) / V(e, n + 1) : 0;
+    };
+    o(j6, "factory", function(e, n) {
+      var r;
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : (r = e * V(n, e), function(a) {
+        var s;
+        return i(a) ? NaN : a >= n ? (s = V(a, e + 1), r / s) : 0;
+      });
+    });
+    var K6 = j6, Q6 = function(e, n, r) {
+      return i(n) || i(r) || i(e) || n <= 0 || r <= 0 || e < 0 || e > 1 ? NaN : r / V(1 - e, 1 / n);
+    };
+    o(Q6, "factory", function(e, n) {
+      var r;
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : (r = 1 / e, function(a) {
+        return i(a) || a < 0 || a > 1 ? NaN : n / V(1 - a, r);
+      });
+    });
+    var $6 = Q6, Ua = Ue.isPrimitive;
+    function Bn() {
+      var e, n;
+      if (!(this instanceof Bn))
+        return arguments.length === 0 ? new Bn() : new Bn(arguments[0], arguments[1]);
+      if (arguments.length) {
+        if (e = arguments[0], n = arguments[1], !Ua(e))
+          throw new TypeError("invalid argument. First shape parameter `alpha` must be a positive number. Value: `" + e + "`");
+        if (!Ua(n))
+          throw new TypeError("invalid argument. Second shape parameter `beta` must be a positive number. Value: `" + n + "`");
+      } else
+        e = 1, n = 1;
+      return l(this, "alpha", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(r) {
+        if (!Ua(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        e = r;
+      } }), l(this, "beta", { configurable: !1, enumerable: !0, get: function() {
+        return n;
+      }, set: function(r) {
+        if (!Ua(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        n = r;
+      } }), this;
+    }
+    m(Bn.prototype, "entropy", function() {
+      return R6(this.alpha, this.beta);
+    }), m(Bn.prototype, "kurtosis", function() {
+      return L6(this.alpha, this.beta);
+    }), m(Bn.prototype, "mean", function() {
+      return q6(this.alpha, this.beta);
+    }), m(Bn.prototype, "median", function() {
+      return F6(this.alpha, this.beta);
+    }), m(Bn.prototype, "mode", function() {
+      return O6(this.alpha, this.beta);
+    }), m(Bn.prototype, "skewness", function() {
+      return D6(this.alpha, this.beta);
+    }), m(Bn.prototype, "variance", function() {
+      return U6(this.alpha, this.beta);
+    }), o(Bn.prototype, "cdf", function(e) {
+      return B6(e, this.alpha, this.beta);
+    }), o(Bn.prototype, "logcdf", function(e) {
+      return W6(e, this.alpha, this.beta);
+    }), o(Bn.prototype, "logpdf", function(e) {
+      return z6(e, this.alpha, this.beta);
+    }), o(Bn.prototype, "pdf", function(e) {
+      return K6(e, this.alpha, this.beta);
+    }), o(Bn.prototype, "quantile", function(e) {
+      return $6(e, this.alpha, this.beta);
+    });
+    var xN = Bn, SN = function(e, n) {
+      var r;
+      return i(e) || e <= 0 || i(n) || n <= 0 ? NaN : e < 2 ? H : (r = n * n * e / (V(e - 1, 2) * (e - 2)), c(r));
+    }, Z6 = function(e, n) {
+      return i(e) || i(n) || n < 0 ? NaN : e < 0 ? 0 : n === 0 || e === H ? 1 : fr(n, Ne(e) + 1, !0, !0);
+    }, MN = Tr.factory;
+    o(Z6, "factory", function(e) {
+      return i(e) || e < 0 ? N(NaN) : e === 0 ? MN(0) : function(n) {
+        return i(n) ? NaN : n < 0 ? 0 : n === H ? 1 : fr(e, Ne(n) + 1, !0, !0);
+      };
+    });
+    var pi = Z6, J6 = function(e) {
+      var n, r;
+      return i(e) || e < 0 ? NaN : e === 0 ? 0 : (n = function(a) {
+        var s, u;
+        return u = 1, s = a, function() {
+          return (s *= a) * we(u += 1) / Pi(u);
+        };
+      }(e), r = e * (1 - M(e)), r += R(-e) * ca(n));
+    }, X6 = function(e) {
+      return i(e) || e <= 0 ? NaN : 1 / e;
+    }, Y6 = function(e) {
+      return i(e) || e < 0 ? NaN : e;
+    }, _6 = function(e) {
+      return i(e) || e < 0 ? NaN : e === 0 ? 0 : Ne(e + 1 / 3 - 0.02 / e);
+    }, e5 = function(e) {
+      return i(e) || e < 0 ? NaN : Ne(e);
+    }, n5 = function(e) {
+      return i(e) || e <= 0 ? NaN : 1 / c(e);
+    }, r5 = function(e) {
+      return i(e) || e < 0 ? NaN : c(e);
+    }, i5 = function(e) {
+      return i(e) || e < 0 ? NaN : e;
+    }, a5 = function(e, n) {
+      return i(e) || i(n) || n < 0 ? NaN : n === 0 ? e === 0 ? 0 : j : re(e) && e !== H ? e * M(n) - n - we(e) : j;
+    }, kN = xa.factory;
+    o(a5, "factory", function(e) {
+      return i(e) || e < 0 ? N(NaN) : e === 0 ? kN(0) : function(n) {
+        return i(n) ? NaN : re(n) && n !== H ? n * M(e) - e - we(n) : j;
+      };
+    });
+    var t5 = a5, o5 = function(e, n) {
+      return i(e) || i(n) || n <= 0 ? NaN : R(n * (R(e) - 1));
+    };
+    o(o5, "factory", function(e) {
+      return i(e) || e <= 0 ? N(NaN) : function(n) {
+        return R(e * (R(n) - 1));
+      };
+    });
+    var s5 = o5, u5 = function(e, n) {
+      var r;
+      return i(e) || i(n) || n < 0 ? NaN : n === 0 ? e === 0 ? 1 : 0 : re(e) && e !== H ? (r = e * M(n) - n - we(e), R(r)) : 0;
+    }, TN = Sa.factory;
+    o(u5, "factory", function(e) {
+      return i(e) || e < 0 ? N(NaN) : e === 0 ? TN(0) : function(n) {
+        var r;
+        return i(n) ? NaN : re(n) && n !== H ? (r = n * M(e) - e - we(n), R(r)) : 0;
+      };
+    });
+    var f5 = u5, Ha = { left: function(e, n, r) {
+      for (; ; ) {
+        if (e === 0 || pi(e - 1, r) < n)
+          return e;
+        e -= 1;
+      }
+    }, right: function(e, n, r) {
+      for (; ; )
+        if (pi(e += 1, r) >= n)
+          return e;
+    } }, c5 = function(e, n) {
+      var r, a, s, u;
+      return i(n) || n < 0 ? NaN : i(e) || e < 0 || e > 1 ? NaN : n === 0 || e === 0 ? 0 : e === 1 ? H : (r = 1 / (s = c(n)), u = e < 0.5 ? -$e(2 * e) * Pe : $e(2 * (1 - e)) * Pe, a = jn(n + s * (u + r * (u * u - 1) / 6)), pi(a, n) >= e ? Ha.left(a, e, n) : Ha.right(a, e, n));
+    }, EN = kr.factory;
+    o(c5, "factory", function(e) {
+      var n, r;
+      return i(e) || e < 0 ? N(NaN) : e === 0 ? EN(0) : (r = c(e), n = 1 / r, function(a) {
+        var s, u;
+        return i(a) || a < 0 || a > 1 ? NaN : a === 0 ? 0 : a === 1 ? H : (u = a < 0.5 ? -$e(2 * a) * Pe : $e(2 * (1 - a)) * Pe, s = jn(e + r * (u + n * (u * u - 1) / 6)), pi(s, e) >= a ? Ha.left(s, a, e) : Ha.right(s, a, e));
+      });
+    });
+    var l5 = c5, v5 = Ue.isPrimitive;
+    function bn() {
+      var e;
+      if (!(this instanceof bn))
+        return arguments.length === 0 ? new bn() : new bn(arguments[0]);
+      if (arguments.length) {
+        if (e = arguments[0], !v5(e))
+          throw new TypeError("invalid argument. Mean parameter `lambda` must be a positive number. Value: `" + e + "`");
+      } else
+        e = 1;
+      return l(this, "lambda", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(n) {
+        if (!v5(n))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + n + "`");
+        e = n;
+      } }), this;
+    }
+    m(bn.prototype, "entropy", function() {
+      return J6(this.lambda);
+    }), m(bn.prototype, "kurtosis", function() {
+      return X6(this.lambda);
+    }), m(bn.prototype, "mean", function() {
+      return Y6(this.lambda);
+    }), m(bn.prototype, "median", function() {
+      return _6(this.lambda);
+    }), m(bn.prototype, "mode", function() {
+      return e5(this.lambda);
+    }), m(bn.prototype, "skewness", function() {
+      return n5(this.lambda);
+    }), m(bn.prototype, "stdev", function() {
+      return r5(this.lambda);
+    }), m(bn.prototype, "variance", function() {
+      return i5(this.lambda);
+    }), o(bn.prototype, "cdf", function(e) {
+      return pi(e, this.lambda);
+    }), o(bn.prototype, "logpmf", function(e) {
+      return t5(e, this.lambda);
+    }), o(bn.prototype, "mgf", function(e) {
+      return s5(e, this.lambda);
+    }), o(bn.prototype, "pmf", function(e) {
+      return f5(e, this.lambda);
+    }), o(bn.prototype, "quantile", function(e) {
+      return l5(e, this.lambda);
+    });
+    var PN = bn, p5 = function(e, n) {
+      var r;
+      return i(e) || i(n) || n < 0 ? NaN : n === 0 ? e < 0 ? 0 : 1 : e < 0 ? 0 : (r = V(n, 2), 1 - R(-V(e, 2) / (2 * r)));
+    }, VN = Tr.factory;
+    o(p5, "factory", function(e) {
+      var n;
+      return i(e) || e < 0 ? N(NaN) : e === 0 ? VN(0) : (n = V(e, 2), function(r) {
+        return i(r) ? NaN : r < 0 ? 0 : 1 - R(-V(r, 2) / (2 * n));
+      });
+    });
+    var m5 = p5, h5 = function(e) {
+      return i(e) || e <= 0 ? NaN : 1 + M(e / Pe) + 0.5 * Rr;
+    }, CN = -(6 * T * T - 24 * T + 16) / ((4 - T) * (4 - T)), d5 = function(e) {
+      return i(e) || e < 0 ? NaN : CN;
+    }, G0 = 1.2533141373155003, g5 = function(e) {
+      return i(e) || e < 0 ? NaN : e * G0;
+    }, AN = c(2 * Oe), N5 = function(e) {
+      return i(e) || e < 0 ? NaN : e * AN;
+    }, y5 = function(e) {
+      return i(e) || e < 0 ? NaN : e;
+    }, IN = 3.544907701811032 * (T - 3) / V(4 - T, 1.5), b5 = function(e) {
+      return i(e) || e < 0 ? NaN : IN;
+    }, BN = c(4 - T), w5 = function(e) {
+      return i(e) || e < 0 ? NaN : BN * e / Pe;
+    }, x5 = function(e) {
+      return i(e) || e < 0 ? NaN : (4 - T) * e * e / 2;
+    }, S5 = function(e, n) {
+      var r, a;
+      return i(e) || i(n) || n < 0 ? NaN : n === 0 ? e < 0 ? j : 0 : e < 0 ? j : (r = V(n, 2), (a = -V(e, 2) / (2 * r)) < pr ? oe(-R(a)) : M(-Le(a)));
+    }, RN = fi.factory;
+    o(S5, "factory", function(e) {
+      var n;
+      return i(e) || e < 0 ? N(NaN) : e === 0 ? RN(0) : (n = V(e, 2), function(r) {
+        var a;
+        return i(r) ? NaN : r < 0 ? j : (a = -V(r, 2) / (2 * n)) < pr ? oe(-R(a)) : M(-Le(a));
+      });
+    });
+    var M5 = S5, k5 = function(e, n) {
+      var r;
+      return i(e) || i(n) || n < 0 ? NaN : n === 0 ? e === 0 ? H : j : e < 0 || e === H ? j : (r = V(n, 2), M(1 / r * e) - V(e, 2) / (2 * r));
+    }, LN = Hr.factory;
+    o(k5, "factory", function(e) {
+      var n, r;
+      return i(e) || e < 0 ? N(NaN) : e === 0 ? LN(0) : (r = V(e, 2), n = 1 / r, function(a) {
+        return i(a) ? NaN : a < 0 || a === H ? j : M(n * a) - V(a, 2) / (2 * r);
+      });
+    });
+    var T5 = k5, E5 = 1e-300, qN = 2848094538889218e-321, FN = 3725290298461914e-24, P5 = 0.8450629115104675, ON = 0.1283791670955126, DN = 1.0270333367641007, UN = 0.12837916709551256, HN = 1, WN = -0.0023621185607526594, GN = 1, zN = -0.009864944034847148, jN = 1, KN = -0.0098649429247001, QN = 1, V5 = function(e) {
+      var n, r, a, s, u, p, k;
+      return i(e) ? NaN : e === H ? 1 : e === j ? -1 : e === 0 ? e : (e < 0 ? (n = !0, r = -e) : (n = !1, r = e), r < 0.84375 ? r < FN ? r < qN ? 0.125 * (8 * e + DN * e) : e + ON * e : e + e * ((s = UN + (a = e * e) * F9(a)) / (u = HN + a * D9(a))) : r < 1.25 ? (p = WN + (u = r - 1) * H9(u), k = GN + u * G9(u), n ? -P5 - p / k : P5 + p / k) : r >= 6 ? n ? E5 - 1 : 1 - E5 : (u = 1 / (r * r), r < 2.857142857142857 ? (s = zN + u * j9(u), u = jN + u * Q9(u)) : (s = KN + u * Z9(u), u = QN + u * X9(u)), a = _n(r, 0), s = R(-a * a - 0.5625) * R((a - r) * (a + r) + s / u), n ? s / r - 1 : 1 - s / r));
+    }, C5 = function(e, n) {
+      var r, a;
+      return i(e) || i(n) || n < 0 ? NaN : (a = 1 + (r = e * n) * R(r * r / 2), a *= G0 * (V5(r / Pe) + 1));
+    };
+    o(C5, "factory", function(e) {
+      return i(e) || e < 0 ? N(NaN) : function(n) {
+        var r, a;
+        return i(n) ? NaN : (a = 1 + (r = n * e) * R(r * r / 2), a *= G0 * (V5(r / Pe) + 1));
+      };
+    });
+    var A5 = C5, I5 = function(e, n) {
+      var r;
+      return i(e) || i(n) || n < 0 ? NaN : n === 0 ? e === 0 ? H : 0 : e < 0 || e === H ? 0 : 1 / (r = V(n, 2)) * e * R(-V(e, 2) / (2 * r));
+    }, $N = Wr.factory;
+    o(I5, "factory", function(e) {
+      var n, r;
+      return i(e) || e < 0 ? N(NaN) : e === 0 ? $N(0) : (r = V(e, 2), n = 1 / r, function(a) {
+        return i(a) ? NaN : a < 0 || a === H ? 0 : n * a * R(-V(a, 2) / (2 * r));
+      });
+    });
+    var B5 = I5, R5 = function(e, n) {
+      return i(n) || n < 0 ? NaN : i(e) || e < 0 || e > 1 ? NaN : n === 0 ? 0 : c(n * n * -2 * oe(-e));
+    }, ZN = kr.factory;
+    o(R5, "factory", function(e) {
+      var n;
+      return i(e) || e < 0 ? N(NaN) : e === 0 ? ZN(0) : (n = e * e, function(r) {
+        return i(r) || r < 0 || r > 1 ? NaN : c(-2 * n * oe(-r));
+      });
+    });
+    var L5 = R5, q5 = Ue.isPrimitive;
+    function fn() {
+      var e;
+      if (!(this instanceof fn))
+        return arguments.length === 0 ? new fn() : new fn(arguments[0]);
+      if (arguments.length) {
+        if (e = arguments[0], !q5(e))
+          throw new TypeError("invalid argument. Scale parameter `sigma` must be a positive number. Value: `" + e + "`");
+      } else
+        e = 1;
+      return l(this, "sigma", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(n) {
+        if (!q5(n))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + n + "`");
+        e = n;
+      } }), this;
+    }
+    m(fn.prototype, "entropy", function() {
+      return h5(this.sigma);
+    }), m(fn.prototype, "kurtosis", function() {
+      return d5(this.sigma);
+    }), m(fn.prototype, "mean", function() {
+      return g5(this.sigma);
+    }), m(fn.prototype, "median", function() {
+      return N5(this.sigma);
+    }), m(fn.prototype, "mode", function() {
+      return y5(this.sigma);
+    }), m(fn.prototype, "skewness", function() {
+      return b5(this.k, this.sigma);
+    }), m(fn.prototype, "stdev", function() {
+      return w5(this.sigma);
+    }), m(fn.prototype, "variance", function() {
+      return x5(this.sigma);
+    }), o(fn.prototype, "cdf", function(e) {
+      return m5(e, this.sigma);
+    }), o(fn.prototype, "logcdf", function(e) {
+      return M5(e, this.sigma);
+    }), o(fn.prototype, "logpdf", function(e) {
+      return T5(e, this.sigma);
+    }), o(fn.prototype, "mgf", function(e) {
+      return A5(e, this.sigma);
+    }), o(fn.prototype, "pdf", function(e) {
+      return B5(e, this.sigma);
+    }), o(fn.prototype, "quantile", function(e) {
+      return L5(e, this.sigma);
+    });
+    var JN = fn, mi = function(e) {
+      return e == e && e > j && e < H;
+    }, XN = /./, F5 = function(e) {
+      return typeof e == "boolean";
+    }, YN = X(), O5 = function(e) {
+      return typeof e == "object" && (e instanceof Boolean || (YN ? Ce(e) : he(e) === "[object Boolean]"));
+    }, z0 = function(e) {
+      return F5(e) || O5(e);
+    };
+    o(z0, "isPrimitive", F5), o(z0, "isObject", O5);
+    var _N = z0, ey = function() {
+      return new Function("return this;")();
+    }, D5 = typeof self == "object" ? self : null, U5 = typeof window == "object" ? window : null, j0 = {};
+    (function(e) {
+      (function() {
+        j0 = typeof e == "object" ? e : null;
+      }).call(this);
+    }).call(this, typeof Hi < "u" ? Hi : typeof self < "u" ? self : typeof window < "u" ? window : {});
+    var ny = _N.isPrimitive, H5 = function(e) {
+      if (arguments.length) {
+        if (!ny(e))
+          throw new TypeError("invalid argument. Must provide a boolean primitive. Value: `" + e + "`.");
+        if (e)
+          return ey();
+      }
+      if (D5)
+        return D5;
+      if (U5)
+        return U5;
+      if (j0)
+        return j0;
+      throw new Error("unexpected error. Unable to resolve global object.");
+    }(), ry = H5.document && H5.document.childNodes, iy = Int8Array, ay = function() {
+      return typeof XN == "function" || typeof iy == "object" || typeof ry == "function";
+    }, K0 = function() {
+      return /^\s*function\s*([^(]*)/i;
+    }, ty = K0();
+    o(K0, "REGEXP", ty);
+    var oy = K0, sy = Array.isArray ? Array.isArray : function(e) {
+      return he(e) === "[object Array]";
+    }, Q0 = function(e) {
+      return e !== null && typeof e == "object";
+    };
+    o(Q0, "isObjectLikeArray", function(e) {
+      if (typeof e != "function")
+        throw new TypeError("invalid argument. Must provide a function. Value: `" + e + "`.");
+      return function(n) {
+        var r, a;
+        if (!sy(n) || (r = n.length) === 0)
+          return !1;
+        for (a = 0; a < r; a++)
+          if (e(n[a]) === !1)
+            return !1;
+        return !0;
+      };
+    }(Q0));
+    var uy = Q0, fy = function(e) {
+      return uy(e) && (e._isBuffer || e.constructor && typeof e.constructor.isBuffer == "function" && e.constructor.isBuffer(e));
+    }, cy = oy.REGEXP, W5 = function(e) {
+      var n, r, a;
+      if (((r = he(e).slice(8, -1)) === "Object" || r === "Error") && e.constructor) {
+        if (typeof (a = e.constructor).name == "string")
+          return a.name;
+        if (n = cy.exec(a.toString()))
+          return n[1];
+      }
+      return fy(e) ? "Buffer" : r;
+    }, ly = function(e) {
+      var n;
+      return e === null ? "null" : (n = typeof e) == "object" ? W5(e).toLowerCase() : n;
+    }, vy = function(e) {
+      return W5(e).toLowerCase();
+    }, py = ay() ? vy : ly, G5 = function(e) {
+      return py(e) === "function";
+    }, my = function(e) {
+      return e;
+    }, $0, Z0 = function(e, n) {
+      var r, a;
+      if (!G5(e))
+        throw new TypeError("invalid argument. First argument must be a function. Value: `" + e + "`.");
+      if (arguments.length < 2)
+        r = my;
+      else if (!G5(r = n))
+        throw new TypeError("invalid argument. Hash function argument must be a function. Value: `" + r + "`.");
+      return o(s, "cache", a = {}), s;
+      function s() {
+        var u, p, k, y;
+        for (u = new Array(arguments.length), y = 0; y < arguments.length; y++)
+          u[y] = arguments[y];
+        return k = r(u).toString(), ye(a, k) ? a[k] : (p = e.apply(null, u), a[k] = p, p);
+      }
+    }, z5 = $0 = Z0(function(e, n) {
+      var r;
+      return n === 0 ? e === 0 ? 1 : 0 : (r = n * (n + 1) / 2, e < 0 || e > r ? 0 : (e > r / 2 && (e = r - e), $0(e - n, n - 1) + $0(e, n - 1)));
+    }), j5 = function(e, n) {
+      var r, a, s;
+      if (i(e) || !$n(n) || !mi(n))
+        return NaN;
+      if (e < 0)
+        return 0;
+      if ((e = jn(e)) >= n * (n + 1) / 2)
+        return 1;
+      for (r = R(-n * Oe), s = 0, a = 0; a <= e; a++)
+        s += z5(a, n) * r;
+      return s;
+    };
+    o(j5, "factory", function(e) {
+      var n, r;
+      return $n(e) && mi(e) ? (r = R(-e * Oe), n = e * (e + 1) / 2, function(a) {
+        var s, u;
+        if (i(a))
+          return NaN;
+        if (a < 0)
+          return 0;
+        if ((a = jn(a)) >= n)
+          return 1;
+        for (u = 0, s = 0; s <= a; s++)
+          u += z5(s, e) * r;
+        return u;
+      }) : N(NaN);
+    });
+    var J0, hy = j5, K5 = J0 = Z0(function(e, n) {
+      var r;
+      return n === 0 ? e === 0 ? 1 : 0 : (r = n * (n + 1) / 2, e < 0 || e > r ? 0 : (e > r / 2 && (e = r - e), J0(e - n, n - 1) + J0(e, n - 1)));
+    }), Q5 = function(e, n) {
+      return !i(e) && $n(n) && mi(n) ? e < 0 || e > n * (n + 1) / 2 ? 0 : R(M(K5(e, n)) - n * Oe) : NaN;
+    };
+    o(Q5, "factory", function(e) {
+      var n;
+      return $n(e) && mi(e) ? (n = e * (e + 1) / 2, function(r) {
+        return i(r) ? NaN : r < 0 || r > n ? 0 : R(M(K5(r, e)) - e * Oe);
+      }) : N(NaN);
+    });
+    var X0, dy = Q5, $5 = X0 = Z0(function(e, n) {
+      var r;
+      return n === 0 ? e === 0 ? 1 : 0 : (r = n * (n + 1) / 2, e < 0 || e > r ? 0 : (e > r / 2 && (e = r - e), X0(e - n, n - 1) + X0(e, n - 1)));
+    }), Z5 = function(e, n) {
+      var r, a, s;
+      if (i(n) || !$n(n) || !mi(n))
+        return NaN;
+      if (i(e) || e < 0 || e > 1)
+        return NaN;
+      if (e === 0)
+        return 0;
+      if (e === 1)
+        return n * (n + 1) / 2;
+      for (r = R(-n * Oe), s = 0, a = -1; s < e; )
+        s += r * $5(a += 1, n);
+      return a;
+    };
+    o(Z5, "factory", function(e) {
+      var n;
+      return !i(e) && $n(e) && mi(e) ? (n = R(-e * Oe), function(r) {
+        var a, s;
+        if (i(r) || r < 0 || r > 1)
+          return NaN;
+        if (r === 0)
+          return 0;
+        if (r === 1)
+          return e * (e + 1) / 2;
+        for (a = 0, s = -1; a < r; )
+          a += n * $5(s += 1, e);
+        return s;
+      }) : N(NaN);
+    });
+    var gy = Z5, J5 = function(e, n) {
+      var r, a;
+      return i(e) || i(n) || n <= 0 ? NaN : e === 0 ? 0.5 : (a = n > 2 * (r = V(e, 2)) ? Qe(r / (n + r), 0.5, n / 2, !0, !0) / 2 : Qe(n / (n + r), n / 2, 0.5, !0, !1) / 2, e > 0 ? 1 - a : a);
+    };
+    o(J5, "factory", function(e) {
+      return i(e) || e <= 0 ? N(NaN) : function(n) {
+        var r, a;
+        return i(n) ? NaN : n === 0 ? 0.5 : (r = V(n, 2), a = e > 2 * r ? Qe(r / (e + r), 0.5, e / 2, !0, !0) / 2 : Qe(e / (e + r), e / 2, 0.5, !0, !1) / 2, n > 0 ? 1 - a : a);
+      };
+    });
+    var X5 = J5, Y5 = function(e) {
+      var n, r;
+      return i(e) || e <= 0 ? NaN : (r = e / 2, n = (e + 1) / 2, n *= Qn((1 + e) / 2) - Qn(r), n += M(c(e) * Me(r, 0.5)));
+    }, _5 = function(e) {
+      return i(e) || e <= 2 ? NaN : e <= 4 ? H : 6 / (e - 4);
+    }, e4 = function(e) {
+      return i(e) || e <= 1 ? NaN : 0;
+    }, n4 = function(e) {
+      return i(e) || e < 0 ? NaN : 0;
+    }, r4 = function(e) {
+      return i(e) || e < 0 ? NaN : 0;
+    }, i4 = function(e) {
+      return i(e) || e <= 3 ? NaN : 0;
+    }, a4 = function(e) {
+      return i(e) || e <= 1 ? NaN : e <= 2 ? H : c(e / (e - 2));
+    }, t4 = function(e) {
+      return i(e) || e <= 1 ? NaN : e <= 2 ? H : e / (e - 2);
+    }, o4 = function(e, n) {
+      var r, a;
+      return i(e) || i(n) || n <= 0 ? NaN : e === 0 ? pr : (a = n > 2 * (r = V(e, 2)) ? Qe(r / (n + r), 0.5, n / 2, !0, !0) / 2 : Qe(n / (n + r), n / 2, 0.5, !0, !1) / 2, e > 0 ? oe(-a) : M(a));
+    };
+    o(o4, "factory", function(e) {
+      return i(e) || e <= 0 ? N(NaN) : function(n) {
+        var r, a;
+        return i(n) ? NaN : n === 0 ? pr : (r = V(n, 2), a = e > 2 * r ? Qe(r / (e + r), 0.5, e / 2, !0, !0) / 2 : Qe(e / (e + r), e / 2, 0.5, !0, !1) / 2, n > 0 ? oe(-a) : M(a));
+      };
+    });
+    var s4 = o4, u4 = function(e, n) {
+      var r;
+      return i(e) || i(n) || n <= 0 ? NaN : (r = M(c(n)) + lr(n / 2, 0.5), (1 + n) / 2 * M(n / (n + V(e, 2))) - r);
+    };
+    o(u4, "factory", function(e) {
+      var n, r;
+      return i(e) || e <= 0 ? N(NaN) : (r = M(c(e)) + lr(e / 2, 0.5), n = (1 + e) / 2, function(a) {
+        return i(a) ? NaN : n * M(e / (e + V(a, 2))) - r;
+      });
+    });
+    var f4 = u4, c4 = function(e, n) {
+      var r;
+      return i(e) || i(n) || n <= 0 ? NaN : (r = c(n) * Me(n / 2, 0.5), V(n / (n + V(e, 2)), (1 + n) / 2) / r);
+    };
+    o(c4, "factory", function(e) {
+      var n, r;
+      return i(e) || e <= 0 ? N(NaN) : (r = c(e) * Me(e / 2, 0.5), n = (1 + e) / 2, function(a) {
+        return i(a) ? NaN : V(e / (e + V(a, 2)), n) / r;
+      });
+    });
+    var l4 = c4, v4 = function(e, n) {
+      var r, a;
+      return i(n) || i(e) || n <= 0 || e < 0 || e > 1 ? NaN : (a = ai(n / 2, 0.5, 2 * (r = e > 0.5 ? 1 - e : e), 1 - 2 * r), br(e - 0.5) * c(n * a[1] / a[0]));
+    };
+    o(v4, "factory", function(e) {
+      return i(e) || e <= 0 ? N(NaN) : function(n) {
+        var r, a;
+        return i(n) || n < 0 || n > 1 ? NaN : (a = ai(e / 2, 0.5, 2 * (r = n > 0.5 ? 1 - n : n), 1 - 2 * r), br(n - 0.5) * c(e * a[1] / a[0]));
+      };
+    });
+    var p4 = v4, m4 = Ue.isPrimitive;
+    function wn() {
+      var e;
+      if (!(this instanceof wn))
+        return arguments.length === 0 ? new wn() : new wn(arguments[0]);
+      if (arguments.length) {
+        if (e = arguments[0], !m4(e))
+          throw new TypeError("invalid argument. Rate parameter `v` must be a positive number. Value: `" + e + "`");
+      } else
+        e = 1;
+      return l(this, "v", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(n) {
+        if (!m4(n))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + n + "`");
+        e = n;
+      } }), this;
+    }
+    m(wn.prototype, "entropy", function() {
+      return Y5(this.v);
+    }), m(wn.prototype, "kurtosis", function() {
+      return _5(this.v);
+    }), m(wn.prototype, "mean", function() {
+      return e4(this.v);
+    }), m(wn.prototype, "median", function() {
+      return n4(this.v);
+    }), m(wn.prototype, "mode", function() {
+      return r4(this.v);
+    }), m(wn.prototype, "skewness", function() {
+      return i4(this.v);
+    }), m(wn.prototype, "stdev", function() {
+      return a4(this.v);
+    }), m(wn.prototype, "variance", function() {
+      return t4(this.v);
+    }), o(wn.prototype, "cdf", function(e) {
+      return X5(e, this.v);
+    }), o(wn.prototype, "logcdf", function(e) {
+      return s4(e, this.v);
+    }), o(wn.prototype, "logpdf", function(e) {
+      return f4(e, this.v);
+    }), o(wn.prototype, "pdf", function(e) {
+      return l4(e, this.v);
+    }), o(wn.prototype, "quantile", function(e) {
+      return p4(e, this.v);
+    });
+    var Ny = wn, h4 = function(e, n, r, a) {
+      var s, u;
+      return i(e) || i(n) || i(r) || i(a) || n > a || a > r ? NaN : e <= n ? 0 : (s = (r - n) * (a - n), u = (r - n) * (r - a), e <= a ? V(e - n, 2) / s : e < r ? 1 - V(r - e, 2) / u : 1);
+    };
+    o(h4, "factory", function(e, n, r) {
+      var a, s;
+      return i(e) || i(n) || i(r) ? N(NaN) : e <= r && r <= n ? (a = (n - e) * (r - e), s = (n - e) * (n - r), function(u) {
+        return i(u) ? NaN : u <= e ? 0 : u <= r ? V(u - e, 2) / a : u < n ? 1 - V(n - u, 2) / s : 1;
+      }) : N(NaN);
+    });
+    var d4 = h4, g4 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || !(e <= r && r <= n) ? NaN : 0.5 + M(0.5 * (n - e));
+    }, N4 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || !(e <= r && r <= n) ? NaN : -0.6;
+    }, y4 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || !(e <= r && r <= n) ? NaN : (e + n + r) / 3;
+    }, b4 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || !(e <= r && r <= n) ? NaN : r >= (e + n) / 2 ? e + c(0.5 * (n - e) * (r - e)) : n - c(0.5 * (n - e) * (n - r));
+    }, w4 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || !(e <= r && r <= n) ? NaN : r;
+    }, x4 = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || !(e <= r && r <= n) ? NaN : (a = Pe * (e + n - 2 * r) * (2 * e - n - r) * (e - 2 * n + r), a /= 5 * V(e * e + n * n + r * r - e * n - e * r - n * r, 1.5));
+    }, S4 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || !(e <= r && r <= n) ? NaN : c((e * e + n * n + r * r - e * n - e * r - n * r) / 18);
+    }, M4 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || !(e <= r && r <= n) ? NaN : (e * e + n * n + r * r - e * n - e * r - n * r) / 18;
+    }, k4 = function(e, n, r, a) {
+      var s, u;
+      return i(e) || i(n) || i(r) || i(a) || n > a || a > r ? NaN : e <= n ? j : (s = (r - n) * (a - n), u = (r - n) * (r - a), e <= a ? 2 * M(e - n) - M(s) : e < r ? M(1 - V(r - e, 2) / u) : 0);
+    };
+    o(k4, "factory", function(e, n, r) {
+      var a, s;
+      return i(e) || i(n) || i(r) ? N(NaN) : e <= r && r <= n ? (a = (n - e) * (r - e), s = (n - e) * (n - r), function(u) {
+        return i(u) ? NaN : u <= e ? j : u <= r ? 2 * M(u - e) - M(a) : u < n ? M(1 - V(n - u, 2) / s) : 0;
+      }) : N(NaN);
+    });
+    var T4 = k4, E4 = function(e, n, r, a) {
+      var s, u, p;
+      return i(e) || i(n) || i(r) || i(a) || n > a || a > r ? NaN : e < n ? j : (s = M(r - n) + M(a - n), u = M(r - n), p = M(r - n) + M(r - a), e < a ? Oe + M(e - n) - s : e === a ? Oe - u : e <= r ? Oe + M(r - e) - p : j);
+    };
+    o(E4, "factory", function(e, n, r) {
+      var a, s, u;
+      return i(e) || i(n) || i(r) || e > r || r > n ? N(NaN) : (a = M(n - e) + M(r - e), s = M(n - e), u = M(n - e) + M(n - r), function(p) {
+        return i(p) ? NaN : p < e ? j : p < r ? Oe + M(p - e) - a : p === r ? Oe - s : p <= n ? Oe + M(n - p) - u : j;
+      });
+    });
+    var P4 = E4, V4 = function(e, n, r, a) {
+      var s, u, p, k;
+      return i(e) || i(n) || i(r) || i(a) || n > a || a > r ? NaN : e === 0 ? 1 : (u = r - n, p = a - n, k = (s = r - a) * R(n * e) - u * R(a * e), k += p * R(r * e), k *= 2, k /= u * p * s * V(e, 2));
+    };
+    o(V4, "factory", function(e, n, r) {
+      var a, s, u;
+      return i(e) || i(n) || i(r) || e > r || r > n ? N(NaN) : (a = n - r, s = n - e, u = r - e, function(p) {
+        var k;
+        return i(p) ? NaN : p === 0 ? 1 : (k = a * R(e * p) - s * R(r * p), k += u * R(n * p), k *= 2, k /= s * u * a * V(p, 2));
+      });
+    });
+    var C4 = V4, A4 = function(e, n, r, a) {
+      return i(e) || i(n) || i(r) || i(a) || n > a || a > r ? NaN : e < n ? 0 : e < a ? 2 * (e - n) / ((r - n) * (a - n)) : e === a ? 2 / (r - n) : e <= r ? 2 * (r - e) / ((r - n) * (r - a)) : 0;
+    };
+    o(A4, "factory", function(e, n, r) {
+      var a, s, u;
+      return i(e) || i(n) || i(r) || e > r || r > n ? N(NaN) : (a = (n - e) * (r - e), s = n - e, u = (n - e) * (n - r), function(p) {
+        return i(p) ? NaN : p < e ? 0 : p < r ? 2 * (p - e) / a : p === r ? 2 / s : p <= n ? 2 * (n - p) / u : 0;
+      });
+    });
+    var I4 = A4, B4 = function(e, n, r, a) {
+      var s, u;
+      return i(e) || i(n) || i(r) || i(a) || n > a || a > r || e < 0 || e > 1 ? NaN : (u = (r - n) * (r - a), e < (s = (a - n) / (r - n)) ? n + c((r - n) * (a - n) * e) : e > s ? r - c(u * (1 - e)) : a);
+    };
+    o(B4, "factory", function(e, n, r) {
+      var a, s, u;
+      return i(e) || i(n) || i(r) || e > r || r > n ? N(NaN) : (a = (r - e) / (n - e), s = (n - e) * (r - e), u = (n - e) * (n - r), function(p) {
+        return i(p) || p < 0 || p > 1 ? NaN : p < a ? e + c(s * p) : p > a ? n - c(u * (1 - p)) : r;
+      });
+    });
+    var R4 = B4, hi = Ge.isPrimitive;
+    function cn() {
+      var e, n, r;
+      if (!(this instanceof cn))
+        return arguments.length === 0 ? new cn() : new cn(arguments[0], arguments[1], arguments[2]);
+      if (arguments.length) {
+        if (e = arguments[0], n = arguments[1], r = arguments[2], !hi(e) || i(e))
+          throw new TypeError("invalid argument. Minimum support `a` must be a number primitive. Value: `" + e + "`");
+        if (!hi(n) || i(n))
+          throw new TypeError("invalid argument. Maximum support `b` must be a number primitive. Value: `" + n + "`");
+        if (!hi(r) || i(r))
+          throw new TypeError("invalid argument. Mode `c` must be a number primitive. Value: `" + r + "`");
+        if (!(e <= r && r <= n))
+          throw new RangeError("invalid arguments. Parameters must satisfy `a <= c <= b`. Value: `" + e + "," + n + "," + r + "`");
+      } else
+        e = 0, n = 1, r = 0.5;
+      return l(this, "a", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(a) {
+        if (!hi(a) || i(a))
+          throw new TypeError("invalid value. Must be a number primitive. Value: `" + a + "`");
+        if (a > n || a > r)
+          throw new RangeError("invalid value. Must be smaller than or equal to `b` and `c`. Value: `" + a + "`");
+        e = a;
+      } }), l(this, "b", { configurable: !1, enumerable: !0, get: function() {
+        return n;
+      }, set: function(a) {
+        if (!hi(a) || i(a))
+          throw new TypeError("invalid value. Must be a number primitive. Value: `" + a + "`");
+        if (e > a || r > a)
+          throw new RangeError("invalid value. Must be greater than or equal to `a` and `c`. Value: `" + a + "`");
+        n = a;
+      } }), l(this, "c", { configurable: !1, enumerable: !0, get: function() {
+        return r;
+      }, set: function(a) {
+        if (!hi(a) || i(a))
+          throw new TypeError("invalid value. Must be a number primitive. Value: `" + a + "`");
+        if (e > a || n < a)
+          throw new RangeError("invalid value. Must be greater than or equal to `a` and smaller than or equal to `b`. Value: `" + a + "`");
+        r = a;
+      } }), this;
+    }
+    m(cn.prototype, "entropy", function() {
+      return g4(this.a, this.b, this.c);
+    }), m(cn.prototype, "kurtosis", function() {
+      return N4(this.a, this.b, this.c);
+    }), m(cn.prototype, "mean", function() {
+      return y4(this.a, this.b, this.c);
+    }), m(cn.prototype, "median", function() {
+      return b4(this.a, this.b, this.c);
+    }), m(cn.prototype, "mode", function() {
+      return w4(this.a, this.b, this.c);
+    }), m(cn.prototype, "skewness", function() {
+      return x4(this.a, this.b, this.c);
+    }), m(cn.prototype, "stdev", function() {
+      return S4(this.a, this.b, this.c);
+    }), m(cn.prototype, "variance", function() {
+      return M4(this.a, this.b, this.c);
+    }), o(cn.prototype, "cdf", function(e) {
+      return d4(e, this.a, this.b, this.c);
+    }), o(cn.prototype, "logcdf", function(e) {
+      return T4(e, this.a, this.b, this.c);
+    }), o(cn.prototype, "logpdf", function(e) {
+      return P4(e, this.a, this.b, this.c);
+    }), o(cn.prototype, "mgf", function(e) {
+      return C4(e, this.a, this.b, this.c);
+    }), o(cn.prototype, "pdf", function(e) {
+      return I4(e, this.a, this.b, this.c);
+    }), o(cn.prototype, "quantile", function(e) {
+      return R4(e, this.a, this.b, this.c);
+    });
+    var yy = cn, L4 = (0, li.factory)(0, 1), q4 = function(e, n, r, a, s) {
+      var u, p, k, y;
+      return i(e) || i(n) || i(r) || s <= 0 || n >= r ? NaN : e < n || e > r ? 0 : (u = 2 * V(s, 2), p = 1 / c(u * T), k = -1 / u, y = L4((r - a) / s) - L4((n - a) / s), p * R(k * V(e - a, 2)) / y);
+    }, F4 = (0, li.factory)(0, 1);
+    o(q4, "factory", function(e, n, r, a) {
+      var s, u, p, k;
+      return i(e) || i(n) || i(r) || i(a) || a <= 0 || e >= n ? N(NaN) : (s = 2 * V(a, 2), u = 1 / c(s * T), p = -1 / s, k = F4((n - r) / a) - F4((e - r) / a), function(y) {
+        return i(y) ? NaN : y < e || y > n ? 0 : u * R(p * V(y - r, 2)) / k;
+      });
+    });
+    var by = q4, O4 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n >= r ? NaN : e < n ? 0 : e >= r ? 1 : (e - n) / (r - n);
+    };
+    o(O4, "factory", function(e, n) {
+      return i(e) || i(n) || e >= n ? N(NaN) : function(r) {
+        return i(r) ? NaN : r < e ? 0 : r >= n ? 1 : (r - e) / (n - e);
+      };
+    });
+    var D4 = O4, U4 = function(e, n) {
+      return e >= n ? NaN : M(n - e);
+    }, H4 = function(e, n) {
+      return i(e) || i(n) || e >= n ? NaN : -1.2;
+    }, W4 = function(e, n) {
+      return e >= n ? NaN : 0.5 * (e + n);
+    }, G4 = function(e, n) {
+      return e >= n ? NaN : 0.5 * (e + n);
+    }, z4 = function(e, n) {
+      return i(e) || i(n) || e >= n ? NaN : 0;
+    }, wy = c(1 / 12), j4 = function(e, n) {
+      return e >= n ? NaN : wy * (n - e);
+    }, K4 = function(e, n) {
+      return e >= n ? NaN : 1 / 12 * V(n - e, 2);
+    }, Q4 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n >= r ? NaN : e < n ? j : e >= r ? 0 : M((e - n) / (r - n));
+    };
+    o(Q4, "factory", function(e, n) {
+      return i(e) || i(n) || e >= n ? N(NaN) : function(r) {
+        return i(r) ? NaN : r < e ? j : r >= n ? 0 : M((r - e) / (n - e));
+      };
+    });
+    var $4 = Q4, Z4 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n >= r ? NaN : e < n || e > r ? j : -M(r - n);
+    };
+    o(Z4, "factory", function(e, n) {
+      return i(e) || i(n) || e >= n ? N(NaN) : function(r) {
+        return i(r) ? NaN : r < e || r > n ? j : -M(n - e);
+      };
+    });
+    var J4 = Z4, X4 = function(e, n, r) {
+      var a;
+      return i(e) || i(n) || i(r) || n >= r ? NaN : e === 0 ? 1 : (a = R(e * r) - R(e * n), a /= e * (r - n));
+    };
+    o(X4, "factory", function(e, n) {
+      return i(e) || i(n) || e >= n ? N(NaN) : function(r) {
+        var a;
+        return i(r) ? NaN : r === 0 ? 1 : (a = R(r * n) - R(r * e), a /= r * (n - e));
+      };
+    });
+    var Y4 = X4, _4 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n >= r ? NaN : e < n || e > r ? 0 : 1 / (r - n);
+    };
+    o(_4, "factory", function(e, n) {
+      return i(e) || i(n) || e >= n ? N(NaN) : function(r) {
+        return i(r) ? NaN : r < e || r > n ? 0 : 1 / (n - e);
+      };
+    });
+    var e7 = _4, n7 = function(e, n, r) {
+      return i(n) || i(r) || n >= r ? NaN : i(e) || e < 0 || e > 1 ? NaN : n + e * (r - n);
+    };
+    o(n7, "factory", function(e, n) {
+      return i(e) || i(n) || e >= n ? N(NaN) : function(r) {
+        return i(r) || r < 0 || r > 1 ? NaN : e + r * (n - e);
+      };
+    });
+    var r7 = n7, Wa = Ge.isPrimitive;
+    function xn() {
+      var e, n;
+      if (!(this instanceof xn))
+        return arguments.length === 0 ? new xn() : new xn(arguments[0], arguments[1]);
+      if (arguments.length) {
+        if (e = arguments[0], n = arguments[1], !Wa(e) || i(e))
+          throw new TypeError("invalid argument. Minimum support `a` must be a number primitive. Value: `" + e + "`");
+        if (!Wa(n) || i(n))
+          throw new TypeError("invalid argument. Maximum support `b` must be a number primitive. Value: `" + n + "`");
+        if (e >= n)
+          throw new RangeError("invalid arguments. Minimum support `a` must be less than maximum support `b`. Value: `" + e + "," + n + "`");
+      } else
+        e = 0, n = 1;
+      return l(this, "a", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(r) {
+        if (!Wa(r) || i(r))
+          throw new TypeError("invalid value. Must be a number primitive. Value: `" + r + "`");
+        if (r >= n)
+          throw new RangeError("invalid value. Must be smaller than `b`. Value: `" + r + "`");
+        e = r;
+      } }), l(this, "b", { configurable: !1, enumerable: !0, get: function() {
+        return n;
+      }, set: function(r) {
+        if (!Wa(r) || i(r))
+          throw new TypeError("invalid value. Must be a number primitive. Value: `" + r + "`");
+        if (e >= r)
+          throw new RangeError("invalid value. Must be greater than `a`. Value: `" + r + "`");
+        n = r;
+      } }), this;
+    }
+    m(xn.prototype, "entropy", function() {
+      return U4(this.a, this.b);
+    }), m(xn.prototype, "kurtosis", function() {
+      return H4(this.a, this.b);
+    }), m(xn.prototype, "mean", function() {
+      return W4(this.a, this.b);
+    }), m(xn.prototype, "median", function() {
+      return G4(this.a, this.b);
+    }), m(xn.prototype, "skewness", function() {
+      return z4(this.a, this.b);
+    }), m(xn.prototype, "stdev", function() {
+      return j4(this.a, this.b);
+    }), m(xn.prototype, "variance", function() {
+      return K4(this.a, this.b);
+    }), o(xn.prototype, "cdf", function(e) {
+      return D4(e, this.a, this.b);
+    }), o(xn.prototype, "logcdf", function(e) {
+      return $4(e, this.a, this.b);
+    }), o(xn.prototype, "logpdf", function(e) {
+      return J4(e, this.a, this.b);
+    }), o(xn.prototype, "mgf", function(e) {
+      return Y4(e, this.a, this.b);
+    }), o(xn.prototype, "pdf", function(e) {
+      return e7(e, this.a, this.b);
+    }), o(xn.prototype, "quantile", function(e) {
+      return r7(e, this.a, this.b);
+    });
+    var xy = xn, i7 = function(e, n, r) {
+      return i(e) || i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e < 0 ? 0 : -Le(-V(e / r, n));
+    };
+    o(i7, "factory", function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : function(r) {
+        return i(r) ? NaN : r < 0 ? 0 : -Le(-V(r / n, e));
+      };
+    });
+    var a7 = i7, t7 = function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? NaN : Rr * (1 - 1 / e) + M(n / e) + 1;
+    }, o7 = function(e, n) {
+      var r, a, s, u, p;
+      return i(e) || i(n) || e <= 0 || n <= 0 ? NaN : (p = ve(1 + 1 / e), u = ve(1 + 2 / e), s = ve(1 + 3 / e), a = ve(1 + 4 / e), r = -6 * V(p, 4) + 12 * p * p * u - 3 * u * u - 4 * p * s + a, r /= V(u - p * p, 2));
+    }, Ga = function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? NaN : n * ve(1 + 1 / e);
+    }, s7 = function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? NaN : n * V(Oe, 1 / e);
+    }, u7 = function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? NaN : e <= 1 ? 0 : n * V((e - 1) / e, 1 / e);
+    }, Y0 = function(e, n) {
+      var r;
+      return i(e) || i(n) || e <= 0 || n <= 0 ? NaN : (r = Ga(e, n), n * n * ve(1 + 2 / e) - r * r);
+    }, f7 = function(e, n) {
+      var r, a, s, u;
+      return i(e) || i(n) || e <= 0 || n <= 0 ? NaN : (u = Ga(e, n), r = Y0(e, n), a = c(r), s = ve(1 + 3 / e) * V(n, 3), s -= 3 * u * r + V(u, 3), s /= V(a, 3));
+    }, c7 = function(e, n) {
+      var r;
+      return i(e) || i(n) || e <= 0 || n <= 0 ? NaN : (r = ve(1 + 1 / e), n * c(ve(1 + 2 / e) - r * r));
+    }, l7 = function(e, n, r) {
+      var a;
+      return i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e < 0 ? j : (a = -V(e / r, n)) < pr ? oe(-R(a)) : M(-Le(a));
+    };
+    o(l7, "factory", function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : function(r) {
+        var a;
+        return i(r) ? NaN : r < 0 ? j : (a = -V(r / n, e)) < pr ? oe(-R(a)) : M(-Le(a));
+      };
+    });
+    var v7 = l7, p7 = function(e, n, r) {
+      var a;
+      return i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e < 0 || e === H || e === j ? j : e === 0 ? n === 1 ? M(n / r) : j : (a = e / r, M(n / r) + (n - 1) * M(a) - V(a, n));
+    };
+    o(p7, "factory", function(e, n) {
+      var r;
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : (r = M(e / n), function(a) {
+        var s;
+        return a < 0 || a === H || a === j ? j : a === 0 ? e === 1 ? M(e / n) : j : r + (e - 1) * M(s = a / n) - V(s, e);
+      });
+    });
+    var m7 = p7, h7 = function(e, n, r) {
+      var a, s, u, p;
+      if (i(e) || i(n) || i(r) || n <= 0 || r <= 0)
+        return NaN;
+      s = 1, u = 1, p = 0;
+      do
+        s += a = (u *= e * r / (p += 1)) == 0 ? 0 : u * ve(1 + p / n);
+      while (a / s > kn);
+      return s;
+    };
+    o(h7, "factory", function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : function(r) {
+        var a, s, u, p;
+        if (i(r))
+          return NaN;
+        s = 1, u = 1, p = 0;
+        do
+          a = (u *= r * n / (p += 1)) == 0 ? 0 : u * ve(1 + p / e), s += a;
+        while (a / s > kn);
+        return s;
+      };
+    });
+    var d7 = h7, g7 = function(e, n, r) {
+      var a;
+      return i(n) || i(r) || n <= 0 || r <= 0 ? NaN : e < 0 || e === H || e === j ? 0 : e === 0 ? n === 1 ? n / r : 0 : n / r * V(a = e / r, n - 1) * R(-V(a, n));
+    };
+    o(g7, "factory", function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : function(r) {
+        var a, s;
+        return r < 0 || r === H || r === j ? 0 : r === 0 ? e === 1 ? e / n : 0 : (s = V(a = r / n, e - 1), e / n * s * R(-V(a, e)));
+      };
+    });
+    var N7 = g7, y7 = function(e, n, r) {
+      return i(n) || i(r) || i(e) || n <= 0 || r <= 0 || e < 0 || e > 1 ? NaN : r * V(-M(1 - e), 1 / n);
+    };
+    o(y7, "factory", function(e, n) {
+      return i(e) || i(n) || e <= 0 || n <= 0 ? N(NaN) : function(r) {
+        return i(r) || r < 0 || r > 1 ? NaN : n * V(-M(1 - r), 1 / e);
+      };
+    });
+    var b7 = y7, za = Ue.isPrimitive;
+    function ln() {
+      var e, n;
+      if (!(this instanceof ln))
+        return arguments.length === 0 ? new ln() : new ln(arguments[0], arguments[1]);
+      if (arguments.length) {
+        if (n = arguments[0], e = arguments[1], !za(n))
+          throw new TypeError("invalid argument. Shape parameter `k` must be a positive number. Value: `" + n + "`");
+        if (!za(e))
+          throw new TypeError("invalid argument. Scale parameter `lambda` must be a positive number. Value: `" + e + "`");
+      } else
+        n = 1, e = 1;
+      return l(this, "k", { configurable: !1, enumerable: !0, get: function() {
+        return n;
+      }, set: function(r) {
+        if (!za(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        n = r;
+      } }), l(this, "lambda", { configurable: !1, enumerable: !0, get: function() {
+        return e;
+      }, set: function(r) {
+        if (!za(r))
+          throw new TypeError("invalid value. Must be a positive number. Value: `" + r + "`");
+        e = r;
+      } }), this;
+    }
+    m(ln.prototype, "entropy", function() {
+      return t7(this.k, this.lambda);
+    }), m(ln.prototype, "kurtosis", function() {
+      return o7(this.k, this.lambda);
+    }), m(ln.prototype, "mean", function() {
+      return Ga(this.k, this.lambda);
+    }), m(ln.prototype, "median", function() {
+      return s7(this.k, this.lambda);
+    }), m(ln.prototype, "mode", function() {
+      return u7(this.k, this.lambda);
+    }), m(ln.prototype, "skewness", function() {
+      return f7(this.k, this.lambda);
+    }), m(ln.prototype, "stdev", function() {
+      return c7(this.k, this.lambda);
+    }), m(ln.prototype, "variance", function() {
+      return Y0(this.k, this.lambda);
+    }), o(ln.prototype, "cdf", function(e) {
+      return a7(e, this.k, this.lambda);
+    }), o(ln.prototype, "logcdf", function(e) {
+      return v7(e, this.k, this.lambda);
+    }), o(ln.prototype, "logpdf", function(e) {
+      return m7(e, this.k, this.lambda);
+    }), o(ln.prototype, "mgf", function(e) {
+      return d7(e, this.k, this.lambda);
+    }), o(ln.prototype, "pdf", function(e) {
+      return N7(e, this.k, this.lambda);
+    }), o(ln.prototype, "quantile", function(e) {
+      return b7(e, this.k, this.lambda);
+    });
+    var Sy = ln, v = {};
+    return t(v, "base", {}), t(v.base, "dists", {}), t(v.base.dists, "arcsine", {}), t(v.base.dists.arcsine, "cdf", G), t(v.base.dists.arcsine, "Arcsine", A8), t(v.base.dists.arcsine, "entropy", ft), t(v.base.dists.arcsine, "kurtosis", ct), t(v.base.dists.arcsine, "logcdf", Bt), t(v.base.dists.arcsine, "logpdf", Lt), t(v.base.dists.arcsine, "mean", lt), t(v.base.dists.arcsine, "median", vt), t(v.base.dists.arcsine, "mode", pt), t(v.base.dists.arcsine, "pdf", Ft), t(v.base.dists.arcsine, "quantile", zt), t(v.base.dists.arcsine, "skewness", mt), t(v.base.dists.arcsine, "stdev", ht), t(v.base.dists.arcsine, "variance", At), t(v.base.dists, "bernoulli", {}), t(v.base.dists.bernoulli, "cdf", Kt), t(v.base.dists.bernoulli, "Bernoulli", U8), t(v.base.dists.bernoulli, "entropy", Zt), t(v.base.dists.bernoulli, "kurtosis", Jt), t(v.base.dists.bernoulli, "mean", Xt), t(v.base.dists.bernoulli, "median", _t), t(v.base.dists.bernoulli, "mgf", oo), t(v.base.dists.bernoulli, "mode", Yt), t(v.base.dists.bernoulli, "pmf", uo), t(v.base.dists.bernoulli, "quantile", co), t(v.base.dists.bernoulli, "skewness", eo), t(v.base.dists.bernoulli, "stdev", no), t(v.base.dists.bernoulli, "variance", ro), t(v.base.dists, "beta", {}), t(v.base.dists.beta, "cdf", la), t(v.base.dists.beta, "Beta", jh), t(v.base.dists.beta, "entropy", Uo), t(v.base.dists.beta, "kurtosis", Ho), t(v.base.dists.beta, "logcdf", ga), t(v.base.dists.beta, "logpdf", fs), t(v.base.dists.beta, "mean", Wo), t(v.base.dists.beta, "median", rs), t(v.base.dists.beta, "mgf", vs), t(v.base.dists.beta, "mode", is), t(v.base.dists.beta, "pdf", ms), t(v.base.dists.beta, "quantile", ds), t(v.base.dists.beta, "skewness", as), t(v.base.dists.beta, "stdev", ts), t(v.base.dists.beta, "variance", os), t(v.base.dists, "betaprime", {}), t(v.base.dists.betaprime, "cdf", Ns), t(v.base.dists.betaprime, "BetaPrime", Zh), t(v.base.dists.betaprime, "kurtosis", ys), t(v.base.dists.betaprime, "logcdf", Ts), t(v.base.dists.betaprime, "logpdf", ya), t(v.base.dists.betaprime, "mean", bs), t(v.base.dists.betaprime, "mode", ws), t(v.base.dists.betaprime, "pdf", Vs), t(v.base.dists.betaprime, "quantile", As), t(v.base.dists.betaprime, "skewness", xs), t(v.base.dists.betaprime, "stdev", Ss), t(v.base.dists.betaprime, "variance", Ms), t(v.base.dists, "binomial", {}), t(v.base.dists.binomial, "cdf", ti), t(v.base.dists.binomial, "Binomial", ed), t(v.base.dists.binomial, "entropy", nd), t(v.base.dists.binomial, "kurtosis", Ds), t(v.base.dists.binomial, "logpmf", $s), t(v.base.dists.binomial, "mean", L0), t(v.base.dists.binomial, "median", Us), t(v.base.dists.binomial, "mgf", Js), t(v.base.dists.binomial, "mode", Hs), t(v.base.dists.binomial, "pmf", eu), t(v.base.dists.binomial, "quantile", ou), t(v.base.dists.binomial, "skewness", Ws), t(v.base.dists.binomial, "stdev", Gs), t(v.base.dists.binomial, "variance", zs), t(v.base.dists, "cauchy", {}), t(v.base.dists.cauchy, "cdf", lu), t(v.base.dists.cauchy, "Cauchy", pd), t(v.base.dists.cauchy, "entropy", mu), t(v.base.dists.cauchy, "logcdf", Nu), t(v.base.dists.cauchy, "logpdf", bu), t(v.base.dists.cauchy, "median", hu), t(v.base.dists.cauchy, "mode", du), t(v.base.dists.cauchy, "pdf", xu), t(v.base.dists.cauchy, "quantile", Mu), t(v.base.dists, "chi", {}), t(v.base.dists.chi, "cdf", Cu), t(v.base.dists.chi, "Chi", wd), t(v.base.dists.chi, "entropy", Au), t(v.base.dists.chi, "kurtosis", Iu), t(v.base.dists.chi, "logpdf", Fu), t(v.base.dists.chi, "mean", oi), t(v.base.dists.chi, "mode", Bu), t(v.base.dists.chi, "pdf", Uu), t(v.base.dists.chi, "quantile", Gu), t(v.base.dists.chi, "skewness", F0), t(v.base.dists.chi, "stdev", Ru), t(v.base.dists.chi, "variance", ka), t(v.base.dists, "chisquare", {}), t(v.base.dists.chisquare, "cdf", Ku), t(v.base.dists.chisquare, "ChiSquare", Pd), t(v.base.dists.chisquare, "entropy", Qu), t(v.base.dists.chisquare, "kurtosis", $u), t(v.base.dists.chisquare, "logpdf", Ad), t(v.base.dists.chisquare, "mean", Zu), t(v.base.dists.chisquare, "median", Xu), t(v.base.dists.chisquare, "mgf", i1), t(v.base.dists.chisquare, "mode", Yu), t(v.base.dists.chisquare, "pdf", u1), t(v.base.dists.chisquare, "quantile", O0), t(v.base.dists.chisquare, "skewness", _u), t(v.base.dists.chisquare, "stdev", e1), t(v.base.dists.chisquare, "variance", n1), t(v.base.dists, "cosine", {}), t(v.base.dists.cosine, "cdf", D0), t(v.base.dists.cosine, "Cosine", Gd), t(v.base.dists.cosine, "kurtosis", p1), t(v.base.dists.cosine, "logcdf", x1), t(v.base.dists.cosine, "logpdf", k1), t(v.base.dists.cosine, "mean", m1), t(v.base.dists.cosine, "median", h1), t(v.base.dists.cosine, "mgf", P1), t(v.base.dists.cosine, "mode", d1), t(v.base.dists.cosine, "pdf", C1), t(v.base.dists.cosine, "quantile", B1), t(v.base.dists.cosine, "skewness", g1), t(v.base.dists.cosine, "stdev", N1), t(v.base.dists.cosine, "variance", y1), t(v.base.dists, "degenerate", {}), t(v.base.dists.degenerate, "cdf", Tr), t(v.base.dists.degenerate, "Degenerate", zd), t(v.base.dists.degenerate, "entropy", q1), t(v.base.dists.degenerate, "logcdf", fi), t(v.base.dists.degenerate, "logpdf", Hr), t(v.base.dists.degenerate, "logpmf", xa), t(v.base.dists.degenerate, "mean", F1), t(v.base.dists.degenerate, "median", D1), t(v.base.dists.degenerate, "mgf", U0), t(v.base.dists.degenerate, "mode", O1), t(v.base.dists.degenerate, "pdf", Wr), t(v.base.dists.degenerate, "pmf", Sa), t(v.base.dists.degenerate, "quantile", kr), t(v.base.dists.degenerate, "stdev", U1), t(v.base.dists.degenerate, "variance", H1), t(v.base.dists, "discreteUniform", {}), t(v.base.dists.discreteUniform, "cdf", z1), t(v.base.dists.discreteUniform, "DiscreteUniform", Kd), t(v, "entropy", j1), t(v.base.dists.discreteUniform, "kurtosis", K1), t(v.base.dists.discreteUniform, "logcdf", _1), t(v.base.dists.discreteUniform, "logpmf", nf), t(v.base.dists.discreteUniform, "mean", Q1), t(v.base.dists.discreteUniform, "median", $1), t(v.base.dists.discreteUniform, "mgf", af), t(v.base.dists.discreteUniform, "pmf", of), t(v.base.dists.discreteUniform, "quantile", uf), t(v.base.dists.discreteUniform, "skewness", Z1), t(v.base.dists.discreteUniform, "stdev", J1), t(v.base.dists.discreteUniform, "variance", X1), t(v.base.dists, "erlang", {}), t(v.base.dists.erlang, "cdf", cf), t(v.base.dists.erlang, "Erlang", Xd), t(v.base.dists.erlang, "entropy", lf), t(v.base.dists.erlang, "kurtosis", vf), t(v.base.dists.erlang, "logpdf", yf), t(v.base.dists.erlang, "mean", pf), t(v.base.dists.erlang, "mgf", wf), t(v.base.dists.erlang, "mode", mf), t(v.base.dists.erlang, "pdf", Sf), t(v.base.dists.erlang, "quantile", kf), t(v.base.dists.erlang, "skewness", hf), t(v.base.dists.erlang, "stdev", df), t(v.base.dists.erlang, "variance", gf), t(v.base.dists, "exponential", {}), t(v.base.dists.exponential, "cdf", Vf), t(v.base.dists.exponential, "Exponential", Yd), t(v.base.dists.exponential, "entropy", Cf), t(v.base.dists.exponential, "kurtosis", Af), t(v.base.dists.exponential, "logcdf", Df), t(v.base.dists.exponential, "logpdf", Hf), t(v.base.dists.exponential, "mean", If), t(v.base.dists.exponential, "median", Bf), t(v.base.dists.exponential, "mgf", Gf), t(v.base.dists.exponential, "mode", Rf), t(v.base.dists.exponential, "pdf", jf), t(v.base.dists.exponential, "quantile", Qf), t(v.base.dists.exponential, "skewness", Lf), t(v.base.dists.exponential, "stdev", qf), t(v.base.dists.exponential, "variance", Ff), t(v.base.dists, "f", {}), t(v.base.dists.f, "cdf", Jf), t(v.base.dists.f, "F", eg), t(v.base.dists.f, "entropy", Xf), t(v.base.dists.f, "kurtosis", Yf), t(v.base.dists.f, "mean", _f), t(v.base.dists.f, "mode", e2), t(v.base.dists.f, "pdf", t2), t(v.base.dists.f, "quantile", s2), t(v.base.dists.f, "skewness", n2), t(v.base.dists.f, "stdev", r2), t(v.base.dists.f, "variance", i2), t(v.base.dists, "frechet", {}), t(v.base.dists.frechet, "cdf", f2), t(v.base.dists.frechet, "Frechet", rg), t(v.base.dists.frechet, "entropy", c2), t(v.base.dists.frechet, "kurtosis", l2), t(v.base.dists.frechet, "logcdf", y2), t(v.base.dists.frechet, "logpdf", Ca), t(v.base.dists.frechet, "mean", v2), t(v.base.dists.frechet, "median", p2), t(v.base.dists.frechet, "mode", m2), t(v.base.dists.frechet, "pdf", x2), t(v.base.dists.frechet, "quantile", M2), t(v.base.dists.frechet, "skewness", h2), t(v.base.dists.frechet, "stdev", d2), t(v.base.dists.frechet, "variance", g2), t(v.base.dists, "gamma", {}), t(v.base.dists.gamma, "cdf", Er), t(v.base.dists.gamma, "Gamma", ag), t(v.base.dists.gamma, "entropy", T2), t(v.base.dists.gamma, "kurtosis", E2), t(v.base.dists.gamma, "logcdf", R2), t(v.base.dists.gamma, "logpdf", ui), t(v.base.dists.gamma, "mean", P2), t(v.base.dists.gamma, "mgf", q2), t(v.base.dists.gamma, "mode", V2), t(v.base.dists.gamma, "pdf", si), t(v.base.dists.gamma, "quantile", Gr), t(v.base.dists.gamma, "skewness", C2), t(v.base.dists.gamma, "stdev", A2), t(v.base.dists.gamma, "variance", I2), t(v.base.dists, "geometric", {}), t(v.base.dists.geometric, "cdf", O2), t(v.base.dists.geometric, "Geometric", gg), t(v.base.dists.geometric, "entropy", D2), t(v.base.dists.geometric, "kurtosis", U2), t(v.base.dists.geometric, "logcdf", J2), t(v.base.dists.geometric, "logpmf", Y2), t(v.base.dists.geometric, "mean", H2), t(v.base.dists.geometric, "median", z2), t(v.base.dists.geometric, "mgf", ec), t(v.base.dists.geometric, "mode", j2), t(v.base.dists.geometric, "pmf", rc), t(v.base.dists.geometric, "quantile", ac), t(v.base.dists.geometric, "skewness", K2), t(v.base.dists.geometric, "stdev", Q2), t(v.base.dists.geometric, "variance", $2), t(v.base.dists, "gumbel", {}), t(v.base.dists.gumbel, "cdf", sc), t(v.base.dists.gumbel, "Gumbel", qg), t(v.base.dists.gumbel, "entropy", uc), t(v.base.dists.gumbel, "kurtosis", fc), t(v.base.dists.gumbel, "logcdf", gc), t(v.base.dists.gumbel, "logpdf", yc), t(v.base.dists.gumbel, "mean", cc), t(v.base.dists.gumbel, "median", lc), t(v.base.dists.gumbel, "mgf", wc), t(v.base.dists.gumbel, "mode", vc), t(v.base.dists.gumbel, "pdf", Sc), t(v.base.dists.gumbel, "quantile", kc), t(v.base.dists.gumbel, "skewness", pc), t(v.base.dists.gumbel, "stdev", mc), t(v.base.dists.gumbel, "variance", hc), t(v.base.dists, "hypergeometric", {}), t(v.base.dists.hypergeometric, "cdf", Ra), t(v.base.dists.hypergeometric, "Hypergeometric", Hg), t(v.base.dists.hypergeometric, "kurtosis", Bc), t(v.base.dists.hypergeometric, "logpmf", Uc), t(v.base.dists.hypergeometric, "mean", Rc), t(v.base.dists.hypergeometric, "mode", Lc), t(v.base.dists.hypergeometric, "pmf", Ba), t(v.base.dists.hypergeometric, "quantile", Wc), t(v.base.dists.hypergeometric, "skewness", qc), t(v.base.dists.hypergeometric, "stdev", Fc), t(v.base.dists.hypergeometric, "variance", Oc), t(v.base.dists, "invgamma", {}), t(v.base.dists.invgamma, "cdf", zc), t(v.base.dists.invgamma, "InvGamma", Wg), t(v.base.dists.invgamma, "entropy", jc), t(v.base.dists.invgamma, "kurtosis", Kc), t(v.base.dists.invgamma, "logpdf", Yc), t(v.base.dists.invgamma, "mean", Qc), t(v.base.dists.invgamma, "mode", $c), t(v.base.dists.invgamma, "pdf", i3), t(v.base.dists.invgamma, "quantile", Jc), t(v.base.dists.invgamma, "skewness", _c), t(v.base.dists.invgamma, "stdev", e3), t(v.base.dists.invgamma, "variance", n3), t(v.base.dists, "kumaraswamy", {}), t(v.base.dists.kumaraswamy, "cdf", t3), t(v.base.dists.kumaraswamy, "Kumaraswamy", Gg), t(v.base.dists.kumaraswamy, "kurtosis", o3), t(v.base.dists.kumaraswamy, "logcdf", p3), t(v.base.dists.kumaraswamy, "logpdf", h3), t(v.base.dists.kumaraswamy, "mean", s3), t(v.base.dists.kumaraswamy, "median", zg), t(v.base.dists.kumaraswamy, "mode", u3), t(v.base.dists.kumaraswamy, "pdf", g3), t(v.base.dists.kumaraswamy, "quantile", y3), t(v.base.dists.kumaraswamy, "skewness", f3), t(v.base.dists.kumaraswamy, "stdev", c3), t(v.base.dists.kumaraswamy, "variance", l3), t(v.base.dists, "laplace", {}), t(v.base.dists.laplace, "cdf", w3), t(v.base.dists.laplace, "Laplace", jg), t(v.base.dists.laplace, "entropy", x3), t(v.base.dists.laplace, "kurtosis", S3), t(v.base.dists.laplace, "logcdf", A3), t(v.base.dists.laplace, "logpdf", B3), t(v.base.dists.laplace, "mean", M3), t(v.base.dists.laplace, "median", k3), t(v.base.dists.laplace, "mgf", L3), t(v.base.dists.laplace, "mode", T3), t(v.base.dists.laplace, "pdf", F3), t(v.base.dists.laplace, "quantile", D3), t(v.base.dists.laplace, "skewness", E3), t(v.base.dists.laplace, "stdev", P3), t(v.base.dists.laplace, "variance", V3), t(v.base.dists, "levy", {}), t(v.base.dists.levy, "cdf", G3), t(v.base.dists.levy, "Levy", $g), t(v.base.dists.levy, "entropy", z3), t(v.base.dists.levy, "logcdf", X3), t(v.base.dists.levy, "logpdf", _3), t(v.base.dists.levy, "mean", j3), t(v.base.dists.levy, "median", K3), t(v.base.dists.levy, "mode", Q3), t(v.base.dists.levy, "pdf", nl), t(v.base.dists.levy, "quantile", il), t(v.base.dists.levy, "stdev", $3), t(v.base.dists.levy, "variance", Z3), t(v.base.dists, "logistic", {}), t(v.base.dists.logistic, "cdf", sl), t(v.base.dists.logistic, "Logistic", rN), t(v.base.dists.logistic, "entropy", ul), t(v.base.dists.logistic, "kurtosis", fl), t(v.base.dists.logistic, "logcdf", Nl), t(v.base.dists.logistic, "logpdf", bl), t(v.base.dists.logistic, "mean", cl), t(v.base.dists.logistic, "median", ll), t(v.base.dists.logistic, "mgf", Sl), t(v.base.dists.logistic, "mode", vl), t(v.base.dists.logistic, "pdf", kl), t(v.base.dists.logistic, "quantile", El), t(v.base.dists.logistic, "skewness", pl), t(v.base.dists.logistic, "stdev", ml), t(v.base.dists.logistic, "variance", hl), t(v.base.dists, "lognormal", {}), t(v.base.dists.lognormal, "cdf", Il), t(v.base.dists.lognormal, "LogNormal", hN), t(v.base.dists.lognormal, "entropy", Bl), t(v.base.dists.lognormal, "kurtosis", Rl), t(v.base.dists.lognormal, "logpdf", Wl), t(v.base.dists.lognormal, "mean", Ll), t(v.base.dists.lognormal, "median", ql), t(v.base.dists.lognormal, "mode", Fl), t(v.base.dists.lognormal, "pdf", zl), t(v.base.dists.lognormal, "quantile", $l), t(v.base.dists.lognormal, "skewness", Ol), t(v.base.dists.lognormal, "stdev", Dl), t(v.base.dists.lognormal, "variance", Ul), t(v.base.dists, "negativeBinomial", {}), t(v.base.dists.negativeBinomial, "cdf", vi), t(v.base.dists.negativeBinomial, "NegativeBinomial", NN), t(v.base.dists.negativeBinomial, "kurtosis", Yl), t(v.base.dists.negativeBinomial, "logpmf", o6), t(v.base.dists.negativeBinomial, "mean", _l), t(v.base.dists.negativeBinomial, "mgf", u6), t(v.base.dists.negativeBinomial, "mode", e6), t(v.base.dists.negativeBinomial, "pmf", l6), t(v.base.dists.negativeBinomial, "quantile", p6), t(v.base.dists.negativeBinomial, "skewness", n6), t(v.base.dists.negativeBinomial, "stdev", r6), t(v.base.dists.negativeBinomial, "variance", i6), t(v.base.dists, "normal", {}), t(v.base.dists.normal, "cdf", li), t(v.base.dists.normal, "Normal", wN), t(v.base.dists.normal, "entropy", d6), t(v.base.dists.normal, "kurtosis", g6), t(v.base.dists.normal, "logpdf", k6), t(v.base.dists.normal, "mean", N6), t(v.base.dists.normal, "median", y6), t(v.base.dists.normal, "mgf", E6), t(v.base.dists.normal, "mode", b6), t(v.base.dists.normal, "pdf", V6), t(v.base.dists.normal, "quantile", Oa), t(v.base.dists.normal, "skewness", w6), t(v.base.dists.normal, "stdev", x6), t(v.base.dists.normal, "variance", S6), t(v.base.dists, "pareto1", {}), t(v.base.dists.pareto1, "cdf", B6), t(v.base.dists.pareto1, "Pareto1", xN), t(v.base.dists.pareto1, "entropy", R6), t(v.base.dists.pareto1, "kurtosis", L6), t(v.base.dists.pareto1, "logcdf", W6), t(v.base.dists.pareto1, "logpdf", z6), t(v.base.dists.pareto1, "mean", q6), t(v.base.dists.pareto1, "median", F6), t(v.base.dists.pareto1, "mode", O6), t(v.base.dists.pareto1, "pdf", K6), t(v.base.dists.pareto1, "quantile", $6), t(v.base.dists.pareto1, "skewness", D6), t(v.base.dists.pareto1, "stdev", SN), t(v.base.dists.pareto1, "variance", U6), t(v.base.dists, "poisson", {}), t(v.base.dists.poisson, "cdf", pi), t(v.base.dists.poisson, "Poisson", PN), t(v.base.dists.poisson, "entropy", J6), t(v.base.dists.poisson, "kurtosis", X6), t(v.base.dists.poisson, "logpmf", t5), t(v.base.dists.poisson, "mean", Y6), t(v.base.dists.poisson, "median", _6), t(v.base.dists.poisson, "mgf", s5), t(v.base.dists.poisson, "mode", e5), t(v.base.dists.poisson, "pmf", f5), t(v.base.dists.poisson, "quantile", l5), t(v.base.dists.poisson, "skewness", n5), t(v.base.dists.poisson, "stdev", r5), t(v.base.dists.poisson, "variance", i5), t(v.base.dists, "rayleigh", {}), t(v.base.dists.rayleigh, "cdf", m5), t(v.base.dists.rayleigh, "Rayleigh", JN), t(v.base.dists.rayleigh, "entropy", h5), t(v.base.dists.rayleigh, "kurtosis", d5), t(v.base.dists.rayleigh, "logcdf", M5), t(v.base.dists.rayleigh, "logpdf", T5), t(v.base.dists.rayleigh, "mean", g5), t(v.base.dists.rayleigh, "median", N5), t(v.base.dists.rayleigh, "mgf", A5), t(v.base.dists.rayleigh, "mode", y5), t(v.base.dists.rayleigh, "pdf", B5), t(v.base.dists.rayleigh, "quantile", L5), t(v.base.dists.rayleigh, "skewness", b5), t(v.base.dists.rayleigh, "stdev", w5), t(v.base.dists.rayleigh, "variance", x5), t(v.base.dists, "signrank", {}), t(v.base.dists.signrank, "cdf", hy), t(v.base.dists.signrank, "pdf", dy), t(v.base.dists.signrank, "quantile", gy), t(v.base.dists, "t", {}), t(v.base.dists.t, "cdf", X5), t(v.base.dists.t, "T", Ny), t(v.base.dists.t, "entropy", Y5), t(v.base.dists.t, "kurtosis", _5), t(v, "logcdf", s4), t(v, "logpdf", f4), t(v.base.dists.t, "mean", e4), t(v.base.dists.t, "median", n4), t(v.base.dists.t, "mode", r4), t(v.base.dists.t, "pdf", l4), t(v.base.dists.t, "quantile", p4), t(v.base.dists.t, "skewness", i4), t(v.base.dists.t, "stdev", a4), t(v.base.dists.t, "variance", t4), t(v.base.dists, "triangular", {}), t(v.base.dists.triangular, "cdf", d4), t(v.base.dists.triangular, "Triangular", yy), t(v.base.dists.triangular, "entropy", g4), t(v.base.dists.triangular, "kurtosis", N4), t(v.base.dists.triangular, "logcdf", T4), t(v.base.dists.triangular, "logpdf", P4), t(v.base.dists.triangular, "mean", y4), t(v.base.dists.triangular, "median", b4), t(v.base.dists.triangular, "mgf", C4), t(v.base.dists.triangular, "mode", w4), t(v.base.dists.triangular, "pdf", I4), t(v.base.dists.triangular, "quantile", R4), t(v.base.dists.triangular, "skewness", x4), t(v.base.dists.triangular, "stdev", S4), t(v.base.dists.triangular, "variance", M4), t(v, "pdf", by), t(v.base.dists, "uniform", {}), t(v.base.dists.uniform, "cdf", D4), t(v.base.dists.uniform, "Uniform", xy), t(v.base.dists.uniform, "entropy", U4), t(v.base.dists.uniform, "kurtosis", H4), t(v.base.dists.uniform, "logcdf", $4), t(v.base.dists.uniform, "logpdf", J4), t(v.base.dists.uniform, "mean", W4), t(v.base.dists.uniform, "median", G4), t(v.base.dists.uniform, "mgf", Y4), t(v.base.dists.uniform, "pdf", e7), t(v.base.dists.uniform, "quantile", r7), t(v.base.dists.uniform, "skewness", z4), t(v.base.dists.uniform, "stdev", j4), t(v.base.dists.uniform, "variance", K4), t(v.base.dists, "weibull", {}), t(v.base.dists.weibull, "cdf", a7), t(v.base.dists.weibull, "Weibull", Sy), t(v.base.dists.weibull, "entropy", t7), t(v.base.dists.weibull, "kurtosis", o7), t(v.base.dists.weibull, "logcdf", v7), t(v.base.dists.weibull, "logpdf", m7), t(v.base.dists.weibull, "mean", Ga), t(v.base.dists.weibull, "median", s7), t(v.base.dists.weibull, "mgf", d7), t(v.base.dists.weibull, "mode", u7), t(v.base.dists.weibull, "pdf", N7), t(v.base.dists.weibull, "quantile", b7), t(v.base.dists.weibull, "skewness", f7), t(v.base.dists.weibull, "stdev", c7), t(v.base.dists.weibull, "variance", Y0), v;
+  });
+})(T7);
+var ky = T7.exports;
+const Ty = /* @__PURE__ */ M7(ky), di = Ty.base.dists, S7 = di.normal.cdf;
+function Ey(Ve, He, ee, ge, P, f) {
+  let b = S7(Ve, He, ee), d = S7(Ve, ge, P);
+  return f * b + (1 - f) * d;
+}
+const Py = {
+  uniform: (Ve, He = 0, ee = 1) => di.uniform.cdf(Ve, He, ee),
+  normal: (Ve, He = 0, ee = 1) => di.normal.cdf(Ve, He, ee),
+  laplace: (Ve, He = 0, ee = 1) => di.laplace.cdf(Ve, He, ee),
+  logistic: (Ve, He = 0, ee = 1) => di.logistic.cdf(Ve, He, ee),
+  cauchy: (Ve, He = 0, ee = 1) => di.cauchy.cdf(Ve, He, ee),
+  bimodal: (Ve, He = -3, ee = 0.6, ge = 3, P = 1.3, f = 0.5) => Ey(Ve, He, ee, ge, P, f)
+}, Vy = (Ve, He, ee) => Array.from(
+  { length: (He - Ve) / ee + 1 },
+  (ge, P) => Ve + P * ee
+);
+Vy(-5, 5, 0.01);
+function Cy(Ve, He) {
+  for (var ee = He[0], ge = Math.abs(Ve - ee), P = 0; P < He.length; P++) {
+    var f = Math.abs(Ve - He[P]);
+    f < ge && (ge = f, ee = He[P]);
+  }
+  return ee;
+}
+const Ay = {};
+Ay.galton = function(Ve) {
+  let He = Cr.Engine, ee = Cr.Render, ge = Cr.Runner, P = Cr.Events, f = Cr.Body, b = Cr.World, d = Cr.Bodies, h = He.create({
+    enableSleeping: !1
+  }), x = h.world;
+  const g = 500, w = 500;
+  let l = ee.create({
+    element: document.body,
+    engine: h,
+    options: {
+      width: g,
+      height: w,
+      wireframes: !1
+    }
+  });
+  ee.run(l);
+  let t = ge.create({
+    delta: 1e3 / (60 * 10),
+    // 600Hz delta = 1.666ms = 10upf @ 60fps (10x default precision)
+    maxFrameTime: 1e3 / 20
+    // performance budget
+  });
+  ge.run(t, h);
+  const o = 20, i = w / 2, c = i - o, E = 4;
+  let O = 1e3;
+  const D = 10, U = (Y, X, _) => {
+    b.add(x, d.rectangle(Y, X, 1, 1, {
+      isStatic: !0,
+      render: {
+        fillStyle: "#ffffff",
+        visible: !0,
+        opacity: _
+      },
+      collisionFilter: {
+        group: 0
+      }
+    }));
+  };
+  function S(Y, X, _, ne, ce, ye, be, Re) {
+    const he = Math.abs(Re - ye) > Math.abs(be - ce);
+    he && ([ce, ye] = [ye, ce], [be, Re] = [Re, be]), ce > be && ([ce, be] = [be, ce], [ye, Re] = [Re, ye]);
+    const We = be - ce, Sn = (Re - ye) / We;
+    let Ce = ye + ne(ce) * Sn;
+    for (let _e = Y(ce) + 1; _e < X(be); _e++)
+      he ? (U(Y(Ce), _e, ne(Ce)), U(Y(Ce) + 1, _e, _(Ce))) : (U(_e, Y(Ce), ne(Ce)), U(_e, Y(Ce) + 1, _(Ce))), Ce += Sn;
+  }
+  function T(Y, X, _, ne) {
+    const ce = Math.floor, ye = Math.round, be = (he) => he - Math.floor(he), Re = (he) => 1 - be(he);
+    S(ce, ye, be, Re, Y, X, _, ne), S(ce, ye, be, Re, _, ne, Y, X), U(Y, X, 1), U(_, ne, 1);
+  }
+  h.gravity.y = 0;
+  let L = {}, I = {}, N = [], q = 1 / 0, G = 0;
+  const m = Py[Ve];
+  for (let Y = 0; Y < g / E; Y++) {
+    const X = Y * E, _ = m((X - g / 2) / 40);
+    let ne = i - _ * c;
+    I[ne] = X, ne < q && (q = ne), ne > G && (G = ne), N.push(ne);
+  }
+  for (let Y = 0; Y < g / E; Y++) {
+    const X = Y * E, _ = (G - N[Y]) * (o - i) / (G - q) + i, ne = d.rectangle(X, _, E, E, {
+      isSensor: !0,
+      isStatic: !0,
+      render: {
+        fillStyle: "#ff00ff",
+        visible: !1
+      },
+      collisionFilter: {
+        group: 0
+      }
+    });
+    N[Y] = _, I[_] = X, b.add(x, ne), Y > 0 && T(I[N[Y - 1]], N[Y - 1], I[N[Y]], N[Y]);
+  }
+  let Z = {};
+  return P.on(t, "beforeTick", function(Y) {
+    for (let X = 0; X < x.bodies.length; X++) {
+      const _ = x.bodies[X];
+      if (_.velocity.x > 0 && !_.isStatic) {
+        const ne = _.position.x, ce = _.position.y, ye = Z[_.id];
+        ne >= ye && (f.setPosition(_, { x: ye, y: ce }), f.setVelocity(_, { x: 0, y: D }));
+      }
+    }
+    for (let X = 0; X < x.bodies.length; X++) {
+      const _ = x.bodies[X];
+      if (_.velocity.y > 0 && !_.isStatic) {
+        const ne = _.position.x, ce = _.position.y;
+        (L[ne] && ce >= w - L[ne] - E / 2 || ce >= w - E / 2) && (L[ne] || (L[ne] = E / 2), f.setPosition(_, { x: ne, y: w - L[ne] }), f.setStatic(_, !0), L[ne] += E);
+      }
+    }
+  }), setInterval(() => {
+    if (O-- > 0) {
+      const X = Math.random() * (G - q) + q, _ = d.rectangle(
+        10,
+        X,
+        E,
+        E,
+        {
+          isSensor: !0,
+          frictionAir: 0,
+          render: {
+            fillStyle: "#ff00ff",
+            visible: !0
+          },
+          collisionFilter: {
+            group: 0
+          }
+        }
+      );
+      _.id = "square" + O, Z[_.id] = I[Cy(X, N)], f.setVelocity(_, { x: D, y: 0 }), b.add(x, _);
+    }
+  }), {
+    engine: h,
+    runner: t,
+    render: l,
+    canvas: l.canvas,
+    stop: function() {
+      Cr.Render.stop(l), Cr.Runner.stop(t);
+    }
+  };
+};
+export {
+  Ay as Example,
+  Py as cdfDict,
+  di as dists
+};
 //# sourceMappingURL=invcdfboard.js.map

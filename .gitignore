@@ -131,4 +131,4 @@ dist
 node_modules/
 dist/**/*
 !dist
-!dist/*.js
+!dist/invcdfboard.*
