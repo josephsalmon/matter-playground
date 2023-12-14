@@ -44,8 +44,7 @@ function closest (num, arr) {
     return curr;
 }
 
-export const Example = {};
-Example.galton = function (distname) {
+export function galton(canvas,distname) {
     let Engine = Matter.Engine,
         Render = Matter.Render,
         Runner = Matter.Runner,
@@ -63,7 +62,7 @@ Example.galton = function (distname) {
     const height = 500;
     // create renderer
     let render = Render.create({
-        element: document.body,
+        element: canvas,
         engine: engine,
         options: {
             width: width,
