@@ -1,5 +1,7 @@
 import MatterTools from "matter-tools";
-import { Example } from "./galton.js";
+import { galton } from "./galton.js";
+
+const canvas = document.createElement('canvas');
 
 MatterTools.Demo.create({
   fullPage: true,
@@ -27,7 +29,7 @@ MatterTools.Demo.create({
     {
       name: 'Galton Board',
       id: 'galton',
-      init: () => Example.galton('bimodal'),
+      init: () => galton(canvas,'bimodal'),
       sourceLink: './galton.js'
     }]
 });

@@ -12,13 +12,5 @@ export default defineConfig({
             fileName: 'invcdfboard',
             formats: ['es', 'umd'],
         },
-        // rollupOptions: {
-        //     output: {
-        //         entryFileNames: 'invcdfboard.js',
-        //         manualChunks: {
-        //             'matter-tools': ['matter-tools']
-        //         },
-        //     },
-        // },
     },
 });
