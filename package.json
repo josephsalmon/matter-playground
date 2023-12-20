@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@stdlib/dist-stats-base-dists-flat": "^0.0.96",
-    "matter-js": "liabru/matter-js#1254/head",
+    "matter-js": "^0.19.0",
     "matter-tools": "^0.14.0"
   }
 }
