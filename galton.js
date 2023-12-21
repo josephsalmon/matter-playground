@@ -65,6 +65,7 @@ export function galton(canvas,distname) {
         element: canvas,
         engine: engine,
         options: {
+            background: "#FFFFFF",
             width: width,
             height: height,
             wireframes: false
@@ -85,7 +86,7 @@ export function galton(canvas,distname) {
 
     const size = 4; // size of the particles
     let total = 1000; // number of particles
-    const speed = 10; // speed of the particles
+    const speed = 14; // speed of the particles
 
     // const size = 20;
     // let total = 20;
@@ -97,7 +98,7 @@ export function galton(canvas,distname) {
         World.add(world, Bodies.rectangle(x,y,1,1, {
             isStatic: true,
             render: {
-                fillStyle: "#ffffff",
+                fillStyle: "#000000",
                 visible: true,
                 opacity: brightness
             },
@@ -187,7 +188,7 @@ export function galton(canvas,distname) {
             isSensor: true,
             isStatic: true,
             render: {
-                fillStyle: "#ff00ff",
+                fillStyle: "#428BCA",
                 visible: false
             },
             collisionFilter: {
@@ -252,7 +253,7 @@ export function galton(canvas,distname) {
                 isSensor: true,
                 frictionAir: 0,
                 render: {
-                    fillStyle: "#ff00ff",
+                    fillStyle: "#428BCA",
                     visible: true
                 },
                 collisionFilter: {
