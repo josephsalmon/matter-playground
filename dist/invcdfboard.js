@@ -8831,6 +8831,7 @@ function Ay(Ve, He) {
     element: Ve,
     engine: S,
     options: {
+      background: "#FFFFFF",
       width: w,
       height: l,
       wireframes: !1
@@ -8846,11 +8847,11 @@ function Ay(Ve, He) {
   E.run(o, S);
   const i = 20, c = l / 2, P = c - i, q = 4;
   let D = 1e3;
-  const U = 10, x = (Z, ie, Y) => {
+  const U = 14, x = (Z, ie, Y) => {
     g.add(d, h.rectangle(Z, ie, 1, 1, {
       isStatic: !0,
       render: {
-        fillStyle: "#ffffff",
+        fillStyle: "#000000",
         visible: !0,
         opacity: Y
       },
@@ -8884,7 +8885,7 @@ function Ay(Ve, He) {
       isSensor: !0,
       isStatic: !0,
       render: {
-        fillStyle: "#ff00ff",
+        fillStyle: "#428BCA",
         visible: !1
       },
       collisionFilter: {
@@ -8920,7 +8921,7 @@ function Ay(Ve, He) {
           isSensor: !0,
           frictionAir: 0,
           render: {
-            fillStyle: "#ff00ff",
+            fillStyle: "#428BCA",
             visible: !0
           },
           collisionFilter: {
