@@ -11,6 +11,12 @@ function bimodalCDF(x,mu1,sigma1,mu2,sigma2,p) {
     return p * cdf1 + (1-p) * cdf2;
 }
 
+// Geometric CDF helper
+function geometricCDF(x, p) {
+    const k = Math.floor(x);
+    return k < 0 ? 0 : 1 - Math.pow(1 - p, k + 1);
+}
+
 // dictionary of functions for the cdf with default parameters (mu = 0, sigma = 1) except for the bimodal distribution
 export const cdfDict = {
     uniform: (x, mu = 0, sigma = 1) => dists.uniform.cdf(x, mu, sigma),
@@ -18,7 +24,9 @@ export const cdfDict = {
     laplace: (x, mu = 0, sigma = 1) => dists.laplace.cdf(x, mu, sigma),
     logistic: (x, mu = 0, sigma = 1) => dists.logistic.cdf(x, mu, sigma),
     cauchy: (x, mu = 0, sigma = 1) => dists.cauchy.cdf(x, mu, sigma),
-    bimodal: (x, mu1 = -3, sigma1 = 0.6, mu2 = 3, sigma2 = 1.3, p = 0.5) => bimodalCDF(x, mu1, sigma1, mu2, sigma2, p)
+    bimodal: (x, mu1 = -3, sigma1 = 0.6, mu2 = 3, sigma2 = 1.3, p = 0.5) => bimodalCDF(x, mu1, sigma1, mu2, sigma2, p),
+    geometric: (x, p = 0.5) => geometricCDF(x, p)
+
 }
 
 // Return an array of numbers from start to stop in increments of step
