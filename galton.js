@@ -25,7 +25,7 @@ export const cdfDict = {
     logistic: (x, mu = 0, sigma = 1) => dists.logistic.cdf(x, mu, sigma),
     cauchy: (x, mu = 0, sigma = 1) => dists.cauchy.cdf(x, mu, sigma),
     bimodal: (x, mu1 = -3, sigma1 = 0.6, mu2 = 3, sigma2 = 1.3, p = 0.5) => bimodalCDF(x, mu1, sigma1, mu2, sigma2, p),
-    geometric: (x, p = 0.5) => geometricCDF(x, p)
+    geometric: (x, p = 1.0/3) => geometricCDF(x, p)
 
 }
 
